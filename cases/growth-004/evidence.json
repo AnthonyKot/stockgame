@@ -1,0 +1,347 @@
+{
+  "candidate_id": "growth-004",
+  "sources": [
+    {
+      "id": "tgt-8k-2021-03-02",
+      "kind": "8-K",
+      "title": "Target Corporation Reports Fourth Quarter and Full Year 2020 Results (Exhibit 99 to Form 8-K, accession 0000027419-21-000007)",
+      "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741921000007/a2020q4ex-99.htm",
+      "published_at": "2021-03-02",
+      "available_at": "2021-03-02",
+      "availability_basis": "EDGAR filing-index 'updated' timestamp 2021-03-02T07:01:22-05:00 (premarket, same-day; earnings webcast at 8:00 a.m. CST / 9:00 a.m. ET)",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [
+            "c2"
+          ],
+          "text": "Fourth quarter comparable sales grew 20.5 percent... Full year comparable sales grew 19.3 percent, reflecting 7.2 percent growth in store comparable sales, and 145 percent growth in digital comparable sales",
+          "location": "Exhibit 99, Fourth Quarter and Full Year Financial Results Summary"
+        },
+        {
+          "claim_ids": [
+            "c3"
+          ],
+          "text": "In the face of continued uncertainty, the company is not providing sales and EPS guidance for Fiscal 2021 and beyond",
+          "location": "Exhibit 99, Outlook section"
+        },
+        {
+          "claim_ids": [
+            "c4"
+          ],
+          "text": "Full-year operating margin rate was 7.0 percent, compared with 6.0 percent... After-tax return on invested capital (ROIC) was 23.5 percent, compared with 16.0 percent for the twelve months through fourth quarter 2019",
+          "location": "Exhibit 99, Full Year Financial Results / ROIC section"
+        },
+        {
+          "claim_ids": [
+            "c5"
+          ],
+          "text": "Target did not repurchase any of its shares in the fourth quarter. The Company has resumed share repurchases in fiscal 2021... approximately $4.5 billion of remaining capacity",
+          "location": "Exhibit 99, Capital Allocation / Share Repurchases section"
+        },
+        {
+          "claim_ids": [
+            "c6"
+          ],
+          "text": "In the face of continued uncertainty, the company is not providing sales and EPS guidance for Fiscal 2021 and beyond",
+          "location": "Exhibit 99, Outlook section"
+        },
+        {
+          "claim_ids": [
+            "c7"
+          ],
+          "text": "Same-day services grew 212 percent, led by more than 500 percent growth in Drive Up; results reflected higher digital fulfillment and supply chain costs",
+          "location": "Exhibit 99, Digital/Same-Day Services and Gross Margin Rate discussion"
+        },
+        {
+          "claim_ids": [
+            "c9"
+          ],
+          "text": "The Company gained approximately $9 billion in market share and continued to gain market share across all five of its core merchandising categories",
+          "location": "Exhibit 99, Full Year Financial Results Summary"
+        },
+        {
+          "claim_ids": [
+            "c13"
+          ],
+          "text": "Current portion of long-term debt $1,144 million (Jan 30, 2021) versus $161 million (Feb 1, 2020)",
+          "location": "Exhibit 99, Consolidated Statements of Financial Position"
+        },
+        {
+          "claim_ids": [],
+          "text": "Total revenue $93,561 million (FY2020) vs $78,112 million (FY2019); Operating income $6,539 million vs $4,658 million; Diluted EPS $8.64 vs $6.34 (continuing operations)",
+          "location": "Exhibit 99, Consolidated Statements of Operations"
+        },
+        {
+          "claim_ids": [],
+          "text": "Cash and cash equivalents $8,511 million (Jan 30, 2021) vs $2,577 million (Feb 1, 2020); Long-term debt $11,536 million vs $11,338 million; Inventory $10,653 million vs $8,992 million",
+          "location": "Exhibit 99, Consolidated Statements of Financial Position"
+        },
+        {
+          "claim_ids": [],
+          "text": "Net cash from operating activities $10,525 million (FY2020) vs $7,117 million (FY2019); Capital expenditures $2,649 million vs $3,027 million; Dividends paid $1,343 million vs $1,330 million; Share repurchases $745 million vs $1,565 million",
+          "location": "Exhibit 99, Consolidated Statements of Cash Flows"
+        },
+        {
+          "claim_ids": [],
+          "text": "More than 95 percent of Target's fourth quarter sales were fulfilled by its stores",
+          "location": "Exhibit 99, Digital and Fulfillment section"
+        },
+        {
+          "claim_ids": [],
+          "text": "Store count 1,897 (FY2020) vs 1,868 (FY2019)",
+          "location": "Exhibit 99, store count table"
+        }
+      ]
+    },
+    {
+      "id": "tgt-10k-fy2016",
+      "kind": "10-K",
+      "title": "Target Form 10-K for fiscal year ended January 28, 2017",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000027419&type=10-K",
+      "published_at": "2017-03-08",
+      "available_at": "2017-03-08",
+      "availability_basis": "date only, treated as next session",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [],
+          "text": "SEC EDGAR companyfacts XBRL data tagged to accession 0000027419-17-000008, filed 2017-03-08 (revenue, operating income, EPS, dividends, buybacks, capex, operating cash flow, debt and share-count facts used in financial_snapshot.history), retrieved via cases/growth-004/xbrl-facts.json.",
+          "location": "accession 0000027419-17-000008"
+        }
+      ]
+    },
+    {
+      "id": "tgt-10k-fy2017",
+      "kind": "10-K",
+      "title": "Target Form 10-K for fiscal year ended February 3, 2018",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000027419&type=10-K",
+      "published_at": "2018-03-14",
+      "available_at": "2018-03-14",
+      "availability_basis": "date only, treated as next session",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [],
+          "text": "SEC EDGAR companyfacts XBRL data tagged to accession 0000027419-18-000010, filed 2018-03-14 (revenue, operating income, EPS, dividends, buybacks, capex, operating cash flow, debt and share-count facts used in financial_snapshot.history), retrieved via cases/growth-004/xbrl-facts.json.",
+          "location": "accession 0000027419-18-000010"
+        }
+      ]
+    },
+    {
+      "id": "tgt-10k-fy2018",
+      "kind": "10-K",
+      "title": "Target Form 10-K for fiscal year ended February 2, 2019",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000027419&type=10-K",
+      "published_at": "2019-03-13",
+      "available_at": "2019-03-13",
+      "availability_basis": "date only, treated as next session",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [],
+          "text": "SEC EDGAR companyfacts XBRL data tagged to accession 0000027419-19-000006, filed 2019-03-13 (revenue, operating income, EPS, dividends, buybacks, capex, operating cash flow, debt and share-count facts used in financial_snapshot.history), retrieved via cases/growth-004/xbrl-facts.json.",
+          "location": "accession 0000027419-19-000006"
+        }
+      ]
+    },
+    {
+      "id": "tgt-10k-fy2019",
+      "kind": "10-K",
+      "title": "Target Form 10-K for fiscal year ended February 1, 2020",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000027419&type=10-K",
+      "published_at": "2020-03-11",
+      "available_at": "2020-03-11",
+      "availability_basis": "date only, treated as next session",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [],
+          "text": "SEC EDGAR companyfacts XBRL data tagged to accession 0000027419-20-000008, filed 2020-03-11 (revenue, operating income, EPS, dividends, buybacks, capex, operating cash flow, debt and share-count facts used in financial_snapshot.history), retrieved via cases/growth-004/xbrl-facts.json.",
+          "location": "accession 0000027419-20-000008"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The company operates general-merchandise discount stores and a companion e-commerce/digital-fulfillment business across the United States, selling apparel, home goods, food, beauty and hardline products, with revenue earned through in-store and digital/same-day retail sales.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c2",
+      "text": "Full-year FY2020 comparable sales grew 19.3% (7.2 points from stores, 145% digital comparable-sales growth), with Q4 comparable sales up 20.5%, and total revenue rose to $93.6 billion from $78.1 billion.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c3",
+      "text": "Target stated it is not providing sales and EPS guidance for fiscal 2021 and beyond, citing continued uncertainty.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c4",
+      "text": "Full-year operating margin rose to 7.0% from 6.0% and after-tax return on invested capital rose to 23.5% from 16.0%, while capital expenditures fell to $2.649 billion from $3.027 billion and cash rose to $8.511 billion from $2.577 billion.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c5",
+      "text": "Target paid no share repurchases in Q4 2020 but said it resumed share repurchases in fiscal 2021, with approximately $4.5 billion of remaining board-authorized capacity.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c6",
+      "text": "Management said the decision to withhold FY2021 guidance reflected continued COVID-19-related uncertainty.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c7",
+      "text": "Same-day fulfillment services grew 212% in Q4 (Drive Up up more than 500%), and the company said higher digital fulfillment and supply-chain costs affected gross margin.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c8",
+      "text": "FY2020 added more than $15 billion of sales -- more than the company's combined sales growth over the prior 11 years -- alongside operating-margin expansion to 7.0% and ROIC of 23.5%.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c9",
+      "text": "The company said it gained approximately $9 billion in market share and continued to gain share across all five of its core merchandising categories, without disclosing category-level figures.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c10",
+      "text": "Cash rose to $8.511 billion and capital expenditure fell to $2.649 billion from $3.027 billion even as operating cash flow rose to $10.525 billion from $7.117 billion, and the company resumed share repurchases (up to ~$4.5 billion) in fiscal 2021.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c11",
+      "text": "Management explicitly declined to give FY2021 sales or EPS guidance due to continued uncertainty, leaving no company-provided forward anchor.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c12",
+      "text": "Digital comparable sales accounted for roughly two-thirds of Q4 comparable-sales growth, up 118% in the quarter and 145% for the full year; this release does not address whether that pace continues or normalizes.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c13",
+      "text": "The current portion of long-term debt rose more than sevenfold to $1.144 billion as of January 30, 2021, from $161 million a year earlier, a maturity step-up not explained in this release.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c14",
+      "text": "The company said higher digital fulfillment and supply-chain costs already affected gross margin even amid record sales growth, a cost structure that continued digital-penetration growth could keep embedding.",
+      "source_ids": [
+        "tgt-8k-2021-03-02"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    }
+  ],
+  "search_log": [
+    {
+      "query_or_url": "cases/growth-004/xbrl-facts.json",
+      "result": "opened",
+      "note": "SEC XBRL companyfacts extract for TGT (CIK 0000027419), facts filed on/before cutoff 2021-03-03"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741921000007/a2020q4ex-99.htm",
+      "result": "opened",
+      "note": "WebFetch of the Exhibit 99 press release attached to Form 8-K accession 0000027419-21-000007, filed 2021-03-02 (three fetch passes: headline summary, category/forward-looking detail, full three-statement financial tables)"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741921000007/0000027419-21-000007-index.htm",
+      "result": "opened",
+      "note": "Confirmed accession 0000027419-21-000007, filing date 2021-03-02, EDGAR-index updated timestamp 2021-03-02T07:01:22-05:00 (premarket)"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000027419&type=8-K&dateb=20210304&owner=include&count=10&output=atom",
+      "result": "opened",
+      "note": "EDGAR 8-K filing list used to verify the exact accession number and filing date/time for the Q4/FY2020 release"
+    }
+  ],
+  "exclusions": [
+    "Did not use the CNBC secondary source listed in research/MVP_PROMPT.md (blocked 403 for the verifier); the EDGAR 8-K exhibit was used as the sole primary source, per the recorded repair.",
+    "Did not compute market capitalization, enterprise value or EV/revenue: no historical share price is in the evidence packet, so these are marked missing rather than estimated.",
+    "Did not build a segment/category revenue table: Target reports as a single reportable segment and this release discloses no category-level (Food & Beverage, Apparel, Home, Hardlines, Beauty & Household Essentials) sales figures, only a qualitative 'gained share in all five core categories' statement, which is carried as a competitive-position fact instead.",
+    "Did not infer or backfill what FY2021 guidance 'would have been' from prior-year guidance patterns; the absence of guidance is reported as-is.",
+    "Omitted generic Safe Harbor / forward-looking-statement boilerplate from macro_context as not a specific, dated, business-connected disclosure."
+  ],
+  "repairs_needed": [
+    "None blocking: the single primary source (8-K Exhibit 99, accession 0000027419-21-000007) plus XBRL companyfacts fully support the eight-block sheet at the specified cutoff.",
+    "No corporate-action/dividend ledger was available in this packet; per research/MVP_PROMPT.md's cross-case repair note, TGT's in-window dividends should be added from the cached vendor events and marked vendor-data-pending once that ledger exists.",
+    "A reviewer wanting FY2021+ quarterly detail for the 3-year hold will need additional 10-Q/10-K filings not yet filed as of the cutoff, which are correctly out of scope here."
+  ]
+}

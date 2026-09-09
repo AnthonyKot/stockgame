@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stockgame case</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="top"></div>
+<div class="wrap">
+  <div id="head" class="card" role="region" aria-label="Decision header">Loading…</div>
+  <div id="debrief"></div>
+  <div class="grid">
+    <div id="main"></div>
+    <aside id="ticket" class="ticket" aria-label="Decision ticket"></aside>
+  </div>
+</div>
+<div id="backdrop" class="backdrop" hidden></div>
+<aside id="drawer" class="drawer" hidden role="dialog" aria-modal="true" aria-label="Evidence"></aside>
+<script src="app.js"></script>
+<script src="sim.js"></script>
+<script>
+(async () => {
+  const { $, el, load, prose, money, pct, signed, dateFmt, horizonText, badge } = SG;
+  document.getElementById('top').replaceWith(SG.topbar('play', () => openRules()));
+  const id = new URLSearchParams(location.search).get('case');
+  const head = $('#head'), main = $('#main'), ticket = $('#ticket'), debrief = $('#debrief'), drawer = $('#drawer'), backdrop = $('#backdrop');
+  if (!id) { head.textContent = 'No case selected.'; return; }
+  let sheet, market, reveal = null, outcome = null;
+  try { [sheet, market] = await Promise.all([load(`data/${id}/sheet.json`), load(`data/${id}/market.json`)]); } catch (e) { head.textContent = 'Could not load this case: ' + e.message; return; }
+  const prior = SG.findCommit(id);
+  const transparent = SG.transparent();
+  if (transparent || prior) { try { reveal = await load(`data/${id}/reveal.json`); } catch (e) { reveal = null; } }
+  const walkPending = prior && !prior.walkthrough_complete && !prior.walkthrough_skipped && !prior.result;   // identity stays hidden until the walk is done or skipped
+  const name = reveal && (transparent || (prior && !walkPending)) ? `${reveal.transparent.issuer} (${reveal.transparent.ticker})` : sheet.masked.alias;
+  const headName = el('strong', {}, name);
+  const revealHeader = () => { if (reveal) headName.textContent = `${reveal.transparent.issuer} (${reveal.transparent.ticker})`; };
+  const years = Number(sheet.horizon.count);
+
+  /* ---------- evidence drawer ---------- */
+  const claims = new Map((sheet.claims || []).map(c => [c.id, c]));
+  const handles = new Map((sheet.source_handles || []).map(s => [s.id, s]));
+  function openDrawer(cid) {
+    const c = claims.get(cid); drawer.innerHTML = '';
+    drawer.append(el('div', { class: 'row' }, el('h2', { style: 'margin:0;flex:1' }, 'Evidence ' + cid), el('button', { class: 'ghost', type: 'button', onclick: closeDrawer }, 'Close')));
+    if (!c) { drawer.append(el('p', { class: 'muted' }, 'No claim record for this id (writer omitted it). Treat the sentence as unverified.')); }
+    else {
+      drawer.append(el('p', {}, c.text, ' ', badge(c.status)));
+      if (c.formula) drawer.append(el('p', { class: 'note' }, 'Formula: ' + c.formula + (c.input_ids ? ' from ' + c.input_ids.join(', ') : '')));
+      const ul = el('ul', { class: 'plain' });
+      for (const sid of c.source_ids || []) { const h = handles.get(sid); const rs = reveal && reveal.sources.find(s => s.id === sid);
+        ul.append(el('li', {}, el('div', {}, (rs ? rs.title : (h ? h.masked_title || h.title : sid)), ' ', el('span', { class: 'muted' }, h ? h.kind + ' · public ' + dateFmt(h.available_at) : '')),
+          rs && rs.url ? el('div', {}, el('a', { href: rs.url, target: '_blank', rel: 'noopener' }, rs.url)) : el('div', { class: 'note' }, (h && h.availability_basis ? 'Public: ' + h.availability_basis + '. ' : '') + 'Original link shown after you commit.'),
+          ...(((rs ? rs.excerpts : (h ? h.excerpts : null)) || []).filter(x => (x.claim_ids || []).includes(cid)).map(x => el('blockquote', { class: 'note', style: 'margin:.3rem 0 .3rem .5rem' }, '“' + x.text + '” — ' + (x.location || '')))))); }
+      drawer.append(el('h3', { style: 'font-size:.9rem' }, 'Sources'), ul);
+    }
+    drawer.hidden = false; backdrop.hidden = false; drawer.querySelector('button').focus();
+  }
+  function openRules() { drawer.innerHTML = ''; drawer.append(el('div', { class: 'row' }, el('span', { style: 'flex:1' }), el('button', { class: 'ghost', type: 'button', onclick: closeDrawer }, 'Close'))); const s = SG.rulesSection(); s.style.marginTop = '0'; s.classList.remove('card'); drawer.append(s); drawer.hidden = false; backdrop.hidden = false; drawer.querySelector('button').focus(); }
+  function closeDrawer() { drawer.hidden = true; backdrop.hidden = true; }
+  backdrop.onclick = closeDrawer; document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+  const P = t => prose(t, openDrawer);
+
+  /* ---------- header: identity line + stats, rendered lower on the page (see 'Where the stock stands') ---------- */
+  head.remove();
+  const statsCard = el('section', { class: 'card' }, el('h2', {}, 'Where the stock stands', el('small', {}, 'at the last close before the cutoff')));
+  statsCard.append(el('div', { class: 'row', style: 'justify-content:space-between;margin-bottom:.4rem' },
+    el('div', {}, headName, ' · ', sheet.masked.sector),
+    el('div', { class: 'ink2' }, 'Cutoff ', el('strong', {}, dateFmt(sheet.cutoff) + ' 09:00 New York'), ' · hold ', el('strong', {}, horizonText(sheet.horizon)))));
+  statsCard.append(el('div', { class: 'kv' },
+    el('div', {}, el('div', { class: 'l' }, 'Last eligible close'), el('div', { class: 'v' }, '$' + market.last_close.toFixed(2)), el('div', { class: 'p' }, dateFmt(market.last_eligible_session))),
+    el('div', {}, el('div', { class: 'l' }, '1 month'), el('div', { class: 'v ' + (market.returns['1m'] >= 0 ? 'up' : 'down') }, signed(market.returns['1m'])), el('div', { class: 'p' }, 'SPY ' + signed(market.spy_returns['1m']))),
+    el('div', {}, el('div', { class: 'l' }, '3 months'), el('div', { class: 'v ' + (market.returns['3m'] >= 0 ? 'up' : 'down') }, signed(market.returns['3m'])), el('div', { class: 'p' }, 'SPY ' + signed(market.spy_returns['3m']))),
+    el('div', {}, el('div', { class: 'l' }, '12 months'), el('div', { class: 'v ' + (market.returns['12m'] >= 0 ? 'up' : 'down') }, signed(market.returns['12m'])), el('div', { class: 'p' }, 'SPY ' + signed(market.spy_returns['12m']))),
+    el('div', {}, el('div', { class: 'l' }, 'From 12-month high'), el('div', { class: 'v' }, signed(market.distance_from_trailing_252_high)), el('div', { class: 'p' }, 'closing basis'))));
+
+  /* ---------- blocks ---------- */
+  const card = (title, sub, ...kids) => el('section', { class: 'card' }, el('h2', {}, title, sub ? el('small', {}, sub) : null), ...kids);
+  /* opening scene: a setup written from the packet (cases/scenes.json), plus real dated headlines */
+  let instinct = null; const askedQ = new Set();
+  const heads = (sheet.source_handles || []).filter(h => h.masked_headline && h.available_at && h.available_at <= sheet.cutoff.slice(0, 10) && !/xbrl|company facts/i.test(h.masked_headline)).sort((a, b) => b.available_at.localeCompare(a.available_at)).slice(0, 3);
+  const sc = sheet.scene; let sceneRead = !!sc;
+  if (sc) {
+    const scene = el('section', { class: 'card scene' }, el('h2', {}, 'Morning of ' + dateFmt(sheet.cutoff) + ' · ' + sc.setup_label, el('small', {}, `built for a ${years}-year hold; you choose the horizon when you decide`)));
+    const q = el('p', { style: 'font-size:1.02rem;margin:.6rem 0 0' }, sc.question);
+    if (sc.setup === 'bad_news_headline') scene.append(el('blockquote', { style: 'margin:.4rem 0;padding:.5rem .8rem;border-left:3px solid var(--s2);font-weight:600' }, sc.voice));
+    else if (sc.setup === 'analysts_disagree') { const parts = sc.voice.split(/\s(?=The other:)/); scene.append(el('p', {}, el('em', {}, parts[0])), parts[1] ? el('p', {}, el('em', {}, parts[1])) : null); }
+    else scene.append(el('p', {}, el('em', {}, '“' + sc.voice + '”')));
+    scene.append(q);
+    if (heads.length) scene.append(el('details', {}, el('summary', { class: 'note' }, 'Headlines on your phone from the past weeks'), el('ul', { class: 'plain' }, ...heads.map(h => el('li', { class: 'note' }, el('span', { class: 'muted' }, dateFmt(h.available_at) + ' · '), h.masked_headline.replace(/\s*\(.*?(exhibit|accession).*?\)/i, ''))))));
+    if ((sc.ask_friend || []).length) {
+      const askBox = el('div', { style: 'margin-top:.6rem' }, el('div', { class: 'note' }, el('strong', {}, sc.ask_label || 'What would you ask your friend?')));
+      const row = el('div', { class: 'row', style: 'margin:.3rem 0' }); const ans = el('div');
+      sc.ask_friend.forEach((qa, i) => row.append(el('button', { type: 'button', class: 'ghost', 'aria-expanded': 'false', onclick: e => { const open = e.currentTarget.getAttribute('aria-expanded') === 'true'; [...row.children].forEach(b => b.setAttribute('aria-expanded', 'false')); ans.innerHTML = ''; if (!open) { e.currentTarget.setAttribute('aria-expanded', 'true'); ans.append(el('div', { class: 'card', style: 'margin:.4rem 0 0;background:var(--surface)' }, el('p', { style: 'margin:0' }, P(qa.a)))); askedQ.add(i); } } }, qa.q)));
+      askBox.append(row, ans); scene.append(askBox);
+    }
+    const inst = el('div', { style: 'margin-top:.6rem' }, el('div', { class: 'note' }, el('strong', {}, 'Your first reaction')));
+    const irow = el('div', { class: 'row', role: 'group', 'aria-label': 'First reaction' });
+    const preset = { interested: ['buy', '5'], unconvinced: ['skip', null], against: ['short', '5'] };   // pre-fills the ticket; the player can change it
+    for (const [k, lab] of [['interested', 'Interested'], ['unconvinced', 'Unconvinced'], ['against', 'Against it']]) irow.append(el('button', { type: 'button', class: 'ghost', 'aria-pressed': 'false', onclick: e => { instinct = k; [...irow.children].forEach(b => b.setAttribute('aria-pressed', 'false')); e.currentTarget.setAttribute('aria-pressed', 'true');
+      const [act, sz] = preset[k]; const a = ticket.querySelector(`input[name=action][value=${act}]`); if (a) { a.checked = true; a.dispatchEvent(new Event('change')); } if (sz) { const s = ticket.querySelector(`input[name=size][value="${sz}"]`); if (s) s.checked = true; } } }, lab));
+    inst.append(irow); scene.append(inst);
+    scene.append(el('p', { class: 'note' }, 'The friend and the scene are fiction; every factual clause comes from this packet. Check it below before you decide; the debrief will tell you which of its claims held.'));
+    main.append(scene);
+  }
+
+  /* the question first */
+  const wc0 = (sheet.what_changed || [])[0];
+  main.append(el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' },
+    el('h2', { style: 'font-size:1.15rem' }, sheet.neutral_title || 'The decision'),
+    sc ? null : el('p', { style: 'font-size:1.02rem' }, P(sheet.player_question || '')),
+    wc0 ? el('p', { class: 'note' }, el('strong', {}, 'Why now: '), P(wc0.fact)) : null,
+    el('p', { class: 'note' }, 'Everything below was public before ', dateFmt(sheet.cutoff), ' 09:00 New York. Horizon ', horizonText(sheet.horizon), '. Read as much or as little as you need, then decide on the right.')));
+  main.append(card('Business', null, el('p', {}, P((transparent || (prior && !walkPending)) && reveal ? reveal.transparent.business_two_sentences : sheet.masked.business_two_sentences))));
+
+  /* market chart */
+  const chartHost = el('div'); let span = years >= 3 ? 36 : 12;
+  const spanBtns = el('div', { class: 'row', role: 'group', 'aria-label': 'Chart span' });
+  const drawMarket = () => { const cut = new Date(market.last_eligible_session + 'T00:00:00Z'); cut.setUTCMonth(cut.getUTCMonth() - span); const from = cut.toISOString().slice(0, 10);
+    const bars = market.bars.filter(b => b.d >= from), spy = market.spy.filter(b => b.d >= from);
+    SG.lineChart(chartHost, [{ name: 'This stock', cls: 's1', points: bars.map(b => ({ d: b.d, v: b.c })) }, { name: 'SPY', cls: 's2', points: spy.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, volume: bars.map(b => ({ d: b.d, v: b.v })), label: 'Price indexed to 100 at the start of the window, with SPY, ending at the cutoff', rawFmt: r => '$' + r.toFixed(2) }); };
+  for (const m of [12, 36]) spanBtns.append(el('button', { class: 'ghost', type: 'button', 'aria-pressed': span === m ? 'true' : 'false', onclick: e => { span = m; [...spanBtns.children].forEach(b => b.setAttribute('aria-pressed', 'false')); e.target.setAttribute('aria-pressed', 'true'); drawMarket(); } }, m === 12 ? '12 months' : '3 years'));
+  main.append(statsCard);
+  main.append(card('Market snapshot', 'ends at the cutoff', spanBtns, chartHost, el('p', { class: 'note' }, market.level_note + ' ' + market.coverage_note)));
+  drawMarket();
+
+  /* financial snapshot */
+  const fs = sheet.financial_snapshot || {}; const kv = el('div', { class: 'kv' });
+  for (const h of fs.headline || []) kv.append(el('div', {}, el('div', { class: 'l' }, h.label, ' ', badge(h.status)), el('div', { class: 'v' }, h.value === null || h.value === undefined ? 'not available' : money(h.value, h.unit)), el('div', { class: 'p' }, (h.period ? 'period ' + h.period : '') + (h.prior && h.prior.value !== null && h.prior.value !== undefined ? ' · prior ' + money(h.prior.value, h.unit) + ' (' + h.prior.period + ')' : '') + (h.available_at ? ' · public ' + dateFmt(h.available_at) : '')), h.definition ? el('details', {}, el('summary', { class: 'note' }, 'definition'), el('div', { class: 'note' }, h.definition)) : null));
+  const hist = el('table'); const histWrap = el('div');
+  if ((fs.history || []).length) {
+    const periods = [...new Set(fs.history.flatMap(r => r.cells.map(c => c.period)))];
+    const isAnnual = per => /^FY\s?\d{4}|^\d{4}$|full[- ]year|^TTM|^LTM/i.test(String(per)); const isQuarter = per => /^Q[1-4]|quarter|^\dQ|9M|nine|6M|H[12]/i.test(String(per));
+    const mixed = periods.some(isAnnual) && periods.some(isQuarter);
+    const isStockRow = r => /cash|debt|share|assets|equity|investment|liabilit|deposit|loan|receivable|inventory|backlog|book value|balance/i.test(r.row);
+    let perQuarter = mixed;
+    const drawHist = () => { hist.innerHTML = '';
+      hist.append(el('tr', {}, el('th', {}, 'Row'), ...periods.map(p => el('th', { class: 'n' }, p + (perQuarter && isAnnual(p) ? ' ÷4' : '')))));
+      for (const r of fs.history) { const stock = isStockRow(r);
+        hist.append(el('tr', {}, el('td', {}, r.row, ' ', el('span', { class: 'muted' }, (r.unit || '') + (perQuarter && !stock ? '' : (perQuarter && stock ? ' · point in time' : '')))), ...periods.map(p => { const c = r.cells.find(x => x.period === p); if (!c) return el('td', { class: 'n' }, '');
+          let v = c.value; const conv = perQuarter && isAnnual(p) && !stock && typeof v === 'number'; if (conv) v = v / 4;
+          return el('td', { class: 'n', title: 'public ' + (c.available_at || '?') + ' · ' + (c.status || '') + ' · ' + (c.source_ids || []).join(', ') + (conv ? ' · annual figure divided by 4' : '') }, v === null || v === undefined ? '—' : (typeof v === 'number' ? v.toLocaleString('en-US', { maximumFractionDigits: 2 }) : v)); }))); } };
+    drawHist();
+    if (location.hash === '#hist') setTimeout(() => { const d = histWrap.closest('details'); if (d) { d.open = true; d.scrollIntoView(); } }, 300);
+    if (mixed) histWrap.append(el('label', { class: 'note', style: 'display:block;margin:.3rem 0' }, el('input', { type: 'checkbox', checked: '', onchange: e => { perQuarter = e.target.checked; drawHist(); } }), ' Show annual columns as a per-quarter average (÷4) so they compare with the quarters; balance-sheet rows are left as reported'));
+    histWrap.append(el('div', { class: 'scroll' }, hist));
+  }
+  const V = sheet.valuation || {}; const vkv = el('div', { class: 'kv', style: 'margin-top:.75rem' });
+  const m = x => x === null || x === undefined ? 'not derived' : (Math.abs(x) >= 1000 ? '$' + (x / 1000).toFixed(1) + ' bn' : '$' + x.toFixed(0) + ' m');
+  if (V.status === 'derived') {
+    vkv.append(el('div', {}, el('div', { class: 'l' }, 'Market capitalization ', badge('derived')), el('div', { class: 'v' }, m(V.market_cap_musd)), el('div', { class: 'p' }, V.market_cap_formula)));
+    if (V.enterprise_value_musd !== undefined) vkv.append(el('div', {}, el('div', { class: 'l' }, 'Enterprise value ', badge('derived')), el('div', { class: 'v' }, m(V.enterprise_value_musd)), el('div', { class: 'p' }, 'market cap ' + (V.net_cash_musd >= 0 ? 'minus net cash of ' : 'plus net debt of ') + m(Math.abs(V.net_cash_musd)))));
+    if (V.annual_revenue_musd) vkv.append(el('div', {}, el('div', { class: 'l' }, (V.ev_to_revenue !== undefined ? 'EV / annual revenue ' : 'Market cap / annual revenue '), badge('derived')), el('div', { class: 'v' }, (V.ev_to_revenue !== undefined ? V.ev_to_revenue : V.market_cap_to_revenue) + 'x'), el('div', { class: 'p' }, 'revenue ' + m(V.annual_revenue_musd) + ', last full year filed before the cutoff')));
+  }
+  const vdet = el('details', {}, el('summary', { class: 'note' }, 'Valuation inputs and caveats'), el('ul', { class: 'plain' }, ...(V.inputs || []).map(i => el('li', { class: 'note' }, `${i.name}: ${i.value_millions !== undefined ? m(i.value_millions) : ''} as of ${i.as_of || i.period || ''}${i.filed ? ', filed ' + i.filed : ''}${i.source ? ' [' + (Array.isArray(i.source) ? i.source.join(', ') : i.source) + ']' : ''}`)), ...(V.caveats || []).map(c => el('li', { class: 'note' }, 'Caveat: ' + c)), el('li', { class: 'note' }, V.note || V.reason || '')));
+  main.append(card('Financial snapshot', (fs.adapter || '').replace('_', ' '), kv, el('h3', { style: 'font-size:.9rem;margin:.75rem 0 0' }, 'Valuation at the cutoff'), vkv, vdet, el('details', { style: 'margin-top:.5rem' }, el('summary', {}, 'Supporting history (hover a cell for its publication date and source)'), histWrap)));
+
+  /* what changed */
+  main.append(card('What changed', 'material items public before the cutoff', el('ul', { class: 'plain' }, ...(sheet.what_changed || []).map(w => el('li', {}, el('strong', {}, dateFmt(w.date)), ' ', badge(w.status), el('div', {}, P(w.fact)), el('div', { class: 'note' }, P(w.relationship_to_business)))))));
+
+  /* sector evidence: generic renderer */
+  const se = sheet.sector_evidence || {}; const secCard = card('Sector evidence', sheet.sector_module);
+  const renderVal = v => typeof v === 'object' && v !== null ? el('span', { class: 'note' }, JSON.stringify(v).replace(/[{}"]/g, '').replace(/,/g, ', ')) : P(String(v ?? ''));
+  for (const [k, v] of Object.entries(se)) {
+    const title = k.replace(/_/g, ' ');
+    if (Array.isArray(v) && v.length && typeof v[0] === 'object') { const keys = [...new Set(v.flatMap(o => Object.keys(o)))].filter(x => x !== 'source_ids');
+      if (keys.length > 8) { secCard.append(el('h3', { style: 'font-size:.9rem' }, title)); for (const o of v) { const dl = el('dl', { class: 'note' }); for (const kk of keys) if (o[kk] !== undefined && o[kk] !== null && o[kk] !== '') dl.append(el('dt', { style: 'font-weight:600;margin-top:.3rem' }, kk.replace(/_/g, ' ')), el('dd', { style: 'margin:0' }, renderVal(o[kk]))); secCard.append(el('details', { open: '' }, el('summary', {}, o.program || o.product || o.segment || o.metric || o.item || 'item'), dl)); } }
+      else { const t = el('table'); t.append(el('tr', {}, ...keys.map(kk => el('th', {}, kk.replace(/_/g, ' '))))); for (const o of v) t.append(el('tr', {}, ...keys.map(kk => el('td', {}, renderVal(o[kk]))))); secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('div', { class: 'scroll' }, t)); } }
+    else if (Array.isArray(v)) secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('ul', { class: 'plain' }, ...v.map(x => el('li', {}, renderVal(x)))));
+    else secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('p', {}, renderVal(v)));
+  }
+  const secWrap = el('section', { class: 'card' }, el('details', {}, el('summary', {}, el('strong', {}, 'Sector evidence'), el('small', { class: 'muted' }, ' ' + sheet.sector_module + ' · open for the program, segment or guidance tables')), secCard)); secCard.classList.remove('card'); secCard.querySelector('h2').remove();
+  main.append(secWrap);
+
+  /* upcoming and unresolved */
+  const uu = sheet.upcoming_and_unresolved || {};
+  main.append(card('Upcoming and unresolved', null, el('h3', { style: 'font-size:.9rem' }, 'Publicly expected catalysts'), el('ul', { class: 'plain' }, ...(uu.catalysts || []).map(c => el('li', {}, P(c.description), ' ', el('span', { class: 'muted' }, '— ' + (c.timing_window || '') + (c.announced_on ? ', announced ' + dateFmt(c.announced_on) : ''))))),
+    el('h3', { style: 'font-size:.9rem' }, 'Unresolved questions'), el('ol', {}, ...(uu.unresolved_questions || []).map(q => el('li', {}, P(q))))));
+  if ((sheet.macro_context || []).length) main.append(card('Macro context', 'at most three items', el('ul', { class: 'plain' }, ...sheet.macro_context.map(m => el('li', {}, P(m.item), el('div', { class: 'note' }, P(m.business_connection)))))));
+  const hw = sheet.help_me_weigh; if (hw) { const d = el('details', {}, el('summary', {}, 'Help me weigh this (evidence-based arguments, no outcome knowledge)')); for (const [k, lab] of [['own', 'For owning'], ['flat', 'For staying flat'], ['short', 'For being short']]) if ((hw[k] || []).length) d.append(el('h3', { style: 'font-size:.9rem' }, lab), el('ul', { class: 'plain' }, ...hw[k].map(x => el('li', {}, P(x))))); d.addEventListener('toggle', () => { if (d.open) hintUsed = true; }); main.append(card('Optional', null, d)); }
+  let hintUsed = false;
+  if ((sheet.missing_data || []).length || sheet.editorial_notes) main.append(el('section', { class: 'card' }, el('details', {}, el('summary', { class: 'note' }, 'Known gaps in this packet (' + (sheet.missing_data || []).length + ')'), el('ul', { class: 'plain' }, ...(sheet.missing_data || []).map(x => el('li', { class: 'note' }, x))), sheet.editorial_notes ? el('p', { class: 'note' }, sheet.editorial_notes) : null)));
+
+  /* ---------- ticket ---------- */
+  function renderTicket() {
+    ticket.innerHTML = '';
+    const c = el('div', { class: 'card' }, el('h2', {}, 'Your decision'));
+    c.append(el('p', {}, 'At the next opening price, would you buy, skip or short? Choose your holding period below.'));
+    const f = el('form', {});
+    const act = el('fieldset', {}, el('legend', {}, 'Action'), ...['buy', 'skip', 'short'].map(a => el('label', {}, el('input', { type: 'radio', name: 'action', value: a, required: '', onchange: () => orderAssumptions(a) }), ' ' + a[0].toUpperCase() + a.slice(1))));
+    const orderAssumptions = action => { const list = f.querySelector('.assume-list'); if (!list) return; const rank = { buy: { bull: 0, neutral: 1, bear: 2 }, short: { bear: 0, neutral: 1, bull: 2 }, skip: { neutral: 0, bull: 1, bear: 2 } }[action] || {}; [...list.children].sort((x, y) => (rank[x.dataset.side] ?? 1) - (rank[y.dataset.side] ?? 1)).forEach(n => list.append(n)); };
+    const avail = sheet.horizons_available || [String(years)];
+    const hz = el('fieldset', {}, el('legend', {}, el('strong', {}, 'Horizon'), ', calendar years'), ...['1', '3', '5'].map(h => el('label', { style: avail.includes(h) ? '' : 'opacity:.5' }, el('input', { type: 'radio', name: 'years', value: h, checked: Number(h) === years ? '' : null, disabled: avail.includes(h) ? null : '' }), ' ' + h + (h === '1' ? ' year' : ' years') + (Number(h) === years ? ' (case default)' : '') + (avail.includes(h) ? '' : ' (no data)'))));
+    const size = el('fieldset', {}, el('legend', {}, el('strong', {}, 'Size'), ', share of $100,000'), ...[5, 10, 20].map(s => el('label', {}, el('input', { type: 'radio', name: 'size', value: s, checked: s === 10 ? '' : null }), ' ' + s + '%')));
+    const mkSel = (name, opts) => { const s = el('select', { name, style: 'font:inherit;padding:.3rem;background:var(--bg);color:var(--ink);border:1px solid var(--axis);border-radius:4px' }); for (const [v, l] of opts) s.append(el('option', { value: v }, l)); return s; };
+    const exits = el('fieldset', {}, el('legend', {}, 'Exit levels'),
+      el('label', {}, 'Stop loss ', mkSel('stop', [['', 'none'], ['10', 'close 10% against you'], ['20', '20%'], ['30', '30%'], ['50', '50%']])),
+      el('label', {}, 'Take profit ', mkSel('tp', [['', 'none'], ['25', 'close 25% in your favour'], ['50', '50%'], ['100', '100%'], ['200', '200%']])),
+      el('div', { class: 'note' }, 'Checked on daily closes, filled at the next open, so a gap can fill far past your level.'));
+    const hasA = !!(sc && (sc.assumptions || []).length);
+    const reason = hasA
+      ? el('fieldset', {}, el('legend', {}, 'My call rests on…'), el('div', { class: 'note' }, 'pick one or two; these are beliefs about the company, whichever way you trade'), el('div', { class: 'assume-list' }, ...sc.assumptions.map(a => el('label', { 'data-side': a.side || 'neutral' }, el('input', { type: 'checkbox', name: 'assume', value: a.id }), ' ' + a.text, a.side && a.side !== 'neutral' ? el('span', { class: 'muted' }, a.side === 'bull' ? ' ↑' : ' ↓') : null))), el('textarea', { name: 'reason', placeholder: 'Optional: a supporting fact from the packet, in your words' }))
+      : el('fieldset', {}, el('legend', {}, 'Main reason'), el('textarea', { name: 'reason', placeholder: 'Optional: one or two sentences' }));
+    const btn = el('button', { class: 'primary', type: 'submit' }, 'Commit and reveal');
+    const detail = el('details', {}, el('summary', {}, 'Exit levels (optional): stop loss, take profit'), exits);
+    f.append(act, hz, size, reason, detail, btn, el('p', { class: 'note' }, 'Skip is a real decision: cash stays idle and time still passes. Your commitment is saved in this browser before anything is revealed.'));
+    f.onsubmit = async e => { e.preventDefault(); const fd = new FormData(f); const action = fd.get('action'); if (!action) return;
+      const assume = fd.getAll('assume');
+      if (hasA && (assume.length < 1 || assume.length > 2)) { let err = f.querySelector('.err'); if (!err) { err = el('p', { class: 'err', role: 'alert', style: 'color:var(--bad)' }); btn.before(err); } err.textContent = 'Pick one or two assumptions your decision depends on.'; return; }
+      const yrs = Number(fd.get('years') || years);
+      const entry = { case_id: id, alias: sheet.masked.alias, cutoff: sheet.cutoff, horizon: yrs + ' calendar ' + (yrs === 1 ? 'year' : 'years'), horizon_years: yrs, stop_pct: fd.get('stop') ? Number(fd.get('stop')) : null, tp_pct: fd.get('tp') ? Number(fd.get('tp')) : null, action, size: action === 'skip' ? 0 : Number(fd.get('size')), p_beats_spy: null, reason: fd.get('reason'), hint_used: hintUsed, scene_setup: sc ? sc.setup : null, instinct, asked_friend: [...askedQ], assumptions: assume, transparent_mode: transparent, decided_at: new Date().toISOString() };
+      const ok = SG.upsertCommit(entry) && SG.findCommit(id);
+      if (!ok) { let err = f.querySelector('.err'); if (!err) { err = el('p', { class: 'err', role: 'alert', style: 'color:var(--bad)' }); btn.before(err); } err.textContent = 'Your decision could not be saved in this browser (storage blocked or full). Nothing was revealed. Free some space or allow site data, then press Commit again.'; btn.focus(); return; }
+      await showDebrief(entry); };
+    c.append(f); ticket.append(c);
+  }
+  async function showDebrief(entry) {
+    if (!outcome) { try { outcome = await load(`data/${id}/outcome.json`); } catch (e) { outcome = null; } }
+    const allStops = outcome && outcome.scene_check && outcome.scene_check.walkthrough || [];
+    const exitD = outcome && outcome.sim && outcome.sim.horizons[String(entry.horizon_years || years)];
+    const wt = exitD ? allStops.filter(s => s.event.date <= exitD) : allStops;   // only stops inside the chosen holding period
+    if (wt.length && !entry.walkthrough_skipped && !entry.walkthrough_complete && !entry.result) {
+      const reflections = Array.isArray(entry.walkthrough) ? entry.walkthrough : [];
+      const next = wt.findIndex(s => !reflections.some(r => r.event_id === s.event.id && ['strengthens', 'weakens', 'unresolved'].includes(r.view)));
+      if (next >= 0) return entry.walkthrough_started || reflections.length ? walk(entry, wt, next) : showGate(entry, wt);
+    }
+    return showDebriefFull(entry);
+  }
+  function showGate(entry, wt) {
+    ticket.innerHTML = ''; debrief.innerHTML = '';
+    const g = el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h2', {}, 'Your decision is saved: ' + entry.action + (entry.size ? ' ' + entry.size + '%' : '')), el('p', {}, 'How do you want to find out?'),
+      el('div', { class: 'row' }, el('button', { class: 'primary', type: 'button', style: 'width:auto', onclick: () => { if (saveWalk(entry, { walkthrough_started: true }, g)) walk(entry, wt, 0); } }, `Walk through what happened (${wt.length} stops)`), el('button', { class: 'ghost', type: 'button', onclick: () => { if (saveWalk(entry, { walkthrough_skipped: true }, g)) showDebriefFull(entry); } }, 'Show the result')),
+      el('p', { class: 'note' }, 'The walk shows the record one stop at a time, with only what was known then, and asks how each stop sits with your thesis. Your trade stays locked either way.'));
+    debrief.append(g); g.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  function saveWalk(entry, patch, host) {
+    const updated = { ...entry, ...patch };
+    if (!SG.upsertCommit(updated)) {
+      let error = host.querySelector('.walk-error');
+      if (!error) { error = el('p', { class: 'walk-error', role: 'alert' }); host.append(error); }
+      error.textContent = 'Your progress could not be saved. Allow site storage or free some space, then try again.';
+      return false;
+    }
+    Object.assign(entry, patch);
+    return true;
+  }
+  function walk(entry, wt, i) {
+    debrief.innerHTML = ''; const s = wt[i]; const ev = s.event; const refl = Array.isArray(entry.walkthrough) ? [...entry.walkthrough] : [];
+    const card = el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h2', {}, `Stop ${i + 1} of ${wt.length} · ${dateFmt(ev.date)}`), el('p', { style: 'font-size:1.02rem' }, el('strong', {}, ev.headline)), el('p', {}, s.stage_text), el('p', { class: 'note' }, 'Source and company name are shown in the debrief, after the last stop.'));
+    const ph = el('div'); card.append(el('h3', { style: 'font-size:.9rem;margin-top:.8rem' }, 'The path so far (identity still hidden)'), ph);
+    const upto = outcome.path.filter(b => b.d <= ev.date), sp = outcome.spy_path.filter(b => b.d <= ev.date);
+    SG.lineChart(ph, [{ name: 'This stock', cls: 's1', points: upto.map(b => ({ d: b.d, v: b.c })) }, { name: 'SPY', cls: 's2', points: sp.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, label: 'Closing prices from entry to this stop, indexed to 100', rawFmt: r => '$' + r.toFixed(2) });
+    const selected = (outcome.scene_check.assumptions || []).filter(a => (entry.assumptions || []).includes(a.id));
+    if (selected.length) card.append(el('div', { class: 'card' }, el('strong', {}, 'Your decision depended on'), el('ul', {}, ...selected.map(a => el('li', {}, a.text)))));
+    card.append(el('p', { style: 'margin-top:.8rem' }, el('strong', {}, selected.length ? 'Does this strengthen that assumption, weaken it, or leave it unresolved?' : 'Does this strengthen your original thesis, weaken it, or leave it unresolved?')), el('p', { class: 'note' }, 'A price move is not the answer by itself: judge the evidence against the assumption.'));
+    const row = el('div', { class: 'row' });
+    for (const [k, lab] of [['strengthens', 'Strengthens'], ['weakens', 'Weakens'], ['unresolved', 'Unresolved']]) row.append(el('button', { type: 'button', class: 'ghost', onclick: () => { refl[i] = { event_id: ev.id, date: ev.date, view: k }; if (!saveWalk(entry, { walkthrough: refl, walkthrough_started: true, walkthrough_complete: i + 1 === wt.length }, card)) return; if (i + 1 < wt.length) walk(entry, wt, i + 1); else showDebriefFull(entry); } }, lab));
+    card.append(row); debrief.append(card); card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  async function showDebriefFull(entry) {
+    ticket.innerHTML = ''; revealHeader(); ticket.append(el('div', { class: 'card' }, el('h2', {}, 'Your decision'), el('p', {}, el('strong', {}, entry.action + (entry.size ? ' ' + entry.size + '%' : '') + ' · ' + (entry.horizon || horizonText(sheet.horizon))), (entry.stop_pct ? ' · stop ' + entry.stop_pct + '%' : '') + (entry.tp_pct ? ' · target +' + entry.tp_pct + '%' : ''), (typeof entry.p_beats_spy === 'number' ? ' · you gave it ' + entry.p_beats_spy + '% to beat SPY' : '')), el('p', { class: 'note' }, entry.reason), entry.contrary ? el('p', { class: 'note' }, 'Contrary: ' + entry.contrary) : null, entry.change ? el('p', { class: 'note' }, 'Would change my mind: ' + entry.change) : null, el('p', { class: 'muted' }, 'Decided ' + entry.decided_at.slice(0, 16).replace('T', ' ')), el('a', { href: 'index.html' }, 'Next case')));
+    try { [outcome, reveal] = await Promise.all([load(`data/${id}/outcome.json`), reveal ? Promise.resolve(reveal) : load(`data/${id}/reveal.json`)]); } catch (e) { debrief.append(el('p', { class: 'card' }, 'Outcome not available: ' + e.message)); return; }
+    const yrs = entry.horizon_years || years;
+    const simr = SIM.simulate(outcome.sim, { action: entry.action, size: entry.size, years: yrs, stop: entry.stop_pct || 0, tp: entry.tp_pct || 0 });
+    const hold = SIM.simulate(outcome.sim, { action: 'buy', size: 10, years: yrs });   // plain hold over the chosen horizon, for the stock and SPY tiles
+    if (simr.status !== 'ok' || hold.status !== 'ok') { debrief.append(el('p', { class: 'card' }, 'Outcome not available for that horizon: ' + (simr.reason || hold.reason))); return; }
+    const key = entry.action === 'skip' ? 'skip' : `${entry.action}_${entry.size}`; const res = { position_return: simr.position_return, portfolio_return: simr.portfolio_return, end_equity: simr.end_equity };
+    const beat = hold.long_return > hold.spy_return ? 1 : 0; const brier = typeof entry.p_beats_spy === 'number' ? Math.pow(entry.p_beats_spy / 100 - beat, 2) : null;
+    entry.result = { position_return: res.position_return ?? 0, portfolio_return: res.portfolio_return, spy_return: hold.spy_return, brier, beat_spy: beat, exit_date: simr.exit.date, exit_reason: simr.exit_reason, horizon_years: yrs }; entry.reveal_name = `${reveal.transparent.issuer} (${reveal.transparent.ticker})`; SG.upsertCommit(entry);
+    debrief.innerHTML = '';
+    const d = el('section', { class: 'card', 'aria-live': 'polite' }, el('h2', {}, 'Debrief'), el('p', {}, 'This was ', el('strong', {}, reveal.transparent.issuer), ` (${reveal.transparent.ticker}, ${reveal.transparent.exchange}). You chose ${yrs} ${yrs === 1 ? 'year' : 'years'}. Entry ${dateFmt(simr.entry.date)} at $${simr.entry.open.toFixed(2)} open; exit ${dateFmt(simr.exit.date)} at $${simr.exit.open.toFixed(2)} open, ${simr.calendar_days} days: ${simr.exit_reason}.`));
+    d.append(el('div', { class: 'kv' },
+      el('div', {}, el('div', { class: 'l' }, 'Your portfolio'), el('div', { class: 'v ' + (res.portfolio_return > 0 ? 'up' : res.portfolio_return < 0 ? 'down' : '') }, signed(res.portfolio_return)), el('div', { class: 'p' }, '$' + res.end_equity.toLocaleString('en-US', { maximumFractionDigits: 0 }) + ' from $100,000')),
+      el('div', {}, el('div', { class: 'l' }, 'Position return' + (entry.action === 'skip' ? ' (not taken)' : '')), el('div', { class: 'v' }, signed(res.position_return ?? 0)), el('div', { class: 'p' }, (simr.stopped ? 'exited early: ' + simr.exit_reason.split(',')[0] + '; ' : '') + 'after slippage' + (entry.action === 'short' ? ', borrow and dividends owed' : ', dividends received') + (simr.stopped ? '. Held to the anniversary it would have been ' + signed(entry.action === 'short' ? -hold.long_return : hold.long_return) : ''))),
+      el('div', {}, el('div', { class: 'l' }, `Stock, long total return over ${yrs}y`), el('div', { class: 'v ' + (hold.long_return > 0 ? 'up' : 'down') }, signed(hold.long_return)), el('div', { class: 'p' }, 'held to the anniversary, dividends $' + hold.dividends_per_share.toFixed(2) + '/share')),
+      el('div', {}, el('div', { class: 'l' }, 'S&P 500 ETF, same dates'), el('div', { class: 'v ' + (hold.spy_return > 0 ? 'up' : 'down') }, signed(hold.spy_return)), el('div', { class: 'p' }, 'same dates, dividends included, no costs')),
+      el('div', {}, el('div', { class: 'l' }, 'Worst drawdown on the path'), el('div', { class: 'v down' }, signed(hold.max_drawdown)), el('div', { class: 'p' }, 'closing basis, over the chosen horizon')),
+      typeof entry.p_beats_spy !== 'number' ? null : el('div', {}, el('div', { class: 'l' }, 'Your forecast'), el('div', { class: 'v' }, `${entry.p_beats_spy}% that it beats SPY`), el('div', { class: 'p' }, `It ${beat ? 'did' : 'did not'} over ${yrs}y: ${signed(hold.long_return)} against SPY ${signed(hold.spy_return)}. One case proves nothing about a forecast; the journal compares your numbers with how often they came true once you have five or more.`))));
+    const ph = el('div'); d.append(el('h3', { style: 'font-size:.9rem;margin-top:1rem' }, 'What the path looked like'), ph);
+    const snap = (marks, path) => (marks || []).map(m => { const hit = path.find(b => b.d >= m.d); return hit ? { ...m, d: hit.d } : null; }).filter(Boolean);
+    const afMarks = (outcome.aftermath && outcome.aftermath.events) ? [...outcome.aftermath.events].sort((a, b) => a.date.localeCompare(b.date)).map((e, i) => ({ d: e.date, label: String(i + 1), scored: false })) : [];
+    const hExit = outcome.sim.horizons[String(yrs)]; const hPath = outcome.sim.path.filter(b => b.d <= hExit), hSpy = outcome.sim.spy_path.filter(b => b.d <= hExit);
+    const exitMark = simr.stopped ? [{ d: simr.exit.date, label: 'your exit', scored: true }] : [];
+    SG.lineChart(ph, [{ name: reveal.transparent.ticker, cls: 's1', points: hPath.map(b => ({ d: b.d, v: b.c })) }, { name: 'SPY', cls: 's2', points: hSpy.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, markers: [...snap(afMarks, hPath), ...exitMark], label: 'Closing prices from entry to exit, indexed to 100', rawFmt: r => '$' + r.toFixed(2) });
+    /* checking your thesis */
+    const sck0 = outcome.scene_check;
+    if (sck0 && ((entry.assumptions || []).length || entry.instinct || (entry.walkthrough || []).length)) {
+      const box = el('div', { style: 'margin-top:1rem' }, el('h3', { style: 'font-size:.9rem' }, 'Checking your thesis'));
+      const inst = entry.instinct ? { interested: 'interested', unconvinced: 'unconvinced', against: 'against it' }[entry.instinct] : null;
+      box.append(el('p', {}, (inst ? `You started ${inst} and ` : 'You ') + `chose ${entry.action}${entry.size ? ' at ' + entry.size + '%' : ''}` + ((entry.assumptions || []).length ? ', resting on:' : '.')));
+      if ((entry.assumptions || []).length) { const ul = el('ul', { class: 'plain' }); for (const aid of entry.assumptions) { const a = (sck0.assumptions || []).find(x => x.id === aid); const v = (sck0.thesis_check || {})[aid]; ul.append(el('li', {}, el('strong', {}, a ? a.text : aid), v ? el('div', { class: 'note' }, v) : el('div', { class: 'note muted' }, 'No check written for this assumption.'))); } box.append(ul); }
+      if (entry.reason) box.append(el('p', { class: 'note' }, 'Your supporting fact: ' + entry.reason));
+      if ((entry.walkthrough || []).length) box.append(el('p', { class: 'note' }, 'On the walk you said: ' + entry.walkthrough.map(w => `${dateFmt(w.date)} ${w.view}`).join(' · ') + '.'));
+      if (entry.result && entry.result.exit_date) box.append(el('p', { class: 'note' }, `Your trade closed on ${dateFmt(entry.result.exit_date)}; evidence dated after that is context, not part of your result.`));
+      d.append(box);
+    }
+    /* checking the pitch */
+    const sck = outcome.scene_check;
+    if (sck && sck.claims && sck.claims.length) {
+      const box = el('div', { style: 'margin-top:1rem' }, el('h3', { style: 'font-size:.9rem' }, 'Checking the ' + (sck.setup === 'analysts_disagree' ? 'two analysts' : sck.setup === 'bad_news_headline' ? 'headline' : sck.setup === 'familiar_product' ? 'shelf observation' : 'friend')));
+      box.append(el('p', { class: 'note' }, el('em', {}, '“' + sck.voice + '”')));
+      const ul = el('ul', { class: 'plain' });
+      for (const c of sck.claims) { const chk = (sck.debrief_check || {})[c.id]; ul.append(el('li', {}, el('strong', {}, c.text), chk ? el('div', { class: 'note' }, chk) : el('div', { class: 'note muted' }, 'Check not yet written for this claim.'))); }
+      box.append(ul); d.append(box);
+    }
+    /* aftermath: dated, sourced events after the cutoff */
+    const af = outcome.aftermath;
+    if (af && af.events) {
+      const kinds = { earnings: 'earnings', guidance: 'guidance', clinical: 'clinical', regulatory: 'regulatory', deal: 'deal', financing: 'financing', management: 'management', legal: 'legal', product: 'product', macro: 'macro', corporate_action: 'corporate action', other: 'other' };
+      const sec = el('div', { style: 'margin-top:1rem' }, el('h3', { style: 'font-size:.9rem' }, 'What happened next, from the record'), el('p', { class: 'note' }, af.attribution_caveat || ''));
+      const hn = af.horizon_notes || {}; const order = Object.keys(hn).sort((a, b) => Number(a) - Number(b));
+      for (const k of order) sec.append(el('p', {}, el('strong', {}, k + ' year' + (k === '1' ? '' : 's') + (Number(k) === yrs ? ' (your horizon)' : '') + ': '), hn[k]));
+      const evs = [...af.events].sort((a, b) => a.date.localeCompare(b.date));
+      const tl = el('ol', { class: 'plain', style: 'list-style:none;padding-left:0' });
+      for (const e of evs) tl.append(el('li', { style: 'margin:.4rem 0;padding-left:.6rem;border-left:3px solid var(--grid)' }, el('div', {}, el('strong', {}, dateFmt(e.date)), ' ', badge(kinds[e.kind] || e.kind), e.id ? el('span', { class: 'muted' }, ' ' + e.id) : null), el('div', {}, e.headline), e.detail ? el('div', { class: 'note' }, e.detail) : null, e.source_quote ? el('div', { class: 'note' }, '“' + e.source_quote + '”') : null, e.source && e.source.url ? el('div', { class: 'note' }, el('a', { href: e.source.url, target: '_blank', rel: 'noopener' }, e.source.title || e.source.url), e.source.publisher ? ' · ' + e.source.publisher : '', e.source.published ? ' · ' + dateFmt(e.source.published) : '', e.opened === false ? ' · not opened' : '') : null));
+      sec.append(el('details', {}, el('summary', {}, evs.length + ' dated events, each with its source (open to read them; they are numbered on the chart)'), tl));
+      if ((af.gaps || []).length) sec.append(el('details', {}, el('summary', { class: 'note' }, 'Gaps in this timeline'), el('ul', { class: 'plain' }, ...af.gaps.map(g => el('li', { class: 'note' }, g)))));
+      d.append(sec);
+      /* event markers on the path charts: number them by order */
+    }
+    /* other horizons: context only */
+    const alts = outcome.alternative_horizons || {}; const rowsH = [[String(years), outcome, String(years) === String(yrs)], ...Object.entries(alts).map(([k, v]) => [k, v, String(k) === String(yrs)])].sort((p, q) => Number(p[0]) - Number(q[0]));
+    if (Object.keys(alts).length) { const det = el('details', { style: 'margin-top:1rem' }, el('summary', {}, 'Reveal what happened over other horizons (context only, not scored)'));
+      const t = el('table'); t.append(el('tr', {}, el('th', {}, 'Horizon'), el('th', {}, 'Exit'), el('th', { class: 'n' }, 'Stock, long total return'), el('th', { class: 'n', title: 'Return per dollar sold short after slippage, the 5% a year borrow fee charged daily on the position, and dividends owed. Not just the stock return with the sign flipped.' }, 'Short, after borrow fee and dividends'), el('th', { class: 'n' }, 'SPY'), el('th', { class: 'n' }, 'Worst drawdown'), el('th', { class: 'n' }, 'Your call at your size')));
+      for (const [k, v, scored] of rowsH) { if (!v.exit) { t.append(el('tr', {}, el('td', {}, k + ' year' + (k === '1' ? '' : 's')), el('td', { colspan: 6, class: 'muted' }, v.reason || 'not available'))); continue; }
+        const rs = SIM.simulate(outcome.sim, { action: entry.action, size: entry.size, years: Number(k), stop: entry.stop_pct || 0, tp: entry.tp_pct || 0 }); const rr = rs.status === 'ok' ? { portfolio_return: rs.portfolio_return } : { portfolio_return: 0 };
+        t.append(el('tr', { style: scored ? 'font-weight:600' : '' }, el('td', {}, k + ' year' + (k === '1' ? '' : 's') + (scored ? ' (scored)' : '')), el('td', {}, dateFmt(v.exit.date)), el('td', { class: 'n ' + (v.long_total_return_after_costs > 0 ? 'up' : 'down') }, signed(v.long_total_return_after_costs)), el('td', { class: 'n' }, signed(v.short_total_return_after_costs)), el('td', { class: 'n' }, signed(v.spy_open_to_open_return)), el('td', { class: 'n' }, signed(v.max_drawdown_from_entry_path)), el('td', { class: 'n ' + (rr.portfolio_return > 0 ? 'up' : rr.portfolio_return < 0 ? 'down' : '') }, signed(rr.portfolio_return)))); }
+      det.append(el('div', { class: 'scroll' }, t), el('p', { class: 'note' }, 'Same entry fill and rules, only the exit anniversary changes. You committed to one horizon; the others show how much the answer depends on when you would have stopped.'));
+      if (outcome.extended_path) { const eh = el('div'); det.append(eh);
+        SG.lineChart(eh, [{ name: reveal.transparent.ticker, cls: 's1', points: outcome.extended_path.map(b => ({ d: b.d, v: b.c })) }, { name: 'SPY', cls: 's2', points: outcome.extended_spy_path.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, label: 'Closing prices from entry to the longest available anniversary, indexed to 100', rawFmt: r => '$' + r.toFixed(2), markers: [...(outcome.horizon_markers || []).map(m => ({ d: m.date, label: m.years + 'y' + (m.scored ? ' (scored)' : ''), scored: m.scored })), ...snap(afMarks, outcome.extended_path)] }); }
+      d.append(det); }
+    if (outcome.dividends_per_share.length) d.append(el('details', {}, el('summary', {}, outcome.dividends_per_share.length + ' dividends inside the window (vendor data)'), el('ul', { class: 'plain' }, ...outcome.dividends_per_share.map(x => el('li', { class: 'note' }, dateFmt(x.ex_date) + ' $' + x.amount.toFixed(4))))));
+    if (outcome.split_or_spinoff_in_window.length) d.append(el('p', { class: 'note' }, 'Corporate actions in window: ' + JSON.stringify(outcome.split_or_spinoff_in_window)));
+    d.append(el('details', { style: 'margin-top:1rem' }, el('summary', { class: 'note' }, 'For the curious: sources, open editorial repairs, data notes'),
+      el('h3', { style: 'font-size:.9rem' }, 'Sources behind the packet'), el('ul', { class: 'plain' }, ...(reveal.sources || []).map(s => el('li', { class: 'note' }, s.title + ' · ' + (s.availability_basis || '') + ' ', s.url ? el('a', { href: s.url, target: '_blank', rel: 'noopener' }, 'open') : ''))),
+      (reveal.repairs_needed || []).length ? el('details', {}, el('summary', {}, 'Editor repairs still open for this case'), el('ul', { class: 'plain' }, ...reveal.repairs_needed.map(x => el('li', { class: 'note' }, x)))) : null,
+      el('p', { class: 'note' }, outcome.data_note + ' ' + outcome.contract.note)));
+    debrief.append(d); d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  if (!prior) { const jump = el('button', { class: 'primary jump', type: 'button', onclick: () => { const f = ticket.querySelector('input[name=action]'); ticket.scrollIntoView({ behavior: 'smooth', block: 'start' }); if (f) setTimeout(() => f.focus(), 400); } }, 'Decide'); document.body.append(jump); }
+  if (prior) showDebrief(prior); else renderTicket();
+  if (location.hash === '#rules') openRules();
+})();
+</script>
+</body>
+</html>

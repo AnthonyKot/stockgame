@@ -1,0 +1,8 @@
+{
+  "ticker": "EXEL",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/EXEL?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:24.284757+00:00",
+  "sha256": "ce08971d5b0cddf8830234d94112ce3511cbc70563a43c261c18b3e2755eef5f",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

@@ -1,0 +1,1374 @@
+{
+  "candidate_id": "growth-008",
+  "schema_version": "mvp-1",
+  "cutoff": "2019-01-16T09:00:00-05:00",
+  "horizon": {
+    "unit": "calendar_years",
+    "count": 5
+  },
+  "exchange_calendar": "XNYS",
+  "sector_module": "operating",
+  "masked": {
+    "alias": "the largest bank in a G7 country, by total assets",
+    "sector": "Diversified banking and financial services",
+    "business_two_sentences": "A global bank earns net interest income by taking deposits and making loans, and fee income from investment banking, trading, card and payment processing, and asset and wealth management. It reports results across four main client-facing segments plus a corporate treasury/other segment, and returns capital to shareholders through dividends and buybacks."
+  },
+  "transparent": {
+    "issuer": "JPMorgan Chase & Co.",
+    "ticker": "JPM",
+    "exchange": "NYSE",
+    "business_two_sentences": "JPMorgan Chase is a global financial-services firm earning net interest income from deposit-taking and lending, plus fee income from investment banking, trading, card processing, and asset and wealth management. It reports through four client segments -- Consumer & Community Banking, Corporate & Investment Bank, Commercial Banking, and Asset & Wealth Management -- and returns capital via dividends and buybacks."
+  },
+  "financial_snapshot": {
+    "adapter": "operating",
+    "headline": [
+      {
+        "label": "Net interest income (FY2018)",
+        "value": 55059.0,
+        "unit": "USD_millions",
+        "period": "FY2018",
+        "available_at": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex992"
+        ],
+        "status": "reported",
+        "definition": "Interest income earned on loans and securities minus interest expense paid on deposits and borrowings, full year",
+        "prior": {
+          "value": 50097.0,
+          "period": "FY2017"
+        }
+      },
+      {
+        "label": "Noninterest revenue (FY2018)",
+        "value": 53970.0,
+        "unit": "USD_millions",
+        "period": "FY2018",
+        "available_at": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex992"
+        ],
+        "status": "reported",
+        "definition": "Fee and other non-lending revenue: investment banking fees, trading gains, asset management/administration fees, card income and other income, full year, reported basis",
+        "prior": {
+          "value": 50608.0,
+          "period": "FY2017"
+        }
+      },
+      {
+        "label": "Noninterest expense (FY2018)",
+        "value": 63394.0,
+        "unit": "USD_millions",
+        "period": "FY2018",
+        "available_at": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex992"
+        ],
+        "status": "reported",
+        "definition": "Compensation, occupancy, technology, professional services, marketing and other operating expense, full year",
+        "prior": {
+          "value": 59515.0,
+          "period": "FY2017"
+        }
+      },
+      {
+        "label": "Provision for credit losses (FY2018)",
+        "value": 4871.0,
+        "unit": "USD_millions",
+        "period": "FY2018",
+        "available_at": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex992"
+        ],
+        "status": "reported",
+        "definition": "Net charge-offs plus/minus the change in loan-loss reserves recognized in the income statement, full year",
+        "prior": {
+          "value": 5290.0,
+          "period": "FY2017"
+        }
+      },
+      {
+        "label": "Total deposits (period-end)",
+        "value": 1470666.0,
+        "unit": "USD_millions",
+        "period": "2018-12-31",
+        "available_at": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex992"
+        ],
+        "status": "reported",
+        "definition": "Customer deposit balances on the consolidated balance sheet at period end",
+        "prior": {
+          "value": 1443982.0,
+          "period": "2017-12-31"
+        }
+      },
+      {
+        "label": "Total loans, net of allowance (period-end)",
+        "value": 971109.0,
+        "unit": "USD_millions",
+        "period": "2018-12-31",
+        "available_at": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex992"
+        ],
+        "status": "reported",
+        "definition": "Gross loans of $984,554 million less the $13,445 million allowance for loan losses, period end",
+        "prior": {
+          "value": 917093.0,
+          "period": "2017-12-31"
+        }
+      }
+    ],
+    "history": [
+      {
+        "row": "Total net revenue, reported basis",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2014",
+            "value": 94205.0,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 93543.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 95668.0,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017 (as revised Jan 2019)",
+            "value": 100705.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2017",
+            "value": 24457.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 27907.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 27753.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 27260.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": 26109.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 109029.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net interest income",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2014",
+            "value": 43634.0,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 43510.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 46083.0,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 50097.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "jpm-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2017",
+            "value": 13027.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 13312.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 13485.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 13908.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": 14354.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 55059.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Noninterest revenue",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2014",
+            "value": 50571.0,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 50033.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 49585.0,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017 (as revised Jan 2019)",
+            "value": 50608.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2017",
+            "value": 11430.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 14595.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 14268.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 13352.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": 11755.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 53970.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Noninterest expense",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2014",
+            "value": 61274.0,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 59014.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 55771.0,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017 (as revised Jan 2019)",
+            "value": 59515.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2017",
+            "value": 14895.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 16080.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 15971.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 15623.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": 15720.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 63394.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Provision for credit losses",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2014",
+            "value": 3139.0,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 3827.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 5361.0,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 5290.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "jpm-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2017",
+            "value": 1308.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 1165.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 1210.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 948.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": 1548.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 4871.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net income",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2014",
+            "value": 21762.0,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 24442.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 24733.0,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 24441.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "jpm-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2017",
+            "value": 4232.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 8712.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 8316.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 8380.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": 7066.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 32474.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Diluted EPS",
+        "unit": "USD_per_share",
+        "cells": [
+          {
+            "period": "FY2014",
+            "value": 5.29,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 6.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 6.19,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 6.31,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "jpm-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2017",
+            "value": 1.07,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 2.37,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 2.29,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 2.34,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": 1.98,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 9.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total deposits (period-end)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "2014-12-31",
+            "value": 1363427.0,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2015-12-31",
+            "value": 1279715.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2016-12-31",
+            "value": 1375179.0,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2017-12-31",
+            "value": 1443982.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "jpm-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-03-31",
+            "value": 1486961.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-06-30",
+            "value": 1452122.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-09-30",
+            "value": 1458762.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-12-31",
+            "value": 1470666.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total loans, net of allowance (period-end)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "2014-12-31",
+            "value": 743151.0,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2015-12-31",
+            "value": 823744.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2016-12-31",
+            "value": null,
+            "available_at": null,
+            "source_ids": [],
+            "status": "missing"
+          },
+          {
+            "period": "2017-12-31",
+            "value": 917093.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-03-31",
+            "value": 921049.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-06-30",
+            "value": 935164.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-09-30",
+            "value": 941190.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-12-31",
+            "value": 971109.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Stockholders' equity (period-end)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "2014-12-31",
+            "value": 232065.0,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2015-12-31",
+            "value": 247573.0,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2016-12-31",
+            "value": 254190.0,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2017-12-31",
+            "value": 255693.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "jpm-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-12-31",
+            "value": 256515.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Common shares outstanding, period-end",
+        "unit": "millions_of_shares",
+        "cells": [
+          {
+            "period": "2014-12-31",
+            "value": 3714.8,
+            "available_at": "2015-02-24",
+            "source_ids": [
+              "jpm-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2015-12-31",
+            "value": 3663.5,
+            "available_at": "2016-02-23",
+            "source_ids": [
+              "jpm-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2016-12-31",
+            "value": 3561.2,
+            "available_at": "2017-02-28",
+            "source_ids": [
+              "jpm-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2017-12-31",
+            "value": 3425.3,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "jpm-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-12-31",
+            "value": 3275.8,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Market capitalization (company-reported)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "2017-12-31",
+            "value": 366301.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "2018-12-31",
+            "value": 319780.0,
+            "available_at": "2019-01-15",
+            "source_ids": [
+              "jpm-8k-ex992"
+            ],
+            "status": "reported"
+          }
+        ]
+      }
+    ]
+  },
+  "what_changed": [
+    {
+      "date": "2019-01-15",
+      "fact": "JPMorgan Chase reported record Q4 2018 net income of $7.1 billion ($1.98/share) and record full-year net income of $32.5 billion ($9.00/share), with full-year ROTCE of 17% [c1][c2].",
+      "relationship_to_business": "Establishes the trailing profitability and capital-efficiency level the market is pricing at the cutoff.",
+      "source_ids": [
+        "jpm-8k-ex991"
+      ],
+      "status": "reported"
+    },
+    {
+      "date": "2019-01-15",
+      "fact": "Q4 Markets & Investor Services revenue fell 11% YoY to $4.0 billion and full-year expense rose 7% to $63.4 billion, even as investment-banking fees hit a record #1 wallet share of 8.7% [c6][c4][c23].",
+      "relationship_to_business": "Shows record annual franchise strength alongside a weaker, more volatile fourth quarter in market-sensitive businesses.",
+      "source_ids": [
+        "jpm-8k-ex991",
+        "jpm-8k-ex992"
+      ],
+      "status": "reported"
+    },
+    {
+      "date": "2019-01-15",
+      "fact": "The bank opened Chase branches in new states for the first time in nearly a decade in Q4, part of a multi-year technology and real-estate investment program [c3].",
+      "relationship_to_business": "A discretionary capital-allocation choice disclosed alongside the results, relevant to how investors read the year's expense growth.",
+      "source_ids": [
+        "jpm-8k-ex991"
+      ],
+      "status": "reported"
+    }
+  ],
+  "sector_evidence": {
+    "segments": [
+      {
+        "segment": "Consumer & Community Banking",
+        "fy2018_revenue_usd_millions": 52079.0,
+        "fy2018_net_income_usd_millions": 14852.0,
+        "fy2018_roe_pct": 28.0,
+        "fy2017_revenue_usd_millions": 46485.0,
+        "fy2017_net_income_usd_millions": 9395.0,
+        "source_ids": [
+          "jpm-8k-ex992",
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "segment": "Corporate & Investment Bank",
+        "fy2018_revenue_usd_millions": 36448.0,
+        "fy2018_net_income_usd_millions": 11773.0,
+        "fy2018_roe_pct": 16.0,
+        "fy2017_revenue_usd_millions": 34657.0,
+        "fy2017_net_income_usd_millions": 10813.0,
+        "source_ids": [
+          "jpm-8k-ex992",
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "segment": "Commercial Banking",
+        "fy2018_revenue_usd_millions": 9059.0,
+        "fy2018_net_income_usd_millions": 4237.0,
+        "fy2018_roe_pct": 20.0,
+        "fy2017_revenue_usd_millions": 8605.0,
+        "fy2017_net_income_usd_millions": 3539.0,
+        "source_ids": [
+          "jpm-8k-ex992",
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "segment": "Asset & Wealth Management",
+        "fy2018_revenue_usd_millions": 14076.0,
+        "fy2018_net_income_usd_millions": 2853.0,
+        "fy2018_roe_pct": 31.0,
+        "fy2017_revenue_usd_millions": 13835.0,
+        "fy2017_net_income_usd_millions": 2337.0,
+        "source_ids": [
+          "jpm-8k-ex992",
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "segment": "Corporate",
+        "fy2018_revenue_usd_millions": -128.0,
+        "fy2018_net_income_usd_millions": -1241.0,
+        "fy2018_roe_pct": null,
+        "fy2017_revenue_usd_millions": 1140.0,
+        "fy2017_net_income_usd_millions": -1643.0,
+        "source_ids": [
+          "jpm-8k-ex992"
+        ],
+        "status": "reported"
+      }
+    ],
+    "guidance": [
+      {
+        "metric": "Firm-wide forward revenue/EPS guidance",
+        "prior_guidance": null,
+        "new_guidance": null,
+        "date": "2019-01-15",
+        "status": "not_applicable",
+        "note": "JPMorgan Chase's 4Q18 earnings release and financial supplement contain no formal point forward-revenue or forward-EPS guidance figures; large banks typically do not issue the kind of numeric next-year guidance seen at industrial or consumer companies [c21]."
+      }
+    ],
+    "capital_allocation": [
+      {
+        "item": "Common dividend declared per share, FY2018",
+        "value": "$2.72 per share (Q4 2018 alone: $0.80 per share)",
+        "date": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex992",
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "item": "Net share repurchases, Q4 2018",
+        "value": "$5.7 billion",
+        "date": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "item": "Total capital distributed to shareholders, Q4 2018",
+        "value": "$8.3 billion",
+        "date": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "item": "Common equity Tier 1 (CET1) capital ratio, period-end",
+        "value": "12.0% ($184 billion of CET1 capital)",
+        "date": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex992",
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "item": "Capital expenditure (discrete disclosure)",
+        "value": null,
+        "date": null,
+        "source_ids": [],
+        "status": "missing",
+        "note": "Not separately broken out in the 4Q18 release or supplement; technology/real-estate investment is embedded within noninterest expense."
+      },
+      {
+        "item": "Debt maturities within 24 months",
+        "value": null,
+        "date": null,
+        "source_ids": [],
+        "status": "missing",
+        "note": "Not disclosed in the 4Q18 release or supplement; long-term debt was $282.0 billion at period-end, but a maturity schedule was not part of this filing."
+      }
+    ],
+    "competitive_position_facts": [
+      {
+        "fact": "The firm was the #1 ranked bank in global investment-banking fees for 2018 with an 8.7% wallet share, up 60 basis points from 2017 [c4].",
+        "source_ids": [
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "fact": "Assets under management in Asset & Wealth Management were $2.0 trillion at year-end, down 2% year over year on lower market levels, even as the segment reported cumulative net long-term inflows for the year [c9].",
+        "source_ids": [
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      },
+      {
+        "fact": "Credit card sales volume rose 10%, debit sales volume rose 11% and merchant processing volume rose 17% year over year in the fourth quarter, indicating continued growth in consumer payment activity [c8].",
+        "source_ids": [
+          "jpm-8k-ex991"
+        ],
+        "status": "reported"
+      }
+    ]
+  },
+  "upcoming_and_unresolved": {
+    "catalysts": [
+      {
+        "description": "Next scheduled quarterly earnings release",
+        "timing_window": "mid-April 2019",
+        "announced_on": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex991"
+        ]
+      },
+      {
+        "description": "Filing of the audited FY2018 Form 10-K",
+        "timing_window": "on or before the SEC's large-accelerated-filer 10-K deadline (late February)",
+        "announced_on": "2019-01-15",
+        "source_ids": [
+          "jpm-8k-ex991"
+        ]
+      }
+    ],
+    "unresolved_questions": [
+      "Does Q4 weakness in Markets revenue and AWM asset values reflect temporary volatility or a lasting trading slowdown?",
+      "Can loan and deposit growth keep offsetting rising expense growth if interest-rate increases slow?",
+      "Does the Q4 jump in credit-loss provisioning signal early normalization, or is it an isolated quarter?"
+    ]
+  },
+  "macro_context": [
+    {
+      "item": "Broad U.S. equity-market volatility and a sharp sell-off occurred during the fourth quarter of 2018, the same quarter covered by this earnings release.",
+      "business_connection": "Management explicitly linked lower market levels to weaker Markets & Investor Services revenue (down 11% year over year) and a 2% decline in Asset & Wealth Management's assets under management for the quarter [c6][c9].",
+      "available_at": "2019-01-15",
+      "source_ids": [
+        "jpm-8k-ex991"
+      ]
+    },
+    {
+      "item": "The prior-year (2017) results embedded a one-time $1.9 billion tax expense tied to the enactment of the Tax Cuts and Jobs Act, which mechanically depressed 2017 net income.",
+      "business_connection": "This lowers the 2017 comparison base, so part of the reported 33% full-year net income growth and 67% fourth-quarter net income growth reflects that one-time prior-year charge rather than only underlying business improvement [c7][c17].",
+      "available_at": "2019-01-15",
+      "source_ids": [
+        "jpm-8k-ex992"
+      ]
+    }
+  ],
+  "help_me_weigh": {
+    "own": [
+      "Record full-year 2018 net income of $32.5 billion ($9.00 diluted EPS) and 17% ROTCE, with net interest income up 10% for the year on higher rates and loan growth [c1][c12].",
+      "Both deposits and loans grew through the year (deposits up 2% to $1.47 trillion; net loans up 6% to $971 billion), and the firm held the #1 position in global investment-banking fees with an 8.7% wallet share, up 60 basis points [c13][c14][c4].",
+      "Capital position remained strong at a 12.0% CET1 ratio, and the firm returned $8.3 billion to shareholders in the fourth quarter alone through buybacks and dividends [c19][c20]."
+    ],
+    "flat": [
+      "Fourth-quarter net income fell 16% sequentially from the third quarter, and Markets & Investor Services revenue dropped 11% year over year in the same quarter, underscoring the trading business's sensitivity to short-term market conditions [c22][c6].",
+      "Full-year noninterest expense grew 7% to $63.4 billion, and part of the headline year-over-year net income growth is a base effect from a one-time 2017 tax charge rather than purely operating improvement [c23][c17]."
+    ],
+    "short": [
+      "The provision for credit losses rose 63% quarter over quarter, driven by reserve builds including card and Commercial & Industrial downgrades, which could be read as an early credit-normalization signal after several years of unusually low provisions [c8][c18].",
+      "Asset & Wealth Management's assets under management fell 2% year over year on lower market levels, and Home Lending revenue fell 8% year over year on margin compression, showing pockets of the business already softening before the year closed [c9][c10]."
+    ]
+  },
+  "source_handles": [
+    {
+      "id": "jpm-8k-ex991",
+      "kind": "8-K",
+      "title": "JPMorgan Chase Reports Record Fourth-Quarter 2018 Net Income of $7.1 Billion (press release)",
+      "available_at": "2019-01-15",
+      "masked_title": "Bank press release, 15 Jan 2019, fourth-quarter and full-year 2018 results"
+    },
+    {
+      "id": "jpm-8k-ex992",
+      "kind": "8-K",
+      "title": "JPMorgan Chase 4Q18 Earnings Release Financial Supplement",
+      "available_at": "2019-01-15",
+      "masked_title": "Bank financial supplement, 15 Jan 2019, fourth-quarter and full-year 2018 results"
+    },
+    {
+      "id": "jpm-10k-fy2014",
+      "kind": "10-K",
+      "title": "JPMorgan Chase & Co. Form 10-K, fiscal year 2014 (XBRL facts)",
+      "available_at": "2015-02-24",
+      "masked_title": "Bank annual report, filed 24 Feb 2015"
+    },
+    {
+      "id": "jpm-10k-fy2015",
+      "kind": "10-K",
+      "title": "JPMorgan Chase & Co. Form 10-K, fiscal year 2015 (XBRL facts)",
+      "available_at": "2016-02-23",
+      "masked_title": "Bank annual report, filed 23 Feb 2016"
+    },
+    {
+      "id": "jpm-10k-fy2016",
+      "kind": "10-K",
+      "title": "JPMorgan Chase & Co. Form 10-K, fiscal year 2016 (XBRL facts)",
+      "available_at": "2017-02-28",
+      "masked_title": "Bank annual report, filed 28 Feb 2017"
+    },
+    {
+      "id": "jpm-10k-fy2017",
+      "kind": "10-K",
+      "title": "JPMorgan Chase & Co. Form 10-K, fiscal year 2017 (XBRL facts)",
+      "available_at": "2018-02-27",
+      "masked_title": "Bank annual report, filed 27 Feb 2018"
+    }
+  ],
+  "missing_data": [
+    "FY2016 year-end total loans figure: the XBRL loans tag collected for this packet stops at mid-2016; not filled from the FY2016 10-K text in this pass.",
+    "Discrete capital-expenditure figure: not separately disclosed in the 4Q18 release or supplement (embedded in noninterest expense).",
+    "Debt maturities within the next 24 months: not disclosed in the 4Q18 release or supplement.",
+    "Consensus EPS/revenue estimates: excluded by policy; none appeared in the primary sources used.",
+    "Enterprise value / EV-based multiples: not applicable in the same way as for a non-financial operating company, and no third-party valuation multiple was stated by the issuer with its own date; only the issuer's own market-capitalization figure (as of 2018-12-31) is included."
+  ],
+  "editorial_notes": "Q4/FY2018 figures come from the firm's own 4Q18 earnings release and financial supplement (accession 0000019617-19-000002, filed 2019-01-15, before the 2019-01-16 cutoff); FY2014-FY2017 annual figures come from the collected XBRL facts (as originally filed in each year's Form 10-K). Two of the FY2017 history cells (total net revenue and noninterest revenue/expense) are shown using the *revised* comparative figures the firm published in the January 2019 release, because the firm adopted new revenue-recognition accounting standards effective January 1, 2018 and retrospectively restated 2017 comparatives [c16]; these differ modestly from the FY2017 amounts originally filed in the 2017 Form 10-K (captured separately via XBRL). Net income, EPS, provision for credit losses and net interest income were not materially affected by this restatement and are consistent across both vintages. Full-year 2017 net income also included a one-time $1.9 billion Tax Cuts and Jobs Act charge, which mechanically depresses the 2017 base used in year-over-year comparisons throughout this packet; this is flagged wherever growth percentages are quoted. All 'managed basis' non-GAAP figures from the source have been avoided in favor of reported-basis GAAP figures for the six required headline metrics, except where noted (segment revenue figures are presented on the firm's fully taxable-equivalent managed basis, its standard segment-reporting convention, and are labeled as such)."
+}

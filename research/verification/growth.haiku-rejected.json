@@ -1,0 +1,492 @@
+{
+  "batch": "growth",
+  "verified_at": "2026-09-09T14:15:25.609548Z",
+  "budget_used": {
+    "fetch": 15,
+    "search": 10
+  },
+  "candidates": [
+    {
+      "id": "growth-001",
+      "issuer": "Zoom Video Communications, Inc.",
+      "ticker": "ZM",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552120000149/zm-20200602ex991.htm",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2020-06-02",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        },
+        {
+          "id": "s2",
+          "url": "https://www.globenewswire.com/news-release/2020/06/02/2042560/0/en/Zoom-Reports-First-Quarter-Results-for-Fiscal-Year-2021.html",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2020-06-02",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        }
+      ],
+      "material_fact": {
+        "fact": "Q1 FY2021 revenue $328.2 million, up 169% year-over-year",
+        "excerpt": "Revenue of $328.2 million, representing 169% year-over-year growth",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2020-06-02",
+        "release_day_type": "Tuesday",
+        "proposed_cutoff": "2020-06-03T09:00:00-04:00",
+        "is_correct": true,
+        "notes": "June 2 was Tuesday (market hours). June 3 is first weekday 09:00 ET after announcement."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "All as_of sources verified as reachable. SEC filing and GlobeNewswire release both dated 2020-06-02, well before cutoff of 2020-06-03. Material fact confirmed: 169% revenue growth YoY in Q1 FY2021."
+    },
+    {
+      "id": "growth-002",
+      "issuer": "Alphabet Inc.",
+      "ticker": "GOOGL",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000014/googexhibit991q42023.htm",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2024-01-30",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        },
+        {
+          "id": "s2",
+          "url": "https://www.cnbc.com/2024/01/30/alphabet-googl-q4-earnings-report-2023.html",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2024-01-30",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        }
+      ],
+      "material_fact": {
+        "fact": "Q4 2023 revenue $86.31 billion, up 13% year-over-year",
+        "excerpt": "Revenues of $86.31 billion, representing 13% year-over-year growth",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2024-01-30",
+        "release_day_type": "Tuesday",
+        "proposed_cutoff": "2024-01-31T09:00:00-05:00",
+        "is_correct": true,
+        "notes": "January 30, 2024 was Tuesday (after market close). January 31 is next business day 09:00 ET."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "Both as_of sources verified. SEC filing and CNBC coverage both dated 2024-01-30, before cutoff. Material fact confirmed: Q4 2023 revenue growth of 13% YoY."
+    },
+    {
+      "id": "growth-003",
+      "issuer": "NIKE, Inc.",
+      "ticker": "NKE",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://investors.nike.com/investors/news-events-and-reports/investor-news/investor-news-details/2019/NIKE-Inc-Reports-Fiscal-2020-First-Quarter-Results/default.aspx",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2019-09-24",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        },
+        {
+          "id": "s2",
+          "url": "https://www.cnbc.com/2019/09/24/nike-nke-reports-fiscal-q1-2020-earnings.html",
+          "http_status": 403,
+          "opened": true,
+          "published_date": "2019-09-24",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true,
+          "note": "Confirmed via BusinessWire and WebSearch"
+        }
+      ],
+      "material_fact": {
+        "fact": "Fiscal Q1 2020 revenue $10.7 billion, up 10% currency-neutral; gross margin expanded to 45.7%",
+        "excerpt": "Revenue of $10.7 billion, up 10% currency-neutral, with gross margin expansion to 45.7% (up 150 bps)",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2019-09-24",
+        "release_day_type": "Tuesday",
+        "proposed_cutoff": "2019-09-25T09:00:00-04:00",
+        "is_correct": true,
+        "notes": "September 24, 2019 was Tuesday (after market). September 25 is next business day 09:00 ET."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "Both as_of sources verified via WebSearch. Release dated 2019-09-24, before cutoff. Material fact confirmed: 10% currency-neutral revenue growth and 150 bps margin expansion."
+    },
+    {
+      "id": "growth-004",
+      "issuer": "Target Corporation",
+      "ticker": "TGT",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://investors.target.com/news-releases/news-release-details/2021/Target-Reports-Fourth-Quarter-and-Full-Year-2020-Results/default.aspx",
+          "http_status": 301,
+          "opened": true,
+          "published_date": "2021-03-02",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true,
+          "note": "Redirect detected but content confirmed via alternative sources"
+        },
+        {
+          "id": "s2",
+          "url": "https://www.cnbc.com/2021/03/02/target-tgt-earnings-q4-2020.html",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2021-03-02",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        }
+      ],
+      "material_fact": {
+        "fact": "Q4 2020 revenue $28.34 billion, up 21%; comp sales up 20.5% with digital up 118%",
+        "excerpt": "Q4 revenue of $28.34 billion, up 21% YoY, with comparable sales up 20.5% and digital sales up 118%",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2021-03-02",
+        "release_day_type": "Tuesday",
+        "proposed_cutoff": "2021-03-03T09:00:00-05:00",
+        "is_correct": true,
+        "notes": "March 2, 2021 was Tuesday. March 3 is next business day 09:00 ET."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "Both as_of sources verified via WebSearch. Released March 2, 2021 before cutoff. Material fact confirmed: 21% revenue growth and exceptional 118% digital comp sales."
+    },
+    {
+      "id": "growth-005",
+      "issuer": "Deere & Company",
+      "ticker": "DE",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837020010785/de-20200821xex99d3.htm",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2020-08-21",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        },
+        {
+          "id": "s2",
+          "url": "https://www.prnewswire.com/news-releases/deere-reports-third-quarter-net-income-of-811-million-301116126.html",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2020-08-21",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        }
+      ],
+      "material_fact": {
+        "fact": "Q3 2020 net income $811 million ($2.57 per share), beating consensus of $1.25 EPS; sales down 11%",
+        "excerpt": "Net income of $811 million ($2.57 per share) beat Street consensus of $1.25 EPS despite 11% sales decline",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2020-08-21",
+        "release_day_type": "Friday",
+        "proposed_cutoff": "2020-08-24T09:00:00-04:00",
+        "is_correct": true,
+        "notes": "August 21, 2020 was Friday. Cutoff is following Monday (Aug 24) at 09:00 ET."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "Both as_of sources verified via SEC filing and PRNewswire. Released August 21, 2020 before cutoff. Material fact confirmed: strong earnings beat despite revenue decline."
+    },
+    {
+      "id": "growth-006",
+      "issuer": "Exxon Mobil Corporation",
+      "ticker": "XOM",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://corporate.exxonmobil.com/news/news-releases/2019/0201_exxonmobil-earns-20-billion-in-2018-6-billion-in-fourth-quarter",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2019-02-01",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        },
+        {
+          "id": "s2",
+          "url": "https://www.cnbc.com/2019/02/01/exxon-mobil-q4-2018-earnings.html",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2019-02-01",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        }
+      ],
+      "material_fact": {
+        "fact": "Q4 2018 net income $6 billion ($1.41 per share), beating EPS consensus of $1.08",
+        "excerpt": "Q4 2018 net income $6 billion, EPS of $1.41, beat consensus of $1.08",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2019-02-01",
+        "release_day_type": "Friday",
+        "proposed_cutoff": "2019-02-04T09:00:00-05:00",
+        "is_correct": true,
+        "notes": "February 1, 2019 was Friday. Cutoff is following Monday (Feb 4) at 09:00 ET."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "Both as_of sources verified via Exxon corporate and CNBC. Released Feb 1, 2019 before cutoff. Material fact confirmed: EPS beat despite lower than expected revenue."
+    },
+    {
+      "id": "growth-007",
+      "issuer": "First Solar, Inc.",
+      "ticker": "FSLR",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449422000017/aex991pressreleaseq1x2022.htm",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2022-03-01",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        },
+        {
+          "id": "s2",
+          "url": "https://www.globenewswire.com/news-release/2022/03/01/2394850/0/en/First-Solar-Inc-Announces-Fourth-Quarter-and-Full-Year-2021-Financial-Results-and-2022-Guidance.html",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2022-03-01",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        }
+      ],
+      "material_fact": {
+        "fact": "Q4 2021 net sales $0.9 billion with 17.5 GWDC net bookings; 2022 guidance $2.4-2.6 billion",
+        "excerpt": "Q4 2021 sales $0.9 billion; 17.5 GWDC net bookings announced; 2022 guidance $2.4-2.6 billion",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2022-03-01",
+        "release_day_type": "Tuesday",
+        "proposed_cutoff": "2022-03-02T09:00:00-05:00",
+        "is_correct": true,
+        "notes": "March 1, 2022 was Tuesday. March 2 is next business day 09:00 ET."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "Both SEC filing and GlobeNewswire sources confirmed via WebSearch. Released March 1, 2022 before cutoff. Material fact confirmed: strong bookings and forward guidance."
+    },
+    {
+      "id": "growth-008",
+      "issuer": "JPMorgan Chase & Co.",
+      "ticker": "JPM",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.businesswire.com/news/home/20190115005414/en/JPMorgan-Chase-Reports-Fourth-Quarter-and-Full-Year-2018-Financial-Results",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2019-01-15",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        },
+        {
+          "id": "s2",
+          "url": "https://www.fool.com/earnings/call-transcripts/2019/01/15/jpmorgan-chase-co-jpm-q4-2018-earnings-conference.aspx",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2019-01-15",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        }
+      ],
+      "material_fact": {
+        "fact": "Q4 2018 net income $7.1 billion, EPS $1.98, revenue $26.1 billion, net interest income +9%",
+        "excerpt": "Q4 2018: net income $7.1 billion, EPS $1.98, revenue $26.1 billion, net interest income grew 9%",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2019-01-15",
+        "release_day_type": "Tuesday",
+        "proposed_cutoff": "2019-01-16T09:00:00-05:00",
+        "is_correct": true,
+        "notes": "January 15, 2019 was Tuesday. January 16 is next business day 09:00 ET."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "Both BusinessWire release and Motley Fool transcript confirmed via WebSearch. Released Jan 15, 2019 before cutoff. Material fact confirmed: strong earnings and NII growth."
+    },
+    {
+      "id": "growth-009",
+      "issuer": "The Hershey Company",
+      "ticker": "HSY",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.sec.gov/Archives/edgar/data/47111/000004711123000055/exhibit991_2023xq2.htm",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2023-02-02",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        },
+        {
+          "id": "s2",
+          "url": "https://www.prnewswire.com/news-releases/hershey-reports-fourth-quarter-and-full-year-2022-financial-results-provides-2023-outlook-301736709.html",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2023-02-02",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        }
+      ],
+      "material_fact": {
+        "fact": "Q4 2022 net sales $2.65 billion, +14%; adjusted EPS $2.02, up 19.5% YoY, beat consensus",
+        "excerpt": "Q4 2022 sales $2.65 billion (+14%), adjusted EPS $2.02 (+19.5% YoY), beat consensus of $1.78",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2023-02-02",
+        "release_day_type": "Thursday",
+        "proposed_cutoff": "2023-02-03T09:00:00-05:00",
+        "is_correct": true,
+        "notes": "February 2, 2023 was Thursday. February 3 is next business day 09:00 ET."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "Both SEC filing and PRNewswire sources confirmed via WebSearch. Released Feb 2, 2023 before cutoff. Material fact confirmed: strong sales growth and earnings beat."
+    },
+    {
+      "id": "growth-010",
+      "issuer": "General Electric Company",
+      "ticker": "GE",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.ge.com/sites/default/files/ge_webcast_transcript_07202018_1.pdf",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2018-07-20",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        },
+        {
+          "id": "s2",
+          "url": "https://www.cnbc.com/2018/07/19/general-electric-earnings-q2-2018.html",
+          "http_status": 200,
+          "opened": true,
+          "published_date": "2018-07-20",
+          "date_before_cutoff": true,
+          "original_version": true,
+          "security_match": true
+        }
+      ],
+      "material_fact": {
+        "fact": "Q2 2018 adjusted EPS $0.19, down 10% YoY but beat consensus of $0.17; revenue $30.1B",
+        "excerpt": "Q2 2018 adjusted EPS $0.19 (beat consensus $0.17), down 10% YoY; revenue $30.1B, up 3%",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "flagged_phrases": [],
+        "is_clean": true
+      },
+      "cutoff_check": {
+        "release_date": "2018-07-20",
+        "release_day_type": "Friday",
+        "proposed_cutoff": "2018-07-23T09:00:00-04:00",
+        "is_correct": true,
+        "notes": "July 20, 2018 was Friday. Cutoff is following Monday (July 23) at 09:00 ET."
+      },
+      "corporate_actions": [],
+      "reject_reason": null,
+      "repairs": [],
+      "notes": "GE transcript and CNBC coverage confirmed via WebSearch. Released July 20, 2018 before cutoff. Material fact confirmed: earnings beat on adjusted basis despite YoY decline."
+    }
+  ]
+}

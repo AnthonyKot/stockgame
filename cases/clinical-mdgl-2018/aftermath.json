@@ -1,0 +1,207 @@
+{
+  "candidate_id": "clinical-mdgl-2018",
+  "cutoff": "2018-11-13",
+  "coverage_end": "2023-11-13",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2019-03-28",
+      "kind": "clinical",
+      "headline": "Madrigal initiates pivotal Phase 3 MAESTRO-NASH trial of resmetirom in biopsy-confirmed NASH with fibrosis",
+      "detail": "The company began enrolling patients with biopsy-confirmed NASH and stage 2-3 fibrosis into a three-arm, placebo-controlled trial of 80 mg and 100 mg resmetirom, with a week-52 liver biopsy in the first cohort intended to support a possible accelerated-approval filing.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Form 10-K for fiscal year 2019 (quoting the company's March 28, 2019 trial-initiation announcement)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312520049021/d796399d10k.htm",
+        "publisher": "SEC EDGAR / Madrigal Pharmaceuticals, Inc.",
+        "published": "2020-02-26"
+      },
+      "opened": true,
+      "opened_note": "Used the 10-K, which quotes the March 28, 2019 announcement verbatim, because the original 2019 press release/8-K exhibit for this specific announcement could not be located and opened directly."
+    },
+    {
+      "id": "e2",
+      "date": "2019-12-10",
+      "kind": "clinical",
+      "headline": "Madrigal opens a second pivotal trial, MAESTRO-NAFLD-1, for enrollment in a related NASH population",
+      "detail": "The company opened for enrollment a 52-week, double-blind, placebo-controlled Phase 3 study of resmetirom in about 700 patients with NASH and presumed NASH, intended to add safety and metabolic data alongside MAESTRO-NASH.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Form 10-K for fiscal year 2019 (quoting the company's December 10, 2019 announcement)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312520049021/d796399d10k.htm",
+        "publisher": "SEC EDGAR / Madrigal Pharmaceuticals, Inc.",
+        "published": "2020-02-26"
+      },
+      "opened": true,
+      "opened_note": "Same 10-K as e1; original December 2019 press release not independently opened."
+    },
+    {
+      "id": "e3",
+      "date": "2020-04-01",
+      "kind": "macro",
+      "headline": "Company says COVID-19 site-safety measures let its two Phase 3 trials continue without protocol changes",
+      "detail": "In response to regulatory guidance during the early pandemic, Madrigal put COVID-19 safety measures in place at MAESTRO-NASH and MAESTRO-NAFLD-1 trial sites and said both studies were able to continue without protocol modification; connection to this business: pandemic-era site access and travel restrictions were an industry-wide risk to enrollment and monitoring at clinical-trial sites.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Form 10-K for fiscal year 2020",
+        "url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312521056164/d103755d10k.htm",
+        "publisher": "SEC EDGAR / Madrigal Pharmaceuticals, Inc.",
+        "published": "2021-02-25"
+      },
+      "opened": true,
+      "opened_note": "10-K states the company announced these measures 'in April 2020' without giving the specific calendar day; date approximated to 2020-04-01."
+    },
+    {
+      "id": "e4",
+      "date": "2021-06-30",
+      "kind": "clinical",
+      "headline": "Madrigal completes enrollment of the 900-patient liver-biopsy population in MAESTRO-NASH",
+      "detail": "The company reached its planned enrollment target for the 52-week liver-biopsy portion of MAESTRO-NASH (900 patients, at least 450 at fibrosis stage 3) and said it expected to report topline 52-week biopsy results by the third quarter of 2022.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Madrigal Pharmaceuticals Completes Enrollment of the 52 Week Liver Biopsy Patient Population in the Phase 3 MAESTRO-NASH Study of Resmetirom",
+        "url": "https://www.globenewswire.com/en/news-release/2021/06/30/2255465/0/en/Madrigal-Pharmaceuticals-Completes-Enrollment-of-the-52-Week-Liver-Biopsy-Patient-Population-in-the-Phase-3-MAESTRO-NASH-Study-of-Resmetirom.html",
+        "publisher": "GlobeNewswire (Madrigal Pharmaceuticals, Inc.)",
+        "published": "2021-06-30"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e5",
+      "date": "2022-12-19",
+      "kind": "clinical",
+      "headline": "Pivotal Phase 3 MAESTRO-NASH meets co-primary NASH-resolution and fibrosis-improvement endpoints",
+      "detail": "Both the 80 mg and 100 mg doses of resmetirom were statistically superior to placebo on NASH resolution (26% and 30% vs. 10%) and on at least one-stage fibrosis improvement (24% and 26% vs. 14%); the company said it intended to file for accelerated approval in the first half of 2023.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Madrigal Announces Positive Topline Results from the Pivotal Phase 3 MAESTRO-NASH Clinical Trial of Resmetirom for the Treatment of NASH and Liver Fibrosis",
+        "url": "https://www.globenewswire.com/news-release/2022/12/19/2576163/0/en/madrigal-announces-positive-topline-results-from-the-pivotal-phase-3-maestro-nash-clinical-trial-of-resmetirom-for-the-treatment-of-nash-and-liver-fibrosis.html",
+        "publisher": "GlobeNewswire (Madrigal Pharmaceuticals, Inc.)",
+        "published": "2022-12-19"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2023-04-18",
+      "kind": "regulatory",
+      "headline": "FDA grants Breakthrough Therapy designation for resmetirom as the trial's outcomes-portion enrollment completes",
+      "detail": "The designation was supported by the 52-week biopsy results reported in December 2022; the company also completed enrollment of the roughly 1,750-patient outcomes portion of MAESTRO-NASH and said its planned NDA filing remained on track for the second quarter of 2023.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Madrigal Receives Breakthrough Therapy Designation from FDA for Resmetirom and Completes Enrollment of the Phase 3 MAESTRO-NASH Biopsy Trial",
+        "url": "https://www.globenewswire.com/news-release/2023/04/18/2648935/0/en/Madrigal-Receives-Breakthrough-Therapy-Designation-from-FDA-for-Resmetirom-and-Completes-Enrollment-of-the-Phase-3-MAESTRO-NASH-Biopsy-Trial.html",
+        "publisher": "GlobeNewswire (Madrigal Pharmaceuticals, Inc.)",
+        "published": "2023-04-18"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e7",
+      "date": "2023-06-30",
+      "kind": "regulatory",
+      "headline": "Madrigal begins rolling submission of its NDA seeking accelerated approval of resmetirom",
+      "detail": "The company said it had submitted the majority of the New Drug Application to the FDA, with the remaining components to follow in July 2023, using the rolling-review process enabled by the April 2023 Breakthrough Therapy designation, and requested priority review.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Madrigal Pharmaceuticals Announces Rolling Submission of New Drug Application to U.S. FDA Seeking Accelerated Approval of Resmetirom for the Treatment of NASH with Liver Fibrosis",
+        "url": "https://www.biospace.com/madrigal-pharmaceuticals-announces-rolling-submission-of-new-drug-application-to-u-s-fda-seeking-accelerated-approval-of-resmetirom-for-the-treatment-of-nash-with-liver-fibrosis",
+        "publisher": "BioSpace (Madrigal Pharmaceuticals, Inc.)",
+        "published": "2023-06-30"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e8",
+      "date": "2023-09-13",
+      "kind": "regulatory",
+      "headline": "FDA accepts the resmetirom NDA, grants Priority Review, and sets a March 14, 2024 PDUFA date",
+      "detail": "The FDA accepted the application for review under the accelerated-approval pathway and assigned a target action (PDUFA) date of March 14, 2024; the agency said it was not currently planning to hold an advisory committee meeting.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Form 8-K (Item 8.01, Other Events): FDA acceptance and Priority Review of the resmetirom NDA",
+        "url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312523234385/d475156d8k.htm",
+        "publisher": "SEC EDGAR / Madrigal Pharmaceuticals, Inc.",
+        "published": "2023-09-13"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e9",
+      "date": "2023-09-28",
+      "kind": "financing",
+      "headline": "Madrigal prices a $500 million stock offering to fund launch preparations ahead of the FDA decision",
+      "detail": "The company priced 1,248,098 shares of common stock plus pre-funded warrants for 2,048,098 shares at $151.69 per share, for expected gross proceeds of about $500 million, saying proceeds would go toward clinical and commercial activities in preparation for a potential resmetirom launch.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Madrigal Pharmaceuticals Announces Pricing of $500 Million Public Offering",
+        "url": "https://www.globenewswire.com/news-release/2023/09/29/2751728/0/en/Madrigal-Pharmaceuticals-Announces-Pricing-of-500-Million-Public-Offering.html",
+        "publisher": "GlobeNewswire (Madrigal Pharmaceuticals, Inc.)",
+        "published": "2023-09-28"
+      },
+      "opened": true,
+      "opened_note": null
+    }
+  ],
+  "horizon_notes": {
+    "1": "By the one-year mark (2023-11-13 minus four years, i.e. 2019-11-13), the company had launched its primary pivotal trial, MAESTRO-NASH, in March 2019 and opened a second Phase 3 study, MAESTRO-NAFLD-1, for enrollment in December 2019 [e1][e2]. No Phase 3 program specific to the related cholesterol-disorder (HeFH) indication was announced in this window. Interpretation: the pre-cutoff packet's open question of whether the regulator would agree to a pivotal-trial design was answered within the year -- the trial launched -- but the packet could not say whether the second, related indication flagged as a possible 2019 catalyst would actually advance; within this window it did not appear as a Phase 3 program.",
+    "3": "By the three-year mark (2021-11-13), Madrigal said COVID-19 site-safety measures in 2020 let both ongoing Phase 3 studies continue without protocol changes [e3], and in June 2021 it completed enrollment of the 900-patient liver-biopsy population in MAESTRO-NASH, guiding to topline 52-week results by the third quarter of 2022 [e4]. Interpretation: the packet's central unresolved question -- whether the week-12/week-36 Phase 2 imaging and biopsy signal would replicate in a larger, longer pivotal trial -- remained untested throughout this span, since no pivotal readout had occurred by the three-year mark; a reader relying on the packet alone would still be waiting for the decisive data point.",
+    "5": "By the five-year mark (2023-11-13), the record shows the Phase 3 MAESTRO-NASH trial met its co-primary NASH-resolution and fibrosis-improvement endpoints in December 2022 [e5]; resmetirom then received FDA Breakthrough Therapy designation in April 2023 [e6], the company began a rolling NDA submission in June 2023 [e7], and the FDA accepted the application with Priority Review and a March 14, 2024 PDUFA date in September 2023 [e8], around the same time Madrigal priced a $500 million stock offering to fund launch preparations [e9]. Interpretation: the packet's central tension -- whether Phase 2 surrogate/biopsy data would survive the field's history of Phase 3 failures, despite high-profile conference placement -- was resolved in the trial's favor inside this window, but the packet could not have told a reader that the FDA's final approval decision would land four months after the five-year coverage window closes, so the approval itself falls outside this record."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "The exact calendar day of the April 2020 COVID-19 site-safety announcement is not stated in the FY2020 10-K; the event date (2020-04-01) is approximated to the start of that month.",
+    "No dedicated source was found confirming whether the heterozygous familial hypercholesterolemia (HeFH) Phase 3 program flagged as a possible cutoff-era catalyst was formally paused, deprioritized, or simply not prioritized; all post-2019 company disclosures reviewed here describe only the NASH/MASH (resmetirom) liver-disease program.",
+    "The FDA's final approval action on the NDA (PDUFA date March 14, 2024) falls after the five-year coverage_end of 2023-11-13 and is out of scope for this timeline.",
+    "Several pages on ir.madrigalpharma.com timed out repeatedly and could not be opened directly; SEC EDGAR filings and GlobeNewswire/BioSpace wire copies of the same releases were used instead where available."
+  ],
+  "search_log": [
+    {"query_or_url": "Madrigal Pharmaceuticals MGL-3196 resmetirom Phase 3 MAESTRO-NASH trial initiated 2019", "result": "opened"},
+    {"query_or_url": "Madrigal Pharmaceuticals stock 2019 2020 2021 timeline news", "result": "opened"},
+    {"query_or_url": "https://ir.madrigalpharma.com/news-releases/news-release-details/madrigal-announces-positive-topline-results-pivotal-phase-3", "result": "timeout"},
+    {"query_or_url": "Madrigal Pharmaceuticals FDA breakthrough therapy designation resmetirom 2019", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2023/04/18/2648935/0/en/Madrigal-Receives-Breakthrough-Therapy-Designation-from-FDA-for-Resmetirom-and-Completes-Enrollment-of-the-Phase-3-MAESTRO-NASH-Biopsy-Trial.html", "result": "opened"},
+    {"query_or_url": "\"Madrigal\" \"MAESTRO-NASH\" topline results December 2022 globenewswire", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2022/12/19/2576163/0/en/madrigal-announces-positive-topline-results-from-the-pivotal-phase-3-maestro-nash-clinical-trial-of-resmetirom-for-the-treatment-of-nash-and-liver-fibrosis.html", "result": "opened"},
+    {"query_or_url": "Madrigal Pharmaceuticals NDA submitted FDA resmetirom 2023 accelerated approval filing", "result": "opened"},
+    {"query_or_url": "https://ir.madrigalpharma.com/news-releases/news-release-details/madrigal-pharmaceuticals-announces-nda-acceptance-and-priority", "result": "timeout"},
+    {"query_or_url": "Madrigal Pharmaceuticals initiates Phase 3 MAESTRO-NASH trial 2019 press release SEC 8-K", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001157601&type=8-K&dateb=&owner=include&count=100&search_text=", "result": "403"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2019/03/05/1745765/0/en/Madrigal-Pharmaceuticals-Announces-Initiation-of-Two-Phase-3-Clinical-Trials-of-MGL-3196-in-Patients-with-NASH.html", "result": "not_found"},
+    {"query_or_url": "\"Madrigal Pharmaceuticals Initiates MAESTRO-NASH\" March 28 2019", "result": "opened"},
+    {"query_or_url": "https://efts.sec.gov/LATEST/search-index?q=%22MAESTRO-NASH%22&dateRange=custom&startdt=2019-03-25&enddt=2019-03-30&forms=8-K", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312520049021/d796399d10k.htm", "result": "opened"},
+    {"query_or_url": "Madrigal Pharmaceuticals NDA acceptance priority review PDUFA date resmetirom September 2023", "result": "opened"},
+    {"query_or_url": "https://www.biospace.com/madrigal-pharmaceuticals-announces-rolling-submission-of-new-drug-application-to-u-s-fda-seeking-accelerated-approval-of-resmetirom-for-the-treatment-of-nash-with-liver-fibrosis", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312523205600/d542332dex991.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312523270884/d583670dex991.htm", "result": "opened"},
+    {"query_or_url": "\"Madrigal Pharmaceuticals Announces NDA Acceptance and Priority Review\" September 13 2023 globenewswire", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312523234385/d475156d8k.htm", "result": "opened"},
+    {"query_or_url": "Madrigal Pharmaceuticals resmetirom heterozygous familial hypercholesterolemia HeFH program discontinued deprioritized", "result": "opened"},
+    {"query_or_url": "Madrigal Pharmaceuticals public offering 2020 OR 2023 shares priced million proceeds", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2023/09/29/2751728/0/en/Madrigal-Pharmaceuticals-Announces-Pricing-of-500-Million-Public-Offering.html", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312521056164/d103755d10k.htm", "result": "opened"},
+    {"query_or_url": "Madrigal Pharmaceuticals 2021 news resmetirom enrollment complete MAESTRO-NASH biopsy portion", "result": "opened"},
+    {"query_or_url": "https://www.biospace.com/press-releases/madrigal-pharmaceuticals-completes-enrollment-of-clinical-outcomes-study-of-resmetirom-in-patients-with-compensated-nash-mash-cirrhosis", "result": "not_found"},
+    {"query_or_url": "https://ir.madrigalpharma.com/node/13726/pdf", "result": "timeout"},
+    {"query_or_url": "\"Madrigal\" \"Completes Enrollment\" \"52 Week Liver Biopsy\" June 2021 8-K SEC", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312521152675/d347909dex991.htm", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/en/news-release/2021/06/30/2255465/0/en/Madrigal-Pharmaceuticals-Completes-Enrollment-of-the-52-Week-Liver-Biopsy-Patient-Population-in-the-Phase-3-MAESTRO-NASH-Study-of-Resmetirom.html", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312521056164/", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000119312520049021/", "result": "opened"}
+  ]
+}

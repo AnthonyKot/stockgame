@@ -1,0 +1,8 @@
+{
+  "ticker": "BIIB",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BIIB?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:24.488818+00:00",
+  "sha256": "94b2b40ee4bec05b31c4ec9a0b6d6913808acbc3bdc941e2f35559b88fa3c198",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

@@ -1,0 +1,258 @@
+{
+  "candidate_id": "growth-004",
+  "cutoff": "2021-03-03",
+  "coverage_end": "2026-03-03",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2022-03-01",
+      "kind": "earnings",
+      "headline": "Target posts FY2021 comparable sales up 12.7% and digital up 20.8%; guides Q1 FY2022 margin well below Q1 2021's 9.8%.",
+      "detail": "Full-year FY2021 comparable sales grew 12.7% (digital +20.8%) on top of FY2020's surge, with total revenue up 13.3% to $106.0 billion and adjusted EPS of $13.56, up 44%. Management resumed giving forward guidance, targeting an 8%-or-higher FY2022 operating margin overall, but said Q1 FY2022 margin would be 'favorable in relation to historical performance, but well below' Q1 2021's 9.8% rate, with quarterly profit expected to be variable and improve through the year.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Target Corporation Reports Fourth Quarter and Full-Year 2021 Earnings (8-K Exhibit 99)",
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741922000002/a2021q4ex-99.htm",
+        "publisher": "SEC EDGAR / Target Corporation",
+        "published": "2022-03-01"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e2",
+      "date": "2022-05-18",
+      "kind": "guidance",
+      "headline": "Target's Q1 FY2022 operating margin falls to 5.3% from 9.8%; company cuts full-year margin guidance to about 6%.",
+      "detail": "Q1 FY2022 operating margin fell to 5.3% from 9.8% a year earlier, as inventory rose to $15.083 billion from $13.902 billion over the quarter. CEO Brian Cornell said the margin came in 'well below expectations, and well below where we expect to operate over time.' The company attributed the miss to inventory and cost pressures and cut its full-year FY2022 operating margin guidance to a range centered around 6%, down from the prior 8%-or-higher target.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Target Corporation Reports First Quarter Earnings (8-K Exhibit 99, FY2022)",
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741922000011/a2022q1ex-99.htm",
+        "publisher": "SEC EDGAR / Target Corporation",
+        "published": "2022-05-18"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e3",
+      "date": "2022-06-07",
+      "kind": "guidance",
+      "headline": "Three weeks after its Q1 report, Target announces further inventory markdowns and cuts Q2 operating margin guidance to about 2%.",
+      "detail": "Target announced additional markdowns, order cancellations and excess-inventory removal in discretionary categories, plus new port-adjacent holding capacity and shortened supplier lead times, saying these steps would 'right-size' inventory for the rest of the year. The company revised its Q2 FY2022 operating margin guidance down to a range around 2% (from the roughly 5.3% level implied three weeks earlier) while projecting a back-half margin around 6%.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Target Corporation Announces Updated 2022 Plan Focused on Inventory Optimization",
+        "url": "https://corporate.target.com/press/release/2022/06/target-corporation-announces-updated-2022-plan-foc",
+        "publisher": "Target Corporation",
+        "published": "2022-06-07"
+      },
+      "opened": true,
+      "opened_note": "No standalone SEC 8-K exhibit was located for this specific June 7 update; EDGAR's only June 2022 8-K found was an unrelated Item 5.07 annual-meeting-vote filing. The company's own press release is used as the primary source instead."
+    },
+    {
+      "id": "e4",
+      "date": "2022-08-17",
+      "kind": "earnings",
+      "headline": "Target's Q2 FY2022 net income falls 90% as operating margin drops to 1.2%; company cites markdowns and inventory impairments.",
+      "detail": "Q2 FY2022 operating margin fell to 1.2% from 9.8%, and net income fell to $183 million from $1.817 billion a year earlier. The company attributed the decline to 'higher markdown rates, driven primarily by inventory impairments and actions taken to address lower-than-expected sales in discretionary categories,' plus elevated shrink, freight and distribution-center labor costs. Fall-season discretionary receipts were cut by more than $1.5 billion; full-year revenue guidance stayed low-to-mid-single-digit with back-half operating margin guided around 6%.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Target Corporation Reports Second Quarter Earnings (8-K Exhibit 99, FY2022)",
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741922000023/a2022q2ex-99.htm",
+        "publisher": "SEC EDGAR / Target Corporation",
+        "published": "2022-08-17"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e5",
+      "date": "2023-02-28",
+      "kind": "earnings",
+      "headline": "Target's FY2022 operating income falls 57% to $3.8 billion despite 2.8% sales growth; guides FY2023 margin recovery toward 6%.",
+      "detail": "Full-year FY2022 sales rose 2.8% to $107.6 billion and total revenue rose 2.9% to $109.1 billion, but operating income fell 57.0% to $3.8 billion from $8.9 billion, reflecting the year's markdown, shrink and freight pressures. Management guided FY2023 comparable sales from a low-single-digit decline to a low-single-digit increase, EPS of $7.75-$8.75, and said it expected to reach its pre-pandemic 6% operating margin 'as early as fiscal 2024, depending on the speed of recovery for the economy and consumer demand.'",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Target Corporation Reports Fourth Quarter and Full-Year 2022 Earnings (8-K Exhibit 99)",
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741923000010/a2022q4ex-99.htm",
+        "publisher": "SEC EDGAR / Target Corporation",
+        "published": "2023-02-28"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2023-08-16",
+      "kind": "earnings",
+      "headline": "Target's Q2 FY2023 comparable sales fall 5.4%, its first decline in six years; company cuts guidance amid Pride-merchandise backlash.",
+      "detail": "Q2 FY2023 comparable sales declined 5.4%, the first quarterly decline in six years, and the company cut full-year EPS guidance to $7.00-$8.00 from $7.75-$8.75, citing softer discretionary demand. Separately, in earnings-related comments, CEO Brian Cornell said Target had pulled some Pride-collection items after 'threatening circumstances' toward store staff, and reporting on the results described store traffic as recovering after 'tailing off markedly' in the back half of May, when the backlash to the Pride merchandise was most intense; CFO Michael Fiddelke said the company could not isolate the backlash's specific dollar impact from other factors in the quarter.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Target bosses pledge 'modifications' to its Pride Month collections after transgender merch backlash",
+        "url": "https://fortune.com/2023/08/17/target-retailer-boycott-transgender-lgbtq-pride-month-erik-carnell",
+        "publisher": "Fortune",
+        "published": "2023-08-17"
+      },
+      "opened": true,
+      "opened_note": "The comparable-sales and guidance figures were cross-checked against Target's Q2 FY2023 8-K Exhibit 99 (https://www.sec.gov/Archives/edgar/data/27419/000002741923000032/a2023q2ex-99.htm), which reports the sales decline and guidance cut but does not itself mention Pride merchandise; the causal commentary is drawn from reporting on the earnings call."
+    },
+    {
+      "id": "e7",
+      "date": "2023-09-26",
+      "kind": "corporate_action",
+      "headline": "Target closes nine stores in four states, citing theft and organized retail crime threatening staff and guest safety.",
+      "detail": "Target said it would close nine stores across California, Oregon, Washington and New York, effective October 21, 2023, stating that 'theft and organized retail crime are threatening the safety of our team and guests, and contributing to unsustainable business performance,' despite added security guards and other preventive measures. On the prior earnings call the company said shrink was expected to reduce full-year profitability by more than $500 million compared with the prior year.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Target says it's closing 9 stores because of surging retail thefts",
+        "url": "https://www.cbsnews.com/news/target-closing-stores-2023-san-francisco/",
+        "publisher": "CBS News",
+        "published": "2023-09-27"
+      },
+      "opened": true,
+      "opened_note": "No SEC filing specifically covers this store-closure decision; trade/general-news reporting quoting the company's own statement is used."
+    },
+    {
+      "id": "e8",
+      "date": "2024-03-05",
+      "kind": "earnings",
+      "headline": "Target's FY2023 comparable sales fall 3.7% but EPS grows 49% to $8.94 on cost cuts; guides FY2024 sales flat to up 2%.",
+      "detail": "Full-year FY2023 comparable sales declined 3.7% and revenue fell 1.6% to $107.4 billion, while diluted EPS rose to $8.94 from $5.98 as the company delivered more than $500 million in efficiency savings and cash from operations more than doubled to $8.6 billion. Management guided FY2024 comparable sales flat to up 2%, with Q1 2024 comparable sales guided down 3-5% and full-year EPS of $8.60-$9.60.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Target Corporation Reports Fourth Quarter and Full-Year 2023 Earnings (8-K Exhibit 99)",
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741924000008/a2023q4ex-99.htm",
+        "publisher": "SEC EDGAR / Target Corporation",
+        "published": "2024-03-05"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e9",
+      "date": "2025-01-24",
+      "kind": "other",
+      "headline": "Target ends its three-year DEI goals, REACH strategy and Human Rights Campaign index participation, citing the 'evolving external landscape.'",
+      "detail": "Target said it would conclude its three-year diversity, equity and inclusion goals, end its REACH (Racial Equity Action and Change) initiatives 'as planned,' rebrand its Supplier Diversity team to 'Supplier Engagement,' and stop participating in the Human Rights Campaign's Corporate Equality Index. Chief Community Impact and Equity Officer Kiera Fernandez said the company needed to stay 'in step with the evolving external landscape, now and in the future.' The announcement was followed by calls for a consumer boycott of Target.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Target says it is ending its DEI goals and programs, citing an 'evolving external landscape'",
+        "url": "https://www.pbs.org/newshour/politics/target-says-it-is-ending-its-dei-goals-and-programs-citing-an-evolving-external-landscape",
+        "publisher": "PBS NewsHour",
+        "published": "2025-01-24"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e10",
+      "date": "2025-03-04",
+      "kind": "earnings",
+      "headline": "Target's FY2024 comparable sales are roughly flat; company guides FY2025 EPS to $8.80-$9.80 citing tariff and consumer-confidence uncertainty.",
+      "detail": "Full-year FY2024 comparable sales grew 0.1%, within guidance, while net sales fell 0.8% to $106.6 billion on a 52-week comparison and GAAP EPS was $8.86 versus $8.94 in FY2023. Management guided FY2025 net sales growth around 1% and EPS of $8.80-$9.80, citing tariff uncertainty and 'ongoing consumer uncertainty' around discretionary spending, and separately said February 2025 sales were hurt by cold weather affecting apparel and 'declining consumer confidence,' with 'meaningful year-over-year profit pressure' expected in Q1.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Target Corporation Reports Fourth Quarter and Full-Year 2024 Earnings (8-K Exhibit 99)",
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741925000008/a2024q4ex-99.htm",
+        "publisher": "SEC EDGAR / Target Corporation",
+        "published": "2025-03-04"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e11",
+      "date": "2025-08-15",
+      "kind": "management",
+      "headline": "Target names COO Michael Fiddelke as next CEO, effective February 2026, succeeding Brian Cornell after an 11-year tenure.",
+      "detail": "Target's board appointed Michael Fiddelke, currently EVP and COO, as CEO effective February 1, 2026, with outgoing CEO Brian Cornell moving to an Executive Chair role. The filing attributed the change to 'a comprehensive succession planning process' and did not itself cite sales trends or the prior year's DEI-related boycott. The announcement came alongside Q2 FY2025 results showing comparable sales down 1.9% (transactions down 1.3%) and EPS of $2.05 versus $2.57 a year earlier, with management citing 'continued tariff-related and other cost pressures throughout the business.'",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Target Corporation Current Report (Form 8-K, Item 5.02 - CEO Succession)",
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741925000114/tgt-20250815.htm",
+        "publisher": "SEC EDGAR / Target Corporation",
+        "published": "2025-08-15"
+      },
+      "opened": true,
+      "opened_note": "Q2 FY2025 sales/EPS figures cross-checked against the same-week earnings release (https://www.sec.gov/Archives/edgar/data/27419/000002741925000115/a2025q2ex-99.htm). Outside reporting (CNN, not opened here due to an access block) framed the succession timing against the DEI boycott and slumping sales; that framing is not confirmed against the primary filing and is omitted."
+    },
+    {
+      "id": "e12",
+      "date": "2026-03-03",
+      "kind": "earnings",
+      "headline": "Target's FY2025 net sales fall 1.7% to $104.8 billion and comparable sales fall 2.6%, a second consecutive down year.",
+      "detail": "Full-year FY2025 net sales fell 1.7% to $104.8 billion from $106.6 billion, comparable sales fell 2.6%, and the number of transactions declined 2.2% for the year. GAAP EPS was $8.13, down from $8.86 in FY2024. The company attributed gross-margin pressure to 'higher markdowns and purchase order cancellation costs' and category-mix pressure, partly offset by lower inventory shrink and advertising-revenue growth; the CEO described 2025 as 'a challenging year' while positioning the business for future profitable growth.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Target Corporation Reports Fourth Quarter and Full-Year 2025 Earnings (8-K Exhibit 99)",
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000012/a2025q4ex-99.htm",
+        "publisher": "SEC EDGAR / Target Corporation",
+        "published": "2026-03-03"
+      },
+      "opened": true,
+      "opened_note": null
+    }
+  ],
+  "horizon_notes": {
+    "1": "In the year after cutoff, Target's FY2021 results extended the growth visible at cutoff: comparable sales rose a further 12.7% (digital +20.8%) on top of FY2020's surge, and adjusted EPS grew 44% to $13.56 [e1]. The company also resumed giving forward guidance with this report, ending the explicit 'no guidance' stance that was the central tension in the cutoff packet, though it flagged that Q1 FY2022 margin would come in well below Q1 2021's 9.8% rate [e1]. Interpretation: the pre-cutoff packet's central question -- record trailing results with no forward anchor -- was resolved within a year by Target resuming guidance, but the packet's evidence window could not show whether that new guidance would itself soon prove too optimistic.",
+    "3": "Over the three years to March 2024, Target's trajectory reversed sharply from the growth seen at cutoff. FY2022 brought a severe margin collapse: Q1 operating margin fell to 5.3%, was guided down further to around 2% for Q2 after a second guidance cut in June [e2][e3], and Q2 FY2022 net income fell 90% as the company worked through discretionary-category inventory [e4]; full-year FY2022 operating income still finished down 57% [e5]. In mid-2023 a backlash to Target's Pride-Month merchandise coincided with the first quarterly comparable-sales decline in six years and another guidance cut [e6], and in September 2023 Target closed nine stores citing organized retail theft [e7]. Just after the three-year mark, FY2023 results (reported March 5, 2024) showed comparable sales down 3.7% for the year but EPS up 49% on cost cuts [e8]. Interpretation: none of this reversal was visible in the cutoff packet, which covered only one strong quarter with no forward guidance; its 'flat' and 'short' cautions (rising digital-fulfillment costs, an unexplained debt-maturity step-up) pointed toward margin pressure in general terms, but neither the 2022 inventory crisis nor 2023's social-media-driven traffic disruption were foreseeable from that evidence.",
+    "5": "By the five-year mark, Target's record showed a series of largely company-specific disruptions layered on the 2022 margin collapse: the 2023 Pride-merchandise backlash and theft-related store closures [e6][e7], a January 2025 rollback of DEI programs that drew a consumer boycott [e9], roughly flat FY2024 results with FY2025 guidance flagging tariff uncertainty [e10], an August 2025 CEO-succession announcement ending Brian Cornell's 11-year tenure amid continued sales softness [e11], and a second consecutive down year in FY2025 with net sales off 1.7% and comparable sales off 2.6% [e12]. Interpretation: the cutoff packet's unresolved questions -- whether FY2020's digital-adoption surge and roughly $9 billion of market-share gains were durable, and whether withheld guidance signaled real unpredictability -- were answered in a direction the packet's evidence pointed toward only weakly: growth continued for one more year, then gave way to five years of recurring disruptions (inventory, social-media backlash, theft, DEI policy, leadership change) that a single quarter's evidence at cutoff had no way to anticipate."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "No standalone SEC 8-K item was found for the June 7, 2022 inventory-optimization announcement (e3); the only June 2022 8-K located in EDGAR was an unrelated Item 5.07 annual-meeting-vote filing, so the company's own press release is used instead.",
+    "Target's own earnings materials do not quantify the dollar or sales-point impact of the 2023 Pride-merchandise backlash; CFO Michael Fiddelke said on the Q2 FY2023 call that the company 'can't isolate the price impact from the many other factors at play,' so e6 relies on secondary reporting of executive comments rather than a company-quantified figure.",
+    "Several outlets (CNBC, CNN, NPR, Axios, one AP wire copy, RetailDive) returned 403/404/429/451 errors or timed out during this research; where a primary SEC or company source existed it was used instead, but for e6, e7 and e9 the best available account is trade or general-news reporting that quotes the company directly rather than the company's own release text.",
+    "No source explicitly ties a specific stock-price move to any single event in this timeline; all price-move claims were therefore left out rather than inferred."
+  ],
+  "search_log": [
+    {"query_or_url": "Target Corporation May 2022 profit warning inventory guidance cut operating margin", "result": "opened"},
+    {"query_or_url": "Target fiscal 2021 full year results comparable sales digital growth guidance March 2022", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000012/a2025q4ex-99.htm", "result": "opened"},
+    {"query_or_url": "Target ends DEI programs January 24 2025 statement", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741922000002/a2021q4ex-99.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741922000011/a2022q1ex-99.htm", "result": "opened"},
+    {"query_or_url": "\"Target Corporation Announces Updated 2022 Plan\" sec.gov 8-K exhibit", "result": "opened"},
+    {"query_or_url": "Target fiscal 2022 full year fourth quarter earnings March 2023 8-K sec.gov ex-99", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000027419&type=8-K&dateb=20220701 (June 2022 8-K list)", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741922000023/a2022q2ex-99.htm", "result": "opened"},
+    {"query_or_url": "https://corporate.target.com/press/release/2022/06/target-corporation-announces-updated-2022-plan-foc", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741923000010/a2022q4ex-99.htm", "result": "opened"},
+    {"query_or_url": "Target Pride collection 2023 backlash boycott traffic decline guidance May June 2023", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741923000032/a2023q2ex-99.htm", "result": "opened"},
+    {"query_or_url": "Target closing nine stores organized retail crime theft September 2023", "result": "opened"},
+    {"query_or_url": "https://www.cbsnews.com/news/target-closing-stores-2023-san-francisco/", "result": "opened"},
+    {"query_or_url": "Target Q2 fiscal 2023 earnings August 2023 8-K SEC Pride backlash sales guidance cut comparable sales decline", "result": "opened"},
+    {"query_or_url": "https://www.cnbc.com/2023/08/16/target-pride-backlash-hurts-sales-in-second-quarter-earnings.html", "result": "403"},
+    {"query_or_url": "https://www.npr.org/2023/08/16/1194176045/target-sales-lgbtq-pride-bud-light", "result": "timeout"},
+    {"query_or_url": "https://www.times-news.com/news/target-q2-sales-fall-on-muted-spending-pride-month-backlash-and-it-cuts-profit-outlook/article_95532153-8a31-59aa-b3a4-dc4596647828.html", "result": "429"},
+    {"query_or_url": "https://www.retaildive.com/news/target-pride-month-boycott-backlash/652283/", "result": "404"},
+    {"query_or_url": "https://www.axios.com/2023/05/24/target-pride-month-collection-2023-changes", "result": "403"},
+    {"query_or_url": "https://fortune.com/2023/08/17/target-retailer-boycott-transgender-lgbtq-pride-month-erik-carnell", "result": "opened"},
+    {"query_or_url": "Target fiscal 2023 fourth quarter full year earnings March 2024 sec.gov a2023q4ex-99", "result": "opened"},
+    {"query_or_url": "https://www.pbs.org/newshour/politics/target-says-it-is-ending-its-dei-goals-and-programs-citing-an-evolving-external-landscape", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741924000008/a2023q4ex-99.htm", "result": "opened"},
+    {"query_or_url": "Target fiscal 2024 fourth quarter full year earnings March 2025 sec.gov ex-99", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741925000008/a2024q4ex-99.htm", "result": "opened"},
+    {"query_or_url": "Target Q2 fiscal 2025 earnings August 20 2025 CEO Cornell Fiddelke sec.gov 8-K ex99", "result": "opened"},
+    {"query_or_url": "site:sec.gov Target Corporation 2025 08 20 8-K item 5.02 Fiddelke Cornell", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741925000114/tgt-20250815.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741925000115/a2025q2ex-99.htm", "result": "opened"},
+    {"query_or_url": "https://www.cnn.com/2025/08/20/business/target-stock-ceo-cornell", "result": "451"}
+  ]
+}

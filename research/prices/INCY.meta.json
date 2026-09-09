@@ -1,0 +1,8 @@
+{
+  "ticker": "INCY",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/INCY?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:24.659328+00:00",
+  "sha256": "0fbe4d2ab26a7eea53b40b47369addfdd03218ec62f1c4c56e11af97797b4d09",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

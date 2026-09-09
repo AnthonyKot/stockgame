@@ -1,0 +1,8 @@
+{
+  "ticker": "ALNY",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ALNY?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:24.595126+00:00",
+  "sha256": "434638b0881473efa508582d07f97eeb9608398cdcab6738c6653b121c26c0ad",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

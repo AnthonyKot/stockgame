@@ -1,0 +1,769 @@
+{
+  "batch": "clinical",
+  "verified_at": "2026-09-09T12:33:06.451528+00:00",
+  "budget_used": {
+    "fetch": 46,
+    "search": 8
+  },
+  "candidates": [
+    {
+      "id": "clinical-axsm-2019",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "axsm-pr-1",
+          "url": "https://www.globenewswire.com/news-release/2019/12/16/1960786/33090/en/Axsome-Therapeutics-Announces-AXS-05-Achieves-Primary-Endpoint-in-GEMINI-Phase-3-Trial-in-Major-Depressive-Disorder.html",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2019-12-16",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "MADRS result (16.6 vs 11.9, p=0.002) confirmed verbatim. Does NOT support as_of_fact #2's STRIDE-1 claim -- release cites ASCEND as the prior positive trial; STRIDE-1 is ongoing."
+        },
+        {
+          "id": "axsm-q3-2019",
+          "url": "https://www.globenewswire.com/news-release/2019/11/07/1943005/0/en/Axsome-Therapeutics-Reports-Third-Quarter-2019-Financial-Results-and-Provides-Business-Update.html",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2019-11-07",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "Confirms GEMINI expected 'before year end' and no FDA-approved products."
+        },
+        {
+          "id": "axsm-fool-outcome",
+          "url": "https://www.fool.com/investing/2019/12/31/reasons-axsome-therapeutics-is-up-3600-in-2019.aspx",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2019-12-31",
+          "reachable": true,
+          "dated_after_cutoff": true,
+          "notes": "Reachable, dated after cutoff."
+        }
+      ],
+      "material_fact": {
+        "fact": "AXS-05 met the primary endpoint (MADRS reduction) vs placebo in GEMINI",
+        "source_id": "axsm-pr-1",
+        "excerpt": "AXS-05 met the primary endpoint by demonstrating a highly statistically significant reduction in MADRS total score ... 16.6 points for AXS-05 and 11.9 points for placebo (p=0.002).",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [],
+        "notes": "No banned outcome-revealing phrases found."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2019-12-17T09:00:00-05:00",
+        "assessment": "plausible_unconfirmed",
+        "notes": "Release time not captured; next-session cutoff plausible but unconfirmed to the hour."
+      },
+      "corporate_actions": [
+        {
+          "event": "No splits or dividends recorded in research/prices/AXSM.json for the 2019-12-17 to 2020-12-17 window",
+          "status": "known_from_source"
+        }
+      ],
+      "repairs": [
+        "as_of_fact #2 misattributes GEMINI as following 'the earlier STRIDE-1 trial'; the opened source references ASCEND, not STRIDE-1, as the prior completed positive trial -- correct or remove this fact.",
+        "Confirm exact release time of axsm-pr-1 to fully validate cutoff placement."
+      ],
+      "reject_reason": null,
+      "notes": "Material fact confirmed true; fact #2 needs correction (ASCEND not STRIDE-1)."
+    },
+    {
+      "id": "clinical-sage-2019",
+      "verdict": "reject",
+      "sources": [
+        {
+          "id": "sage-pr-1",
+          "url": "https://www.businesswire.com/news/home/20191205005375/en",
+          "role": "as_of",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "403 on businesswire; SEC EDGAR mirror opened instead: date/headline match, HAM-D 12.6 vs 11.2 (p=0.115) confirmed. But 9%-no-drug-level finding applies to the SAGE-217 arm, not placebo as fact #3 claims -- contradicted."
+        },
+        {
+          "id": "sage-fierce-1",
+          "url": "https://www.fiercebiotech.com/biotech/sage-crushed-by-mountain-as-phase-3-depression-data-fall-short",
+          "role": "as_of",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "403 on original; medscape alternate returned 402. Not opened."
+        },
+        {
+          "id": "sage-zurzuvae-outcome",
+          "url": "https://investor.sagerx.com/news-releases/news-release-details/fda-approves-zurzuvaetm-zuranolone-first-and-only-oral-treatment",
+          "role": "outcome_only",
+          "opened": false,
+          "http_status": null,
+          "reachable": false,
+          "dated_after_cutoff": "unknown",
+          "notes": "DNS failure (ENOTFOUND) x2."
+        }
+      ],
+      "material_fact": {
+        "fact": "MOUNTAIN Phase 3 did not meet its primary endpoint (HAM-D Day 15, 12.6 vs 11.2, p=0.115)",
+        "source_id": "sage-pr-1",
+        "excerpt": "SAGE-217 30 mg ... was associated with a mean reduction of 12.6 in HAM-D total score compared to 11.2 for placebo (p=0.115).",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [
+          "learning_tension: \"post-hoc subgroup rationales can be genuinely predictive of eventual approval in a narrower population years later\" -- reveals/foreshadows the eventual approval outcome years after cutoff."
+        ],
+        "notes": "One outcome-revealing spoiler found."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2019-12-06T09:00:00-05:00",
+        "assessment": "plausible_unconfirmed",
+        "notes": "Reaction reported same-day (Dec 5), consistent with premarket release and next-session cutoff (Dec 6); release time not independently confirmed."
+      },
+      "corporate_actions": [
+        {
+          "event": "No SAGE vendor price file available in research/prices/ to check for splits/dividends",
+          "status": "unavailable"
+        },
+        {
+          "event": "Sage-Biogen collaboration agreement signed Nov 2020 (licensing partnership, not a split/spin-off/merger under this brief's definition)",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [],
+      "reject_reason": "as_of_fact #3 misattributes the 9%-no-measurable-drug-concentration finding to placebo-arm patients; the opened alternate source states this applied to the SAGE-217 30mg treatment arm -- a contradicted material fact. learning_tension also contains an outcome-revealing spoiler ('eventual approval ... years later'). 2 of 3 sources could not be opened despite alternates tried.",
+      "notes": "Contradicted fact plus a spoiler in learning_tension; 2 of 3 sources unreachable."
+    },
+    {
+      "id": "clinical-fgen-2021",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "fgen-pr-adcomm",
+          "url": "https://www.globenewswire.com/news-release/2021/07/15/2264019/0/en/FibroGen-Announces-Outcome-of-FDA-Advisory-Committee-Review-of-Roxadustat-for-Treatment-of-Anemia-of-Chronic-Kidney-Disease.html",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2021-07-15",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "Confirms committee voted against approval; exact 12-2/13-1 tallies not verbatim here, only via general search of outlets outside this source list."
+        },
+        {
+          "id": "fgen-healio",
+          "url": "https://www.healio.com/news/nephrology/20210716/fda-panel-focused-on-safety-issues-in-rejecting-roxadustat-from-fibrogen",
+          "role": "as_of",
+          "opened": false,
+          "http_status": 404,
+          "publication_date_shown": null,
+          "publication_before_cutoff": false,
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "Listed URL is 404 (wrong date path). Corrected URL is dated Aug 18, 2021 -- after cutoff -- and doesn't cover the PDUFA/international-approval facts attributed to it."
+        },
+        {
+          "id": "fgen-crl-outcome",
+          "url": "https://www.globenewswire.com/news-release/2021/08/11/2278626/33525/en/FibroGen-Receives-Complete-Response-Letter-from-the-FDA-for-Roxadustat-for-Anemia-of-Chronic-Kidney-Disease.html",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2021-08-11",
+          "reachable": true,
+          "dated_after_cutoff": true,
+          "notes": "Reachable, dated after cutoff."
+        }
+      ],
+      "material_fact": {
+        "fact": "FDA Advisory Committee voted against roxadustat approval",
+        "source_id": "fgen-pr-adcomm",
+        "excerpt": "the U.S. Food and Drug Administration (FDA) Cardiovascular and Renal Drugs Advisory Committee (CRDAC) voted to recommend not approving roxadustat",
+        "confirmed": "partial"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [],
+        "notes": "No banned phrases found."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2021-07-16T09:00:00-04:00",
+        "assessment": "plausible_unconfirmed",
+        "notes": "Vote disclosed intraday July 15; next-session cutoff avoids same-day contamination."
+      },
+      "corporate_actions": [
+        {
+          "event": "No FGEN vendor price file available in research/prices/ to check for splits/dividends",
+          "status": "unavailable"
+        },
+        {
+          "event": "AstraZeneca later returned U.S. rights to roxadustat per candidate's own retrospective_story (a partnership termination, not a split/spin-off/merger under this brief's definition)",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "fgen-healio source URL is broken (404); the corrected URL is dated Aug 16-18, 2021 (after cutoff) and does not contain the PDUFA-timeline/international-approval details attributed to it in as_of_facts #2/#3 -- replace with a genuinely pre-cutoff source or remove those facts.",
+        "Confirm the exact 12-2/13-1 vote tallies against a properly opened, pre-cutoff source; currently only corroborated via general web search of outlets outside this candidate's source list."
+      ],
+      "reject_reason": null,
+      "notes": "Primary AdComm source solid; trade-press source is broken and unsupportive of two facts."
+    },
+    {
+      "id": "clinical-nktr-2018",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "nktr-pr-1",
+          "url": "https://ir.nektar.com/news-releases/news-release-details/bristol-myers-squibb-and-nektar-therapeutics-announce-global",
+          "role": "as_of",
+          "opened": false,
+          "http_status": null,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "Timed out x2. Deal terms corroborated only via search of secondary outlets, not opened."
+        },
+        {
+          "id": "nktr-nasdaq-1",
+          "url": "https://www.nasdaq.com/articles/megadeal-caused-nektar-therapeutics-11-spike-today-2018-02-14",
+          "role": "as_of",
+          "opened": false,
+          "http_status": null,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "Timed out x3. '11% spike' unverified from any opened source."
+        },
+        {
+          "id": "nktr-pivot-outcome",
+          "url": "https://www.healio.com/news/hematology-oncology/20220314/phase-3-trial-of-combination-for-advanced-melanoma-misses-primary-endpoint",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2022-03-14",
+          "reachable": true,
+          "dated_after_cutoff": true,
+          "notes": "Reachable, dated after cutoff; confirms NKTR-214/BMS PIVOT IO-001 subject."
+        }
+      ],
+      "material_fact": {
+        "fact": "BMS-Nektar collaboration: $1.0B upfront + $850M equity (8,284,600 shares at $102.60/share)",
+        "source_id": "nktr-pr-1",
+        "excerpt": null,
+        "confirmed": "unverified"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [],
+        "notes": "No banned phrases found."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2018-02-14T09:00:00-05:00",
+        "assessment": "flagged",
+        "notes": "Candidate states Feb 13 but corroborating URLs point to Feb 14 -- if true, cutoff should move to Feb 15."
+      },
+      "corporate_actions": [
+        {
+          "event": "1-for-15 reverse split recorded in research/prices/NKTR.json at 2025-06-09",
+          "status": "known_from_source",
+          "note": "Outside this candidate's window (2018-02-14 to 2023-02-14) -- occurs ~2.3 years after exit, not relevant to the holding period."
+        },
+        {
+          "event": "No dividends recorded in research/prices/NKTR.json",
+          "status": "known_from_source"
+        }
+      ],
+      "repairs": [
+        "Both as_of sources (ir.nektar.com press release, Nasdaq market-reaction article) failed to load across multiple attempts; need a working copy (e.g., Businesswire mirror, SEC 8-K exhibit) to verify deal terms and stock-reaction figures directly.",
+        "Resolve announcement-date discrepancy: candidate states Feb 13, 2018 but corroborating URLs point to Feb 14, 2018 -- if true, cutoff should likely move to Feb 15."
+      ],
+      "reject_reason": null,
+      "notes": "No as_of source opened this run; fact left unverified rather than assumed true."
+    },
+    {
+      "id": "clinical-icpt-2016",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "icpt-drugs-history",
+          "url": "https://www.drugs.com/history/ocaliva.html",
+          "role": "as_of",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "403 x2. Alternate healio copy confirms announcement May 31 but not the exact May 27 date or 17-0 tally."
+        },
+        {
+          "id": "icpt-easl-2016",
+          "url": "https://ir.interceptpharma.com/news-releases/news-release-details/intercept-announces-new-oca-data-pbc-and-nash-be-presented-easl",
+          "role": "as_of",
+          "opened": false,
+          "http_status": null,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "ECONNREFUSED x2 -- host likely dead post-Alfasigma acquisition."
+        },
+        {
+          "id": "icpt-nash-crl-outcome",
+          "url": "https://medcitynews.com/2023/09/after-nash-hopes-are-dashed-intercept-pharma-agrees-to-794m-buyout/",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2023-09-26",
+          "reachable": true,
+          "dated_after_cutoff": true,
+          "notes": "Reachable; date differs from candidate metadata by 25 days, immaterial."
+        }
+      ],
+      "material_fact": {
+        "fact": "FDA approved Ocaliva (obeticholic acid) on May 27, 2016 for PBC",
+        "source_id": "icpt-drugs-history",
+        "excerpt": null,
+        "confirmed": "partial"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [],
+        "notes": "No banned phrases found in scanned fields (retrospective_story, out of scan scope, does carry heavy future-outcome detail)."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2016-05-31T09:00:00-04:00",
+        "assessment": "plausible_unconfirmed",
+        "notes": "May 30 2016 was Memorial Day; May 31 is first session after May 27 approval regardless of timing."
+      },
+      "corporate_actions": [
+        {
+          "event": "No ICPT vendor price file available in research/prices/ to check for splits/dividends",
+          "status": "unavailable"
+        },
+        {
+          "event": "Alfasigma acquisition of Intercept (2023) is outside this candidate's window (2016-05-31 to 2021-05-31)",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "icpt-drugs-history: 403 on original; alternate healio copy does not confirm the exact May 27 approval date or the 17-0 vote tally verbatim -- need a working primary source (FDA.gov approval database or Intercept's own May 2016 release).",
+        "icpt-easl-2016 IR page is unreachable (connection refused) -- try Intercept's SEC EDGAR filing archive instead."
+      ],
+      "reject_reason": null,
+      "notes": "Approval directionally supported, not verbatim-confirmed; second as_of source unreachable."
+    },
+    {
+      "id": "clinical-mdgl-2018",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "mdgl-liver-meeting",
+          "url": "https://www.globenewswire.com/news-release/2018/11/12/1649875/0/en/Phase-2-Results-for-Madrigal-s-MGL-3196-in-Non-Alcoholic-Steatohepatitis-NASH-Presented-during-Presidential-Plenary-Clinical-Session-of-The-Liver-Meeting-2018.html",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2018-11-12",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "All three as_of facts confirmed verbatim: 37% vs 8.9% relative fat reduction at 36 weeks; NASH resolution 27% vs 6% with fibrosis resolution in 50% of resolvers; LDL-C lowering 18.8% overall / 21% optimal-dose subgroup (p<0.0001)."
+        },
+        {
+          "id": "mdgl-lancet-2019",
+          "url": "https://ir.madrigalpharma.com/news-releases/news-release-details/madrigal-pharmaceuticals-announces-publication-lancet-positive",
+          "role": "outcome_only",
+          "opened": false,
+          "http_status": null,
+          "reachable": false,
+          "dated_after_cutoff": "unknown",
+          "notes": "ir.madrigalpharma.com timed out on two attempts; could not confirm reachability."
+        }
+      ],
+      "material_fact": {
+        "fact": "MGL-3196 (resmetirom) showed statistically significant hepatic fat reduction at week 12, sustained through week 36",
+        "source_id": "mdgl-liver-meeting",
+        "excerpt": "sustained highly statistically significant reduction in liver fat based on MRI-PDFF ... mean relative fat reduction for MGL-3196 was 37% versus 8.9% for placebo.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [],
+        "notes": "No banned phrases found."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2018-11-13T09:00:00-05:00",
+        "assessment": "plausible_unconfirmed",
+        "notes": "Presentation was Nov 12, 2018 at a conference plenary session; treating this as equivalent to an after-hours release with next-session (Nov 13) cutoff is reasonable, but exact presentation/release time not confirmed from the opened source."
+      },
+      "corporate_actions": [
+        {
+          "event": "1-for-35 reverse split recorded in research/prices/MDGL.json at 2016-07-25",
+          "status": "known_from_source",
+          "note": "Well before this candidate's window (2018-11-13 to 2023-11-13) and before proposed_cutoff -- not applicable to the holding period."
+        },
+        {
+          "event": "No dividends recorded in research/prices/MDGL.json",
+          "status": "known_from_source"
+        }
+      ],
+      "repairs": [
+        "mdgl-lancet-2019 (outcome_only) could not be reached (timeout x2) -- retry or substitute with a PubMed/Lancet DOI page."
+      ],
+      "reject_reason": null,
+      "notes": "Primary source fully verified, all facts confirmed verbatim; only outcome-only source unreached."
+    },
+    {
+      "id": "clinical-bmrn-2020",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "bmrn-crl-pr",
+          "url": "https://www.biomarin.com/news/press-releases/biomarin-receives-complete-response-letter-crl-from-fda-for-valoctocogene-roxaparvovec-gene-therapy-for-severe-hemophilia-a/",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2020-08-19",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "Confirms two-year durability requirement verbatim; search corroborates CRL received Aug 18 (after-hours), announced Aug 19 -- consistent with candidate."
+        },
+        {
+          "id": "bmrn-pharmtech",
+          "url": "https://www.pharmtech.com/view/fda-issues-complete-response-letter-to-biomarin-for-hemophilia-a-gene-therapy",
+          "role": "as_of",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "403 Forbidden; not opened."
+        },
+        {
+          "id": "bmrn-resubmit-outcome",
+          "url": "https://www.biomarin.com/news/press-releases/biomarin-resubmits-biologics-license-application-bla-for-valoctocogene-roxaparvovec-aav-gene-therapy-for-severe-hemophilia-a-to-the-fda/",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2022-09-29",
+          "reachable": true,
+          "dated_after_cutoff": true,
+          "notes": "Reachable; candidate lists published_date 2022-09-01, actual page shows Sept 29, 2022 (28-day discrepancy, immaterial to outcome-only role)."
+        }
+      ],
+      "material_fact": {
+        "fact": "FDA now wants two years of durability data, a requirement not raised earlier in development or review",
+        "source_id": "bmrn-crl-pr",
+        "excerpt": "The Agency first informed the Company of this recommendation in the CRL having not raised this at any time during development or review.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [],
+        "notes": "No banned phrases found."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2020-08-19T09:00:00-04:00",
+        "assessment": "consistent",
+        "notes": "CRL received Aug 18, 2020 (after-hours per typical FDA/company disclosure pattern), public announcement Aug 19, 2020 -- matches the 'after market close -> next session' rule."
+      },
+      "corporate_actions": [
+        {
+          "event": "No splits or dividends recorded in research/prices/BMRN.json",
+          "status": "known_from_source"
+        }
+      ],
+      "repairs": [
+        "bmrn-pharmtech (403) not opened -- one of two as_of sources unverified; find an alternate trade-press mirror or retry."
+      ],
+      "reject_reason": null,
+      "notes": "Primary source verified, fact confirmed true; secondary trade-press source blocked."
+    },
+    {
+      "id": "clinical-acad-2021",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "acad-crl-pr",
+          "url": "https://acadia.com/en-us/media/news-releases/acadia-pharmaceuticals-receives-complete-response-letter-us-fda",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2021-04-05",
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "Page's own date is April 5, not April 2 as the fact claims. Search (SEC 8-K) shows FDA's CRL was dated April 2; Acadia's release announcing it was issued April 5 -- same day as proposed cutoff."
+        },
+        {
+          "id": "acad-medcity",
+          "url": "https://medcitynews.com/2021/04/fda-rejects-acadias-bid-for-nuplazid-approval-in-dementia-related-psychosis/",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2021-04-05 1:25 PM ET",
+          "publication_before_cutoff": false,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "Published 1:25pm ET April 5 -- after the 09:00 cutoff same day."
+        },
+        {
+          "id": "acad-final-outcome",
+          "url": "https://acadia.com/en-us/media/news-releases/acadia-pharmaceuticals-announces-outcome-fda-advisory-committee",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2022-06-18 (page)/2022-06-17 (Businesswire mirror)",
+          "reachable": true,
+          "dated_after_cutoff": true,
+          "notes": "Candidate lists 2023-06-17; actual wire date is June 2022, a one-year error also present in retrospective_story."
+        }
+      ],
+      "material_fact": {
+        "fact": "CRL cited lack of statistical significance in some dementia subgroups and insufficient patients in less common subtypes",
+        "source_id": "acad-crl-pr",
+        "excerpt": "the Division ... cited a lack of statistical significance in some of the subgroups of dementia, and insufficient numbers of patients with certain less common dementia subtypes.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [],
+        "notes": "No banned phrases found in scanned fields (retrospective_story, out of scan scope, carries the future outcome detail with the wrong year noted above)."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2021-04-05T09:00:00-04:00",
+        "assessment": "flagged",
+        "notes": "Evidence points to a same-day premarket release; cutoff should likely move to 2021-04-06."
+      },
+      "corporate_actions": [
+        {
+          "event": "No splits or dividends recorded in research/prices/ACAD.json",
+          "status": "known_from_source"
+        }
+      ],
+      "repairs": [
+        "Cutoff likely misdated: same-day (April 5) premarket release evidence suggests cutoff should move to 2021-04-06.",
+        "acad-final-outcome year is wrong (2022 not 2023); correct source metadata and retrospective_story.",
+        "Clarify whether the CRL date anchor is April 2 (FDA letter) or April 5 (public release)."
+      ],
+      "reject_reason": null,
+      "notes": "Fact confirmed true; main defects are cutoff placement and a one-year date error on the outcome source."
+    },
+    {
+      "id": "clinical-srpt-2021",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "srpt-pr-1",
+          "url": "https://www.globenewswire.com/news-release/2021/01/07/2155237/0/en/Sarepta-Therapeutics-Announces-Top-line-Results-for-Part-1-of-Study-102-Evaluating-SRP-9001-its-Investigational-Gene-Therapy-for-the-Treatment-of-Duchenne-Muscular-Dystrophy.html",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2021-01-07 16:05 ET",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "All three facts confirmed verbatim. Timestamped 16:05 ET (after close), consistent with next-session cutoff."
+        },
+        {
+          "id": "srpt-fool-1",
+          "url": "https://www.fool.com/investing/2021/01/08/why-sarepta-therapeutics-stock-is-crashing-today",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2021-01-08 (updated 11:49am EST)",
+          "publication_before_cutoff": false,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "Published 11:49am EST Jan 8 -- after the 09:00 cutoff. Confirms ~50.7% decline, echoed in learning_tension."
+        },
+        {
+          "id": "srpt-elevidys-outcome",
+          "url": "https://investorrelations.sarepta.com/news-releases/news-release-details/sarepta-therapeutics-announces-results-part-2-embark-study",
+          "role": "outcome_only",
+          "opened": false,
+          "http_status": null,
+          "reachable": false,
+          "dated_after_cutoff": "unknown",
+          "notes": "Timed out x2; candidate's own published_date flagged as approximate."
+        }
+      ],
+      "material_fact": {
+        "fact": "Primary functional endpoint (NSAA) did not reach statistical significance (P=0.37)",
+        "source_id": "srpt-pr-1",
+        "excerpt": "SRP-9001-treated participants showed an increase in NSAA total score compared to placebo at 48 weeks; however, the difference was not statistically significant (P=0.37).",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [
+          "learning_tension: \"The press reported a roughly 50% single-day stock decline on a result that was scientifically ambiguous\" -- directly states the market-reaction outcome/magnitude."
+        ],
+        "notes": "One outcome-revealing spoiler found; all other fields clean."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2021-01-08T09:00:00-05:00",
+        "assessment": "consistent",
+        "notes": "Release Jan 7, 16:05 ET (after close); cutoff Jan 8 09:00 ET matches the 'after market close -> next session' rule."
+      },
+      "corporate_actions": [
+        {
+          "event": "No splits or dividends recorded in research/prices/SRPT.json",
+          "status": "known_from_source"
+        }
+      ],
+      "repairs": [
+        "learning_tension contains an outcome-revealing spoiler ('roughly 50% single-day stock decline') -- remove or reword to avoid stating the actual market-reaction magnitude.",
+        "srpt-elevidys-outcome (outcome_only) could not be reached (timeout x2); retry or substitute with a different ELEVIDYS-approval source, and correct its approximate published_date."
+      ],
+      "reject_reason": null,
+      "notes": "Fact confirmed true; defect is a spoiler in learning_tension, not a source problem."
+    },
+    {
+      "id": "clinical-blue-2019",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "blue-8k-2019",
+          "url": "https://www.sec.gov/Archives/edgar/data/1293971/000156459019021374/blue-8k_20190603.htm",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2019-06-03",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "notes": "Confirms EC authorization language verbatim (12+, non-beta0/beta0, no HLA donor)."
+        },
+        {
+          "id": "blue-fiercepharma",
+          "url": "https://www.fiercepharma.com/pharma/bluebird-prices-gene-therapy-zynteglo-at-eu1-575m-europe-to-be-paid-over-5-years",
+          "role": "as_of",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "403 on original and cnbc alternate. Pricing figure corroborated only via search of secondary outlets."
+        },
+        {
+          "id": "blue-germany-outcome",
+          "url": "https://www.biopharmadive.com/news/bluebird-withdraw-zynteglo-germany-price/598689/",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2021-04-20",
+          "reachable": true,
+          "dated_after_cutoff": true,
+          "notes": "Reachable; date differs from candidate metadata by 19 days, immaterial."
+        }
+      ],
+      "material_fact": {
+        "fact": "European Commission granted conditional marketing authorization for ZYNTEGLO in June 2019",
+        "source_id": "blue-8k-2019",
+        "excerpt": "European Commission has granted conditional marketing authorization for ZYNTEGLO ... for patients 12 years and older with transfusion-dependent beta-thalassemia (TDT) who do not have a beta0/beta0 genotype ... but a human leukocyte antigen (HLA)-matched related HSC donor is not available.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "fields_checked": [
+          "neutral_title",
+          "player_question",
+          "as_of_facts",
+          "learning_tension"
+        ],
+        "hits": [
+          "as_of_facts fact #3: \"manufacturing issues later delayed the actual commercial launch by many months\" -- contains 'later', a banned future-relative word.",
+          "learning_tension: \"the subsequent Germany withdrawal suggests the latter risk was real, but that was not knowable at the cutoff\" -- contains 'subsequent', a banned future-relative word."
+        ],
+        "notes": "Two spoiler hits found."
+      },
+      "cutoff_check": {
+        "proposed_cutoff": "2019-06-04T09:00:00-04:00",
+        "assessment": "plausible_unconfirmed",
+        "notes": "8-K filed June 3; next-session cutoff plausible if after-hours, not confirmed to the hour."
+      },
+      "corporate_actions": [
+        {
+          "event": "No BLUE vendor price file to check splits/dividends",
+          "status": "unavailable"
+        },
+        {
+          "event": "2seventy bio spin-off (~Nov 2021), inside window",
+          "status": "model_memory_unverified"
+        },
+        {
+          "event": "Reverse stock split (~2023), inside window",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "as_of_facts #3 and learning_tension contain spoiler words ('later', 'subsequent') -- reword.",
+        "blue-fiercepharma (403 x2 routes) not opened -- find a working mirror for the EUR 1.575M figure.",
+        "In-window spin-off/split need vendor data before any return figure is computed."
+      ],
+      "reject_reason": null,
+      "notes": "Fact confirmed true; defects are two spoilers, an unreachable pricing source, and unverified in-window corporate actions."
+    }
+  ]
+}

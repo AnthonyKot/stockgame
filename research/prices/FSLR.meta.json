@@ -1,0 +1,8 @@
+{
+  "ticker": "FSLR",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/FSLR?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:25.588764+00:00",
+  "sha256": "b200cecd36dfc4153f3b368e13ec9327e265fe3dfd9ccacf22b8f34715e6b75c",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

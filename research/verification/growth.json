@@ -1,0 +1,525 @@
+{
+  "batch": "growth",
+  "verified_at": "2026-09-09T12:26:40.466045+00:00",
+  "budget_used": {
+    "fetch": 26,
+    "search": 1
+  },
+  "candidates": [
+    {
+      "id": "growth-001",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2020-06-02",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "SEC 8-K Ex.99.1, opened."
+        },
+        {
+          "id": "s2",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2020-06-02 16:05 ET",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "GlobeNewswire copy, opened; confirms 16:05 ET release, after market close."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s1",
+        "excerpt": "First quarter total revenue of $328.2 million, up 169% year-over-year.",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "hits": [],
+        "notes": "neutral_title, player_question, learning_tension, as_of_facts scanned; no trigger words, no future-year references."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "Release confirmed 16:05 ET Tue 2020-06-02 (after close); cutoff Wed 2020-06-03 09:00 ET is the first weekday session after."
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Both as_of sources opened and confirm same figures. No splits/spinoffs found in research/prices/ZM.json for the 1-year window; none known from memory."
+    },
+    {
+      "id": "growth-002",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2024-01-30",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "SEC 8-K Ex.99.1, opened; confirms revenue, capex, Pichai quote."
+        },
+        {
+          "id": "s2",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "note": "CNBC blocked fetch with 403; not opened, not verified this run."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s1",
+        "excerpt": "Q4 consolidated revenues of $86 billion, up 13% year over year",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "hits": [],
+        "notes": "Scanned all text fields; no trigger words or future-year references found."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "Release confirmed after market close 2024-01-30 (earnings call 4:30pm ET same day); cutoff 2024-01-31 09:00 ET is the first weekday session after."
+      },
+      "corporate_actions": [
+        {
+          "event": "20:1 stock split",
+          "date": "2022-07-18",
+          "in_window": false,
+          "source": "known_from_source (vendor: research/prices/GOOGL.json)",
+          "note": "Before window start 2024-01-31; not applicable to this holding period."
+        }
+      ],
+      "repairs": [
+        "s2 (CNBC) not opened: HTTP 403. Retry via archive.org or an alternate outlet if verification of the secondary corroborating source is required."
+      ],
+      "reject_reason": null,
+      "notes": "Primary SEC source fully verifies the fact and identity; only the corroborating secondary source is unverified."
+    },
+    {
+      "id": "growth-003",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2019-09-24",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "Nike IR page, opened; confirms revenue, EPS, gross margin, NA segment, macro language."
+        },
+        {
+          "id": "s2",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "note": "CNBC blocked fetch with 403; not opened."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s1",
+        "excerpt": "Revenue increased to $10.7 billion in the first quarter, up 7 percent on a reported basis and up 10 percent on a currency-neutral basis",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "hits": [
+          "learning_tension: \"5-year horizon spanning COVID-19 and its aftermath\" \u2014 names a specific future pandemic event that began after the 2019-09-25 cutoff."
+        ],
+        "notes": "Title, question, as_of_facts otherwise clean; the 'increasingly volatile macroeconomic and geopolitical environment' quote is a same-day management statement, not a spoiler."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "Release 2019-09-24 (Tue); Nike historically reports after close same day as earnings call. Cutoff 2019-09-25 09:00 ET is the first weekday session after, consistent regardless of exact release time."
+      },
+      "corporate_actions": [
+        {
+          "event": "2:1 stock split",
+          "date": "2015-12-24",
+          "in_window": false,
+          "source": "known_from_source (vendor: research/prices/NKE.json)",
+          "note": "Well before window start 2019-09-25; not applicable."
+        }
+      ],
+      "repairs": [
+        "Rewrite learning_tension to remove the named future event 'COVID-19'; it directly spoils the multi-year holding period.",
+        "s2 (CNBC) not opened: HTTP 403."
+      ],
+      "reject_reason": null,
+      "notes": "Primary source fully verifies facts and identity; the spoiler is a text-only defect, fixable by rewording."
+    },
+    {
+      "id": "growth-004",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2021-03-02",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "SEC 8-K Ex.99, opened; confirms comps, digital growth, EPS, no-guidance statement."
+        },
+        {
+          "id": "s2",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "note": "CNBC blocked fetch with 403; not opened."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s1",
+        "excerpt": "Comparable sales grew 20.5 percent, reflecting comparable traffic growth of 6.5 percent and a 13.1 percent increase in average ticket.",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "hits": [],
+        "notes": "as_of fact mentions 'continued COVID-19 uncertainty' but COVID-19 was already ongoing/known at the 2021-03-03 cutoff, so this is contemporaneous, not a spoiler. No other trigger words found."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "Release confirmed before market open 2021-03-02 (webcast 8:00am CST = 9:00am ET). Premarket-same-day rule: cutoff must be the following session, i.e. 2021-03-03 09:00 ET, which matches."
+      },
+      "corporate_actions": [],
+      "repairs": [
+        "s2 (CNBC) not opened: HTTP 403."
+      ],
+      "reject_reason": null,
+      "notes": "No split events found in research/prices/TGT.json for the 3-year window; none known from memory."
+    },
+    {
+      "id": "growth-005",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2020-08-21",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "SEC 8-K Ex.99.1, opened; confirms net income, EPS, FY guidance, restructuring."
+        },
+        {
+          "id": "s2",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2020-08-21 06:45 ET",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "PRNewswire copy, opened; confirms 06:45 ET release, before market open, matching figures."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s1",
+        "excerpt": "Net income of $811 million for the third quarter ended August 2, 2020, or $2.57 per share, compared with net income of $899 million, or $2.81 per share, for the quarter ended July 28, 2019.",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "hits": [
+          "learning_tension: \"tests whether players read restructuring as weakness or as prudent cyclical management ahead of an eventual agricultural upcycle\" \u2014 uses trigger phrase 'ahead of' and 'eventual' to reveal that an upcycle later occurs, which is outcome-relevant information not knowable at the 2020-08-24 cutoff."
+        ],
+        "notes": "Title, question, as_of_facts otherwise clean."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "Release confirmed 06:45 ET Fri 2020-08-21, before market open. Premarket-same-day rule: cutoff must be the following trading session, i.e. Mon 2020-08-24 09:00 ET, which matches."
+      },
+      "corporate_actions": [],
+      "repairs": [
+        "Rewrite learning_tension to remove 'ahead of an eventual agricultural upcycle', which spoils the multi-year outcome."
+      ],
+      "reject_reason": null,
+      "notes": "Both as_of sources opened and confirm figures; no splits found in research/prices/DE.json for the window; none known from memory."
+    },
+    {
+      "id": "growth-006",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2019-02-01 07:00 CST",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "ExxonMobil IR page, opened; confirms FY2018 earnings, capex, Q4 crude-price language."
+        },
+        {
+          "id": "s2",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "note": "BusinessWire blocked fetch with 403; not opened."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s1",
+        "excerpt": "Exxon Mobil Corporation today announced estimated 2018 earnings of $20.8 billion, or $4.88 per share assuming dilution, compared with $19.7 billion a year earlier.",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "hits": [
+          "learning_tension: \"over a 5-year horizon spanning a later oil price collapse (2020) not knowable at cutoff\" \u2014 explicitly names a future event and year (2020 oil price collapse) after the 2019-02-04 cutoff."
+        ],
+        "notes": "Title, question, as_of_facts otherwise clean."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "Release confirmed 07:00 CST (08:00 ET) Fri 2019-02-01, before market open. Premarket-same-day rule: cutoff must be the following session, Mon 2019-02-04 09:00 ET, which matches."
+      },
+      "corporate_actions": [],
+      "repairs": [
+        "Rewrite learning_tension to remove the named 'later oil price collapse (2020)' reference.",
+        "s2 (BusinessWire) not opened: HTTP 403."
+      ],
+      "reject_reason": null,
+      "notes": "No split events found in research/prices/XOM.json for the window; none known from memory."
+    },
+    {
+      "id": "growth-007",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2022-03-01",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "SEC 8-K Ex.99, opened; confirms FY2021 sales/EPS and FY2022 guidance."
+        },
+        {
+          "id": "s2",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2022-03-01 16:21 ET",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "GlobeNewswire copy, opened; confirms 16:21 ET release, after market close, matching figures and CEO quote."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s1",
+        "excerpt": "our full year 2021 earnings per diluted share result came in above the mid-point of the guidance range we provided at the time of our third quarter earnings call, and is solidly within the original guidance range provided last February.",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "hits": [],
+        "notes": "Title, question, tension, as_of_facts scanned; no trigger words or future-year references."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "Release confirmed 16:21 ET Tue 2022-03-01, after market close. Cutoff Wed 2022-03-02 09:00 ET is the first weekday session after."
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Both as_of sources opened and confirm figures. No splits in research/prices/FSLR.json for the 1-year window; none known from memory."
+    },
+    {
+      "id": "growth-008",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "note": "BusinessWire blocked with 403 (two attempts, no readable alternate on host)."
+        },
+        {
+          "id": "s2",
+          "opened": false,
+          "http_status": 200,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "note": "PDF fetched (HTTP 200) but binary/unparseable; text not extracted."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s1",
+        "excerpt": null,
+        "confirmed": "unverified"
+      },
+      "spoiler_scan": {
+        "hits": [],
+        "notes": "Title, question, tension, as_of_facts scanned on the candidate text itself (not source-dependent); no trigger words or future-year references found."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "WebSearch snippet (not an opened source) states earnings call was 8:30am ET Tue 2019-01-15 (premarket). Following-session rule gives cutoff Wed 2019-01-16 09:00 ET, matching -- but this is search-corroborated only, not source-verified."
+      },
+      "corporate_actions": [],
+      "repairs": [
+        "Neither as_of source opened this run (s1: 403; s2: unreadable PDF); no verbatim material_fact possible.",
+        "Figures match a WebSearch snippet but that is not a substitute for an opened primary source; retry via SEC EDGAR full-text search or an alternate mirror."
+      ],
+      "reject_reason": null,
+      "notes": "No splits in research/prices/JPM.json for the window. Issuer/ticker plausible from search + internal consistency, not independently source-confirmed."
+    },
+    {
+      "id": "growth-009",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2023-02-02",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "PRNewswire release, opened; confirms Q4/FY2022 sales and EPS, 2023 guidance, price-realization language."
+        },
+        {
+          "id": "s2",
+          "opened": false,
+          "http_status": "timeout",
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "note": "Nasdaq.com fetch timed out after 60s; not opened."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s1",
+        "excerpt": null,
+        "confirmed": "unverified"
+      },
+      "spoiler_scan": {
+        "hits": [
+          "learning_tension: \"an early signal of pricing power fatigue that later cocoa-cost commentary (2024) may retroactively support\" \u2014 names a specific future year (2024) and event after the 2023-02-03 cutoff."
+        ],
+        "notes": "Title, question, as_of_facts otherwise clean."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "Release dated Thu 2023-02-02; Hershey historically reports before market open. Cutoff Fri 2023-02-03 09:00 ET is the first weekday session after, consistent under either premarket or after-close timing."
+      },
+      "corporate_actions": [],
+      "repairs": [
+        "Rewrite learning_tension to remove 'later cocoa-cost commentary (2024)'.",
+        "s2 (Nasdaq.com) not opened: request timed out.",
+        "Material_fact could not be captured as an exact verbatim quoted string from the fetched page this run (the fetch returned a paraphrased summary, not quotation-marked source text), even though the numbers it reported ($2,652.3M net sales up 14.0%, adjusted EPS $2.02 up 19.5%) match the candidate's as_of fact; per instruction, marking confirmed=unverified rather than true without a true verbatim excerpt."
+      ],
+      "reject_reason": null,
+      "notes": "No split events found in research/prices/HSY.json for the 1-year window; none known from memory."
+    },
+    {
+      "id": "growth-010",
+      "verdict": "reject",
+      "sources": [
+        {
+          "id": "s1",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_shown": "2018-07-20",
+          "publication_before_cutoff": true,
+          "original_contemporaneous": true,
+          "security_identity_match": true,
+          "note": "SEC 8-K + Ex.99 opened; filing metadata confirms true release date 2018-07-20."
+        },
+        {
+          "id": "s2",
+          "opened": false,
+          "http_status": 403,
+          "publication_date_shown": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "note": "CNBC blocked, 403; not opened. All as_of_facts cite this source."
+        }
+      ],
+      "material_fact": {
+        "source_id": "s2",
+        "excerpt": null,
+        "confirmed": "unverified",
+        "note": "Facts cite s2 (unopened). Via s1 (opened): segment declines '(58)%' Power, '(39)%' O&G confirmed verbatim. s1 has no mention of consensus or 'beat' anywhere, clauses unconfirmed."
+      },
+      "spoiler_scan": {
+        "hits": [
+          "learning_tension: \"especially given GE later missed and cut guidance sharply within months (Oct 2018 dividend cut), which is outcome information not knowable at this cutoff\" -- explicitly names the outcome (guidance miss, Oct 2018 dividend cut) that directly answers the player_question ('is the reaffirmation credible...')."
+        ],
+        "notes": "Direct outcome reveal, answers the player_question."
+      },
+      "cutoff_check": {
+        "correct": true,
+        "correct_cutoff": null,
+        "notes": "Facts dated 2018-07-19, but s1 confirms true release date 2018-07-20 (Fri). Cutoff Mon 2018-07-23 09:00 ET is correct for that true date; the fact date field should read 2018-07-20."
+      },
+      "corporate_actions": [
+        {
+          "event": "1-for-8 reverse stock split",
+          "date": "2021-08-02",
+          "in_window": true,
+          "source": "vendor GE.json (ratio 1:8)",
+          "note": "Known GE 1-for-8 reverse split, Aug 2021 (model_memory)."
+        },
+        {
+          "event": "GE HealthCare Technologies spin-off (price-continuity adjustment)",
+          "date": "2023-01-04",
+          "in_window": true,
+          "source": "vendor GE.json (ratio 1281:1000)",
+          "note": "Known GE HealthCare spin-off, Jan 2023 (model_memory)."
+        },
+        {
+          "event": "Unidentified split-equivalent adjustment",
+          "date": "2019-02-26",
+          "in_window": true,
+          "source": "vendor GE.json (ratio 104:100)",
+          "note": "unconfirmed, model_memory_unverified."
+        },
+        {
+          "event": "GE Vernova spin-off (price-continuity adjustment)",
+          "date": "2024-04-02",
+          "in_window": false,
+          "source": "vendor GE.json (ratio 1253:1000)",
+          "note": "After window exit; listed for completeness only."
+        }
+      ],
+      "repairs": [],
+      "reject_reason": "learning_tension states the future outcome (guidance miss, Oct 2018 dividend cut), answering the player_question -- breaks as-of framing. All facts cite an unopened source dated a day before GE's official release; the one fact checked is only partially confirmed.",
+      "notes": "Reject driven by the outcome-revealing spoiler; source/date issues are secondary."
+    }
+  ]
+}

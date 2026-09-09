@@ -1,0 +1,844 @@
+{
+  "candidate_id": "clinical-srpt-2021",
+  "schema_version": "mvp-1",
+  "cutoff": "2021-01-08T09:00:00-05:00",
+  "horizon": {
+    "unit": "calendar_years",
+    "count": 3
+  },
+  "exchange_calendar": "XNYS",
+  "sector_module": "biotech",
+  "masked": {
+    "alias": "a commercial-stage muscular dystrophy drug developer",
+    "sector": "Biotechnology (rare genetic neuromuscular disease)",
+    "business_two_sentences": "This company sells two approved drugs that each target a specific genetic subgroup of a severe childhood muscle-wasting disease, together reaching about one-fifth of that patient population. It also develops an investigational one-time gene therapy for the same disease, partnered outside the U.S. with a large multinational pharmaceutical company [c16][c18]."
+  },
+  "transparent": {
+    "issuer": "Sarepta Therapeutics, Inc.",
+    "ticker": "SRPT",
+    "exchange": "NASDAQ",
+    "business_two_sentences": "Sarepta Therapeutics, Inc. is a commercial-stage biopharmaceutical company that sells two FDA-approved exon-skipping drugs for genetically defined subsets of Duchenne muscular dystrophy and develops an investigational one-time gene therapy for the disease. Roche holds an exclusive ex-U.S. license to the gene-therapy candidate under a December 2019 collaboration agreement, while Sarepta retains all U.S. rights [c16][c18]."
+  },
+  "financial_snapshot": {
+    "adapter": "commercial_biotech",
+    "headline": [
+      {
+        "label": "Enterprise value and EV / trailing revenue",
+        "value": null,
+        "unit": "USD_millions",
+        "period": "2020-09-30",
+        "available_at": "2020-11-05",
+        "source_ids": [],
+        "status": "missing",
+        "definition": "Historical share price is not in the eligible evidence packet, so market capitalization and enterprise value cannot be calculated.",
+        "prior": null
+      },
+      {
+        "label": "Product revenue and growth",
+        "value": 121.4,
+        "unit": "USD_millions",
+        "period": "Q3-2020",
+        "available_at": "2020-11-05",
+        "source_ids": [
+          "srpt-10q-q3-2020",
+          "srpt-q3-2020-pr"
+        ],
+        "status": "reported",
+        "definition": "Revenue recognized from contracts with customers (the two approved drugs), excluding collaboration/license revenue. Up about 22.6% from $99.0 million in the third quarter of 2019 [derived: (121.429-99.041)/99.041].",
+        "prior": {
+          "value": 99.0,
+          "period": "Q3-2019"
+        }
+      },
+      {
+        "label": "Operating margin",
+        "value": -95.2,
+        "unit": "percent",
+        "period": "Q3-2020",
+        "available_at": "2020-11-05",
+        "source_ids": [
+          "srpt-10q-q3-2020"
+        ],
+        "status": "derived",
+        "definition": "Operating income (loss) divided by total revenue (product plus collaboration/license revenue) for the quarter. Formula: OperatingIncomeLoss / Revenues.",
+        "prior": {
+          "value": -124.8,
+          "period": "Q3-2019"
+        }
+      },
+      {
+        "label": "Operating cash flow (most recent quarter, standalone)",
+        "value": -238.2,
+        "unit": "USD_millions",
+        "period": "Q3-2020",
+        "available_at": "2020-11-05",
+        "source_ids": [
+          "srpt-10q-q3-2020"
+        ],
+        "status": "derived",
+        "definition": "Nine-month 2020 year-to-date operating cash flow ($282.0 million, positive) minus six-month 2020 year-to-date operating cash flow ($520.2 million), isolating the third quarter alone. The year-to-date figure is positive mainly because of a large first-quarter inflow; the standalone third quarter was a cash outflow. See missing_data for why the first-quarter inflow is not further decomposed in this packet.",
+        "prior": {
+          "value": -67.4,
+          "period": "Q3-2019"
+        }
+      },
+      {
+        "label": "Cash and investments",
+        "value": 1816.1,
+        "unit": "USD_millions",
+        "period": "2020-09-30",
+        "available_at": "2020-11-05",
+        "source_ids": [
+          "srpt-10q-q3-2020"
+        ],
+        "status": "derived",
+        "definition": "Cash and cash equivalents plus short-term investments. Separately, long-term debt was $700.5 million at September 30, 2020 per the Form 10-Q; the comparable year-end-2019 long-term debt figure is not established in this packet (see missing_data), so debt is not netted against this headline figure for either period.",
+        "prior": {
+          "value": 1124.7,
+          "period": "2019-12-31"
+        }
+      },
+      {
+        "label": "R&D spending and revenue concentration",
+        "value": 190.4,
+        "unit": "USD_millions",
+        "period": "Q3-2020",
+        "available_at": "2020-11-05",
+        "source_ids": [
+          "srpt-q3-2020-pr"
+        ],
+        "status": "reported",
+        "definition": "Quarterly R&D expense as reported in the earnings release (nine-month 2020 R&D was $515.1 million per the same release). Revenue remains concentrated: full-year 2019 revenue of $380.8 million was almost entirely from the older of the two approved products, since the second product was approved only in mid-December 2019 and its 2019 revenue was described by the company as immaterial [c16].",
+        "prior": {
+          "value": 133.9,
+          "period": "Q3-2019"
+        }
+      }
+    ],
+    "history": [
+      {
+        "row": "Total revenue (product + collaboration/license)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 154.6,
+            "available_at": "2018-03-01",
+            "source_ids": [
+              "0001564590-18-004107"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 301.0,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "0001564590-19-005170"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 380.8,
+            "available_at": "2020-02-26",
+            "source_ids": [
+              "srpt-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2020",
+            "value": 113.7,
+            "available_at": "2020-05-06",
+            "source_ids": [
+              "0001564590-20-021905"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2020",
+            "value": 137.4,
+            "available_at": "2020-08-05",
+            "source_ids": [
+              "0001564590-20-036794"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2020",
+            "value": 143.9,
+            "available_at": "2020-11-05",
+            "source_ids": [
+              "srpt-10q-q3-2020"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Product revenue (contracts with customers only)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 154.6,
+            "available_at": "2018-03-01",
+            "source_ids": [
+              "0001564590-18-004107"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 301.0,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "0001564590-19-005170"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 380.8,
+            "available_at": "2020-02-26",
+            "source_ids": [
+              "srpt-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2020",
+            "value": 100.4,
+            "available_at": "2020-05-06",
+            "source_ids": [
+              "0001564590-20-021905"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2020",
+            "value": 111.3,
+            "available_at": "2020-08-05",
+            "source_ids": [
+              "0001564590-20-036794"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2020",
+            "value": 121.4,
+            "available_at": "2020-11-05",
+            "source_ids": [
+              "srpt-10q-q3-2020",
+              "srpt-q3-2020-pr"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Research and development expense",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 166.7,
+            "available_at": "2018-03-01",
+            "source_ids": [
+              "0001564590-18-004107"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 401.8,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "0001564590-19-005170"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 560.9,
+            "available_at": "2020-02-26",
+            "source_ids": [
+              "srpt-10k-fy2019"
+            ],
+            "status": "derived",
+            "formula": "Sum of the four separately reported 2019 quarterly R&D expense figures in the FY2019 10-K (Q1 90.6 + Q2 113.3 + Q3 133.9 + Q4 223.1)"
+          },
+          {
+            "period": "9M-2020 (Jan-Sep)",
+            "value": 515.1,
+            "available_at": "2020-11-05",
+            "source_ids": [
+              "srpt-q3-2020-pr"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2020",
+            "value": 190.4,
+            "available_at": "2020-11-05",
+            "source_ids": [
+              "srpt-q3-2020-pr"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Selling, general and administrative expense",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 122.7,
+            "available_at": "2018-03-01",
+            "source_ids": [
+              "0001564590-18-004107"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 207.8,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "0001564590-19-005170"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 284.8,
+            "available_at": "2020-02-26",
+            "source_ids": [
+              "srpt-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2020",
+            "value": 82.8,
+            "available_at": "2020-05-06",
+            "source_ids": [
+              "0001564590-20-021905"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2020",
+            "value": 73.7,
+            "available_at": "2020-08-05",
+            "source_ids": [
+              "0001564590-20-036794"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2020",
+            "value": 75.4,
+            "available_at": "2020-11-05",
+            "source_ids": [
+              "srpt-10q-q3-2020"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Operating income (loss)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": -171.6,
+            "available_at": "2018-03-01",
+            "source_ids": [
+              "0001564590-18-004107"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": -343.6,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "0001564590-19-005170"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": -705.6,
+            "available_at": "2020-02-26",
+            "source_ids": [
+              "srpt-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2020",
+            "value": -118.0,
+            "available_at": "2020-05-06",
+            "source_ids": [
+              "0001564590-20-021905"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2020",
+            "value": -138.4,
+            "available_at": "2020-08-05",
+            "source_ids": [
+              "0001564590-20-036794"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2020",
+            "value": -137.1,
+            "available_at": "2020-11-05",
+            "source_ids": [
+              "srpt-10q-q3-2020"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net income (loss)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": -50.7,
+            "available_at": "2018-03-01",
+            "source_ids": [
+              "0001564590-18-004107"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": -361.9,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "0001564590-19-005170"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": -715.1,
+            "available_at": "2020-02-26",
+            "source_ids": [
+              "srpt-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2020",
+            "value": -17.5,
+            "available_at": "2020-05-06",
+            "source_ids": [
+              "0001564590-20-021905"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2020",
+            "value": -150.8,
+            "available_at": "2020-08-05",
+            "source_ids": [
+              "0001564590-20-036794"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2020",
+            "value": -196.5,
+            "available_at": "2020-11-05",
+            "source_ids": [
+              "srpt-10q-q3-2020"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Cash, cash equivalents and short-term investments",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 1079.1,
+            "available_at": "2018-03-01",
+            "source_ids": [
+              "0001564590-18-004107"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 1173.9,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "0001564590-19-005170"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 1124.7,
+            "available_at": "2020-02-26",
+            "source_ids": [
+              "srpt-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2020",
+            "value": 2171.2,
+            "available_at": "2020-05-06",
+            "source_ids": [
+              "0001564590-20-021905"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2020",
+            "value": 2061.3,
+            "available_at": "2020-08-05",
+            "source_ids": [
+              "0001564590-20-036794"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2020",
+            "value": 1816.1,
+            "available_at": "2020-11-05",
+            "source_ids": [
+              "srpt-10q-q3-2020"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Common shares outstanding (period end)",
+        "unit": "millions_of_shares",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 64.8,
+            "available_at": "2018-03-01",
+            "source_ids": [
+              "0001564590-18-004107"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 71.1,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "0001564590-19-005170"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 75.2,
+            "available_at": "2020-02-26",
+            "source_ids": [
+              "srpt-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2020",
+            "value": 78.0,
+            "available_at": "2020-05-06",
+            "source_ids": [
+              "0001564590-20-021905"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2020",
+            "value": 78.4,
+            "available_at": "2020-08-05",
+            "source_ids": [
+              "0001564590-20-036794"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2020",
+            "value": 78.8,
+            "available_at": "2020-11-05",
+            "source_ids": [
+              "srpt-10q-q3-2020"
+            ],
+            "status": "reported"
+          }
+        ]
+      }
+    ]
+  },
+  "what_changed": [
+    {
+      "date": "2021-01-07",
+      "fact": "Part 1 of the company's first randomized, placebo-controlled gene-therapy trial met the primary biological endpoint (protein expression, p<0.0001) but missed the primary functional endpoint (p=0.37); a pre-specified younger-age subgroup showed a significant functional benefit [c1][c2][c3][c4].",
+      "relationship_to_business": "First controlled readout of the company's most advanced pipeline asset outside its two approved drugs; management cited an arm imbalance as a possible cause of the missed functional result.",
+      "source_ids": [
+        "srpt-102-8k"
+      ],
+      "status": "reported"
+    },
+    {
+      "date": "2020-11-05",
+      "fact": "Third-quarter product revenue was $121.4 million (up about 23% year over year) with roughly $1.8 billion cash and investments; an earlier small, open-label, four-patient study of the same gene therapy had shown a two-year mean 7.0-point functional improvement with no serious adverse events [c9][c11][c12].",
+      "relationship_to_business": "Sets the pre-catalyst commercial and financing backdrop and gives an earlier, smaller, uncontrolled comparison point for the January 7 controlled result.",
+      "source_ids": [
+        "srpt-q3-2020-pr"
+      ],
+      "status": "reported"
+    },
+    {
+      "date": "2020-08-25",
+      "fact": "The FDA accepted, under priority review, a third exon-skipping drug candidate for a different genetic subgroup (about 8% of patients), with a regulatory decision date of February 25, 2021, based on a statistically significant interim increase in dystrophin protein production [c14][c15].",
+      "relationship_to_business": "A third potential approval in the company's existing, revenue-generating drug class, independent of the gene-therapy program.",
+      "source_ids": [
+        "srpt-casimersen-pr"
+      ],
+      "status": "reported"
+    }
+  ],
+  "sector_evidence": {
+    "existing_products": [
+      {
+        "product": "First approved exon-skipping drug",
+        "approved": "FDA accelerated approval, 2016",
+        "indication": "Targets a genetic subgroup (about 13% of patients) of a severe, inherited, childhood-onset muscle-wasting disease affecting boys",
+        "recent_revenue": "The large majority of $380.8 million in full-year 2019 revenue and of $121.4 million in third-quarter 2020 product revenue [c16][c11]",
+        "source_ids": [
+          "srpt-10k-fy2019"
+        ]
+      },
+      {
+        "product": "Second approved exon-skipping drug",
+        "approved": "FDA accelerated approval, mid-December 2019",
+        "indication": "Targets a different genetic subgroup (up to about 8% of patients) of the same disease",
+        "recent_revenue": "Described by the company as immaterial for full-year 2019, the first weeks after approval; third-quarter 2020 revenue is not broken out by product in the eligible sources [c16]",
+        "source_ids": [
+          "srpt-10k-fy2019"
+        ]
+      }
+    ],
+    "concentration_note": "The two approved drugs are mutually exclusive by genetic mutation subgroup and, per the company's own disclosure, together address roughly one-fifth of the overall patient population for this disease; no source in this packet gives a combined single percentage figure [c16].",
+    "programs": [
+      {
+        "program": "Investigational one-time gene therapy for Duchenne muscular dystrophy -- randomized controlled study (Study 102, Part 1)",
+        "drug_mechanism": "A one-time intravenous infusion of a viral-vector gene therapy designed to deliver a shortened, functional version of the dystrophin gene ('micro-dystrophin') to muscle cells; different from the two approved drugs, which work by causing the body's existing genetic machinery to skip a faulty exon.",
+        "phase": "Randomized Part 1 topline reported; open-label Part 2 crossover ongoing for all participants",
+        "ownership": "Company retains all U.S. rights; a large multinational pharmaceutical partner holds an exclusive license to develop and commercialize this therapy outside the U.S. under a December 2019 collaboration agreement (upfront payment of $1.15 billion in combined cash and equity, up to $1.73 billion in additional milestones, royalties described as 'mid-teens' on net sales outside the U.S., shared global development costs) [c18].",
+        "trial_id": "Study 102 (company-assigned name; ClinicalTrials.gov identifier not independently verified before cutoff)",
+        "design": "Randomized 1:1, double-blind, placebo-controlled study in 41 ambulatory boys (20 treated, 21 placebo) ages 4-7 with genetically confirmed disease [c1].",
+        "sample_size": {
+          "planned": null,
+          "randomized": 41,
+          "analyzed": "20 treated / 21 placebo"
+        },
+        "population": "Ambulatory boys ages 4-7 with genetically confirmed Duchenne muscular dystrophy",
+        "primary_endpoint": "Co-primary: (1) change in micro-dystrophin protein expression (western blot) at 12 weeks; (2) change in a standardized clinician-administered motor-function total score (North Star Ambulatory Assessment, or NSAA) at 48 weeks",
+        "secondary_endpoints": "Additional biological measures of micro-dystrophin expression (vector genome copies, percent positive muscle fibers, staining intensity), all reported as met",
+        "latest_evidence": "Biological endpoint met: mean 28.1% micro-dystrophin expression by western blot (p<0.0001). Functional endpoint not statistically significant overall: treated group improved 1.7 points from baseline (within-group p=0.009) versus 0.9 points for placebo (within-group p=0.1411), for a between-group p=0.37. A pre-specified subgroup of the youngest patients (ages 4-5, n=16) showed a statistically significant 4.3-point improvement versus 1.9 points for placebo (p=0.0172) [c1][c2][c3][c4].",
+        "safety": "No new safety signals reported. About 85% of the treated group had a treatment-related adverse event versus 43% of placebo (82% of all adverse events were mild-to-moderate). Four serious treatment-related adverse events were reported: three among patients who received the gene therapy, including cases of muscle-breakdown (rhabdomyolysis) and liver-enzyme elevation, and one in the placebo group [c6].",
+        "management_says_vs_regulator": "Management said an imbalance between the treatment and placebo arms may have undermined the overall functional result and that the biological and subgroup findings support continuing development; no independent regulator statement on this specific readout is in this packet [c7].",
+        "next_milestone": "A follow-on trial using the company's planned commercial manufacturing process has begun enrolling, with biomarker and safety results expected in the second quarter of 2021 (announced 2021-01-07) [c7].",
+        "economic_relevance": "The company's most advanced pipeline asset outside the two approved drugs; its ex-U.S. economics are governed by the December 2019 partnership described above, while U.S. commercial rights and costs remain fully with the company."
+      },
+      {
+        "program": "Same gene therapy -- original open-label study (Study 101)",
+        "drug_mechanism": "Same gene therapy as above, in the same disease.",
+        "phase": "Phase 1/2, open-label; two-year follow-up data reported",
+        "ownership": "Same ownership/partner structure as Study 102 above.",
+        "trial_id": "Study 101 (company-assigned name; ClinicalTrials.gov identifier not independently verified before cutoff)",
+        "design": "Open-label, uncontrolled, single-arm study; no placebo comparator [c9].",
+        "sample_size": {
+          "planned": null,
+          "enrolled": 4,
+          "analyzed": 4
+        },
+        "population": "Ambulatory boys ages 4-7 with genetically confirmed Duchenne muscular dystrophy, given a single infusion at a stated dose of 2x10^14 vector genomes per kilogram",
+        "primary_endpoint": "Not stated as a formal primary endpoint in this small early-phase study in the eligible sources; functional assessment (NSAA) and micro-dystrophin expression were tracked",
+        "secondary_endpoints": "Not detailed beyond the above in the eligible sources",
+        "latest_evidence": "At two years post-infusion: mean 7.0-point improvement on the motor-function score (NSAA) versus baseline, with no placebo comparator. At 12 weeks, mean micro-dystrophin expression was 81.2% of muscle fibers positive by immunohistochemistry (96% mean staining intensity relative to normal) and 95.8% by western blot [c9][c10].",
+        "safety": "Described as well tolerated over two years; all adverse events were mild or moderate and occurred within 90 days of treatment; no serious adverse events over the two-year follow-up [c10].",
+        "management_says_vs_regulator": "The company's own release frames this small, open-label, four-patient result as preliminary and explicitly points to the larger randomized, placebo-controlled Study 102 (reported January 7, 2021, and summarized above) as the trial expected to give a more definitive read; no independent regulator statement on Study 101 is in this packet [c9].",
+        "next_milestone": "No further Study 101 milestone was announced in the eligible sources beyond the two-year data already reported.",
+        "economic_relevance": "Same asset and economics as Study 102 above; included separately here because it is a materially different (smaller, uncontrolled) evidence base for the same drug."
+      },
+      {
+        "program": "Third exon-skipping drug candidate (regulatory review stage)",
+        "drug_mechanism": "Same exon-skipping chemistry as the two approved drugs, targeting a third, distinct genetic subgroup of the same disease.",
+        "phase": "New Drug Application under FDA priority review; not yet approved",
+        "ownership": "Wholly owned by the company; no partner disclosed for this candidate in the eligible sources.",
+        "trial_id": "The company's Phase 3 placebo-controlled study for this candidate (public study name not independently verified before cutoff beyond 'ESSENCE study')",
+        "design": "Double-blind, placebo-controlled, multi-center Phase 3 study; weekly intravenous infusions for up to 96 weeks followed by an open-label extension; efficacy assessed via six-minute walk testing and muscle biopsy [c15].",
+        "sample_size": {
+          "planned": null,
+          "enrolled": null,
+          "analyzed": null
+        },
+        "population": "Patients with genetically confirmed Duchenne muscular dystrophy amenable to this third exon-skipping subgroup (about 8% of patients)",
+        "primary_endpoint": "Dystrophin protein production (measured by western blot), consistent with the accelerated-approval basis used for the two already-approved drugs",
+        "secondary_endpoints": "Not detailed beyond dystrophin production and functional/biopsy assessments in the eligible sources",
+        "latest_evidence": "An interim analysis showed a statistically significant increase in dystrophin production versus both baseline and placebo; the release did not disclose the specific percentage or p-value [c15].",
+        "safety": "Not detailed in the eligible sources for this specific candidate.",
+        "management_says_vs_regulator": "The FDA accepted the NDA for priority review and set a regulatory decision date; acceptance for review is a procedural step and is not itself a statement that the agency will approve the drug [c14].",
+        "next_milestone": "FDA regulatory decision date of February 25, 2021 (announced 2020-08-25); NDA submitted mid-2020 [c14].",
+        "economic_relevance": "A potential third product in the company's existing, revenue-generating drug class, using the same regulatory pathway and commercial infrastructure as the two approved drugs."
+      }
+    ]
+  },
+  "upcoming_and_unresolved": {
+    "catalysts": [
+      {
+        "description": "FDA regulatory decision on the third exon-skipping drug candidate",
+        "timing_window": "by February 25, 2021",
+        "announced_on": "2020-08-25",
+        "source_ids": [
+          "srpt-casimersen-pr"
+        ]
+      },
+      {
+        "description": "Biomarker and safety data from the follow-on gene-therapy trial using the company's planned commercial manufacturing process",
+        "timing_window": "second quarter of 2021",
+        "announced_on": "2021-01-07",
+        "source_ids": [
+          "srpt-102-8k"
+        ]
+      }
+    ],
+    "unresolved_questions": [
+      "Will the FDA's review of the third exon-skipping candidate confirm the same surrogate-endpoint pathway used for the two already-approved drugs, or raise new questions about it?",
+      "Does the significant younger-age subgroup result in the controlled gene-therapy trial reflect a real, reproducible effect, or a subgroup finding that may not repeat in other studies?",
+      "Can current revenue, cash, and the partner's committed payments fund the gene-therapy program's development and manufacturing scale-up without further dilutive financing?"
+    ]
+  },
+  "macro_context": [],
+  "help_me_weigh": {
+    "own": [
+      "Two already-approved drugs in the same mechanistic class generate real and growing revenue ($121.4 million in the third quarter of 2020, up about 23% year over year), reducing reliance on capital markets to fund the pipeline [c11][c16].",
+      "The gene therapy's first controlled trial met its primary biological endpoint with a very strong statistical result (p<0.0001), and a large multinational pharmaceutical partner paid a substantial upfront sum for ex-U.S. rights to the same program before this readout was known [c2][c18].",
+      "A separate, earlier, small open-label study of the same gene therapy showed a numerically larger two-year functional improvement with no serious adverse events over that period, a second, independent data point on the same mechanism [c9][c10].",
+      "A third drug candidate in the company's existing, already-commercialized class is under active FDA priority review with a specific decision date, offering a near-term catalyst independent of the gene-therapy program [c14]."
+    ],
+    "flat": [
+      "The controlled trial's primary functional endpoint -- arguably the one most relevant to patients and regulators -- did not reach statistical significance versus placebo; the company's own explanation (an imbalance between arms) is not confirmed by an independent analysis in this packet [c3][c7].",
+      "Year-to-date operating cash flow through the third quarter of 2020 was positive overall, but the standalone third quarter alone was a cash outflow of roughly $238 million, so the year-to-date total should not be read as an ongoing run-rate [c11][c12]."
+    ],
+    "short": [
+      "The favorable subgroup finding (ages 4-5) is one pre-specified cut of a 41-patient trial that did not show significance in the full population; a subgroup result in a sample of this size carries its own statistical fragility [c3][c4].",
+      "Most of the treated group (about 85%) had a treatment-related adverse event, and three treated patients had serious adverse events including muscle breakdown and liver-enzyme elevation, in a therapy intended for young children [c6].",
+      "Both already-approved drugs in this class received accelerated approval based on a surrogate biomarker (protein production) rather than a demonstrated functional benefit; the same met-biology/unclear-function pattern has now recurred in the gene-therapy trial, raising the question of whether protein expression reliably predicts clinical benefit here [c2][c3][c16]."
+    ]
+  },
+  "source_handles": [
+    {
+      "id": "srpt-102-8k",
+      "kind": "8-K",
+      "title": "Sarepta Therapeutics Announces Top-line Results for Part 1 of Study 102 Evaluating SRP-9001",
+      "available_at": "2021-01-07",
+      "masked_title": "Company 8-K (Exhibits 99.1-99.2), 7 Jan 2021 -- controlled gene-therapy trial topline results"
+    },
+    {
+      "id": "srpt-q3-2020-pr",
+      "kind": "press_release",
+      "title": "Sarepta Therapeutics Announces Third Quarter 2020 Financial Results and Recent Corporate Developments",
+      "available_at": "2020-11-05",
+      "masked_title": "Company press release, 5 Nov 2020 -- quarterly results and business update"
+    },
+    {
+      "id": "srpt-10q-q3-2020",
+      "kind": "10-Q",
+      "title": "Sarepta Therapeutics, Inc. Form 10-Q for the quarter ended September 30, 2020",
+      "available_at": "2020-11-05",
+      "masked_title": "Company quarterly report (Form 10-Q), 5 Nov 2020"
+    },
+    {
+      "id": "srpt-10k-fy2019",
+      "kind": "10-K",
+      "title": "Sarepta Therapeutics, Inc. Form 10-K for fiscal year 2019",
+      "available_at": "2020-02-26",
+      "masked_title": "Company annual report (Form 10-K), 26 Feb 2020"
+    },
+    {
+      "id": "srpt-casimersen-pr",
+      "kind": "press_release",
+      "title": "Sarepta Therapeutics Announces FDA Acceptance of Casimersen (SRP-4045) New Drug Application for Patients with Duchenne Muscular Dystrophy Amenable to Skipping Exon 45",
+      "available_at": "2020-08-25",
+      "masked_title": "Company press release, 25 Aug 2020 -- FDA acceptance of third exon-skipping drug candidate's application"
+    },
+    {
+      "id": "srpt-roche-8k",
+      "kind": "8-K",
+      "title": "Sarepta Therapeutics Announces Partnership with Roche in Territories Outside the United States for its Investigational Micro-dystrophin Gene Therapy for Duchenne Muscular Dystrophy, SRP-9001",
+      "available_at": "2019-12-23",
+      "masked_title": "Company 8-K, 23 Dec 2019 -- ex-U.S. collaboration and license agreement for the gene-therapy candidate"
+    },
+    {
+      "id": "srpt-study101-pr",
+      "kind": "press_release",
+      "title": "Sarepta Therapeutics Reports Sustained Functional Improvement Two Years After Treatment with SRP-9001, its Investigational Micro-dystrophin Gene Therapy for Duchenne Muscular Dystrophy",
+      "available_at": "2020-09-28",
+      "masked_title": "Company press release, 28 Sep 2020 -- two-year open-label gene-therapy data"
+    },
+    {
+      "id": "0001564590-19-005170",
+      "kind": "10-K",
+      "title": "Sarepta Therapeutics, Inc. Form 10-K for fiscal year 2018",
+      "available_at": "2019-02-28",
+      "masked_title": "Company annual report (Form 10-K), 28 Feb 2019"
+    },
+    {
+      "id": "0001564590-18-004107",
+      "kind": "10-K",
+      "title": "Sarepta Therapeutics, Inc. Form 10-K for fiscal year 2017",
+      "available_at": "2018-03-01",
+      "masked_title": "Company annual report (Form 10-K), 1 Mar 2018"
+    },
+    {
+      "id": "0001564590-20-021905",
+      "kind": "10-Q",
+      "title": "Sarepta Therapeutics, Inc. Form 10-Q for the quarter ended March 31, 2020",
+      "available_at": "2020-05-06",
+      "masked_title": "Company quarterly report (Form 10-Q), 6 May 2020"
+    },
+    {
+      "id": "0001564590-20-036794",
+      "kind": "10-Q",
+      "title": "Sarepta Therapeutics, Inc. Form 10-Q for the quarter ended June 30, 2020",
+      "available_at": "2020-08-05",
+      "masked_title": "Company quarterly report (Form 10-Q), 5 Aug 2020"
+    }
+  ],
+  "missing_data": [
+    "Market capitalization and enterprise value: missing, historical share price not in the evidence packet.",
+    "ClinicalTrials.gov registry identifiers for Study 101, Study 102 and the third exon-skipping candidate's Phase 3 study: not independently verified before the cutoff; trials are identified by company-assigned study names only.",
+    "Long-term debt at December 31, 2019: not present in cases/clinical-srpt-2021/xbrl-facts.json under the LongTermDebt tag for that date (only through fiscal 2018 is tagged there); the September 30, 2020 figure ($700.5 million) came from the Form 10-Q text directly rather than the xbrl-facts.json extraction.",
+    "Research and development expense for the first and second quarters of 2020 individually: xbrl-facts.json does not carry a ResearchAndDevelopmentExpense tag for those periods; only the nine-month year-to-date and standalone third-quarter figures (both from the earnings release text) are available in this packet.",
+    "Product-level revenue split between the two approved drugs for any period after FY2019: not disclosed in the eligible sources.",
+    "Exact percentage or p-value for the interim dystrophin-production result in the third exon-skipping candidate's Phase 3 trial: the press release described the result as statistically significant but did not publish the specific numbers.",
+    "Sample-size and endpoint detail (planned vs. enrolled, secondary endpoints) for the third exon-skipping candidate's Phase 3 trial beyond what is summarized above: not in the eligible sources reviewed.",
+    "Breakdown of what drove the roughly $1 billion increase in cash and short-term investments between December 31, 2019 and March 31, 2020 (e.g., how much reflects the ex-U.S. collaboration's upfront cash versus other financing or operating items): the underlying cash-flow-statement line-item detail was not independently traced in this packet; the collaboration's overall deal terms are reported separately as management-disclosed facts [c18]."
+  ],
+  "editorial_notes": "Identity masking follows the pattern used in prior packets (e.g. clinical-mdgl-2018): the shared body (what_changed, sector_evidence, catalysts, help_me_weigh) refers to drug candidates by generic description and company-assigned study numbers ('Study 101', 'Study 102') rather than by the company's public compound codes or brand names, since those codes are closely and searchably tied to the issuer; the real compound names and brand names appear only in the transparent block and in source_handles.title (with source_handles.masked_title kept generic). The partner company disclosed in the December 2019 collaboration is likewise described generically ('a large multinational pharmaceutical partner') in the shared body. All headline and history financial figures were cross-checked against cases/clinical-srpt-2021/xbrl-facts.json and, where fetched, the underlying SEC filings; figures sourced from press-release text rather than a tagged XBRL fact (Q1-Q3 2020 R&D detail, the September 30, 2020 long-term debt figure) are flagged in missing_data and financial_snapshot definitions. Self-check per cases/BRIEF.md step 4: no banned future-relative word appears anywhere in this file. Years after the cutoff year (2021) do not appear anywhere in this packet; the only years appearing are 2016-2021, all either historical reported periods or already-announced, cited forward-looking timing windows within calendar 2021 (the third exon-skipping candidate's February 25, 2021 regulatory decision date [c14], and the follow-on gene-therapy trial's second-quarter-2021 data expectation [c7]), consistent with the cutoff year itself. No post-cutoff actual outcome, price, or event is referenced anywhere in this packet."
+}

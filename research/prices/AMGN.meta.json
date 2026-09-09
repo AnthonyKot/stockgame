@@ -1,0 +1,8 @@
+{
+  "ticker": "AMGN",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMGN?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:24.514330+00:00",
+  "sha256": "e9395baddb7f28b442f066d995f4b9bf5cf3b68fe8b099de80fdc11d4aa30912",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

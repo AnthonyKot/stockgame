@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stockgame journal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="top"></div>
+<main class="wrap">
+  <h2>Journal</h2>
+  <p class="note">Every commitment you made, stored in this browser only.</p>
+  <div class="scroll"><table id="tbl"><thead><tr><th>Case</th><th>Cutoff</th><th>Horizon</th><th>Call</th><th>Exit</th><th>Beat SPY?</th><th class="n">Position</th><th class="n">Portfolio</th><th class="n">SPY</th><th>Exit</th><th>Decided</th></tr></thead><tbody></tbody></table></div>
+  <p id="empty" class="muted" hidden>No decisions yet.</p>
+  <section id="calib" class="card" style="margin-top:1rem" hidden>
+    <h2>Are your chances honest?</h2>
+    <p class="note">Your forecasts grouped by how confident you were, against how often the stock actually beat SPY. Honest forecasts land near the diagonal: cases you called 70% should come true about 70% of the time. This needs volume; it is shown after five revealed decisions.</p>
+    <div class="scroll"><table id="ctbl"><thead><tr><th>You said</th><th class="n">Cases</th><th class="n">Average you said</th><th class="n">Actually beat SPY</th><th>Read</th></tr></thead><tbody></tbody></table></div>
+  </section>
+  <div class="row" style="margin-top:1rem"><button class="ghost" id="export" type="button">Export as JSON</button><button class="ghost" id="clear" type="button">Clear journal</button></div>
+  <textarea id="out" class="sr" aria-label="Exported journal JSON" readonly></textarea>
+</main>
+<script src="app.js"></script>
+<script>
+(() => {
+  document.getElementById('top').replaceWith(SG.topbar('journal'));
+  const j = SG.journal().sort((a, b) => (b.decided_at || '').localeCompare(a.decided_at || ''));
+  const tb = document.querySelector('#tbl tbody');
+  if (!j.length) document.getElementById('empty').hidden = false;
+  for (const e of j) {
+    const r = e.result || {};
+    tb.append(SG.el('tr', {},
+      SG.el('td', {}, SG.el('a', { href: 'play.html?case=' + e.case_id }, e.reveal_name || e.alias || e.case_id)),
+      SG.el('td', {}, SG.dateFmt(e.cutoff)), SG.el('td', {}, (e.horizon || '').replace(' calendar', '')),
+      SG.el('td', {}, e.action + (e.size ? ' ' + e.size + '%' : '') + (e.stop_pct ? ' · stop ' + e.stop_pct + '%' : '') + (e.tp_pct ? ' · target +' + e.tp_pct + '%' : '')),
+      SG.el('td', {}, r.exit_reason ? (/anniversary/.test(r.exit_reason) ? 'anniversary' : /stop/.test(r.exit_reason) ? 'stop loss' : /profit/.test(r.exit_reason) ? 'take profit' : r.exit_reason) + (r.exit_date ? ' · ' + SG.dateFmt(r.exit_date) : '') : '—'),
+      SG.el('td', {}, r.beat_spy === undefined ? '—' : (r.beat_spy ? 'yes' : 'no')),
+      SG.el('td', { class: 'n ' + (r.position_return > 0 ? 'up' : r.position_return < 0 ? 'down' : '') }, e.action === 'skip' || r.position_return === undefined || e.action === 'skip' ? '—' : SG.signed(r.position_return)),
+      SG.el('td', { class: 'n ' + (r.portfolio_return > 0 ? 'up' : r.portfolio_return < 0 ? 'down' : '') }, r.portfolio_return === undefined ? '—' : SG.signed(r.portfolio_return)),
+      SG.el('td', { class: 'n' }, r.spy_return === undefined ? '—' : SG.signed(r.spy_return)),
+      SG.el('td', { title: r.exit_reason || '' }, !e.result ? 'Pending' : e.action === 'skip' ? 'No position' : /stop loss/.test(r.exit_reason || '') ? 'Stop loss' : /take profit/.test(r.exit_reason || '') ? 'Take profit' : /anniversary/.test(r.exit_reason || '') ? 'Scheduled exit' : '—'),
+      SG.el('td', {}, (e.decided_at || '').slice(0, 16).replace('T', ' '))));
+  }
+  const revealed = j.filter(e => e.result && e.result.beat_spy !== undefined && typeof e.p_beats_spy === 'number');   // calibration only for entries that carried a forecast (older records)
+  if (revealed.length >= 5) {
+    const buckets = [['Under 35%', 0, 35], ['35% to 65%', 35, 65.0001], ['Over 65%', 65.0001, 101]];
+    const ct = document.querySelector('#ctbl tbody');
+    for (const [label, lo, hi] of buckets) { const rows = revealed.filter(e => e.p_beats_spy >= lo && e.p_beats_spy < hi); if (!rows.length) continue;
+      const said = rows.reduce((s, e) => s + e.p_beats_spy, 0) / rows.length; const hit = rows.filter(e => e.result.beat_spy).length / rows.length * 100; const gap = hit - said;
+      ct.append(SG.el('tr', {}, SG.el('td', {}, label), SG.el('td', { class: 'n' }, rows.length), SG.el('td', { class: 'n' }, said.toFixed(0) + '%'), SG.el('td', { class: 'n' }, hit.toFixed(0) + '%'), SG.el('td', {}, rows.length < 3 ? 'too few to read' : Math.abs(gap) <= 15 ? 'about right' : gap > 0 ? 'you were too cautious' : 'you were too confident'))); }
+    document.getElementById('calib').hidden = false;
+  }
+  document.getElementById('export').onclick = async () => { const out = document.getElementById('out'); out.value = JSON.stringify(SG.journal(), null, 2); out.classList.remove('sr'); out.style.width = '100%'; out.style.minHeight = '12rem'; try { await navigator.clipboard.writeText(out.value); alert('Copied to clipboard and shown below.'); } catch (e) { alert('Shown below; copy manually.'); } };
+  document.getElementById('clear').onclick = () => { if (confirm('Delete every decision stored in this browser?')) { SG.saveJournal([]); location.reload(); } };
+})();
+</script>
+</body>
+</html>

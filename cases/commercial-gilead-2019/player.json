@@ -1,0 +1,449 @@
+{
+  "candidate_id": "commercial-gilead-2019",
+  "schema_version": "mvp-1",
+  "cutoff": "2019-02-05T09:00:00-05:00",
+  "horizon": {
+    "unit": "calendar_years",
+    "count": 5
+  },
+  "exchange_calendar": "XNYS",
+  "sector_module": "biotech",
+  "masked": {
+    "alias": "a large, cash-generative virology-focused biopharmaceutical company",
+    "sector": "Biotechnology / pharmaceuticals (HIV and hepatitis C antivirals, with an oncology cell-therapy business)",
+    "business_two_sentences": "This company discovers, develops and commercializes antiviral medicines for two major viral diseases, along with a newer cell-therapy oncology business built on an acquisition completed the prior year. Revenue comes mainly from prescription-drug sales through wholesalers and specialty pharmacies, with the newer cell-therapy product contributing a much smaller share so far [g21]."
+  },
+  "transparent": {
+    "issuer": "Gilead Sciences, Inc.",
+    "ticker": "GILD",
+    "exchange": "NASDAQ",
+    "business_two_sentences": "Gilead Sciences discovers, develops and commercializes medicines in areas of unmet medical need, with its largest commercial franchises in HIV and hepatitis C antiviral treatment and a newer cell-therapy oncology business added through its 2017 acquisition of Kite Pharma. Revenue is earned mainly from prescription-drug sales through wholesalers and specialty pharmacies [g21]."
+  },
+  "financial_snapshot": {
+    "adapter": "commercial_biotech",
+    "headline": [
+      {
+        "label": "Total revenue (FY2018) and YoY change",
+        "value": 22100.0,
+        "unit": "USD_millions",
+        "period": "FY2018",
+        "available_at": "2019-02-04",
+        "source_ids": ["gild-8k-ex991"],
+        "status": "reported",
+        "definition": "total revenues (product sales plus royalty, contract and other revenue), full year 2018; HIV franchise growth partly offset the shrinking hepatitis C franchise",
+        "prior": {"value": 26100.0, "period": "FY2017"}
+      },
+      {
+        "label": "GAAP operating margin (FY2018)",
+        "value": 37.1,
+        "unit": "percent",
+        "period": "FY2018",
+        "available_at": "2019-02-04",
+        "source_ids": ["gild-8k-ex991"],
+        "status": "reported",
+        "definition": "GAAP operating income as a percentage of total revenue, full year 2018; GAAP product gross margin was 77.6% for the same period (versus 83.0% in FY2017), both down from the prior year",
+        "prior": {"value": 54.1, "period": "FY2017"}
+      },
+      {
+        "label": "Operating cash flow (FY2018)",
+        "value": 8400.0,
+        "unit": "USD_millions",
+        "period": "FY2018",
+        "available_at": "2019-02-04",
+        "source_ids": ["gild-8k-ex991", "gild-10k-fy2017"],
+        "status": "reported",
+        "definition": "net cash provided by operating activities, full year 2018",
+        "prior": {"value": 11898.0, "period": "FY2017"}
+      },
+      {
+        "label": "Cash, cash equivalents and marketable debt securities (period end)",
+        "value": 31500.0,
+        "unit": "USD_millions",
+        "period": "Dec 31, 2018",
+        "available_at": "2019-02-04",
+        "source_ids": ["gild-8k-ex991"],
+        "status": "reported",
+        "definition": "combined cash, cash equivalents and marketable debt securities; the company separately disclosed repaying $6.3 billion of debt during 2018 but did not disclose a period-end total-debt balance in this release (see missing_data)",
+        "prior": {"value": 36700.0, "period": "Dec 31, 2017"}
+      },
+      {
+        "label": "HIV product-sales concentration (share of total revenue)",
+        "value": 66.1,
+        "unit": "percent",
+        "period": "FY2018",
+        "available_at": "2019-02-04",
+        "source_ids": ["gild-8k-ex991"],
+        "status": "derived",
+        "definition": "HIV product sales ($14.6B) divided by total revenue ($22.1B), FY2018; the hepatitis C franchise this partly offsets fell to about 17% of total revenue ($3.7B/$22.1B) from about 35% a year earlier ($9.1B/$26.1B)",
+        "formula": "hiv_product_sales / total_revenue",
+        "prior": {"value": 49.8, "period": "FY2017"}
+      },
+      {
+        "label": "Enterprise value and EV / trailing revenue",
+        "value": null,
+        "unit": "USD_millions",
+        "period": "FY2018",
+        "available_at": null,
+        "source_ids": [],
+        "status": "missing",
+        "definition": "requires historical share price / market capitalization, which is not in this evidence packet",
+        "prior": null
+      }
+    ],
+    "history": [
+      {
+        "row": "Total revenue",
+        "unit": "USD_millions",
+        "cells": [
+          {"period": "FY2014", "value": 24890.0, "available_at": "2015-02-25", "source_ids": ["gild-10k-fy2014"], "status": "reported"},
+          {"period": "FY2015", "value": 32639.0, "available_at": "2016-02-24", "source_ids": ["gild-10k-fy2015"], "status": "reported"},
+          {"period": "FY2016", "value": 30390.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
+          {"period": "FY2017", "value": 26107.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
+          {"period": "FY2018", "value": 22100.0, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991"], "status": "reported", "note": "rounded as stated in the release; a more precise sum is not separately reconciled in this packet"},
+          {"period": "Q1 2018", "value": 5088.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
+          {"period": "Q2 2018", "value": 5648.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
+          {"period": "Q3 2018", "value": 5596.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
+          {"period": "Q4 2018", "value": null, "available_at": null, "source_ids": [], "status": "missing", "note": "not separately disclosed in this packet; only the rounded full-year total ($22.1 billion) is available"}
+        ]
+      },
+      {
+        "row": "Net income (GAAP)",
+        "unit": "USD_millions",
+        "cells": [
+          {"period": "FY2014", "value": 12101.0, "available_at": "2015-02-25", "source_ids": ["gild-10k-fy2014"], "status": "reported"},
+          {"period": "FY2015", "value": 18108.0, "available_at": "2016-02-24", "source_ids": ["gild-10k-fy2015"], "status": "reported"},
+          {"period": "FY2016", "value": 13501.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
+          {"period": "FY2017", "value": 4628.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
+          {"period": "FY2018", "value": 5455.0, "available_at": "2019-02-04", "source_ids": ["gild-10q-q1-2018", "gild-10q-q2-2018", "gild-10q-q3-2018", "gild-8k-ex991"], "status": "derived", "formula": "sum of Q1-Q4 2018 quarterly net income (Q4 per the company's disclosed approximately breakeven result)"},
+          {"period": "Q1 2018", "value": 1538.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
+          {"period": "Q2 2018", "value": 1817.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
+          {"period": "Q3 2018", "value": 2097.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
+          {"period": "Q4 2018", "value": 3.0, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991"], "status": "reported"}
+        ]
+      },
+      {
+        "row": "Diluted EPS (GAAP)",
+        "unit": "USD_per_share",
+        "cells": [
+          {"period": "FY2014", "value": 7.35, "available_at": "2015-02-25", "source_ids": ["gild-10k-fy2014"], "status": "reported"},
+          {"period": "FY2015", "value": 11.91, "available_at": "2016-02-24", "source_ids": ["gild-10k-fy2015"], "status": "reported"},
+          {"period": "FY2016", "value": 9.94, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
+          {"period": "FY2017", "value": 3.51, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
+          {"period": "FY2018", "value": 4.17, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991"], "status": "reported"},
+          {"period": "Q1 2018", "value": 1.17, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
+          {"period": "Q2 2018", "value": 1.39, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
+          {"period": "Q3 2018", "value": 1.60, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
+          {"period": "Q4 2018", "value": 0.01, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991", "gild-10q-q1-2018", "gild-10q-q2-2018", "gild-10q-q3-2018"], "status": "derived", "formula": "FY2018 diluted EPS minus sum of Q1-Q3 2018 diluted EPS"}
+        ]
+      },
+      {
+        "row": "Operating income (GAAP)",
+        "unit": "USD_millions",
+        "cells": [
+          {"period": "FY2014", "value": 15265.0, "available_at": "2015-02-25", "source_ids": ["gild-10k-fy2014"], "status": "reported"},
+          {"period": "FY2015", "value": 22193.0, "available_at": "2016-02-24", "source_ids": ["gild-10k-fy2015"], "status": "reported"},
+          {"period": "FY2016", "value": 17633.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
+          {"period": "FY2017", "value": 14124.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
+          {"period": "FY2018", "value": null, "available_at": null, "source_ids": [], "status": "missing", "note": "not disclosed as a dollar figure in this release; only the operating-margin percentage (37.1%) is given"},
+          {"period": "Q1 2018", "value": 2153.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
+          {"period": "Q2 2018", "value": 2280.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
+          {"period": "Q3 2018", "value": 2623.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"}
+        ]
+      },
+      {
+        "row": "Cash and cash equivalents (period end)",
+        "unit": "USD_millions",
+        "cells": [
+          {"period": "FY2016", "value": 8229.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
+          {"period": "FY2017", "value": 7588.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
+          {"period": "Q1 2018", "value": 7643.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
+          {"period": "Q2 2018", "value": 13234.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
+          {"period": "Q3 2018", "value": 14569.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
+          {"period": "FY2018", "value": null, "available_at": null, "source_ids": [], "status": "missing", "note": "only the combined cash-plus-investments total ($31.5 billion) was disclosed for year-end 2018; cash-alone was not separately broken out in this release"}
+        ]
+      },
+      {
+        "row": "Marketable securities, current (period end)",
+        "unit": "USD_millions",
+        "cells": [
+          {"period": "FY2016", "value": 3666.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
+          {"period": "FY2017", "value": 17922.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
+          {"period": "Q1 2018", "value": 16355.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
+          {"period": "Q2 2018", "value": 12683.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
+          {"period": "Q3 2018", "value": 13897.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"}
+        ]
+      },
+      {
+        "row": "Long-term debt, noncurrent (period end)",
+        "unit": "USD_millions",
+        "cells": [
+          {"period": "FY2016", "value": 26346.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
+          {"period": "FY2017", "value": 30795.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
+          {"period": "Q1 2018", "value": 26557.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
+          {"period": "Q2 2018", "value": 26062.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
+          {"period": "Q3 2018", "value": 24570.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
+          {"period": "FY2018", "value": null, "available_at": null, "source_ids": [], "status": "missing", "note": "no period-end debt balance is disclosed in this release; only the narrative fact that $6.3 billion of debt was repaid during 2018 is available"}
+        ]
+      },
+      {
+        "row": "Common shares outstanding (period end)",
+        "unit": "millions_of_shares",
+        "cells": [
+          {"period": "FY2016", "value": 1310.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
+          {"period": "FY2017", "value": 1308.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
+          {"period": "Q1 2018", "value": 1300.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
+          {"period": "Q2 2018", "value": 1296.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
+          {"period": "Q3 2018", "value": 1294.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
+          {"period": "FY2018", "value": 1282.0, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991"], "status": "reported"}
+        ]
+      }
+    ]
+  },
+  "what_changed": [
+    {
+      "date": "2019-02-04",
+      "fact": "Full-year 2018 product sales were $21.7 billion and GAAP diluted EPS was $4.17, while total revenue fell to $22.1 billion from $26.1 billion as HIV growth partly offset a shrinking hepatitis C franchise [g1][g2].",
+      "relationship_to_business": "This is the company's full annual result covering the period through the cutoff, showing the HIV/HCV mix shift central to the business.",
+      "source_ids": ["gild-8k-ex991"],
+      "status": "reported"
+    },
+    {
+      "date": "2019-02-04",
+      "fact": "Full-year HIV product sales rose to $14.6 billion from $13.0 billion behind the 2018 launch of a new single-tablet regimen, while hepatitis C product sales fell to $3.7 billion from $9.1 billion amid competition and fewer new patients [g3][g4].",
+      "relationship_to_business": "Shows the specific franchise-level offset -- one franchise growing, the other shrinking -- driving the FY2018 revenue mix.",
+      "source_ids": ["gild-8k-ex991"],
+      "status": "reported"
+    },
+    {
+      "date": "2019-02-04",
+      "fact": "Management issued full-year 2019 product-sales guidance of $21.3-21.8 billion, built around anticipated U.S. generic competition for two non-antiviral products and the fuller European impact of generic tenofovir products [g7].",
+      "relationship_to_business": "The company's own forward view heading into the horizon period, already pricing in specific anticipated competitive losses.",
+      "source_ids": ["gild-8k-ex991"],
+      "status": "management_guidance"
+    }
+  ],
+  "sector_evidence": {
+    "existing_products": [
+      {
+        "franchise": "HIV",
+        "fy2018_sales": "$14.6 billion (up from $13.0 billion in FY2017)",
+        "share_of_total_revenue_fy2018": "approximately 66%",
+        "commentary": "growth driven by the 2018 launch of a new single-tablet HIV regimen plus continued uptake of several other combination HIV products [g3]",
+        "source_ids": ["gild-8k-ex991"],
+        "status": "reported"
+      },
+      {
+        "franchise": "Chronic hepatitis C (HCV)",
+        "fy2018_sales": "$3.7 billion (down from $9.1 billion in FY2017)",
+        "share_of_total_revenue_fy2018": "approximately 17%",
+        "commentary": "multi-year decline from lower average selling prices, lower volumes, increased competition and fewer new patient starts [g4]",
+        "source_ids": ["gild-8k-ex991"],
+        "status": "reported"
+      },
+      {
+        "franchise": "Oncology cell therapy (CAR-T)",
+        "fy2018_sales": "$264 million (product launched October 2017)",
+        "share_of_total_revenue_fy2018": "approximately 1%",
+        "commentary": "single approved cell-therapy product for a type of relapsed/refractory large B-cell lymphoma [g5]",
+        "source_ids": ["gild-8k-ex991"],
+        "status": "reported"
+      },
+      {
+        "franchise": "Other (non-itemized revenue: remaining legacy antivirals, other liver-disease products, royalty/contract revenue)",
+        "fy2018_sales": "approximately $3.5 billion (computed residual: total revenue minus the three itemized franchises above)",
+        "share_of_total_revenue_fy2018": "approximately 16% (derived residual, not directly reported)",
+        "commentary": "not broken out by individual product in this release; presented here as a computed residual rather than a directly reported figure",
+        "source_ids": ["gild-8k-ex991"],
+        "status": "derived"
+      }
+    ],
+    "programs": [
+      {
+        "program": "KTE-X19 in relapsed/refractory adult acute lymphoblastic leukemia (ALL)",
+        "drug_mechanism": "KTE-X19: an investigational CAR T-cell therapy -- a patient's own immune T-cells are genetically modified outside the body to target the CD19 protein on cancer cells, then infused back into the patient.",
+        "phase": "Phase 1/2, updated results",
+        "ownership": "Wholly owned; developed through the company's cell-therapy subsidiary",
+        "trial_id": "ZUMA-3 (company study name; ClinicalTrials.gov identifier not independently verified before cutoff, see missing_data)",
+        "design": "Single-arm, uncontrolled (no randomization or comparator arm) study [g10]",
+        "sample_size": {"planned": null, "enrolled": "not stated as a specific count in this excerpt", "analyzed": "response assessed among 'evaluable patients' at a median follow-up of 15.1 months"},
+        "population": "Adults with relapsed or refractory acute lymphoblastic leukemia (ALL), a blood cancer",
+        "primary_endpoint": "Not detailed in eligible sources beyond the complete-remission and minimal-residual-disease rates reported",
+        "secondary_endpoints": "Not detailed in eligible sources",
+        "latest_evidence": "69% of evaluable patients achieved complete tumor remission after a single infusion; all (100%) of those complete responders had undetectable minimal residual disease (a sensitive measure of remaining leukemia cells), at a median follow-up of 15.1 months [g10]",
+        "safety": "Not detailed in this excerpt",
+        "management_says_vs_regulator": "Company-reported update from an uncontrolled early-stage study; no independent regulator statement or peer-reviewed publication is in this packet",
+        "next_milestone": "Not stated in this release",
+        "economic_relevance": "Early-stage pipeline extension of the existing CAR-T cell-therapy platform, which generated $264 million of FY2018 product sales via the approved lymphoma product; no separate revenue yet"
+      },
+      {
+        "program": "GS-9674 in primary sclerosing cholangitis (PSC)",
+        "drug_mechanism": "GS-9674: an investigational, orally administered drug that selectively activates the farnesoid X receptor (FXR), a protein involved in regulating bile-acid levels in the liver.",
+        "phase": "Early-stage (specific phase not stated in this excerpt)",
+        "ownership": "Wholly owned",
+        "trial_id": "Not stated in this excerpt",
+        "design": "Not detailed in eligible sources",
+        "sample_size": {"planned": null, "enrolled": null, "analyzed": null},
+        "population": "Patients with primary sclerosing cholangitis, a chronic liver disease involving bile-duct inflammation and scarring",
+        "primary_endpoint": "Not detailed in eligible sources",
+        "secondary_endpoints": "Not detailed in eligible sources",
+        "latest_evidence": "Reported significant improvements in liver biochemistry and markers of cholestasis (impaired bile flow) [g12]",
+        "safety": "Not detailed in this excerpt",
+        "management_says_vs_regulator": "Company-reported result; no independent regulator statement or publication is in this packet",
+        "next_milestone": "Not stated in this release",
+        "economic_relevance": "Early-stage program outside the company's core HIV/HCV/oncology commercial franchises; no product sales"
+      },
+      {
+        "program": "Two-year follow-up of the approved CAR-T product in refractory large B-cell lymphoma",
+        "drug_mechanism": "Axicabtagene ciloleucel: the same CD19-directed CAR T-cell therapy approach as the ALL program above, already FDA-approved for this related lymphoma indication.",
+        "phase": "Approved product; post-marketing long-term follow-up of the pivotal trial",
+        "ownership": "Wholly owned; approved product generating $264 million of FY2018 sales [g5]",
+        "trial_id": "ZUMA-1 (company study name)",
+        "design": "Single-arm, uncontrolled pivotal trial as originally conducted; this update covers longer follow-up of the same trial [g11]",
+        "sample_size": {"planned": null, "enrolled": null, "analyzed": "not stated as a specific count in this excerpt"},
+        "population": "Patients with refractory large B-cell lymphoma, a type of non-Hodgkin lymphoma",
+        "primary_endpoint": "Not restated in this excerpt (original pivotal-trial endpoint; this update covers longer follow-up only)",
+        "secondary_endpoints": "Not detailed in eligible sources",
+        "latest_evidence": "39% of patients remained in an ongoing response at a minimum follow-up of two years (median follow-up 27.1 months) after a single infusion [g11]",
+        "safety": "Not detailed in this excerpt",
+        "management_says_vs_regulator": "Company-reported long-term follow-up; the product itself is FDA-approved, but this specific two-year durability figure is a company disclosure not independently verified in this packet",
+        "next_milestone": "Not stated in this release",
+        "economic_relevance": "Supports the durability case for the company's existing cell-therapy product line"
+      },
+      {
+        "program": "Early-stage immuno-oncology and fibrotic-disease research collaborations",
+        "drug_mechanism": "Three separate discovery-stage collaborations: immuno-oncology research with one biotechnology partner, and fibrotic-disease (tissue-scarring) drug-discovery research with two others; no specific drug candidates or mechanisms are named for these new collaborations in this excerpt.",
+        "phase": "Discovery/preclinical (collaboration agreements, not yet clinical programs)",
+        "ownership": "Collaborations with three separate biotechnology partners announced in Q4 2018; specific economic/licensing terms not detailed in this excerpt",
+        "trial_id": "not_applicable (preclinical)",
+        "design": "not_applicable",
+        "sample_size": {"planned": null, "enrolled": null, "analyzed": null},
+        "population": "not_applicable (preclinical)",
+        "primary_endpoint": "not_applicable (preclinical)",
+        "secondary_endpoints": "not_applicable",
+        "latest_evidence": "Agreements announced; no preclinical or clinical data disclosed in this release [g9]",
+        "safety": "not_applicable",
+        "management_says_vs_regulator": "Company announcement of new collaborations only",
+        "next_milestone": "Not stated in this release",
+        "economic_relevance": "Early pipeline-diversification spending outside the existing HIV/HCV/oncology commercial franchises; specific deal economics not disclosed in this excerpt"
+      }
+    ]
+  },
+  "upcoming_and_unresolved": {
+    "catalysts": [
+      {
+        "description": "Chief-executive transition: an incoming CEO becomes Chairman and CEO effective March 1, 2019, following an interim CEO who served from January 1 to March 1, 2019 [g8].",
+        "timing_window": "March 1, 2019",
+        "announced_on": "2019-02-04",
+        "source_ids": ["gild-8k-ex991"]
+      },
+      {
+        "description": "Full-year 2019 product-sales guidance of $21.3-21.8 billion, explicitly built around anticipated new U.S. and European generic competition [g7].",
+        "timing_window": "full year 2019",
+        "announced_on": "2019-02-04",
+        "source_ids": ["gild-8k-ex991"]
+      }
+    ],
+    "unresolved_questions": [
+      "Whether HIV franchise growth (led by the 2018 launch) can keep outpacing the ongoing hepatitis C decline as anticipated 2019 generic competition affects two other products.",
+      "Whether the earlier-stage oncology and liver-disease pipeline can diversify revenue beyond the HIV/HCV franchises before further competitive erosion.",
+      "How the incoming CEO transition, effective March 1, 2019, affects capital-allocation priorities such as R&D spending, buybacks and business development."
+    ]
+  },
+  "macro_context": [
+    {
+      "item": "Management's 2019 guidance and its own forward-looking risk disclosure both flagged anticipated U.S. and European generic competition -- for two non-antiviral products, for continuing tenofovir disoproxil fumarate erosion in Europe, and for two older antiviral HIV products -- as a headwind [g7][g14].",
+      "business_connection": "This is the structural generic-competition backdrop shaping the company's official 2019 product-sales guidance range.",
+      "available_at": "2019-02-04",
+      "source_ids": ["gild-8k-ex991"]
+    },
+    {
+      "item": "The hepatitis C franchise's decline was attributed to lower average selling prices and lower sales volume amid increased competition and fewer new patients starting treatment [g4].",
+      "business_connection": "This is the industry-level dynamic behind why the hepatitis C franchise, once the company's largest, continues shrinking even as the HIV franchise grows.",
+      "available_at": "2019-02-04",
+      "source_ids": ["gild-8k-ex991"]
+    }
+  ],
+  "help_me_weigh": {
+    "own": [
+      "HIV product sales grew to $14.6 billion from $13.0 billion behind the 2018 launch, lifting HIV to about 66% of total revenue from about 50% a year earlier -- evidence the newest franchise addition is more than offsetting the hepatitis C decline [g3][g20].",
+      "The company generated $8.4 billion of operating cash flow and held $31.5 billion of combined cash and investments at year-end 2018, even after paying $3.0 billion of dividends, repurchasing $2.9 billion of stock and repaying $6.3 billion of debt during the year [g6].",
+      "Two-year follow-up data on the approved cell-therapy product (39% of patients in an ongoing response) and an early signal in a related leukemia study (69% complete remission) suggest the CAR-T franchise, still only $264 million of FY2018 sales, has room to expand within its approved and pipeline indications [g11][g10]."
+    ],
+    "flat": [
+      "Management's own full-year 2019 product-sales guidance of $21.3-21.8 billion is roughly flat to down versus FY2018's $21.7 billion, explicitly built around anticipated new U.S. and European generic competition [g7].",
+      "Total revenue fell to $22.1 billion from $26.1 billion and GAAP operating margin fell to 37.1% from 54.1%, so even with the HIV offset, overall scale and profitability both declined for the year [g2][g16]."
+    ],
+    "short": [
+      "Hepatitis C product sales fell to $3.7 billion from $9.1 billion in a single year -- a franchise that once anchored the company's growth -- and management's own risk disclosure separately flagged expected erosion from generic versions of two older HIV products [g4][g14].",
+      "R&D expense growth included an $820 million impairment on an early-stage, in-licensed multiple-myeloma program, and full-year results absorbed a Q4 2018 unfavorable $0.99-per-share impairment/tax charge tied to the 2017 cell-therapy acquisition -- signs of integration costs still working through results [g19][g18]."
+    ]
+  },
+  "source_handles": [
+    {
+      "id": "gild-8k-ex991",
+      "kind": "8-K",
+      "title": "Gilead Sciences Announces Fourth Quarter and Full Year 2018 Financial Results (Exhibit 99.1 press release)",
+      "available_at": "2019-02-04",
+      "masked_title": "Company press release and Form 8-K exhibit, 4 Feb 2019"
+    },
+    {
+      "id": "gild-10k-fy2014",
+      "kind": "10-K",
+      "title": "Gilead Sciences, Inc. Form 10-K for fiscal year 2014",
+      "available_at": "2015-02-25",
+      "masked_title": "Company Form 10-K, filed 25 Feb 2015"
+    },
+    {
+      "id": "gild-10k-fy2015",
+      "kind": "10-K",
+      "title": "Gilead Sciences, Inc. Form 10-K for fiscal year 2015",
+      "available_at": "2016-02-24",
+      "masked_title": "Company Form 10-K, filed 24 Feb 2016"
+    },
+    {
+      "id": "gild-10k-fy2016",
+      "kind": "10-K",
+      "title": "Gilead Sciences, Inc. Form 10-K for fiscal year 2016",
+      "available_at": "2017-02-27",
+      "masked_title": "Company Form 10-K, filed 27 Feb 2017"
+    },
+    {
+      "id": "gild-10k-fy2017",
+      "kind": "10-K",
+      "title": "Gilead Sciences, Inc. Form 10-K for fiscal year 2017",
+      "available_at": "2018-02-27",
+      "masked_title": "Company Form 10-K, filed 27 Feb 2018"
+    },
+    {
+      "id": "gild-10q-q1-2018",
+      "kind": "10-Q",
+      "title": "Gilead Sciences, Inc. Form 10-Q for the quarter ended March 31, 2018",
+      "available_at": "2018-05-09",
+      "masked_title": "Company Form 10-Q, filed 9 May 2018"
+    },
+    {
+      "id": "gild-10q-q2-2018",
+      "kind": "10-Q",
+      "title": "Gilead Sciences, Inc. Form 10-Q for the quarter ended June 30, 2018",
+      "available_at": "2018-08-06",
+      "masked_title": "Company Form 10-Q, filed 6 Aug 2018"
+    },
+    {
+      "id": "gild-10q-q3-2018",
+      "kind": "10-Q",
+      "title": "Gilead Sciences, Inc. Form 10-Q for the quarter ended September 30, 2018",
+      "available_at": "2018-11-06",
+      "masked_title": "Company Form 10-Q, filed 6 Nov 2018"
+    }
+  ],
+  "missing_data": [
+    "Market capitalization, enterprise value and EV/trailing-revenue: no historical share price is in this evidence packet.",
+    "Total period-end debt at December 31, 2018: only the narrative fact that $6.3 billion of debt was repaid during 2018 is disclosed; no period-end balance is given in this release.",
+    "Q4 2018 total revenue as a standalone figure, and FY2018 operating income as a dollar figure: this release gives only the rounded full-year revenue total and the operating-margin percentage, not these specific figures.",
+    "Detailed clinical-trial design (randomization, blinding, sample sizes, endpoints) for the KTE-X19/ZUMA-3 and GS-9674 programs: this release gives topline results only, not full trial-design detail.",
+    "ClinicalTrials.gov identifiers for the programs discussed, independently verified as of the cutoff.",
+    "A peer table: no comparable large-cap biopharmaceutical peer figures with their own pre-cutoff source were gathered within this case's evidence budget.",
+    "Any results or filings after February 4, 2019, since this case's evidence window stops at the cutoff release."
+  ],
+  "editorial_notes": "Gilead's FY2018 total revenue ($22.1 billion) and the resulting FY2018 net income and diluted EPS history cells for Q4 2018/FY2018 combine a directly quoted rounded figure (g1, g2) with values derived from previously-filed quarterly XBRL facts plus the release's own Q4 net-income disclosure; each derived cell is labeled 'derived' with its formula. The existing_products 'Other' row is a computed residual (total revenue minus the three itemized franchises), not a figure the release states directly, and is labeled 'derived' accordingly. Product brand names (the 2018-launch HIV regimen, older HIV combination products, the leading HCV regimens, the CAR-T product) are described generically in this file's claim text and below, consistent with the masking rule against product brand names, even though the transparent block and underlying source excerpts retain the original brand names for a reviewer's verification."
+}

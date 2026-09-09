@@ -1,0 +1,8 @@
+{
+  "ticker": "ZM",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ZM?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:25.079638+00:00",
+  "sha256": "3c200382e08ff390f288d9cdcf018a09c0c73ef3b26e7338551cc169968cea93",
+  "bars": 1857,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

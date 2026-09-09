@@ -1,0 +1,1231 @@
+{
+  "note": "Opening scenes per case. Every sentence in `voice` restates something in the case packet (claim ids in `claims`). `setup` picks the rendering. `debrief_check` is outcome material: one line per claim on whether the record supported it, written from cases/<id>/aftermath.json; it never reaches sheet.json.",
+  "setups": {
+    "friend_pitch": "A friend sends you a stock tip.",
+    "friend_warning": "A friend tells you to stay away.",
+    "bad_news_headline": "A headline reports bad news.",
+    "analysts_disagree": "Two analysts disagree after earnings.",
+    "familiar_product": "A familiar product catches your attention."
+  },
+  "scenes": {
+    "clinical-axsm-2019": {
+      "setup": "friend_pitch",
+      "voice": "Their depression drug just hit the main target in its second pivotal trial, and the FDA already gave it breakthrough status. They say that's enough to file next year. I think this is their moment.",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "second positive well-controlled trial in MDD",
+          "claim_ids": [
+            "c1"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "breakthrough therapy designation already granted",
+          "claim_ids": [
+            "c6"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "the company says the package supports an NDA filing in the second half of 2020",
+          "claim_ids": [
+            "c6"
+          ]
+        }
+      ],
+      "question": "Is a second positive readout enough to buy at today's price, with cash for about four quarters and four more readouts due?",
+      "debrief_check": {
+        "s1": "True as stated, and the pattern did not simply repeat: within the year AXS-05 met its endpoint in Alzheimer's agitation but missed against an active comparator in treatment-resistant depression [e3][e5].",
+        "s2": "True. Designation did not shorten the road: the NDA was accepted with priority review in April 2021, then hit a deficiency letter over manufacturing and analytical methods and missed its target date, before approval as Auvelity in August 2022 [e7][e8][e9][e10].",
+        "s3": "The company did not file within the year; the filing came about a year later than the friend's 'next year'. It also sold $174 million of stock three days after the cutoff, which answered the cash question the packet had flagged, at the cost of dilution [e1]."
+      },
+      "ask_label": "What would you ask your friend?",
+      "ask_friend": [
+        {
+          "q": "How strong was the trial?",
+          "a": "GEMINI was a randomised, double-blind, placebo-controlled US trial of 327 adults with moderate to severe depression [c2]. The drug beat placebo on the primary depression score at week six, 16.6 versus 11.9 points, p=0.002, with separation from week one and remission in 39.5% versus 17.3% [c1][c3][c4]. Side effects were dizziness, nausea and headache; one serious event was judged unrelated [c5]. The company says GEMINI plus the earlier ASCEND study supports a filing in the second half of 2020 [c6]; the regulator has not said so.",
+          "claim_ids": [
+            "c1",
+            "c2",
+            "c3",
+            "c4",
+            "c5",
+            "c6"
+          ]
+        },
+        {
+          "q": "What else is due, and can they pay for it?",
+          "a": "Four more readouts inside the next two quarters: the same drug in treatment-resistant depression and in Alzheimer's agitation, and a migraine drug in two trials [c7][c8]. Cash was $43.6 million at 30 September, down from $53.8 million three months earlier, with about $10.6 million used in the quarter; at that rate the packet's own scenario gives roughly four and a half quarters [c9][c11b][c11c]. Management says cash lasts into the second quarter of 2021. The company has also proposed a mid-trial design change in the Alzheimer's study that the regulator had not yet agreed [c12].",
+          "claim_ids": [
+            "c7",
+            "c8",
+            "c9",
+            "c11b",
+            "c11c",
+            "c12"
+          ]
+        },
+        {
+          "q": "How much is already in the price?",
+          "a": "The last close is $79.80, a 12-month high, up more than 2,500% over twelve months. Market capitalisation is about $2.75 billion with net cash of about $24 million [c11a]; there is no revenue and no approved product, so revenue multiples do not apply. The price is paying for approval and a launch that have not happened, and for a company that will need to raise money before either.",
+          "claim_ids": [
+            "c11a",
+            "c9"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "The regulator will accept two trials as enough to approve the drug.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "The other four readouts will go the same way as this one.",
+          "side": "bull"
+        },
+        {
+          "id": "a3",
+          "text": "The company can raise the cash it needs without wrecking the price.",
+          "side": "bull"
+        },
+        {
+          "id": "a4",
+          "text": "After a 25x run the price already assumes approval; the risk is down.",
+          "side": "bear"
+        },
+        {
+          "id": "a5",
+          "text": "I don't have enough evidence to take a position either way.",
+          "side": "neutral"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: the filing came in early 2021, later than the guided second half of 2020; the regulator accepted it with priority review, then sent a deficiency letter over manufacturing and analytical questions, missed its target date, and approved the drug in August 2022 [e7][e8][e9][e10]. For this assumption: right in the end, and outside a one-year horizon. Unknown: how much of the delay a reader could have priced in 2019; the packet did not name manufacturing risk.",
+        "a2": "Evidence: the migraine drug won both its trials and the depression drug won in Alzheimer's agitation, but missed against an active comparator in treatment-resistant depression in March 2020 [e2][e3][e4][e5]. For this assumption: three of four, and the miss came in the same drug. Unknown: which readouts the market weighted most; the record does not attribute moves.",
+        "a3": "Evidence: the company sold $174 million of stock three days after the cutoff [e1]. For this assumption: supported; the funding question was answered within the week, at the cost of dilution. Unknown: the price paid by earlier holders is in the result tiles, not in the record of events.",
+        "a4": "Evidence: within the year came a big equity raise, one failed trial, three successful ones and a pandemic [e1][e3][e4][e5][e6]; see the result tiles for what the price did over your horizon. For this assumption: the price did not fall apart, nor did it run further inside the year. Unknown: the drug's later approval and launch lie beyond one year [e10][e11].",
+        "a5": "Evidence: a year of mixed readouts and a raise, with the decisive regulatory events two years away [e1][e3][e7]. For this assumption: fair; the packet listed the catalysts but could not rank them. Unknown: whether waiting for the filing would have been cheaper; the tiles say."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e1",
+          "stage_text": "Three days in, the company sells $174 million of new stock. The runway question in the packet is answered; existing holders own less of the company."
+        },
+        {
+          "event_id": "e3",
+          "stage_text": "Three months in, the same drug misses its primary endpoint at week six against an active comparator in treatment-resistant depression. The migraine drug won its first trial in December. Two more readouts are due within weeks."
+        },
+        {
+          "event_id": "e5",
+          "stage_text": "Four months in, the drug meets its primary endpoint in Alzheimer's agitation and the migraine drug wins its second trial. Three of four readouts have gone the company's way; the filing in depression is still ahead, and a pandemic has begun."
+        },
+        {
+          "event_id": "e8",
+          "stage_text": "Twenty months in, after the filing was accepted with priority review, the company discloses a regulator's letter citing deficiencies in the application. What the deficiencies are is not public; the decision date is two weeks away."
+        }
+      ]
+    },
+    "clinical-mdgl-2018": {
+      "setup": "friend_pitch",
+      "voice": "Their liver-disease drug cut liver fat in a placebo-controlled trial and the biopsies show the disease actually resolving. They just raised close to half a billion, and the plenary slot at the big liver meeting says the field is paying attention.",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "placebo-controlled Phase 2 met its primary endpoint on liver fat",
+          "claim_ids": [
+            "c14",
+            "c15"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "36-week biopsies showed NASH resolution and fibrosis improvement",
+          "claim_ids": [
+            "c3",
+            "c16"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "cash and investments of about $488 million after a June stock sale",
+          "claim_ids": [
+            "c8",
+            "c5"
+          ]
+        }
+      ],
+      "question": "Is a strong Phase 2 in a small trial, with the pivotal design still pending regulatory agreement, worth today's price?",
+      "debrief_check": {
+        "s1": "The regulator agreed and the pivotal trial launched in March 2019; it met both co-primary endpoints in December 2022 [e1][e5].",
+        "s2": "Replicated in Phase 3. Breakthrough designation followed in April 2023, the NDA was accepted with priority review in September 2023, and the approval decision fell four months after this five-year window [e6][e7][e8].",
+        "s3": "Enough to get there, with another $500 million stock sale in September 2023 to fund the launch [e9]. Compare with the five-year return in the tiles: the science the friend described was right, and the price at the cutoff had already paid for most of it."
+      },
+      "ask_label": "What would you ask your friend?",
+      "ask_friend": [
+        {
+          "q": "How good is the trial?",
+          "a": "A randomised, double-blind, placebo-controlled Phase 2 of 125 patients [c13]. Liver fat fell 36% at week 12 against placebo, p<0.0001, and 37% versus 8.9% at week 36 [c14][c15]. On biopsy, NASH resolved in 27% of treated patients against 6.5% on placebo, p=0.02, and fibrosis improved in half of those [c3][c16]. Side effects were mild and balanced [c18]. The caveats: biopsy endpoints are secondary, the placebo arm with paired biopsies was small, and the pivotal-trial design is still pending agreement with the regulator [c12].",
+          "claim_ids": [
+            "c3",
+            "c12",
+            "c13",
+            "c14",
+            "c15",
+            "c16",
+            "c18"
+          ]
+        },
+        {
+          "q": "Can they fund a Phase 3?",
+          "a": "Cash and investments were $488.5 million at 30 September, up from $191.5 million, after a June stock sale that raised about $283 million [c4][c8]. Shares outstanding rose from 14.2 million to 15.4 million [c9]. Revenue is zero [c5]. At the recent operating outflow of about $6.4 million a quarter the runway looks very long, but that rate predates a 900-patient Phase 3, which management says it plans to start in late 2018 or early 2019 and believes it can fund [c6][c7][c11].",
+          "claim_ids": [
+            "c4",
+            "c5",
+            "c6",
+            "c7",
+            "c8",
+            "c9",
+            "c11"
+          ]
+        },
+        {
+          "q": "How much is already in the price?",
+          "a": "The last close is $186.51, up more than 300% over twelve months but 41% below the 12-month high. Market capitalisation is about $2.9 billion with about $482 million of net cash [c10]; no revenue, so no multiple. A second programme in an inherited cholesterol disorder has a completed Phase 2 and no Phase 3 plan yet [c19][c20]. The price is paying for a Phase 3 that has not started in a disease where Phase 2 signals have often failed to replicate.",
+          "claim_ids": [
+            "c10",
+            "c19",
+            "c20"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "The Phase 2 biopsy results will replicate in a large Phase 3.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "The regulator will agree a trial design that this drug can pass.",
+          "side": "bull"
+        },
+        {
+          "id": "a3",
+          "text": "Cash is enough to reach the readout without a dilutive raise.",
+          "side": "bull"
+        },
+        {
+          "id": "a4",
+          "text": "Even if the drug works, five years is too long for the price to reward it.",
+          "side": "bear"
+        },
+        {
+          "id": "a5",
+          "text": "I don't have enough evidence to take a position either way.",
+          "side": "neutral"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: the 900-patient Phase 3 met both co-primary endpoints, NASH resolution and fibrosis improvement, in December 2022 [e5]. For this assumption: supported, four years after the cutoff. Unknown: the size of the benefit against the field's history; the record has the outcome, not the effect sizes.",
+        "a2": "Evidence: the pivotal trial started in March 2019 and a second in December 2019; enrolment of the biopsy population completed in June 2021 [e1][e2][e4]. For this assumption: supported within the first year. Unknown: what the regulator asked for in the design; the record shows only that the trial launched.",
+        "a3": "Evidence: the company reached the readout and the filing, then sold $500 million of stock in September 2023 to fund the launch [e7][e8][e9]. For this assumption: right to the readout, wrong after it. Unknown: how much the second raise cost earlier holders; the tiles show the five-year return.",
+        "a4": "Evidence: approval came four months after the five-year window closed [e8]; the shares over five years are in the result tiles, against a market that rose strongly. For this assumption: supported in the sense that the science being right did not pay inside the horizon. Unknown: what a six-year holder saw.",
+        "a5": "Evidence: nothing decisive happened for four years, then the trial won and the stock still lagged the market over five [e4][e5]. For this assumption: fair, and the record rewarded neither buying nor shorting much. Unknown: this is one drug; the field's base rate is not in the record."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e1",
+          "stage_text": "Four months in, the pivotal trial starts: 900 patients with biopsy-confirmed disease, co-primary endpoints of NASH resolution and fibrosis improvement. The design question in the packet is answered; the answer itself is years away."
+        },
+        {
+          "event_id": "e4",
+          "stage_text": "Two and a half years in, enrolment of the biopsy population is complete, having continued through the pandemic without protocol changes. Topline results are guided for the third quarter of 2022. Nothing else has changed: no revenue, no readout."
+        },
+        {
+          "event_id": "e5",
+          "stage_text": "Four years in, the Phase 3 meets both co-primary endpoints. The Phase 2 signal has replicated at scale. The regulator's view, a filing and a launch are all still ahead."
+        },
+        {
+          "event_id": "e9",
+          "stage_text": "Just before the five-year mark, with the application accepted for priority review and a decision date set for March 2024, the company sells $500 million of new stock to fund the launch."
+        }
+      ]
+    },
+    "clinical-nktr-2018": {
+      "setup": "friend_pitch",
+      "voice": "A major pharma has agreed to put $1 billion into a partnership with them and to buy $850 million of their stock at a premium. They're backing this cancer treatment while it's still in early trials. That makes me interested. What do you think?",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "a $1 billion cash payment plus an $850 million equity purchase at a premium, agreed and pending closing",
+          "claim_ids": [
+            "c1",
+            "c2b"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "the candidate is still in early trials: a 38-patient uncontrolled dose-escalation study",
+          "claim_ids": [
+            "c3",
+            "c4"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "the friend's inference: a big partner's backing makes it interesting (not a reported fact)",
+          "claim_ids": []
+        }
+      ],
+      "question": "Does a partner's cheque validate the science, or only buy an option on it? The data behind the deal comes from 38 patients in an uncontrolled study.",
+      "debrief_check": {
+        "s1": "The agreement closed on 3 April 2018 after antitrust clearance, and the cash and equity proceeds were received as agreed [e1].",
+        "s2": "Early it was. As the melanoma and kidney cohorts grew past the first handful of patients in June 2018, response rates were roughly half the initial figures; twelve-month data in 2019 showed them recovering; the first randomised Phase 3, 783 patients, missed both co-primary endpoints in March 2022 [e2][e5][e7].",
+        "s3": "The partner did commit the money and stayed in the programme for four years [e1][e6][e8]. What the backing could not tell anyone in February 2018 was whether the drug worked; the record says it did not, and that took a Phase 3 to establish."
+      },
+      "ask_friend": [
+        {
+          "q": "What did the partner actually buy?",
+          "a": "Rights to co-develop the lead candidate with its own approved checkpoint inhibitor across a joint plan of more than 20 indications in 9 tumour types. The company keeps worldwide sales and pricing authority for the candidate, and the partner pays most of the cost of the combination trials [c1][c2][c11][c12]. The upfront was $1.0 billion in cash plus $850 million of stock bought at $102.60, about a 30% premium to the prior 20-day average [c1]. The transaction was still subject to antitrust clearance and expected to close in the second quarter [c2b].",
+          "claim_ids": [
+            "c1",
+            "c2",
+            "c2b",
+            "c11",
+            "c12"
+          ]
+        },
+        {
+          "q": "How many patients support those results?",
+          "a": "Thirty-eight, in an open-label dose-escalation study with no control arm. The headline response rates come from sub-groups of ten or eleven: 7 of 11 in untreated melanoma, 6 of 10 in untreated kidney cancer [c3]. The dose chosen for further trials was set from this same study [c4]. Biomarker changes in blood and tumour tissue are supportive but are not outcomes [c5].",
+          "claim_ids": [
+            "c3",
+            "c4",
+            "c5"
+          ]
+        },
+        {
+          "q": "How much success is already in the stock price?",
+          "a": "The last close is $84, up about 528% over twelve months and 95% over three. On the latest share count that is a market capitalisation near $13 billion for a company whose 2016 revenue was $165 million, and whose most recent quarter's revenue was mostly a one-time licence payment from an unrelated deal [c6][d3]. Net cash after debt was about $159 million at September 30 [d2]. There is no approved product from the lead candidate; the price is paying for the option the partner just bought.",
+          "claim_ids": [
+            "c6",
+            "d3",
+            "d2"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "The early clinical results will hold up as more patients are treated.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "The partnership removes the financing risk for years.",
+          "side": "bull"
+        },
+        {
+          "id": "a3",
+          "text": "The current valuation still leaves enough upside if the drug works.",
+          "side": "bull"
+        },
+        {
+          "id": "a4",
+          "text": "I don't have enough evidence to take a position either way.",
+          "side": "neutral"
+        },
+        {
+          "id": "a5",
+          "text": "The price already assumes success; the risk is to the downside.",
+          "side": "bear"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: response rates fell by roughly half as cohorts grew (June 2018), recovered in twelve-month data (2019), and the first randomised Phase 3 missed both co-primary endpoints (March 2022) [e2][e5][e7]. For this assumption: not supported over the full record; within the first year the evidence had already weakened it. Unknown: whether a different dose or population would have fared better; the programme ended before that was tested.",
+        "a2": "Evidence: the $1 billion and the $850 million equity were received in April 2018, the partner stayed until April 2022, and a further financing of up to $150 million was agreed in 2021 [e1][e6][e8]. For this assumption: supported; no financing crisis appears in the record. Unknown: how much of the $150 million was drawn, and what the company's cash position was at each date, which this record does not collect.",
+        "a3": "Evidence: the stock fell sharply within months of the cutoff and the drug later failed; see the result tiles for the return over the horizon you chose [e2][e3][e7]. For this assumption: it was never put to the test, because the condition 'if the drug works' did not occur. Unknown: what the upside would have been on success; a failed drug does not show that the earlier price already assumed success.",
+        "a4": "Evidence: the packet itself said the data came from 38 uncontrolled patients, and the decisive Phase 3 read out four years after the cutoff [e7]. For this assumption: consistent with how the record unfolded; nothing decisive arrived for years. Unknown: a wait can also miss a winner; this record happens not to be one.",
+        "a5": "Evidence: no event in the record added to the story the price told in February 2018; the expanded data, the short report, the litigation and the Phase 3 each subtracted from it, with the 2019 recovery as the exception [e2][e3][e4][e5][e7]. For this assumption: broadly supported, with that exception. Unknown: how much of the decline was the drug and how much the wider biotech market; this record does not separate them."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e2",
+          "stage_text": "Two months after the deal closed, expanded data are shown at the big oncology meeting. The melanoma response rate, 85% in the first 13 patients, is 50% once the cohort reaches 28; the kidney cohort shows the same pattern. Nothing has failed and the partner is still in. But the small-sample response rates the pitch rested on have moved."
+        },
+        {
+          "event_id": "e5",
+          "stage_text": "A year on, with twelve months of follow-up in 38 first-line melanoma patients, the response rate is 53% with 34% complete responses, better than the previous year's expanded read. In the meantime a short-seller report questioned the drug's exposure data and a securities class action was filed; both are unresolved at this point. Pivotal trials are running. The question is unchanged: will this hold in a randomised trial of hundreds?"
+        },
+        {
+          "event_id": "e7",
+          "stage_text": "The first Phase 3, 783 untreated melanoma patients, misses both co-primary endpoints against the partner's drug alone. The other combination studies are still running as of this date; what the companies will do with them is not yet announced."
+        },
+        {
+          "event_id": "e8",
+          "stage_text": "A month later the two companies end the entire combination programme across every indication. The partnership's clinical bet is over; the cash and equity paid in 2018 are not returned."
+        }
+      ]
+    },
+    "growth-007": {
+      "setup": "bad_news_headline",
+      "voice": "Solar manufacturer guides 2022 earnings to as little as zero after earning $4.38 a share in 2021; plans to double capital spending on new US and India plants.",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "2022 EPS guided to $0.00 to $0.60 versus $4.38 earned in 2021",
+          "claim_ids": [
+            "c6",
+            "c5"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "2022 capex of $850 million to $1.1 billion, about double 2021",
+          "claim_ids": [
+            "c6",
+            "c10"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "17.5 GW of 2021 net bookings and a guided $1.1 to 1.35 billion year-end net cash",
+          "claim_ids": [
+            "c7",
+            "c6"
+          ]
+        }
+      ],
+      "question": "Is a 90% guided profit drop a temporary squeeze while capacity is built, or a margin problem the bookings can't fix?",
+      "debrief_check": {
+        "s1": "Worse than the headline: full-year 2022 came in at a $0.41 loss per share, below even the $0.00 low end, with $73 million of plant start-up cost. Then 2023 guidance called for $7 to $8 [e1][e7].",
+        "s2": "Happened on schedule: the third Ohio plant started in the first half of 2023 and the India plant about a quarter late. After the Inflation Reduction Act in August 2022 the company announced roughly $2.3 billion more US capacity [e2][e3][e5][e8][e9].",
+        "s3": "The bookings and cash cushion were real, but the year's re-rating came from a law passed five months after the cutoff, which the packet flagged only as 'pending, not yet enacted'. The bull case was right for a reason it did not contain."
+      },
+      "ask_label": "What would you look up before deciding?",
+      "ask_friend": [
+        {
+          "q": "Why is next year's profit guided so low?",
+          "a": "Guidance for 2022 is net sales of $2.4 to 2.6 billion, gross profit of $155 to 215 million and diluted EPS of $0.00 to 0.60, after $4.38 earned in 2021 [c6][c4]. The company's own explanation inside the release: $10 to 15 million of underutilisation losses tied to the capacity transition, freight and input costs, and a smaller sales volume while new plants are built [c6]. What the release does not contain is any guidance beyond 2022.",
+          "claim_ids": [
+            "c4",
+            "c6"
+          ]
+        },
+        {
+          "q": "Is demand the problem?",
+          "a": "Not on the order book. 2021 net bookings were 17.5 GW-DC, 11.8 GW-DC of them since the third-quarter call, which is more than two years of the guided 2022 shipments [c7]. The plan is to double capacity: a third US plant for the first half of 2023 and a first Indian plant for the second half, with 2022 capex of $850 million to 1.1 billion, roughly double 2021 [c10][c6]. The United States was 84% of 2021 sales [c11]; India has just imposed 40% module tariffs [c12].",
+          "claim_ids": [
+            "c7",
+            "c10",
+            "c11",
+            "c12"
+          ]
+        },
+        {
+          "q": "What is the stock already pricing?",
+          "a": "The last close is $75.62, down 38% from the 12-month high and down 27% over three months. Market capitalisation is about $8.0 billion, or $6.5 billion after $1.6 billion of net cash, which is roughly 2.2 times 2021 revenue [c2]. The company guides to $1.1 to 1.35 billion of net cash at the end of 2022 even with the capex step-up [c6]. Note the company was loss-making as recently as 2019 [c15], and a US domestic-manufacturing incentive exists only as proposed legislation [c16].",
+          "claim_ids": [
+            "c2",
+            "c6",
+            "c15",
+            "c16"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "The profit drop is a one-year cost of building capacity, not a margin problem.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "The order book means demand will fill the new plants.",
+          "side": "bull"
+        },
+        {
+          "id": "a3",
+          "text": "The proposed US manufacturing incentives will become law.",
+          "side": "bull"
+        },
+        {
+          "id": "a4",
+          "text": "After a 38% fall the price already reflects the guidance cut.",
+          "side": "bull"
+        },
+        {
+          "id": "a5",
+          "text": "Module pricing is under structural pressure and the cut will not be the last.",
+          "side": "bear"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: 2022 ended in a $0.41 loss per share, below even the guided low end, with $73 million of plant start-up cost; 2023 guidance then called for $7 to 8 of EPS [e1][e7]. For this assumption: supported in direction, though the one bad year was worse than guided. Unknown: how much of the 2023 rebound came from the company's own execution versus the new tax credit.",
+        "a2": "Evidence: both plants started on or near schedule and the company announced roughly $2.3 billion more US capacity within the year [e3][e5][e8][e9]. For this assumption: supported; demand was never the constraint in the record. Unknown: how much of the later order book depended on the 2022 law rather than the 2021 bookings.",
+        "a3": "Evidence: the Inflation Reduction Act was signed in August 2022, five months after the cutoff, with a production credit for US-made modules [e2]. For this assumption: it happened. Three years on, the same credits became the main risk when a phase-out was proposed and then partly preserved [e10][e11]. Unknown at the cutoff: timing, which no packet could give.",
+        "a4": "Evidence: within the year the shares roughly tripled; see the result tiles [e1][e2][e3]. For this assumption: the price at the cutoff did not reflect the guidance cut so much as ignore what came next; whether it was cheap depended on a law, not on the cut. Unknown: what the stock would have done without the Act.",
+        "a5": "Evidence: 2022 was indeed worse than guided [e7], but 2023 guidance rebounded sharply and the US tariff circumvention finding and the tax credit changed the pricing environment [e6][e2]. For this assumption: not supported over the year; the pressure was real but was overtaken by policy. Unknown: the counterfactual without those policy changes."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e1",
+          "stage_text": "Two months in, the first quarter of 2022 is a loss of $0.41 a share on $367 million of sales. Guidance for the year is reiterated, not cut again. The new plants are not yet producing; the old ones are running below capacity while the transition happens."
+        },
+        {
+          "event_id": "e2",
+          "stage_text": "Five months after the cutoff, the legislation that the packet listed only as proposed becomes law: a production credit per watt for modules made in the United States. The company has not yet said what it will do with it; that announcement comes two weeks later."
+        },
+        {
+          "event_id": "e7",
+          "stage_text": "At the one-year mark the full-year 2022 result is a $0.41 loss per share, below even the $0.00 low end guided a year earlier, with $73 million of start-up cost. In the same release, 2023 guidance is $7 to 8 of EPS and the third US plant is weeks from production."
+        },
+        {
+          "event_id": "e10",
+          "stage_text": "Three years on, a Senate committee proposes accelerating the phase-out of the same manufacturing credits the expansion was built on. Whether it becomes law is not yet known at this date; the answer came three weeks later."
+        }
+      ]
+    },
+    "clinical-srpt-2021": {
+      "setup": "bad_news_headline",
+      "voice": "Gene therapy for muscular dystrophy misses its main functional goal in first placebo-controlled trial; company points to protein expression and a younger-patient subgroup.",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "primary functional endpoint not significant (p=0.37)",
+          "claim_ids": [
+            "c1",
+            "c2"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "primary biological endpoint met (p<0.0001) and the 4-5 year subgroup significant",
+          "claim_ids": [
+            "c3",
+            "c4"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "two approved drugs generate $121 million a quarter and cash is about $1.8 billion",
+          "claim_ids": [
+            "c9",
+            "c11"
+          ]
+        }
+      ],
+      "question": "Is a mixed readout with a revenue base a setback to buy, or the first sign the lead program does not work?",
+      "debrief_check": {
+        "s1": "The miss was real and it repeated: the larger confirmatory trial also missed the same functional endpoint in October 2023, while meeting secondaries [e6].",
+        "s2": "The subgroup carried the day with the regulator: accelerated approval for ages 4 to 5 in June 2023, expanded to all ages in 2024, then narrowed back after two liver-failure deaths and a boxed warning in 2025 [e5][e7][e8][e9][e11].",
+        "s3": "The revenue base held and a third exon-skipping drug was approved on its deadline in February 2021; the company financed the gap with $1.13 billion of convertible notes rather than equity [e1][e4]. The packet's own 'short' column had named liver-enzyme elevation as a risk; it recurred at a fatal scale years later."
+      },
+      "ask_label": "What would you look up before deciding?",
+      "ask_friend": [
+        {
+          "q": "What exactly did the trial show?",
+          "a": "A randomised, double-blind, placebo-controlled study of 41 boys aged 4 to 7 [c1]. The gene therapy met its biological endpoint, 28.1% micro-dystrophin expression, p<0.0001, but the 48-week motor-function score was not significant against placebo [c2][c3]. In the pre-specified 4 to 5 year-old subgroup of 16 the difference was significant [c4]. Management says an imbalance between arms may have contributed [c7]. About 85% of treated boys had a treatment-related adverse event; three serious events included muscle breakdown and liver-enzyme elevation [c6].",
+          "claim_ids": [
+            "c1",
+            "c2",
+            "c3",
+            "c4",
+            "c6",
+            "c7"
+          ]
+        },
+        {
+          "q": "What does the company earn meanwhile?",
+          "a": "Two approved exon-skipping drugs produced $121.4 million of product revenue in the third quarter, up about 23%, and $380.8 million in 2019 [c11][c16][d4]. A third drug in the same class is under priority review with a decision due 25 February 2021 [c14][c15]. Cash and investments were about $1.8 billion at 30 September [c12], against a third-quarter operating outflow of about $238 million and R&D of $190 million a quarter [d2][c13]. A large pharmaceutical partner holds ex-US rights to the gene therapy under a December 2019 deal [c18].",
+          "claim_ids": [
+            "c11",
+            "c12",
+            "c13",
+            "c14",
+            "c15",
+            "c16",
+            "c18",
+            "d2",
+            "d4"
+          ]
+        },
+        {
+          "q": "Is it expensive?",
+          "a": "The last close is $168.95, up 30% over twelve months and 5% below the 12-month high, before the market has traded on this readout. Market capitalisation is about $13.3 billion; net cash about $1.4 billion; enterprise value roughly 31 times 2019 revenue [c16]. That multiple only makes sense if the gene therapy reaches the market; the two approved drugs alone do not carry it.",
+          "claim_ids": [
+            "c16",
+            "c12"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "The younger-patient subgroup result is real and will convince the regulator.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "The functional miss means the therapy does not work; the market is right to sell.",
+          "side": "bear"
+        },
+        {
+          "id": "a3",
+          "text": "The revenue base and cash make this a setback, not an existential event.",
+          "side": "bull"
+        },
+        {
+          "id": "a4",
+          "text": "The safety findings will matter more than efficacy in the end.",
+          "side": "bear"
+        },
+        {
+          "id": "a5",
+          "text": "I don't have enough evidence to take a position either way.",
+          "side": "neutral"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: accelerated approval for ages 4 to 5 came in June 2023, then expansion to all ages in 2024, while the larger confirmatory trial again missed the same functional endpoint in October 2023 [e5][e6][e7]. For this assumption: right about the regulator, unproven about the biology. Unknown: what the functional benefit is; two trials have not shown it in the full population.",
+        "a2": "Evidence: the therapy reached the market on a surrogate endpoint and expanded, before deaths and a boxed warning narrowed it again in 2025 [e5][e7][e8][e11]. For this assumption: the miss did not stop approval within three years; whether it 'works' is still contested at five. Unknown: long-term function in treated boys.",
+        "a3": "Evidence: the third drug was approved on its deadline, revenue kept coming, and the company financed itself with $1.13 billion of convertible notes rather than equity [e1][e4]. For this assumption: supported through the three-year horizon. Unknown: the 2025 safety crisis, which suspended revenue guidance [e9].",
+        "a4": "Evidence: the packet's three serious events included liver-enzyme elevation; in 2025 two patients died of acute liver failure, shipments were paused and a boxed warning was added [e8][e9][e10][e11]. For this assumption: not visible inside three years, decisive at five. Unknown: whether the signal in 41 patients was readable as the later risk; the record only shows the recurrence.",
+        "a5": "Evidence: a mixed readout became an approval, then a confirmatory miss, then a safety reversal [e5][e6][e8]. For this assumption: fair; each stop reversed the previous one. Unknown: any horizon shorter than five years tells a different story than the full one."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e1",
+          "stage_text": "Seven weeks in, the regulator approves the third exon-skipping drug on its deadline. The base business is intact; the gene therapy question is untouched."
+        },
+        {
+          "event_id": "e4",
+          "stage_text": "Twenty months in, the company raises $1.13 billion in convertible notes rather than selling stock, with interest rates rising fast. Expression and safety data from the commercial manufacturing process were reported the previous year with no new safety signals."
+        },
+        {
+          "event_id": "e5",
+          "stage_text": "Two and a half years in, the regulator grants accelerated approval of the gene therapy for ambulatory boys aged 4 to 5, the subgroup from the trial in the packet. A confirmatory trial is still running; its result is due in months."
+        },
+        {
+          "event_id": "e6",
+          "stage_text": "Just before the three-year mark, the confirmatory trial misses its primary functional endpoint while meeting key secondary endpoints, the same pattern as the trial in the packet, now in a larger population. The approval stands for the moment."
+        },
+        {
+          "event_id": "e8",
+          "stage_text": "Four years in, the company discloses the first patient death linked to the therapy, from acute liver failure. The indication had been widened to all ages the previous summer."
+        }
+      ]
+    },
+    "growth-005": {
+      "setup": "bad_news_headline",
+      "voice": "Farm and construction equipment maker reports 11% sales drop, guides both segments lower for the year, and announces layoffs with $175 million of charges.",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "Q3 sales down 11%, full-year guidance down about 10% in agriculture and 25% in construction",
+          "claim_ids": [
+            "c2",
+            "c7"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "separation programs with about $175 million of charges and $175 million of annual savings",
+          "claim_ids": [
+            "c7"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "agriculture margin expanded to 16.6% and nine-month free cash flow swung to about $3.5 billion",
+          "claim_ids": [
+            "c8",
+            "c12"
+          ]
+        }
+      ],
+      "question": "Is a cyclical business cutting costs at the bottom, or a business in longer decline dressed up by margin discipline?",
+      "debrief_check": {
+        "s1": "The cutoff quarter was close to the trough: fiscal 2020 net income landed in line with guidance, fiscal 2021 was guided up and then set a record at $5.96 billion, fiscal 2022 $7.13 billion [e1][e4][e5].",
+        "s2": "The collected record does not isolate the $175 million of savings; what it shows is profit roughly doubling within two years, with a five-week strike in late 2021 along the way [e2][e3][e4].",
+        "s3": "The margin and cash discipline the bull side pointed to was the right tell for the trough. By year five the cycle had turned again: a record $10.2 billion in fiscal 2023, then $7.1 billion and lower guidance amid tariff costs [e7][e9][e10]."
+      },
+      "ask_label": "What would you look up before deciding?",
+      "ask_friend": [
+        {
+          "q": "Is this a bad quarter or a bad cycle?",
+          "a": "Sales fell 11% to $8.9 billion and net income to $811 million, and the full year is guided to about $2.25 billion with agriculture down about 10% and construction down about 25% [c2][c3]. Yet agriculture's operating margin rose to 16.6% from 10.3% on 5% lower sales, and equipment gross margin improved to about 25.8% [c5][c10]. Management's own industry forecasts have US and Canadian large-farm equipment down 5 to 10% and it attaches 'many uncertainties' about the pandemic to its outlook [c6].",
+          "claim_ids": [
+            "c2",
+            "c3",
+            "c5",
+            "c6",
+            "c10"
+          ]
+        },
+        {
+          "q": "What are the layoffs worth?",
+          "a": "Separation programmes completing in the fourth quarter carry about $175 million of pre-tax charges and are expected to save about $175 million a year [c4]. Nine-month operating cash flow was $4.1 billion against $0.4 billion a year earlier, and free cash flow about $3.5 billion, while the dividend was held at $0.76 a share [c8][c12]. Construction's operating profit fell 46% and the company is reducing dealer inventory, which can mean further production cuts [c5].",
+          "claim_ids": [
+            "c4",
+            "c5",
+            "c8",
+            "c12"
+          ]
+        },
+        {
+          "q": "Is it expensive?",
+          "a": "The last close is $199.50, a 12-month high, up 28% over twelve months against 16% for the market. Market capitalisation is about $63 billion, roughly 1.6 times last year's revenue of $39 billion. The company carries about $34 billion of net debt, most of it funding the captive financing arm that lends to farmers and dealers, so enterprise value overstates the industrial business [c1]. The packet has no peer multiples.",
+          "claim_ids": [
+            "c1",
+            "c9"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "This quarter is the bottom of the farm cycle.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "Margin discipline will hold when volumes recover.",
+          "side": "bull"
+        },
+        {
+          "id": "a3",
+          "text": "A stock at its 12-month high already prices the recovery.",
+          "side": "bear"
+        },
+        {
+          "id": "a4",
+          "text": "The pandemic will keep farm and construction demand weak for years.",
+          "side": "bear"
+        },
+        {
+          "id": "a5",
+          "text": "I don't have enough evidence to take a position either way.",
+          "side": "neutral"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: fiscal 2020 net income landed at $2.75 billion, in line with the August guidance, and fiscal 2021 was guided up and then set a record at $5.96 billion, followed by $7.13 billion and $10.17 billion [e1][e4][e5][e7]. For this assumption: supported; the cutoff quarter was close to the trough. Unknown at the time: the crop-price upcycle that drove it, and the five-week strike in late 2021 [e2][e3].",
+        "a2": "Evidence: profit roughly doubled within two years and tripled within three on sales growth of 24% in the first of those years [e4][e5][e7]. For this assumption: supported. Unknown: how much came from cost programmes versus pricing and mix; the record collected does not separate them.",
+        "a3": "Evidence: the stock roughly doubled over three years; see the result tiles against SPY [e4][e5]. For this assumption: not supported; the high was not the top. Unknown: whether the same reasoning holds at the fiscal 2023 peak, after which income fell 30% and guidance dropped further [e9][e10].",
+        "a4": "Evidence: fiscal 2021 guidance cited 'renewed optimism' from higher crop prices and the following years were records [e1][e4][e5]. For this assumption: not supported over the horizon. Unknown: the later downturn from fiscal 2024, with layoffs and tariff costs, came from a different cycle [e8][e9][e10].",
+        "a5": "Evidence: the packet had one down quarter, a cautious forecast and strong cash flow; the decisive input was the commodity cycle, which it did not contain [e1][e4]. For this assumption: a fair reading. Unknown: whether a one-year wait would have been cheaper; the record says it would not."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e1",
+          "stage_text": "Three months in, the fiscal year closes with net income of $2.75 billion, in line with the August guidance. The new year is guided to $3.6 to 4.0 billion on 'renewed optimism' from higher crop prices, with agriculture sales expected up 10 to 15%."
+        },
+        {
+          "event_id": "e2",
+          "stage_text": "Fourteen months in, workers at fourteen US plants walk out, the first strike at the company in thirty-five years. Production stops in the busiest year in memory; the outcome of the talks is not yet known."
+        },
+        {
+          "event_id": "e4",
+          "stage_text": "Fifteen months in, with the strike settled by a six-year contract, the fiscal year sets a record: net income of $5.96 billion on 24% sales growth, more than double the year of your decision. Guidance points higher again."
+        },
+        {
+          "event_id": "e7",
+          "stage_text": "Three years in, a third consecutive record, $10.2 billion of net income. In the same release the company guides the next year down, citing farm incomes and dealer inventories."
+        }
+      ]
+    },
+    "growth-004": {
+      "setup": "analysts_disagree",
+      "voice": "One analyst: the retailer just added $15 billion of sales in a year, took $9 billion of share, and lifted returns on capital to 23%; the pandemic changed its position for good. The other: it refuses to guide, two-thirds of the growth was digital at 145%, and digital fulfilment already costs gross margin.",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "FY2020 comparable sales up 19.3%, about $9 billion of share gained, ROIC 23.5%",
+          "claim_ids": [
+            "c2",
+            "c4"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "no FY2021 sales or EPS guidance, citing uncertainty",
+          "claim_ids": [
+            "c3",
+            "c11"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "digital fulfilment and supply-chain costs already weighing on gross margin",
+          "claim_ids": [
+            "c13"
+          ]
+        }
+      ],
+      "question": "Which assumption explains the split: durable share gain, or a one-off year the company itself won't extrapolate?",
+      "debrief_check": {
+        "s1": "Held for exactly one more year: fiscal 2021 comparable sales rose a further 12.7% and adjusted EPS 44% [e1]. Then fiscal 2022 operating income fell 57% as the company worked through inventory, and comparable sales turned negative in 2023 [e2][e4][e5][e6].",
+        "s2": "Guidance resumed a year later, and that guidance was cut twice within months [e1][e2][e3]. The refusal to guide was an honest signal of unpredictability, not a bluff.",
+        "s3": "Costs did crush margin in 2022, though the trigger was excess inventory in discretionary categories rather than digital fulfilment itself [e2][e4]. The second analyst's assumption, that the year was not repeatable, was the one that explained the split."
+      },
+      "ask_label": "What would you ask the two analysts?",
+      "ask_friend": [
+        {
+          "q": "How much of the growth was the pandemic year?",
+          "a": "Fiscal 2020 added more than $15 billion of sales, more than the previous eleven years of growth combined, with comparable sales up 19.3% and digital comparable sales up 145% [c8][c2]. Digital was about two-thirds of the fourth quarter's growth [c12]. The company says it gained about $9 billion of market share across all five core categories [c9]; it does not say how much of the year's volume it expects to keep.",
+          "claim_ids": [
+            "c2",
+            "c8",
+            "c9",
+            "c12"
+          ]
+        },
+        {
+          "q": "Why won't the company guide?",
+          "a": "Management said continued COVID-19 uncertainty is the reason it gives no fiscal 2021 sales or EPS guidance [c3][c6][c11]. What it did disclose: operating margin rose to 7.0% from 6.0%, after-tax return on invested capital to 23.5% from 16.0%, cash of $8.5 billion, and a resumed buyback with about $4.5 billion of capacity [c4][c10][c5]. It also said digital fulfilment and supply-chain costs already weigh on gross margin [c14], and the current portion of long-term debt rose to $1.1 billion [c13].",
+          "claim_ids": [
+            "c3",
+            "c4",
+            "c5",
+            "c6",
+            "c10",
+            "c11",
+            "c13",
+            "c14"
+          ]
+        },
+        {
+          "q": "Is it expensive?",
+          "a": "The last close is $173.49, up 59% over twelve months against 25% for the market, 13% below the 12-month high. Market capitalisation is about $87 billion; enterprise value about $91 billion, roughly 1.2 times revenue [c2]. For a retailer earning a 7% operating margin, the question is whether that margin and this year's sales are the new base or the peak.",
+          "claim_ids": [
+            "c2",
+            "c4"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "The share gains are durable; customers who switched will stay.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "Digital growth will keep running without crushing margins.",
+          "side": "bull"
+        },
+        {
+          "id": "a3",
+          "text": "No guidance is caution, not a warning.",
+          "side": "bull"
+        },
+        {
+          "id": "a4",
+          "text": "Fiscal 2020 was a peak that cannot be repeated at these margins.",
+          "side": "bear"
+        },
+        {
+          "id": "a5",
+          "text": "I don't have enough evidence to take a position either way.",
+          "side": "neutral"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: fiscal 2021 comparable sales rose a further 12.7% [e1]; then comparable sales fell in mid-2023 for the first time in six years and again in fiscal 2023 and 2025 [e6][e8][e12]. For this assumption: supported for one year, then not. Unknown: how much of the later decline was lost customers versus a category shift back to services and discretionary weakness.",
+        "a2": "Evidence: digital grew 20.8% in fiscal 2021, then operating margin collapsed in 2022 to 1.2% in the second quarter as inventory in discretionary categories was marked down [e1][e2][e3][e4]. For this assumption: the margin did get crushed, though by inventory rather than by digital fulfilment itself. Unknown: whether fulfilment cost would have bitten anyway without the inventory mistake.",
+        "a3": "Evidence: guidance returned a year later, and that guidance was cut twice within months [e1][e2][e3]. For this assumption: the silence was an honest signal of unpredictability. Unknown: whether any guidance given in March 2021 would have been believed.",
+        "a4": "Evidence: fiscal 2021 beat the peak [e1], then fiscal 2022 operating income fell 57% [e5]. For this assumption: right on margins, a year early on sales. Unknown: how much was self-inflicted.",
+        "a5": "Evidence: the first year extended the boom and the second reversed it [e1][e4][e5]. For this assumption: a defensible reading of a packet with no forward anchor. Unknown: whether waiting one year would have given a clearer picture; the record says it would have given a more expensive one, then a cheaper one."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e1",
+          "stage_text": "One year in, fiscal 2021 comparable sales are up a further 12.7% on top of the pandemic year, adjusted EPS up 44%. The company resumes guidance and warns that first-quarter margin will be well below last year's 9.8%."
+        },
+        {
+          "event_id": "e3",
+          "stage_text": "Three months later, three weeks after a first-quarter margin of 5.3%, the company announces further markdowns to clear discretionary inventory and cuts its second-quarter margin outlook to about 2%. The problem is stock on hand, not customers."
+        },
+        {
+          "event_id": "e6",
+          "stage_text": "Two and a half years in, second-quarter comparable sales fall 5.4%, the first decline in six years, and guidance is cut again. The company cites softer discretionary spending and a backlash over its Pride merchandise."
+        },
+        {
+          "event_id": "e12",
+          "stage_text": "Five years on, fiscal 2025 net sales fall 1.7% and comparable sales 2.6%, a second consecutive down year, with a new CEO about to take over."
+        }
+      ]
+    },
+    "growth-008": {
+      "setup": "analysts_disagree",
+      "voice": "One analyst: record profit, 17% return on tangible equity, deposits and loans both growing, the top investment bank in the world. The other: trading revenue fell 11% in a bad quarter, expenses rose 7%, and credit provisions jumped 63% quarter on quarter.",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "record full-year net income of $32.5 billion and 17% ROTCE",
+          "claim_ids": [
+            "c1",
+            "c12"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "Q4 Markets revenue down 11% and full-year expense up 7%",
+          "claim_ids": [
+            "c2"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "provision for credit losses up 63% quarter on quarter on reserve builds",
+          "claim_ids": [
+            "c9"
+          ]
+        }
+      ],
+      "question": "Is the fourth quarter noise around a record year, or the first sign of the cycle turning?",
+      "debrief_check": {
+        "s1": "Extended: 2019 was another record at $36.4 billion, 2021 $48.3 billion, 2023 $49.6 billion [e1][e5][e10].",
+        "s2": "A bad quarter, not a trend: 2019's record year answered it within the window [e1].",
+        "s3": "The credit cycle did not turn on its own. The pandemic built reserves in 2020 and released them in 2021, on a scale the packet could not have foreseen [e4][e5]. Five years also brought a CEO health scare, two large settlements and the First Republic acquisition, none of them in the packet [e2][e6][e8][e9]."
+      },
+      "ask_label": "What would you ask the two analysts?",
+      "ask_friend": [
+        {
+          "q": "How bad was the quarter, really?",
+          "a": "Fourth-quarter net income was a record $7.1 billion, but that comparison is flattered by a one-time $2.4 billion tax charge in the prior year's quarter [c1][c7]. Against the third quarter, net income fell 16% as Markets revenue dropped 11% to $4.0 billion in the December sell-off and the provision for credit losses rose 63% on reserve builds in cards and commercial loans [c22][c6][c18][c8]. Asset-management assets fell 2% on lower markets and home lending revenue fell 8% on thinner margins [c9][c10].",
+          "claim_ids": [
+            "c1",
+            "c6",
+            "c7",
+            "c8",
+            "c9",
+            "c10",
+            "c18",
+            "c22"
+          ]
+        },
+        {
+          "q": "What does the full year say?",
+          "a": "Record net income of $32.5 billion, return on tangible equity of 17%, net interest income up 10% to $55.1 billion on higher rates and loan growth, deposits up 2% to $1.47 trillion and net loans up 6% to $971 billion [c1][c2][c12][c13][c14]. The bank was first in global investment-banking fees with an 8.7% share [c4]. Expenses rose 7% to $63.4 billion, partly for a branch expansion into new states [c23][c3]. The bank gives no formal earnings guidance [c21].",
+          "claim_ids": [
+            "c1",
+            "c2",
+            "c3",
+            "c4",
+            "c12",
+            "c13",
+            "c14",
+            "c21",
+            "c23"
+          ]
+        },
+        {
+          "q": "Is it expensive?",
+          "a": "The last close is $101.68, down 10% over twelve months and 14% below the 12-month high after the December sell-off. Market capitalisation is about $348 billion; the bank's own supplement put it at $320 billion at year end [c15]. Capital is strong at a 12.0% common equity tier 1 ratio, and the bank returned $8.3 billion to shareholders in the quarter, $5.7 billion of it in buybacks [c19][c20]. Enterprise value is not a meaningful measure for a bank; the packet contains no book-value multiple.",
+          "claim_ids": [
+            "c15",
+            "c19",
+            "c20"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "The December quarter was market noise, not the credit cycle turning.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "Higher rates will keep lifting net interest income.",
+          "side": "bull"
+        },
+        {
+          "id": "a3",
+          "text": "Scale and capital will let the bank take share through the next downturn.",
+          "side": "bull"
+        },
+        {
+          "id": "a4",
+          "text": "Rising provisions and expenses mark the top of the earnings cycle.",
+          "side": "bear"
+        },
+        {
+          "id": "a5",
+          "text": "I don't have enough evidence to take a position either way.",
+          "side": "neutral"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: 2019 was another record at $36.4 billion [e1]. For this assumption: supported within the year. Unknown then: the pandemic that arrived weeks after the anniversary, which built reserves in 2020 and released them in 2021 [e4][e5].",
+        "a2": "Evidence: rates fell to zero in 2020 and rose sharply in 2022, when net income was $37.7 billion and 2023 a record $49.6 billion [e4][e7][e10]. For this assumption: wrong for two years, then right. Unknown: no packet in January 2019 could time that path.",
+        "a3": "Evidence: in May 2023 the bank bought substantially all of First Republic from the FDIC after that bank failed [e8]. For this assumption: supported, in a way the packet could describe only as capacity, not as an event. Unknown: the cost of the legal settlements that came with size [e6][e9].",
+        "a4": "Evidence: profit rose in 2019, fell in the pandemic year, then set records [e1][e4][e5][e10]. For this assumption: the earnings cycle did turn, for a reason unrelated to the December quarter, and then turned back. Unknown: whether the reserve build of late 2018 told anyone anything; the record suggests it did not.",
+        "a5": "Evidence: five years contained a CEO health emergency, a pandemic, two settlements and an acquisition, none in the packet [e2][e4][e6][e8][e9]. For this assumption: reasonable, and the plain result still beat holding cash; see the tiles. Unknown: whether the packet could ever contain what mattered for a bank over five years."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e1",
+          "stage_text": "One year in, full-year 2019 net income is a record $36.4 billion. The December quarter that started the case looks, in the record, like a blip."
+        },
+        {
+          "event_id": "e2",
+          "stage_text": "Fourteen months in, the chief executive undergoes emergency heart surgery and two deputies take over for the interim. The same week, a virus outbreak is being discussed as a risk to markets."
+        },
+        {
+          "event_id": "e4",
+          "stage_text": "Two years in, 2020 net income falls to $29.1 billion after pandemic credit reserves were built through the year; regulators have capped dividends and buybacks for large banks. Loan losses so far have been far smaller than the reserves taken."
+        },
+        {
+          "event_id": "e8",
+          "stage_text": "Four years in, the bank buys substantially all of First Republic Bank from the FDIC after a run on regional banks. The purchase adds deposits and wealth clients at a discount; the integration cost is not yet known."
+        }
+      ]
+    },
+    "growth-009": {
+      "setup": "familiar_product",
+      "voice": "You noticed the chocolate bars got pricier again and the shelf is still full of them. The company just reported 16% sales growth, mostly from price, and says it can keep raising while costs stay high.",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "FY2022 net sales up 16.1% with 8 points from price",
+          "claim_ids": [
+            "c8"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "2023 guidance of 6% to 8% sales growth and 9% to 11% adjusted EPS growth",
+          "claim_ids": [
+            "c9"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "category share fell 54 basis points in the latest 12-week read while price-led sales rose",
+          "claim_ids": [
+            "c14"
+          ]
+        }
+      ],
+      "question": "Does pricing power you can see in the aisle turn into shareholder returns at today's price, or is the deceleration the story?",
+      "debrief_check": {
+        "s1": "Pricing held through 2023: quarterly results beat plan and full-year guidance was raised to about 8% sales growth [e1][e2].",
+        "s2": "Delivered. But at the one-year mark the company guided 2024 to only 2 to 3% sales growth and flat earnings, naming historic cocoa prices [e3]. Over three years cocoa more than doubled and guidance was cut repeatedly [e4][e5][e7][e9].",
+        "s3": "Share loss did not become the story inside the year. A raw-material shock the cutoff release declined to single out did."
+      },
+      "ask_label": "What would you check before deciding?",
+      "ask_friend": [
+        {
+          "q": "Is the growth price or volume?",
+          "a": "Mostly price. Full-year 2022 net sales rose 16.1%; organic constant-currency growth was 12.0%, made up of 8 points of net price realisation and 4 points of volume and mix [c2]. Adjusted EPS rose 18.5% despite what management called record inflation [c8][c6]. In the latest 12-week read the company's share of US candy, mint and gum fell 54 basis points even as price-led retail sales rose [c14].",
+          "claim_ids": [
+            "c2",
+            "c6",
+            "c8",
+            "c14"
+          ]
+        },
+        {
+          "q": "What does the company itself expect for the year?",
+          "a": "Net sales growth of 6 to 8% and adjusted EPS growth of 9 to 11% [c3], a deceleration from 16% and 18.5%. Behind it: capital spending of $800 to 900 million for confection capacity, interest expense of $145 to 155 million on higher rates, and continued cost inflation [c5][c7][c11]. Fourth-quarter gross margin already slipped 30 basis points to 43.2% as costs outran pricing [c12]. The release names no single commodity as a special risk.",
+          "claim_ids": [
+            "c3",
+            "c5",
+            "c7",
+            "c11",
+            "c12"
+          ]
+        },
+        {
+          "q": "Is it expensive?",
+          "a": "The last close is $234.42, up 18% over twelve months while the market fell 9%, and within 3% of the 12-month high. Market capitalisation is about $48 billion; with $4.3 billion of net debt the enterprise value is about $53 billion, roughly 5.9 times 2021 revenue [c2]. Whether that is expensive for a staple growing 6 to 8% is the question; the packet contains no peer multiples.",
+          "claim_ids": [
+            "c2",
+            "c3"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Pricing power will hold: consumers keep paying more for the brands.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "Cost inflation will ease and margins will recover.",
+          "side": "bull"
+        },
+        {
+          "id": "a3",
+          "text": "A staple growing 6 to 8% deserves the current premium multiple.",
+          "side": "bull"
+        },
+        {
+          "id": "a4",
+          "text": "The slowdown in guidance is the start of a longer deceleration.",
+          "side": "bear"
+        },
+        {
+          "id": "a5",
+          "text": "I don't have enough evidence to take a position either way.",
+          "side": "neutral"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: 2023 results beat plan twice and full-year guidance was raised to about 8% sales growth [e1][e2]. For this assumption: supported through the one-year horizon. Unknown at the anniversary: how consumers would react to the next round of increases, which the cocoa shock then forced.",
+        "a2": "Evidence: costs did not ease; at the one-year mark the company guided 2024 earnings flat and named historic cocoa prices, which more than doubled in early 2024 [e3][e4]. For this assumption: not supported; the shock came from a commodity the cutoff release had not singled out. Unknown: how long cocoa stays elevated; the record shows cuts through 2025 [e5][e7][e9].",
+        "a3": "Evidence: the business delivered its guidance, yet the stock fell over the year; see the result tiles against SPY. For this assumption: the multiple did not hold even though the growth did. Unknown: how much of the de-rating was the cocoa news at the anniversary versus a broader move out of staples.",
+        "a4": "Evidence: 2023 was strong, so the deceleration did not show inside the year; it arrived at the one-year mark with 2024 guidance of 2 to 3% sales growth and flat earnings [e3]. For this assumption: right in direction, wrong on timing and cause. Unknown: whether the slowdown was demand or cost; the record points to cost.",
+        "a5": "Evidence: the year delivered what was guided and then the outlook broke on cocoa [e1][e2][e3]. For this assumption: a fair reading; the decisive fact was outside the packet. Unknown: it always is, for a commodity shock."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e1",
+          "stage_text": "Three months in, first-quarter sales are up 12% and adjusted earnings up 17%; the company raises its full-year guidance. Pricing is holding and volume is not collapsing."
+        },
+        {
+          "event_id": "e3",
+          "stage_text": "At the one-year mark, full-year 2023 lands at about 8% sales growth, better than guided a year ago. The same release guides 2024 to 2 to 3% sales growth and flat earnings, and names historic cocoa prices as the reason."
+        },
+        {
+          "event_id": "e4",
+          "stage_text": "Weeks later cocoa futures more than double on West African crop failures. This is the input the cutoff release did not single out; it is now the whole story for a chocolate company."
+        },
+        {
+          "event_id": "e7",
+          "stage_text": "Two years on, 2024 finished flat and 2025 earnings are guided down in the mid-30% range. The CEO has announced her retirement. Salty snacks, the other business, are the bright spot."
+        }
+      ]
+    },
+    "commercial-gilead-2019": {
+      "setup": "friend_warning",
+      "voice": "Stay away. Their hepatitis C business fell from $9 billion to under $4 billion in one year, the guidance for this year is flat to down, and they just wrote off an $820 million oncology bet. It's a value trap.",
+      "claims": [
+        {
+          "id": "s1",
+          "text": "hepatitis C product sales fell to $3.7 billion from $9.1 billion",
+          "claim_ids": [
+            "g3",
+            "g13"
+          ]
+        },
+        {
+          "id": "s2",
+          "text": "2019 product-sales guidance of $21.3 to 21.8 billion, roughly flat to down",
+          "claim_ids": [
+            "g5"
+          ]
+        },
+        {
+          "id": "s3",
+          "text": "HIV sales rose to $14.6 billion and the company holds $31.5 billion of cash and investments",
+          "claim_ids": [
+            "g4",
+            "g8"
+          ]
+        }
+      ],
+      "question": "Is a shrinking franchise with $31 billion of cash and a growing HIV business a trap, or a business already priced for decline?",
+      "debrief_check": {
+        "s1": "Continued: hepatitis C fell to $2.9 billion in 2019 and kept falling, and Truvada lost US exclusivity a year early [e2][e4].",
+        "s2": "2019 was flat as guided. 2020 revenue rose 10% on a pandemic drug nobody could have listed at the cutoff, and 2022 revenue was flat again at $27.3 billion [e5][e6][e9].",
+        "s3": "HIV kept growing to $16.4 billion in 2019 and Biktarvy passed $10 billion by 2022. The cash went into a $21 billion oncology acquisition [e2][e3][e9]. Compare the five-year return with SPY in the tiles above: not the trap the friend feared, and not a winner either."
+      },
+      "ask_label": "What would you ask your friend?",
+      "ask_friend": [
+        {
+          "q": "How fast is the old business shrinking?",
+          "a": "Hepatitis C product sales fell to $3.7 billion from $9.1 billion in one year, a decline management attributes to fewer patients starting treatment and lower prices [g4]. Total revenue fell to $22.1 billion from $26.1 billion and GAAP operating margin to 37.1% from 54.1% [g2][g16]. Guidance for 2019 product sales is $21.3 to 21.8 billion, roughly flat, and it explicitly assumes US generic competition for two older products [g7][g14].",
+          "claim_ids": [
+            "g2",
+            "g4",
+            "g7",
+            "g14",
+            "g16"
+          ]
+        },
+        {
+          "q": "What is growing?",
+          "a": "HIV product sales rose to $14.6 billion from $13.0 billion on the 2018 launch of a new single-tablet regimen, now about 66% of revenue [g3][g20]. A 96-week Phase 3 study reported that regimen non-inferior to a competitor [g13]. The cell-therapy business bought in 2017 generated $264 million [g5], with two-year follow-up data and an early study in a second leukaemia population [g10][g11]. A new chief executive starts on 1 March [g8]. Three early immuno-oncology collaborations were signed in the quarter [g9].",
+          "claim_ids": [
+            "g3",
+            "g5",
+            "g8",
+            "g9",
+            "g10",
+            "g11",
+            "g13",
+            "g20"
+          ]
+        },
+        {
+          "q": "Is it cheap enough to be a trap?",
+          "a": "The last close is $70.05, down 14% over twelve months and 15% below the 12-month high. Market capitalisation is about $91 billion; with $31.5 billion of cash and investments against debt, net cash is about $4 billion and enterprise value about $86 billion, roughly 3.3 times 2017 revenue [g6]. Operating cash flow was $8.4 billion after $3.0 billion of dividends and $2.9 billion of buybacks. The year also absorbed an $820 million write-off of an early oncology programme [g19].",
+          "claim_ids": [
+            "g6",
+            "g19"
+          ]
+        }
+      ],
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "HIV growth will keep outrunning the hepatitis C decline.",
+          "side": "bull"
+        },
+        {
+          "id": "a2",
+          "text": "The cash pile and new CEO will buy or build a second growth engine.",
+          "side": "bull"
+        },
+        {
+          "id": "a3",
+          "text": "A 3x revenue multiple with $31 billion of cash is already a floor.",
+          "side": "bull"
+        },
+        {
+          "id": "a4",
+          "text": "Generic erosion will spread from hepatitis C to HIV within five years.",
+          "side": "bear"
+        },
+        {
+          "id": "a5",
+          "text": "My friend is right: shrinking revenue and a written-off bet make this a trap.",
+          "side": "bear"
+        }
+      ],
+      "thesis_check": {
+        "a1": "Evidence: HIV revenue rose to $16.4 billion in 2019 while hepatitis C fell to $2.9 billion; the lead regimen passed $10 billion by 2022 and a twice-yearly injectable was approved [e2][e8][e9]. For this assumption: supported throughout. Unknown at the cutoff: a pandemic antiviral that added a large revenue line for two years [e5][e6].",
+        "a2": "Evidence: the new CEO bought Immunomedics for $21 billion in September 2020 to add an oncology drug, later approved in a much larger breast-cancer population [e1][e3][e7][e10]. For this assumption: supported in form. Unknown: whether the price paid earns a return; revenue was flat at $27.3 billion in 2022 [e9].",
+        "a3": "Evidence: the shares rose over five years but lagged the market by a wide margin; see the result tiles. For this assumption: a floor, not a spring. Unknown: how much the pandemic drug distorted the middle years.",
+        "a4": "Evidence: an older HIV drug lost US exclusivity a year early in 2020 [e4], yet HIV revenue kept growing on the newer regimen [e2][e9]. For this assumption: partly right on the event, wrong on the effect. Unknown: the next patent cliff, outside this window.",
+        "a5": "Evidence: revenue did not shrink further; it grew to $27.3 billion, with new products and two acquisitions [e3][e9][e10]. For this assumption: not a trap in the sense of a shrinking business; the friend's fear about the return relative to the market was closer to the mark. Unknown: what the shares would have done without the pandemic drug's two strong years."
+      },
+      "walkthrough": [
+        {
+          "event_id": "e1",
+          "stage_text": "Three weeks in, the new chief executive, from a large European pharma, takes over as planned. No strategy is announced yet."
+        },
+        {
+          "event_id": "e2",
+          "stage_text": "One year in, full-year 2019 revenue is $22.4 billion: HIV up to $16.4 billion on the new regimen, hepatitis C down to $2.9 billion. The pattern the packet described has continued, and the total is flat."
+        },
+        {
+          "event_id": "e3",
+          "stage_text": "Nineteen months in, the company agrees to buy Immunomedics for about $21 billion in cash for a breast-cancer drug approved five months earlier. A month later, a generic of an older HIV drug launches a year sooner than expected, and its antiviral is approved as the first treatment for the pandemic virus."
+        },
+        {
+          "event_id": "e9",
+          "stage_text": "Four years in, 2022 revenue is flat at $27.3 billion: the lead HIV regimen passes $10 billion, the pandemic antiviral falls 30%, and the acquired cancer drug is a day from approval in a common form of breast cancer."
+        }
+      ]
+    }
+  }
+}

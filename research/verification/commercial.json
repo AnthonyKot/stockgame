@@ -1,0 +1,652 @@
+{
+  "batch": "commercial",
+  "verified_at": "2026-09-09T12:34:07Z",
+  "budget_used": {
+    "fetch": 45,
+    "search": 2
+  },
+  "candidates": [
+    {
+      "id": "commercial-regeneron-2019",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "regn-q4-2018-pr",
+          "url": "https://investor.regeneron.com/index.php/news-releases/news-release-details/regeneron-reports-fourth-quarter-and-full-year-2018-financial",
+          "role": "as_of",
+          "opened": false,
+          "http_status": null,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "REGN/NASDAQ",
+          "notes": "Direct URL timed out on WebFetch. Verified the equivalent document via SEC EDGAR: 8-K accession 0001532176-19-000005 (filed 2019-02-06, accepted 07:48:07 ET, i.e. premarket), Exhibit 99.1 dated Feb 6 2019. Exhibit confirms Q4'18 revenue $1,928M (~$1.93B), FY'18 revenue $6,711M, US Eylea Q4 $1,078.9M, FY $4,076.7M -- matches as_of facts."
+        },
+        {
+          "id": "biopharmadive-eylea-biosimilar-2024",
+          "url": "https://www.biopharmadive.com/news/regeneron-eylea-hd-fda-approvals-eye-market-roche/806053/",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2025-11-20",
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "REGN/NASDAQ (Eylea/Eylea HD)",
+          "notes": "Opened successfully. Actual date 2025-11-20 (candidate listed only '2024'), well after cutoff -- fine for outcome_only. Confirms FDA approvals broadening Eylea HD vs Roche Vabysmo competition."
+        }
+      ],
+      "material_fact": {
+        "fact": "Q4 2018 total revenue was $1.93 billion, up 22% YoY, with US Eylea net sales of $1.08 billion, up 11%.",
+        "source_id": "regn-q4-2018-pr",
+        "excerpt": "Fourth quarter 2018 total revenues $1,928 million; U.S. net product sales of EYLEA $1,078.9 million for Q4 2018.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "flagged": true,
+        "hits": [
+          "as_of_facts[2]: 'facing eventual biosimilar/patent expiration risk' (trigger: eventual)",
+          "learning_tension: 'unresolved multi-year patent-cliff and biosimilar-competition risk that took years to materialize' (trigger: took years)"
+        ]
+      },
+      "cutoff_check": {
+        "correct": true,
+        "note": "Release accepted by SEC 2019-02-06 07:48:07 ET (premarket same day). Per rule, premarket-same-day release requires next-session cutoff: 2019-02-07 09:00 ET, which matches proposed_cutoff exactly."
+      },
+      "corporate_actions": [
+        {
+          "action": "None found in REGN vendor price-events file (no splits/dividends events) for the 2019-02-07 to 2024-02-07 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "No REGN stock splits, spin-offs, or delisting known during this window.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "Primary as_of source URL never directly opened this run (WebFetch timeout); relies on SEC EDGAR exhibit as equivalent original document.",
+        "Reword as_of_facts[2] to remove 'eventual' and learning_tension to remove 'took years to materialize' -- both foreshadow the later biosimilar/patent-cliff outcome."
+      ],
+      "reject_reason": null,
+      "notes": "Facts and cutoff check out cleanly; needs spoiler-phrase rewrite and a direct fetch of the investor.regeneron.com URL (or keep SEC mirror as canonical source)."
+    },
+    {
+      "id": "commercial-exelixis-2018",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "exel-q4-2017-pr",
+          "url": "https://ir.exelixis.com/news-releases/news-release-details/exelixis-announces-fourth-quarter-and-full-year-2017-financial-0",
+          "role": "as_of",
+          "opened": false,
+          "http_status": null,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "false",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "EXEL/NASDAQ",
+          "notes": "Direct URL timed out. Verified via SEC EDGAR 8-K accession 0000939767-18-000022, accepted 2018-02-26 16:08:46 ET (i.e. AFTER market close, not before). Exhibit 99.1 (exel20171231exhibit991.htm) dateline 'South San Francisco, CA - February 26, 2018', conference call scheduled 5:00pm ET same day. Confirms cabozantinib FY2017 net product revenue $349.0M, Q4 2017 $95.7M, and Dec 2017 FDA label expansion to all advanced RCC. Because the release posted after close on the SAME day as proposed_cutoff (2018-02-26 09:00 ET), the facts were not actually available as of the stated cutoff time."
+        },
+        {
+          "id": "exel-2023-zacks",
+          "url": "https://www.zacks.com/stock/news/2131286/exelixis-exel-q2-earnings-top-cabometyx-drives-growth",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": null,
+          "publication_date_on_page": "unknown",
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "EXEL/NASDAQ",
+          "notes": "URL was reachable but returned a bot-detection interstitial page ('Pardon Our Interruption') with no article content or date visible; could not confirm publication date this run."
+        }
+      ],
+      "material_fact": {
+        "fact": "Cabozantinib (Cabometyx + Cometriq) full-year 2017 net product revenue was $349.0 million, up 158% YoY; Q4 2017 revenue was $95.7 million.",
+        "source_id": "exel-q4-2017-pr",
+        "excerpt": "Cabozantinib Franchise Net Product Revenue of $95.7 million for the Fourth Quarter of 2017, $349.0 million for the Full Year 2017.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "flagged": false,
+        "hits": []
+      },
+      "cutoff_check": {
+        "correct": false,
+        "note": "Release was accepted by SEC at 2018-02-26 16:08:46 ET, i.e. AFTER market close on Feb 26, with the earnings call held that evening (5pm ET). Proposed_cutoff of 2018-02-26T09:00 is same-day PRE-market, which is before the release existed. Correct cutoff should be the next session: 2018-02-27T09:00 America/New_York (entry price/date should also shift to 2018-02-27)."
+      },
+      "corporate_actions": [
+        {
+          "action": "None found in EXEL vendor price-events file (no splits/dividends events) for the 2018-02-26 to 2023-02-27 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "No EXEL stock splits, spin-offs, or delisting known during this window.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "Fix proposed_cutoff and entry_date to 2018-02-27T09:00 (release was after close on 2018-02-26, not before market open that day).",
+        "Primary as_of source URL never directly opened this run; SEC exhibit used as equivalent original.",
+        "zacks outcome source blocked by bot-detection; publication date unconfirmed -- try an alternate mirror or archive."
+      ],
+      "reject_reason": null,
+      "notes": "Content of the as_of facts and dollar figures check out against the SEC exhibit; the defect is entirely in cutoff timing, which places the proposed cutoff before the release actually posted."
+    },
+    {
+      "id": "commercial-gilead-2019",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "gild-q4-2018-schedule",
+          "url": "http://investors.gilead.com/news-releases/news-release-details/gilead-sciences-release-fourth-quarter-and-full-year-2018",
+          "role": "as_of",
+          "opened": false,
+          "http_status": 404,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "GILD/NASDAQ",
+          "notes": "Direct fetch returned HTTP 404 Not Found. This is a duplicate/preliminary source (schedule announcement) whose date claim is already corroborated by the main PR below."
+        },
+        {
+          "id": "gild-q4-2018-pr",
+          "url": "https://www.gilead.com/news/news-details/2019/gilead-sciences-announces-fourth-quarter-and-full-year-2018-financial-results",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2019-02-04",
+          "publication_before_cutoff": "true",
+          "original_contemporaneous": "true",
+          "security_identity_match": "GILD/NASDAQ",
+          "notes": "Opened successfully. Confirms Q4 2018 total revenue $5.8B, FY2018 total revenue $22.1B, Biktarvy launch driving growth ('primarily due to the launch of Biktarvy in 2018'), HCV decline language ('lower average net selling price and lower sales volume of Harvoni and Epclusa ... increased competition and lower patient starts'). Cross-checked via SEC EDGAR: 8-K accession 0000882095-19-000003 accepted 2019-02-04 16:04:53 ET (after market close)."
+        },
+        {
+          "id": "gild-trodelvy-outcome",
+          "url": "https://finance.yahoo.com/healthcare/articles/gilead-sciences-gild-following-trodelvy-042711760.html",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2026-07-30",
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "GILD/NASDAQ",
+          "notes": "Opened successfully. Actual date is 2026-07-30 (well beyond both cutoff and the 2024-02-05 exit anniversary) -- reachable and after cutoff, but far outside the 5-year horizon window, so its content (EU nod for Trodelvy+Keytruda combo) postdates the exit and should not be used to characterize the exit-date outcome."
+        }
+      ],
+      "material_fact": {
+        "fact": "Growth in Q4 2018 total revenue was attributed primarily to the 2018 launch of Biktarvy in HIV.",
+        "source_id": "gild-q4-2018-pr",
+        "excerpt": "The increases were primarily due to the launch of Biktarvy(R) in 2018 and the continued uptake of Descovy(R).",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "flagged": false,
+        "hits": []
+      },
+      "cutoff_check": {
+        "correct": true,
+        "note": "SEC filing accepted 2019-02-04 16:04:53 ET (after market close). Next session is 2019-02-05, matching proposed_cutoff 2019-02-05T09:00 exactly."
+      },
+      "corporate_actions": [
+        {
+          "action": "None found in GILD vendor price-events file (no splits) for the 2019-02-05 to 2024-02-05 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "Gilead acquired Immunomedics, Inc. (Trodelvy) for ~$21B, closed October 2020 -- an acquisition by Gilead, not a corporate action on GILD's own share structure.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "gild-q4-2018-schedule URL is dead (404); drop it or replace with the SEC EDGAR 8-K index for the same announcement -- the date fact it supports is already corroborated by the main PR.",
+        "Outcome source (Yahoo/Trodelvy) is dated 2026, far past the 2024-02-05 exit anniversary; find a source closer to the actual exit date if a clean 5-year outcome figure is needed."
+      ],
+      "reject_reason": null,
+      "notes": "Core as_of source and material fact fully verified with matching security identity and pre-cutoff timing; only the redundant schedule source and outcome-source dating need cleanup."
+    },
+    {
+      "id": "commercial-biogen-2021",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "biib-q4-2020-pr",
+          "url": "https://investors.biogen.com/static-files/9d0b52a8-22b5-4742-af9d-8138469ac89f",
+          "role": "as_of",
+          "opened": false,
+          "http_status": null,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "Direct URL timed out on WebFetch; candidate's own availability_notes already flagged this URL as possibly mismatched (may be Q3 2020, not Q4). Not independently confirmed this run."
+        },
+        {
+          "id": "biib-q4-2020-sec",
+          "url": "https://www.sec.gov/Archives/edgar/data/875045/000087504521000005/exhibit991-q42020pressrele.htm",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2021-02-03",
+          "publication_before_cutoff": "true",
+          "original_contemporaneous": "true",
+          "security_identity_match": "BIIB/NASDAQ",
+          "notes": "Opened successfully. Dateline 'Cambridge, Mass., February 3, 2021'. Confirms Q4 2020 revenue $2,853M, FY2020 revenue $13,445M, FY GAAP diluted EPS $24.80, aducanumab PDUFA date extended to June 7 2021, ~$600M launch budget with ~$200M reimbursable by Eisai. SEC accession 0000875045-21-000005 accepted 2021-02-03 07:04:08 ET (premarket)."
+        },
+        {
+          "id": "cnn-aduhelm-discontinued-2024",
+          "url": "https://www.cnn.com/2024/01/31/health/aduhelm-alzheimers-biogen",
+          "role": "outcome_only",
+          "opened": false,
+          "http_status": 451,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "Direct fetch returned HTTP 451 Unavailable For Legal Reasons (geo/legal block). Not opened; date and content not confirmed this run."
+        }
+      ],
+      "material_fact": {
+        "fact": "Aducanumab was under FDA review with a PDUFA date extended to June 7, 2021; Biogen had budgeted approximately $600 million for a potential launch, ~$200 million reimbursable by Eisai.",
+        "source_id": "biib-q4-2020-sec",
+        "excerpt": "PDUFA date extended to June 7, 2021, in U.S. ... approximately $600 million in support of the potential launch of aducanumab, of which roughly $200 million would be reimbursable by Eisai Co., Ltd.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "flagged": true,
+        "hits": [
+          "learning_tension: 'a binary, ultimately unsuccessful commercial launch riding alongside ordinary MS-franchise patent-cliff erosion' (trigger: ultimately unsuccessful) -- explicitly reveals the aducanumab outcome before the 2021-02-04 cutoff."
+        ]
+      },
+      "cutoff_check": {
+        "correct": true,
+        "note": "SEC filing accepted 2021-02-03 07:04:08 ET (premarket same day). Next session is 2021-02-04, matching proposed_cutoff 2021-02-04T09:00 exactly."
+      },
+      "corporate_actions": [
+        {
+          "action": "None found in BIIB vendor price-events file (no splits) for the 2021-02-04 to 2024-02-05 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "No BIIB stock splits or spin-offs known during this window. Biogen discontinued Aduhelm (announced Jan 31, 2024) -- a product/business decision, not a corporate action on the security.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "learning_tension must be reworded to remove 'ultimately unsuccessful' -- this is a direct, severe outcome spoiler for a still-pending FDA review as of the cutoff.",
+        "biib-q4-2020-pr (investors.biogen.com) URL times out and was already flagged by the researcher as possibly the wrong quarter; replace with the confirmed SEC exhibit URL as the canonical as_of source.",
+        "CNN outcome source returns 451; find an alternate mirror (e.g. Biogen's own press release announcing discontinuation) to confirm the Jan 31 2024 date."
+      ],
+      "reject_reason": null,
+      "notes": "Numeric facts and cutoff timing are solid via the SEC exhibit; the severe spoiler phrase is the dominant defect and must be fixed before this can pass."
+    },
+    {
+      "id": "commercial-amgen-2018",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "amgn-q4-2017-pr",
+          "url": "https://investors.amgen.com/news-releases/news-release-details/amgen-reports-fourth-quarter-and-full-year-2017-financial/",
+          "role": "as_of",
+          "opened": false,
+          "http_status": null,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "AMGN/NASDAQ",
+          "notes": "Original URL not fetched this run (went directly to SEC EDGAR to conserve budget). Verified via SEC EDGAR: 8-K accession 0001193125-18-029315, accepted 2018-02-01 16:18:03 ET (after close). Exhibit 99.1 (d509957dex991.htm) dateline 'THOUSAND OAKS, Calif. (Feb. 1, 2018)' confirms FY2017 total revenue -1% to $22.8B, Q4 2017 -3% to $5.8B, Enbrel Q4 2017 -13%, FY2017 -9%."
+        },
+        {
+          "id": "amgn-enbrel-patent-win-2020",
+          "url": "https://www.biopharmadive.com/news/novartis-challenge-to-amgens-enbrel-patents-ends-at-supreme-courts-door/600329/",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2021-05-18",
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "AMGN/NASDAQ (Enbrel)",
+          "notes": "Opened successfully. Actual publication date is 2021-05-18, NOT '2020' as the candidate listed. Confirms Supreme Court declined to hear Novartis/Sandoz's challenge, keeping Sandoz's Erelzi biosimilar off the US market until 2029."
+        }
+      ],
+      "material_fact": {
+        "fact": "Enbrel (etanercept) sales decreased 13% for Q4 2017 and 9% for full-year 2017, driven by lower unit demand and net selling price.",
+        "source_id": "amgn-q4-2017-pr",
+        "excerpt": "Enbrel ... sales decreased 13 percent for the fourth quarter ... decreased 9 percent for the full year.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "flagged": false,
+        "hits": []
+      },
+      "cutoff_check": {
+        "correct": true,
+        "note": "SEC filing accepted 2018-02-01 16:18:03 ET (after market close). Next session is 2018-02-02, matching proposed_cutoff 2018-02-02T09:00 exactly."
+      },
+      "corporate_actions": [
+        {
+          "action": "None found in AMGN vendor price-events file (no splits) for the 2018-02-02 to 2023-02-02 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "No AMGN stock splits or spin-offs known during this window.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "as_of_facts[2] cites source_id 'amgn-enbrel-litigation', which does not exist anywhere in the candidate's sources array -- add a source (e.g. contemporaneous coverage of the Sandoz/Erelzi litigation) or remove the claim.",
+        "Correct the outcome source's published_date from '2020 (exact date unconfirmed)' to the confirmed 2021-05-18.",
+        "Primary as_of press release URL was not directly fetched this run; confirm investors.amgen.com resolves, or adopt the SEC exhibit as the canonical URL."
+      ],
+      "reject_reason": null,
+      "notes": "Financial figures and cutoff check out cleanly via the SEC exhibit and outcome article; main issue is a broken source_id reference and a wrong outcome-source date in the original research."
+    },
+    {
+      "id": "commercial-alnylam-2022",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "alny-q4-2021-pr",
+          "url": "https://investors.alnylam.com/press-release?id=26471",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2022-02-10",
+          "publication_before_cutoff": "true",
+          "original_contemporaneous": "true",
+          "security_identity_match": "ALNY/NASDAQ",
+          "notes": "Opened successfully. Confirms FY2021 net product revenue: Onpattro $474.7M, Givlaari $127.8M, Oxlumo $59.6M, '83% Annual Growth Compared to 2020'. SEC cross-check: 8-K accession 0001157523-22-000175 accepted 2022-02-10 08:10:23 ET (premarket)."
+        },
+        {
+          "id": "alny-2024-fy-results",
+          "url": "https://investors.alnylam.com/press-release?id=28611",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2025-01-12",
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "ALNY/NASDAQ",
+          "notes": "Opened successfully. Dated 2025-01-12 (before the 2025-02-11 exit anniversary but after the 2022-02-11 cutoff -- acceptable for outcome_only). Confirms FY2024 net product revenue $1,646M (+33%), 2025 guidance $2,050-2,250M."
+        }
+      ],
+      "material_fact": {
+        "fact": "Full-year 2021 net product revenues grew 83% year-over-year; Onpattro reached $475 million (up 55%), Givlaari $128 million (up 132%), and Oxlumo $60 million in its first full year.",
+        "source_id": "alny-q4-2021-pr",
+        "excerpt": "ONPATTRO $474,737 thousand; GIVLAARI $127,815 thousand; OXLUMO $59,586 thousand; 83% Annual Growth Compared to 2020.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "flagged": true,
+        "hits": [
+          "learning_tension: 'a classic biotech growth now, profits later tension' (trigger: later) -- generic business idiom, not an outcome-specific reveal, but matches the required trigger-word scan."
+        ]
+      },
+      "cutoff_check": {
+        "correct": true,
+        "note": "SEC filing accepted 2022-02-10 08:10:23 ET (premarket same day). Next session is 2022-02-11, matching proposed_cutoff 2022-02-11T09:00 exactly."
+      },
+      "corporate_actions": [
+        {
+          "action": "None found in ALNY vendor price-events file (no splits) for the 2022-02-11 to 2025-02-11 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "No ALNY stock splits or spin-offs known during this window.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "learning_tension contains the trigger word 'later' ('profits later') -- reword to be safe, though this reads as a generic business idiom rather than a genuine spoiler about ALNY's specific outcome."
+      ],
+      "reject_reason": null,
+      "notes": "Cleanest candidate verified so far aside from the idiomatic trigger-word hit: both sources opened directly, all figures matched verbatim, cutoff timing correct."
+    },
+    {
+      "id": "commercial-incyte-2020",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "incy-q4-2019-pr",
+          "url": "https://investor.incyte.com/news-releases/news-release-details/incyte-reports-2019-fourth-quarter-and-year-end-financial",
+          "role": "as_of",
+          "opened": false,
+          "http_status": null,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "INCY/NASDAQ",
+          "notes": "Direct URL timed out on WebFetch. SEC EDGAR located via full-text search: 8-K accession 0001104659-20-019696, filed 2020-02-13, Exhibit EX-99.1 file tm207724d1_ex99-1.htm -- but the exhibit itself was NOT fetched this run (WebFetch budget of 45 exhausted). A WebSearch corroborated the headline figures (Jakafi FY2019 $1.7B, Q4 $466M; total FY2019 $2.1B, Q4 $579M) via search snippets only -- per instructions this does not count as verification."
+        },
+        {
+          "id": "incy-jakafi-competition-2023",
+          "url": "https://www.fiercepharma.com/pharma/incyte-crosses-1b-quarterly-revenue-first-time-jakafi-faces-against-gsk-rival",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 403,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "Direct fetch returned HTTP 403 Forbidden. Not opened; date and content not confirmed this run."
+        }
+      ],
+      "material_fact": {
+        "fact": "Jakafi revenues were $466 million in Q4 2019 (up 23%) and $1.7 billion for full-year 2019 (up 21%).",
+        "source_id": "incy-q4-2019-pr",
+        "excerpt": "unverified -- figures corroborated only via WebSearch snippet, not a verbatim quote from a fetched page.",
+        "confirmed": "unverified"
+      },
+      "spoiler_scan": {
+        "flagged": true,
+        "hits": [
+          "learning_tension: 'a slow-building competitive and patent-cliff narrative that only became a visible headwind roughly three years later' (triggers: later, three years later) -- explicit outcome reveal naming the timing of a future competitive headwind."
+        ]
+      },
+      "cutoff_check": {
+        "correct": "unknown",
+        "note": "Could not confirm release time-of-day this run (source unopened, budget exhausted before an SEC acceptance-datetime check could be made). Proposed_cutoff 2020-02-14T09:00 (day after the stated 2020-02-13 release date) is plausible if the release was after-close, but is unverified."
+      },
+      "corporate_actions": [
+        {
+          "action": "None found in INCY vendor price-events file (no splits) for the 2020-02-14 to 2023-02-14 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "No INCY stock splits or spin-offs known during this window.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "Primary as_of source never opened this run; fetch SEC EDGAR accession 0001104659-20-019696 exhibit tm207724d1_ex99-1.htm (identified but not retrieved due to budget) to get a verbatim excerpt and confirm release time-of-day for the cutoff check.",
+        "learning_tension must be reworded to remove 'only became a visible headwind roughly three years later' -- this is a direct, dated outcome spoiler almost identical to the addendum's flagged example.",
+        "fiercepharma outcome source returns 403; find an alternate mirror to confirm its date."
+      ],
+      "reject_reason": null,
+      "notes": "Weakest-verified candidate in the batch: no as_of source was actually opened this run, and it carries the most severe spoiler phrase found. Needs another verification pass before it can be considered for pass."
+    },
+    {
+      "id": "commercial-merck-2019",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "mrk-q4-2018-pr",
+          "url": "https://www.merck.com/news/merck-announces-fourth-quarter-and-full-year-2018-financial-results/",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2019-02-01",
+          "publication_before_cutoff": "true",
+          "original_contemporaneous": "true",
+          "security_identity_match": "MRK/NYSE",
+          "notes": "Opened successfully. Dateline 'February 1, 2019 6:45 am EST, KENILWORTH, N.J.' (premarket). Confirms Q4 2018 worldwide sales $11.0B (+5%), FY2018 worldwide sales $42.3B (+5%), FY2018 GAAP EPS $2.32 / non-GAAP EPS $4.34, FY2019 guidance sales $43.2-44.7B / GAAP EPS $3.97-4.12, and KEYNOTE-181 esophageal cancer results (31% reduction in risk of death vs chemo)."
+        },
+        {
+          "id": "mrk-keytruda-cliff-2024",
+          "url": "https://www.investing.com/news/swot-analysis/mercks-swot-analysis-stock-faces-keytruda-patent-cliff-gardasil-challenges-93CH-4140974",
+          "role": "outcome_only",
+          "opened": false,
+          "http_status": 404,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "unknown",
+          "notes": "Direct fetch returned HTTP 404 Not Found. Not opened; date and content not confirmed this run."
+        }
+      ],
+      "material_fact": {
+        "fact": "Merck announced Q4 2018 worldwide sales of $11.0 billion (up 5%) and full-year 2018 worldwide sales of $42.3 billion (up 5%).",
+        "source_id": "mrk-q4-2018-pr",
+        "excerpt": "Fourth-Quarter 2018 Worldwide Sales Were $11.0 Billion, an Increase of 5 Percent; Full-Year 2018 Worldwide Sales Were $42.3 Billion, an Increase of 5 Percent.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "flagged": true,
+        "hits": [
+          "player_question: 'a distant eventual patent expiration' (trigger: eventual).",
+          "learning_tension: 'unexpected single-market/single-product concentration risk over time (Gardasil/China)' -- names a specific future (2024) development (China Gardasil demand collapse) not knowable as of the 2019 cutoff (trigger: named future event)."
+        ]
+      },
+      "cutoff_check": {
+        "correct": true,
+        "note": "Press release dateline states '6:45 am EST' on 2019-02-01 (premarket same day). Per rule, premarket-same-day requires next-session cutoff; next trading session after Friday Feb 1 is Monday 2019-02-04, matching proposed_cutoff 2019-02-04T09:00 exactly."
+      },
+      "corporate_actions": [
+        {
+          "action": "MRK vendor price-events file shows a 'split' event dated 2021-06-03, ratio 1048:1000, inside the 2019-02-04 to 2024-02-05 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "This small-ratio 'split' corresponds to Merck's spin-off of Organon & Co. (OGN) to shareholders, completed June 2, 2021 (approximately 1 OGN share per 10 MRK shares); vendor data represents the value transfer as a nominal split adjustment.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "Reword player_question to remove 'eventual' from 'a distant eventual patent expiration'.",
+        "Remove or generalize the explicit '(Gardasil/China)' aside in learning_tension -- it names a specific 2024 development that postdates and is unrelated to the original 2019 Keytruda-concentration thesis.",
+        "Outcome source (investing.com) is dead (404); replace with an alternate 2024 Merck 10-K/earnings-call source for the Keytruda patent-cliff and Gardasil China commentary.",
+        "Add the June 2021 Organon spin-off to corporate_actions in the final record; it is a real, material distribution inside the holding window."
+      ],
+      "reject_reason": null,
+      "notes": "As-of facts and cutoff are solidly verified directly from the primary release; the defects are two spoiler phrases and a dead outcome link, plus an important unlisted corporate action (Organon spin-off)."
+    },
+    {
+      "id": "commercial-harmony-2023",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "hrmy-q4-2022-pr",
+          "url": "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-reports-fourth-quarter-and-full-year-2022",
+          "role": "as_of",
+          "opened": false,
+          "http_status": null,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "HRMY/NASDAQ",
+          "notes": "Direct URL timed out on WebFetch. SEC EDGAR located via full-text search: 8-K accession 0001558370-23-001572, filed 2023-02-21, Exhibit EX-99.1 file hrmy-20230221xex99d1.htm -- but the exhibit itself was NOT fetched this run (WebFetch budget of 45 exhausted). A WebSearch corroborated the headline figures (Wakix FY2022 $437.9M +43%, Q4 $128.3M +41%, net income $181.5M, ~4,900 patients) via search snippets only -- per instructions this does not count as verification."
+        },
+        {
+          "id": "hrmy-q4-2023-pr",
+          "url": "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-reports-fourth-quarter-and-full-year-2023/",
+          "role": "outcome_only",
+          "opened": false,
+          "http_status": null,
+          "publication_date_on_page": null,
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "HRMY/NASDAQ",
+          "notes": "Direct URL timed out on WebFetch. Not opened; date and content not confirmed this run."
+        }
+      ],
+      "material_fact": {
+        "fact": "Wakix (pitolisant) full-year 2022 net revenue was $437.9 million (up ~43%); full-year 2022 net income was $181.5 million.",
+        "source_id": "hrmy-q4-2022-pr",
+        "excerpt": "unverified -- figures corroborated only via WebSearch snippet, not a verbatim quote from a fetched page.",
+        "confirmed": "unverified"
+      },
+      "spoiler_scan": {
+        "flagged": false,
+        "hits": []
+      },
+      "cutoff_check": {
+        "correct": "unknown",
+        "note": "Could not confirm release time-of-day this run (source unopened, budget exhausted before an SEC acceptance-datetime check could be made). Proposed_cutoff 2023-02-22T09:00 (day after the stated 2023-02-21 release date) is plausible if the release was after-close, but is unverified."
+      },
+      "corporate_actions": [
+        {
+          "action": "None found in HRMY vendor price-events file (no splits) for the 2023-02-22 to 2024-02-22 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "No HRMY stock splits or spin-offs known during this window.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "Neither source was opened this run (both timed out). Fetch SEC EDGAR accession 0001558370-23-001572 exhibit hrmy-20230221xex99d1.htm (identified but not retrieved due to budget) for a verbatim excerpt and release time-of-day.",
+        "Also confirm hrmy-q4-2023-pr (outcome source) reachability and date on a future pass."
+      ],
+      "reject_reason": null,
+      "notes": "No spoiler-phrase issues found in the required text fields, but neither source was actually opened this run -- both need a follow-up verification pass before this can be considered for pass."
+    },
+    {
+      "id": "commercial-neurocrine-2023",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "nbix-q4-2022-pr",
+          "url": "https://www.prnewswire.com/news-releases/neurocrine-biosciences-reports-fourth-quarter-and-fiscal-2022-financial-results-and-provides-financial-expectations-for-2023-301739079.html",
+          "role": "as_of",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2023-02-06",
+          "publication_before_cutoff": "true",
+          "original_contemporaneous": "true",
+          "security_identity_match": "NBIX/NASDAQ",
+          "notes": "Opened successfully. Dateline 'Feb 06, 2023, 07:30 ET, SAN DIEGO' (premarket). Confirms Ingrezza Q4 2022 net product sales $399M, FY2022 $1.43B, Q4 2022 GAAP net income $89.0M / diluted EPS $0.88, non-GAAP diluted EPS $1.24, and 2023 Ingrezza guidance $1,670-1,770M."
+        },
+        {
+          "id": "nbix-q4-2023-pr",
+          "url": "https://www.prnewswire.com/news-releases/neurocrine-biosciences-reports-fourth-quarter-and-fiscal-2023-financial-results-and-provides-financial-expectations-for-2024-302055386.html",
+          "role": "outcome_only",
+          "opened": true,
+          "http_status": 200,
+          "publication_date_on_page": "2024-02-07",
+          "publication_before_cutoff": "unknown",
+          "original_contemporaneous": "unknown",
+          "security_identity_match": "NBIX/NASDAQ",
+          "notes": "Opened successfully. Dated 2024-02-07, matching the proposed_exit_date exactly. Confirms FY2023 Ingrezza net product sales $1,860.6M (~$1.84B headline), +29% YoY."
+        }
+      ],
+      "material_fact": {
+        "fact": "Ingrezza Q4 2022 net product sales were $399 million (up 33% YoY) and full-year 2022 net product sales were $1.43 billion.",
+        "source_id": "nbix-q4-2022-pr",
+        "excerpt": "INGREZZA net product sales of $399 million for Q4 2022; full-year 2022 net product sales of $1.43 billion.",
+        "confirmed": "true"
+      },
+      "spoiler_scan": {
+        "flagged": true,
+        "hits": [
+          "player_question: 'continued strong execution on one core commercial product, ahead of pipeline catalysts' (trigger: ahead of) -- reads as benign timing language (current execution precedes catalyst readouts), not a specific outcome reveal, but matches the required trigger-word scan."
+        ]
+      },
+      "cutoff_check": {
+        "correct": true,
+        "note": "Press release dateline states 'Feb 06, 2023, 07:30 ET' (premarket same day). Per rule, premarket-same-day requires next-session cutoff: 2023-02-07T09:00, matching proposed_cutoff exactly."
+      },
+      "corporate_actions": [
+        {
+          "action": "None found in NBIX vendor price-events file (no splits) for the 2023-02-07 to 2024-02-07 window.",
+          "status": "known_from_source"
+        },
+        {
+          "action": "No NBIX stock splits or spin-offs known during this window.",
+          "status": "model_memory_unverified"
+        }
+      ],
+      "repairs": [
+        "player_question contains the trigger word 'ahead of' -- reword to be safe, though this reads as generic timing/structure language rather than a genuine outcome spoiler."
+      ],
+      "reject_reason": null,
+      "notes": "Second-cleanest candidate in the batch: both sources opened directly with verbatim-matching figures, outcome source lands exactly on the exit-date anniversary, cutoff timing confirmed correct."
+    }
+  ]
+}

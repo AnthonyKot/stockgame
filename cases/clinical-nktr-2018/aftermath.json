@@ -1,0 +1,288 @@
+{
+  "candidate_id": "clinical-nktr-2018",
+  "cutoff": "2018-02-15",
+  "coverage_end": "2023-02-15",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2018-04-03",
+      "kind": "deal",
+      "headline": "BMS-Nektar collaboration agreement formally closes; Nektar receives $1.0B upfront plus $850M equity proceeds",
+      "detail": "The Strategic Collaboration Agreement dated February 13, 2018 became effective after Hart-Scott-Rodino antitrust clearance; Nektar received the $1.0 billion upfront payment and $850.0 million in share-purchase proceeds on this date, growing cash and investments from $353.2 million at year-end 2017 to $2.1 billion by June 30, 2018.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Nektar Therapeutics Reports Financial Results for the Second Quarter of 2018 (Form 8-K exhibit)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000906709/000161577418007728/s111953_ex99-1.htm",
+        "publisher": "SEC EDGAR / Nektar Therapeutics",
+        "published": "2018-08-08"
+      },
+      "opened": true,
+      "opened_note": "Used the Q2 2018 earnings 8-K exhibit, which restates the April 3, 2018 closing and payment amounts, because the original April 2018 closing announcement was not independently located and opened."
+    },
+    {
+      "id": "e2",
+      "date": "2018-06-02",
+      "kind": "clinical",
+      "headline": "ASCO 2018 data show PIVOT combination response rates fall as patient cohorts grow beyond the first small groups",
+      "detail": "In the melanoma arm, the objective response rate was 85% in the first 13 evaluable patients but 50% (14/28) once the cohort expanded; in renal-cell carcinoma, the rate was 64% in the first 11 patients but 46% (12/26) in the expanded cohort. Among 283 patients treated at the recommended dose, 14.1% had a Grade 3+ treatment-related adverse event.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Preliminary Data for NKTR-214 in Combination with Opdivo (nivolumab) for Patients with Stage IV Metastatic Melanoma, Renal Cell Carcinoma, and Urothelial Cancers Presented at ASCO 2018 (Form 8-K exhibit)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000906709/000161577418004763/s110616_ex99-1.htm",
+        "publisher": "SEC EDGAR / Nektar Therapeutics",
+        "published": "2018-06-02"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e3",
+      "date": "2018-10-22",
+      "kind": "other",
+      "headline": "A short-seller research report questioning NKTR-214's drug-exposure data coincides with a sharp one-day share decline",
+      "detail": "Plainview LLC published a report arguing the clinical dose of NKTR-214 delivers only 7-20% of the active drug exposure of standard IL-2 treatment and comparing the development thesis to a previously disproven immuno-oncology approach; the stock fell sharply the same day, compounding concerns raised by the diminished ASCO response rates reported that summer.",
+      "attribution": "source",
+      "source_quote": "Nektar Therapeutics Crashed 17.2% Today",
+      "source": {
+        "title": "Why Nektar Therapeutics Crashed 17.2% Today",
+        "url": "https://www.fool.com/investing/2018/10/22/why-nektar-therapeutics-crashed-172-today.aspx",
+        "publisher": "The Motley Fool",
+        "published": "2018-10-22"
+      },
+      "opened": true,
+      "opened_note": "News source used because the Plainview report itself is not a public company filing; this is market-wide/company-specific commentary, not a primary regulatory or company source."
+    },
+    {
+      "id": "e4",
+      "date": "2018-10",
+      "kind": "legal",
+      "headline": "Pension funds file a securities class action alleging Nektar misrepresented NKTR-214 trial data before the BMS deal",
+      "detail": "Two pension funds sued on behalf of investors who purchased Nektar stock between January 10, 2017 and September 28, 2018, alleging the company's promotional \"30-fold\" efficacy chart drew on data that included an outlier patient result and misrepresented the drug's activity ahead of and after the BMS collaboration.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "In re Nektar Therapeutics: Ninth Circuit Affirms Dismissal of Securities Class Action Arising from Failure of Clinical Drug Trial",
+        "url": "https://sle.cooley.com/2022/06/06/in-re-nektar-therapeutics-ninth-circuit-affirms-dismissal-of-securities-class-action-arising-from-failure-of-clinical-drug-trial/",
+        "publisher": "Cooley LLP (Securities Litigation + Enforcement blog)",
+        "published": "2022-06-06"
+      },
+      "opened": true,
+      "opened_note": "This legal-analysis summary states the complaint was filed in October 2018 without giving the exact calendar day; date approximated to 2018-10-01. The original complaint itself was not independently opened.",
+      "date_precision": "month"
+    },
+    {
+      "id": "e5",
+      "date": "2019-06-01",
+      "kind": "clinical",
+      "headline": "Updated ASCO 2019 data show the melanoma combination's response and complete-response rates recovering",
+      "detail": "With 12-month follow-up in 38 efficacy-evaluable first-line metastatic melanoma patients, the objective response rate was 53% and the complete-response rate was 34%, with 80% of responses ongoing; the company reported no direct comparison figures for renal-cell carcinoma in this release.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Nektar Therapeutics Presents Biomarker and Clinical Data from PIVOT-02 Phase 2 Study of Bempegaldesleukin with Nivolumab at 2019 ASCO Annual Meeting",
+        "url": "https://www.prnewswire.com/news-releases/nektar-therapeutics-presents-biomarker-and-clinical-data-from-pivot-02-phase-2-study-of-bempegaldesleukin-with-nivolumab-at-2019-asco-annual-meeting-300860219.html",
+        "publisher": "PR Newswire (Nektar Therapeutics)",
+        "published": "2019-06-01"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2021-02-17",
+      "kind": "financing",
+      "headline": "Nektar secures up to $150 million in non-dilutive financing from SFJ Pharmaceuticals for a new registrational trial",
+      "detail": "SFJ Pharmaceuticals agreed to fund up to $150 million and manage operations for a new Phase 2/3 registrational study of bempegaldesleukin plus pembrolizumab in PD-L1-positive head and neck cancer, expected to complete in 2024; Nektar's CEO said the deal provided funding to broaden the registrational program without equity dilution.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Nektar Announces Collaboration with SFJ Pharmaceuticals for Bempegaldesleukin in Head and Neck Cancer",
+        "url": "https://www.prnewswire.com/news-releases/nektar-announces-collaboration-with-sfj-pharmaceuticals-for-bempegaldesleukin-in-head-and-neck-cancer-301229585.html",
+        "publisher": "PR Newswire (Nektar Therapeutics)",
+        "published": "2021-02-17"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e7",
+      "date": "2022-03-14",
+      "kind": "clinical",
+      "headline": "Pivotal Phase 3 PIVOT IO-001 trial in melanoma misses its co-primary endpoints against Opdivo alone",
+      "detail": "In 783 previously untreated melanoma patients, the bempegaldesleukin-plus-Opdivo combination did not meet the co-primary endpoints of progression-free survival or objective response rate versus Opdivo monotherapy, and overall survival did not reach statistical significance at the first interim analysis; the companies unblinded the trial and stopped enrollment in the related adjuvant-melanoma study, PIVOT-12, while continuing four other ongoing studies in renal-cell and bladder cancer.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Bristol Myers Squibb and Nektar Announce Update on Phase 3 PIVOT IO-001 Trial Evaluating Bempegaldesleukin (BEMPEG) in Combination with Opdivo (nivolumab) in Previously Untreated Unresectable or Metastatic Melanoma (Form 8-K exhibit)",
+        "url": "https://www.sec.gov/Archives/edgar/data/906709/000121390022011983/ea156805ex99-1_nektartherape.htm",
+        "publisher": "SEC EDGAR / Nektar Therapeutics",
+        "published": "2022-03-14"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e8",
+      "date": "2022-04-14",
+      "kind": "clinical",
+      "headline": "Nektar and BMS jointly end the entire global bempegaldesleukin-plus-Opdivo development program",
+      "detail": "The companies discontinued all ongoing studies in the combination program, including PIVOT-09 (Phase 3, renal-cell carcinoma), PIVOT-10 (Phase 2, urothelial cancer), and two other studies; an independent Data Monitoring Committee found PIVOT-09's response-rate benefit versus a tyrosine-kinase-inhibitor control did not meet its pre-specified statistical boundary, and PIVOT-10 did not reach its efficacy threshold.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Nektar and Bristol Myers Squibb Announce Update on Clinical Development Program for Bempegaldesleukin (BEMPEG) in Combination with Opdivo (nivolumab)",
+        "url": "https://www.prnewswire.com/news-releases/nektar-and-bristol-myers-squibb-announce-update-on-clinical-development-program-for-bempegaldesleukin-bempeg-in-combination-with-opdivo-nivolumab-301526222.html",
+        "publisher": "PR Newswire (Nektar Therapeutics / Bristol Myers Squibb)",
+        "published": "2022-04-14"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e9",
+      "date": "2022-05-19",
+      "kind": "legal",
+      "headline": "Ninth Circuit affirms dismissal of the 2018 securities class action over NKTR-214 data disclosures",
+      "detail": "The appeals court unanimously affirmed the district court's dismissal with prejudice, holding the plaintiffs failed to adequately allege falsity and loss causation regarding the pre-2018 efficacy chart and subsequent disclosures.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "In re Nektar Therapeutics: Ninth Circuit Affirms Dismissal of Securities Class Action Arising from Failure of Clinical Drug Trial",
+        "url": "https://sle.cooley.com/2022/06/06/in-re-nektar-therapeutics-ninth-circuit-affirms-dismissal-of-securities-class-action-arising-from-failure-of-clinical-drug-trial/",
+        "publisher": "Cooley LLP (Securities Litigation + Enforcement blog)",
+        "published": "2022-06-06"
+      },
+      "opened": true,
+      "opened_note": "The Cooley analysis, published after the ruling, gives the May 19, 2022 decision date; the Ninth Circuit opinion itself was not independently opened."
+    }
+  ],
+  "horizon_notes": {
+    "1": "By the one-year mark (2019-02-15), the record shows the BMS collaboration closed on schedule in April 2018 with the promised $1.85 billion in combined upfront and equity proceeds [e1], but the pivotal-trial-readiness data that followed complicated the picture: ASCO 2018 data in June showed response rates roughly halving as the melanoma and renal-cell cohorts grew from a handful of patients to two to three dozen [e2], a short-seller report and a sharp one-day decline followed in October [e3], and a securities class action covering this period was filed the same month [e4]. Interpretation: the packet's flagged catalysts (deal closing, mid-2018 pivotal-study progress) occurred on the guided timeline, but its unresolved question -- whether early uncontrolled response rates would hold up as more patients were added -- received an early, discouraging partial answer within the first year, which the packet could not have shown a reader in advance.",
+    "3": "By the three-year mark (2021-02-15), updated 2019 ASCO data showed the melanoma cohort's response and complete-response rates recovering (53% ORR, 34% CR, up from the prior year) [e5], following the 2018 deal closing and the disclosures and litigation that followed it [e1][e2][e3][e4]. Interpretation: through three years, the packet's central question -- whether a large partner's premium mainly reflected confidence in the science or the option value of broad indication access -- remained genuinely open: BMS stayed in the collaboration and the data had stabilized, but no registration-enabling (pivotal, Phase 3) trial had yet read out, so the packet's most consequential uncertainty was still empirically untested at this point.",
+    "5": "By the five-year mark (2023-02-15), Nektar had added non-dilutive financing for a further registrational trial via SFJ Pharmaceuticals in February 2021 [e6], but the first pivotal (Phase 3) readout, PIVOT IO-001 in melanoma, missed its co-primary endpoints in March 2022 [e7], leading Nektar and BMS to jointly end the entire global bempegaldesleukin-Opdivo combination program in April 2022 across melanoma, renal-cell, urothelial and other studies [e8]; separately, the Ninth Circuit affirmed dismissal of the 2018 securities litigation in May 2022 [e9]. Interpretation: the packet's central unresolved question -- whether pivotal-scale trials would confirm the early, uncontrolled response rates that justified BMS's premium -- was answered negatively within this window: the first Phase 3 readout failed and the entire combination program with BMS ended, an outcome the packet could flag as a risk (via the field's base rates and the packet's own three unresolved questions) but could not predict."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "The exact calendar day of the October 2018 securities-suit filing (e4) is approximate; only a 2022 secondary legal-analysis summary was opened, not the original complaint.",
+    "A January 2020 amendment expanding the BMS-Nektar registrational trial program (from three to five trials, per unopened secondary summaries) is not included as an event: businesswire.com and streetinsider.com pages describing it returned 403 errors, and the one primary source that was opened (a Bristol-Myers Squibb earnings-release exhibit) confirmed only that an amendment occurred in January 2020 without stating its substance, which was judged too thin to support a standalone event with confident detail.",
+    "ir.nektar.com press-release pages timed out repeatedly and could not be opened directly; SEC EDGAR filings and PR Newswire/BioSpace wire copies were used instead where available.",
+    "This timeline focuses on the NKTR-214/bempegaldesleukin catalysts flagged in the pre-cutoff packet; it does not cover the royalty business (AstraZeneca's Movantik, Baxalta/Shire's Adynovate) or Nektar's post-2023 pipeline pivot toward immunology and rezpegaldesleukin, which falls outside the five-year window.",
+    "No macro-context event is included: a search for 2022 sector-wide biotech-downturn commentary tied specifically to Nektar did not surface a source that both discussed sector-wide conditions and was independently verifiable within budget; the company-specific trial failures (e7, e8) are treated as the dominant explanation instead."
+  ],
+  "search_log": [
+    {
+      "query_or_url": "Nektar Therapeutics NKTR-214 bempegaldesleukin BMS collaboration closes April 2018",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics stock crash June 2019 ASCO abstract NKTR-214 data",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.fool.com/investing/2018/10/22/why-nektar-therapeutics-crashed-172-today.aspx",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.thestreet.com/investing/stocks/nektar-therapeutics-shares-just-got-hammered-14610395",
+      "result": "403"
+    },
+    {
+      "query_or_url": "https://www.fiercebiotech.com/biotech/asco18-mixed-reaction-to-nektar-s-confusing-nktr-214-trial",
+      "result": "403"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics PIVOT IO-001 Phase 3 melanoma missed primary endpoint press release February 2022",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/906709/000121390022011983/ea156805ex99-1_nektartherape.htm",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics ASCO 2019 bempegaldesleukin data June 2019 press release SEC 8-K response rate",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "\"Nektar Therapeutics\" ASCO June 2019 stock plunge fool.com OR thestreet.com \"response rate\"",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.prnewswire.com/news-releases/nektar-therapeutics-presents-biomarker-and-clinical-data-from-pivot-02-phase-2-study-of-bempegaldesleukin-with-nivolumab-at-2019-asco-annual-meeting-300860219.html",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics NKTR-214 PIVOT-02 ASCO 2018 June press release response rate melanoma renal cell carcinoma",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/0000906709/000161577418004763/s110616_ex99-1.htm",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.prnewswire.com/news-releases/nektar-and-bristol-myers-squibb-announce-update-on-clinical-development-program-for-bempegaldesleukin-bempeg-in-combination-with-opdivo-nivolumab-301526222.html",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics PIVOT-09 renal cell carcinoma Phase 3 trial initiated 2018 bempegaldesleukin",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics securities class action lawsuit filed 2019 NKTR-214 misleading statements",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://sle.cooley.com/2022/06/06/in-re-nektar-therapeutics-ninth-circuit-affirms-dismissal-of-securities-class-action-arising-from-failure-of-clinical-drug-trial/",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics Bristol-Myers Squibb collaboration transaction closes April 3 2018 8-K",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/0000906709/000161577418007728/s111953_ex99-1.htm",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics 2022 biotech sector downturn cash runway stock decline rate hikes unprofitable",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.gurufocus.com/news/2636053/nektar-therapeutics-nktr-stock-plummets-amidst-biotech-sector-decline",
+      "result": "opened (not used: wrong year, 2024 article)"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics fourth quarter full year 2022 financial results SEC 8-K date cash runway",
+      "result": "opened (not used: release date 2023-02-28 falls after coverage_end)"
+    },
+    {
+      "query_or_url": "https://www.businesswire.com/news/home/20200110005103/en/Nektar-Therapeutics-Bristol-Myers-Squibb-Amend-Strategic-Collaboration",
+      "result": "403"
+    },
+    {
+      "query_or_url": "\"Nektar Therapeutics and Bristol-Myers Squibb Amend Strategic Collaboration\" prnewswire OR globenewswire January 2020",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/14272/000001427220000075/q42019ex991.htm",
+      "result": "opened (thin confirmatory detail only)"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/906709/000090670921000005/nktr20201231-exx1035.htm",
+      "result": "opened (unrelated: SFJ head-and-neck agreement text, not the BMS amendment)"
+    },
+    {
+      "query_or_url": "https://www.streetinsider.com/Corporate+News/Nektar+Therapeutics+(NKTR),+Bristol-Myers+Squibb+(BMY)+Amend+Strategic+Collaboration+Agreement+for+bempegaldesleukin+Plus+Opdivo/16321637.html",
+      "result": "403"
+    },
+    {
+      "query_or_url": "Nektar Therapeutics SFJ Pharmaceuticals collaboration bempegaldesleukin head neck cancer announced February 2021 press release",
+      "result": "opened"
+    },
+    {
+      "query_or_url": "https://www.prnewswire.com/news-releases/nektar-announces-collaboration-with-sfj-pharmaceuticals-for-bempegaldesleukin-in-head-and-neck-cancer-301229585.html",
+      "result": "opened"
+    }
+  ]
+}

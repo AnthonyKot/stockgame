@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stockgame</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="top"></div>
+<main class="wrap">
+  <h2>Play a historical decision</h2>
+  <p class="note">Each case freezes the public record at a dated cutoff. You read what an investor could have read then, make a call, and see what followed. Names are hidden until you commit unless transparent mode is on. <a href="#rules">How a case works</a>.</p>
+  <div id="rules"></div>
+  <div id="list" class="list" aria-live="polite">Loading cases…</div>
+</main>
+<script src="app.js"></script>
+<script>
+(async () => {
+  document.getElementById('top').replaceWith(SG.topbar('play'));
+  const rs = SG.rulesSection(); rs.style.marginTop = '0'; document.getElementById('rules').replaceWith(rs);
+  const list = document.getElementById('list');
+  try {
+    const idx = await SG.load('data/index.json');
+    list.innerHTML = '';
+    const j = SG.journal();
+    const ready = idx.cases.filter(c => c.status === 'sheet_ready'); const decided = ready.filter(c => j.find(x => x.case_id === c.id)); const next = ready.find(c => !j.find(x => x.case_id === c.id));
+    const prog = SG.el('div', { class: 'card', style: 'display:flex;gap:1rem;align-items:center;flex-wrap:wrap' }, SG.el('div', {}, SG.el('strong', {}, `${decided.length} of ${ready.length} decided`), SG.el('div', { class: 'note' }, decided.length ? 'Your calls and results are in the journal.' : 'Cases are in no particular order; start anywhere.')), next ? SG.el('a', { href: 'play.html?case=' + next.id, style: 'margin-left:auto;text-decoration:none;padding:.6rem 1rem;border-radius:6px;background:var(--btn);color:var(--btn-ink);font-weight:600' }, decided.length ? 'Continue: next undecided case' : 'Start the first case') : SG.el('a', { href: 'journal.html', style: 'margin-left:auto' }, 'All decided: open the journal'));
+    document.getElementById('rules').before(prog);
+    for (const c of idx.cases) {
+      const done = j.find(x => x.case_id === c.id);
+      const ready = c.status === 'sheet_ready';
+      const a = SG.el('a', { href: ready ? 'play.html?case=' + c.id : null, 'aria-disabled': ready ? null : 'true', tabindex: ready ? null : '-1', style: ready ? '' : 'opacity:.55' },
+        SG.el('div', { class: 't' }, ready ? (c.title || c.alias || 'Unnamed case') : 'Case not ready (sheet missing)', done ? ' ' : null, done ? SG.badge('decided') : null),
+        SG.el('div', { class: 's' }, (c.setup ? c.setup + ' · ' : '') + SG.dateFmt(c.cutoff) + ' · ' + SG.horizonText(c.horizon).replace(' calendar', '') + ' · ' + ((done && done.reveal_name) ? done.reveal_name : (c.alias || '')) + (done ? ' · your call: ' + done.action + (done.size ? ' ' + done.size + '%' : '') : '')));
+      list.append(a);
+    }
+    if (!idx.cases.length) list.textContent = 'No cases built yet. Run scripts/build_bundles.py.';
+  } catch (e) { list.textContent = 'Could not load data/index.json (' + e.message + '). Serve the site folder over HTTP.'; }
+})();
+</script>
+</body>
+</html>

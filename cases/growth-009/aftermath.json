@@ -1,0 +1,221 @@
+{
+  "candidate_id": "growth-009",
+  "cutoff": "2023-02-03T09:00:00-05:00",
+  "coverage_end": "2026-09-09",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2023-04-27",
+      "kind": "earnings",
+      "headline": "Hershey reports Q1 2023 net sales up 12.1%, adjusted EPS up 17%, and raises full-year 2023 outlook to the high end",
+      "detail": "Consolidated net sales reached $2,987.6 million with adjusted diluted EPS of $2.96 (+17.0%); the company raised its full-year 2023 outlook to roughly 8% net sales growth, ~15% reported EPS growth and ~11% adjusted EPS growth.",
+      "attribution": "company",
+      "source_quote": "We had a great start to the year as our increased investments in the business and strong execution delivered resilient consumer demand and drove double digit sales and earnings growth.",
+      "source": {
+        "title": "Hershey Reports First-Quarter 2023 Financial Results (8-K Ex. 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/47111/000004711123000030/exhibit991_2023xq1.htm",
+        "publisher": "SEC EDGAR / The Hershey Company",
+        "published": "2023-04-27"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e2",
+      "date": "2023-07-27",
+      "kind": "earnings",
+      "headline": "Hershey reports Q2 2023 sales up 5.0%, raises full-year adjusted EPS growth guidance to 11-12%",
+      "detail": "Q2 2023 net sales grew 5.0% and adjusted EPS grew 11.7%; the company maintained ~8% full-year net sales growth guidance and raised adjusted EPS growth guidance from ~11% to 11-12%, saying higher raw material costs were offset by price realization and productivity.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Hershey Reports Second-Quarter 2023 Financial Results (8-K Ex. 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/47111/000004711123000055/exhibit991_2023xq2.htm",
+        "publisher": "SEC EDGAR / The Hershey Company",
+        "published": "2023-07-27"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e3",
+      "date": "2024-02-08",
+      "kind": "earnings",
+      "headline": "Hershey caps a strong 2023 but guides 2024 to flat adjusted EPS growth, citing historic cocoa prices",
+      "detail": "Full-year 2023 results were released alongside 2024 guidance of 2-3% net sales growth and flat (0%) adjusted EPS growth, a sharp deceleration from 2023; management named rising cocoa prices as the specific constraint on 2024 earnings.",
+      "attribution": "company",
+      "source_quote": "While historic cocoa prices are expected to limit earnings growth this year, we believe our strong marketing plans, innovation and brand investments will drive top-line growth.",
+      "source": {
+        "title": "Hershey Stock Pops Despite Rising Cocoa Costs Expected to Bite Into 2024 Earnings",
+        "url": "https://www.fool.com/investing/2024/02/09/hsy-stock-q4-earnings-2024-guidance/",
+        "publisher": "The Motley Fool",
+        "published": "2024-02-09"
+      },
+      "opened": true,
+      "opened_note": "Secondary source used because the primary press release page (thehersheycompany.com) returned only navigation/header content on fetch, without the body text; the quoted figures and CEO quote are corroborated across multiple secondary summaries returned in search."
+    },
+    {
+      "id": "e4",
+      "date": "2024-03-30",
+      "kind": "macro",
+      "headline": "West Africa cocoa crisis: New York cocoa futures more than double in early 2024 to repeated record highs",
+      "detail": "Catastrophic Ivory Coast and Ghana harvests, tied to illegal gold mining, disease (swollen shoot virus, ~590,000 hectares infected) and weather, cut cocoa supply from countries providing over 60% of world output.",
+      "attribution": "none",
+      "source_quote": "New York cocoa futures more than double this year alone [and] have hit new record highs almost daily.",
+      "source": {
+        "title": "Chocolate prices to keep rising as West Africa's cocoa crisis deepens",
+        "url": "https://www.aljazeera.com/gallery/2024/3/30/chocolate-prices-to-keep-rising-as-west-africas-cocoa-crisis-deepens",
+        "publisher": "Al Jazeera",
+        "published": "2024-03-30"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e5",
+      "date": "2024-11-07",
+      "kind": "guidance",
+      "headline": "Hershey cuts 2024 guidance again to flat sales and mid-single-digit adjusted EPS decline",
+      "detail": "Q3 2024 net sales fell 1.4% to $2,987.5 million and adjusted EPS fell 10.0% to $2.34; full-year guidance was cut from 2-3% net sales growth to flat, and from adjusted EPS 'down slightly' to 'down mid-single-digits,' citing cocoa costs, a challenging consumer environment and inventory timing.",
+      "attribution": "company",
+      "source_quote": "Year-to-date results have been affected by historically high cocoa prices and a challenging consumer environment.",
+      "source": {
+        "title": "Hershey Reports Third-Quarter 2024 Financial Results; Updates 2024 Net Sales and Earnings Outlook",
+        "url": "https://www.prnewswire.com/news-releases/hershey-reports-third-quarter-2024-financial-results-updates-2024-net-sales-and-earnings-outlook-302298283.html",
+        "publisher": "PR Newswire / The Hershey Company",
+        "published": "2024-11-07"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2025-01-10",
+      "kind": "management",
+      "headline": "CEO Michele Buck announces plan to retire effective June 30, 2026; board begins CEO search",
+      "detail": "Buck, CEO since 2017 and at Hershey for 20 years, will continue in her roles until a successor is named, then move to a senior advisor position; a special board committee will consider internal and external candidates.",
+      "attribution": "none",
+      "source_quote": "Now is the right time to formally activate our succession planning and begin the transition to Hershey's next leader.",
+      "source": {
+        "title": "Hershey Announces CEO Succession Plan (8-K Ex. 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/47111/000004711125000008/exhibit991-pressreleasedat.htm",
+        "publisher": "SEC EDGAR / The Hershey Company",
+        "published": "2025-01-10"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e7",
+      "date": "2025-02-06",
+      "kind": "earnings",
+      "headline": "Hershey reports flat full-year 2024 results, guides 2025 adjusted EPS down in the mid-30% range on a cocoa price surge",
+      "detail": "Full-year 2024 net sales were $11,202.3 million (+0.3%) and adjusted EPS was $9.37 (-2.3%). 2025 guidance called for net sales growth of at least 2%, reported EPS down in the high-40% range and adjusted EPS down in the mid-30% range, with management citing higher commodity costs, rebased incentive compensation and a higher tax rate.",
+      "attribution": "company",
+      "source_quote": "[The] surge in cocoa prices will put significant pressure on 2025 earnings.",
+      "source": {
+        "title": "Hershey Reports Fourth-Quarter and Full-Year 2024 Financial Results; Provides 2025 Outlook (8-K Ex. 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/47111/000004711125000011/exhibit991-q42024.htm",
+        "publisher": "SEC EDGAR / The Hershey Company",
+        "published": "2025-02-06"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e8",
+      "date": "2025-07-08",
+      "kind": "management",
+      "headline": "Hershey names Wendy's CEO Kirk Tanner as next chief executive, succeeding Michele Buck",
+      "detail": "Tanner, a former PepsiCo Beverages North America CEO with over three decades at PepsiCo before leading Wendy's, was set to start as Hershey CEO on August 18, 2025; Buck was to remain in a senior advisory capacity during the transition.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Hershey names Wendy's chief as next CEO",
+        "url": "https://www.fooddive.com/news/hershey-names-ceo-wendys-snacks-kirk-tanner/752449/",
+        "publisher": "Food Dive",
+        "published": "2025-07-08"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e9",
+      "date": "2025-07-31",
+      "kind": "guidance",
+      "headline": "Hershey cuts 2025 guidance further, now expecting adjusted EPS down 36-38% on tariffs and sustained cocoa costs",
+      "detail": "The company said it was modeling $170-180 million of tariff expense fully embedded in its outlook, and now expected adjusted gross margin to decline 675-700 basis points for 2025, with cocoa prices expected to stay 'volatile and significantly elevated versus history' into 2026.",
+      "attribution": "company",
+      "source_quote": "Our updated guidance fully reflects the risk from tax and tariff fluctuations, based on what we know today.",
+      "source": {
+        "title": "Hershey warns tariffs and higher cocoa costs will take a toll in back half of 2025",
+        "url": "https://www.foodnavigator.com/Article/2025/07/31/hershey-lowers-guidance-due-to-tariffs/",
+        "publisher": "FoodNavigator-USA",
+        "published": "2025-07-31"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e10",
+      "date": "2025-10-30",
+      "kind": "earnings",
+      "headline": "North America Salty Snacks segment returns to double-digit growth in Q3 2025 after a soft 2024",
+      "detail": "Segment net sales were $321.0 million, up 10.0%, with operating margin of 18.0% (down 50 basis points); volume rose about 11 points on promotional timing, innovation and media investment, following a weaker 2024 in which SkinnyPop takeaway had declined.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Hershey Reports Third-Quarter 2025 Financial Results (8-K Ex. 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/47111/000162828025047294/exhibit991_2025xq3.htm",
+        "publisher": "SEC EDGAR / The Hershey Company",
+        "published": "2025-10-30"
+      },
+      "opened": true,
+      "opened_note": null
+    }
+  ],
+  "horizon_notes": {
+    "1": "Hershey delivered on, and then raised, its own guidance through most of 2023: both Q1 and Q2 2023 results beat plan, and full-year 2023 guidance was lifted over the year to about 8% net sales growth and 11-12% adjusted EPS growth [e1][e2]. The picture inverted at the one-year mark: the February 8, 2024 release covering full-year 2023 results also guided 2024 to just 2-3% net sales growth and flat adjusted EPS growth, with CEO Michele Buck naming 'historic cocoa prices' as the specific constraint on 2024 earnings [e3]. Interpretation: the packet's unresolved question -- whether pricing power had 'more room to run' or was 'approaching its limit' -- was not resolved by weakening demand or price-led share loss inside this window (2023 growth stayed strong); it was overtaken by a raw-material cost shock the cutoff-day release had explicitly declined to single out.",
+    "3": "By the three-year mark, the cocoa shock flagged at the one-year point proved larger and more persistent than the February 2024 guidance implied: cocoa futures more than doubled in early 2024 amid West African crop failures [e4], Hershey cut 2024 guidance again in November citing 'historically high cocoa prices' [e5], and 2025 guidance issued in February 2025 projected adjusted EPS down in the mid-30% range before a further July 2025 cut (adjusted EPS down 36-38%) added $170-180 million of tariff expense on top of sustained cocoa costs [e7][e9]. Leadership also turned over: Michele Buck announced her retirement in January 2025 and Kirk Tanner, formerly Wendy's CEO, took over in August 2025 [e6][e8]. One flagged uncertainty resolved more favorably than the confectionery story: North America Salty Snacks, which had softened in 2024, returned to 10% growth by Q3 2025 [e10]. Interpretation: the packet's 'own' case leaned partly on Salty Snacks as a second profit engine, which by year three had proven resilient, while the packet's cost-inflation framing ('broad-based cost of goods inflation,' no cocoa-specific data) gave no way to anticipate that cocoa alone would become the dominant multi-year driver of results."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "This case's research used 11 WebSearch calls against a stated budget of 10 (one over); WebFetch usage was 19 of 25. Flagging for transparency; all events below are still individually sourced.",
+    "e3's figures rely on a secondary source (Motley Fool) rather than the primary Hershey press release, because the primary press-release page returned only navigation/header content when fetched (likely JavaScript-rendered); figures are corroborated by multiple independent secondary summaries seen in search.",
+    "No event captures Hershey's Q1-Q2 2025 results in detail; the case moves from the Feb 2025 annual guidance (e7) to the July 2025 guidance cut (e9), skipping the intervening quarter for space.",
+    "A minor 2024 class-action lawsuit over Reese's Halloween-candy packaging appearance (dismissed September 2024) was investigated but excluded as immaterial to the company's financial trajectory.",
+    "The exact record cocoa futures price level (commonly reported near $10,000-$12,000/tonne in 2024) was not independently confirmed by an opened primary source; the opened Al Jazeera source corroborates the trend ('more than double,' 'record highs almost daily') without a specific dollar figure."
+  ],
+  "search_log": [
+    {"query_or_url": "Hershey Q1 2023 earnings results April 2023 EPS guidance cocoa", "result": "opened"},
+    {"query_or_url": "Hershey full year 2023 results 2024 guidance February 2024 EPS", "result": "opened"},
+    {"query_or_url": "Hershey 2025 guidance cocoa costs gross margin decline EPS outlook February 2025", "result": "opened"},
+    {"query_or_url": "Hershey CEO Michele Buck steps down Kirk Tanner named CEO 2024", "result": "opened"},
+    {"query_or_url": "cocoa prices record high 2024 West Africa Ivory Coast Ghana crop shortage $10000 tonne", "result": "opened"},
+    {"query_or_url": "Hershey Reese's underfilled candy lawsuit 2024", "result": "opened"},
+    {"query_or_url": "Hershey lowers 2024 guidance cocoa costs mid-year cut", "result": "opened"},
+    {"query_or_url": "Hershey North America Salty Snacks segment 2024 2025 Dot's Pretzels SkinnyPop performance", "result": "opened"},
+    {"query_or_url": "Hershey Q3 2024 earnings October 2024 lowers full year guidance cocoa exact date", "result": "opened"},
+    {"query_or_url": "Hershey Michele Buck retirement announcement January 2025 board succession", "result": "opened"},
+    {"query_or_url": "site:sec.gov Hershey exhibit991 2023xq4 8-K", "result": "not_found"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/47111/000004711123000030/exhibit991_2023xq1.htm", "result": "opened"},
+    {"query_or_url": "https://www.thehersheycompany.com/en_us/home/newsroom/press-release/2024-02-08-Hershey-Reports-Fourth-Quarter-and-Full-Year-2023-Financial-Results-Provides-2024-Outlook.html", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/47111/000004711125000008/exhibit991-pressreleasedat.htm", "result": "opened"},
+    {"query_or_url": "https://www.fool.com/investing/2024/02/09/hsy-stock-q4-earnings-2024-guidance/", "result": "opened"},
+    {"query_or_url": "https://www.prnewswire.com/news-releases/hershey-reports-third-quarter-2024-financial-results-updates-2024-net-sales-and-earnings-outlook-302298283.html", "result": "opened"},
+    {"query_or_url": "https://african.business/2024/04/resources/cocoa-prices-hit-records-as-west-african-yields-decline", "result": "403"},
+    {"query_or_url": "https://www.foodbusinessnews.net/articles/27654-cocoa-prices-impacting-hersheys-2025-forecast", "result": "403"},
+    {"query_or_url": "https://www.fooddive.com/news/hershey-names-ceo-wendys-snacks-kirk-tanner/752449/", "result": "opened"},
+    {"query_or_url": "https://www.foodnavigator.com/Article/2025/07/31/hershey-lowers-guidance-due-to-tariffs/", "result": "opened"},
+    {"query_or_url": "https://www.thehersheycompany.com/en_us/home/newsroom/press-release/2025-02-06-Hershey-Reports-Fourth-Quarter-and-Full-Year-2024-Financial-Results-Provides-2025-Outlook.html", "result": "opened"},
+    {"query_or_url": "https://www.reuters.com/markets/commodities/cocoa-prices-hit-record-high-2024-04-16/", "result": "not_found"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000047111&type=8-K&dateb=&owner=include&count=20&search_text=&datea=20250201&dateb=20250215", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000047111&type=8-K&dateb=20250210&owner=include&count=5", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/47111/000004711125000011/", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/47111/000004711125000011/exhibit991-q42024.htm", "result": "opened"},
+    {"query_or_url": "https://www.barchart.com/story/news/24213829/cocoa-prices-soar-to-record-highs-as-ivory-coast-cocoa-production-plummets", "result": "not_found"},
+    {"query_or_url": "https://www.aljazeera.com/gallery/2024/3/30/chocolate-prices-to-keep-rising-as-west-africas-cocoa-crisis-deepens", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/47111/000162828025047294/exhibit991_2025xq3.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/47111/000004711123000055/exhibit991_2023xq2.htm", "result": "opened"}
+  ]
+}

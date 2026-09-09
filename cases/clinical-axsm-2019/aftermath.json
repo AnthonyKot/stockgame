@@ -1,0 +1,257 @@
+{
+  "candidate_id": "clinical-axsm-2019",
+  "cutoff": "2019-12-17T09:00:00-05:00",
+  "coverage_end": "2024-12-17",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2019-12-19",
+      "kind": "financing",
+      "headline": "Axsome prices $174 million public offering of common stock",
+      "detail": "Axsome priced an underwritten public offering of 2,000,000 shares at $87.00 per share for gross proceeds of about $174 million, to fund ongoing clinical development of its late-stage candidates and general corporate purposes.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics Announces Pricing of Public Offering of $174 Million of Shares of Common Stock",
+        "url": "https://www.globenewswire.com/news-release/2019/12/19/1962709/0/en/Axsome-Therapeutics-Announces-Pricing-of-Public-Offering-of-174-Million-of-Shares-of-Common-Stock.html",
+        "publisher": "GlobeNewswire (Axsome Therapeutics press release)",
+        "published": "2019-12-19"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e2",
+      "date": "2019-12-30",
+      "kind": "clinical",
+      "headline": "AXS-07 meets co-primary endpoints in Phase 3 MOMENTUM migraine trial",
+      "detail": "In patients with a history of inadequate response to prior acute migraine treatment, AXS-07 achieved statistically significant pain freedom (19.9% vs 6.7% placebo, p<0.001) and freedom from most bothersome symptom (36.9% vs 24.4%, p=0.002) at 2 hours, and outperformed active comparator rizatriptan on a key secondary endpoint.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics Announces AXS-07 Achieves Co-Primary and Key Secondary Endpoints in MOMENTUM Phase 3 Migraine Trial in Patients with History of Inadequate Response",
+        "url": "https://www.globenewswire.com/news-release/2019/12/30/1964870/0/en/Axsome-Therapeutics-Announces-AXS-07-Achieves-Co-Primary-and-Key-Secondary-Endpoints-in-MOMENTUM-Phase-3-Migraine-Trial-in-Patients-with-History-of-Inadequate-Response.html",
+        "publisher": "GlobeNewswire (Axsome Therapeutics press release)",
+        "published": "2019-12-30"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e3",
+      "date": "2020-03-30",
+      "kind": "clinical",
+      "headline": "AXS-05 misses the Week 6 primary endpoint against bupropion in the STRIDE-1 treatment-resistant depression trial",
+      "detail": "AXS-05 showed a numerically greater MADRS reduction than active comparator bupropion at Week 6 (11.6 vs 9.4 points) but the difference was not statistically significant (p=0.117); the company said key secondary endpoints, including earlier timepoints, were met, per its same-day press release (also opened).",
+      "attribution": "source",
+      "source_quote": "Shares of Axsome Therapeutics fell nearly 15% today after the company reported results for the STRIDE-1 phase 3 study.",
+      "source": {
+        "title": "Here's Why Axsome Therapeutics Fell as Much as 14.7% Today",
+        "url": "https://www.fool.com/investing/2020/03/30/heres-why-axsome-therapeutics-fell-as-much-as-147.aspx",
+        "publisher": "The Motley Fool",
+        "published": "2020-03-30"
+      },
+      "opened": true,
+      "opened_note": "Company press release (GlobeNewswire, 2020-03-30, same trial data) also opened for the clinical facts; this article was used as the cited source because it explicitly links the price move to the trial result, which the press release does not do."
+    },
+    {
+      "id": "e4",
+      "date": "2020-04-06",
+      "kind": "clinical",
+      "headline": "AXS-07 meets both co-primary endpoints in Phase 3 INTERCEPT early-treatment migraine trial",
+      "detail": "AXS-07 produced pain freedom in 32.6% vs 16.3% of placebo patients (p=0.002) and freedom from most bothersome symptom in 43.9% vs 26.7% (p=0.003) at 2 hours, and reduced progression of migraine pain and rescue-medication use versus placebo.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics Announces AXS-07 Achieves Both Co-Primary Endpoints and Prevents Migraine Pain Progression in the INTERCEPT Phase 3 Trial in the Early Treatment of Migraine",
+        "url": "https://www.globenewswire.com/news-release/2020/04/06/2011946/0/en/Axsome-Therapeutics-Announces-AXS-07-Achieves-Both-Co-Primary-Endpoints-and-Prevents-Migraine-Pain-Progression-in-the-INTERCEPT-Phase-3-Trial-in-the-Early-Treatment-of-Migraine.html",
+        "publisher": "GlobeNewswire (Axsome Therapeutics press release)",
+        "published": "2020-04-06"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e5",
+      "date": "2020-04-27",
+      "kind": "clinical",
+      "headline": "AXS-05 meets primary endpoint in ADVANCE-1 pivotal trial for Alzheimer's disease agitation",
+      "detail": "In the Phase 2/3 ADVANCE-1 trial (366 patients), AXS-05 produced a statistically significant reduction in Cohen Mansfield Agitation Inventory score versus placebo (p=0.010), with improvement emerging by week 3 and 73% of patients meeting a clinical-response threshold versus 57% on placebo.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics Announces AXS-05 Achieves Primary Endpoint in the ADVANCE-1 Pivotal Phase 2/3 Trial in Alzheimer's Disease Agitation",
+        "url": "https://www.globenewswire.com/news-release/2020/04/27/2022249/0/en/Axsome-Therapeutics-Announces-AXS-05-Achieves-Primary-Endpoint-in-the-ADVANCE-1-Pivotal-Phase-2-3-Trial-in-Alzheimer-s-Disease-Agitation.html",
+        "publisher": "GlobeNewswire (Axsome Therapeutics press release)",
+        "published": "2020-04-27"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2020-05-11",
+      "kind": "macro",
+      "headline": "Axsome's Q1 2020 filing flags COVID-19 as a business-disruption risk during its cluster of pivotal readouts",
+      "detail": "Axsome's Form 10-Q for the quarter ended March 31, 2020 (filed May 11, 2020) listed 'unforeseen circumstances or other disruptions to normal business operations arising from or related to COVID-19' among risks to its forward-looking statements. Connection to this business: the pandemic's onset coincided with the market-wide selloff of March 2020 and with the company's cluster of Phase 3 readouts (STRIDE-1, INTERCEPT, ADVANCE-1) reported over the following weeks.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics, Inc. Form 10-Q for the quarterly period ended March 31, 2020",
+        "url": "https://www.sec.gov/Archives/edgar/data/1579428/000155837020006302/axsm-20200331x10q.htm",
+        "publisher": "U.S. Securities and Exchange Commission (EDGAR)",
+        "published": "2020-05-11"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e7",
+      "date": "2021-04-26",
+      "kind": "regulatory",
+      "headline": "FDA accepts AXS-05 New Drug Application for major depressive disorder and grants Priority Review",
+      "detail": "The FDA accepted for filing Axsome's NDA for AXS-05 in MDD, based on the GEMINI and ASCEND trials, and granted Priority Review, setting a PDUFA target action date of August 22, 2021.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics Announces FDA Acceptance and Priority Review of New Drug Application for AXS-05 for Treatment of Major Depressive Disorder",
+        "url": "https://www.globenewswire.com/news-release/2021/04/26/2216607/33090/en/Axsome-Therapeutics-Announces-FDA-Acceptance-and-Priority-Review-of-New-Drug-Application-for-AXS-05-for-Treatment-of-Major-Depressive-Disorder.html",
+        "publisher": "GlobeNewswire (Axsome Therapeutics press release)",
+        "published": "2021-04-26"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e8",
+      "date": "2021-08-09",
+      "kind": "regulatory",
+      "headline": "Axsome discloses FDA letter citing unspecified deficiencies in the AXS-05 MDD NDA; shares fall sharply",
+      "detail": "In its Q2 2021 results, Axsome disclosed that on July 30, 2021 the FDA notified it of deficiencies that precluded discussion of labeling and post-marketing requirements at that time, without stating what the deficiencies were; the company said the notification did not reflect a final review decision.",
+      "attribution": "source",
+      "source_quote": "Shares of Axsome Therapeutics are down 14% ... after a brutal sell-off on Aug. 9 wiped out nearly 50% of its equity value.",
+      "source": {
+        "title": "Why Axsome Therapeutics Is Plunging Again Today",
+        "url": "https://www.fool.com/investing/2021/08/10/why-axsome-therapeutics-is-plunging-again-today/",
+        "publisher": "The Motley Fool",
+        "published": "2021-08-10"
+      },
+      "opened": true,
+      "opened_note": "Company Q2 2021 earnings release (GlobeNewswire, 2021-08-09) also opened for the FDA-letter facts; this article was cited because it makes the explicit link between the disclosure and the same-day/next-day price move, which the earnings release does not address. Price figures are the article's own and are not independently verified here."
+    },
+    {
+      "id": "e9",
+      "date": "2021-08-23",
+      "kind": "regulatory",
+      "headline": "FDA review of AXS-05 MDD application misses its PDUFA target date; agency requests no new data",
+      "detail": "Axsome said the FDA informed it on August 20, 2021 that the NDA review would not be completed by the August 22, 2021 PDUFA target action date, but that the FDA had not requested additional information and the review remained ongoing.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics Provides Update on the New Drug Application for AXS-05 for the Treatment of Major Depressive Disorder",
+        "url": "https://www.globenewswire.com/en/news-release/2021/08/23/2284647/33090/en/Axsome-Therapeutics-Provides-Update-on-the-New-Drug-Application-for-AXS-05-for-the-Treatment-of-Major-Depressive-Disorder.html",
+        "publisher": "GlobeNewswire (Axsome Therapeutics press release)",
+        "published": "2021-08-23"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e10",
+      "date": "2022-08-19",
+      "kind": "regulatory",
+      "headline": "FDA approves Auvelity (AXS-05) for major depressive disorder in adults",
+      "detail": "The FDA approved Auvelity (dextromethorphan HBr and bupropion HCl extended-release tablets) as, per the company, the first rapid-acting oral medicine approved for MDD with labeling citing statistically significant antidepressant efficacy versus placebo starting at one week, and the first new oral mechanism of action approved for MDD in over 60 years.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics Announces FDA Approval of AUVELITY (dextromethorphan HBr and bupropion HCl) for the Treatment of Major Depressive Disorder in Adults",
+        "url": "https://www.sec.gov/Archives/edgar/data/1579428/000119312522224610/d367288dex991.htm",
+        "publisher": "U.S. Securities and Exchange Commission (EDGAR, Form 8-K Exhibit 99.1)",
+        "published": "2022-08-19"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e11",
+      "date": "2022-10-20",
+      "kind": "product",
+      "headline": "Axsome announces U.S. commercial availability of Auvelity",
+      "detail": "Axsome announced that Auvelity became available by prescription in the United States for MDD in adults, roughly two months after FDA approval.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics Announces Availability of AUVELITY, the First and Only Oral NMDA Receptor Antagonist for the Treatment of Major Depressive Disorder in Adults",
+        "url": "https://www.globenewswire.com/news-release/2022/10/20/2538159/33090/en/Axsome-Therapeutics-Announces-Availability-of-AUVELITY-the-First-and-Only-Oral-NMDA-Receptor-Antagonist-for-the-Treatment-of-Major-Depressive-Disorder-in-Adults.html",
+        "publisher": "GlobeNewswire (Axsome Therapeutics press release)",
+        "published": "2022-10-20"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e12",
+      "date": "2025-02-18",
+      "kind": "earnings",
+      "headline": "Axsome reports full-year 2024 net product revenue of $385.7 million while still posting a net loss",
+      "detail": "For full-year 2024, Axsome reported total net product revenue of $385.7 million (Auvelity $291.4 million, Sunosi $94.3 million), up sharply from 2023, alongside a net loss of $287.2 million for the year, versus a $239.2 million net loss in 2023.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Axsome Therapeutics Reports Fourth Quarter and Full Year 2024 Financial Results and Provides Business Update",
+        "url": "https://www.globenewswire.com/news-release/2025/02/18/3027666/33090/en/Axsome-Therapeutics-Reports-Fourth-Quarter-and-Full-Year-2024-Financial-Results-and-Provides-Business-Update.html",
+        "publisher": "GlobeNewswire (Axsome Therapeutics press release)",
+        "published": "2025-02-18"
+      },
+      "opened": true,
+      "opened_note": null
+    }
+  ],
+  "horizon_notes": {
+    "1": "In the year following the cutoff, the pre-cutoff catalyst calendar largely played out: AXS-07 posted two more positive migraine readouts (MOMENTUM [e2], INTERCEPT [e4]) and AXS-05 posted a mixed record, meeting its primary endpoint in Alzheimer's-disease agitation (ADVANCE-1 [e5]) but missing the Week 6 primary endpoint against an active comparator in treatment-resistant depression (STRIDE-1 [e3]). The company had not yet filed, let alone had accepted, an NDA for AXS-05 in MDD by the one-year anniversary, and it raised $174 million in a public offering within days of cutoff [e1], addressing the funding-runway question the pre-cutoff packet had flagged as unresolved. Interpretation: the packet listed five pending readouts as open catalysts and flagged cash runway as a specific risk; a reader who expected all five readouts to replicate GEMINI's success would have been wrong about STRIDE-1, while the packet gave no indication the company would resolve its cash question via a large follow-on offering within two days.",
+    "3": "By the third anniversary, AXS-05's MDD program had gone from NDA acceptance under Priority Review [e7], through an FDA-disclosed deficiency letter that coincided with a sharp reported share-price move [e8] and a missed PDUFA target date [e9], to FDA approval as Auvelity in August 2022 [e10] and U.S. commercial launch two months later [e11]. The pivotal GEMINI/ASCEND package the pre-cutoff packet was built around had by then converted into an approved, marketed product, roughly two years later than the fourth-quarter-2020 NDA filing target implied by the company's own late-2019 catalyst list. Interpretation: the pre-cutoff packet's as_of_facts and catalysts said nothing about manufacturing or analytical-methods review risk; the delay that actually occurred in 2021 came from a category of regulatory risk (chemistry, manufacturing and controls) that was not named as a specific risk in the packet.",
+    "5": "By the fifth anniversary, Axsome had also brought a second commercial product (Sunosi) into its revenue base and reported full-year 2024 net product revenue of $385.7 million, up sharply from 2023, while still recording a net loss for the year [e12]. The company had moved from a pre-revenue, single-asset-dependent clinical-stage profile at cutoff to a multi-product commercial company, though profitability had not followed revenue growth by this anniversary. Interpretation: the pre-cutoff packet's central open question -- whether a second confirming pivotal trial in a company with no approved products justified a position given regulatory and commercial risk -- was resolved directionally toward commercial approval and launch, but only after both a failed confirmatory trial (STRIDE-1) and a manufacturing-related regulatory delay that the packet's catalysts list did not foreshadow."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "The exact date Axsome submitted the AXS-05 MDD NDA to the FDA was not independently confirmed by a primary source opened in this research; a December 1, 2020 company release said the NDA was 'on track for submission in January 2021,' and FDA acceptance with Priority Review followed on April 26, 2021.",
+    "The CONCERT Phase 2 narcolepsy readout (AXS-12), listed as an upcoming catalyst in player.json as of the November 2019 Q3 update, was actually announced December 3, 2019 -- before this case's cutoff (December 17, 2019) -- so it is out of scope for this post-cutoff timeline and is not included as an event.",
+    "The 2022 Sunosi (solriamfetol) licensing/acquisition from Jazz Pharmaceuticals, which contributed to the FY2024 revenue reported in [e12], was not independently researched for its own date, terms or consideration in this pass.",
+    "The May 2022 securities class action concerning AXS-07 (migraine) chemistry-manufacturing-controls disclosures was identified in secondary sources but not included as an event: it concerns AXS-07, not the AXS-05 MDD program the pre-cutoff packet centered on, and was outside this case's event budget.",
+    "A second macro event on 2022 interest-rate increases and biotech financing conditions was considered but not included, to keep the macro-event count low relative to company-specific events; only the COVID-19 disclosure [e6] is included."
+  ],
+  "search_log": [
+    {"query_or_url": "Axsome Therapeutics STRIDE-1 topline results treatment-resistant depression 2020", "result": "opened"},
+    {"query_or_url": "Axsome Therapeutics AXS-05 NDA FDA filing Auvelity approval 2022", "result": "opened"},
+    {"query_or_url": "Axsome AXS-07 MOMENTUM INTERCEPT migraine topline results 2020", "result": "opened"},
+    {"query_or_url": "Axsome ADVANCE-1 Alzheimer's disease agitation topline results primary endpoint 2020", "result": "opened"},
+    {"query_or_url": "Axsome AXS-05 NDA complete response letter CRL delay 2021 GMP", "result": "opened"},
+    {"query_or_url": "Axsome AXS-12 reboxetine narcolepsy CONCERT topline results", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2019/12/19/1962709/0/en/Axsome-Therapeutics-Announces-Pricing-of-Public-Offering-of-174-Million-of-Shares-of-Common-Stock.html", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2019/12/30/1964870/0/en/Axsome-Therapeutics-Announces-AXS-07-Achieves-Co-Primary-and-Key-Secondary-Endpoints-in-MOMENTUM-Phase-3-Migraine-Trial-in-Patients-with-History-of-Inadequate-Response.html", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2020/03/30/2008163/0/en/Axsome-Therapeutics-Announces-Topline-Results-of-the-STRIDE-1-Phase-3-Trial-in-Treatment-Resistant-Depression-and-Expert-Call-to-Discuss-Clinical-Implications.html", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2020/04/06/2011946/0/en/Axsome-Therapeutics-Announces-AXS-07-Achieves-Both-Co-Primary-Endpoints-and-Prevents-Migraine-Pain-Progression-in-the-INTERCEPT-Phase-3-Trial-in-the-Early-Treatment-of-Migraine.html", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2020/04/27/2022249/0/en/Axsome-Therapeutics-Announces-AXS-05-Achieves-Primary-Endpoint-in-the-ADVANCE-1-Pivotal-Phase-2-3-Trial-in-Alzheimer-s-Disease-Agitation.html", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2021/04/26/2216607/33090/en/Axsome-Therapeutics-Announces-FDA-Acceptance-and-Priority-Review-of-New-Drug-Application-for-AXS-05-for-Treatment-of-Major-Depressive-Disorder.html", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/en/news-release/2021/08/23/2284647/33090/en/Axsome-Therapeutics-Provides-Update-on-the-New-Drug-Application-for-AXS-05-for-the-Treatment-of-Major-Depressive-Disorder.html", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1579428/000095017022015740/axsm-ex99_1.htm", "result": "opened, but wrong document (Aug 9 2022 resubmission update, not the approval) -- not used as a cited source"},
+    {"query_or_url": "https://efts.sec.gov/LATEST/search-index?q=%22AUVELITY%22%20%22approved%22&forms=8-K&startdt=2022-08-15&enddt=2022-08-25", "result": "opened (EDGAR full text search API)"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1579428/000119312522224610/d367288dex991.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1579428/000155837020014236/axsm-20201208xex99d1.htm", "result": "opened, not used as event source (COMET-SI trial, not NDA submission)"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1579428/000155837020014582/axsm-20201231xex99d1.htm", "result": "opened, not used as event source (AXS-07 MOVEMENT trial, not AXS-05)"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1579428/000155837020014109/axsm-20201201xex99d1.htm", "result": "opened, not used as event source (Phase 3 MDD data plus 'NDA on track for Jan 2021' language)"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1579428/000156459021008173/axsm-ex991_110.htm", "result": "opened, not used as event source (SVB Leerink conference deck, no AXS-05 submission date)"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1579428/000095017023004474/axsm-ex99_1.htm", "result": "opened, not used as event source (Q4 2022 results; superseded by FY2024 release for the earnings event)"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2025/02/18/3027666/33090/en/Axsome-Therapeutics-Reports-Fourth-Quarter-and-Full-Year-2024-Financial-Results-and-Provides-Business-Update.html", "result": "opened"},
+    {"query_or_url": "https://www.nasdaq.com/articles/heres-why-axsome-therapeutics-fell-as-much-as-14.7-today-2020-03-30", "result": "timeout"},
+    {"query_or_url": "https://www.fool.com/investing/2020/03/30/heres-why-axsome-therapeutics-fell-as-much-as-147.aspx", "result": "opened"},
+    {"query_or_url": "https://www.fool.com/investing/2021/08/10/why-axsome-therapeutics-is-plunging-again-today/", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1579428/000155837020006302/axsm-20200331x10q.htm", "result": "opened"},
+    {"query_or_url": "https://www.neurologylive.com/view/advance1-trial-of-axs05-in-alzheimer-agitation-accelerated-amid-pandemic", "result": "403"},
+    {"query_or_url": "https://www.alzheimer-europe.org/news/axsome-therapeutics-announces-top-line-results-its-advance-1-phase-ii/iii-trial-ad-agitation", "result": "opened, not used as cited source (corroboration only, no COVID-19 content)"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2022/10/20/2538159/33090/en/Axsome-Therapeutics-Announces-Availability-of-AUVELITY-the-First-and-Only-Oral-NMDA-Receptor-Antagonist-for-the-Treatment-of-Major-Depressive-Disorder-in-Adults.html", "result": "opened"},
+    {"query_or_url": "Axsome Therapeutics securities class action lawsuit AXS-05 NDA delay 2021", "result": "opened (search only, AXS-07-related; not used as an event)"},
+    {"query_or_url": "Axsome Therapeutics full year 2024 total revenue results Auvelity Sunosi", "result": "opened (search only)"}
+  ]
+}

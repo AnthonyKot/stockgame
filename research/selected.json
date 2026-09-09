@@ -1,0 +1,1530 @@
+{
+  "selected": [
+    {
+      "id": "growth-007",
+      "issuer": "First Solar, Inc.",
+      "ticker": "FSLR",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2022-03-02T09:00:00-05:00",
+      "horizon_years": 1,
+      "proposed_exit_date": "2023-03-02",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 2,
+        "total": 10
+      },
+      "verification_verdict": "pass",
+      "screen": {
+        "entry_date": "2022-03-02",
+        "exit_date": "2023-03-02",
+        "cagr_pct": 185.37,
+        "cumulative_return_pct": 185.17,
+        "spy_return_pct": -7.68,
+        "max_drawdown_pct": -27.41,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "low",
+      "sector": "energy (solar manufacturing)",
+      "neutral_title": "A solar panel manufacturer guides next-year earnings sharply lower than the year just reported",
+      "player_question": "When a solar manufacturer reports full-year EPS of $4.38 but guides next-year EPS to a range of $0.00-$0.60 -- implying a steep earnings decline -- does the market treat this as a temporary cost/input squeeze or a structural margin problem?",
+      "as_of_facts": [
+        {
+          "fact": "Full-year 2021 net sales were about $2.9 billion with diluted EPS of $4.38; Q4 2021 net sales were $0.9 billion with diluted EPS of $1.23.",
+          "source_id": "s1",
+          "date": "2022-03-01"
+        },
+        {
+          "fact": "2022 guidance: net sales of $2.4-$2.6 billion and diluted EPS of only $0.00-$0.60, alongside gross profit guidance of $155-$215 million including $10-15 million of underutilization losses.",
+          "source_id": "s1",
+          "date": "2022-03-01"
+        },
+        {
+          "fact": "Full-year 2021 EPS came in above the midpoint of guidance given at the Q3 2021 call and within the original February 2021 guidance range.",
+          "source_id": "s1",
+          "date": "2022-03-01"
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449422000008/ex991pressreleaseq4-2021fi.htm",
+          "title": "First Solar, Inc. Announces Fourth Quarter and Full Year 2021 Financial Results and 2022 Guidance (8-K Ex. 99.1)",
+          "published_date": "2022-03-01",
+          "role": "as_of",
+          "opened": true,
+          "availability_notes": "SEC EDGAR filing, publicly accessible"
+        },
+        {
+          "id": "s2",
+          "url": "https://www.globenewswire.com/news-release/2022/03/01/2394850/0/en/First-Solar-Inc-Announces-Fourth-Quarter-and-Full-Year-2021-Financial-Results-and-2022-Guidance.html",
+          "title": "First Solar, Inc. Announces Fourth Quarter and Full Year 2021 Financial Results and 2022 Guidance",
+          "published_date": "2022-03-01",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Not opened; same-day wire copy per search summary"
+        }
+      ],
+      "learning_tension_editor_only": "A sharp forward EPS guidance cut (roughly 90%+ at the low end) from a company that just beat its own prior guidance; tests whether players weight management's own forward number over the trailing beat.",
+      "learning_tension_rewritten": false,
+      "open_repairs": [],
+      "editor_corrections": []
+    },
+    {
+      "id": "growth-009",
+      "issuer": "The Hershey Company",
+      "ticker": "HSY",
+      "exchange": "NYSE",
+      "proposed_cutoff": "2023-02-03T09:00:00-05:00",
+      "horizon_years": 1,
+      "proposed_exit_date": "2024-02-03",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 2,
+        "total": 10
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2023-02-03",
+        "exit_date": "2024-02-05",
+        "cagr_pct": -15.15,
+        "cumulative_return_pct": -15.22,
+        "spy_return_pct": 21.26,
+        "max_drawdown_pct": -34.03,
+        "screen_group": "down",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "low",
+      "sector": "consumer staples",
+      "neutral_title": "A confectionery company reports strong pricing-driven growth and guides for continued but slower expansion",
+      "player_question": "When a consumer packaged-goods company posts double-digit sales and EPS growth driven mainly by price increases, and guides next year to single-digit sales growth with margin pressure from cost inflation still expected, does the pricing strategy have more room to run or is it approaching its limit?",
+      "as_of_facts": [
+        {
+          "fact": "Q4 2022 net sales were $2,652.3 million, up 14.0%, with adjusted diluted EPS of $2.02, up 19.5%; full-year 2022 net sales were $10,419.3 million, up 16.1%.",
+          "source_id": "s1",
+          "date": "2023-02-02"
+        },
+        {
+          "fact": "2023 guidance called for net sales growth of 6-8% and adjusted EPS growth of 9-11%, versus the much higher 2022 growth rates.",
+          "source_id": "s1",
+          "date": "2023-02-02"
+        },
+        {
+          "fact": "The release attributed 2022 growth primarily to 'net price realization' offsetting 'broad-based cost of goods inflation,' without singling out cocoa costs specifically at this release.",
+          "source_id": "s1",
+          "date": "2023-02-02"
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.prnewswire.com/news-releases/hershey-reports-fourth-quarter-and-full-year-2022-financial-results-provides-2023-outlook-301736709.html",
+          "title": "Hershey Reports Fourth-Quarter and Full-Year 2022 Financial Results; Provides 2023 Outlook",
+          "published_date": "2023-02-02",
+          "role": "as_of",
+          "opened": true,
+          "availability_notes": "Opened successfully via PR Newswire"
+        },
+        {
+          "id": "s2",
+          "url": "https://www.nasdaq.com/press-release/hershey-reports-fourth-quarter-and-full-year-2022-financial-results-provides-2023",
+          "title": "Hershey Reports Fourth-Quarter and Full-Year 2022 Financial Results; Provides 2023 Outlook (Nasdaq copy)",
+          "published_date": "2023-02-02",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Not opened; duplicate wire copy per search summary"
+        }
+      ],
+      "learning_tension_editor_only": "Double-digit growth driven mainly by price increases, with management guiding to single-digit sales growth and continued cost inflation: is the deceleration ordinary normalisation or the first sign that pricing power is running out?",
+      "learning_tension_rewritten": true,
+      "open_repairs": [
+        "learning_tension rewritten (editor) to remove the 2024 cocoa reference",
+        "second source (Nasdaq.com) timed out; EDGAR 8-K used instead (done)"
+      ],
+      "editor_corrections": []
+    },
+    {
+      "id": "clinical-axsm-2019",
+      "issuer": "Axsome Therapeutics, Inc.",
+      "ticker": "AXSM",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2019-12-17T09:00:00-05:00",
+      "horizon_years": 1,
+      "proposed_exit_date": "2020-12-17",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 9
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2019-12-17",
+        "exit_date": "2020-12-17",
+        "cagr_pct": -5.0,
+        "cumulative_return_pct": -5.01,
+        "spy_return_pct": 18.73,
+        "max_drawdown_pct": -61.22,
+        "screen_group": "down",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "sector": "biotech (clinical)",
+      "neutral_title": "A small depression-drug developer reports its first pivotal Phase 3 result",
+      "player_question": "A clinical-stage biotech with one approved franchise attempt (none yet) reports that its lead combination drug hit its primary endpoint in a pivotal MDD trial. Does a single positive pivotal readout in a company with no approved products yet justify taking a position, given remaining regulatory and commercial risk?",
+      "as_of_facts": [
+        {
+          "fact": "On December 16, 2019, Axsome announced AXS-05 (dextromethorphan-bupropion) achieved the primary endpoint (MADRS score reduction) versus placebo in the pivotal Phase 3 GEMINI trial in major depressive disorder.",
+          "source_id": "axsm-pr-1",
+          "publication_date": "2019-12-16"
+        },
+        {
+          "fact": "GEMINI was the second positive well-controlled trial of AXS-05 in MDD, following the previously completed ASCEND study; the company said the two trials together were expected to support an NDA submission.",
+          "source_id": "axsm-pr-1",
+          "publication_date": "2019-12-16"
+        },
+        {
+          "fact": "As of Q3 2019 (reported November 7, 2019), Axsome had no FDA-approved products and stated GEMINI topline results were expected in Q4 2019.",
+          "source_id": "axsm-q3-2019",
+          "publication_date": "2019-11-07"
+        }
+      ],
+      "sources": [
+        {
+          "id": "axsm-pr-1",
+          "url": "https://www.globenewswire.com/news-release/2019/12/16/1960786/33090/en/Axsome-Therapeutics-Announces-AXS-05-Achieves-Primary-Endpoint-in-GEMINI-Phase-3-Trial-in-Major-Depressive-Disorder.html",
+          "title": "Axsome Therapeutics Announces AXS-05 Achieves Primary Endpoint in GEMINI Phase 3 Trial in Major Depressive Disorder",
+          "published_date": "2019-12-16",
+          "role": "as_of",
+          "opened": true,
+          "availability_notes": "GlobeNewswire release, fully accessible"
+        },
+        {
+          "id": "axsm-q3-2019",
+          "url": "https://www.globenewswire.com/news-release/2019/11/07/1943005/0/en/Axsome-Therapeutics-Reports-Third-Quarter-2019-Financial-Results-and-Provides-Business-Update.html",
+          "title": "Axsome Therapeutics Reports Third Quarter 2019 Financial Results and Provides Business Update",
+          "published_date": "2019-11-07",
+          "role": "as_of",
+          "opened": true,
+          "availability_notes": "GlobeNewswire release, fully accessible"
+        },
+        {
+          "id": "axsm-fool-outcome",
+          "url": "https://www.fool.com/investing/2019/12/31/reasons-axsome-therapeutics-is-up-3600-in-2019.aspx",
+          "title": "4 Reasons Axsome Therapeutics Soared 3,600% in 2019",
+          "published_date": "2019-12-31",
+          "role": "outcome_only",
+          "opened": false,
+          "availability_notes": "Search snippet only; not opened, treat as outcome-adjacent color, not verified return figure"
+        }
+      ],
+      "learning_tension_editor_only": "A second positive pivotal trial materially de-risks an NDA-track asset, but the stock had already run up sharply on anticipation and on an earlier positive trial, so the marginal informational value of a 'confirming' readout versus price already paid is the real tension.",
+      "learning_tension_rewritten": false,
+      "open_repairs": [
+        "fact #2 corrected to ASCEND (done, EDGAR)",
+        "drop the Motley Fool outcome source or keep as colour only"
+      ],
+      "editor_corrections": [
+        {
+          "field": "as_of_facts[1].fact",
+          "from": "GEMINI was the second positive pivotal trial for AXS-05 in MDD (following the earlier STRIDE-1 trial), which the company said supported an NDA submission.",
+          "to": "GEMINI was the second positive well-controlled trial of AXS-05 in MDD, following the previously completed ASCEND study; the company said the two trials together were expected to support an NDA submission.",
+          "why": "8-K 0001558370-19-011521 (accepted 2019-12-16 08:25 ET) names ASCEND, not STRIDE-1, as the prior positive trial; STRIDE-1 was still ongoing in TRD",
+          "date": "2026-09-09"
+        }
+      ],
+      "mask_terms": [
+        "Auvelity",
+        "Sunosi"
+      ]
+    },
+    {
+      "id": "growth-005",
+      "issuer": "Deere & Company",
+      "ticker": "DE",
+      "exchange": "NYSE",
+      "proposed_cutoff": "2020-08-24T09:00:00-04:00",
+      "horizon_years": 3,
+      "proposed_exit_date": "2023-08-24",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 2,
+        "total": 10
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2020-08-24",
+        "exit_date": "2023-08-24",
+        "cagr_pct": 24.97,
+        "cumulative_return_pct": 95.1,
+        "spy_return_pct": 33.28,
+        "max_drawdown_pct": -33.81,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "sector": "industrials",
+      "neutral_title": "An agricultural and construction equipment maker reports a sales decline alongside a restructuring plan",
+      "player_question": "When a cyclical industrial reports an 11% revenue decline, forecasts a full-year sales drop across most segments, and announces cost-cutting layoffs, is this a trough signaling recovery or a cyclical business in genuine decline?",
+      "as_of_facts": [
+        {
+          "fact": "Q3 FY2020 (ended Aug 2, 2020) net income was $811 million, or $2.57 per diluted share, down from $899 million a year earlier; net sales and revenues fell 11% to $8.925 billion.",
+          "source_id": "s1",
+          "date": "2020-08-21"
+        },
+        {
+          "fact": "Company forecast full-year FY2020 net income of approximately $2.25 billion, with agriculture and turf equipment sales expected down about 10%.",
+          "source_id": "s1",
+          "date": "2020-08-21"
+        },
+        {
+          "fact": "Deere announced broad employee-separation programs for Q4 2020 with about $175 million in pretax charges and an estimated $175 million in annual savings.",
+          "source_id": "s1",
+          "date": "2020-08-21"
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837020010785/de-20200821xex99d1.htm",
+          "title": "Deere Reports Third Quarter Net Income of $811 Million (8-K Ex. 99.1)",
+          "published_date": "2020-08-21",
+          "role": "as_of",
+          "opened": true,
+          "availability_notes": "SEC EDGAR filing, publicly accessible"
+        },
+        {
+          "id": "s2",
+          "url": "https://www.prnewswire.com/news-releases/deere-reports-third-quarter-net-income-of-811-million-301116126.html",
+          "title": "Deere Reports Third Quarter Net Income of $811 Million",
+          "published_date": "2020-08-21",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Not opened; same-day wire copy per search summary"
+        }
+      ],
+      "learning_tension_editor_only": "A declining-revenue quarter paired with proactive cost cuts and cautious commentary; tests whether players read restructuring as weakness or as prudent management of a cyclical business whose next turn is not yet visible.",
+      "learning_tension_rewritten": true,
+      "open_repairs": [
+        "learning_tension rewritten (editor) to remove \"eventual agricultural upcycle\""
+      ],
+      "editor_corrections": []
+    },
+    {
+      "id": "growth-004",
+      "issuer": "Target Corporation",
+      "ticker": "TGT",
+      "exchange": "NYSE",
+      "proposed_cutoff": "2021-03-03T09:00:00-05:00",
+      "horizon_years": 3,
+      "proposed_exit_date": "2024-03-03",
+      "scores": {
+        "sources": 1,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 2,
+        "total": 9
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2021-03-03",
+        "exit_date": "2024-03-04",
+        "cagr_pct": -2.39,
+        "cumulative_return_pct": -7.01,
+        "spy_return_pct": 40.41,
+        "max_drawdown_pct": -58.87,
+        "screen_group": "roughly_flat",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "sector": "retail",
+      "neutral_title": "A big-box retailer reports a pandemic-year sales surge but declines to give forward guidance",
+      "player_question": "When a retailer posts historic comparable-sales and digital growth for the pandemic year but explicitly withholds forward guidance due to uncertainty, how should investors price a business with no visible forward anchor?",
+      "as_of_facts": [
+        {
+          "fact": "Q4 FY2020 comparable sales grew 20.5%, with digital comparable sales up 118%; full-year digital sales grew 145%.",
+          "source_id": "s1",
+          "date": "2021-03-02"
+        },
+        {
+          "fact": "Full-year FY2020 GAAP EPS from continuing operations was $8.64, versus $6.34 in FY2019.",
+          "source_id": "s1",
+          "date": "2021-03-02"
+        },
+        {
+          "fact": "Target explicitly stated it was 'not providing sales and EPS guidance for Fiscal 2021 and beyond' due to continued COVID-19 uncertainty.",
+          "source_id": "s1",
+          "date": "2021-03-02"
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741921000007/a2020q4ex-99.htm",
+          "title": "Target Corporation Reports Fourth Quarter and Full-Year 2020 Earnings (8-K Ex. 99)",
+          "published_date": "2021-03-02",
+          "role": "as_of",
+          "opened": true,
+          "availability_notes": "SEC EDGAR filing, publicly accessible"
+        },
+        {
+          "id": "s2",
+          "url": "https://www.cnbc.com/2021/03/02/target-tgt-earnings-q4-2020.html",
+          "title": "Target (TGT) earnings Q4 2020 top estimates",
+          "published_date": "2021-03-02",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Not opened; same-day contemporary coverage per search summary"
+        }
+      ],
+      "learning_tension_editor_only": "A record year with an explicit 'no guidance' disclaimer; tests whether players treat absence of guidance as a red flag or ignore it given strong trailing results.",
+      "learning_tension_rewritten": false,
+      "open_repairs": [
+        "second source (CNBC) blocked 403; keep primary only or find an archive copy"
+      ],
+      "editor_corrections": []
+    },
+    {
+      "id": "clinical-srpt-2021",
+      "issuer": "Sarepta Therapeutics, Inc.",
+      "ticker": "SRPT",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2021-01-08T09:00:00-05:00",
+      "horizon_years": 3,
+      "proposed_exit_date": "2024-01-08",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 2,
+        "total": 10
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2021-01-08",
+        "exit_date": "2024-01-08",
+        "cagr_pct": 7.64,
+        "cumulative_return_pct": 24.69,
+        "spy_return_pct": 30.14,
+        "max_drawdown_pct": -57.18,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "sector": "biotech (clinical)",
+      "neutral_title": "A gene therapy hits its biological target but misses the functional goal in a placebo-controlled trial",
+      "player_question": "A Duchenne muscular dystrophy gene therapy meets its primary biological endpoint (protein expression) but misses statistical significance on the primary functional motor-score endpoint in a randomized, placebo-controlled trial -- though a pre-specified age subgroup (4-5 year-olds) does show significance. Note: this record replaces the originally suggested 2020 date; the actual topline announcement was January 7, 2021. Does a mechanistically-confirmed but functionally-inconclusive readout, rescued only by a subgroup analysis, represent a real efficacy signal or a statistical near-miss dressed up as one?",
+      "as_of_facts": [
+        {
+          "fact": "On January 7, 2021, Sarepta announced Part 1 topline results of Study SRP-9001-102 (41 patients): the trial met its primary biological endpoint (micro-dystrophin expression at 12 weeks) but did not achieve statistical significance on the primary functional endpoint (NSAA total score at 48 weeks).",
+          "source_id": "srpt-pr-1",
+          "publication_date": "2021-01-07"
+        },
+        {
+          "fact": "In the pre-specified 4-5 year-old age subgroup, SRP-9001-treated patients showed a statistically significant 4.3-point NSAA improvement versus age-matched placebo at 48 weeks.",
+          "source_id": "srpt-pr-1",
+          "publication_date": "2021-01-07"
+        },
+        {
+          "fact": "No new safety signals were identified in the trial, per the same release; the company said imbalance between treatment arms may have undermined the overall functional result.",
+          "source_id": "srpt-pr-1",
+          "publication_date": "2021-01-07"
+        }
+      ],
+      "sources": [
+        {
+          "id": "srpt-pr-1",
+          "url": "https://www.globenewswire.com/news-release/2021/01/07/2155237/0/en/Sarepta-Therapeutics-Announces-Top-line-Results-for-Part-1-of-Study-102-Evaluating-SRP-9001-its-Investigational-Gene-Therapy-for-the-Treatment-of-Duchenne-Muscular-Dystrophy.html",
+          "title": "Sarepta Therapeutics Announces Top-line Results for Part 1 of Study 102 Evaluating SRP-9001",
+          "published_date": "2021-01-07",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "GlobeNewswire; search snippet reviewed"
+        },
+        {
+          "id": "srpt-fool-1",
+          "url": "https://www.fool.com/investing/2021/01/08/why-sarepta-therapeutics-stock-is-crashing-today",
+          "title": "Why Sarepta Therapeutics Stock Is Crashing Today",
+          "published_date": "2021-01-08",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Contemporary market-reaction article noting ~50% single-day decline; search snippet reviewed, not independently verified against primary price data"
+        },
+        {
+          "id": "srpt-elevidys-outcome",
+          "url": "https://investorrelations.sarepta.com/news-releases/news-release-details/sarepta-therapeutics-announces-results-part-2-embark-study",
+          "title": "Sarepta Therapeutics Announces Results from Part 2 of the EMBARK Study Demonstrating Sustained Benefits in Ambulatory Individuals Following Treatment with ELEVIDYS",
+          "published_date": "2024-01-01",
+          "role": "outcome_only",
+          "opened": false,
+          "availability_notes": "Outcome-only; SRP-9001 was eventually granted accelerated approval as ELEVIDYS in June 2023, date approximate, not independently verified here"
+        }
+      ],
+      "learning_tension_editor_only": "A result that is scientifically ambiguous rather than a clean failure (biological endpoint met, functional endpoint missed, one pre-specified subgroup significant); tests whether headline endpoint-miss framing crowds out the harder question of what the data actually support over a multi-year horizon.",
+      "learning_tension_rewritten": true,
+      "open_repairs": [
+        "learning_tension rewritten (editor) to remove the 50% single-day decline",
+        "outcome source timed out; substitute an FDA/issuer Elevidys approval source dated June 2023"
+      ],
+      "editor_corrections": [],
+      "mask_terms": [
+        {
+          "term": "Roche",
+          "with": "the partner"
+        },
+        "Exondys",
+        "Vyondys",
+        "Amondys",
+        "Elevidys",
+        "ELEVIDYS"
+      ]
+    },
+    {
+      "id": "growth-008",
+      "issuer": "JPMorgan Chase & Co.",
+      "ticker": "JPM",
+      "exchange": "NYSE",
+      "proposed_cutoff": "2019-01-16T09:00:00-05:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2024-01-16",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 2,
+        "total": 10
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2019-01-16",
+        "exit_date": "2024-01-16",
+        "cagr_pct": 13.74,
+        "cumulative_return_pct": 90.36,
+        "spy_return_pct": 97.47,
+        "max_drawdown_pct": -43.63,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "sector": "finance",
+      "neutral_title": "A large bank reports record annual profit at the end of a rate-hiking cycle amid a volatile quarter for markets",
+      "player_question": "When the largest U.S. bank reports record full-year net income and a 17% return on tangible common equity, but the quarter closed during a sharp market sell-off (Q4 2018), does record profitability or the deteriorating trading/market backdrop matter more for a multi-year holding?",
+      "as_of_facts": [
+        {
+          "fact": "Q4 2018 net income was $7.1 billion ($1.98/share) on revenue of nearly $27 billion; full-year 2018 net income was a record $32.5 billion ($9.00/share) on revenue of $111.5 billion.",
+          "source_id": "s1",
+          "date": "2019-01-15"
+        },
+        {
+          "fact": "Full-year 2018 return on tangible common equity was 17%, versus 14% for the fourth quarter alone.",
+          "source_id": "s1",
+          "date": "2019-01-15"
+        },
+        {
+          "fact": "Management cited solid underlying drivers -- core loan and deposit growth, consumer spending, and credit performance -- despite the Q4 market volatility.",
+          "source_id": "s1",
+          "date": "2019-01-15"
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.businesswire.com/news/home/20190115005414/en/JPMorgan-Chase-Reports-Fourth-Quarter-Full-Year-2018-Financial",
+          "title": "JPMorgan Chase Reports Fourth-Quarter and Full-Year 2018 Financial Results",
+          "published_date": "2019-01-15",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Not opened via fetch (PDF version returned unreadable binary); date and figures corroborated across multiple search summaries"
+        },
+        {
+          "id": "s2",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2018/4th-quarter/4q18-earnings-press-release.pdf",
+          "title": "4Q18 Earnings Press Release",
+          "published_date": "2019-01-15",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "PDF fetch returned unreadable binary content; official source URL retained for reference"
+        }
+      ],
+      "learning_tension_editor_only": "Record annual results announced right after a sharp Q4 2018 equity sell-off; tests whether players separate a bank's fundamental earnings power from a market-wide volatility episode occurring in the same reporting period.",
+      "learning_tension_rewritten": false,
+      "open_repairs": [
+        "both worker fetches failed; EDGAR 8-K verified by editor (done)"
+      ],
+      "editor_corrections": []
+    },
+    {
+      "id": "commercial-gilead-2019",
+      "issuer": "Gilead Sciences, Inc.",
+      "ticker": "GILD",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2019-02-05T09:00:00-05:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2024-02-05",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 9
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2019-02-05",
+        "exit_date": "2024-02-05",
+        "cagr_pct": 6.76,
+        "cumulative_return_pct": 38.7,
+        "spy_return_pct": 95.71,
+        "max_drawdown_pct": -30.47,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "sector": "pharma (commercial)",
+      "neutral_title": "An HIV/HCV giant closes out the year with a new launch ramping",
+      "player_question": "Gilead's FY2018 results were shaped by Biktarvy's HIV launch offsetting a declining, saturated hepatitis-C franchise; is a cash-rich, largely single-therapeutic-area (virology) major pharma set for renewed growth, or is it a value trap facing HCV cliff and thin late-stage oncology diversification?",
+      "as_of_facts": [
+        {
+          "fact": "Gilead released fourth-quarter and full-year 2018 financial results on Monday, February 4, 2019, after market close.",
+          "source_id": "gild-q4-2018-schedule",
+          "publication_date": "2019-01-XX",
+          "type": "reported_result"
+        },
+        {
+          "fact": "Growth in Q4 2018 total revenue was attributed primarily to the 2018 launch of Biktarvy (bictegravir/emtricitabine/tenofovir alafenamide) in HIV.",
+          "source_id": "gild-q4-2018-pr",
+          "publication_date": "2019-02-04",
+          "type": "reported_result"
+        },
+        {
+          "fact": "Gilead's hepatitis C (HCV) franchise continued a multi-year secular decline as the curable-patient pool shrank, a known structural headwind heading into 2019.",
+          "source_id": "gild-q4-2018-pr",
+          "publication_date": "2019-02-04",
+          "type": "interpretation"
+        }
+      ],
+      "sources": [
+        {
+          "id": "gild-q4-2018-schedule",
+          "url": "http://investors.gilead.com/news-releases/news-release-details/gilead-sciences-release-fourth-quarter-and-full-year-2018",
+          "title": "Gilead Sciences to Release Fourth Quarter and Full Year 2018 Financial Results on Monday, February 4, 2019",
+          "published_date": "2019-01-XX",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Search snippet; exact January publish date not confirmed."
+        },
+        {
+          "id": "gild-q4-2018-pr",
+          "url": "https://www.gilead.com/news/news-details/2019/gilead-sciences-announces-fourth-quarter-and-full-year-2018-financial-results",
+          "title": "Gilead Sciences Announces Fourth Quarter and Full Year 2018 Financial Results",
+          "published_date": "2019-02-04",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Search snippet only, full revenue table not confirmed."
+        },
+        {
+          "id": "gild-trodelvy-outcome",
+          "url": "https://finance.yahoo.com/healthcare/articles/gilead-sciences-gild-following-trodelvy-042711760.html",
+          "title": "Gilead Sciences (GILD) Following Trodelvy Progress And A Fair Value Debate",
+          "published_date": "2024-2025 (exact date unconfirmed)",
+          "role": "outcome_only",
+          "opened": false,
+          "availability_notes": "Search snippet only."
+        }
+      ],
+      "learning_tension_editor_only": "A cash-generative franchise leader with a declining legacy segment (HCV) versus an unproven pipeline/M&A diversification strategy (oncology) whose payoff took years to show up.",
+      "learning_tension_rewritten": false,
+      "open_repairs": [
+        "drop dead schedule URL (done, EDGAR index)",
+        "outcome source dated 2026; find a source near the 2024-02-05 exit"
+      ],
+      "editor_corrections": [],
+      "mask_terms": [
+        "Biktarvy",
+        "Kite",
+        "Yescarta",
+        "Immunomedics",
+        "Trodelvy"
+      ]
+    },
+    {
+      "id": "clinical-mdgl-2018",
+      "issuer": "Madrigal Pharmaceuticals, Inc.",
+      "ticker": "MDGL",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2018-11-13T09:00:00-05:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2023-11-13",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 2,
+        "total": 10
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2018-11-13",
+        "exit_date": "2023-11-13",
+        "cagr_pct": -0.03,
+        "cumulative_return_pct": -0.16,
+        "spy_return_pct": 75.88,
+        "max_drawdown_pct": -61.78,
+        "screen_group": "roughly_flat",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "sector": "biotech (clinical)",
+      "neutral_title": "A small-cap presents positive Phase 2 liver-disease data in a high-profile conference plenary session",
+      "player_question": "A small biotech's NASH candidate hits its primary endpoint (liver fat reduction) and shows biopsy-based secondary benefits in a 125-patient Phase 2 trial, presented in a Presidential Plenary session at the field's top annual conference -- a mark of scientific prominence. Does high-profile conference placement plus statistically significant Phase 2 data on a surrogate/biopsy endpoint justify treating a NASH drug as substantially de-risked, given the field's history of Phase 3 failures?",
+      "as_of_facts": [
+        {
+          "fact": "On November 12, 2018, Madrigal presented Phase 2 results for MGL-3196 (resmetirom) in a Presidential Plenary Clinical Session at The Liver Meeting 2018 (AASLD), reporting statistically significant reduction in hepatic fat (MRI-PDFF) at week 12, the primary endpoint, sustained through week 36.",
+          "source_id": "mdgl-liver-meeting",
+          "publication_date": "2018-11-12"
+        },
+        {
+          "fact": "Secondary endpoints included statistically significant reduction/resolution of NASH on liver biopsy and improvement in fibrosis biomarkers and liver enzymes, per the same release.",
+          "source_id": "mdgl-liver-meeting",
+          "publication_date": "2018-11-12"
+        },
+        {
+          "fact": "The trial also reported an LDL-cholesterol-lowering effect (18.8% overall, 21% in the optimal-dose subgroup), a secondary metabolic signal beyond the liver-specific endpoints.",
+          "source_id": "mdgl-liver-meeting",
+          "publication_date": "2018-11-12"
+        }
+      ],
+      "sources": [
+        {
+          "id": "mdgl-liver-meeting",
+          "url": "https://www.globenewswire.com/news-release/2018/11/12/1649875/0/en/Phase-2-Results-for-Madrigal-s-MGL-3196-in-Non-Alcoholic-Steatohepatitis-NASH-Presented-during-Presidential-Plenary-Clinical-Session-of-The-Liver-Meeting-2018.html",
+          "title": "Phase 2 Results for Madrigal's MGL-3196 in NASH Presented during Presidential Plenary Clinical Session of The Liver Meeting 2018",
+          "published_date": "2018-11-12",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "GlobeNewswire; search snippet reviewed, likely fully public"
+        },
+        {
+          "id": "mdgl-lancet-2019",
+          "url": "https://ir.madrigalpharma.com/news-releases/news-release-details/madrigal-pharmaceuticals-announces-publication-lancet-positive",
+          "title": "Madrigal Pharmaceuticals Announces Publication in The Lancet of Positive Phase 2 Results for Resmetirom",
+          "published_date": "2019-11-11",
+          "role": "outcome_only",
+          "opened": false,
+          "availability_notes": "One year after cutoff; peer-reviewed publication of the same dataset, treat as contemporary corroboration rather than pre-cutoff source"
+        }
+      ],
+      "learning_tension_editor_only": "Phase 2 surrogate-endpoint success (fat reduction, biopsy improvement) in NASH has historically had a poor track record of translating into Phase 3 approval across the industry; the tension is whether strong biomarker data plus prominent conference placement should outweigh base-rate skepticism about NASH drug development.",
+      "learning_tension_rewritten": false,
+      "open_repairs": [
+        "outcome-only Lancet IR page unreachable; substitute PubMed/DOI page",
+        "exact presentation time on 2018-11-12 unconfirmed; treat as after-hours"
+      ],
+      "editor_corrections": [],
+      "mask_terms": [
+        "resmetirom",
+        "Resmetirom",
+        "MAESTRO",
+        "Rezdiffra"
+      ]
+    },
+    {
+      "id": "clinical-nktr-2018",
+      "issuer": "Nektar Therapeutics",
+      "ticker": "NKTR",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2018-02-15T09:00:00-05:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2023-02-15",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 2,
+        "total": 10
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2018-02-15",
+        "exit_date": "2023-02-15",
+        "cagr_pct": -48.05,
+        "cumulative_return_pct": -96.21,
+        "spy_return_pct": 65.14,
+        "max_drawdown_pct": -98.13,
+        "screen_group": "down",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "sector": "biotech (clinical)",
+      "neutral_title": "A mid-cap biotech signs a multibillion-dollar oncology partnership with a major pharma",
+      "player_question": "A large pharmaceutical company pays $1 billion upfront plus an $850 million equity stake at a large premium for rights to a Phase 1/2 immuno-oncology candidate (its lead immuno-oncology candidate) being tested across 20+ tumor indications, before any pivotal data exists. Does a large pharma's willingness to pay a premium validate the science enough to buy in, or does the deal price mostly reflect optionality on unproven early-stage data?",
+      "as_of_facts": [
+        {
+          "fact": "On February 13, 2018 (effective April 3, 2018), Nektar and Bristol-Myers Squibb announced a Strategic Collaboration Agreement for NKTR-214 (bempegaldesleukin): $1.0 billion upfront cash plus an $850 million equity investment (8,284,600 shares at $102.60/share), and up to $1.78 billion in additional milestones.",
+          "source_id": "nktr-pr-1",
+          "publication_date": "2018-02-13"
+        },
+        {
+          "fact": "The companies planned to jointly develop NKTR-214 in combination with Opdivo and Opdivo+Yervoy across more than 20 indications in 9 tumor types, with Nektar retaining 65% and BMS 35% of U.S. profit/loss share.",
+          "source_id": "nktr-pr-1",
+          "publication_date": "2018-02-13"
+        },
+        {
+          "fact": "At the time of the deal, NKTR-214 had only Phase 1/2 data; no pivotal Phase 3 trial had yet read out.",
+          "source_id": "nktr-fool-2018",
+          "publication_date": "2018-10-02"
+        }
+      ],
+      "sources": [
+        {
+          "id": "nktr-pr-1",
+          "url": "https://ir.nektar.com/news-releases/news-release-details/bristol-myers-squibb-and-nektar-therapeutics-announce-global",
+          "title": "Bristol-Myers Squibb and Nektar Therapeutics Announce Global Development & Commercialization Collaboration for NKTR-214",
+          "published_date": "2018-02-13",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Nektar IR site; search snippet reviewed"
+        },
+        {
+          "id": "nktr-nasdaq-1",
+          "url": "https://www.nasdaq.com/articles/megadeal-caused-nektar-therapeutics-11-spike-today-2018-02-14",
+          "title": "This Megadeal Caused Nektar Therapeutics' 11% Spike Today",
+          "published_date": "2018-02-14",
+          "role": "as_of",
+          "opened": false,
+          "availability_notes": "Contemporary market-reaction article, day after deal announcement"
+        },
+        {
+          "id": "nktr-pivot-outcome",
+          "url": "https://www.healio.com/news/hematology-oncology/20220314/phase-3-trial-of-combination-for-advanced-melanoma-misses-primary-endpoint",
+          "title": "Phase 3 trial of combination for advanced melanoma misses primary endpoints",
+          "published_date": "2022-03-14",
+          "role": "outcome_only",
+          "opened": false,
+          "availability_notes": "Outcome-only; PIVOT IO-001 Phase 3 melanoma trial failure, roughly 4 years after cutoff"
+        }
+      ],
+      "learning_tension_editor_only": "A large pharma paying a premium for early-stage data is a strong signal but not proof of eventual efficacy; the multi-year gap between deal signing and pivotal readout is exactly the kind of horizon where 'smart money validation' can still be wrong.",
+      "learning_tension_rewritten": false,
+      "open_repairs": [
+        "cutoff corrected to 2018-02-15 (done, EDGAR)",
+        "drop the Nasdaq.com \"11% spike\" source; unverified"
+      ],
+      "editor_corrections": [
+        {
+          "field": "proposed_cutoff",
+          "from": "2018-02-14T09:00:00-05:00",
+          "to": "2018-02-15T09:00:00-05:00",
+          "why": "8-K 0001193125-18-044320 accepted 2018-02-14 08:31 ET (premarket); agreement dated Feb 13, announced Feb 14 premarket, so next session is Feb 15",
+          "date": "2026-09-09"
+        },
+        {
+          "field": "player_question",
+          "from": "Bristol-Myers Squibb pays $1 billion upfront plus an $850 million equity stake at a large premium for rights to a Phase 1/2 immuno-oncology candidate (NKTR-214) being tested across 20+ tumor indications, before any pivotal data exists. Does a large pharma's willingness to pay a premium validate the science enough to buy in, or does the deal price mostly reflect optionality on unproven early-stage data?",
+          "to": "A large pharmaceutical company pays $1 billion upfront plus an $850 million equity stake at a large premium for rights to a Phase 1/2 immuno-oncology candidate (its lead immuno-oncology candidate) being tested across 20+ tumor indications, before any pivotal data exists. Does a large pharma's willingness to pay a premium validate the science enough to buy in, or does the deal price mostly reflect optionality on unproven early-stage data?",
+          "why": "partner name and ticker-bearing drug code identify the issuer in masked mode",
+          "date": "2026-09-09"
+        }
+      ],
+      "mask_terms": [
+        {
+          "term": "Bristol-Myers Squibb",
+          "with": "the partner"
+        },
+        {
+          "term": "Bristol Myers Squibb",
+          "with": "the partner"
+        },
+        {
+          "term": "Bristol-Myers",
+          "with": "the partner"
+        },
+        {
+          "term": "BMS",
+          "with": "the partner"
+        },
+        {
+          "term": "Opdivo",
+          "with": "the partner's drug"
+        },
+        {
+          "term": "nivolumab",
+          "with": "the partner's drug"
+        },
+        {
+          "term": "bempegaldesleukin",
+          "with": "the candidate"
+        }
+      ]
+    }
+  ],
+  "alternates": [
+    {
+      "id": "clinical-acad-2021",
+      "issuer": "Acadia Pharmaceuticals Inc.",
+      "ticker": "ACAD",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2021-04-06T09:00:00-04:00",
+      "horizon_years": 3,
+      "proposed_exit_date": "2024-04-06",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 9
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2021-04-06",
+        "exit_date": "2024-04-08",
+        "cagr_pct": -4.8,
+        "cumulative_return_pct": -13.76,
+        "spy_return_pct": 33.5,
+        "max_drawdown_pct": -52.69,
+        "screen_group": "roughly_flat",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "low",
+      "reason": "first 3-year alternate; EDGAR-verified, but 3y slot filled and the corrected screen is roughly flat, duplicating Target"
+    },
+    {
+      "id": "commercial-alnylam-2022",
+      "issuer": "Alnylam Pharmaceuticals, Inc.",
+      "ticker": "ALNY",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2022-02-11T09:00:00-05:00",
+      "horizon_years": 3,
+      "proposed_exit_date": "2025-02-11",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 9
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2022-02-11",
+        "exit_date": "2025-02-11",
+        "cagr_pct": 21.28,
+        "cumulative_return_pct": 78.42,
+        "spy_return_pct": 43.6,
+        "max_drawdown_pct": -40.61,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "low",
+      "reason": "clean; 3y up already covered twice"
+    },
+    {
+      "id": "commercial-neurocrine-2023",
+      "issuer": "Neurocrine Biosciences, Inc.",
+      "ticker": "NBIX",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2023-02-07T09:00:00-05:00",
+      "horizon_years": 1,
+      "proposed_exit_date": "2024-02-07",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 9
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2023-02-07",
+        "exit_date": "2024-02-07",
+        "cagr_pct": 31.3,
+        "cumulative_return_pct": 31.28,
+        "spy_return_pct": 21.79,
+        "max_drawdown_pct": -14.63,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "low",
+      "reason": "1y up alternate; same shape as Harmony"
+    },
+    {
+      "id": "growth-001",
+      "issuer": "Zoom Video Communications, Inc.",
+      "ticker": "ZM",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2020-06-03T09:00:00-04:00",
+      "horizon_years": 1,
+      "proposed_exit_date": "2021-06-03",
+      "scores": {
+        "sources": 2,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 9
+      },
+      "verification_verdict": "pass",
+      "screen": {
+        "entry_date": "2020-06-03",
+        "exit_date": "2021-06-03",
+        "cagr_pct": 42.53,
+        "cumulative_return_pct": 42.5,
+        "spy_return_pct": 36.29,
+        "max_drawdown_pct": -49.24,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "high",
+      "reason": "first IT alternate (1y up); recognition high, but the June-2020 setting matches the user's original brief"
+    },
+    {
+      "id": "clinical-bmrn-2020",
+      "issuer": "BioMarin Pharmaceutical Inc.",
+      "ticker": "BMRN",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2020-08-19T09:00:00-04:00",
+      "horizon_years": 3,
+      "proposed_exit_date": "2023-08-19",
+      "scores": {
+        "sources": 1,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 8
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2020-08-19",
+        "exit_date": "2023-08-21",
+        "cagr_pct": 5.41,
+        "cumulative_return_pct": 17.14,
+        "spy_return_pct": 36.29,
+        "max_drawdown_pct": -27.46,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "low",
+      "reason": "one of two as_of sources unopened; CRL shape duplicates Acadia"
+    },
+    {
+      "id": "commercial-exelixis-2018",
+      "issuer": "Exelixis, Inc.",
+      "ticker": "EXEL",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2018-02-27T09:00:00-05:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2023-02-27",
+      "scores": {
+        "sources": 1,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 8
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2018-02-27",
+        "exit_date": "2023-02-27",
+        "cagr_pct": -8.44,
+        "cumulative_return_pct": -35.63,
+        "spy_return_pct": 57.85,
+        "max_drawdown_pct": -49.65,
+        "screen_group": "down",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "reason": "cutoff corrected to 2018-02-27; 5y down alternate"
+    },
+    {
+      "id": "commercial-biogen-2021",
+      "issuer": "Biogen Inc.",
+      "ticker": "BIIB",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2021-02-04T09:00:00-05:00",
+      "horizon_years": 3,
+      "proposed_exit_date": "2024-02-04",
+      "scores": {
+        "sources": 1,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 8
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2021-02-04",
+        "exit_date": "2024-02-05",
+        "cagr_pct": -3.29,
+        "cumulative_return_pct": -9.56,
+        "spy_return_pct": 33.33,
+        "max_drawdown_pct": -54.78,
+        "screen_group": "roughly_flat",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "high",
+      "reason": "high recognition; severe spoiler in learning_tension; two sources unopened"
+    },
+    {
+      "id": "growth-006",
+      "issuer": "Exxon Mobil Corporation",
+      "ticker": "XOM",
+      "exchange": "NYSE",
+      "proposed_cutoff": "2019-02-04T09:00:00-05:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2024-02-04",
+      "scores": {
+        "sources": 1,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 8
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2019-02-04",
+        "exit_date": "2024-02-05",
+        "cagr_pct": 11.87,
+        "cumulative_return_pct": 75.28,
+        "spy_return_pct": 96.53,
+        "max_drawdown_pct": -60.35,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "low",
+      "reason": "learning_tension names the 2020 oil collapse; 5y up alternate, energy already covered by First Solar"
+    },
+    {
+      "id": "commercial-regeneron-2019",
+      "issuer": "Regeneron Pharmaceuticals, Inc.",
+      "ticker": "REGN",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2019-02-07T09:00:00-05:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2024-02-07",
+      "scores": {
+        "sources": 1,
+        "prices": 2,
+        "decision": 1,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 7
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2019-02-07",
+        "exit_date": "2024-02-07",
+        "cagr_pct": 18.22,
+        "cumulative_return_pct": 130.89,
+        "spy_return_pct": 100.08,
+        "max_drawdown_pct": -37.79,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "high",
+      "reason": "high recognition; as_of source verified only via SEC alternate"
+    },
+    {
+      "id": "commercial-incyte-2020",
+      "issuer": "Incyte Corporation",
+      "ticker": "INCY",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2020-02-14T09:00:00-05:00",
+      "horizon_years": 3,
+      "proposed_exit_date": "2023-02-14",
+      "scores": {
+        "sources": 0,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 7
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2020-02-14",
+        "exit_date": "2023-02-14",
+        "cagr_pct": 0.39,
+        "cumulative_return_pct": 1.16,
+        "spy_return_pct": 28.22,
+        "max_drawdown_pct": -42.26,
+        "screen_group": "roughly_flat",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "low",
+      "reason": "no source opened (budget exhausted); spoiler in learning_tension"
+    },
+    {
+      "id": "commercial-harmony-2023",
+      "issuer": "Harmony Biosciences Holdings, Inc.",
+      "ticker": "HRMY",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2023-02-22T09:00:00-05:00",
+      "horizon_years": 1,
+      "proposed_exit_date": "2024-02-22",
+      "scores": {
+        "sources": 0,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 7
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2023-02-22",
+        "exit_date": "2024-02-22",
+        "cagr_pct": -32.05,
+        "cumulative_return_pct": -32.03,
+        "spy_return_pct": 29.28,
+        "max_drawdown_pct": -58.5,
+        "screen_group": "down",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "low",
+      "reason": "no source opened in the worker run; SEC exhibit identified, verify before use"
+    },
+    {
+      "id": "growth-003",
+      "issuer": "NIKE, Inc.",
+      "ticker": "NKE",
+      "exchange": "NYSE",
+      "proposed_cutoff": "2019-09-25T09:00:00-04:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2024-09-25",
+      "scores": {
+        "sources": 1,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 1,
+        "novelty": 1,
+        "total": 7
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2019-09-25",
+        "exit_date": "2024-09-25",
+        "cagr_pct": 0.47,
+        "cumulative_return_pct": 2.39,
+        "spy_return_pct": 106.91,
+        "max_drawdown_pct": -58.62,
+        "screen_group": "roughly_flat",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "reason": "learning_tension names COVID-19; 5y flat alternate"
+    }
+  ],
+  "reserve": [
+    {
+      "id": "clinical-sage-2019",
+      "issuer": "Sage Therapeutics, Inc.",
+      "ticker": "SAGE",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2019-12-06T09:00:00-05:00",
+      "horizon_years": 1,
+      "proposed_exit_date": "2020-12-06",
+      "scores": {
+        "sources": 1,
+        "prices": 0,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 6
+      },
+      "verification_verdict": "reject",
+      "screen": {
+        "entry_date": null,
+        "exit_date": null,
+        "cagr_pct": null,
+        "cumulative_return_pct": null,
+        "spy_return_pct": null,
+        "max_drawdown_pct": null,
+        "screen_group": null,
+        "status": "unavailable"
+      },
+      "recognition_risk": "medium",
+      "reason": "delisted, no price history; worker found fact #3 misattributed and a spoiler in learning_tension"
+    },
+    {
+      "id": "clinical-fgen-2021",
+      "issuer": "FibroGen, Inc.",
+      "ticker": "FGEN",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2021-07-16T09:00:00-04:00",
+      "horizon_years": 3,
+      "proposed_exit_date": "2024-07-16",
+      "scores": {
+        "sources": 1,
+        "prices": 0,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 6
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": null,
+        "exit_date": null,
+        "cagr_pct": null,
+        "cumulative_return_pct": null,
+        "spy_return_pct": null,
+        "max_drawdown_pct": null,
+        "screen_group": null,
+        "status": "unavailable"
+      },
+      "recognition_risk": "medium",
+      "reason": "delisted, no price history; secondary source is post-cutoff"
+    },
+    {
+      "id": "clinical-icpt-2016",
+      "issuer": "Intercept Pharmaceuticals, Inc.",
+      "ticker": "ICPT",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2016-05-31T09:00:00-04:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2021-05-31",
+      "scores": {
+        "sources": 1,
+        "prices": 0,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 6
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": null,
+        "exit_date": null,
+        "cagr_pct": null,
+        "cumulative_return_pct": null,
+        "spy_return_pct": null,
+        "max_drawdown_pct": null,
+        "screen_group": null,
+        "status": "unavailable"
+      },
+      "recognition_risk": "high",
+      "reason": "delisted, no price history; approval date and vote unconfirmed verbatim"
+    },
+    {
+      "id": "clinical-blue-2019",
+      "issuer": "bluebird bio, Inc.",
+      "ticker": "BLUE",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2019-06-04T09:00:00-04:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2024-06-04",
+      "scores": {
+        "sources": 1,
+        "prices": 0,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 6
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": null,
+        "exit_date": null,
+        "cagr_pct": null,
+        "cumulative_return_pct": null,
+        "spy_return_pct": null,
+        "max_drawdown_pct": null,
+        "screen_group": null,
+        "status": "unavailable"
+      },
+      "recognition_risk": "medium",
+      "reason": "delisted, no price history; 2seventy spin-off and reverse split inside window; spoiler words in facts"
+    },
+    {
+      "id": "commercial-amgen-2018",
+      "issuer": "Amgen Inc.",
+      "ticker": "AMGN",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2018-02-02T09:00:00-05:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2023-02-02",
+      "scores": {
+        "sources": 1,
+        "prices": 2,
+        "decision": 1,
+        "horizon": 2,
+        "novelty": 0,
+        "total": 6
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2018-02-02",
+        "exit_date": "2023-02-02",
+        "cagr_pct": 8.85,
+        "cumulative_return_pct": 52.82,
+        "spy_return_pct": 64.8,
+        "max_drawdown_pct": -24.53,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "reason": "near-duplicate of Gilead/Regeneron teaching value; fact cites a source id absent from the list"
+    },
+    {
+      "id": "commercial-merck-2019",
+      "issuer": "Merck & Co., Inc.",
+      "ticker": "MRK",
+      "exchange": "NYSE",
+      "proposed_cutoff": "2019-02-04T09:00:00-05:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2024-02-04",
+      "scores": {
+        "sources": 2,
+        "prices": 1,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 8
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2019-02-04",
+        "exit_date": "2024-02-05",
+        "cagr_pct": 14.92,
+        "cumulative_return_pct": 100.47,
+        "spy_return_pct": 96.53,
+        "max_drawdown_pct": -27.26,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "medium",
+      "reason": "Organon spin-off 2021-06-03 inside the window needs a distributed-securities ledger before scoring"
+    },
+    {
+      "id": "growth-002",
+      "issuer": "Alphabet Inc.",
+      "ticker": "GOOGL",
+      "exchange": "NASDAQ",
+      "proposed_cutoff": "2024-01-31T09:00:00-05:00",
+      "horizon_years": 1,
+      "proposed_exit_date": "2025-01-31",
+      "scores": {
+        "sources": 1,
+        "prices": 2,
+        "decision": 2,
+        "horizon": 1,
+        "novelty": 0,
+        "total": 6
+      },
+      "verification_verdict": "repair",
+      "screen": {
+        "entry_date": "2024-01-31",
+        "exit_date": "2025-01-31",
+        "cagr_pct": 46.04,
+        "cumulative_return_pct": 46.15,
+        "spy_return_pct": 26.23,
+        "max_drawdown_pct": -22.14,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "high",
+      "reason": "high recognition, IT; second source unverified"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "growth-010",
+      "issuer": "General Electric Company",
+      "ticker": "GE",
+      "exchange": "NYSE",
+      "proposed_cutoff": "2018-07-23T09:00:00-04:00",
+      "horizon_years": 5,
+      "proposed_exit_date": "2023-07-23",
+      "scores": {
+        "sources": 1,
+        "prices": 0,
+        "decision": 2,
+        "horizon": 2,
+        "novelty": 1,
+        "total": 6
+      },
+      "verification_verdict": "reject",
+      "screen": {
+        "entry_date": "2018-07-23",
+        "exit_date": "2023-07-24",
+        "cagr_pct": 7.79,
+        "cumulative_return_pct": 45.5,
+        "spy_return_pct": 76.38,
+        "max_drawdown_pct": -58.24,
+        "screen_group": "up",
+        "status": "screened_not_final_game_scoring"
+      },
+      "recognition_risk": "high",
+      "reason": "REJECT: learning_tension states the Oct 2018 outcome; facts cite an unopened source with the wrong date; 1:8 reverse split + two spin-offs inside window"
+    }
+  ],
+  "scoring": "0-2 each: contemporary-source coverage, reconstructable prices/corporate actions, understandable economic decision, horizon relevance, novelty vs other selections. Editorial aid, not a measurement of investing skill.",
+  "coverage": {
+    "1y": {
+      "up": [
+        "FSLR"
+      ],
+      "down": [
+        "HSY",
+        "AXSM (cagr -5.0, boundary)"
+      ],
+      "roughly_flat": []
+    },
+    "3y": {
+      "up": [
+        "DE",
+        "SRPT"
+      ],
+      "roughly_flat": [
+        "TGT"
+      ],
+      "down": []
+    },
+    "5y": {
+      "up": [
+        "JPM",
+        "GILD"
+      ],
+      "roughly_flat": [
+        "MDGL"
+      ],
+      "down": [
+        "NKTR"
+      ]
+    },
+    "gaps": [
+      "no 1-year roughly-flat case in the pool",
+      "no 3-year down case in the pool after the Acadia cutoff correction (was -5.26, now -4.8 CAGR)",
+      "these are pool gaps for the next research batch, not claims of coverage"
+    ]
+  },
+  "composition": {
+    "horizons": "3 x 1y, 3 x 3y, 4 x 5y",
+    "biotech_pharma": 5,
+    "software_it": 0,
+    "other": "consumer, retail, industrials, energy, finance"
+  }
+}

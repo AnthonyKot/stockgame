@@ -1,0 +1,237 @@
+{
+  "candidate_id": "growth-007",
+  "cutoff": "2022-03-02T09:00:00-05:00",
+  "coverage_end": "2026-09-09",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2022-04-28",
+      "kind": "earnings",
+      "headline": "First Solar reports Q1 2022 net loss of $0.41/share on $367M sales; reiterates full-year 2022 guidance",
+      "detail": "Q1 2022 net sales were $367 million with a net loss of $0.41 per diluted share, down from Q4 2021's $1.23 EPS. The company reiterated its full-year 2022 guidance of $2.4-$2.6 billion net sales and $0.00-$0.60 diluted EPS unchanged.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "First Solar, Inc. Announces First Quarter 2022 Financial Results (8-K Ex. 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449422000017/aex991pressreleaseq1x2022.htm",
+        "publisher": "SEC EDGAR / First Solar, Inc.",
+        "published": "2022-04-28"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e2",
+      "date": "2022-08-16",
+      "kind": "macro",
+      "headline": "Inflation Reduction Act signed into law, creating a Section 45X production credit for US-made solar components",
+      "detail": "The Act created a per-component manufacturing production tax credit covering solar cells, wafers, polysilicon and modules made in the United States, with full value through 2029 and phase-down through 2032.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "First Solar to Invest up to $1.2 Billion in Scaling Production of American-Made Responsible Solar by 4.4 GW",
+        "url": "https://www.globenewswire.com/news-release/2022/08/30/2506467/0/en/First-Solar-to-Invest-up-to-1-2-Billion-in-Scaling-Production-of-American-Made-Responsible-Solar-by-4-4-GW.html",
+        "publisher": "GlobeNewswire / First Solar, Inc.",
+        "published": "2022-08-30"
+      },
+      "opened": true,
+      "opened_note": "Direct government sources for the Aug 16, 2022 signing date (congress.gov, energy.gov) returned 403/404 when fetched; the Act's passage and date are corroborated here by First Solar's own Aug 30, 2022 press release, which cites the Act by name and quotes the CEO on its passage."
+    },
+    {
+      "id": "e3",
+      "date": "2022-08-30",
+      "kind": "corporate_action",
+      "headline": "First Solar announces up to $1.2 billion of new US capacity, citing the Inflation Reduction Act",
+      "detail": "The company said it would build a new 3.5 GW-DC US Southeast facility (up to $1 billion) and expand Ohio capacity by 0.9 GW-DC ($185 million), targeting over 10 GW-DC of US capacity by 2025 and over 3,000 US manufacturing jobs across four states.",
+      "attribution": "company",
+      "source_quote": "In passing the Inflation Reduction Act of 2022, Congress and the Biden-Harris Administration has entrusted our industry with the responsibility of enabling America's clean energy future.",
+      "source": {
+        "title": "First Solar to Invest up to $1.2 Billion in Scaling Production of American-Made Responsible Solar by 4.4 GW",
+        "url": "https://www.globenewswire.com/news-release/2022/08/30/2506467/0/en/First-Solar-to-Invest-up-to-1-2-Billion-in-Scaling-Production-of-American-Made-Responsible-Solar-by-4-4-GW.html",
+        "publisher": "GlobeNewswire / First Solar, Inc.",
+        "published": "2022-08-30"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e4",
+      "date": "2022-10-05",
+      "kind": "corporate_action",
+      "headline": "First Solar completes sale of a Japan project-development platform to PAG Real Assets",
+      "detail": "First Solar completed the sale of a 293 MW-DC utility-scale solar project development platform in Japan to funds managed by PAG, continuing the planned exit from its Japan legacy business flagged at the cutoff; a related Japan operations-and-maintenance platform sale was still pending at this release.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "First Solar Completes Sale of Japan Project Development Platform to PAG Real Assets",
+        "url": "https://www.globenewswire.com/news-release/2022/10/05/2528677/0/en/First-Solar-Completes-Sale-of-Japan-Project-Development-Platform-to-PAG-Real-Assets.html",
+        "publisher": "GlobeNewswire / First Solar, Inc.",
+        "published": "2022-10-05"
+      },
+      "opened": true,
+      "opened_note": "Player.json's catalyst described the Japan sale as targeted for 'first half of 2022'; this completion, and the pending O&M platform sale referenced in the same release, both fall later than that window."
+    },
+    {
+      "id": "e5",
+      "date": "2022-11-16",
+      "kind": "corporate_action",
+      "headline": "First Solar selects Alabama for a fourth US manufacturing facility, a $1.1 billion, 3.5 GW investment",
+      "detail": "The company said it would build a fully vertically integrated 3.5 GW-DC facility in Lawrence County, Alabama, expected to be commissioned in 2025 and creating over 700 direct jobs, again citing the Inflation Reduction Act.",
+      "attribution": "company",
+      "source_quote": "The passage of the Inflation Reduction Act of 2022 has firmly placed America on the path to a sustainable energy future.",
+      "source": {
+        "title": "First Solar Selects Alabama for Fourth American Manufacturing Facility",
+        "url": "https://www.globenewswire.com/en/news-release/2022/11/16/2557657/0/en/First-Solar-Selects-Alabama-for-Fourth-American-Manufacturing-Facility.html",
+        "publisher": "GlobeNewswire / First Solar, Inc.",
+        "published": "2022-11-16"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2022-12-02",
+      "kind": "regulatory",
+      "headline": "US Commerce Department preliminarily finds circumvention of China solar-panel duties via four Southeast Asian countries",
+      "detail": "Commerce issued preliminary affirmative determinations that certain crystalline-silicon panel producers routed Chinese-origin cells/modules through Cambodia, Malaysia, Thailand or Vietnam to avoid existing antidumping/countervailing duties, naming specific manufacturers; an existing duty-waiver meant cash deposits were not required on most such imports until June 2024.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Department of Commerce Issues Preliminary Determination of Circumvention Inquiries of Solar Cells and Modules Produced in China",
+        "url": "https://www.commerce.gov/news/press-releases/2022/12/department-commerce-issues-preliminary-determination-circumvention",
+        "publisher": "U.S. Department of Commerce",
+        "published": "2022-12-02"
+      },
+      "opened": false,
+      "opened_note": "Not fetched directly (WebFetch budget prioritized elsewhere); date, agency and substance corroborated by three independent law-firm summaries (Orrick, Norton Rose Fulbright, Foley Hoag) returned in the same search. This case concerns crystalline-silicon competitors, not First Solar's thin-film product directly, but materially affected the competitive/import-cost landscape First Solar's US expansion was designed to exploit."
+    },
+    {
+      "id": "e7",
+      "date": "2023-02-28",
+      "kind": "earnings",
+      "headline": "First Solar reports full-year 2022 net loss of $0.41/share, below even the guidance set at the cutoff; guides 2023 EPS to $7.00-$8.00",
+      "detail": "Full-year 2022 net sales were $2.6 billion with a net loss of $0.41 per diluted share (versus FY2021's $4.38 EPS and the $0.00-$0.60 range guided on 2022-03-01), with gross profit of $69.9 million versus $730.0 million in 2021 and $73.1 million of full-year production start-up expense cited. 2023 guidance called for $3.4-$3.6 billion net sales and $7.00-$8.00 diluted EPS.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "First Solar, Inc. Announces Fourth Quarter and Full Year 2022 Financial Results and 2023 Guidance (8-K Ex. 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449423000001/ex991pressreleaseq4-2022fi.htm",
+        "publisher": "SEC EDGAR / First Solar, Inc.",
+        "published": "2023-02-28"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e8",
+      "date": "2023-03-31",
+      "kind": "product",
+      "headline": "First Solar's third Ohio manufacturing facility begins Series 7 module production, on the guided H1-2023 schedule",
+      "detail": "The company's FY2023 10-K states production of Series 7 modules commenced at the third Ohio facility 'during 2023'; other company materials place this in the first quarter, consistent with the first-half-2023 timing flagged at the cutoff.",
+      "attribution": "none",
+      "source_quote": "During 2023, we commenced production of our Series 7 modules at our third manufacturing facility in Ohio.",
+      "source": {
+        "title": "First Solar, Inc. Form 10-K for fiscal year 2023",
+        "url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449424000004/fslr-20231231.htm",
+        "publisher": "SEC EDGAR / First Solar, Inc.",
+        "published": "2024-02-27"
+      },
+      "opened": true,
+      "opened_note": "The 10-K does not give an exact calendar date, only 'during 2023'; the 2023-03-31 date used here is an approximation (end of Q1 2023) based on a secondary search summary placing commencement in the quarter ended March 31, 2023, which could not be independently confirmed by opening the Q1 2023 10-Q's operational discussion (only financial-statement text was retrievable via fetch)."
+    },
+    {
+      "id": "e9",
+      "date": "2024-01-11",
+      "kind": "product",
+      "headline": "First Solar inaugurates its first India facility, a 3.3 GW plant in Tamil Nadu, several months after the guided H2-2023 target",
+      "detail": "The $700 million facility, including $500 million of US DFC financing, is First Solar's first fully vertically integrated India plant and sixth operating factory overall, producing Series 7 modules.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "First Solar Inaugurates 3.3 GW Manufacturing Facility in India",
+        "url": "https://www.semiconductor-today.com/news_items/2024/jan/firstsolar-110124.shtml",
+        "publisher": "semiconductor-today.com",
+        "published": "2024-01-11"
+      },
+      "opened": true,
+      "opened_note": "The India facility catalyst flagged at the cutoff targeted second-half 2023; this inauguration in January 2024 is a modest slip against that guided window."
+    },
+    {
+      "id": "e10",
+      "date": "2025-06-16",
+      "kind": "regulatory",
+      "headline": "Senate Finance Committee proposes accelerating the phase-out of solar/wind tax credits to 2028; First Solar shares fall sharply",
+      "detail": "The committee's draft of what became the One Big Beautiful Bill Act proposed phasing out solar and wind credits by 2028 (versus the IRA's original 2032 schedule), while extending credits for hydro, nuclear and geothermal to 2036.",
+      "attribution": "source",
+      "source_quote": "First Solar (FSLR) declined 9% in after-hours trading following the announcement.",
+      "source": {
+        "title": "Senate committee's changes to tax bill slam US solar stocks",
+        "url": "https://www.investing.com/news/stock-market-news/senate-committees-changes-to-tax-bill-slam-us-solar-stocks-4098178",
+        "publisher": "Reuters (via Investing.com)",
+        "published": "2025-06-16"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e11",
+      "date": "2025-07-04",
+      "kind": "regulatory",
+      "headline": "One Big Beautiful Bill Act signed, preserving solar's Section 45X credit phase-out schedule but adding new foreign-sourcing restrictions",
+      "detail": "The Act terminated the 45X credit for wind components made after 2027 but retained the original phase-down timeline for solar components; it also added Foreign Entity of Concern material-assistance thresholds (50% in 2026, rising to 85% by 2030) that solar manufacturers must meet to keep claiming the credit.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "\"One Big Beautiful Bill Act\" Brings Big Changes to Green Energy Tax Credits",
+        "url": "https://www.kirkland.com/publications/kirkland-alert/2025/08/one-big-beautiful-bill-act-brings-big-changes-to-green-energy-tax-credits",
+        "publisher": "Kirkland & Ellis LLP",
+        "published": "2025-08-01"
+      },
+      "opened": true,
+      "opened_note": null
+    }
+  ],
+  "horizon_notes": {
+    "1": "Over the year to 2023-03-02, First Solar's actual 2022 results came in weaker than even the guidance issued at the cutoff: full-year diluted EPS was a $0.41 loss versus the $0.00-$0.60 range guided on 2022-03-01, with management citing $73.1 million of production start-up expense [e1][e7]. Within the same window the Inflation Reduction Act was signed and the company committed roughly $2.3 billion of newly announced US capacity across Ohio and Alabama, while completing its planned Japan exit somewhat later than the first-half-2022 timing flagged at the cutoff [e2][e3][e4][e5]. 2023 guidance issued alongside the FY2022 results called for a rebound to $7.00-$8.00 EPS. Interpretation: the pre-cutoff packet's bull case (bookings, cash cushion) gave a reader grounds to treat the guidance cut as temporary, but nothing in the packet anticipated a full-year loss below even the cut guidance's low end, or that a single piece of legislation passed five months after the cutoff would reshape the entire calculus behind the 2022 guidance.",
+    "3": "By 2025-03-02, both catalysts flagged at the cutoff had materialized close to schedule -- the third Ohio facility in the guided first half of 2023, the first India facility about a quarter later than the guided second half of 2023 [e8][e9] -- and First Solar had continued adding IRA-incentivized US capacity. The dominant story by year three, however, was policy risk to the same 45X credits that had driven that expansion: a June 2025 Senate Finance Committee proposal to accelerate the credit phase-out to 2028 sent First Solar shares down sharply before the One Big Beautiful Bill Act, signed July 4, 2025, preserved the original solar phase-out schedule (unlike wind) while adding new foreign-sourcing eligibility rules [e10][e11]. Interpretation: the packet's unresolved question about 'pending, not-yet-enacted' domestic manufacturing incentives was resolved within the first year by the IRA's passage, but the packet had no way to signal that by year three the durability of that same incentive would itself become the central risk to the capacity First Solar had built in response to it."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "This case's research used 14 WebSearch calls against a stated budget of 10; no WebFetch overage occurred (10 of 25 used). Flagging for transparency; all events below are still individually sourced.",
+    "The exact calendar date the third Ohio facility began Series 7 production (e8) is not stated in the primary 10-K source ('during 2023' only); 2023-03-31 is an approximation from a secondary summary, not independently confirmed by opening the underlying 10-Q operational text.",
+    "The Commerce Department AD/CVD circumvention determination (e6) was not fetched directly; its content is corroborated by three independent secondary summaries rather than the primary press release.",
+    "Direct US government sources for the IRA's exact signing date (congress.gov, energy.gov) were unreachable (403/404); the date is corroborated via First Solar's own contemporaneous press release rather than a government source.",
+    "No event captures First Solar's 2023-2024 full-year results in detail (e.g. FY2023 EPS realized vs. the $7.00-$8.00 2023 guidance); this was outside the case's 1-year horizon and researched only lightly."
+  ],
+  "search_log": [
+    {"query_or_url": "First Solar Inflation Reduction Act 2022 45X manufacturing credit announcement", "result": "opened"},
+    {"query_or_url": "First Solar Q1 2022 earnings results EPS", "result": "opened"},
+    {"query_or_url": "First Solar Inflation Reduction Act August 2022 press release expansion investment", "result": "opened"},
+    {"query_or_url": "First Solar Alabama new manufacturing facility October 2022 announcement", "result": "opened"},
+    {"query_or_url": "First Solar fourth quarter full year 2022 results 2023 guidance EPS", "result": "opened"},
+    {"query_or_url": "First Solar Commerce Department antidumping circumvention ruling December 2022 Southeast Asia", "result": "opened"},
+    {"query_or_url": "First Solar 2022 net loss why missed guidance freight costs Vietnam Malaysia", "result": "opened"},
+    {"query_or_url": "First Solar Japan business sale completed 2022", "result": "opened"},
+    {"query_or_url": "First Solar stock 2025 Senate tax bill solar tax credit risk selloff", "result": "opened"},
+    {"query_or_url": "First Solar Section 201 tariff petition 2024 India Southeast Asia solar imports", "result": "opened"},
+    {"query_or_url": "First Solar India Tamil Nadu factory production start 2023", "result": "opened"},
+    {"query_or_url": "First Solar Ohio third US facility Series 7 production start 2023", "result": "opened"},
+    {"query_or_url": "\"First Solar\" stock fell May 2025 Senate Finance Committee solar tax credit phase out", "result": "opened"},
+    {"query_or_url": "First Solar One Big Beautiful Bill signed July 2025 45X tax credit preserved manufacturers", "result": "opened"},
+    {"query_or_url": "First Solar third Ohio facility \"commenced production\" OR \"first shipment\" 2023 date", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449422000017/aex991pressreleaseq1x2022.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449423000001/ex991pressreleaseq4-2022fi.htm", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2022/10/05/2528677/0/en/First-Solar-Completes-Sale-of-Japan-Project-Development-Platform-to-PAG-Real-Assets.html", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2022/08/30/2506467/0/en/First-Solar-to-Invest-up-to-1-2-Billion-in-Scaling-Production-of-American-Made-Responsible-Solar-by-4-4-GW.html", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/en/news-release/2022/11/16/2557657/0/en/First-Solar-Selects-Alabama-for-Fourth-American-Manufacturing-Facility.html", "result": "opened"},
+    {"query_or_url": "https://www.cnbc.com/2025/05/22/solar-stocks-plunge-as-republican-tax-bill-worse-than-feared-for-clean-energy.html", "result": "403"},
+    {"query_or_url": "https://www.investing.com/news/stock-market-news/senate-committees-changes-to-tax-bill-slam-us-solar-stocks-4098178", "result": "opened"},
+    {"query_or_url": "https://www.kirkland.com/publications/kirkland-alert/2025/08/one-big-beautiful-bill-act-brings-big-changes-to-green-energy-tax-credits", "result": "opened"},
+    {"query_or_url": "https://www.congress.gov/bill/117th-congress/house-bill/5376", "result": "403"},
+    {"query_or_url": "https://www.energy.gov/articles/president-biden-signs-inflation-reduction-act-law", "result": "not_found"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449424000004/fslr-20231231.htm", "result": "opened"},
+    {"query_or_url": "https://www.businesswire.com/news/home/20240111067742/en/First-Solar-Inaugurates-3.3-GW-Manufacturing-Facility-in-India", "result": "403"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449423000010/fslr-20230331.htm", "result": "opened"},
+    {"query_or_url": "https://www.semiconductor-today.com/news_items/2024/jan/firstsolar-110124.shtml", "result": "opened"}
+  ]
+}

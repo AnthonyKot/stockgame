@@ -1,0 +1,8 @@
+{
+  "ticker": "REGN",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/REGN?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:24.254136+00:00",
+  "sha256": "749980e2062c97066dd62365981adcfc3eb6bc2b783f7e6495a98638c253d159",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

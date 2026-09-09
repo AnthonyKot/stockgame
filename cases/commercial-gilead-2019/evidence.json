@@ -1,0 +1,481 @@
+{
+  "candidate_id": "commercial-gilead-2019",
+  "sources": [
+    {
+      "id": "gild-8k-ex991",
+      "kind": "8-K",
+      "title": "Gilead Sciences Announces Fourth Quarter and Full Year 2018 Financial Results (Exhibit 99.1 press release)",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209519000003/exhibit991earningspressrel.htm",
+      "published_at": "2019-02-04",
+      "available_at": "2019-02-04",
+      "availability_basis": "EDGAR acceptance 16:04 ET (after market close)",
+      "opened": true,
+      "local_copy": "research/sources/gild-0000882095-19-000003.txt",
+      "excerpts": [
+        {
+          "claim_ids": [
+            "g1"
+          ],
+          "text": "Fourth Quarter Product Sales of $5.7 billion - Full Year 2018 Product Sales of $21.7 billion - Full Year 2018 Diluted EPS of $4.17 per share - Full Year 2018 Non-GAAP Diluted EPS of $6.67 per share",
+          "location": "headline"
+        },
+        {
+          "claim_ids": [
+            "g2"
+          ],
+          "text": "Full year 2018 total revenues were $22.1 billion, compared to $26.1 billion for 2017.",
+          "location": "opening paragraph"
+        },
+        {
+          "claim_ids": [
+            "g3"
+          ],
+          "text": "HIV product sales were $4.1 billion for the fourth quarter of 2018 compared to $3.4 billion for the same period in 2017. For 2018, HIV product sales were $14.6 billion compared to $13.0 billion in 2017. The increases were primarily due to the launch of Biktarvy in 2018 and the continued uptake of Descovy, Genvoya and Odefsey.",
+          "location": "Product Sales section"
+        },
+        {
+          "claim_ids": [
+            "g4"
+          ],
+          "text": "Chronic hepatitis C virus (HCV) product sales...were $738 million for the fourth quarter of 2018 compared to $1.5 billion for the same period in 2017. For 2018, HCV product sales were $3.7 billion compared to $9.1 billion in 2017. The declines were primarily due to lower average net selling price and lower sales volume of Harvoni and Epclusa across all major markets as a result of increased competition and lower patient starts.",
+          "location": "Product Sales section"
+        },
+        {
+          "claim_ids": [
+            "g5"
+          ],
+          "text": "Yescarta (axicabtagene ciloleucel), which was launched in the United States in October 2017, generated $81 million in sales during the fourth quarter of 2018 and $264 million in sales in 2018.",
+          "location": "Product Sales section"
+        },
+        {
+          "claim_ids": [
+            "g6"
+          ],
+          "text": "As of December 31, 2018, Gilead had $31.5 billion of cash, cash equivalents and marketable debt securities compared to $36.7 billion as of December 31, 2017. During 2018, Gilead generated $8.4 billion in operating cash flow, repaid $6.3 billion of debt, paid cash dividends of $3.0 billion and utilized $2.9 billion on stock repurchases.",
+          "location": "Cash, Cash Equivalents and Marketable Debt Securities section"
+        },
+        {
+          "claim_ids": [
+            "g7"
+          ],
+          "text": "Gilead provided its full year 2019 guidance below. The guidance for product sales reflects the anticipated entry of generic versions of Letairis and Ranexa in the United States and the full year impact of generic products containing tenofovir disoproxil fumarate in certain European countries. Product Sales $21,300 - $21,800",
+          "location": "Full Year 2019 Guidance table"
+        },
+        {
+          "claim_ids": [
+            "g8"
+          ],
+          "text": "Announced that the Board of Directors named Daniel O'Day Chairman of the Board and Chief Executive Officer, effective March 1, 2019. Announced that the Board of Directors appointed Gregg Alton as interim Chief Executive Officer for the period of January 1, 2019 until March 1, 2019.",
+          "location": "Corporate Highlights"
+        },
+        {
+          "claim_ids": [
+            "g9"
+          ],
+          "text": "Announced an immuno-oncology partnership with Agenus Inc....Announced a strategic collaboration with Scholar Rock Holding Corporation...Announced a global strategic collaboration with Tango Therapeutics, Inc.",
+          "location": "Corporate Highlights"
+        },
+        {
+          "claim_ids": [
+            "g10"
+          ],
+          "text": "Updated results from ZUMA-3, a single-arm Phase 1/2 study evaluating KTE-X19...in adult patients with relapsed or refractory acute lymphoblastic leukemia. With a median follow-up of 15.1 months following a single infusion of KTE-X19, 69% of evaluable patients achieved complete tumor remission...The rate of undetectable minimal residual disease in patients who achieved complete tumor remission was 100%.",
+          "location": "Oncology and Cell Therapy Programs"
+        },
+        {
+          "claim_ids": [
+            "g11"
+          ],
+          "text": "Two-year efficacy and safety data from the pivotal ZUMA-1 trial of Yescarta in patients with refractory large B-cell lymphoma. With a minimum follow-up of two years after a single infusion of Yescarta (median follow up of 27.1 months), 39% of patients were in an ongoing response.",
+          "location": "Oncology and Cell Therapy Programs"
+        },
+        {
+          "claim_ids": [
+            "g12"
+          ],
+          "text": "Results demonstrating that treatment with GS-9674, an investigational, selective, nonsteroidal farnesoid X receptor agonist, led to significant improvements in liver biochemistry and markers of cholestasis in patients with primary sclerosing cholangitis.",
+          "location": "HIV and Liver Diseases Programs"
+        },
+        {
+          "claim_ids": [
+            "g13"
+          ],
+          "text": "Presented data at the 2018 HIV Glasgow conference, which included the announcement of 96-week results from a Phase 3, randomized, double-blinded study evaluating the safety and efficacy of Biktarvy for the treatment of HIV-1 infection in treatment-naive adults...Biktarvy was found to be statistically non-inferior to a regimen of dolutegravir and emtricitabine/tenofovir alafenamide through 96 weeks of therapy.",
+          "location": "HIV and Liver Diseases Programs"
+        },
+        {
+          "claim_ids": [
+            "g14"
+          ],
+          "text": "market share and price erosion caused by the introduction of generic versions of Viread and Truvada",
+          "location": "Forward-looking Statements risk list"
+        },
+        {
+          "claim_ids": [
+            "g15"
+          ],
+          "text": "Product gross margin 72.4% 78.5% 77.6% 83.0%",
+          "location": "Cost of Goods Sold and Product Gross Margin table"
+        },
+        {
+          "claim_ids": [
+            "g16"
+          ],
+          "text": "GAAP operating margin 19.7% 38.5% 37.1% 54.1%",
+          "location": "Reconciliation of GAAP to Non-GAAP, operating margin reconciliation"
+        },
+        {
+          "claim_ids": [
+            "g17"
+          ],
+          "text": "Total assets $63,675 $70,283...Stockholders' equity(1) 21,534 20,501...As of December 31, 2018, there were 1,282 million shares of common stock issued and outstanding",
+          "location": "Condensed Consolidated Balance Sheets"
+        },
+        {
+          "claim_ids": [
+            "g18"
+          ],
+          "text": "Net income (loss) for the fourth quarter of 2018 was $3 million...compared to net loss of $3.9 billion...for the same period in 2017. The earnings per share for the fourth quarter of 2018 included an unfavorable impact of $0.99 per diluted share from an impairment and a non-cash tax charge related to intangible assets acquired from Kite Pharma, Inc.",
+          "location": "opening paragraph"
+        },
+        {
+          "claim_ids": [
+            "g19"
+          ],
+          "text": "R&D expenses increased primarily due to an $820 million impairment charge related to in-process R&D (IPR&D) for the KITE-585 program (an anti-BCMA being evaluated for the treatment of multiple myeloma), up-front collaboration expenses and higher investments to support the growth of Gilead's business following the acquisition of Kite",
+          "location": "Operating Expenses section"
+        },
+        {
+          "claim_ids": [
+            "g21"
+          ],
+          "text": "Gilead Sciences, Inc. is a research-based biopharmaceutical company that discovers, develops and commercializes innovative medicines in areas of unmet medical need. The company strives to transform and simplify care for people with life-threatening illnesses around the world. Gilead has operations in more than 35 countries worldwide, with headquarters in Foster City, California.",
+          "location": "About Gilead Sciences (release footer)"
+        }
+      ]
+    },
+    {
+      "id": "gild-10k-fy2014",
+      "kind": "10-K",
+      "title": "Gilead Sciences, Inc. Form 10-K filing index (0000882095-15-000008), used for XBRL financial facts",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209515000008/0000882095-15-000008-index.htm",
+      "published_at": "2015-02-25",
+      "available_at": "2015-02-25",
+      "availability_basis": "EDGAR acceptance (filed date)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    },
+    {
+      "id": "gild-10k-fy2015",
+      "kind": "10-K",
+      "title": "Gilead Sciences, Inc. Form 10-K filing index (0000882095-16-000039), used for XBRL financial facts",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209516000039/0000882095-16-000039-index.htm",
+      "published_at": "2016-02-24",
+      "available_at": "2016-02-24",
+      "availability_basis": "EDGAR acceptance (filed date)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    },
+    {
+      "id": "gild-10k-fy2016",
+      "kind": "10-K",
+      "title": "Gilead Sciences, Inc. Form 10-K filing index (0000882095-17-000006), used for XBRL financial facts",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209517000006/0000882095-17-000006-index.htm",
+      "published_at": "2017-02-27",
+      "available_at": "2017-02-27",
+      "availability_basis": "EDGAR acceptance (filed date)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    },
+    {
+      "id": "gild-10k-fy2017",
+      "kind": "10-K",
+      "title": "Gilead Sciences, Inc. Form 10-K filing index (0000882095-18-000008), used for XBRL financial facts",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209518000008/0000882095-18-000008-index.htm",
+      "published_at": "2018-02-27",
+      "available_at": "2018-02-27",
+      "availability_basis": "EDGAR acceptance (filed date)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    },
+    {
+      "id": "gild-10q-q1-2018",
+      "kind": "10-Q",
+      "title": "Gilead Sciences, Inc. Form 10-Q filing index (0000882095-18-000015), used for XBRL financial facts",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209518000015/0000882095-18-000015-index.htm",
+      "published_at": "2018-05-09",
+      "available_at": "2018-05-09",
+      "availability_basis": "EDGAR acceptance (filed date)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    },
+    {
+      "id": "gild-10q-q2-2018",
+      "kind": "10-Q",
+      "title": "Gilead Sciences, Inc. Form 10-Q filing index (0000882095-18-000022), used for XBRL financial facts",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209518000022/0000882095-18-000022-index.htm",
+      "published_at": "2018-08-06",
+      "available_at": "2018-08-06",
+      "availability_basis": "EDGAR acceptance (filed date)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    },
+    {
+      "id": "gild-10q-q3-2018",
+      "kind": "10-Q",
+      "title": "Gilead Sciences, Inc. Form 10-Q filing index (0000882095-18-000029), used for XBRL financial facts",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209518000029/0000882095-18-000029-index.htm",
+      "published_at": "2018-11-06",
+      "available_at": "2018-11-06",
+      "availability_basis": "EDGAR acceptance (filed date)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    }
+  ],
+  "claims": [
+    {
+      "id": "g1",
+      "text": "Gilead reported fourth-quarter 2018 product sales of $5.7 billion, full-year 2018 product sales of $21.7 billion, full-year GAAP diluted EPS of $4.17 and full-year non-GAAP diluted EPS of $6.67 [g1].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g2",
+      "text": "Full-year 2018 total revenues were $22.1 billion, down from $26.1 billion in 2017 [g2].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g3",
+      "text": "Full-year 2018 HIV product sales grew to $14.6 billion from $13.0 billion in 2017, driven by the 2018 launch of its newest single-tablet HIV regimen and continued uptake of several other newer HIV combination products [g3].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g4",
+      "text": "Full-year 2018 hepatitis C (HCV) product sales fell to $3.7 billion from $9.1 billion in 2017, a decline management attributed to lower average selling prices and lower sales volume for its flagship HCV regimens amid increased competition and fewer new patients starting treatment [g4].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g5",
+      "text": "The company's CAR-T cell-therapy oncology product, launched in the United States in October 2017, generated $264 million in sales for full-year 2018, including $81 million in the fourth quarter [g5].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g6",
+      "text": "The company held $31.5 billion of cash, cash equivalents and marketable debt securities at December 31, 2018, down from $36.7 billion a year earlier; during 2018 it generated $8.4 billion of operating cash flow, repaid $6.3 billion of debt, paid $3.0 billion in cash dividends and spent $2.9 billion on stock repurchases [g6].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g7",
+      "text": "Management's full-year 2019 product-sales guidance of $21.3-21.8 billion explicitly reflects the anticipated U.S. entry of generic competition for two of its non-antiviral products and the full-year European impact of generic tenofovir disoproxil fumarate products [g7].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "management_guidance",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g8",
+      "text": "The company announced a chief-executive transition: an incoming CEO was named Chairman and CEO effective March 1, 2019, with an interim CEO serving from January 1 to March 1, 2019 [g8].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g9",
+      "text": "During the fourth quarter the company announced three new early-stage research collaborations aimed at immuno-oncology and fibrotic-disease drug discovery with three separate biotechnology partners [g9].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g10",
+      "text": "In an updated Phase 1/2 study (ZUMA-3) of an investigational CD19-targeted CAR T-cell therapy in adults with relapsed or refractory acute lymphoblastic leukemia, 69% of evaluable patients achieved complete tumor remission after a single infusion, with undetectable minimal residual disease in 100% of those complete responders, at a median follow-up of 15.1 months [g10].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g11",
+      "text": "Two-year follow-up data from the pivotal trial of the company's approved CAR-T product in refractory large B-cell lymphoma showed 39% of patients in an ongoing response at a median follow-up of 27.1 months after a single infusion [g11].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g12",
+      "text": "An investigational oral compound (an FXR agonist) showed significant improvements in liver biochemistry and cholestasis markers in an early-stage study of patients with primary sclerosing cholangitis, a liver disease [g12].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g13",
+      "text": "A 96-week Phase 3 randomized, double-blinded study found the company's newest single-tablet HIV regimen statistically non-inferior to a comparator three-drug HIV regimen in treatment-naive adults [g13].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g14",
+      "text": "The company's own forward-looking risk disclosure named expected market-share and price erosion from generic versions of two of its older antiviral products as a risk to future results [g14].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g15",
+      "text": "Full-year 2018 GAAP product gross margin was 77.6%, down from 83.0% in 2017; fourth-quarter 2018 product gross margin was 72.4%, down from 78.5% a year earlier [g15].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g16",
+      "text": "Full-year 2018 GAAP operating margin was 37.1%, down from 54.1% in 2017 [g16].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g17",
+      "text": "Total assets were $63.7 billion and stockholders' equity was $21.5 billion at December 31, 2018 (versus $70.3 billion and $20.5 billion a year earlier); 1,282 million common shares were issued and outstanding at December 31, 2018 [g17].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g18",
+      "text": "Fourth-quarter 2018 net income was essentially breakeven ($3 million) versus a $3.9 billion net loss in the fourth quarter of 2017; the 2018 quarter's per-share results included a $0.99 per diluted share unfavorable impact from an impairment and non-cash tax charge tied to intangible assets acquired in the company's 2017 purchase of a cell-therapy company [g18].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g19",
+      "text": "Full-year R&D expense growth was driven in part by an $820 million impairment charge on an early-stage, in-licensed multiple-myeloma cell-therapy program, alongside higher up-front collaboration spending and continued integration investment following the 2017 cell-therapy acquisition [g19].",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "g20",
+      "text": "HIV product sales represented about 66% of total 2018 revenue, up from about 50% of total 2017 revenue, as the largest franchise's growth (helped by the 2018 launch) outweighed the shrinking hepatitis C business.",
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
+      "status": "derived",
+      "formula": "hiv_product_sales / total_revenue, for FY2018 and FY2017",
+      "input_ids": ["g2", "g3"]
+    },
+    {
+      "id": "g21",
+      "text": "Gilead Sciences is a research-based biopharmaceutical company that discovers, develops and commercializes medicines in areas of unmet medical need, with its largest commercial franchises in HIV and hepatitis C treatment and a newer cell-therapy oncology business added through its 2017 acquisition of Kite Pharma.",
+      "source_ids": ["gild-8k-ex991"],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    }
+  ],
+  "search_log": [
+    {
+      "query_or_url": "cases/commercial-gilead-2019/xbrl-facts.json (extension pass)",
+      "result": "opened",
+      "note": "Re-opened the local structured XBRL companyfacts extract to fill out financial_snapshot.history for player.json: FY2014-FY2017 annual and Q1-Q3 2018 quarterly rows for total revenue (SalesRevenueNet/Revenues tag switch, matching the tag-switch note already in repairs_needed), NetIncomeLoss, EarningsPerShareDiluted, OperatingIncomeLoss, CashAndCashEquivalentsAtCarryingValue, MarketableSecuritiesCurrent, LongTermDebtNoncurrent, CommonStockSharesOutstanding. All periods used were already filed on/before the 2019-02-05 cutoff and are covered by the existing gild-10k-fy2014...fy2017 and gild-10q-q1/q2/q3-2018 source entries; no new sources were required. Added one new derived claim (g20, HIV revenue concentration) built from existing claims g2 and g3."
+    },
+    {
+      "query_or_url": "research/sources/gild-0000882095-19-000003.txt",
+      "result": "opened",
+      "note": "Local EDGAR copy of the 4Q18/FY2018 8-K (accession 0000882095-19-000003), Exhibit 99.1: full press release including income statement, balance sheet, product-sales-by-drug table, non-GAAP reconciliations, 2019 guidance and Q4 pipeline/corporate updates. Used for all Q4/FY2018 figures and forward-looking guidance/catalysts."
+    },
+    {
+      "query_or_url": "cases/commercial-gilead-2019/xbrl-facts.json",
+      "result": "opened",
+      "note": "Local structured XBRL facts file (facts filed on/before cutoff) used for FY2014-FY2017 annual history rows and Q1-Q3 2018 quarterly rows (Revenues/SalesRevenueNet, NetIncomeLoss, EarningsPerShareDiluted, ResearchAndDevelopmentExpense, SellingGeneralAndAdministrativeExpense, OperatingIncomeLoss, CashAndCashEquivalentsAtCarryingValue, MarketableSecuritiesCurrent, LongTermDebtNoncurrent, DebtCurrent, Assets, StockholdersEquity, CommonStockSharesOutstanding, NetCashProvidedByUsedInOperatingActivities)."
+    }
+  ],
+  "exclusions": [
+    "The Gilead investor-relations news-release-details webpage (gild-q4-2018-pr in research/MVP_PROMPT.md) and the dead investor-relations 'schedule' announcement URL (gild-q4-2018-schedule) were not fetched live; the local EDGAR full-text copy of the earnings-release 8-K (accession 0000882095-19-000003) was used instead as the authoritative, already-verified primary source, consistent with the editor note in research/MVP_PROMPT.md that the schedule URL should be dropped in favor of the EDGAR index.",
+    "Individual branded product names (e.g. the flagship 2018-launch HIV regimen, the older HIV combinations, the leading HCV regimens, the CAR-T product) are described generically rather than by trademark in this evidence file's claim text and in player.json, consistent with the masking rule against product brand names; the underlying source excerpts retain the original brand names for the reviewer's verification.",
+    "No consensus EPS/revenue estimates were sought or used.",
+    "No market capitalization or enterprise-value figure was available with its own stated date in the 4Q18 release (unlike some other filers' supplements); EV/revenue is left missing per the fixed evidence policy rather than joined to an outside price source.",
+    "Full generic-by-generic product sales detail (16 individual branded products across HIV/HCV/other) was consolidated into six therapeutic/franchise buckets for the existing_products table rather than reproduced line by line, to keep the packet within the sector-evidence row limits; the full per-product table is available in the local source copy for a reviewer who wants it."
+  ],
+  "repairs_needed": [
+    "Total period-end debt at December 31, 2018 is not explicitly broken out in the condensed balance sheet in the 8-K (only aggregated current/long-term liabilities are shown); only the narrative fact 'repaid $6.3 billion of debt' during 2018 is available. A reviewer wanting an exact FY2018 debt balance should pull it from the FY2018 Form 10-K once available (outside this packet's pre-cutoff window).",
+    "Q2 and Q3 2018 quarterly total revenue were sourced from the 'Revenues' XBRL tag (Gilead's post-ASC 606 tag), while Q1 2018 came from the older 'SalesRevenueNet' tag; both are reported-basis total revenue and sum exactly to the FY2018 total ($22,127 million), so no inconsistency, but a reviewer should note the tag switch if auditing programmatically.",
+    "Enterprise value / EV-per-revenue is left missing: no market capitalization with its own stated date appears in the packet's sources (unlike JPMorgan Chase's supplement, Gilead's 4Q18 release does not include one)."
+  ]
+}

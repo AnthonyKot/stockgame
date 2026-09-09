@@ -1,0 +1,216 @@
+{
+  "candidate_id": "commercial-gilead-2019",
+  "cutoff": "2019-02-05T09:00:00-05:00",
+  "coverage_end": "2024-02-05",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2019-03-01",
+      "kind": "management",
+      "headline": "Daniel O'Day, former Roche Pharmaceuticals CEO, takes over as Gilead's Chairman and CEO as previously scheduled",
+      "detail": "O'Day succeeded interim CEO Gregg Alton, who had led Gilead from January 1 to March 1, 2019, following John Milligan's retirement; the transition occurred on the date the company had announced in December 2018.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Gilead Sciences Names Daniel O'Day Chairman and Chief Executive Officer",
+        "url": "https://www.gilead.com/news/news-details/2018/gilead-sciences-names-daniel-oday-chairman-and-chief-executive-officer",
+        "publisher": "Gilead Sciences, Inc.",
+        "published": "2018-12-10"
+      },
+      "opened": true,
+      "opened_note": "Source predates the cutoff (it is Gilead's original announcement of the transition) but is used to confirm the effective date of an event -- O'Day actually taking office -- that occurred after the cutoff, matching the catalyst named in the pre-cutoff packet."
+    },
+    {
+      "id": "e2",
+      "date": "2020-02-04",
+      "kind": "earnings",
+      "headline": "Gilead reports full-year 2019 revenue of $22.4 billion as Biktarvy-led HIV growth continues to outpace hepatitis C decline",
+      "detail": "Full-year 2019 total revenue was $22.4 billion and net income was $5.4 billion ($4.22 diluted EPS); HIV sales rose to $16.4 billion from $14.6 billion on Biktarvy uptake, while hepatitis C revenue fell to $2.9 billion from $3.7 billion on lower average selling prices.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Gilead Sciences Announces Fourth Quarter and Full Year 2019 Financial Results",
+        "url": "https://www.gilead.com/news/news-details/2020/gilead-sciences-announces-fourth-quarter-and-full-year-2019-financial-results",
+        "publisher": "Gilead Sciences, Inc.",
+        "published": "2020-02-04"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e3",
+      "date": "2020-09-13",
+      "kind": "deal",
+      "headline": "Gilead agrees to acquire Immunomedics for about $21 billion in cash to add the oncology drug Trodelvy",
+      "detail": "Gilead agreed to pay $88.00 per share, roughly $21 billion total, for Immunomedics, whose lead product Trodelvy had recently won accelerated approval in triple-negative breast cancer; Gilead said the deal would broaden its solid-tumor pipeline and become accretive to non-GAAP EPS in 2023.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Gilead Sciences to Acquire Immunomedics",
+        "url": "https://www.gilead.com/news/news-details/2020/gilead-sciences-to-acquire-immunomedics",
+        "publisher": "Gilead Sciences, Inc.",
+        "published": "2020-09-13"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e4",
+      "date": "2020-09-30",
+      "kind": "product",
+      "headline": "Generic version of Gilead's HIV drug Truvada launches in the U.S. about a year earlier than the underlying patent expiry",
+      "detail": "Teva launched an authorized generic of Truvada on September 30, 2020, under a 2014 settlement that allowed early entry; U.S. Truvada sales of roughly $2.6 billion were exposed to this competition, materializing the generic-competition risk Gilead had flagged in its 2019 guidance.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Gilead's $3B Truvada will face generics a year early. Can Descovy still win over its patients?",
+        "url": "https://www.fiercepharma.com/pharma/a-surprise-gilead-s-3b-per-year-truvada-to-face-generics-next-year",
+        "publisher": "Fierce Pharma",
+        "published": "2019-05-09"
+      },
+      "opened": false,
+      "opened_note": "Search-summarized only (not directly WebFetched); date and mechanism corroborated by Gilead's own FY2020 earnings release (e6), which was opened and states Truvada-based products declined due to 'loss of exclusivity in October 2020.'"
+    },
+    {
+      "id": "e5",
+      "date": "2020-10-22",
+      "kind": "regulatory",
+      "headline": "FDA grants full approval to Gilead's Veklury (remdesivir), the first approved COVID-19 treatment in the U.S.",
+      "detail": "The approval covers hospitalized adult and pediatric COVID-19 patients 12 and older, based on the ACTT-1 trial showing a five-day faster median recovery time versus placebo; Veklury had previously been available only under emergency use authorization.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "U.S. Food and Drug Administration Approves Gilead's Antiviral Veklury (remdesivir) for Treatment of COVID-19",
+        "url": "https://www.gilead.com/news/news-details/2020/us-food-and-drug-administration-approves-gileads-antiviral-veklury-remdesivir-for-treatment-of-covid-19",
+        "publisher": "Gilead Sciences, Inc.",
+        "published": "2020-10-22"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2021-02-04",
+      "kind": "earnings",
+      "headline": "Gilead's full-year 2020 GAAP net income falls to $123 million even as Veklury COVID-19 sales reach $2.8 billion",
+      "detail": "Full-year 2020 total revenue rose 10% to $24.7 billion, but GAAP net income fell to $123 million ($0.10 diluted EPS) from $5.4 billion in 2019; Veklury contributed $2.8 billion of new sales tied to pandemic hospitalizations, HIV sales grew 3% to $16.9 billion, and HCV sales fell 30% to $2.1 billion, which the company linked partly to reduced pandemic-era patient starts.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Gilead Sciences Announces Fourth Quarter and Full Year 2020 Financial Results",
+        "url": "https://www.gilead.com/news/news-details/2021/gilead-sciences-announces-fourth-quarter-and-full-year-2020-financial-results",
+        "publisher": "Gilead Sciences, Inc.",
+        "published": "2021-02-04"
+      },
+      "opened": true,
+      "opened_note": "The opened release did not itself explain the drop from billions in net income to $123 million (likely related to acquisition accounting for Immunomedics, but that causal link was not stated in this source), so no cause is asserted here beyond the reported figures."
+    },
+    {
+      "id": "e7",
+      "date": "2022-10-11",
+      "kind": "regulatory",
+      "headline": "FDA accepts for priority review Gilead's application to expand Trodelvy into a common, earlier-stage breast cancer type",
+      "detail": "The FDA granted priority review to a supplemental application for Trodelvy in pre-treated HR-positive, HER2-negative metastatic breast cancer, based on the Phase 3 TROPiCS-02 trial, with a target decision date set for February 2023.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "U.S. FDA Accepts for Priority Review the Supplemental Biologics License Application for Gilead's Trodelvy for Pre-Treated HR+/HER2- Metastatic Breast Cancer",
+        "url": "https://www.gilead.com/news/news-details/2022/us-fda-accepts-for-priority-review-the-supplemental-biologics-license-application-for-gileads-trodelvy-for-pre-treated-hrher2--metastatic-breast-cancer",
+        "publisher": "Gilead Sciences, Inc.",
+        "published": "2022-10-11"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e8",
+      "date": "2022-12-22",
+      "kind": "regulatory",
+      "headline": "FDA approves Gilead's Sunlenca (lenacapavir), a twice-yearly injectable, for multidrug-resistant HIV",
+      "detail": "Sunlenca was approved for heavily treatment-experienced adults with multidrug-resistant HIV-1 failing their current regimen; in the CAPELLA trial, 83% of participants receiving lenacapavir plus an optimized background regimen reached an undetectable viral load at week 52, extending Gilead's HIV franchise into a new dosing category.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Sunlenca (lenacapavir) Receives FDA Approval as a First-in-Class, Twice-Yearly Treatment Option for People Living With Multi-Drug Resistant HIV",
+        "url": "https://www.gilead.com/news/news-details/2022/sunlenca-lenacapavir-receives-fda-approval-as-a-first-in-class-twice-yearly-treatment-option-for-people-living-with-multi-drug-resistant-hiv",
+        "publisher": "Gilead Sciences, Inc.",
+        "published": "2022-12-22"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e9",
+      "date": "2023-02-02",
+      "kind": "earnings",
+      "headline": "Gilead reports flat full-year 2022 revenue of $27.3 billion as Biktarvy tops $10 billion and Veklury sales fall 30%",
+      "detail": "Full-year 2022 revenue was $27.3 billion, about flat versus 2021; net income attributable to Gilead was $4.6 billion ($3.64 diluted EPS) versus $6.2 billion ($4.93) in 2021, as Biktarvy sales grew 20% to $10.4 billion while Veklury sales fell 30% to $3.9 billion on fewer COVID-19 hospitalizations.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Gilead Sciences Announces Fourth Quarter and Full Year 2022 Financial Results",
+        "url": "https://www.gilead.com/news/news-details/2023/gilead-sciences-announces-fourth-quarter-and-full-year-2022-financial-results",
+        "publisher": "Gilead Sciences, Inc.",
+        "published": "2023-02-02"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e10",
+      "date": "2023-02-03",
+      "kind": "regulatory",
+      "headline": "FDA approves Trodelvy for a common form of metastatic breast cancer, extending Gilead's oncology franchise beyond triple-negative disease",
+      "detail": "The FDA approved Trodelvy for previously treated HR-positive, HER2-negative metastatic breast cancer, a subtype accounting for an estimated 70% of new breast cancer cases, based on TROPiCS-02 data showing median survival of 14.4 versus 11.2 months for chemotherapy.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "FDA approves Gilead's Trodelvy for expanded use in breast cancer",
+        "url": "https://www.biopharmadive.com/news/gilead-fda-approval-trodelvy-hr-breast-cancer/641968/",
+        "publisher": "BioPharma Dive",
+        "published": "2023-02-03"
+      },
+      "opened": true,
+      "opened_note": "Gilead's own press release for this approval returned HTTP 404 at the expected URL; BioPharma Dive's report was used instead and cross-checked against Gilead's FDA priority-review announcement (e7), which named the same February 2023 target action date."
+    }
+  ],
+  "horizon_notes": {
+    "1": "In the first year, the pre-cutoff packet's leading catalyst resolved on schedule: Daniel O'Day took over as Chairman and CEO on March 1, 2019 as previously announced [e1], and Gilead's full-year 2019 results, reported the following February, showed HIV revenue (led by Biktarvy) continuing to grow to $16.4 billion while hepatitis C revenue kept falling to $2.9 billion -- the same divergence the packet had described [e2]. Interpretation: the packet's framing of Biktarvy-led growth offsetting HCV decline held through the first year, but it contained no information yet on the acquisition strategy or pandemic-era product (Veklury) that would reshape the company's revenue mix over the following two years.",
+    "3": "Over three years, the new CEO pursued an acquisition-led diversification strategy: Gilead agreed to buy Immunomedics for about $21 billion in September 2020 to add the oncology drug Trodelvy [e3], while Truvada lost U.S. exclusivity to a generic a year earlier than expected [e4] and Veklury (remdesivir) received full FDA approval as the first approved COVID-19 treatment [e5]. Full-year 2020 revenue rose 10% to $24.7 billion on Veklury's pandemic-driven sales, even as reported GAAP net income fell sharply to $123 million [e6]. Interpretation: the packet's unresolved question about whether early-stage oncology diversification could offset HIV/HCV franchise risk was answered in part by an acquisition rather than organic pipeline progress, and neither the packet nor the market could have anticipated a pandemic creating an entirely new, large revenue line (Veklury) within the horizon.",
+    "5": "Across the five-year window, Gilead's oncology and HIV pipelines both advanced: Trodelvy won priority review and then approval in a much larger breast-cancer population (HR-positive, HER2-negative) beyond its original triple-negative indication [e7][e10], and the long-acting HIV drug Sunlenca was approved for multidrug-resistant patients [e8]; full-year 2022 revenue held flat at $27.3 billion as Biktarvy crossed $10 billion in sales while Veklury sales fell 30% as pandemic-era demand faded [e9]. The final year of the horizon (Feb 2023-Feb 2024) is not separately covered here -- see gaps. Interpretation: the packet's question of whether Gilead was a growth story or a value trap does not resolve cleanly either way in this record -- HIV kept growing and oncology diversification became more concrete through two acquisitions and expanded approvals, but revenue growth over the period was modest and depended partly on a non-repeatable pandemic product the pre-cutoff packet could not have foreseen."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "Gilead's full-year 2023 earnings release (Biktarvy $11.8B, oncology sales up 37%, Veklury down 44%, net income $5.7B) was published February 6, 2024 -- one day after this case's 2024-02-05 coverage boundary -- so it is described here in this note only, not as a scored event: total revenue was $27.1 billion, down 1% versus 2022.",
+    "Gilead's agreement to acquire CymaBay Therapeutics for about $4.3 billion (liver disease drug seladelpar) was announced February 12, 2024, also after the coverage boundary, so it is likewise excluded from the event list.",
+    "Because both of those items fall outside the window, the last twelve months of the five-year horizon (Feb 2023-Feb 2024) have no dedicated event in this file; the record for that period is comparatively thin.",
+    "The Truvada generic-launch event (e4) is sourced from a search summary rather than a directly opened article; its date and mechanism were corroborated against Gilead's own opened FY2020 earnings release.",
+    "The specific driver of Gilead's FY2020 GAAP net income collapse to $123 million (most likely an acquisition-related in-process R&D or intangible charge tied to Immunomedics) was not stated in the earnings release itself and is not asserted here.",
+    "Stock prices and returns are not included; the game computes those separately."
+  ],
+  "search_log": [
+    {"query_or_url": "Gilead Sciences Trodelvy FDA approval 2020", "result": "opened"},
+    {"query_or_url": "Gilead Sciences Immunomedics acquisition $21 billion 2020", "result": "opened"},
+    {"query_or_url": "Gilead remdesivir Veklury FDA approval COVID-19 2020", "result": "opened"},
+    {"query_or_url": "Gilead Sciences full year 2019 earnings results net income press release", "result": "opened"},
+    {"query_or_url": "Gilead Sciences full year 2023 earnings results record revenue press release February 2024", "result": "opened"},
+    {"query_or_url": "Gilead Trodelvy accelerated approval withdrawn bladder cancer 2021", "result": "not_found (event was Oct 2024, outside window; excluded)"},
+    {"query_or_url": "Gilead Daniel O'Day becomes CEO March 1 2019", "result": "opened"},
+    {"query_or_url": "Truvada generic launch 2020 Gilead HIV PrEP competition", "result": "opened"},
+    {"query_or_url": "Gilead Trodelvy FDA approval HR-positive HER2-negative breast cancer February 2023", "result": "opened"},
+    {"query_or_url": "Gilead Sciences full year 2022 earnings results revenue press release", "result": "opened"},
+    {"query_or_url": "Gilead Sunlenca lenacapavir FDA approval December 2022 multidrug resistant HIV", "result": "opened"},
+    {"query_or_url": "Gilead CymaBay Therapeutics acquisition $4.3 billion November 2023", "result": "opened; deal date found to be Feb 12 2024, outside coverage window"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2020/gilead-sciences-announces-fourth-quarter-and-full-year-2019-financial-results", "result": "opened"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2020/us-food-and-drug-administration-approves-gileads-antiviral-veklury-remdesivir-for-treatment-of-covid-19", "result": "opened"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2018/gilead-sciences-names-daniel-oday-chairman-and-chief-executive-officer", "result": "opened"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2020/gilead-sciences-to-acquire-immunomedics", "result": "opened"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2022/us-fda-accepts-for-priority-review-the-supplemental-biologics-license-application-for-gileads-trodelvy-for-pre-treated-hrher2--metastatic-breast-cancer", "result": "opened"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2023/gilead-sciences-announces-fourth-quarter-and-full-year-2022-financial-results", "result": "opened"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2023/us-fda-approves-trodelvy-for-pre-treated-hrher2-metastatic-breast-cancer", "result": "not_found"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2024/gilead-sciences-announces-fourth-quarter-and-full-year-2023-financial-results", "result": "opened (used only in gaps note; date falls outside coverage window)"},
+    {"query_or_url": "https://www.biopharmadive.com/news/gilead-fda-approval-trodelvy-hr-breast-cancer/641968/", "result": "opened"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2021/gilead-sciences-announces-fourth-quarter-and-full-year-2020-financial-results", "result": "opened"},
+    {"query_or_url": "https://www.gilead.com/news/news-details/2022/sunlenca-lenacapavir-receives-fda-approval-as-a-first-in-class-twice-yearly-treatment-option-for-people-living-with-multi-drug-resistant-hiv", "result": "opened"}
+  ]
+}

@@ -1,0 +1,822 @@
+{
+  "candidate_id": "clinical-nktr-2018",
+  "schema_version": "mvp-1",
+  "cutoff": "2018-02-15T09:00:00-05:00",
+  "horizon": {
+    "unit": "calendar_years",
+    "count": 5
+  },
+  "exchange_calendar": "XNYS",
+  "sector_module": "biotech",
+  "masked": {
+    "alias": "a biopharmaceutical company earning royalties from partnered approved drugs while developing its own pipeline",
+    "sector": "Biotechnology (diversified: cancer immunotherapy, immune disease, chronic pain)",
+    "business_two_sentences": "This company earns royalty and milestone income from two already-approved drugs marketed by larger pharmaceutical partners, while developing its own pipeline of drug candidates in cancer immunotherapy, autoimmune disease and chronic pain. Its most advanced pipeline candidate, an early-stage cancer immunotherapy, has just been licensed to a large multinational pharmaceutical partner in a multibillion-dollar deal [c1][c9]."
+  },
+  "transparent": {
+    "issuer": "Nektar Therapeutics",
+    "ticker": "NKTR",
+    "exchange": "NASDAQ",
+    "business_two_sentences": "Nektar Therapeutics is a biopharmaceutical company that earns royalty and milestone income from AstraZeneca's MOVANTIK and Baxalta/Shire's ADYNOVATE while developing its own drug candidates in cancer immunotherapy, autoimmune disease and chronic pain. Its lead oncology candidate, NKTR-214, was just licensed to Bristol-Myers Squibb in a multibillion-dollar global collaboration [c1][c9]."
+  },
+  "financial_snapshot": {
+    "adapter": "commercial_biotech",
+    "headline": [
+      {
+        "label": "Enterprise value and EV / trailing revenue",
+        "value": null,
+        "unit": "USD_millions",
+        "period": "2017-09-30",
+        "available_at": "2017-11-08",
+        "source_ids": [],
+        "status": "missing",
+        "definition": "Historical share price is not in the eligible evidence packet, so market capitalization and enterprise value cannot be calculated.",
+        "prior": null
+      },
+      {
+        "label": "Royalty, collaboration and product revenue",
+        "value": 152.9,
+        "unit": "USD_millions",
+        "period": "Q3-2017",
+        "available_at": "2017-11-08",
+        "source_ids": [
+          "nktr-10q-q3-2017"
+        ],
+        "status": "reported",
+        "definition": "The company does not sell branded products directly; most revenue is royalties/milestones from partners' approved drugs plus its own small direct product/manufacturing sales line ($4.4 million this quarter). About $125.9 million of the Q3 2017 total reflects one-time recognition of an upfront license payment from a separate new collaboration signed earlier in 2017 for an unrelated pipeline candidate; excluding that item, underlying quarterly revenue was about $27.0 million [derived: 152.928-125.9], closer to the $36.3 million reported a year earlier.",
+        "prior": {
+          "value": 36.3,
+          "period": "Q3-2016"
+        }
+      },
+      {
+        "label": "Operating margin (nine months, year-to-date)",
+        "value": -16.8,
+        "unit": "percent",
+        "period": "9M-2017",
+        "available_at": "2017-11-08",
+        "source_ids": [
+          "nktr-10q-q3-2017"
+        ],
+        "status": "derived",
+        "definition": "Nine-month operating income (loss) divided by nine-month total revenue. Formula: OperatingIncomeLoss / Revenues, year-to-date. The improvement from the prior year is driven mainly by the one-time license-revenue item described above, not by a change in underlying spending.",
+        "prior": {
+          "value": -63.1,
+          "period": "9M-2016"
+        }
+      },
+      {
+        "label": "Operating cash flow (nine months, year-to-date)",
+        "value": 0.013,
+        "unit": "USD_millions",
+        "period": "9M-2017",
+        "available_at": "2017-11-08",
+        "source_ids": [
+          "nktr-10q-q3-2017"
+        ],
+        "status": "reported",
+        "definition": "Net cash provided by (used in) operating activities was $13 thousand, essentially breakeven for the first nine months of 2017, versus a $64.6 million outflow over the same period in 2016. Management attributed the swing mainly to a $150.0 million upfront cash payment received in September 2017 under the separate new collaboration described above, not to a change in ongoing cash burn.",
+        "prior": {
+          "value": -64.6,
+          "period": "9M-2016"
+        }
+      },
+      {
+        "label": "Cash, investments and debt",
+        "value": 159.2,
+        "unit": "USD_millions",
+        "period": "2017-09-30",
+        "available_at": "2017-11-08",
+        "source_ids": [
+          "nktr-10q-q3-2017"
+        ],
+        "status": "derived",
+        "definition": "Cash, cash equivalents and short/long-term investments ($412.2 million: $38.0 million cash, $314.6 million short-term investments, $59.6 million long-term investments) minus total debt ($253.0 million: $250.0 million of 7.75% senior secured notes scheduled to mature in October 2020 plus $3.0 million of capital lease obligations; the notes require maintaining a minimum $60.0 million of cash/investments). The prior-year figure below is cash and cash equivalents only (a comparable total-investments figure for that date is not established in this packet; see missing_data), so the two figures are not directly comparable on a like-for-like basis.",
+        "prior": {
+          "value": 59.6,
+          "period": "2016-12-31"
+        }
+      },
+      {
+        "label": "R&D spending and revenue concentration",
+        "value": 65.7,
+        "unit": "USD_millions",
+        "period": "Q3-2017",
+        "available_at": "2017-11-08",
+        "source_ids": [
+          "nktr-10q-q3-2017"
+        ],
+        "status": "reported",
+        "definition": "Quarterly R&D expense spans three separate pipeline programs (cancer immunotherapy, autoimmune disease, chronic pain) plus ongoing support for the two royalty-generating partnered drugs. Royalty income is concentrated in two products, each dependent on a single marketing partner's sales performance and its own separate patent/exclusivity position [c8].",
+        "prior": {
+          "value": 52.0,
+          "period": "Q3-2016"
+        }
+      }
+    ],
+    "history": [
+      {
+        "row": "Total revenue (royalty, collaboration/license and product)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2015",
+            "value": 230.8,
+            "available_at": "2016-02-29",
+            "source_ids": [
+              "0001564590-16-013759"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 165.4,
+            "available_at": "2017-03-01",
+            "source_ids": [
+              "0001564590-17-003064"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2017",
+            "value": 24.7,
+            "available_at": "2017-05-10",
+            "source_ids": [
+              "0001564590-17-010026"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2017",
+            "value": 34.6,
+            "available_at": "2017-08-09",
+            "source_ids": [
+              "0001564590-17-016709"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2017",
+            "value": 152.9,
+            "available_at": "2017-11-08",
+            "source_ids": [
+              "nktr-10q-q3-2017"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Direct product/manufacturing sales (subset of total revenue)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2015",
+            "value": 40.2,
+            "available_at": "2016-02-29",
+            "source_ids": [
+              "0001564590-16-013759"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 55.4,
+            "available_at": "2017-03-01",
+            "source_ids": [
+              "0001564590-17-003064"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2017",
+            "value": 4.8,
+            "available_at": "2017-05-10",
+            "source_ids": [
+              "0001564590-17-010026"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2017",
+            "value": 15.7,
+            "available_at": "2017-08-09",
+            "source_ids": [
+              "0001564590-17-016709"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2017",
+            "value": 4.4,
+            "available_at": "2017-11-08",
+            "source_ids": [
+              "nktr-10q-q3-2017"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Research and development expense",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2015",
+            "value": 182.8,
+            "available_at": "2016-02-29",
+            "source_ids": [
+              "0001564590-16-013759"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 203.8,
+            "available_at": "2017-03-01",
+            "source_ids": [
+              "0001564590-17-003064"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2017",
+            "value": 61.1,
+            "available_at": "2017-05-10",
+            "source_ids": [
+              "0001564590-17-010026"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2017",
+            "value": 60.3,
+            "available_at": "2017-08-09",
+            "source_ids": [
+              "0001564590-17-016709"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2017",
+            "value": 65.7,
+            "available_at": "2017-11-08",
+            "source_ids": [
+              "nktr-10q-q3-2017"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Operating income (loss)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2015",
+            "value": -29.4,
+            "available_at": "2016-02-29",
+            "source_ids": [
+              "0001564590-16-013759"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": -112.9,
+            "available_at": "2017-03-01",
+            "source_ids": [
+              "0001564590-17-003064"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2017",
+            "value": -54.4,
+            "available_at": "2017-05-10",
+            "source_ids": [
+              "0001564590-17-010026"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2017",
+            "value": -50.7,
+            "available_at": "2017-08-09",
+            "source_ids": [
+              "0001564590-17-016709"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2017",
+            "value": 69.5,
+            "available_at": "2017-11-08",
+            "source_ids": [
+              "nktr-10q-q3-2017"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net income (loss)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2015",
+            "value": -81.2,
+            "available_at": "2016-02-29",
+            "source_ids": [
+              "0001564590-16-013759"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": -153.5,
+            "available_at": "2017-03-01",
+            "source_ids": [
+              "0001564590-17-003064"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2017",
+            "value": -63.9,
+            "available_at": "2017-05-10",
+            "source_ids": [
+              "0001564590-17-010026"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2017",
+            "value": -59.9,
+            "available_at": "2017-08-09",
+            "source_ids": [
+              "0001564590-17-016709"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2017",
+            "value": 60.9,
+            "available_at": "2017-11-08",
+            "source_ids": [
+              "nktr-10q-q3-2017"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Cash and cash equivalents (period end)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2015",
+            "value": 55.6,
+            "available_at": "2016-02-29",
+            "source_ids": [
+              "0001564590-16-013759"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 59.6,
+            "available_at": "2017-03-01",
+            "source_ids": [
+              "0001564590-17-003064"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2017",
+            "value": 23.5,
+            "available_at": "2017-05-10",
+            "source_ids": [
+              "0001564590-17-010026"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2017",
+            "value": 16.1,
+            "available_at": "2017-08-09",
+            "source_ids": [
+              "0001564590-17-016709"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2017",
+            "value": 38.0,
+            "available_at": "2017-11-08",
+            "source_ids": [
+              "nktr-10q-q3-2017"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Stockholders' equity",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2015",
+            "value": 6.4,
+            "available_at": "2016-02-29",
+            "source_ids": [
+              "0001564590-16-013759"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 88.1,
+            "available_at": "2017-03-01",
+            "source_ids": [
+              "0001564590-17-003064"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2017",
+            "value": 44.7,
+            "available_at": "2017-05-10",
+            "source_ids": [
+              "0001564590-17-010026"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2017",
+            "value": 3.4,
+            "available_at": "2017-08-09",
+            "source_ids": [
+              "0001564590-17-016709"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2017",
+            "value": 84.2,
+            "available_at": "2017-11-08",
+            "source_ids": [
+              "nktr-10q-q3-2017"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total assets",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2015",
+            "value": 502.1,
+            "available_at": "2016-02-29",
+            "source_ids": [
+              "0001564590-16-013759"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 568.9,
+            "available_at": "2017-03-01",
+            "source_ids": [
+              "0001564590-17-003064"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2017",
+            "value": 528.5,
+            "available_at": "2017-05-10",
+            "source_ids": [
+              "0001564590-17-010026"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2017",
+            "value": 475.9,
+            "available_at": "2017-08-09",
+            "source_ids": [
+              "0001564590-17-016709"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2017",
+            "value": 582.1,
+            "available_at": "2017-11-08",
+            "source_ids": [
+              "nktr-10q-q3-2017"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Common shares outstanding (period end)",
+        "unit": "millions_of_shares",
+        "cells": [
+          {
+            "period": "FY2015",
+            "value": 135.3,
+            "available_at": "2016-02-29",
+            "source_ids": [
+              "0001564590-16-013759"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 153.2,
+            "available_at": "2017-03-01",
+            "source_ids": [
+              "0001564590-17-003064"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2017",
+            "value": 154.7,
+            "available_at": "2017-05-10",
+            "source_ids": [
+              "0001564590-17-010026"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2017",
+            "value": 155.9,
+            "available_at": "2017-08-09",
+            "source_ids": [
+              "0001564590-17-016709"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2017",
+            "value": 157.0,
+            "available_at": "2017-11-08",
+            "source_ids": [
+              "nktr-10q-q3-2017"
+            ],
+            "status": "reported"
+          }
+        ]
+      }
+    ]
+  },
+  "what_changed": [
+    {
+      "date": "2018-02-14",
+      "fact": "A large multinational pharmaceutical partner agreed to pay $1.85 billion upfront ($1.0 billion cash plus an $850 million equity purchase), up to $1.78 billion in milestones, and a 65%/35% profit split favoring the company, for its lead cancer-immunotherapy candidate [c1][c2].",
+      "relationship_to_business": "The single largest transaction in the company's history, built entirely on Phase 1/2 data for one drug candidate; the deal funds and de-risks that program well beyond the company's own balance sheet.",
+      "source_ids": [
+        "nktr-bms-8k"
+      ],
+      "status": "reported"
+    },
+    {
+      "date": "2017-11-11",
+      "fact": "First dose-escalation data for that candidate combined with the partner's approved checkpoint inhibitor were presented at a major conference: response rates of 14%-75% across small, uncontrolled cohorts in three tumor types, with no grade 3+ immune-related adverse events at the recommended dose [c3][c4].",
+      "relationship_to_business": "This is the clinical evidence base the February 2018 partnership was built on; a larger, roughly 330-patient expansion of the same open-label study was already enrolling.",
+      "source_ids": [
+        "nktr-sitc-pr"
+      ],
+      "status": "reported"
+    },
+    {
+      "date": "2017-11-08",
+      "fact": "Third-quarter 2017 revenue was $152.9 million (versus $36.3 million a year earlier), largely a one-time license payment from an unrelated partnership, alongside $412.2 million cash and investments against $253.0 million debt [c6][c7].",
+      "relationship_to_business": "Sets the pre-deal financial backdrop; without the one-time item, underlying revenue was roughly flat year over year and ongoing operating losses continued outside that item.",
+      "source_ids": [
+        "nktr-10q-q3-2017"
+      ],
+      "status": "reported"
+    }
+  ],
+  "sector_evidence": {
+    "existing_products": [
+      {
+        "product": "Opioid-induced constipation drug",
+        "role": "Approved and marketed by a large pharmaceutical partner; the company receives royalty and milestone income rather than selling the drug itself.",
+        "royalty_terms": "Described in the company's own filing as 'significant and escalating double-digit royalty payments' on the partner's worldwide net sales, plus sales milestones; a separate regional licensee pays the company 40% of its own royalty stream on that territory's sales [c8].",
+        "source_ids": [
+          "nktr-10q-q3-2017"
+        ]
+      },
+      {
+        "product": "Hemophilia A (Factor VIII) drug",
+        "role": "Approved and marketed by a different large pharmaceutical partner; royalty and milestone structure similar in kind to the first product.",
+        "royalty_terms": "The company is entitled to a $10.0 million development milestone tied to EU marketing authorization, additional sales milestones at annual sales thresholds, and royalties on worldwide net sales (percentage not disclosed in the eligible source) [c8].",
+        "source_ids": [
+          "nktr-10q-q3-2017"
+        ]
+      }
+    ],
+    "concentration_note": "Both approved products are marketed and controlled by outside partners; the company's royalty income therefore depends on those partners' own commercial execution and is concentrated in just two products, each with its own separate patent and exclusivity position not detailed in this packet [c8].",
+    "programs": [
+      {
+        "program": "Lead cancer-immunotherapy candidate, combined with a partner's approved PD-1 checkpoint inhibitor (PIVOT-02 dose-escalation)",
+        "drug_mechanism": "An investigational protein designed to selectively expand cancer-fighting T cells and natural killer cells directly in and around tumors and increase a marker (PD-1) on those cells, given as an intravenous infusion in combination with an already-approved PD-1-blocking antibody immunotherapy.",
+        "phase": "Phase 1/2, dose-escalation stage reported; larger dose-expansion stage enrolling",
+        "ownership": "Company retains worldwide commercialization rights and books all product revenue; as of February 2018, a large multinational pharmaceutical partner holds joint development and commercialization rights under the new collaboration described above (upfront $1.85 billion combined cash and equity, up to $1.78 billion in milestones, 65%/35% profit share in the company's favor, joint registration-enabling trials planned in more than 20 indications across 9 tumor types) [c1][c2].",
+        "trial_id": "PIVOT-02 (public study name; ClinicalTrials.gov identifier not independently verified before cutoff)",
+        "design": "Single-arm, open-label, dose-escalation (this data) followed by dose-expansion (ongoing); not randomized and not placebo-controlled [c3].",
+        "sample_size": {
+          "planned": null,
+          "dose_escalation_treated": 38,
+          "expansion_planned": "approximately 330 across 5 tumor types"
+        },
+        "population": "Adults with stage IV melanoma, renal cell carcinoma, or non-small cell lung cancer, in various lines of therapy and prior immuno-oncology exposure by cohort",
+        "primary_endpoint": "Not stated as a single formal primary endpoint in the eligible source for this early dose-escalation data; safety, tolerability and objective response rate were the measures reported",
+        "secondary_endpoints": "Biomarker changes (expansion of certain T-cell populations in blood, a gene-expression marker of immune activation in tumor tissue) [c5]",
+        "latest_evidence": "By small, uncontrolled cohort: treatment-naive stage IV melanoma, 7 of 11 evaluable patients responded (2 complete, 5 partial; 63%), 91% disease control. Treatment-naive stage IV renal cell carcinoma, 6 of 10 patients with 2+ scans responded (1 complete, 5 partial; 60%), 85% disease control. Previously treated, immunotherapy-naive renal cell carcinoma, 1 of 7 patients responded (14%), 100% disease control. PD-L1-negative, previously treated non-small cell lung cancer, 3 of 4 patients responded (1 complete, 2 partial; 75%). No confidence intervals or p-values were reported at this early, small-sample stage [c3][c4].",
+        "safety": "Most common adverse events were low-grade: fatigue (74%), flu-like symptoms (68%), rash (60%), pruritus (42%). No grade 3-or-higher immune-mediated adverse events were reported at or below the recommended combination dose; no treatment discontinuations for adverse events and no deaths on study were reported [c4].",
+        "management_says_vs_regulator": "Company and partner scientists described the results as showing 'important response rates' and validating further development; no independent regulator statement on this drug candidate is in this packet, and no registration trial has yet begun [c3].",
+        "next_milestone": "Registration-enabling ('pivotal') studies in renal cell carcinoma and melanoma expected to begin in mid-2018; the collaboration transaction itself was expected to close in the second quarter of 2018, subject to antitrust clearance (both announced 2018-02-14) [c1][c2].",
+        "economic_relevance": "The company's most advanced and highest-profile pipeline asset as of the cutoff, and the subject of the transaction described in what_changed above; no revenue from this candidate exists yet."
+      },
+      {
+        "program": "Autoimmune/inflammatory disease candidate (partnered)",
+        "drug_mechanism": "An investigational protein designed to selectively expand a different class of immune cells (regulatory T cells) that dampen, rather than activate, immune responses, intended for autoimmune and chronic inflammatory conditions.",
+        "phase": "Phase 1 (first human dose given in March 2017)",
+        "ownership": "Company completes Phase 1; a separate large pharmaceutical partner funds 75% of Phase 2 costs and leads all subsequent-phase development and commercialization, under a mid-2017 agreement ($150 million upfront, up to $250 million in milestones, double-digit royalties that increase with the company's own Phase 3 investment) [c9].",
+        "trial_id": "Not disclosed by public study name in the eligible sources before cutoff",
+        "design": "Not detailed in the eligible sources beyond Phase 1 status",
+        "sample_size": {
+          "planned": null,
+          "enrolled": null,
+          "analyzed": null
+        },
+        "population": "Not detailed in the eligible sources",
+        "primary_endpoint": "Not detailed in the eligible sources",
+        "secondary_endpoints": "Not detailed in the eligible sources",
+        "latest_evidence": "No efficacy data disclosed in the eligible sources before cutoff; program was in Phase 1 safety/dose-finding work [c9].",
+        "safety": "Not detailed in the eligible sources",
+        "management_says_vs_regulator": "Deal terms and phase status are company-disclosed facts; no independent regulator statement is in this packet.",
+        "next_milestone": "Not disclosed with a specific timing window in the eligible sources before cutoff.",
+        "economic_relevance": "A large portion of the $152.9 million in third-quarter 2017 revenue reflects one-time recognition of this deal's upfront payment (see what_changed and financial_snapshot above), separate from the February 2018 transaction that is the main subject of this packet."
+      },
+      {
+        "program": "Chronic low-back pain candidate (wholly owned)",
+        "drug_mechanism": "An oral opioid molecule engineered to enter the brain more slowly than standard opioids, intended to relieve pain with a different central-nervous-system side-effect profile.",
+        "phase": "Phase 3 completed for this indication; topline positive, full data presented",
+        "ownership": "Wholly owned by the company; no partner disclosed for this candidate in the eligible sources.",
+        "trial_id": "SUMMIT-07 (public study name)",
+        "design": "Randomized, controlled Phase 3 study in adults with moderate-to-severe chronic low back pain who were new to opioid therapy; more than 600 patients [c10].",
+        "sample_size": {
+          "planned": null,
+          "randomized": "more than 600",
+          "analyzed": "more than 600"
+        },
+        "population": "Adults with moderate-to-severe chronic low back pain, opioid-naive",
+        "primary_endpoint": "Chronic back pain relief versus placebo (specific scale not detailed in the eligible sources)",
+        "secondary_endpoints": "Sleep quality and sleep problems, measured by a validated sleep scale, reported more favorable than placebo [c10]",
+        "latest_evidence": "Primary efficacy endpoint met with high statistical significance (p=0.0019); key secondary endpoints, including sleep-quality measures, also met with high statistical significance. Topline results were first announced in March 2017; full data were presented at a pain-medicine conference in September 2017 [c10].",
+        "safety": "Not detailed beyond endpoint results in the eligible sources reviewed for this packet.",
+        "management_says_vs_regulator": "Results are the company's own reported trial data; no independent regulator statement on this candidate is in this packet, and no regulatory filing had been announced as of the cutoff in the eligible sources [c10].",
+        "next_milestone": "A regulatory filing timeline was not established with a specific date or window in the eligible sources reviewed before cutoff; see missing_data.",
+        "economic_relevance": "The company's most advanced wholly-owned (non-partnered, non-royalty) pipeline asset as of the cutoff, in a therapeutic area (chronic pain) distinct from its oncology and immunology programs."
+      }
+    ]
+  },
+  "upcoming_and_unresolved": {
+    "catalysts": [
+      {
+        "description": "Planned start of registration-enabling ('pivotal') studies for the lead cancer-immunotherapy candidate in renal cell carcinoma and melanoma",
+        "timing_window": "mid-2018",
+        "announced_on": "2018-02-14",
+        "source_ids": [
+          "nktr-bms-8k"
+        ]
+      },
+      {
+        "description": "Expected closing of the new collaboration transaction, subject to antitrust clearance",
+        "timing_window": "second quarter of 2018",
+        "announced_on": "2018-02-14",
+        "source_ids": [
+          "nktr-bms-8k"
+        ]
+      }
+    ],
+    "unresolved_questions": [
+      "Will pivotal trials in melanoma and renal cell carcinoma, due to begin in mid-2018, confirm response rates seen in small, uncontrolled early cohorts, or will efficacy look different at larger scale?",
+      "Does a large partner's upfront payment mainly reflect confidence in the science, or largely the option value of exclusive access across many indications regardless of individual trial outcomes?",
+      "Can existing royalty income plus the new upfront cash sustain spending across three pipeline programs without further dilutive financing, given existing secured debt and its cash covenant?"
+    ]
+  },
+  "macro_context": [],
+  "help_me_weigh": {
+    "own": [
+      "A large multinational pharmaceutical partner committed $1.85 billion upfront (cash plus an equity purchase) and up to $1.78 billion in further milestones for rights to the lead cancer-immunotherapy candidate, with the company keeping 65% of worldwide commercialization profit and all product revenue booked through the company [c1][c2].",
+      "Early dose-escalation data showed response rates from 14% to 75% depending on tumor type and treatment history, with no grade 3-or-higher immune-related adverse events at the recommended dose and no discontinuations, in combination with an already-approved checkpoint inhibitor [c3][c4].",
+      "Two already-approved, partner-marketed drugs generate escalating double-digit royalty and milestone income, a funding source not tied to the binary risk of the pipeline programs [c8].",
+      "A separate, wholly-owned Phase 3 program in chronic low back pain met its primary and key secondary endpoints with high statistical significance in a controlled trial of more than 600 patients [c10]."
+    ],
+    "flat": [
+      "Nine-month 2017 operating cash flow was roughly breakeven, but this reflects a one-time $150 million upfront payment from an unrelated new partnership rather than a structural change in spending; the same period a year earlier saw a $64.6 million cash outflow [c6][c7].",
+      "The company carries $253.0 million in secured debt (7.75% notes scheduled to mature in 2020, plus a capital lease) and must maintain a minimum cash/investments covenant, while funding R&D across three separate pipeline programs simultaneously [c8]."
+    ],
+    "short": [
+      "The clinical evidence behind the new collaboration comes from a small, open-label, uncontrolled dose-escalation study (38 patients total across all cohorts, with several tumor-type subgroups under 15 evaluable patients); no confidence intervals, p-values or randomized comparison were reported at this stage [c3][c4].",
+      "A large partner's upfront payment is not itself evidence of eventual regulatory approval or commercial success; it reflects the partner's own assessment of optionality across many indications, several of which may not read out favorably [c1].",
+      "Response rates in cohorts this small (for example, 1 of 7 patients, or 3 of 4 patients) can move sharply as more patients are added in the ongoing roughly 330-patient expansion phase [c3][c4]."
+    ]
+  },
+  "source_handles": [
+    {
+      "id": "nktr-bms-8k",
+      "kind": "8-K",
+      "title": "Bristol-Myers Squibb and Nektar Therapeutics Announce Global Development & Commercialization Collaboration for Nektar's CD122-biased Agonist, NKTR-214",
+      "available_at": "2018-02-15",
+      "masked_title": "Company 8-K (Item 1.01/3.02, Exhibit 99.1), 14 Feb 2018 -- global collaboration for the lead oncology candidate"
+    },
+    {
+      "id": "nktr-sitc-pr",
+      "kind": "press_release",
+      "title": "First Data for NKTR-214 in Combination with OPDIVO (nivolumab) for Patients with Stage IV Melanoma, Renal Cell Carcinoma and Non-Small Cell Lung Cancers, Revealed at SITC 2017",
+      "available_at": "2017-11-11",
+      "masked_title": "Company press release, 11 Nov 2017 -- first dose-escalation data for the lead oncology candidate"
+    },
+    {
+      "id": "nktr-10q-q3-2017",
+      "kind": "10-Q",
+      "title": "Nektar Therapeutics Form 10-Q for the quarter ended September 30, 2017",
+      "available_at": "2017-11-08",
+      "masked_title": "Company quarterly report (Form 10-Q), 8 Nov 2017"
+    },
+    {
+      "id": "nktr-lilly-8k",
+      "kind": "8-K",
+      "title": "Lilly and Nektar Therapeutics Announce Alliance to Develop and Commercialize NKTR-358, A Novel Autoimmune Therapy",
+      "available_at": "2017-07-24",
+      "masked_title": "Company 8-K, 24 Jul 2017 -- partnership for the autoimmune-disease candidate"
+    },
+    {
+      "id": "nktr-summit07-pr",
+      "kind": "press_release",
+      "title": "NKTR-181 Meets Primary and Secondary Endpoints in Phase 3 SUMMIT-07 Study in Chronic Pain",
+      "available_at": "2017-03-20",
+      "masked_title": "Company press release, 20 Mar 2017 -- Phase 3 topline results for the chronic-pain candidate"
+    },
+    {
+      "id": "0001564590-17-003064",
+      "kind": "10-K",
+      "title": "Nektar Therapeutics Form 10-K for fiscal year 2016",
+      "available_at": "2017-03-01",
+      "masked_title": "Company annual report (Form 10-K), 1 Mar 2017"
+    },
+    {
+      "id": "0001564590-16-013759",
+      "kind": "10-K",
+      "title": "Nektar Therapeutics Form 10-K for fiscal year 2015",
+      "available_at": "2016-02-29",
+      "masked_title": "Company annual report (Form 10-K), 29 Feb 2016"
+    },
+    {
+      "id": "0001564590-17-010026",
+      "kind": "10-Q",
+      "title": "Nektar Therapeutics Form 10-Q for the quarter ended March 31, 2017",
+      "available_at": "2017-05-10",
+      "masked_title": "Company quarterly report (Form 10-Q), 10 May 2017"
+    },
+    {
+      "id": "0001564590-17-016709",
+      "kind": "10-Q",
+      "title": "Nektar Therapeutics Form 10-Q for the quarter ended June 30, 2017",
+      "available_at": "2017-08-09",
+      "masked_title": "Company quarterly report (Form 10-Q), 9 Aug 2017"
+    }
+  ],
+  "missing_data": [
+    "Market capitalization and enterprise value: missing, historical share price not in the evidence packet.",
+    "ClinicalTrials.gov registry identifier for PIVOT-02 and the SUMMIT-07 trial: not independently verified before the cutoff.",
+    "Total cash and investments (as opposed to cash and equivalents only) at December 31, 2016 and other pre-Q3-2017 period ends: not established in this packet, since xbrl-facts.json does not carry a short/long-term-investments tag for this issuer; only the September 30, 2017 total was obtained directly from the Form 10-Q text.",
+    "Exact royalty percentage on the hemophilia drug's net sales, and the precise origination date/terms of the $250 million senior secured notes: not detailed in the eligible sources reviewed.",
+    "A specific regulatory-filing timing window for the chronic-pain candidate (SUMMIT-07 program): not announced with a specific date in the eligible sources reviewed before the cutoff.",
+    "Public study name/registry identifier and detailed trial design for the autoimmune-disease candidate's Phase 1 study: not disclosed in the eligible sources reviewed.",
+    "Full-year and quarterly operating, investing and financing cash-flow figures beyond the nine-month 2017/2016 totals: xbrl-facts.json's cash-flow tags for this issuer stop at fiscal 2013, so only the nine-month year-to-date total (sourced directly from the Form 10-Q text) is available in this packet.",
+    "Number of full-time employees and detailed segment reporting: not found in the sources reviewed."
+  ],
+  "editorial_notes": "Identity masking follows the pattern used in prior packets (clinical-mdgl-2018, clinical-srpt-2021): the shared body (what_changed, sector_evidence, catalysts, help_me_weigh) refers to drug candidates by generic mechanism description rather than the company's public compound codes (which begin with the company's own ticker prefix and are therefore especially identifying), and refers to both pharmaceutical partners and both already-approved, partner-marketed drugs generically rather than by name; real names appear only in the transparent block and in source_handles.title (with source_handles.masked_title kept generic). Per the corrected cutoff recorded in research/MVP_PROMPT.md and research/selected.json, the collaboration announcement (8-K accession 0001193125-18-044320) was accepted at 08:31:59 ET on February 14, 2018 -- premarket, the same day as the joint conference call -- so the February 14 session's opening price already reflects the news; the cutoff used here is the next session's open, February 15, 2018, consistent with the local copy at research/sources/nktr-0001193125-18-044320.txt. All financial figures were cross-checked between cases/clinical-nktr-2018/xbrl-facts.json and the underlying Form 10-Q/10-K filings; the September 30, 2017 total cash-and-investments and total-debt figures came directly from the Form 10-Q text because xbrl-facts.json does not carry short/long-term-investments tags for this issuer (flagged in missing_data). Nektar's Q4/full-year-2017 earnings release was confirmed via EDGAR to have been filed March 1, 2018 (accession 0001615774-18-001542) -- after the cutoff -- and was therefore deliberately excluded from this packet despite appearing in an initial search result that misstated its date; only sources dated on or before February 14, 2018 (available February 15) were used. Self-check per cases/BRIEF.md step 4: no banned future-relative word appears anywhere in this file. No year after the cutoff year (2018) appears anywhere in this packet; the only forward-looking timing windows are 'mid-2018' and 'the second quarter of 2018' for already-announced, cited catalysts, both within the cutoff year itself. No post-cutoff actual outcome, price, or event is referenced anywhere in this packet.",
+  "editor_corrections": [
+    {
+      "field": "financial_snapshot.headline (operating cash flow)",
+      "from": 0.0,
+      "to": 0.013,
+      "why": "writer rounded $13 thousand to 0.0; keep the reported figure in USD millions",
+      "date": "2026-09-09"
+    }
+  ]
+}

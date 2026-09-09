@@ -1,0 +1,243 @@
+{
+  "candidate_id": "clinical-srpt-2021",
+  "cutoff": "2021-01-08T09:00:00-05:00",
+  "coverage_end": "2026-01-08",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2021-02-25",
+      "kind": "regulatory",
+      "headline": "FDA approves AMONDYS 45 (casimersen), Sarepta's third exon-skipping DMD drug",
+      "detail": "The FDA approved AMONDYS 45 under accelerated approval, based on an increase in dystrophin production observed in patients amenable to exon 45 skipping, with continued approval contingent on verification of clinical benefit in confirmatory trials (the ESSENCE trial, then expected to conclude by 2024).",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Sarepta Therapeutics Announces FDA Approval of AMONDYS 45 (casimersen) Injection for the Treatment of Duchenne Muscular Dystrophy (DMD) in Patients Amenable to Skipping Exon 45",
+        "url": "https://www.globenewswire.com/news-release/2021/02/25/2182845/0/en/Sarepta-Therapeutics-Announces-FDA-Approval-of-AMONDYS-45-casimersen-Injection-for-the-Treatment-of-Duchenne-Muscular-Dystrophy-DMD-in-Patients-Amenable-to-Skipping-Exon-45.html",
+        "publisher": "GlobeNewswire (Sarepta Therapeutics press release)",
+        "published": "2021-02-25"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e2",
+      "date": "2021-05-18",
+      "kind": "clinical",
+      "headline": "Sarepta reports SRP-9001 expression and safety data using its commercial manufacturing process (Study 103/ENDEAVOR)",
+      "detail": "In the first 11 participants of Study SRP-9001-103 (ENDEAVOR), the first trial to use Sarepta's commercially representative manufacturing material, micro-dystrophin expression reached 55.4% of normal by western blot at 12 weeks, and the company said the safety profile was consistent with prior studies with no new safety signals identified; two participants had serious adverse events (elevated liver enzymes in one, nausea/vomiting in another) that resolved.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Sarepta Therapeutics' Investigational Gene Therapy for the Treatment of Duchenne Muscular Dystrophy, SRP-9001, Demonstrates Robust Expression and Consistent Safety Profile Using Sarepta's Commercial Process Material",
+        "url": "https://www.globenewswire.com/news-release/2021/05/18/2231647/0/en/Sarepta-Therapeutics-Investigational-Gene-Therapy-for-the-Treatment-of-Duchenne-Muscular-Dystrophy-SRP-9001-Demonstrates-Robust-Expression-and-Consistent-Safety-Profile-Using-Sarep.html",
+        "publisher": "GlobeNewswire (Sarepta Therapeutics press release)",
+        "published": "2021-05-18"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e3",
+      "date": "2022-06-15",
+      "kind": "macro",
+      "headline": "Federal Reserve raises interest rates 75 basis points, the largest single hike since 1994",
+      "detail": "The Federal Reserve raised the federal funds target range to 1.5%-1.75%. Connection to this business: Sarepta's gene-therapy program was, per the pre-cutoff packet, dependent on continued capital-markets access alongside product revenue and partner payments to fund development and manufacturing scale-up; 2022's rising-rate environment raised the general cost and scrutiny of capital raising for development-stage biotech spending, the backdrop against which Sarepta's September 2022 debt financing [e4] occurred.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Federal Reserve issues FOMC statement, June 15, 2022",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm",
+        "publisher": "Board of Governors of the Federal Reserve System",
+        "published": "2022-06-15"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e4",
+      "date": "2022-09-19",
+      "kind": "financing",
+      "headline": "Sarepta issues $1.13 billion of convertible senior notes due 2027",
+      "detail": "Sarepta issued $1.130 billion aggregate principal amount of 1.250% convertible senior notes due September 15, 2027 ($980.0 million to initial purchasers plus a fully exercised $150.0 million option, plus $20.0 million to an affiliated investor). It used part of the proceeds to repurchase $150.6 million of its 1.50% convertible notes due 2024 and to repay about $585.5 million of outstanding term loans.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Sarepta Therapeutics, Inc. Form 8-K (convertible notes offering)",
+        "url": "https://www.sec.gov/Archives/edgar/data/873303/000119312522247130/d357082d8k.htm",
+        "publisher": "U.S. Securities and Exchange Commission (EDGAR)",
+        "published": "2022-09-19"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e5",
+      "date": "2023-06-22",
+      "kind": "regulatory",
+      "headline": "FDA grants accelerated approval to ELEVIDYS (SRP-9001) gene therapy for ambulatory patients aged 4-5",
+      "detail": "The FDA approved ELEVIDYS (delandistrogene moxeparvovec) under accelerated approval for ambulatory DMD patients aged 4 through 5, based on micro-dystrophin expression, with continued approval contingent on verification of clinical benefit in a confirmatory trial (the then-fully-enrolled Phase 3 EMBARK study).",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Sarepta Therapeutics Announces FDA Approval of ELEVIDYS, the First Gene Therapy to Treat Duchenne Muscular Dystrophy (Form 8-K Exhibit 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/873303/000095017023029354/srpt-ex99_1.htm",
+        "publisher": "U.S. Securities and Exchange Commission (EDGAR, Form 8-K Exhibit 99.1)",
+        "published": "2023-06-22"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2023-10-30",
+      "kind": "clinical",
+      "headline": "EMBARK confirmatory trial misses primary NSAA endpoint but meets key secondary endpoints",
+      "detail": "In the Phase 3 EMBARK study (ages 4-7), ELEVIDYS-treated patients improved 2.6 points on the NSAA total score at week 52 versus 1.9 points on placebo, a 0.65-point difference that was not statistically significant (p=0.24); all pre-specified key secondary endpoints, including time-to-rise and 10-meter walk test, were statistically significant in favor of treatment, and the company said no new safety signals were seen. The company said it planned to seek a label expansion based on the totality of the data, having discussed the results with FDA leadership.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Sarepta Therapeutics Announces Topline Results from EMBARK, a Global Pivotal Study of ELEVIDYS Gene Therapy for Duchenne Muscular Dystrophy",
+        "url": "https://www.actionduchenne.org/sarepta-therapeutics-announces-topline-results-from-embark-a-global-pivotal-study-of-elevidys-gene-therapy-for-duchenne-muscular-dystrophy/",
+        "publisher": "Action Duchenne (mirroring Sarepta Therapeutics press release)",
+        "published": "2023-10-30"
+      },
+      "opened": true,
+      "opened_note": "Primary channels (investorrelations.sarepta.com, businesswire.com) timed out or returned 403 when fetched directly; this charity-site mirror of the same press release text was used instead, dated one day later (Oct 31) than the original Oct 30, 2023 release referenced by other outlets."
+    },
+    {
+      "id": "e7",
+      "date": "2024-06-20",
+      "kind": "regulatory",
+      "headline": "FDA expands ELEVIDYS approval to all DMD patients aged 4 and older",
+      "detail": "The FDA expanded the ELEVIDYS indication to patients aged 4 and older with a confirmed DMD gene mutation, granting traditional approval for ambulatory individuals and accelerated approval (again contingent on a confirmatory trial) for non-ambulatory individuals.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Sarepta Therapeutics Announces Expanded US FDA Approval of ELEVIDYS to Duchenne Muscular Dystrophy Patients Ages 4 and Above",
+        "url": "https://cureduchenne.org/research/sarepta-therapeutics-announces-expanded-us-fda-approval-of-elevidys-to-duchenne-muscular-dystrophy-patients-ages-4-and-above/",
+        "publisher": "CureDuchenne (mirroring Sarepta Therapeutics press release)",
+        "published": "2024-06-20"
+      },
+      "opened": true,
+      "opened_note": "No SEC 8-K exhibit matching this release could be located via EDGAR full-text search for this date range; a patient-advocacy-organization mirror of the company press release was used instead of the company's own investor-relations page, which repeatedly timed out."
+    },
+    {
+      "id": "e8",
+      "date": "2025-03-18",
+      "kind": "clinical",
+      "headline": "Sarepta discloses first death linked to ELEVIDYS, from acute liver failure; shares fall sharply",
+      "detail": "Sarepta reported that a patient with DMD died of acute liver failure after ELEVIDYS treatment -- a severity of liver injury not previously reported for the therapy, which had by then treated more than 800 clinical and prescribed patients. The company noted the patient had a recent cytomegalovirus infection that the treating physician identified as a possible contributing factor, and said it still viewed the risk-benefit profile as positive.",
+      "attribution": "source",
+      "source_quote": "The company's stock plunged around 22% as the markets opened on Tuesday to $78.54, down from $101.35 at the previous market close.",
+      "source": {
+        "title": "Sarepta Shares Crash 22% After Patient on DMD Gene Therapy Elevidys Dies",
+        "url": "https://www.biospace.com/drug-development/sarepta-shares-crash-22-after-patient-on-dmd-gene-therapy-elevidys-dies",
+        "publisher": "BioSpace",
+        "published": "2025-03-18"
+      },
+      "opened": true,
+      "opened_note": "Sarepta's own community-letter announcement (sarepta.com, same date, same facts) was also opened; the BioSpace article is cited here because it explicitly links the disclosure to the same-day price move, which the company letter does not address."
+    },
+    {
+      "id": "e9",
+      "date": "2025-06-15",
+      "kind": "clinical",
+      "headline": "Sarepta discloses a second ELEVIDYS-linked death; halts dosing in ongoing gene-therapy trial and suspends 2025 revenue guidance",
+      "detail": "Sarepta disclosed a second patient death, again attributed to acute liver failure following ELEVIDYS treatment. The company said it would pause dosing in the Phase 3 ENVISION trial, temporarily halt Elevidys shipments to non-ambulatory patients, assemble an independent expert group to consider an enhanced immunosuppression regimen (including possible addition of sirolimus), and suspend its full-year 2025 revenue guidance.",
+      "attribution": "source",
+      "source_quote": "Stock crashed 41% to $21.01 in premarket trading Monday morning following the announcement.",
+      "source": {
+        "title": "UPDATE: Second Patient Dies After Receiving Sarepta's DMD Gene Therapy Elevidys",
+        "url": "https://www.biospace.com/drug-development/second-patient-dies-after-receiving-sareptas-dmd-gene-therapy-elevidys",
+        "publisher": "BioSpace",
+        "published": "2025-06-16"
+      },
+      "opened": true,
+      "opened_note": "Article says the death was announced Sunday evening (2025-06-15) with the market reaction the following Monday morning; the article itself is dated 2025-06-16."
+    },
+    {
+      "id": "e10",
+      "date": "2025-07-22",
+      "kind": "regulatory",
+      "headline": "Sarepta pauses all U.S. Elevidys shipments after an informal FDA request",
+      "detail": "Several days after the FDA made an informal request on July 18, 2025 for Sarepta to voluntarily pause U.S. Elevidys shipments, Sarepta agreed to pause all shipments effective close of business July 22, 2025, having previously paused only shipments to non-ambulatory patients after the June death [e9]. The FDA subsequently recommended on July 28, 2025 that Sarepta resume shipments for ambulatory patients, while the pause for non-ambulatory patients continued pending further discussion.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Sarepta Voluntarily Pauses All Shipments of DMD Gene Therapy Elevidys Several Days After Informal Request From FDA",
+        "url": "https://www.cgtlive.com/view/sarepta-voluntarily-pauses-shipments-dmd-gene-therapy-elevidys-several-days-informal-request-fda",
+        "publisher": "CGTLive",
+        "published": "2025-07-22"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e11",
+      "date": "2025-11-14",
+      "kind": "regulatory",
+      "headline": "FDA approves a boxed warning for ELEVIDYS and restricts the indication to ambulatory patients only",
+      "detail": "The FDA approved a Boxed Warning -- its most prominent safety warning -- for the risk of serious liver injury and acute liver failure, including fatal outcomes, and revised the ELEVIDYS indication to cover only ambulatory patients aged 4 and older with a confirmed DMD mutation, removing the accelerated-approval indication for non-ambulatory patients granted in June 2024 [e7]. The FDA cited two reports of fatal acute liver failure in non-ambulatory pediatric patients (both hospitalized within two months of infusion) and one additional serious non-fatal liver-injury case, and is requiring a postmarketing observational study of about 200 patients followed for at least 12 months.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "FDA Approves New Safety Warning and Revised Indication that Limits Use for Elevidys Following Reports of Fatal Liver Injury",
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-new-safety-warning-and-revised-indication-limits-use-elevidys-following-reports-fatal",
+        "publisher": "U.S. Food and Drug Administration",
+        "published": "2025-11-14"
+      },
+      "opened": true,
+      "opened_note": null
+    }
+  ],
+  "horizon_notes": {
+    "1": "In the year after cutoff, both catalysts named in the pre-cutoff packet resolved close to their guided windows: the FDA approved the third exon-skipping drug, AMONDYS 45 (casimersen), on February 25, 2021, matching the packet's named decision deadline [e1], and Study 103 (ENDEAVOR) reported biomarker and safety data using the commercial manufacturing process in May 2021, in the second quarter as guided, with no new safety signals identified [e2]. Interpretation: the packet's two named catalysts both landed on schedule, an early signal that management's specific regulatory and manufacturing-transition claims were reliable; it contained no signal, however, about the gene-therapy safety concerns that emerged years later.",
+    "3": "By the third anniversary, the SRP-9001 gene therapy that had missed its primary functional endpoint at cutoff had received FDA accelerated approval as ELEVIDYS for ambulatory patients aged 4-5 in June 2023 [e5]; its EMBARK confirmatory trial then missed its own primary NSAA endpoint in October 2023 while meeting all key secondary endpoints [e6]; and the company financed the interim period with $1.13 billion of convertible notes in September 2022 rather than new equity [e4], against a backdrop of rising interest rates [e3]. Interpretation: the packet flagged the missed functional endpoint and the age-subgroup-only positive result as open questions about whether the effect was real and reproducible; the record through this anniversary shows the pattern repeating in a second, larger controlled trial (EMBARK), a data point the packet could not have contained since EMBARK had not yet been run.",
+    "5": "By the fifth anniversary, the safety picture had changed materially: Sarepta disclosed an ELEVIDYS-linked death from acute liver failure in March 2025 [e8], a second death in June 2025 that led it to pause gene-therapy trial dosing and suspend 2025 revenue guidance [e9], a full voluntary U.S. shipment pause in July 2025 after an FDA request, later partly lifted for ambulatory patients [e10], and in November 2025 an FDA-approved boxed warning with the indication narrowed back to ambulatory patients only [e11] -- reversing the non-ambulatory expansion granted in June 2024 [e7]. Interpretation: the pre-cutoff packet's 'short' column had already named serious adverse events, including liver-enzyme elevation, in 3 of the original 41 treated patients as a specific risk; the fifth-anniversary record shows a related risk recurring at a more severe, eventually fatal level in a larger post-approval population, though the packet could not have said in which patients or how the FDA's approved indication would later be narrowed in response."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "Two of the press-release-sourced events (EMBARK topline, e6; the June 2024 label expansion, e7) could not be corroborated against a Sarepta-hosted or SEC-filed primary source in this pass: investorrelations.sarepta.com and businesswire.com repeatedly timed out or returned 403 errors, and EDGAR full-text search found no 8-K exhibit containing the expected keywords for either date range, despite both being clearly material events. Patient-advocacy-organization mirrors of the same press releases were used instead and are believed accurate but are one step removed from the company's own posting.",
+    "The FDA's July 28, 2025 recommendation to resume ambulatory shipments is mentioned only inside event e10's detail, sourced to the same July 22 article, and was not independently verified against a dedicated primary source for that specific date.",
+    "A third, non-Elevidys death (a 51-year-old limb-girdle muscular dystrophy patient in a Phase 1 trial of the related investigational gene therapy SRP-9004, reported around July 2025) was identified in secondary sources but not included as a dated event here, since it concerns a different drug program using the same AAV serotype rather than ELEVIDYS itself.",
+    "The 2024 Roche relationship and any specific milestone or royalty payments referenced generically in player.json's unresolved questions ('the partner's committed payments') were not independently researched for specific dated amounts in this pass.",
+    "This session's WebSearch tool budget was exhausted partway through this case's research (a session-wide cap, not specific to this case); the later events in this timeline (e8-e11) were sourced via WebFetch on URLs already surfaced by earlier searches, and via direct EDGAR full-text-search API calls through Bash rather than further WebSearch calls."
+  ],
+  "search_log": [
+    {"query_or_url": "Sarepta Therapeutics casimersen FDA approval February 2021 AMONDYS 45", "result": "opened"},
+    {"query_or_url": "Sarepta SRP-9001 Elevidys FDA accelerated approval June 2023", "result": "opened"},
+    {"query_or_url": "Sarepta EMBARK study Part 2 SRP-9001 primary endpoint results October 2023", "result": "opened"},
+    {"query_or_url": "Sarepta ELEVIDYS FDA expanded approval traditional approval June 2024 all ages non-ambulatory", "result": "opened"},
+    {"query_or_url": "Sarepta ELEVIDYS patient deaths liver failure 2025 FDA black box warning", "result": "opened"},
+    {"query_or_url": "Sarepta Elevidys first patient death March 2025 acute liver failure announcement timeline", "result": "opened"},
+    {"query_or_url": "Sarepta Study SRP-9001-103 process comparability biomarker data 2021 announcement", "result": "opened"},
+    {"query_or_url": "Sarepta ENDEAVOR Study 103 globenewswire May 2021 commercial process material press release", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2021/02/25/2182845/.../Sarepta-...-AMONDYS-45...html", "result": "opened"},
+    {"query_or_url": "https://www.globenewswire.com/news-release/2021/05/18/2231647/.../Sarepta-...-SRP-9001-Demonstrates-Robust-Expression...html", "result": "opened"},
+    {"query_or_url": "https://investorrelations.sarepta.com/news-releases/news-release-details/sarepta-therapeutics-announces-fda-approval-elevidys-first-gene", "result": "timeout"},
+    {"query_or_url": "https://investorrelations.sarepta.com/news-releases/news-release-details/sarepta-therapeutics-announces-topline-results-embark-global-0", "result": "timeout"},
+    {"query_or_url": "https://efts.sec.gov/LATEST/search-index?q=%22ELEVIDYS%22&forms=8-K&ciks=0000873303&startdt=2023-06-15&enddt=2023-06-30 (EDGAR full text search API)", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000095017023029354/srpt-ex99_1.htm", "result": "opened"},
+    {"query_or_url": "EDGAR full text search for EMBARK 8-K, Oct-Nov 2023, CIK 0000873303", "result": "not_found"},
+    {"query_or_url": "\"Sarepta Therapeutics Announces Topline Results from EMBARK\" globenewswire October 2023", "result": "opened (search only)"},
+    {"query_or_url": "https://www.businesswire.com/news/home/20231030875867/en/Sarepta-Therapeutics-Announces-Topline-Results-from-EMBARK...", "result": "403"},
+    {"query_or_url": "https://www.actionduchenne.org/sarepta-therapeutics-announces-topline-results-from-embark-a-global-pivotal-study-of-elevidys-gene-therapy-for-duchenne-muscular-dystrophy/", "result": "opened"},
+    {"query_or_url": "EDGAR full text search for ELEVIDYS 8-K, June 18-25 2024, CIK 0000873303", "result": "not_found"},
+    {"query_or_url": "https://cureduchenne.org/research/sarepta-therapeutics-announces-expanded-us-fda-approval-of-elevidys-to-duchenne-muscular-dystrophy-patients-ages-4-and-above/", "result": "opened"},
+    {"query_or_url": "EDGAR full text search 'ELEVIDYS' + 'Boxed Warning', CIK 0000873303, Jun-Aug 2025", "result": "opened (found 10-Q, not used directly)"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000095017025103971/srpt-20250630.htm", "result": "opened, but relevant MD&A/risk-factor narrative not retrievable in this fetch (financial-statement section only); not used as cited source"},
+    {"query_or_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-new-safety-warning-and-revised-indication-limits-use-elevidys-following-reports-fatal", "result": "opened"},
+    {"query_or_url": "Sarepta Therapeutics convertible notes offering 2023 $1.265 billion proceeds", "result": "opened (search only; corrected to $980M/2022 in results)"},
+    {"query_or_url": "Sarepta community letter Elevidys safety update March 18 2025 patient death", "result": "opened (search only)"},
+    {"query_or_url": "https://www.sarepta.com/community-letter-elevidys-safety-update", "result": "opened"},
+    {"query_or_url": "https://www.biospace.com/drug-development/sarepta-shares-crash-22-after-patient-on-dmd-gene-therapy-elevidys-dies", "result": "opened"},
+    {"query_or_url": "https://www.neurologylive.com/view/third-patient-death-leads-significant-concerns-sarepta-gene-therapy-program", "result": "403"},
+    {"query_or_url": "FDA requests Sarepta pause Elevidys shipments non-ambulatory patients July 2025 date", "result": "opened (search only)"},
+    {"query_or_url": "https://efts.sec.gov/LATEST/search-index?q=%22%24980.0+million%22&ciks=0000873303 (EDGAR full text search API)", "result": "opened"},
+    {"query_or_url": "https://www.biospace.com/drug-development/second-patient-dies-after-receiving-sareptas-dmd-gene-therapy-elevidys", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000119312522247130/d357082d8k.htm", "result": "opened"},
+    {"query_or_url": "https://www.cgtlive.com/view/sarepta-voluntarily-pauses-shipments-dmd-gene-therapy-elevidys-several-days-informal-request-fda", "result": "opened"},
+    {"query_or_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm", "result": "opened"}
+  ]
+}

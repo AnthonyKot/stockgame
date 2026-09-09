@@ -1,0 +1,8 @@
+{
+  "ticker": "GOOGL",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:25.095754+00:00",
+  "sha256": "26ce43500558b5492c9acb3dd0d7bc0c6359a66dd56460327c5cdee2ba912cac",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

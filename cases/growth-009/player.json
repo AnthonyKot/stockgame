@@ -1,0 +1,972 @@
+{
+  "candidate_id": "growth-009",
+  "schema_version": "mvp-1",
+  "cutoff": "2023-02-03T09:00:00-05:00",
+  "horizon": {
+    "unit": "calendar_years",
+    "count": 1
+  },
+  "exchange_calendar": "XNYS",
+  "sector_module": "operating",
+  "masked": {
+    "alias": "a US chocolate, confectionery and salty-snack manufacturer",
+    "sector": "Consumer staples (packaged confectionery and snack foods)",
+    "business_two_sentences": "This company manufactures and markets branded chocolate, confectionery and salty-snack products sold mainly to grocery, mass-market and convenience retailers across North America and abroad. Revenue comes from wholesale sales of packaged snack and candy products, recently broadened by acquisitions in the adjacent salty-snacks category [c1]."
+  },
+  "transparent": {
+    "issuer": "The Hershey Company",
+    "ticker": "HSY",
+    "exchange": "NYSE",
+    "business_two_sentences": "The Hershey Company manufactures and markets chocolate, confectionery and salty-snack products, sold mainly to grocery, mass-market and convenience retailers across North America and international markets. Revenue is earned through wholesale sales of packaged snack and candy products, recently broadened by the 2021 acquisitions of Pretzels, Dots and Lily's Sweets [c1]."
+  },
+  "financial_snapshot": {
+    "adapter": "operating",
+    "headline": [
+      {
+        "label": "Net sales (FY2022) and YoY growth",
+        "value": 10419.3,
+        "unit": "USD_millions",
+        "period": "FY2022",
+        "available_at": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported",
+        "definition": "consolidated net sales, twelve months ended Dec 31, 2022; grew 16.1% year-over-year (organic constant-currency +12.0%, of which +8.0 points price realization and +4.0 points volume/mix)",
+        "prior": {
+          "value": 8971.3,
+          "period": "FY2021"
+        }
+      },
+      {
+        "label": "Reported gross margin (FY2022)",
+        "value": 43.2,
+        "unit": "percent",
+        "period": "FY2022",
+        "available_at": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported",
+        "definition": "GAAP gross profit as a percentage of net sales, twelve months ended Dec 31, 2022",
+        "prior": {
+          "value": 45.1,
+          "period": "FY2021"
+        }
+      },
+      {
+        "label": "Reported operating margin (FY2022)",
+        "value": 21.7,
+        "unit": "percent",
+        "period": "FY2022",
+        "available_at": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported",
+        "definition": "GAAP operating profit as a percentage of net sales, twelve months ended Dec 31, 2022",
+        "prior": {
+          "value": 22.8,
+          "period": "FY2021"
+        }
+      },
+      {
+        "label": "Free cash flow (FY2022)",
+        "value": null,
+        "unit": "USD_millions",
+        "period": "FY2022",
+        "available_at": null,
+        "source_ids": [],
+        "status": "missing",
+        "definition": "operating cash flow minus capital expenditures; the Feb 2, 2023 release contains only an income statement and balance sheet, not a cash-flow statement, and the FY2022 10-K was not yet filed as of the cutoff",
+        "prior": null
+      },
+      {
+        "label": "Net debt (total debt minus cash, Dec 31, 2022)",
+        "value": 4327.456,
+        "unit": "USD_millions",
+        "period": "FY2022 (Dec 31, 2022)",
+        "available_at": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "derived",
+        "definition": "(short-term debt + current portion of long-term debt + long-term debt) minus cash and cash equivalents, as of Dec 31, 2022",
+        "formula": "total_debt - cash_and_equivalents",
+        "prior": {
+          "value": 4699.628,
+          "period": "FY2021 (Dec 31, 2021)"
+        }
+      },
+      {
+        "label": "Enterprise value and EV/trailing revenue",
+        "value": null,
+        "unit": "USD_millions",
+        "period": "FY2022",
+        "available_at": null,
+        "source_ids": [],
+        "status": "missing",
+        "definition": "requires historical share price / market capitalization, which is not in this evidence packet",
+        "prior": null
+      }
+    ],
+    "history": [
+      {
+        "row": "Net sales",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2021 Q1",
+            "value": 2295.948,
+            "available_at": "2021-04-29",
+            "source_ids": [
+              "hsy-10q-2021-q1"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q2",
+            "value": 1989.422,
+            "available_at": "2021-07-29",
+            "source_ids": [
+              "hsy-10q-2021-q2"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q3",
+            "value": 2359.839,
+            "available_at": "2021-10-28",
+            "source_ids": [
+              "hsy-10q-2021-q3"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q4",
+            "value": 2326.128,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q1",
+            "value": 2666.221,
+            "available_at": "2022-04-28",
+            "source_ids": [
+              "hsy-10q-2022-q1"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q2",
+            "value": 2372.582,
+            "available_at": "2022-07-28",
+            "source_ids": [
+              "hsy-10q-2022-q2"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q3",
+            "value": 2728.153,
+            "available_at": "2022-11-04",
+            "source_ids": [
+              "hsy-10q-2022-q3"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q4",
+            "value": 2652.338,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Gross profit",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2021 Q1",
+            "value": 1048.951,
+            "available_at": "2021-04-29",
+            "source_ids": [
+              "hsy-10q-2021-q1"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q2",
+            "value": 925.445,
+            "available_at": "2021-07-29",
+            "source_ids": [
+              "hsy-10q-2021-q2"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q3",
+            "value": 1061.335,
+            "available_at": "2021-10-28",
+            "source_ids": [
+              "hsy-10q-2021-q3"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q4",
+            "value": 1012.867,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q1",
+            "value": 1245.48,
+            "available_at": "2022-04-28",
+            "source_ids": [
+              "hsy-10q-2022-q1"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q2",
+            "value": 999.999,
+            "available_at": "2022-07-28",
+            "source_ids": [
+              "hsy-10q-2022-q2"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q3",
+            "value": 1108.5,
+            "available_at": "2022-11-04",
+            "source_ids": [
+              "hsy-10q-2022-q3"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q4",
+            "value": 1144.806,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Operating profit",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2021 Q1",
+            "value": 553.044,
+            "available_at": "2021-04-29",
+            "source_ids": [
+              "hsy-10q-2021-q1"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q2",
+            "value": 456.675,
+            "available_at": "2021-07-29",
+            "source_ids": [
+              "hsy-10q-2021-q2"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q3",
+            "value": 574.831,
+            "available_at": "2021-10-28",
+            "source_ids": [
+              "hsy-10q-2021-q3"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q4",
+            "value": 459.172,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q1",
+            "value": 720.99,
+            "available_at": "2022-04-28",
+            "source_ids": [
+              "hsy-10q-2022-q1"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q2",
+            "value": 456.531,
+            "available_at": "2022-07-28",
+            "source_ids": [
+              "hsy-10q-2022-q2"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q3",
+            "value": 556.62,
+            "available_at": "2022-11-04",
+            "source_ids": [
+              "hsy-10q-2022-q3"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q4",
+            "value": 526.646,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net income attributable to Hershey",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2021 Q1",
+            "value": 395.799,
+            "available_at": "2021-04-29",
+            "source_ids": [
+              "hsy-10q-2021-q1"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q2",
+            "value": 301.23,
+            "available_at": "2021-07-29",
+            "source_ids": [
+              "hsy-10q-2021-q2"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q3",
+            "value": 444.927,
+            "available_at": "2021-10-28",
+            "source_ids": [
+              "hsy-10q-2021-q3"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021 Q4",
+            "value": 335.556,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q1",
+            "value": 533.478,
+            "available_at": "2022-04-28",
+            "source_ids": [
+              "hsy-10q-2022-q1"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q2",
+            "value": 315.556,
+            "available_at": "2022-07-28",
+            "source_ids": [
+              "hsy-10q-2022-q2"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q3",
+            "value": 399.487,
+            "available_at": "2022-11-04",
+            "source_ids": [
+              "hsy-10q-2022-q3"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 Q4",
+            "value": 396.296,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Cash and cash equivalents",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2021 (Dec 31, 2021)",
+            "value": 329.266,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022 (Dec 31, 2022)",
+            "value": 463.889,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total debt (short-term debt + current portion of long-term debt + long-term debt)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2021 (Dec 31, 2021)",
+            "value": 5028.894,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "derived",
+            "formula": "short_term_debt + current_portion_LT_debt + LT_debt_noncurrent",
+            "input_ids": [
+              "hsy-8k-2023-02-02"
+            ]
+          },
+          {
+            "period": "FY2022 (Dec 31, 2022)",
+            "value": 4791.345,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "derived",
+            "formula": "short_term_debt + current_portion_LT_debt + LT_debt_noncurrent",
+            "input_ids": [
+              "hsy-8k-2023-02-02"
+            ]
+          }
+        ]
+      },
+      {
+        "row": "Shares outstanding - Common (10-K cover-page count, year-end)",
+        "unit": "millions_of_shares",
+        "cells": [
+          {
+            "period": "FY2018",
+            "value": 209.729,
+            "available_at": "2019-02-22",
+            "source_ids": [
+              "hsy-10k-fy2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 208.829,
+            "available_at": "2020-02-20",
+            "source_ids": [
+              "hsy-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 208.227,
+            "available_at": "2021-02-17",
+            "source_ids": [
+              "hsy-10k-fy2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 206.109,
+            "available_at": "2022-02-18",
+            "source_ids": [
+              "hsy-10k-fy2021"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022",
+            "value": null,
+            "available_at": null,
+            "source_ids": [],
+            "status": "missing",
+            "note": "FY2022 Form 10-K not filed as of cutoff (2023-02-03)"
+          }
+        ]
+      },
+      {
+        "row": "Diluted weighted-average common shares used in EPS",
+        "unit": "millions_of_shares",
+        "cells": [
+          {
+            "period": "FY2021",
+            "value": 207.758,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2022",
+            "value": 206.575,
+            "available_at": "2023-02-02",
+            "source_ids": [
+              "hsy-8k-2023-02-02"
+            ],
+            "status": "reported"
+          }
+        ]
+      }
+    ]
+  },
+  "what_changed": [
+    {
+      "date": "2023-02-02",
+      "fact": "Full-year 2022 net sales were $10,419.3 million, up 16.1%, with organic constant-currency growth of 12.0% (8.0 points of net price realization plus 4.0 points of volume/mix) [c2].",
+      "relationship_to_business": "This is the company's core annual revenue result, showing pricing and volume both contributed to growth despite an inflationary cost environment.",
+      "source_ids": [
+        "hsy-8k-2023-02-02"
+      ],
+      "status": "reported"
+    },
+    {
+      "date": "2023-02-02",
+      "fact": "The company issued 2023 full-year guidance of 6%-8% net sales growth and 9%-11% adjusted EPS growth, a deceleration from 2022's 16.1% sales growth and 18.5% adjusted EPS growth [c3].",
+      "relationship_to_business": "Management's own forward guidance sets the growth bar the market will measure the business against for the next fiscal year.",
+      "source_ids": [
+        "hsy-8k-2023-02-02"
+      ],
+      "status": "management_guidance"
+    },
+    {
+      "date": "2023-02-02",
+      "fact": "The North America Salty Snacks segment grew full-year net sales 85.3% (aided by 2021 acquisitions) while the International segment's full-year margin improved to 12.6% from 10.1% [c4].",
+      "relationship_to_business": "Shows the two smaller segments -- recently acquired salty snacks and international -- both expanded in 2022, changing the company's growth and margin mix beyond core North America confectionery.",
+      "source_ids": [
+        "hsy-8k-2023-02-02"
+      ],
+      "status": "reported"
+    }
+  ],
+  "sector_evidence": {
+    "segment_table": [
+      {
+        "segment": "North America Confectionery",
+        "period": "Q4 2022",
+        "net_sales_usd_millions": 2174.785,
+        "yoy_change_pct": 9.7,
+        "segment_income_usd_millions": 703.502,
+        "segment_margin_pct": 32.3,
+        "prior_period_margin_pct": 31.4,
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "segment": "North America Confectionery",
+        "period": "FY2022",
+        "net_sales_usd_millions": 8536.48,
+        "yoy_change_pct": 11.1,
+        "segment_income_usd_millions": 2811.066,
+        "segment_margin_pct": 32.9,
+        "prior_period_margin_pct": 32.2,
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "segment": "North America Salty Snacks",
+        "period": "Q4 2022",
+        "net_sales_usd_millions": 271.962,
+        "yoy_change_pct": 71.4,
+        "segment_income_usd_millions": 56.685,
+        "segment_margin_pct": 20.8,
+        "prior_period_margin_pct": 12.4,
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "segment": "North America Salty Snacks",
+        "period": "FY2022",
+        "net_sales_usd_millions": 1029.405,
+        "yoy_change_pct": 85.3,
+        "segment_income_usd_millions": 159.935,
+        "segment_margin_pct": 15.5,
+        "prior_period_margin_pct": 18.1,
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "segment": "International",
+        "period": "Q4 2022",
+        "net_sales_usd_millions": 205.591,
+        "yoy_change_pct": 11.1,
+        "segment_income_usd_millions": -0.131,
+        "segment_margin_pct": -0.1,
+        "prior_period_margin_pct": -0.2,
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "segment": "International",
+        "period": "FY2022",
+        "net_sales_usd_millions": 853.409,
+        "yoy_change_pct": 16.3,
+        "segment_income_usd_millions": 107.927,
+        "segment_margin_pct": 12.6,
+        "prior_period_margin_pct": 10.1,
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      }
+    ],
+    "guidance_table": [
+      {
+        "metric": "Net sales growth",
+        "prior_guidance": null,
+        "new_guidance": "6% to 8%",
+        "date": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "management_guidance"
+      },
+      {
+        "metric": "Reported EPS growth",
+        "prior_guidance": null,
+        "new_guidance": "11% to 15%",
+        "date": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "management_guidance"
+      },
+      {
+        "metric": "Adjusted EPS growth",
+        "prior_guidance": null,
+        "new_guidance": "9% to 11%",
+        "date": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "management_guidance"
+      },
+      {
+        "metric": "Effective tax rate (reported and adjusted)",
+        "prior_guidance": null,
+        "new_guidance": "15% to 16%",
+        "date": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "management_guidance"
+      },
+      {
+        "metric": "Interest expense",
+        "prior_guidance": null,
+        "new_guidance": "$145 million to $155 million",
+        "date": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "management_guidance"
+      },
+      {
+        "metric": "Capital expenditures",
+        "prior_guidance": null,
+        "new_guidance": "$800 million to $900 million",
+        "date": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "management_guidance"
+      }
+    ],
+    "guidance_table_note": "No 'prior guidance' column is populated: the release compares 2023 guidance against 2022's actual growth rates, not against a previously issued 2022 guidance figure, and an earlier 2022-guidance release is not in this evidence packet.",
+    "capital_allocation": [
+      {
+        "item": "Capital expenditures",
+        "value": "FY2022 actual: missing (not disclosed in this release); FY2023 guidance: $800-900 million",
+        "period": "FY2022 / FY2023(g)",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "missing/management_guidance"
+      },
+      {
+        "item": "Dividends paid",
+        "value": "FY2021: $685.987 million; FY2022 nine months (through Oct 2, 2022): $567.989 million; FY2022 full year: missing",
+        "period": "FY2021 / 9M-FY2022",
+        "source_ids": [
+          "hsy-10k-fy2021",
+          "hsy-10q-2022-q3"
+        ],
+        "status": "reported"
+      },
+      {
+        "item": "Share repurchases",
+        "value": "FY2021: $457.946 million; FY2022 nine months (through Oct 2, 2022): $355.271 million; FY2022 full year: missing",
+        "period": "FY2021 / 9M-FY2022",
+        "source_ids": [
+          "hsy-10k-fy2021",
+          "hsy-10q-2022-q3"
+        ],
+        "status": "reported"
+      },
+      {
+        "item": "Short-term debt (due within ~12 months)",
+        "value": "$693.790 million as of Dec 31, 2022",
+        "period": "Dec 31, 2022",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "item": "Current portion of long-term debt (due within ~12 months)",
+        "value": "$753.578 million as of Dec 31, 2022",
+        "period": "Dec 31, 2022",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "item": "Long-term debt, noncurrent",
+        "value": "$3,343.977 million as of Dec 31, 2022; a 13-24 month maturity breakdown is not disclosed in this release",
+        "period": "Dec 31, 2022",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      }
+    ],
+    "competitive_position_facts": [
+      {
+        "fact": "US candy/mint/gum (CMG) retail takeaway (MULO+C channels, 12 weeks ended Jan 1, 2023) rose 10.7% year-over-year, while CMG category share fell 54 basis points on category-mix headwinds and capacity constraints on seasonal products.",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "fact": "US salty-snack retail takeaway (same 12-week window) rose 19.2%, with the company's salty-snack category share up 10 basis points.",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "fact": "The SkinnyPop brand's retail sales rose 19.7%, gaining 130 basis points of ready-to-eat popcorn category share.",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "fact": "The Dots Homestyle Pretzels brand's retail sales rose 32.3%, gaining 130 basis points of pretzel category share.",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "fact": "US chocolate retail sales grew 10.6% in the same window.",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      },
+      {
+        "fact": "US refreshment (mints/gum) retail sales grew 10.8% in the same window.",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ],
+        "status": "reported"
+      }
+    ]
+  },
+  "upcoming_and_unresolved": {
+    "catalysts": [
+      {
+        "description": "2023 capacity expansion and an ERP-system build funded by $800-900 million of guided capital expenditure [c5].",
+        "timing_window": "fiscal year 2023",
+        "announced_on": "2023-02-02",
+        "source_ids": [
+          "hsy-8k-2023-02-02"
+        ]
+      }
+    ],
+    "unresolved_questions": [
+      "Whether continued net price realization can sustain revenue growth at the guided pace if consumer price sensitivity increases in 2023.",
+      "Whether input-cost and labor inflation will move in line with, above, or below the margin assumptions embedded in the 6%-8% sales growth and 9%-11% adjusted EPS guidance.",
+      "Whether the North America Salty Snacks segment can sustain its 2022 organic growth and margin expansion as the 2021 acquisitions lap and promotional spending normalizes."
+    ]
+  },
+  "macro_context": [
+    {
+      "item": "Management characterized 2022 as achieved despite record inflation, continued supply-chain disruptions and macroeconomic uncertainty for consumers [c6].",
+      "business_connection": "Higher input, packaging and labor costs raise cost of goods sold and pressure gross margin unless offset by price increases or volume leverage.",
+      "available_at": "2023-02-02",
+      "source_ids": [
+        "hsy-8k-2023-02-02"
+      ]
+    },
+    {
+      "item": "2023 guidance embeds interest expense of approximately $145-155 million, which the company said reflects a higher interest-rate environment [c7].",
+      "business_connection": "Higher benchmark interest rates raise the cost of the company's short-term and floating-rate debt, reducing net income available after interest expense.",
+      "available_at": "2023-02-02",
+      "source_ids": [
+        "hsy-8k-2023-02-02"
+      ]
+    }
+  ],
+  "help_me_weigh": {
+    "own": [
+      "Full-year 2022 net sales and adjusted EPS grew 16.1% and 18.5% respectively even as management cited record input-cost inflation, evidence of realized pricing power [c8].",
+      "2023 guidance of 6%-8% sales growth and 9%-11% adjusted EPS growth, while slower than 2022, is still an above-average growth range for consumer staples [c9].",
+      "The North America Salty Snacks segment's fourth-quarter margin expanded 840 basis points to 20.8% as the 2021 acquisitions integrated, adding a second profit engine alongside core confectionery [c10]."
+    ],
+    "flat": [
+      "2023 guidance itself embeds a deceleration to single-digit sales growth and continued cost pressure, alongside higher planned interest expense and capital spending [c11].",
+      "Reported gross margin already declined 30 basis points to 43.2% in the fourth quarter of 2022, as broad-based cost-of-goods inflation outpaced price realization [c12]."
+    ],
+    "short": [
+      "Planned 2023 capital expenditure of $800-900 million and interest expense of $145-155 million represent a step-up in cash outflow that could pressure free cash flow if growth decelerates faster than guided [c13].",
+      "US candy/mint/gum retail category share fell 54 basis points in the most recent 12-week read even as price-led retail sales rose 10.7%, a sign that price increases may be ceding unit share [c14]."
+    ]
+  },
+  "source_handles": [
+    {
+      "id": "hsy-8k-2023-02-02",
+      "kind": "8-K",
+      "title": "Hershey Reports Fourth-Quarter and Full-Year 2022 Financial Results; Provides 2023 Outlook (Exhibit 99.1)",
+      "available_at": "2023-02-02",
+      "masked_title": "Company press release and Form 8-K exhibit, 2 Feb 2023"
+    },
+    {
+      "id": "hsy-10q-2021-q1",
+      "kind": "other",
+      "title": "Hershey Form 10-Q for the quarter ended April 4, 2021",
+      "available_at": "2021-04-29",
+      "masked_title": "Company Form 10-Q, filed 29 Apr 2021"
+    },
+    {
+      "id": "hsy-10q-2021-q2",
+      "kind": "other",
+      "title": "Hershey Form 10-Q for the quarter ended July 4, 2021",
+      "available_at": "2021-07-29",
+      "masked_title": "Company Form 10-Q, filed 29 Jul 2021"
+    },
+    {
+      "id": "hsy-10q-2021-q3",
+      "kind": "other",
+      "title": "Hershey Form 10-Q for the quarter ended October 3, 2021",
+      "available_at": "2021-10-28",
+      "masked_title": "Company Form 10-Q, filed 28 Oct 2021"
+    },
+    {
+      "id": "hsy-10k-fy2021",
+      "kind": "other",
+      "title": "Hershey Form 10-K for fiscal year ended December 31, 2021",
+      "available_at": "2022-02-18",
+      "masked_title": "Company Form 10-K, filed 18 Feb 2022"
+    },
+    {
+      "id": "hsy-10q-2022-q1",
+      "kind": "other",
+      "title": "Hershey Form 10-Q for the quarter ended April 3, 2022",
+      "available_at": "2022-04-28",
+      "masked_title": "Company Form 10-Q, filed 28 Apr 2022"
+    },
+    {
+      "id": "hsy-10q-2022-q2",
+      "kind": "other",
+      "title": "Hershey Form 10-Q for the quarter ended July 3, 2022",
+      "available_at": "2022-07-28",
+      "masked_title": "Company Form 10-Q, filed 28 Jul 2022"
+    },
+    {
+      "id": "hsy-10q-2022-q3",
+      "kind": "other",
+      "title": "Hershey Form 10-Q for the quarter ended October 2, 2022",
+      "available_at": "2022-11-04",
+      "masked_title": "Company Form 10-Q, filed 4 Nov 2022"
+    },
+    {
+      "id": "hsy-10k-fy2020",
+      "kind": "other",
+      "title": "Hershey Form 10-K for fiscal year ended December 31, 2020",
+      "available_at": "2021-02-17",
+      "masked_title": "Company Form 10-K, filed 17 Feb 2021"
+    },
+    {
+      "id": "hsy-10k-fy2019",
+      "kind": "other",
+      "title": "Hershey Form 10-K for fiscal year ended December 31, 2019",
+      "available_at": "2020-02-20",
+      "masked_title": "Company Form 10-K, filed 20 Feb 2020"
+    },
+    {
+      "id": "hsy-10k-fy2018",
+      "kind": "other",
+      "title": "Hershey Form 10-K for fiscal year ended December 31, 2018",
+      "available_at": "2019-02-22",
+      "masked_title": "Company Form 10-K, filed 22 Feb 2019"
+    }
+  ],
+  "missing_data": [
+    "FY2022 operating cash flow and capital expenditure (actual): not disclosed in the Feb 2, 2023 release (no cash-flow statement included); FY2022 10-K not filed as of cutoff.",
+    "FY2022 full-year dividends paid and share repurchases: only nine-month (through Oct 2, 2022) figures are available from the Q3 2022 10-Q.",
+    "Shares outstanding at FY2022 year-end: not available; the last reported 10-K share count (206.109 million, common) is for FY2021.",
+    "Market capitalization, enterprise value and EV/trailing-revenue: no historical share price is in this evidence packet.",
+    "Prior-year (2022) guidance figures for a guidance-table comparison column: the release that originally issued 2022 guidance is not in this evidence packet.",
+    "Debt maturity schedule beyond 12 months (13-24 month maturities): not broken out in the Feb 2, 2023 release."
+  ],
+  "editorial_notes": "Adjusted (non-GAAP) EPS figures cited in the release (e.g., $2.02 for Q4 2022, $8.52 for FY2022) exclude mark-to-market derivative gains/losses, business-realignment costs, acquisition/integration costs and other miscellaneous items; they are labelled management_guidance/derived where used and kept distinct from GAAP reported EPS. Hershey has a dual-class share structure (Common and Class B); the shares-outstanding and diluted-share rows above are Common-stock figures only, consistent with the release's own EPS presentation. All financial_snapshot.history figures are as originally reported in the filing where each period first appeared (earliest filed date on or before the cutoff), not a restated figure from a subsequent filing."
+}

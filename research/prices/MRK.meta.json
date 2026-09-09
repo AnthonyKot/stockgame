@@ -1,0 +1,8 @@
+{
+  "ticker": "MRK",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MRK?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:24.856438+00:00",
+  "sha256": "ba08c31afcce779c33f7b8a741233221c2114b762536bd8d6a110aaa5b6b9f31",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

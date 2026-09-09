@@ -1,0 +1,47 @@
+# Status: ten-case MVP running locally; tightening pass in progress (2026-09-09, ~21:45 UTC)
+
+> Superseded product priority (9 September 2026): [MASTER_PLAN.md](../MASTER_PLAN.md) defines the main game as one chronological portfolio campaign, with a fixed historical end date and play continuing until all timed trades close. This file retains earlier work, prompts or recommendations; conflicting standalone-quiz priorities and immediate future reveals do not govern campaign development. Check current code before repeating earlier tasks.
+
+Read README.md, then ARCHITECTURE.md (what exists and how it connects). This file is only the current state and the next step. History of how the ten were chosen: research/SELECTION.md. Codex's review and proposals: research/FABLE5_NEXT_STEP.md; Codex's restart note: research/START_HERE.md.
+
+## What is true right now
+
+- Ten cases are playable at http://localhost:8765/index.html (serve `site/` with `python3 -m http.server 8765`). All ten pass `scripts/verify_cases.py`; `scripts/test_returns.py` passes.
+- Data flow and conventions are in ARCHITECTURE.md. Nothing is in git. Nothing is published.
+- Done tonight against Codex's review: SPY benchmark on a total-return basis with the stock; commit saves and reads back before any reveal, failure shows an error and reveals nothing; masked source excerpts visible before commit; sector evidence collapsed by default; fixed "Decide" button on narrow screens; session-interval readout removed; derived valuation tiles (market cap, net cash, EV, EV/revenue; banks market cap only); rules in a side panel; per-case Brier score removed; other-horizon reveal; legend toggles and relative-to-SPY chart view.
+- Kept on purpose despite the trim list: size chooser (user asked for it to be highlighted), probability question (unscored, defaulted), one shared renderer for all ten instead of a three-case pilot.
+
+## Scenes (2026-09-09 late)
+
+Every case opens with a scene from cases/scenes.json (five setup types, per Codex's proposal, combined with the real-headline strip). The debrief checks each scene claim against the aftermath record. Checks written for all 10.
+
+## Horizon choice, stop loss, take profit (2026-09-09 night)
+
+The player now picks 1, 3 or 5 years at the ticket (case default preselected; horizons past the cached data disabled) and optional stop loss / take profit levels. Results are simulated client-side by site/sim.js from outcome.sim under the same contract; the debrief shows the exit reason, the plain-hold comparison, and the chosen horizon's path. Legacy journal entries without horizon_years use the case horizon.
+
+## Investigation layer rolled out to all ten (2026-09-09, ~21:40 UTC)
+
+Every case now has three sourced investigation questions (label per setup), five selectable assumptions with evidence/meaning/unknown verdicts, and a 4 to 5 stop walk with stage-safe text, all in cases/scenes.json. Leak scan clean across sheet.json and walk stops. Easy UX done: index progress + continue button, folded optional ticket fields, debrief order (thesis, friend, record, then details), journal exit column. Next: user plays; then MASTER_PLAN.md campaign per Codex's implementation plan.
+
+## Nektar story fixes against research/FABLE_CAMPAIGN_NEXT.md (2026-09-09, ~21:20 UTC)
+
+Done: (1) walk resume with started/complete/skipped flags and a save check (Codex's fix, kept), plus stops limited to the chosen holding period; (2) pitch rewritten to the agreed-but-pending deal terms, claims aligned to the spoken clauses, friend's inference marked as inference; (3) walk stage text corrected (two months after closing; class action unresolved in 2019; March 2022 stop no longer leaks April; separate April 2022 stop; legal event dated to the month); (4) thesis verdicts rewritten as evidence / meaning for the assumption / unknown, with a 'your trade closed on' line; scene questions no longer state a horizon; the case card no longer repeats the question when a scene exists; the scene is labelled fiction. Codex is writing the campaign implementation plan in parallel; no campaign code here. Pause for the user to play Nektar.
+
+## Investigation prototype on Nektar (2026-09-09 night)
+
+Codex's four ideas prototyped on clinical-nktr-2018 only, generic code, data in cases/scenes.json: (1) 'What would you ask your friend?' three sourced answer cards; (2) first reaction (interested / unconvinced / against) before the decision; (3) 'My decision depends on…' one or two selectable assumptions replace the required reason, checked one by one in the debrief; (4) after commit, 'Walk through what happened' in three stops (June 2018 data, June 2019 data, March 2022 Phase 3 miss) with strengthens / weakens / unresolved at each, identity hidden until the end, or 'Show the result'. Other nine cases keep the plain flow. To extend: author the four fields for a case in scenes.json and rebuild.
+
+## Aftermath
+
+All ten cases/<id>/aftermath.json written (Sonnet workers, 9 to 12 dated sourced events each plus horizon notes), merged into outcome.json, rendered in the debrief with numbered markers. Leak check passed: no ticker, issuer name, aftermath or debrief_check text in any sheet.json. Nothing running.
+
+## Next step
+
+1. User plays a few cases with the aftermath timeline and says what reads well and what does not.
+2. Editorial triage of each case's `repairs_needed` (evidence.json): mark blocking vs optional; only then consider a readiness gate in the builder.
+3. Optional: `git init` and first commit (user has not asked yet).
+
+## Open questions for the user
+
+- Keep the probability question at all, or drop it now that it is unscored per case?
+- Calibration table in the journal: keep at five decisions with "too few to read" guards, or hide until more cases exist?

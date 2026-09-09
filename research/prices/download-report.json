@@ -1,0 +1,274 @@
+[
+  {
+    "ticker": "AXSM",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AXSM?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:23.748361+00:00",
+    "sha256": "5ecf48fd2aed75cf344094fa94994bcab2154b0e57b21d5a2f6a86edea83b7cb",
+    "bars": 2714,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "SAGE",
+    "status": "error",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "ticker": "FGEN",
+    "status": "error",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "ticker": "NKTR",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NKTR?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:23.773308+00:00",
+    "sha256": "a0bbfde253b218c167a07f2ec07987f0a4cbae4597154f556e48eb670fb63d7d",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "ICPT",
+    "status": "error",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "ticker": "MDGL",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MDGL?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:23.968767+00:00",
+    "sha256": "ac26f2818fa898b28bd213dca2b689fa1bac7736ae0b2691a903c281e34c51d8",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "BMRN",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BMRN?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:23.959070+00:00",
+    "sha256": "38e97adc07e56908a1b753466a1968f30d004c24118ad0d3618f12a95e585531",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "ACAD",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ACAD?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:23.962968+00:00",
+    "sha256": "e92952f503198deb171dbcba519623dc47406ec0fca4784f4bddf457d6b4ff2e",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "SRPT",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SRPT?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.142487+00:00",
+    "sha256": "15047345b00cbb6b8fc81e8a3802c6c03bc5cb1022cfb9b8c549674015b881b9",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "BLUE",
+    "status": "error",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "ticker": "REGN",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/REGN?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.254136+00:00",
+    "sha256": "749980e2062c97066dd62365981adcfc3eb6bc2b783f7e6495a98638c253d159",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "EXEL",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/EXEL?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.284757+00:00",
+    "sha256": "ce08971d5b0cddf8830234d94112ce3511cbc70563a43c261c18b3e2755eef5f",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "GILD",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GILD?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.379574+00:00",
+    "sha256": "11d17a43fb1837cf82a5f35a3e644cc61b6a4b86c2aeab3ceaf5afcb9ebfbc1c",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "BIIB",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BIIB?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.488818+00:00",
+    "sha256": "94b2b40ee4bec05b31c4ec9a0b6d6913808acbc3bdc941e2f35559b88fa3c198",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "AMGN",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMGN?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.514330+00:00",
+    "sha256": "e9395baddb7f28b442f066d995f4b9bf5cf3b68fe8b099de80fdc11d4aa30912",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "ALNY",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ALNY?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.595126+00:00",
+    "sha256": "434638b0881473efa508582d07f97eeb9608398cdcab6738c6653b121c26c0ad",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "INCY",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/INCY?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.659328+00:00",
+    "sha256": "0fbe4d2ab26a7eea53b40b47369addfdd03218ec62f1c4c56e11af97797b4d09",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "MRK",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MRK?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.856438+00:00",
+    "sha256": "ba08c31afcce779c33f7b8a741233221c2114b762536bd8d6a110aaa5b6b9f31",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "HRMY",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/HRMY?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.823416+00:00",
+    "sha256": "843b342257b0035b8dbed8f7433174f1189b67a8d24cccff9f94460fd0d24129",
+    "bars": 1520,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "NBIX",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NBIX?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:24.882740+00:00",
+    "sha256": "ed44b18b257fd51023ad82ea791ad83b2214b5ebe1d96a30dcdaaf27d2108090",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "ZM",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ZM?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:25.079638+00:00",
+    "sha256": "3c200382e08ff390f288d9cdcf018a09c0c73ef3b26e7338551cc169968cea93",
+    "bars": 1857,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "GOOGL",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:25.095754+00:00",
+    "sha256": "26ce43500558b5492c9acb3dd0d7bc0c6359a66dd56460327c5cdee2ba912cac",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "NKE",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NKE?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:25.164117+00:00",
+    "sha256": "2cda0ae243ee72a4b8df644b433a59da8ca17ea16e0a034952f6802476b38f52",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "TGT",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TGT?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:30.767379+00:00",
+    "sha256": "0ca38e13d26d1ae7c8b9e8e95f501f57beb5e6e2b6d8721208c2b840aaf65119",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "DE",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DE?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:25.375728+00:00",
+    "sha256": "7d9d1c734a1e3bf2daff191226295676773f0bbf2a48f08785d76eb22988a11f",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "XOM",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/XOM?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:25.444802+00:00",
+    "sha256": "d15d19740bc4fce7f226636e1dd68eb833b786bd431c4c04e15cc52dfdc5d37c",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "FSLR",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/FSLR?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:25.588764+00:00",
+    "sha256": "b200cecd36dfc4153f3b368e13ec9327e265fe3dfd9ccacf22b8f34715e6b75c",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "JPM",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/JPM?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:25.688623+00:00",
+    "sha256": "79f83ee43e512f367838cc2ac07d0b51346225544ef049cae16ec2bcefa63fcb",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "HSY",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/HSY?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:25.891722+00:00",
+    "sha256": "bfef57ba1bed47394f441276943604f8598e43a92b1ef6d5604bb1bc7562235d",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "GE",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GE?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:26.201573+00:00",
+    "sha256": "cfafc9f4341599b0805690cda2d9e2d02be0acd2239345fbe7214eb4e47fac16",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "SPY",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:26.162756+00:00",
+    "sha256": "a45153b9c7ce8c9dd50f1b9c6a6a1d2801938de51a1bea05134e21d5ab6d903c",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  },
+  {
+    "ticker": "XBI",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/XBI?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+    "retrieved_at": "2026-09-09T12:02:26.395343+00:00",
+    "sha256": "cb3db359cbad44d77f20a7a0a7b477319bb5e431d2f2267b5f6affa9e586ab2f",
+    "bars": 2937,
+    "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger.",
+    "status": "downloaded"
+  }
+]

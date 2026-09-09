@@ -1,0 +1,954 @@
+{
+  "candidate_id": "clinical-axsm-2019",
+  "schema_version": "mvp-1",
+  "cutoff": "2019-12-17T09:00:00-05:00",
+  "horizon": {
+    "unit": "calendar_years",
+    "count": 1
+  },
+  "exchange_calendar": "XNYS",
+  "sector_module": "biotech",
+  "masked": {
+    "alias": "a clinical-stage CNS drug developer",
+    "sector": "Biotechnology (central nervous system)",
+    "business_two_sentences": "This company develops drug candidates for depression, migraine, narcolepsy and Alzheimer's-related agitation and has no FDA-approved products yet. It funds itself from cash reserves and equity financing while its lead depression combination drug awaits an anticipated regulatory filing [c6]."
+  },
+  "transparent": {
+    "issuer": "Axsome Therapeutics, Inc.",
+    "ticker": "AXSM",
+    "exchange": "NASDAQ",
+    "business_two_sentences": "Axsome Therapeutics, Inc. is a clinical-stage biopharmaceutical company developing novel therapies for central nervous system disorders, including major depressive disorder, migraine, narcolepsy and Alzheimer's disease agitation. It has no FDA-approved products and funds operations from cash reserves and equity financing while its lead drug, AXS-05, awaits an anticipated NDA filing [c6]."
+  },
+  "financial_snapshot": {
+    "adapter": "development_biotech",
+    "headline": [
+      {
+        "label": "Market capitalization and net cash",
+        "value": 23.9,
+        "unit": "USD_millions",
+        "period": "2019-09-30",
+        "available_at": "2019-11-07",
+        "source_ids": [
+          "axsm-10q-q3-2019",
+          "0001558370-19-002068"
+        ],
+        "status": "derived",
+        "definition": "Net cash = cash and cash equivalents minus total long-term debt (current and noncurrent). Market capitalization is not shown: no historical share price is in the eligible evidence packet (see missing_data).",
+        "prior": {
+          "value": 7.1,
+          "period": "2018-12-31"
+        }
+      },
+      {
+        "label": "Cash and cash equivalents",
+        "value": 43.6,
+        "unit": "USD_millions",
+        "period": "2019-09-30",
+        "available_at": "2019-11-07",
+        "source_ids": [
+          "axsm-10q-q3-2019"
+        ],
+        "status": "reported",
+        "definition": "Cash and cash equivalents on the condensed consolidated balance sheet; no short-term investments or restricted cash were reported separately.",
+        "prior": {
+          "value": 14.0,
+          "period": "2018-12-31"
+        }
+      },
+      {
+        "label": "Quarterly operating cash outflow (most recent quarter)",
+        "value": -10.6,
+        "unit": "USD_millions",
+        "period": "Q3-2019",
+        "available_at": "2019-11-07",
+        "source_ids": [
+          "axsm-10q-q3-2019"
+        ],
+        "status": "derived",
+        "definition": "Nine-month 2019 year-to-date net cash used in operating activities minus six-month 2019 year-to-date figure.",
+        "prior": {
+          "value": -5.9,
+          "period": "Q3-2018"
+        }
+      },
+      {
+        "label": "Funding runway scenario",
+        "value": 4.5,
+        "unit": "quarters",
+        "period": "as of 2019-09-30",
+        "available_at": "2019-11-07",
+        "source_ids": [
+          "axsm-10q-q3-2019"
+        ],
+        "status": "derived",
+        "definition": "Cash at 2019-09-30 divided by the trailing nine-month 2019 average quarterly operating cash outflow; a simple scenario, not a company forecast. Separately, management stated it believes current cash will fund operations into the second quarter of 2021 [c9] -- kept distinct as management guidance.",
+        "prior": null
+      },
+      {
+        "label": "Debt and contractual commitments",
+        "value": 19.8,
+        "unit": "USD_millions",
+        "period": "2019-09-30",
+        "available_at": "2019-11-07",
+        "source_ids": [
+          "axsm-10q-q3-2019"
+        ],
+        "status": "reported",
+        "definition": "Long-term debt, current and noncurrent portions combined, per the balance sheet.",
+        "prior": {
+          "value": 6.9,
+          "period": "2018-12-31"
+        }
+      },
+      {
+        "label": "Shares outstanding and recent financing",
+        "value": 34.5,
+        "unit": "millions_of_shares",
+        "period": "2019-09-30",
+        "available_at": "2019-11-07",
+        "source_ids": [
+          "axsm-10q-q3-2019"
+        ],
+        "status": "reported",
+        "definition": "Common shares outstanding; financing activities provided $58.5 million of cash in the first nine months of 2019, largely reflecting equity issuance.",
+        "prior": {
+          "value": 30.1,
+          "period": "2018-12-31"
+        }
+      }
+    ],
+    "history": [
+      {
+        "row": "Revenue",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 0.0,
+            "available_at": "2018-03-07",
+            "source_ids": [
+              "0001558370-18-001639"
+            ],
+            "status": "not_applicable"
+          },
+          {
+            "period": "FY2018",
+            "value": 0.0,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "not_applicable"
+          },
+          {
+            "period": "Q1-2019",
+            "value": 0.0,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "not_applicable"
+          },
+          {
+            "period": "Q2-2019",
+            "value": 0.0,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "not_applicable"
+          },
+          {
+            "period": "Q3-2019",
+            "value": 0.0,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "not_applicable"
+          }
+        ]
+      },
+      {
+        "row": "Research and development expense",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 20.0,
+            "available_at": "2018-03-07",
+            "source_ids": [
+              "0001558370-18-001639"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 23.5,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2018",
+            "value": 4.8,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001558370-18-004333"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2018",
+            "value": 5.6,
+            "available_at": "2018-08-08",
+            "source_ids": [
+              "0001558370-18-006756"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2018",
+            "value": 6.0,
+            "available_at": "2018-11-09",
+            "source_ids": [
+              "0001558370-18-009181"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2019",
+            "value": 7.6,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2019",
+            "value": 11.0,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2019",
+            "value": 15.8,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "General and administrative expense (derived)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 7.2,
+            "available_at": "2018-03-07",
+            "source_ids": [
+              "0001558370-18-001639"
+            ],
+            "status": "derived",
+            "formula": "-(OperatingIncomeLoss) - ResearchAndDevelopmentExpense"
+          },
+          {
+            "period": "FY2018",
+            "value": 9.4,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "derived",
+            "formula": "-(OperatingIncomeLoss) - ResearchAndDevelopmentExpense"
+          },
+          {
+            "period": "Q1-2018",
+            "value": 2.4,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001558370-18-004333"
+            ],
+            "status": "derived",
+            "formula": "-(OperatingIncomeLoss) - ResearchAndDevelopmentExpense"
+          },
+          {
+            "period": "Q2-2018",
+            "value": 2.4,
+            "available_at": "2018-08-08",
+            "source_ids": [
+              "0001558370-18-006756"
+            ],
+            "status": "derived",
+            "formula": "-(OperatingIncomeLoss) - ResearchAndDevelopmentExpense"
+          },
+          {
+            "period": "Q3-2018",
+            "value": 2.2,
+            "available_at": "2018-11-09",
+            "source_ids": [
+              "0001558370-18-009181"
+            ],
+            "status": "derived",
+            "formula": "-(OperatingIncomeLoss) - ResearchAndDevelopmentExpense"
+          },
+          {
+            "period": "Q1-2019",
+            "value": 2.8,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "derived",
+            "formula": "-(OperatingIncomeLoss) - ResearchAndDevelopmentExpense"
+          },
+          {
+            "period": "Q2-2019",
+            "value": 2.4,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "derived",
+            "formula": "-(OperatingIncomeLoss) - ResearchAndDevelopmentExpense"
+          },
+          {
+            "period": "Q3-2019",
+            "value": 3.1,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "derived",
+            "formula": "-(OperatingIncomeLoss) - ResearchAndDevelopmentExpense"
+          }
+        ]
+      },
+      {
+        "row": "Net loss",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": -28.9,
+            "available_at": "2018-03-07",
+            "source_ids": [
+              "0001558370-18-001639"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": -31.0,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2018",
+            "value": -4.8,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001558370-18-004333"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2018",
+            "value": -8.3,
+            "available_at": "2018-08-08",
+            "source_ids": [
+              "0001558370-18-006756"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2018",
+            "value": -8.3,
+            "available_at": "2018-11-09",
+            "source_ids": [
+              "0001558370-18-009181"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2019",
+            "value": -10.6,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2019",
+            "value": -13.8,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2019",
+            "value": -19.1,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total assets",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 35.6,
+            "available_at": "2018-03-07",
+            "source_ids": [
+              "0001558370-18-001639"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 15.4,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2019",
+            "value": 43.9,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2019",
+            "value": 54.8,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2019",
+            "value": 44.4,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total liabilities",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2018",
+            "value": 14.4,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2019",
+            "value": 26.5,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2019",
+            "value": 30.5,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2019",
+            "value": 37.6,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Stockholders' equity",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2018",
+            "value": 0.9,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2019",
+            "value": 17.4,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2019",
+            "value": 24.3,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2019",
+            "value": 6.8,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net cash used in operating activities (year-to-date)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2018",
+            "value": -30.1,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2019 YTD",
+            "value": -9.5,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2019 YTD",
+            "value": -18.2,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2019 YTD",
+            "value": -28.8,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net cash provided by financing activities (year-to-date)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2018",
+            "value": 10.0,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2019 YTD",
+            "value": 38.2,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2019 YTD",
+            "value": 58.0,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2019 YTD",
+            "value": 58.5,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Common shares outstanding (period end)",
+        "unit": "millions_of_shares",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 25.5,
+            "available_at": "2018-03-07",
+            "source_ids": [
+              "0001558370-18-001639"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 30.1,
+            "available_at": "2019-03-15",
+            "source_ids": [
+              "0001558370-19-002068"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1-2019",
+            "value": 33.3,
+            "available_at": "2019-05-09",
+            "source_ids": [
+              "0001558370-19-004564"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2-2019",
+            "value": 34.3,
+            "available_at": "2019-08-08",
+            "source_ids": [
+              "0001558370-19-007735"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3-2019",
+            "value": 34.5,
+            "available_at": "2019-11-07",
+            "source_ids": [
+              "axsm-10q-q3-2019"
+            ],
+            "status": "reported"
+          }
+        ]
+      }
+    ]
+  },
+  "what_changed": [
+    {
+      "date": "2019-12-16",
+      "fact": "AXS-05 met its primary endpoint versus placebo in the pivotal Phase 3 GEMINI trial for major depressive disorder [c1].",
+      "relationship_to_business": "GEMINI is the second positive well-controlled trial of Axsome's lead drug candidate and is the trigger for the company's planned NDA filing.",
+      "source_ids": [
+        "axsm-pr-1"
+      ],
+      "status": "reported"
+    },
+    {
+      "date": "2019-11-07",
+      "fact": "Q3 cash was $43.6 million, down from $53.8 million at the end of Q2 2019; five other ongoing clinical trials had updated expected readout windows [c9][c8].",
+      "relationship_to_business": "Sets the pre-catalyst cash position and lists near-term milestones (STRIDE-1, ADVANCE-1, two AXS-07 trials, AXS-12) that remain outstanding.",
+      "source_ids": [
+        "axsm-q3-2019"
+      ],
+      "status": "reported"
+    },
+    {
+      "date": "2019-03",
+      "fact": "The FDA granted AXS-05 Breakthrough Therapy designation for major depressive disorder [c6].",
+      "relationship_to_business": "This designation is intended to speed FDA interaction for drugs showing preliminary evidence of substantial improvement over available therapy, and underlies the company's expectation for the pace of an eventual NDA review.",
+      "source_ids": [
+        "axsm-pr-1"
+      ],
+      "status": "reported"
+    }
+  ],
+  "sector_evidence": {
+    "existing_products": "none",
+    "programs": [
+      {
+        "program": "AXS-05 in major depressive disorder (MDD)",
+        "drug_mechanism": "AXS-05: a combination tablet of dextromethorphan (an NMDA-receptor blocker, a mechanism different from standard antidepressants) and bupropion (which raises dextromethorphan's blood levels); taken by mouth.",
+        "phase": "Phase 3 (pivotal); topline reported",
+        "ownership": "Wholly owned by Axsome; worldwide rights",
+        "trial_id": "GEMINI (company study name; ClinicalTrials.gov identifier not independently verified before cutoff, see missing_data)",
+        "design": "Randomized, double-blind, placebo-controlled, multicenter, U.S. trial [c2].",
+        "sample_size": {
+          "planned": null,
+          "randomized": 327,
+          "analyzed": "163 AXS-05 / 164 placebo randomized"
+        },
+        "population": "Adults with confirmed moderate-to-severe MDD",
+        "primary_endpoint": "Change from baseline in MADRS total score (a 10-item clinician-rated depression severity scale) at Week 6",
+        "secondary_endpoints": "MADRS change at Weeks 1-2, remission, response, CGI-I/CGI-S, PGI-I, MADRS-6, Sheehan Disability Scale, quality of life (Q-LES-Q-SF), safety",
+        "latest_evidence": "Met primary endpoint: MADRS reduction 16.6 vs 11.9 points (p=0.002); all secondary endpoints significant at Week 6; effect visible from Week 1 [c1][c3][c4]",
+        "safety": "Well tolerated; dizziness, nausea, headache, diarrhea, somnolence, dry mouth most common; 1 unrelated SAE; no psychotomimetic effects or weight gain [c5]",
+        "management_says_vs_regulator": "Management says GEMINI plus the earlier ASCEND trial are sufficient to support an NDA submission and that AXS-05 holds FDA Breakthrough Therapy designation for MDD; no public FDA statement committing to approval is in this packet -- designation and future NDA acceptance/review are separate events [c6].",
+        "next_milestone": "NDA filing anticipated second half of 2020 (announced 2019-12-16) [c6]",
+        "economic_relevance": "No approved products or product sales exist; AXS-05 in MDD is the company's most advanced program and the basis for the cutoff-date news."
+      },
+      {
+        "program": "AXS-05 in treatment-resistant depression (TRD)",
+        "drug_mechanism": "Same AXS-05 combination as above, in patients who failed two or more prior antidepressant treatments",
+        "phase": "Phase 3, ongoing (not yet read out)",
+        "ownership": "Wholly owned by Axsome",
+        "trial_id": "STRIDE-1 (company study name)",
+        "design": "Not detailed in the cutoff-eligible sources beyond 'Phase 3 trial'",
+        "sample_size": {
+          "planned": null,
+          "enrolled": "screening concluding November 2019",
+          "analyzed": null
+        },
+        "population": "Adults with MDD who failed two or more antidepressant therapies",
+        "primary_endpoint": "Not detailed in eligible sources",
+        "secondary_endpoints": "Not detailed in eligible sources",
+        "latest_evidence": "No readout yet; FDA Fast Track designation granted for this indication [c7]",
+        "safety": "Not applicable (no results yet)",
+        "management_says_vs_regulator": "Management states topline results are expected Q1 2020; this is a company timing estimate, not a regulator statement [c8]",
+        "next_milestone": "Topline results expected first quarter of 2020 (announced 2019-11-07) [c8]",
+        "economic_relevance": "Second value driver behind the MDD indication for the same drug; no separate economics disclosed"
+      },
+      {
+        "program": "AXS-05 in Alzheimer's disease agitation",
+        "drug_mechanism": "Same AXS-05 combination, tested in agitation associated with Alzheimer's disease",
+        "phase": "Phase 2/3, ongoing (not yet read out)",
+        "ownership": "Wholly owned by Axsome",
+        "trial_id": "ADVANCE-1 (company study name)",
+        "design": "Phase 2/3; the bupropion-monotherapy comparison arm was proposed to be discontinued on an independent data monitoring committee recommendation, with FDA agreement to that change not yet confirmed as of the cutoff [c12]",
+        "sample_size": {
+          "planned": null,
+          "enrolled": "approximately 70% enrolled as of 2019-11-07",
+          "analyzed": null
+        },
+        "population": "Patients with Alzheimer's disease and agitation",
+        "primary_endpoint": "Not detailed in eligible sources",
+        "secondary_endpoints": "Not detailed in eligible sources",
+        "latest_evidence": "No readout yet; FDA Fast Track designation granted for this indication [c7]",
+        "safety": "A trial-design change (dropping the bupropion-monotherapy arm) was proposed on safety/data-monitoring grounds; no new efficacy or safety readout [c12]",
+        "management_says_vs_regulator": "Company disclosure flags that FDA's agreement to the arm change is a risk factor, i.e. not yet a confirmed regulatory position [c12]",
+        "next_milestone": "Topline data expected first half of 2020 (announced 2019-11-07) [c8]",
+        "economic_relevance": "Third indication for the same lead compound; no separate economics disclosed"
+      },
+      {
+        "program": "AXS-07 in acute migraine",
+        "drug_mechanism": "AXS-07: a combination of meloxicam (an anti-inflammatory) and rizatriptan (a triptan used for migraine), using Axsome's metabolic-inhibition technology",
+        "phase": "Phase 3, two trials ongoing (not yet read out)",
+        "ownership": "Wholly owned by Axsome",
+        "trial_id": "MOMENTUM and INTERCEPT (company study names)",
+        "design": "Phase 3 trials; design details beyond 'Phase 3' not in eligible sources",
+        "sample_size": {
+          "planned": null,
+          "enrolled": "MOMENTUM enrollment complete; INTERCEPT initiated October 2019",
+          "analyzed": null
+        },
+        "population": "Patients with acute migraine",
+        "primary_endpoint": "Not detailed in eligible sources",
+        "secondary_endpoints": "Not detailed in eligible sources",
+        "latest_evidence": "No readout yet",
+        "safety": "Not applicable (no results yet)",
+        "management_says_vs_regulator": "Company timing estimates only; no regulator statement in this packet [c8]",
+        "next_milestone": "MOMENTUM topline expected Q4 2019; INTERCEPT topline expected Q1 2020 (announced 2019-11-07) [c8]",
+        "economic_relevance": "Company's second lead program outside CNS/depression; targeted second potential NDA filing in H2 2020 alongside AXS-05 for MDD [c8]"
+      },
+      {
+        "program": "AXS-12 in narcolepsy",
+        "drug_mechanism": "AXS-12: reboxetine, a norepinephrine reuptake inhibitor, being repurposed for narcolepsy",
+        "phase": "Phase 2, ongoing (not yet read out)",
+        "ownership": "Wholly owned by Axsome",
+        "trial_id": "CONCERT (company study name)",
+        "design": "Phase 2 trial; design details beyond 'Phase 2' not in eligible sources",
+        "sample_size": {
+          "planned": null,
+          "enrolled": "enrollment complete as of 2019-11-07",
+          "analyzed": null
+        },
+        "population": "Patients with narcolepsy",
+        "primary_endpoint": "Not detailed in eligible sources",
+        "secondary_endpoints": "Not detailed in eligible sources",
+        "latest_evidence": "No readout yet",
+        "safety": "Not applicable (no results yet)",
+        "management_says_vs_regulator": "Company timing estimate only [c8]",
+        "next_milestone": "Topline data expected Q4 2019 (announced 2019-11-07) [c8]",
+        "economic_relevance": "Smallest and earliest-stage of the four disclosed programs; no separate economics disclosed"
+      }
+    ]
+  },
+  "upcoming_and_unresolved": {
+    "catalysts": [
+      {
+        "description": "AXS-05 NDA filing for MDD",
+        "timing_window": "second half of 2020",
+        "announced_on": "2019-12-16",
+        "source_ids": [
+          "axsm-pr-1"
+        ]
+      },
+      {
+        "description": "STRIDE-1 (AXS-05, treatment-resistant depression) topline",
+        "timing_window": "first quarter of 2020",
+        "announced_on": "2019-11-07",
+        "source_ids": [
+          "axsm-q3-2019"
+        ]
+      },
+      {
+        "description": "ADVANCE-1 (AXS-05, Alzheimer's agitation) topline",
+        "timing_window": "first half of 2020",
+        "announced_on": "2019-11-07",
+        "source_ids": [
+          "axsm-q3-2019"
+        ]
+      },
+      {
+        "description": "AXS-07 MOMENTUM (migraine) topline",
+        "timing_window": "fourth quarter of 2019",
+        "announced_on": "2019-11-07",
+        "source_ids": [
+          "axsm-q3-2019"
+        ]
+      },
+      {
+        "description": "AXS-07 INTERCEPT (migraine) topline",
+        "timing_window": "first quarter of 2020",
+        "announced_on": "2019-11-07",
+        "source_ids": [
+          "axsm-q3-2019"
+        ]
+      },
+      {
+        "description": "AXS-12 CONCERT (narcolepsy) topline",
+        "timing_window": "fourth quarter of 2019",
+        "announced_on": "2019-11-07",
+        "source_ids": [
+          "axsm-q3-2019"
+        ]
+      }
+    ],
+    "unresolved_questions": [
+      "Will the FDA accept the ASCEND-plus-GEMINI package as sufficient support for an AXS-05 NDA in MDD without further studies?",
+      "Will the pending STRIDE-1, ADVANCE-1, AXS-07 and AXS-12 readouts due over the next two quarters replicate GEMINI's pattern or add new risk?",
+      "Is the current cash position, plus management's plan not to raise new equity before its Phase 3 readouts, enough to fund operations through the anticipated NDA filing?"
+    ]
+  },
+  "macro_context": [],
+  "help_me_weigh": {
+    "own": [
+      "GEMINI is the second positive well-controlled Phase 3 trial of AXS-05 in MDD, following ASCEND, which the company says is sufficient to support an NDA filing anticipated in the second half of 2020 [c1][c6].",
+      "AXS-05 already holds FDA Breakthrough Therapy designation for MDD, granted in March 2019, a status meant to speed agency interaction [c6].",
+      "The effect was consistent and rapid: statistically significant improvement over placebo appeared at Week 1 and was significant on every measured secondary endpoint at Week 6, with a tolerability profile that included no reported psychotomimetic effects or weight gain [c3][c4][c5].",
+      "Management states it does not anticipate needing new equity financing before its Phase 3 readouts, and four more pivotal or Phase 2 readouts (STRIDE-1, ADVANCE-1, AXS-07 x2, AXS-12) are expected within the next two quarters, giving several near-term catalysts beyond MDD alone [c9][c8]."
+    ],
+    "flat": [
+      "AXS-05 remains unapproved; no NDA has been filed and no FDA-approved product exists to generate revenue yet [c6].",
+      "Cash fell to $43.6 million at September 30, 2019 from $53.8 million three months earlier, and this packet's own scenario calculation implies roughly 4.5 quarters of funding at the recent burn rate -- shorter than management's own 'into Q2 2021' estimate [c9][c11c].",
+      "Four additional trial readouts are due within about two quarters, each an independent event with its own binary risk in either direction [c8]."
+    ],
+    "short": [
+      "The company's own risk disclosure flags that FDA agreement to a mid-trial design change in ADVANCE-1 (dropping the bupropion-monotherapy arm on a data monitoring committee's recommendation) was not yet confirmed as of the filing -- a specific, disclosed source of regulatory uncertainty in one pipeline program [c12].",
+      "Net cash used in operating activities over the first nine months of 2019 was about $28.8 million against a cash balance built mainly through financing activities ($58.5 million raised over the same nine months), underscoring dependence on continued capital-markets access for a pre-revenue company [c10].",
+      "Management's characterization that the two-trial package 'is sufficient to support submission' of an NDA is the company's own assessment; no public FDA statement committing to accept or approve on that basis is present in this packet [c6]."
+    ]
+  },
+  "source_handles": [
+    {
+      "id": "axsm-pr-1",
+      "kind": "8-K",
+      "title": "Axsome Therapeutics Announces AXS-05 Achieves Primary Endpoint in GEMINI Phase 3 Trial in Major Depressive Disorder",
+      "available_at": "2019-12-16",
+      "masked_title": "Company press release (Exhibit 99.1 to Form 8-K), 16 Dec 2019"
+    },
+    {
+      "id": "axsm-slides-1",
+      "kind": "other",
+      "title": "GEMINI Topline Results Conference Call slides",
+      "available_at": "2019-12-16",
+      "masked_title": "Company investor presentation (Exhibit 99.2 to Form 8-K), 16 Dec 2019"
+    },
+    {
+      "id": "axsm-q3-2019",
+      "kind": "press_release",
+      "title": "Axsome Therapeutics Reports Third Quarter 2019 Financial Results and Provides Business Update",
+      "available_at": "2019-11-07",
+      "masked_title": "Company press release, 7 Nov 2019"
+    },
+    {
+      "id": "axsm-10q-q3-2019",
+      "kind": "10-Q",
+      "title": "Form 10-Q for the quarter ended September 30, 2019",
+      "available_at": "2019-11-07",
+      "masked_title": "Company quarterly report (Form 10-Q), 7 Nov 2019"
+    },
+    {
+      "id": "0001558370-19-002068",
+      "kind": "10-K",
+      "title": "Form 10-K for fiscal year 2018",
+      "available_at": "2019-03-15",
+      "masked_title": "Company annual report (Form 10-K), 15 Mar 2019"
+    },
+    {
+      "id": "0001558370-18-001639",
+      "kind": "10-K",
+      "title": "Form 10-K for fiscal year 2017",
+      "available_at": "2018-03-07",
+      "masked_title": "Company annual report (Form 10-K), 7 Mar 2018"
+    }
+  ],
+  "missing_data": [
+    "Market capitalization and enterprise value: missing, historical share price not in the evidence packet.",
+    "ClinicalTrials.gov registry identifiers for GEMINI, ASCEND, STRIDE-1 and ADVANCE-1: not independently verified before the cutoff (registry page did not render via WebFetch); omitted rather than guessed.",
+    "Detailed trial designs (randomization ratio, blinding, sample sizes, endpoints) for STRIDE-1, ADVANCE-1, AXS-07 (MOMENTUM/INTERCEPT) and AXS-12 (CONCERT): not disclosed in the two eligible press releases beyond phase, enrollment status and expected readout timing.",
+    "ASCEND trial's own effect-size, confidence-interval and p-value detail: not in this packet; referenced only via GEMINI release's description of it as a previously completed positive trial.",
+    "Contractual maturity schedule for the $19.8 million of long-term debt at September 30, 2019: only the current/noncurrent balance-sheet split is available, not a maturity table.",
+    "Employee count and G&A expense as a separately tagged (non-derived) figure: not available in xbrl-facts.json for this issuer."
+  ],
+  "editorial_notes": "Per the editor correction recorded in research/MVP_PROMPT.md, the trial referenced alongside GEMINI as AXS-05's other positive pivotal study is ASCEND, not STRIDE-1; STRIDE-1 (treatment-resistant depression) was still ongoing as of the cutoff and is treated here as an unresolved pipeline item, not a completed trial. The 'General and administrative expense' history row is derived (operating loss minus R&D expense) because xbrl-facts.json for this issuer does not include a separately tagged G&A fact; a reviewer should sanity-check that no other operating-expense line exists in the source filings. All headline and history figures were cross-checked between cases/clinical-axsm-2019/xbrl-facts.json and the actual Form 10-Q text and matched exactly. Self-check per cases/BRIEF.md step 4: the only years exceeding the cutoff year (2019) that appear anywhere in this packet are 2020 and 2021, and every instance is an already-disclosed, cited forward-looking timing window (e.g. 'NDA filing anticipated in the second half of 2020' [c6]; catalyst windows in upcoming_and_unresolved.catalysts; management's own cash-runway statement 'into the second quarter of 2021' [c9]) or a scenario/derived calculation built only from pre-cutoff data (e.g. the funding-runway scenario). No post-cutoff actual outcome, price, or event is referenced anywhere in this packet."
+}

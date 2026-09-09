@@ -1,0 +1,8 @@
+{
+  "ticker": "GILD",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GILD?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:24.379574+00:00",
+  "sha256": "11d17a43fb1837cf82a5f35a3e644cc61b6a4b86c2aeab3ceaf5afcb9ebfbc1c",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

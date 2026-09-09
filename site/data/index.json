@@ -1,0 +1,145 @@
+{
+ "built_at": "2026-09-09T20:05:23.407654+00:00",
+ "cases": [
+  {
+   "id": "5d6cb2d76f",
+   "cutoff": "2022-03-02T09:00:00-05:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 1
+   },
+   "sector_hint": "energy",
+   "status": "sheet_ready",
+   "alias": "a solar-panel manufacturer",
+   "sector": "Solar equipment manufacturing (renewable energy / industrials)",
+   "title": "A solar panel manufacturer guides next-year earnings sharply lower than the year just reported",
+   "setup": "A headline reports bad news."
+  },
+  {
+   "id": "4219766e75",
+   "cutoff": "2023-02-03T09:00:00-05:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 1
+   },
+   "sector_hint": "consumer staples",
+   "status": "sheet_ready",
+   "alias": "a US chocolate, confectionery and salty-snack manufacturer",
+   "sector": "Consumer staples (packaged confectionery and snack foods)",
+   "title": "A confectionery company reports strong pricing-driven growth and guides for continued but slower expansion",
+   "setup": "A familiar product catches your attention."
+  },
+  {
+   "id": "fba30037c0",
+   "cutoff": "2019-12-17T09:00:00-05:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 1
+   },
+   "sector_hint": "biotech",
+   "status": "sheet_ready",
+   "alias": "a clinical-stage CNS drug developer",
+   "sector": "Biotechnology (central nervous system)",
+   "title": "A small depression-drug developer reports its first pivotal Phase 3 result",
+   "setup": "A friend sends you a stock tip."
+  },
+  {
+   "id": "9747afb19f",
+   "cutoff": "2020-08-24T09:00:00-04:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 3
+   },
+   "sector_hint": "industrials",
+   "status": "sheet_ready",
+   "alias": "a large agricultural, construction and forestry equipment manufacturer",
+   "sector": "Industrials (agricultural and construction/forestry equipment manufacturing)",
+   "title": "An agricultural and construction equipment maker reports a sales decline alongside a restructuring plan",
+   "setup": "A headline reports bad news."
+  },
+  {
+   "id": "050a03b08f",
+   "cutoff": "2021-03-03T09:00:00-05:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 3
+   },
+   "sector_hint": "retail",
+   "status": "sheet_ready",
+   "alias": "a large US general-merchandise discount retailer",
+   "sector": "Consumer discretionary (general-merchandise / big-box retail)",
+   "title": "A big-box retailer reports a pandemic-year sales surge but declines to give forward guidance",
+   "setup": "Two analysts disagree after earnings."
+  },
+  {
+   "id": "04b88176e1",
+   "cutoff": "2021-01-08T09:00:00-05:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 3
+   },
+   "sector_hint": "biotech",
+   "status": "sheet_ready",
+   "alias": "a commercial-stage muscular dystrophy drug developer",
+   "sector": "Biotechnology (rare genetic neuromuscular disease)",
+   "title": "A gene therapy hits its biological target but misses the functional goal in a placebo-controlled trial",
+   "setup": "A headline reports bad news."
+  },
+  {
+   "id": "5e3e9193b7",
+   "cutoff": "2019-01-16T09:00:00-05:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 5
+   },
+   "sector_hint": "finance",
+   "status": "sheet_ready",
+   "alias": "the largest bank in a G7 country, by total assets",
+   "sector": "Diversified banking and financial services",
+   "title": "A large bank reports record annual profit at the end of a rate-hiking cycle amid a volatile quarter for markets",
+   "setup": "Two analysts disagree after earnings."
+  },
+  {
+   "id": "80222fdef8",
+   "cutoff": "2019-02-05T09:00:00-05:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 5
+   },
+   "sector_hint": "pharma",
+   "status": "sheet_ready",
+   "alias": "a large, cash-generative virology-focused biopharmaceutical company",
+   "sector": "Biotechnology / pharmaceuticals (HIV and hepatitis C antivirals, with an oncology cell-therapy business)",
+   "title": "An HIV/HCV giant closes out the year with a new launch ramping",
+   "setup": "A friend tells you to stay away."
+  },
+  {
+   "id": "b126872cae",
+   "cutoff": "2018-11-13T09:00:00-05:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 5
+   },
+   "sector_hint": "biotech",
+   "status": "sheet_ready",
+   "alias": "a clinical-stage liver-disease drug developer",
+   "sector": "Biotechnology (metabolic and liver disease)",
+   "title": "A small-cap presents positive Phase 2 liver-disease data in a high-profile conference plenary session",
+   "setup": "A friend sends you a stock tip."
+  },
+  {
+   "id": "146743bdc9",
+   "cutoff": "2018-02-15T09:00:00-05:00",
+   "horizon": {
+    "unit": "calendar_years",
+    "count": 5
+   },
+   "sector_hint": "biotech",
+   "status": "sheet_ready",
+   "alias": "a biopharmaceutical company earning royalties from partnered approved drugs while developing its own pipeline",
+   "sector": "Biotechnology (diversified: cancer immunotherapy, immune disease, chronic pain)",
+   "title": "A mid-cap biotech signs a multibillion-dollar oncology partnership with a major pharma",
+   "setup": "A friend sends you a stock tip."
+  }
+ ]
+}

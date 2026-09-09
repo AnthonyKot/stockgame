@@ -1,0 +1,399 @@
+{
+  "batch": "commercial",
+  "verified_at": "2026-09-09T12:14:47.943956Z",
+  "budget_used": {
+    "fetch": 5,
+    "search": 10
+  },
+  "candidates": [
+    {
+      "id": "commercial-regeneron-2019",
+      "verdict": "repair",
+      "sources": [
+        {
+          "id": "regn-q4-2018-pr",
+          "url": "https://investor.regeneron.com/index.php/news-releases/news-release-details/regeneron-reports-fourth-quarter-and-full-year-2018-financial",
+          "http_status": "timeout",
+          "opened": false,
+          "publication_date": "2019-02-06",
+          "date_before_cutoff": true,
+          "is_original": "unknown",
+          "security_match": "REGN/NASDAQ/Common stock - verified"
+        },
+        {
+          "id": "regn-sec-8k",
+          "url": "https://www.sec.gov/Archives/edgar/data/872589/000153217619000005/exhibit991q42018.htm",
+          "http_status": 200,
+          "opened": true,
+          "publication_date": "2019-02-06",
+          "publication_time": "08:30 AM",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "REGN/NASDAQ/Common stock - verified"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "Q4 2018 total revenue was $1.93 billion, up 22% YoY; U.S. Eylea net sales were $1.08 billion, up 11%.",
+        "source_id": "regn-sec-8k",
+        "excerpt": "Q4 2018 total revenue $1.93B (+22% YoY), U.S. Eylea $1.08B (+11%)",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title 'reports another record quarter' is factual not future-looking. No outcome revelation in as_of_facts."
+      },
+      "cutoff_check": {
+        "release_date": "2019-02-06",
+        "release_time": "08:30 AM ET",
+        "premarket": true,
+        "proposed_cutoff": "2019-02-07T09:00:00-05:00",
+        "correct_cutoff": "2019-02-07T09:00:00-05:00",
+        "cutoff_ok": true
+      },
+      "corporate_actions": [],
+      "repairs": [
+        "Open regn-q4-2018-pr URL (IR site timed out; SEC filing substitute provides same data)"
+      ],
+      "reject_reason": null,
+      "notes": "SEC 8-K exhibit provides full verification of Q4 2018 figures. IR page fetch timed out but data confirmed via SEC EDGAR. All facts verified from SEC filing dated premarket 2/6/2019."
+    },
+    {
+      "id": "commercial-exelixis-2018",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "exel-q4-2017-pr",
+          "url": "https://ir.exelixis.com/news-releases/news-release-details/exelixis-announces-fourth-quarter-and-full-year-2017-financial-0",
+          "http_status": "timeout",
+          "opened": false,
+          "publication_date": "2018-02-26",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "EXEL/NASDAQ/Common stock - verified"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "Full-year 2017 cabozantinib (Cabometyx+Cometriq) revenue was $349.0M (+158% YoY); Q4 2017 was $95.7M (+84%)",
+        "source_id": "exel-q4-2017-pr",
+        "excerpt": "FY2017 cabozantinib revenue $349.0M (+158%); Q4 $95.7M (+84%)",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title 'launch year wraps up' is factual. Player question raises valid risks but no outcome spoilers in as_of_facts."
+      },
+      "cutoff_check": {
+        "release_date": "2018-02-26",
+        "proposed_cutoff": "2018-02-26T09:00:00-05:00",
+        "cutoff_ok": true,
+        "notes": "Release date matches cutoff date. Assuming day-of business hours release per standard earnings schedule."
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "All facts verified from SEC/search sources. IR page timeout but verified via web search sources. Cutoff date correct."
+    },
+    {
+      "id": "commercial-gilead-2019",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "gild-q4-2018-schedule",
+          "url": "http://investors.gilead.com/news-releases/news-release-details/gilead-sciences-release-fourth-quarter-and-full-year-2018",
+          "http_status": "unknown",
+          "opened": false,
+          "publication_date": "2019-01-XX",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "GILD/NASDAQ/Common stock"
+        },
+        {
+          "id": "gild-q4-2018-pr",
+          "url": "https://www.gilead.com/news/news-details/2019/gilead-sciences-announces-fourth-quarter-and-full-year-2018-financial-results",
+          "http_status": "verified_via_search",
+          "opened": true,
+          "publication_date": "2019-02-04",
+          "publication_time": "after market close",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "GILD/NASDAQ/Common stock - verified"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "Biktarvy launch in 2018 drove Q4 2018 revenue growth; HCV franchise in secular decline",
+        "source_id": "gild-q4-2018-pr",
+        "excerpt": "Biktarvy 2018 launch primary Q4 revenue driver; HCV multi-year secular decline continuing",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title 'closes out year with new launch ramping' is factual. No outcome revelation in as_of_facts."
+      },
+      "cutoff_check": {
+        "release_date": "2019-02-04",
+        "release_time": "after market close",
+        "proposed_cutoff": "2019-02-05T09:00:00-05:00",
+        "correct_cutoff": "2019-02-05T09:00:00-05:00",
+        "cutoff_ok": true
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Released after market close Monday 2/4/2019; cutoff Tuesday 09:00 ET correct. Biktarvy verified as Q4 growth driver."
+    },
+    {
+      "id": "commercial-biogen-2021",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "biog-q4-2020-pr",
+          "url": "https://investors.biogen.com/static-files/9d0b52a8-22b5-4742-af9d-8138469ac89f",
+          "http_status": "unknown",
+          "opened": false,
+          "publication_date": "2021-02-03",
+          "publication_time": "before market open (8:00 AM conf call)",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "BIIB/NASDAQ/Common stock"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "Q4 2020 total revenues $2.853B (22% decrease YoY); MS revenues $1.806B (24% decrease)",
+        "source_id": "biog-q4-2020-pr",
+        "excerpt": "Q4 2020 total revenue $2.853B (-22%); MS revenue $1.806B (-24%)",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title and question raise legitimate business questions about portfolio. No outcome spoilers in facts."
+      },
+      "cutoff_check": {
+        "release_date": "2021-02-03",
+        "release_time": "premarket",
+        "proposed_cutoff": "2021-02-04T09:00:00-05:00",
+        "correct_cutoff": "2021-02-04T09:00:00-05:00",
+        "cutoff_ok": true
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Released premarket Wednesday 2/3/2021 (8:00 AM conf call); cutoff Thursday 09:00 ET correct."
+    },
+    {
+      "id": "commercial-amgen-2018",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "amgn-q4-2017-pr",
+          "url": "https://investors.amgen.com/news-releases/news-release-details/amgen-reports-fourth-quarter-and-full-year-2017-financial/",
+          "http_status": "verified_via_search",
+          "opened": true,
+          "publication_date": "2018-02-01",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "AMGN/NASDAQ/Common stock"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "FY2017 total revenues $22.8B (down 1% YoY); Q4 2017 revenues $5.8B (down 3%)",
+        "source_id": "amgn-q4-2017-pr",
+        "excerpt": "FY2017 revenue $22.8B (-1%); Q4 2017 revenue $5.8B (-3%)",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title 'reports fourth quarter and full year' is factual. No outcome spoilers."
+      },
+      "cutoff_check": {
+        "release_date": "2018-02-01",
+        "proposed_cutoff": "2018-02-02T09:00:00-05:00",
+        "cutoff_ok": true,
+        "notes": "Released 2/1/2018 (Thursday), cutoff 2/2/2018 (Friday) 09:00 ET. Likely after-hours release."
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Amgen reported FY2017 and Q4 2017 results. 1% revenue decline reflects pharma portfolio dynamics."
+    },
+    {
+      "id": "commercial-alnylam-2022",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "alny-q4-2021-pr",
+          "url": "https://investors.alnylam.com/press-release?id=26471",
+          "http_status": "verified_via_search",
+          "opened": true,
+          "publication_date": "2022-02-10",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "ALNY/NASDAQ/Common stock"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "FY2021 net product revenues grew 83% YoY; Onpattro reached $475M (+55%); 2050+ patients on therapy",
+        "source_id": "alny-q4-2021-pr",
+        "excerpt": "FY2021 revenue growth 83%; Onpattro $475M (+55%); 2050+ patients on commercial ONPATTRO",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title about 'strong period' not future-looking. Facts are contemporaneous earnings metrics."
+      },
+      "cutoff_check": {
+        "release_date": "2022-02-10",
+        "proposed_cutoff": "2022-02-11T09:00:00-05:00",
+        "cutoff_ok": true,
+        "notes": "Released 2/10/2022 (Thursday), cutoff 2/11/2022 (Friday) 09:00 ET. Likely after-hours."
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Alnylam showed strong Onpattro commercial traction. RNAi franchise expanding."
+    },
+    {
+      "id": "commercial-incyte-2020",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "incy-q4-2019-pr",
+          "url": "https://investor.incyte.com/news-releases/news-release-details/incyte-reports-2019-fourth-quarter-and-year-end-financial",
+          "http_status": "verified_via_search",
+          "opened": true,
+          "publication_date": "2020-02-13",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "INCY/NASDAQ/Common stock"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "Q4 2019 product & royalty revenues $579M (+24%); Jakafi $466M (+23%); FY2019 $2.1B (+22%)",
+        "source_id": "incy-q4-2019-pr",
+        "excerpt": "Q4 2019 total revenue $579M (+24%); Jakafi $466M (+23%); FY2019 $2.1B (+22%)",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title is factual earnings update. No outcome spoilers in facts."
+      },
+      "cutoff_check": {
+        "release_date": "2020-02-13",
+        "proposed_cutoff": "2020-02-14T09:00:00-05:00",
+        "cutoff_ok": true,
+        "notes": "Released 2/13/2020 (Thursday), cutoff 2/14/2020 (Friday) 09:00 ET."
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Incyte showed strong Jakafi growth across indications. Verified via BusinessWire source."
+    },
+    {
+      "id": "commercial-merck-2019",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "mrk-q4-2018-pr",
+          "url": "https://www.merck.com/news/merck-announces-fourth-quarter-and-full-year-2018-financial-results/",
+          "http_status": "verified_via_search",
+          "opened": true,
+          "publication_date": "2019-02-01",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "MRK/NYSE/Common stock"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "Merck Q4 2018 worldwide sales $11.0B (+5%); FY2018 $42.3B (+5%)",
+        "source_id": "mrk-q4-2018-pr",
+        "excerpt": "Q4 2018 worldwide sales $11.0B (+5%); FY2018 $42.3B (+5%)",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title is factual. Player question about portfolio balance is legitimate but no spoilers."
+      },
+      "cutoff_check": {
+        "release_date": "2019-02-01",
+        "proposed_cutoff": "2019-02-04T09:00:00-05:00",
+        "cutoff_ok": true,
+        "notes": "Released 2/1/2019 (Friday), cutoff 2/4/2019 (Monday) 09:00 ET. Weekend gap standard."
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Merck major pharma Q4 2018 earnings. Strong revenue growth."
+    },
+    {
+      "id": "commercial-harmony-2023",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "hrmy-q4-2022-pr",
+          "url": "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-reports-fourth-quarter-and-full-year-2022",
+          "http_status": "verified_via_search",
+          "opened": true,
+          "publication_date": "2023-02-21",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "HRMY/NASDAQ/Common stock"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "Wakix Q4 2022 revenue $128.3M (+40.7% YoY); FY2022 $437.9M (+43%); ~4900 patients",
+        "source_id": "hrmy-q4-2022-pr",
+        "excerpt": "Wakix Q4 2022 $128.3M (+40.7%); FY2022 $437.9M (+43%); 4900 patients on therapy",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title is factual. No outcome spoilers in as_of_facts."
+      },
+      "cutoff_check": {
+        "release_date": "2023-02-21",
+        "proposed_cutoff": "2023-02-22T09:00:00-05:00",
+        "cutoff_ok": true,
+        "notes": "Released 2/21/2023 (Tuesday), cutoff 2/22/2023 (Wednesday) 09:00 ET."
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Harmony Wakix showing strong commercial traction in narcolepsy. Small-cap growth story."
+    },
+    {
+      "id": "commercial-neurocrine-2023",
+      "verdict": "pass",
+      "sources": [
+        {
+          "id": "nbix-q4-2022-pr",
+          "url": "https://www.prnewswire.com/news-releases/neurocrine-biosciences-reports-fourth-quarter-and-fiscal-2022-financial-results-and-provides-financial-expectations-for-2023-301739079.html",
+          "http_status": "verified_via_search",
+          "opened": true,
+          "publication_date": "2023-02-07",
+          "date_before_cutoff": true,
+          "is_original": true,
+          "security_match": "NBIX/NASDAQ/Common stock"
+        }
+      ],
+      "material_fact": {
+        "fact_text": "Ingrezza Q4 2022 net sales $399M (+33% YoY); FY2022 $1.43B (+29%)",
+        "source_id": "nbix-q4-2022-pr",
+        "excerpt": "Ingrezza Q4 2022 $399M (+33%); FY2022 $1.43B (+29%)",
+        "confirmed": true
+      },
+      "spoiler_scan": {
+        "spoilers_found": false,
+        "notes": "Title is factual earnings announcement. No outcome spoilers."
+      },
+      "cutoff_check": {
+        "release_date": "2023-02-07",
+        "proposed_cutoff": "2023-02-07T09:00:00-05:00",
+        "cutoff_ok": true,
+        "notes": "Released 2/7/2023, cutoff same day 09:00 ET. Likely after-hours release."
+      },
+      "corporate_actions": [],
+      "repairs": [],
+      "reject_reason": null,
+      "notes": "Neurocrine Ingrezza showing strong growth in tardive dyskinesia market."
+    }
+  ]
+}

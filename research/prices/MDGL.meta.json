@@ -1,0 +1,8 @@
+{
+  "ticker": "MDGL",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MDGL?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:23.968767+00:00",
+  "sha256": "ac26f2818fa898b28bd213dca2b689fa1bac7736ae0b2691a903c281e34c51d8",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

@@ -1,0 +1,686 @@
+{
+  "candidate_id": "clinical-srpt-2021",
+  "sources": [
+    {
+      "id": "srpt-102-8k",
+      "kind": "8-K",
+      "title": "Sarepta Therapeutics Announces Top-line Results for Part 1 of Study 102 Evaluating SRP-9001, its Investigational Gene Therapy for the Treatment of Duchenne Muscular Dystrophy",
+      "url": "https://www.globenewswire.com/news-release/2021/01/07/2155237/0/en/Sarepta-Therapeutics-Announces-Top-line-Results-for-Part-1-of-Study-102-Evaluating-SRP-9001-its-Investigational-Gene-Therapy-for-the-Treatment-of-Duchenne-Muscular-Dystrophy.html",
+      "published_at": "2021-01-07T16:05:00-05:00",
+      "available_at": "2021-01-08",
+      "availability_basis": "EDGAR acceptance 2021-01-07 17:03:42 ET (Form 8-K accession 0001564590-21-000577), after the regular session close; next-session cutoff",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [
+            "c1"
+          ],
+          "text": "double-blind, 1:1 randomized, placebo-controlled...41 participants...20 treatment, 21 placebo...children with Duchenne muscular dystrophy...4-7 years old",
+          "location": "Exhibit 99.1, trial design summary"
+        },
+        {
+          "claim_ids": [
+            "c2"
+          ],
+          "text": "Micro-dystrophin expression via western blot: Treatment group achieved 28.1% mean expression (P<0.0001)",
+          "location": "Exhibit 99.1, Part 1 topline results"
+        },
+        {
+          "claim_ids": [
+            "c3"
+          ],
+          "text": "Change in NSAA total score: Not statistically significant (P=0.37)...Treatment group: +1.7 points from baseline (P=0.009)...Placebo group: +0.9 points from baseline (P=0.1411)",
+          "location": "Exhibit 99.1, Part 1 topline results"
+        },
+        {
+          "claim_ids": [
+            "c4"
+          ],
+          "text": "4-5 years (n=16)...statistically significant 4.3-point improvement on NSAA total score at 48 weeks versus 1.9-point improvement in placebo (P=0.0172)",
+          "location": "Exhibit 99.1, age subgroup analysis"
+        },
+        {
+          "claim_ids": [
+            "c5"
+          ],
+          "text": "Met secondary biological measures including vector genome copies, percent positive fibers, and intensity",
+          "location": "Exhibit 99.1, secondary endpoints"
+        },
+        {
+          "claim_ids": [
+            "c6"
+          ],
+          "text": "No new safety signals identified. 85% of treatment group experienced treatment-related adverse events vs. 43% placebo. 82% of adverse events were mild-to-moderate. 4 serious treatment-related adverse events: 3 in treatment group (2 rhabdomyolysis cases, 2 transaminase elevations), 1 in placebo",
+          "location": "Exhibit 99.1, safety and tolerability"
+        },
+        {
+          "claim_ids": [
+            "c7"
+          ],
+          "text": "Company said imbalance between treatment arms may have undermined the overall functional result. Study 103 enrollment underway using commercial process material; biomarker/safety results expected Q2 2021",
+          "location": "Exhibit 99.1, management commentary and next steps"
+        },
+        {
+          "claim_ids": [
+            "c8"
+          ],
+          "text": "Published January 7, 2021, 4:05 PM ET",
+          "location": "Release dateline"
+        }
+      ]
+    },
+    {
+      "id": "srpt-q3-2020-pr",
+      "kind": "press_release",
+      "title": "Sarepta Therapeutics Announces Third Quarter 2020 Financial Results and Recent Corporate Developments",
+      "url": "https://www.globenewswire.com/news-release/2020/11/05/2121543/0/en/Sarepta-Therapeutics-Announces-Third-Quarter-2020-Financial-Results-and-Recent-Corporate-Developments.html",
+      "published_at": "2020-11-05T16:05:00-05:00",
+      "available_at": "2020-11-05",
+      "availability_basis": "wire dateline (after close)",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [
+            "c11"
+          ],
+          "text": "Net product sales of $121.4 million, a 23% increase over same quarter of prior year",
+          "location": "Financial highlights"
+        },
+        {
+          "claim_ids": [
+            "c12"
+          ],
+          "text": "approximately $1.8 billion in cash, cash equivalents and investments as of September 30, 2020 compared to $1.1 billion as of December 31, 2019",
+          "location": "Financial highlights"
+        },
+        {
+          "claim_ids": [
+            "c13"
+          ],
+          "text": "R&D (GAAP, Q3 2020): $190.4 million; R&D (GAAP, Nine Months 2020): $515.1 million; SG&A (GAAP, Q3 2020): $75.4 million; SG&A (GAAP, Nine Months 2020): $231.8 million",
+          "location": "Financial results detail"
+        },
+        {
+          "claim_ids": [
+            "c9"
+          ],
+          "text": "two years after a one-time infusion of SRP-9001, trial participants exhibited a mean 7.0 point improvement on the North Star Ambulatory Assessment (NSAA)",
+          "location": "Corporate developments"
+        }
+      ]
+    },
+    {
+      "id": "srpt-10q-q3-2020",
+      "kind": "10-Q",
+      "title": "Sarepta Therapeutics, Inc. Form 10-Q for the quarter ended September 30, 2020",
+      "url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020051308/srpt-10q_20200930.htm",
+      "published_at": "2020-11-05",
+      "available_at": "2020-11-05",
+      "availability_basis": "EDGAR acceptance 2020-11-05 16:09:38 ET (accession 0001564590-20-051308)",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [
+            "c16b"
+          ],
+          "text": "Cash and cash equivalents $1,474,637 thousand; Short-term investments $341,467 thousand; Long-term debt $700,470 thousand (September 30, 2020); shares outstanding 78,913,045 as of October 30, 2020",
+          "location": "Balance sheet and cover page"
+        }
+      ]
+    },
+    {
+      "id": "srpt-10k-fy2019",
+      "kind": "10-K",
+      "title": "Sarepta Therapeutics, Inc. Form 10-K for fiscal year 2019",
+      "url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020006769/srpt-10k_20191231.htm",
+      "published_at": "2020-02-26",
+      "available_at": "2020-02-26",
+      "availability_basis": "EDGAR filing date (accession 0001564590-20-006769)",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [
+            "c17a"
+          ],
+          "text": "a commercial-stage biopharmaceutical company focused on...RNA-targeted therapeutics, gene therapy and other genetic therapeutic modalities for the treatment of rare diseases",
+          "location": "Item 1, Business overview"
+        },
+        {
+          "claim_ids": [
+            "c17b"
+          ],
+          "text": "First approved drug: PMO chemistry to skip exon 51 of the dystrophin gene; FDA accelerated approval September 19, 2016; approximately 13% of DMD patients are amenable to exon 51 skipping",
+          "location": "Item 1, Business - first product"
+        },
+        {
+          "claim_ids": [
+            "c17c"
+          ],
+          "text": "Second approved drug: PMO chemistry targeting exon 53 skipping; FDA accelerated approval December 12, 2019; up to 8% of DMD patients are amenable to exon 53 skipping",
+          "location": "Item 1, Business - second product"
+        },
+        {
+          "claim_ids": [
+            "c17d"
+          ],
+          "text": "Gene therapy expresses micro-dystrophin using an AAV vector designed for systemic delivery to skeletal, cardiac and diaphragm muscle; Roche holds an exclusive license outside the U.S., company retains U.S. rights",
+          "location": "Item 1, Business - pipeline"
+        },
+        {
+          "claim_ids": [
+            "c16"
+          ],
+          "text": "Total FY2019 revenue $380.7-380.8 million, almost entirely from the first approved drug; second drug's 2019 revenue described as immaterial given its mid-December 2019 approval",
+          "location": "Item 7, MD&A"
+        }
+      ]
+    },
+    {
+      "id": "srpt-casimersen-pr",
+      "kind": "press_release",
+      "title": "Sarepta Therapeutics Announces FDA Acceptance of Casimersen (SRP-4045) New Drug Application for Patients with Duchenne Muscular Dystrophy Amenable to Skipping Exon 45",
+      "url": "https://www.globenewswire.com/news-release/2020/08/25/2083264/0/en/Sarepta-Therapeutics-Announces-FDA-Acceptance-of-Casimersen-SRP-4045-New-Drug-Application-for-Patients-with-Duchenne-Muscular-Dystrophy-Amenable-to-Skipping-Exon-45.html",
+      "published_at": "2020-08-25T08:45:00-04:00",
+      "available_at": "2020-08-25",
+      "availability_basis": "wire dateline (premarket)",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [
+            "c14"
+          ],
+          "text": "PDUFA date of February 25, 2021...NDA submitted June 2020, priority review granted...approximately 8% of Duchenne patients amenable to exon 45 skipping",
+          "location": "Release body"
+        },
+        {
+          "claim_ids": [
+            "c15"
+          ],
+          "text": "double-blind, placebo-controlled, multi-center Phase 3 study (ESSENCE)...weekly intravenous infusions (30 mg/kg) for up to 96 weeks...six-minute walk tests and muscle biopsies...interim analysis demonstrated a statistically significant increase in dystrophin production...compared to baseline and placebo",
+          "location": "Release body, trial description"
+        }
+      ]
+    },
+    {
+      "id": "srpt-roche-8k",
+      "kind": "8-K",
+      "title": "Sarepta Therapeutics Announces Partnership with Roche in Territories Outside the United States for its Investigational Micro-dystrophin Gene Therapy for Duchenne Muscular Dystrophy, SRP-9001",
+      "url": "https://www.sec.gov/Archives/edgar/data/873303/000156459019046705/srpt-8k_20191221.htm",
+      "published_at": "2019-12-23",
+      "available_at": "2019-12-23",
+      "availability_basis": "EDGAR filing date (accession 0001564590-19-046705)",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [
+            "c18"
+          ],
+          "text": "Upfront payment $1.15 billion total: $750 million cash from Roche, $400 million from Roche Finance for 2,522,227 shares at $158.59/share; up to $1.73 billion in regulatory and sales milestones; royalties anticipated mid-teens on net sales; Sarepta retains U.S. rights, Roche exclusive ex-U.S. license; parties share global development plan costs, Roche bears territory-specific costs",
+          "location": "8-K body / press release exhibit"
+        }
+      ]
+    },
+    {
+      "id": "srpt-study101-pr",
+      "kind": "press_release",
+      "title": "Sarepta Therapeutics Reports Sustained Functional Improvement Two Years After Treatment with SRP-9001, its Investigational Micro-dystrophin Gene Therapy for Duchenne Muscular Dystrophy",
+      "url": "https://www.globenewswire.com/news-release/2020/09/28/2099913/0/en/Sarepta-Therapeutics-Reports-Sustained-Functional-Improvement-Two-Years-After-Treatment-with-SRP-9001-its-Investigational-Micro-dystrophin-Gene-Therapy-for-Duchenne-Muscular-Dystro.html",
+      "published_at": "2020-09-28T08:55:00-04:00",
+      "available_at": "2020-09-28",
+      "availability_basis": "wire dateline (premarket)",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {
+          "claim_ids": [
+            "c9"
+          ],
+          "text": "Open-label design with four ambulatory participants between the ages of 4 and 7 receiving a single infusion at 2x10^14 vg/kg. Mean 7.0 point improvement on NSAA compared to baseline at two years. Explicitly noted as an open-label trial without placebo control",
+          "location": "Release body"
+        },
+        {
+          "claim_ids": [
+            "c10"
+          ],
+          "text": "Mean of 81.2% muscle fibers expressing micro-dystrophin with mean intensity at the sarcolemma of 96% by immunohistochemistry; western blot showed mean expression of 95.8%. Well tolerated over two years; all adverse events mild or moderate and within 90 days of treatment; no serious adverse events",
+          "location": "Release body"
+        }
+      ]
+    },
+    {
+      "id": "0001564590-19-005170",
+      "kind": "10-K",
+      "title": "Sarepta Therapeutics, Inc. Form 10-K for fiscal year 2018",
+      "url": "https://www.sec.gov/Archives/edgar/data/873303/000156459019005170/0001564590-19-005170-index.htm",
+      "published_at": "2019-02-28",
+      "available_at": "2019-02-28",
+      "availability_basis": "EDGAR filing date (from cases/clinical-srpt-2021/xbrl-facts.json, not independently re-opened)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    },
+    {
+      "id": "0001564590-18-004107",
+      "kind": "10-K",
+      "title": "Sarepta Therapeutics, Inc. Form 10-K for fiscal year 2017",
+      "url": "https://www.sec.gov/Archives/edgar/data/873303/000156459018004107/0001564590-18-004107-index.htm",
+      "published_at": "2018-03-01",
+      "available_at": "2018-03-01",
+      "availability_basis": "EDGAR filing date (from cases/clinical-srpt-2021/xbrl-facts.json, not independently re-opened)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    },
+    {
+      "id": "0001564590-20-021905",
+      "kind": "10-Q",
+      "title": "Sarepta Therapeutics, Inc. Form 10-Q for the quarter ended March 31, 2020",
+      "url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020021905/0001564590-20-021905-index.htm",
+      "published_at": "2020-05-06",
+      "available_at": "2020-05-06",
+      "availability_basis": "EDGAR filing date (from cases/clinical-srpt-2021/xbrl-facts.json, not independently re-opened)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    },
+    {
+      "id": "0001564590-20-036794",
+      "kind": "10-Q",
+      "title": "Sarepta Therapeutics, Inc. Form 10-Q for the quarter ended June 30, 2020",
+      "url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020036794/0001564590-20-036794-index.htm",
+      "published_at": "2020-08-05",
+      "available_at": "2020-08-05",
+      "availability_basis": "EDGAR filing date (from cases/clinical-srpt-2021/xbrl-facts.json, not independently re-opened)",
+      "opened": false,
+      "local_copy": null,
+      "excerpts": []
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Study 102 was a randomized 1:1, double-blind, placebo-controlled trial of 41 ambulatory boys ages 4-7 with genetically confirmed Duchenne muscular dystrophy (20 treated, 21 placebo).",
+      "source_ids": [
+        "srpt-102-8k"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c2",
+      "text": "The gene therapy met its primary biological endpoint: mean micro-dystrophin expression of 28.1% by western blot at 12 weeks (p<0.0001).",
+      "source_ids": [
+        "srpt-102-8k"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c3",
+      "text": "The primary functional endpoint (48-week NSAA motor-function score) was not statistically significant between groups (p=0.37): treated patients improved 1.7 points from baseline (within-group p=0.009) versus 0.9 points for placebo (within-group p=0.1411).",
+      "source_ids": [
+        "srpt-102-8k"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c4",
+      "text": "In the pre-specified 4-5 year-old age subgroup (n=16), treated patients showed a statistically significant 4.3-point NSAA improvement versus 1.9 points for placebo (p=0.0172).",
+      "source_ids": [
+        "srpt-102-8k"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c5",
+      "text": "Secondary biological endpoints (vector genome copies, percent positive muscle fibers, staining intensity) were all reported as met.",
+      "source_ids": [
+        "srpt-102-8k"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c6",
+      "text": "No new safety signals were identified; about 85% of the treated group had a treatment-related adverse event versus 43% of placebo; four serious treatment-related adverse events occurred (three in the treated group, including rhabdomyolysis and transaminase elevation, one in placebo).",
+      "source_ids": [
+        "srpt-102-8k"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c7",
+      "text": "Management said an imbalance between treatment arms may have contributed to the missed functional result, and a follow-on trial using the company's planned commercial manufacturing process has begun enrolling, with biomarker and safety results expected in the second quarter of 2021.",
+      "source_ids": [
+        "srpt-102-8k"
+      ],
+      "status": "management_guidance",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c8",
+      "text": "The Study 102 topline results were published January 7, 2021 at 4:05 PM Eastern time, after the regular trading session closed.",
+      "source_ids": [
+        "srpt-102-8k"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c9",
+      "text": "Study 101 was an open-label, uncontrolled study of four ambulatory boys ages 4-7 who each received a single infusion of the same gene therapy at a stated dose of 2x10^14 vector genomes per kilogram; at two years post-infusion, participants showed a mean 7.0-point improvement on the NSAA motor-function score versus baseline, with no placebo comparator.",
+      "source_ids": [
+        "srpt-study101-pr"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c10",
+      "text": "In Study 101, mean micro-dystrophin expression at 12 weeks was 81.2% of muscle fibers positive by immunohistochemistry (96% mean staining intensity) and 95.8% by western blot; the therapy was described as well tolerated over two years, with all adverse events mild or moderate and occurring within 90 days of treatment, and no serious adverse events.",
+      "source_ids": [
+        "srpt-study101-pr"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c11",
+      "text": "Third-quarter 2020 product revenue was $121.4 million, up about 23% from the third quarter of 2019.",
+      "source_ids": [
+        "srpt-q3-2020-pr",
+        "srpt-10q-q3-2020"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c12",
+      "text": "Cash, cash equivalents and investments were approximately $1.8 billion as of September 30, 2020, compared to approximately $1.1 billion as of December 31, 2019.",
+      "source_ids": [
+        "srpt-q3-2020-pr"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c13",
+      "text": "Third-quarter 2020 R&D expense was $190.4 million (nine-month 2020 R&D was $515.1 million); third-quarter 2020 SG&A expense was $75.4 million (nine-month 2020 SG&A was $231.8 million).",
+      "source_ids": [
+        "srpt-q3-2020-pr"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c14",
+      "text": "On August 25, 2020 the FDA accepted, under priority review, the NDA for a third exon-skipping drug candidate addressing about 8% of Duchenne muscular dystrophy patients, with a regulatory decision date of February 25, 2021; the NDA had been submitted in June 2020.",
+      "source_ids": [
+        "srpt-casimersen-pr"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c15",
+      "text": "The Phase 3 trial supporting that application (the ESSENCE study) was a double-blind, placebo-controlled, multi-center study using weekly intravenous infusions for up to 96 weeks plus an open-label extension, assessed via six-minute walk testing and muscle biopsy; an interim analysis showed a statistically significant increase in dystrophin protein production versus both baseline and placebo, though the specific percentage and p-value were not disclosed in this release.",
+      "source_ids": [
+        "srpt-casimersen-pr"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c16",
+      "text": "Full-year 2019 revenue was $380.8 million, almost entirely from the company's first approved exon-skipping drug (about 13% of Duchenne muscular dystrophy patients addressable), since the second approved drug (up to about 8% of patients addressable) launched only in mid-December 2019 and its 2019 revenue was described by the company as immaterial.",
+      "source_ids": [
+        "srpt-10k-fy2019"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c16b",
+      "text": "As of September 30, 2020: cash and cash equivalents were $1,474.6 million, short-term investments were $341.5 million, long-term debt was $700.5 million, and shares outstanding were 78,913,045 (as of October 30, 2020).",
+      "source_ids": [
+        "srpt-10q-q3-2020"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c17",
+      "text": "The company is a commercial-stage biopharmaceutical company focused on RNA-targeted and gene therapies for rare diseases; its two approved drugs use a chemistry that causes the body to skip a specific faulty exon of the dystrophin gene, while its investigational gene therapy instead delivers a shortened, functional dystrophin gene directly to muscle cells via a viral vector designed for systemic delivery.",
+      "source_ids": [
+        "srpt-10k-fy2019"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "c18",
+      "text": "Under a December 2019 collaboration and license agreement, a large multinational pharmaceutical partner (Roche) paid an upfront amount of $1.15 billion (comprising $750 million in cash and $400 million via a purchase of 2,522,227 Sarepta shares at $158.59 per share) for an exclusive license to develop and commercialize the gene therapy outside the United States, with up to $1.73 billion in additional milestone payments, royalties described as 'mid-teens' on net sales outside the U.S., and shared global development costs; Sarepta retained all U.S. rights.",
+      "source_ids": [
+        "srpt-roche-8k"
+      ],
+      "status": "reported",
+      "formula": null,
+      "input_ids": null
+    },
+    {
+      "id": "d1",
+      "text": "Third-quarter 2020 operating margin was about -95.2% (operating loss of $137.1 million divided by total revenue of $143.9 million); the comparable third-quarter 2019 margin was about -124.8%.",
+      "source_ids": [
+        "srpt-10q-q3-2020"
+      ],
+      "status": "derived",
+      "formula": "OperatingIncomeLoss / Revenues, per quarter",
+      "input_ids": [
+        "0001564590-20-051308:OperatingIncomeLoss_Q3-2020",
+        "0001564590-20-051308:Revenues_Q3-2020",
+        "0001564590-19-041709:OperatingIncomeLoss_Q3-2019",
+        "0001564590-19-041709:Revenues_Q3-2019"
+      ]
+    },
+    {
+      "id": "d2",
+      "text": "Standalone third-quarter 2020 operating cash flow was approximately -$238.2 million (nine-month year-to-date operating cash flow of $282.0 million minus six-month year-to-date operating cash flow of $520.2 million); the comparable standalone third quarter of 2019 was approximately -$67.4 million.",
+      "source_ids": [
+        "srpt-10q-q3-2020"
+      ],
+      "status": "derived",
+      "formula": "9-month YTD NetCashProvidedByUsedInOperatingActivities minus 6-month YTD NetCashProvidedByUsedInOperatingActivities, same fiscal year",
+      "input_ids": [
+        "0001564590-20-051308:NetCashProvidedByUsedInOperatingActivities_9moYTD-2020",
+        "0001564590-20-036794:NetCashProvidedByUsedInOperatingActivities_6moYTD-2020"
+      ]
+    },
+    {
+      "id": "d3",
+      "text": "FY2019 research and development expense was approximately $560.9 million, the sum of the four separately reported 2019 quarterly figures ($90.6m + $113.3m + $133.9m + $223.1m).",
+      "source_ids": [
+        "srpt-10k-fy2019"
+      ],
+      "status": "derived",
+      "formula": "Sum of Q1+Q2+Q3+Q4 2019 standalone ResearchAndDevelopmentExpense",
+      "input_ids": [
+        "0001564590-19-017175:ResearchAndDevelopmentExpense_Q1-2019",
+        "0001564590-19-030035:ResearchAndDevelopmentExpense_Q2-2019",
+        "0001564590-20-006769:ResearchAndDevelopmentExpense_Q3-2019",
+        "0001564590-20-006769:ResearchAndDevelopmentExpense_Q4-2019"
+      ]
+    },
+    {
+      "id": "d4",
+      "text": "Product revenue grew about 22.6% from $99.0 million in Q3 2019 to $121.4 million in Q3 2020.",
+      "source_ids": [
+        "srpt-10q-q3-2020"
+      ],
+      "status": "derived",
+      "formula": "(Q3-2020 value - Q3-2019 value) / Q3-2019 value",
+      "input_ids": [
+        "0001564590-20-051308:RevenueFromContractWithCustomerExcludingAssessedTax_Q3-2020",
+        "0001564590-19-041709:RevenueFromContractWithCustomerExcludingAssessedTax_Q3-2019"
+      ]
+    }
+  ],
+  "search_log": [
+    {
+      "query_or_url": "https://www.globenewswire.com/news-release/2021/01/07/2155237/...",
+      "result": "opened",
+      "note": "Study 102 topline release, primary source for cutoff event"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000873303&type=8-K&dateb=20210110&owner=include&count=20",
+      "result": "opened",
+      "note": "confirmed the January 7, 2021 8-K accession number"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000156459021000577/0001564590-21-000577-index.htm",
+      "result": "opened",
+      "note": "confirmed exact acceptance date-time (2021-01-07 17:03:42 ET) and exhibit list"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020051308/0001564590-20-051308-index.htm",
+      "result": "opened",
+      "note": "confirmed Q3 2020 10-Q accession and acceptance date-time"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020051308/",
+      "result": "opened",
+      "note": "directory listing to find main 10-Q document filename"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020051308/srpt-10q_20200930.htm",
+      "result": "opened",
+      "note": "balance sheet figures (cash, STI, long-term debt, shares outstanding)"
+    },
+    {
+      "query_or_url": "WebSearch: Sarepta Therapeutics third quarter 2020 financial results press release November 5 2020",
+      "result": "opened",
+      "note": "found globenewswire URL and accession lead for Q3 2020 release"
+    },
+    {
+      "query_or_url": "https://www.globenewswire.com/news-release/2020/11/05/2121543/...",
+      "result": "opened",
+      "note": "Q3 2020 earnings and corporate-developments release"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000873303&type=10-K&dateb=20200301&owner=include&count=5",
+      "result": "opened",
+      "note": "confirmed FY2019 10-K accession number"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020006769/",
+      "result": "opened",
+      "note": "directory listing to find main 10-K document filename"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020006769/srpt-10k_20191231.htm",
+      "result": "opened",
+      "note": "Item 1 Business overview: both approved drugs' mechanism, approval dates, addressable population; gene therapy program and Roche partner"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000156459020006769/srpt-10k_20191231.htm",
+      "result": "opened",
+      "note": "second fetch for FY2019 revenue/product concentration and liquidity language"
+    },
+    {
+      "query_or_url": "WebSearch: Sarepta Therapeutics 10-K 2019 business overview EXONDYS 51 VYONDYS 53 exon skipping",
+      "result": "opened",
+      "note": "corroborated approval dates and addressable-population percentages"
+    },
+    {
+      "query_or_url": "WebSearch: Sarepta Roche global collaboration license SRP-9001 December 2019 upfront payment terms",
+      "result": "opened",
+      "note": "lead to the Sarepta 8-K and Roche release for deal terms; used as lead only, then opened the Sarepta 8-K directly (see below)"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/Archives/edgar/data/873303/000156459019046705/srpt-8k_20191221.htm",
+      "result": "opened",
+      "note": "primary-source confirmation of Roche collaboration deal terms"
+    },
+    {
+      "query_or_url": "WebSearch: Sarepta casimersen SRP-4045 exon 45 skipping FDA NDA accepted PDUFA date",
+      "result": "opened",
+      "note": "lead to the casimersen NDA-acceptance release, opened directly below"
+    },
+    {
+      "query_or_url": "https://www.globenewswire.com/news-release/2020/08/25/2083264/...",
+      "result": "opened",
+      "note": "third exon-skipping candidate's FDA acceptance, PDUFA date, ESSENCE trial design"
+    },
+    {
+      "query_or_url": "WebSearch: Sarepta SRP-9001 Study 101 two-year data World Muscle Society September 2020",
+      "result": "opened",
+      "note": "lead to the Study 101 two-year data release, opened directly below"
+    },
+    {
+      "query_or_url": "https://www.globenewswire.com/news-release/2020/09/28/2099913/...",
+      "result": "opened",
+      "note": "Study 101 open-label two-year functional and biological data, primary source"
+    },
+    {
+      "query_or_url": "WebSearch: Sarepta Roche transaction closed antitrust clearance 2020 SRP-9001 collaboration effective date",
+      "result": "opened",
+      "note": "background only (deal closing timeline); not used as a standalone cited claim beyond what the 8-K itself supports"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000873303&type=8-K&dateb=20201110&owner=include&count=10",
+      "result": "opened",
+      "note": "attempted to find Nov 5 2020 8-K accession directly; EDGAR browse tool did not return it cleanly, so the earnings release is cited by wire dateline instead"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000873303&type=8-K&dateb=20200827&owner=include&count=10",
+      "result": "not_found",
+      "note": "attempted to find Aug 25 2020 8-K accession directly; not returned cleanly, so the casimersen release is cited by wire dateline instead"
+    },
+    {
+      "query_or_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=873303&type=10-K",
+      "result": "not_found",
+      "note": "wrong tool/missing parameter; abandoned, not used"
+    }
+  ],
+  "exclusions": [
+    "Q1 and Q2 2020 standalone research and development expense are not individually available in this packet (xbrl-facts.json has no ResearchAndDevelopmentExpense tag for those periods before the cutoff); only the nine-month year-to-date and standalone third-quarter figures from the earnings-release text are included.",
+    "Product-level revenue split between the two approved drugs is not disclosed for any period after FY2019 in the eligible sources reviewed and is therefore omitted rather than estimated.",
+    "The exact percentage and p-value for the interim dystrophin-production analysis in the third exon-skipping candidate's Phase 3 trial were not published in the August 25, 2020 release and are therefore described only qualitatively.",
+    "The precise cash-flow-statement mechanics behind the roughly $1 billion increase in cash and short-term investments between December 31, 2019 and March 31, 2020 were not independently traced line-by-line; the Roche collaboration's deal terms are reported as separately sourced, dated facts rather than asserted as the specific cause of that balance-sheet change.",
+    "ClinicalTrials.gov registry identifiers were not independently opened/verified before the cutoff for any of the three programs described; trials are identified by company-assigned study names only.",
+    "News-aggregator or analyst commentary on the January 7, 2021 readout was not used; all claims are sourced to the company's own SEC filings and press releases."
+  ],
+  "repairs_needed": [
+    "A reviewer should independently confirm the September 30, 2020 long-term debt figure ($700.5 million) against the filed 10-Q's actual balance sheet line item, since it was read from a WebFetch summary of the filing rather than a locally saved copy.",
+    "A reviewer with access to a point-in-time price feed should decide whether to backfill market capitalization and enterprise value (currently missing throughout).",
+    "A reviewer should confirm whether the 'ESSENCE study' public name is the correct and complete public identifier for the third exon-skipping candidate's pivotal trial, and add a ClinicalTrials.gov identifier if independently verifiable.",
+    "Per research/MVP_PROMPT.md, the fool.com outcome-adjacent color source listed in research/selected.json for this candidate was not used in this packet; only primary company/SEC sources were used.",
+    "Self-check per cases/BRIEF.md step 4 (banned future-relative words, years exceeding the cutoff year 2021): none found; see editorial_notes in player.json for detail."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "ticker": "JPM",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/JPM?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-09T12:02:25.688623+00:00",
+  "sha256": "79f83ee43e512f367838cc2ac07d0b51346225544ef049cae16ec2bcefa63fcb",
+  "bars": 2937,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}

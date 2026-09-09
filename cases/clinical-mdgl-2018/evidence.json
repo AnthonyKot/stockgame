@@ -1,0 +1,198 @@
+{
+  "candidate_id": "clinical-mdgl-2018",
+  "sources": [
+    {
+      "id": "mdgl-liver-meeting",
+      "kind": "press_release",
+      "title": "Phase 2 Results for Madrigal's MGL-3196 in Non-Alcoholic Steatohepatitis (NASH) Presented during Presidential Plenary Clinical Session of The Liver Meeting 2018",
+      "url": "https://www.globenewswire.com/news-release/2018/11/12/1649875/0/en/Phase-2-Results-for-Madrigal-s-MGL-3196-in-Non-Alcoholic-Steatohepatitis-NASH-Presented-during-Presidential-Plenary-Clinical-Session-of-The-Liver-Meeting-2018.html",
+      "published_at": "2018-11-12T11:30:00-05:00",
+      "available_at": "2018-11-12",
+      "availability_basis": "wire dateline",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {"claim_ids": ["c1","c13"], "text": "Madrigal Pharmaceuticals, Inc. (Nasdaq: MDGL) is a clinical-stage biopharmaceutical company... The Phase 2 trial (n=125) was a randomized, double-blind, placebo-controlled, multi-center study.", "location": "Release body, paras 1-3"},
+        {"claim_ids": ["c14"], "text": "36.3% in all MGL-3196 treated patients and 42.0% in a pre-specified group of high exposure MGL-3196 treated patients, as compared with 9.6% median reduction [placebo] (p<0.0001)", "location": "Release body, week-12 results paragraph"},
+        {"claim_ids": ["c17"], "text": "statistically significantly more MGL-3196 treated patients than placebo treated patients had normalization of ALT", "location": "Release body, secondary endpoints paragraph"},
+        {"claim_ids": ["c18"], "text": "Mostly mild and a few moderate AEs which were balanced between drug treated and placebo patients", "location": "Release body, safety paragraph"},
+        {"claim_ids": ["c19"], "text": "MGL-3196 treated patients (placebo corrected) achieved highly significant (p< 0.0001) LDL-C lowering of 18.8%; 21% LDL-C lowering in those on an optimal dose of MGL-3196", "location": "Release body, lipid paragraph"}
+      ]
+    },
+    {
+      "id": "mdgl-8k-mar13",
+      "kind": "8-K",
+      "title": "Madrigal Pharmaceuticals Reports 2017 Fourth Quarter and Year-End Financial Results, Reviews Key Corporate Achievements and Provides Clinical Update on MGL-3196 (Ex. 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918016983/a18-8104_1ex99d1.htm",
+      "published_at": "2018-03-13",
+      "available_at": "2018-03-13",
+      "availability_basis": "date only, treated as next session",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {"claim_ids": ["c2","c14"], "text": "Liver fat was reduced by 36.3% in all MGL-3196 treated patients (78) and 42.0% in a pre-specified group of high exposure MGL-3196 treated patients (44/78), as compared with 9.6% median reduction in liver fat in 38 placebo treated patients (p<0.0001)", "location": "Clinical update section"},
+        {"claim_ids": ["c19"], "text": "HeFH trial, 116 patients enrolled; MGL-3196 treated patients (placebo corrected) achieved highly significant (p<0.0001) LDL-C lowering of 18.8%; 21% LDL-C lowering in those on an optimal dose", "location": "Clinical update section, HeFH paragraph"},
+        {"claim_ids": ["c4"], "text": "Cash, cash equivalents, and marketable securities were $191.5 million as of December 31, 2017", "location": "Financial results section"}
+      ]
+    },
+    {
+      "id": "mdgl-8k-may31",
+      "kind": "8-K",
+      "title": "Madrigal's MGL-3196 Achieves Liver Biopsy Endpoints in Patients with Non-alcoholic Steatohepatitis (NASH) at 36 Weeks in Phase 2 Clinical Trial (Ex. 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918036933/a18-14602_1ex99d1.htm",
+      "published_at": "2018-05-31",
+      "available_at": "2018-05-31",
+      "availability_basis": "date only, treated as next session",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {"claim_ids": ["c3","c15"], "text": "Sustained, highly statistically significant (p<0.0001) reduction in liver fat compared with placebo on Week 36 MRI-PDFF; mean relative fat reduction MGL-3196 37%; placebo, 8.9%", "location": "Results paragraph"},
+        {"claim_ids": ["c3"], "text": "NASH resolution: 27% (p=0.02) MGL-3196 vs 6.5% placebo; >2 point decrease in NAS: 56% (p=0.02) MGL-3196 vs 32% placebo", "location": "Results paragraph"},
+        {"claim_ids": ["c16"], "text": "In MGL-3196 patients with NASH resolution, fibrosis also resolved in 50% of patients... fibrosis was reduced by at least 1 point in 23% of placebo and 29% of MGL-3196 treated patients", "location": "Results paragraph, fibrosis"},
+        {"claim_ids": ["c12"], "text": "a Phase 3 study designed similarly to this Phase 2 study, pending regulatory agreement with such a design", "location": "Management commentary"},
+        {"claim_ids": ["c13"], "text": "125 patients enrolled; 73 MGL-3196 and 34 placebo patients had baseline and end-of-study biopsies; randomized, double-blind, placebo-controlled, multi-center; NCT02912260", "location": "Trial description"}
+      ]
+    },
+    {
+      "id": "mdgl-8k-jun6",
+      "kind": "8-K",
+      "title": "Madrigal Pharmaceuticals Form 8-K, Item 1.01 - Underwriting Agreement for Public Offering of Common Stock",
+      "url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918039204/a18-15071_18k.htm",
+      "published_at": "2018-06-06",
+      "available_at": "2018-06-08",
+      "availability_basis": "date only, treated as next session",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {"claim_ids": ["c8"], "text": "The net proceeds to the Company from the Offering, after deducting the Underwriters' discount and other estimated offering expenses... are expected to be approximately $282.8 million.", "location": "8-K body"},
+        {"claim_ids": ["c8"], "text": "1,347,232 shares of common stock (983,607 shares by the Company and 363,625 shares by the Selling Stockholders) at a public offering price of $305.00 per share.", "location": "8-K body (price figure retained here only; excluded from player.json to avoid disclosing a market price)"},
+        {"claim_ids": ["c8"], "text": "General corporate purposes, including, without limitation, research and development expenditures, clinical trial expenditures, manufacture and supply of drug substance and drug products, acquisitions of new technologies, capital expenditures and working capital.", "location": "8-K body, use of proceeds"}
+      ]
+    },
+    {
+      "id": "mdgl-8k-nov6",
+      "kind": "8-K",
+      "title": "Madrigal Pharmaceuticals Reports Third Quarter 2018 Financial Results and Provides Business Update (Ex. 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918066198/a18-39567_1ex99d1.htm",
+      "published_at": "2018-11-06",
+      "available_at": "2018-11-06",
+      "availability_basis": "date only, treated as next session",
+      "opened": true,
+      "local_copy": null,
+      "excerpts": [
+        {"claim_ids": ["c5"], "text": "Total revenues $-0- for both the three and nine month periods ended September 30, 2018", "location": "Financial statements, income statement"},
+        {"claim_ids": ["c4"], "text": "Cash, cash equivalents and marketable securities were $488.5 million as of September 30, 2018, compared to $191.5 million at December 31, 2017", "location": "Financial results section"},
+        {"claim_ids": ["c7"], "text": "we believe we have significant financial resources to fund our currently planned Phase 3 programs", "location": "Management commentary"},
+        {"claim_ids": ["c6"], "text": "We expect to begin a Phase 3 study in NASH in late 2018 or early 2019, subject to regulatory approval.", "location": "Pipeline update, NASH"},
+        {"claim_ids": ["c6","c20"], "text": "evaluating the trial design and objectives of a Phase 3 study in dyslipidemia which could begin in 2019", "location": "Pipeline update, HeFH/dyslipidemia"}
+      ]
+    },
+    {
+      "id": "0001104659-18-066115",
+      "kind": "10-Q",
+      "title": "Madrigal Pharmaceuticals Form 10-Q, quarter ended 2018-09-30 (XBRL structured facts)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918066115/",
+      "published_at": "2018-11-06",
+      "available_at": "2018-11-06",
+      "availability_basis": "date only, treated as next session",
+      "opened": false,
+      "local_copy": "cases/clinical-mdgl-2018/xbrl-facts.json",
+      "excerpts": [
+        {"claim_ids": ["c4","c9","c10","c21"], "text": "CashAndCashEquivalentsAtCarryingValue=38,046,000 and AvailableForSaleSecuritiesDebtSecuritiesCurrent=450,492,000 at 2018-09-30; Liabilities=6,642,000; CommonStockSharesOutstanding=15,393,309 at 2018-09-30 vs 14,227,634 at 2017-12-31", "location": "XBRL companyfacts, accn 0001104659-18-066115"}
+      ]
+    },
+    {
+      "id": "0001047469-18-001557",
+      "kind": "10-K",
+      "title": "Madrigal Pharmaceuticals Form 10-K, fiscal year 2017 (XBRL structured facts)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1157601/000104746918001557/",
+      "published_at": "2018-03-13",
+      "available_at": "2018-03-13",
+      "availability_basis": "date only, treated as next session",
+      "opened": false,
+      "local_copy": "cases/clinical-mdgl-2018/xbrl-facts.json",
+      "excerpts": [
+        {"claim_ids": ["c21"], "text": "OperatingIncomeLoss FY2016=-25,223,000, FY2017=-32,062,000; Assets FY2016=41,210,000, FY2017=192,313,000; Liabilities FY2016=4,800,000, FY2017=10,054,000; StockholdersEquity FY2016=36,410,000, FY2017=182,259,000; no debt-related concept present", "location": "XBRL companyfacts, accn 0001047469-18-001557"}
+      ]
+    },
+    {
+      "id": "0001104659-18-031046",
+      "kind": "10-Q",
+      "title": "Madrigal Pharmaceuticals Form 10-Q, quarter ended 2018-03-31 (XBRL structured facts)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918031046/",
+      "published_at": "2018-05-08",
+      "available_at": "2018-05-08",
+      "availability_basis": "date only, treated as next session",
+      "opened": false,
+      "local_copy": "cases/clinical-mdgl-2018/xbrl-facts.json",
+      "excerpts": [
+        {"claim_ids": ["c9"], "text": "CashAndCashEquivalentsAtCarryingValue=38,125,000; Assets=183,478,000; Liabilities=6,294,000; StockholdersEquity=177,184,000; CommonStockSharesOutstanding=14,250,726 at 2018-03-31", "location": "XBRL companyfacts, accn 0001104659-18-031046"}
+      ]
+    },
+    {
+      "id": "0001104659-18-049982",
+      "kind": "10-Q",
+      "title": "Madrigal Pharmaceuticals Form 10-Q, quarter ended 2018-06-30 (XBRL structured facts)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918049982/",
+      "published_at": "2018-08-07",
+      "available_at": "2018-08-07",
+      "availability_basis": "date only, treated as next session",
+      "opened": false,
+      "local_copy": "cases/clinical-mdgl-2018/xbrl-facts.json",
+      "excerpts": [
+        {"claim_ids": ["c8","c9"], "text": "CashAndCashEquivalentsAtCarryingValue=264,861,000; AvailableForSaleSecuritiesDebtSecuritiesCurrent=225,444,000; NetCashProvidedByUsedInFinancingActivities (6mo)=313,274,000; CommonStockSharesOutstanding=15,365,384 at 2018-06-30", "location": "XBRL companyfacts, accn 0001104659-18-049982"}
+      ]
+    }
+  ],
+  "claims": [
+    {"id": "c1", "text": "The company presented 36-week Phase 2 liver-biopsy and lipid data for its lead liver-disease drug at a hepatology-conference plenary session on 12 Nov 2018.", "source_ids": ["mdgl-liver-meeting"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c2", "text": "The trial's week-12 primary-endpoint result (liver fat reduction by MRI-PDFF, p<0.0001) was already public in company disclosures by 13 Mar 2018.", "source_ids": ["mdgl-8k-mar13"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c3", "text": "36-week results -- NASH resolution 27% vs 6.5% placebo (p=0.02) and a >2-point NAFLD Activity Score improvement in 56% vs 32% of patients (p=0.02) -- were first announced 31 May 2018.", "source_ids": ["mdgl-8k-may31"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c4", "text": "Cash and investments were $488.5 million at 30 Sep 2018, up from $191.5 million at 31 Dec 2017.", "source_ids": ["mdgl-8k-nov6", "0001104659-18-066115"], "status": "derived", "formula": "CashAndCashEquivalentsAtCarryingValue + AvailableForSaleSecuritiesDebtSecuritiesCurrent", "input_ids": ["0001104659-18-066115"]},
+    {"id": "c5", "text": "Total revenue was $0 for both the three- and nine-month periods ended 30 Sep 2018.", "source_ids": ["mdgl-8k-nov6"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c6", "text": "Management said it expected to begin a Phase 3 study in the primary liver-disease indication in late 2018 or early 2019, subject to regulatory approval, and said it was evaluating the design of a possible Phase 3 study in the related cholesterol-disorder indication that could begin in 2019.", "source_ids": ["mdgl-8k-nov6"], "status": "management_guidance", "formula": null, "input_ids": null},
+    {"id": "c7", "text": "Management said it believed it had significant financial resources to fund its currently planned Phase 3 programs.", "source_ids": ["mdgl-8k-nov6"], "status": "management_guidance", "formula": null, "input_ids": null},
+    {"id": "c8", "text": "In June 2018 the company completed an underwritten public offering of common stock, issuing 983,607 new company shares (plus shares sold by selling stockholders), with net proceeds to the company of about $282.8 million for general corporate purposes including R&D and clinical-trial costs.", "source_ids": ["mdgl-8k-jun6"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c9", "text": "Common shares outstanding rose from 14,227,634 at 31 Dec 2017 to 15,393,309 at 30 Sep 2018.", "source_ids": ["0001104659-18-066115"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c10", "text": "Net cash (cash and investments of $488.538 million minus total liabilities of $6.642 million) was about $481.9 million at 30 Sep 2018.", "source_ids": ["0001104659-18-066115"], "status": "derived", "formula": "(CashAndCashEquivalentsAtCarryingValue + AvailableForSaleSecuritiesDebtSecuritiesCurrent) - Liabilities", "input_ids": ["0001104659-18-066115"]},
+    {"id": "c11", "text": "At the nine-month 2018 average quarterly cash-outflow rate from operations (about $6.41 million/quarter), the reported cash and investments balance would cover roughly 19 years before financing or spending patterns change -- a scenario, not a company forecast, and one that ignores the funding needs of the newly planned Phase 3 programs.", "source_ids": ["0001104659-18-066115"], "status": "derived", "formula": "(CashAndCashEquivalentsAtCarryingValue + AvailableForSaleSecuritiesDebtSecuritiesCurrent) / (NetCashProvidedByUsedInOperatingActivities[9mo 2018] / 3)", "input_ids": ["0001104659-18-066115"]},
+    {"id": "c12", "text": "The company described the proposed pivotal-trial design for the primary indication as pending regulatory agreement, and did not disclose a completed regulator agreement on trial design as of the cutoff.", "source_ids": ["mdgl-8k-may31"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c13", "text": "The trial (NCT02912260) enrolled 125 patients in a randomized (2:1), double-blind, placebo-controlled, multi-center design across about 25 U.S. sites; 73 drug-treated and 34 placebo patients had paired baseline/week-36 biopsies.", "source_ids": ["mdgl-liver-meeting", "mdgl-8k-may31"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c14", "text": "At week 12, liver fat was reduced 36.3% in drug-treated patients overall (42.0% in a pre-specified high-exposure subgroup) versus 9.6% for placebo (p<0.0001).", "source_ids": ["mdgl-liver-meeting", "mdgl-8k-mar13"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c15", "text": "The liver-fat reduction was sustained at week 36: 37% for drug-treated patients versus 8.9% for placebo (p<0.0001).", "source_ids": ["mdgl-8k-may31"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c16", "text": "Among drug-treated patients who achieved NASH resolution on biopsy, fibrosis also resolved in 50% of cases; overall, at least a one-point fibrosis reduction occurred in 29% of drug-treated versus 23% of placebo patients.", "source_ids": ["mdgl-8k-may31"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c17", "text": "Significantly more drug-treated than placebo patients had normalization of a liver enzyme (ALT) associated with liver injury.", "source_ids": ["mdgl-liver-meeting"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c18", "text": "Adverse events were mostly mild to moderate and balanced between drug and placebo arms; mild loose stools were reported at the start of treatment in the drug-treated group.", "source_ids": ["mdgl-liver-meeting"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c19", "text": "In a separate, previously completed 116-patient Phase 2 trial in the related inherited high-cholesterol disorder, the drug produced an 18.8% placebo-corrected reduction in LDL cholesterol (p<0.0001), and 21% in patients on an optimal dose.", "source_ids": ["mdgl-8k-mar13", "mdgl-8k-nov6"], "status": "reported", "formula": null, "input_ids": null},
+    {"id": "c20", "text": "The company said it was evaluating the design and objectives of a possible Phase 3 study in the cholesterol-disorder indication that could begin in 2019.", "source_ids": ["mdgl-8k-nov6"], "status": "management_guidance", "formula": null, "input_ids": null},
+    {"id": "c21", "text": "No debt-related financial-statement line item (e.g., notes payable, long-term debt) appears in the structured (XBRL) data for fiscal 2017 or the first three quarters of 2018, and no interest expense was reported for those periods; the small liabilities balance ($6.6 million at 30 Sep 2018) appears to be short-term operating liabilities.", "source_ids": ["0001104659-18-066115", "0001047469-18-001557"], "status": "interpretation", "formula": null, "input_ids": null}
+  ],
+  "search_log": [
+    {"query_or_url": "https://www.globenewswire.com/news-release/2018/11/12/1649875/...The-Liver-Meeting-2018.html", "result": "opened", "note": "primary evidence anchor for the case, trial detail and LDL figures"},
+    {"query_or_url": "https://www.globenewswire.com/... (second, focused fetch of same URL for LDL/business-description quotes)", "result": "opened", "note": "confirmed exact LDL and 'About Madrigal' wording"},
+    {"query_or_url": "Madrigal Pharmaceuticals MGL-3196 NASH Phase 2 topline results 2018 announcement date (WebSearch)", "result": "opened", "note": "found leads to Dec 2017 (week-12) and May 2018 (week-36) topline releases; used only the primary documents actually fetched (Mar 13 and May 31, 2018) for dated claims"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918016983/a18-8104_1ex99d1.htm", "result": "opened", "note": "Mar 13, 2018 8-K Ex.99.1 -- confirms week-12 data, HeFH 116-patient trial, FY2017 cash"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001157601&type=8-K&dateb=20181120...", "result": "opened", "note": "confirmed no 8-K was filed on 2018-11-12 or 2018-11-13; most recent prior 8-K was 2018-11-06"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001157601&type=8-K&dateb=20180605...", "result": "opened", "note": "located accession numbers for Mar 13, May 8, and May 31, 2018 8-Ks"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918036933/a18-14602_1ex99d1.htm", "result": "opened", "note": "May 31, 2018 8-K Ex.99.1 -- 36-week biopsy/fibrosis/NAS results, 'pending regulatory agreement' quote"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001157601&type=8-K&dateb=20181110...", "result": "opened", "note": "located Nov 6, 2018 8-K accession 0001104659-18-066198"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918066198/", "result": "opened", "note": "filing index for Nov 6, 2018 8-K"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918066198/a18-39567_1ex99d1.htm", "result": "opened", "note": "Q3 2018 earnings release -- cash $488.5M, $0 revenue, Phase 3 timing guidance"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918039204/", "result": "opened", "note": "filing index for Jun 8, 2018 8-K (Item 1.01)"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/1157601/000110465918039204/a18-15071_18k.htm", "result": "opened", "note": "confirms June 2018 underwritten public offering, net proceeds ~$282.8M, use of proceeds"},
+    {"query_or_url": "NASH drug Phase 3 trial failure history 2018 fatty liver disease competitive landscape before November 2018 (WebSearch)", "result": "opened", "note": "only pre-cutoff-relevant items found were post-cutoff (Gilead selonsertib STELLAR-3/4 failures, reported Feb/Apr 2019); excluded as outcome leakage risk, so macro_context left empty"}
+  ],
+  "exclusions": [
+    "Excluded the $305.00/share public offering price from player.json (kept only in this file's excerpt) to avoid disclosing a market-price-adjacent figure; player.json keeps only share counts and dollar proceeds from the June 2018 financing.",
+    "Did not use the 'December 6, 2017' week-12 topline announcement date found only via a WebSearch summary (not an opened primary source); used the March 13, 2018 8-K exhibit instead, which restates the same week-12 numbers and was directly opened, as the confirmed availability date.",
+    "Excluded Gilead's selonsertib STELLAR-3/STELLAR-4 Phase 3 failures and other general NASH-competitive-landscape commentary from macro_context: the specific trial-failure results postdate the cutoff (reported Feb/Apr 2019) and no dated, eligible pre-cutoff source for general competitive commentary was located within budget. macro_context is left empty rather than filled with an undated or post-cutoff item.",
+    "HeFH (heterozygous familial hypercholesterolemia) program: only patient count (116), top-line LDL-C figures, and general safety characterization were located in the opened sources; no NCT number, randomization ratio, or dosing-arm detail was found within budget, so those sub-fields are marked missing in sector_evidence.",
+    "Did not independently verify the exact 11:30 ET release time of the Nov 12, 2018 wire release against an EDGAR-filed Reg FD 8-K, because none was filed for that date (confirmed via EDGAR browse); relied on the wire service's own dateline."
+  ],
+  "repairs_needed": [
+    "HeFH Phase 2 program: locate and open the original HeFH topline press release/8-K (likely late 2017 or early 2018) to complete trial identifier, randomization/blinding design, and dosing-arm detail; currently only patient count and top-line LDL numbers are sourced.",
+    "Confirm whether a Regulation FD 8-K or additional wire report exists for the Nov 12, 2018 Liver Meeting presentation beyond the GlobeNewswire release used here; none was found in the EDGAR 8-K list through Nov 20, 2018, which the cutoff time (2018-11-13T09:00 ET) assumes is correct.",
+    "market capitalization and enterprise value are 'missing' throughout per rule; if this case is paired with a priced dataset downstream, a reviewer should attach EV/valuation context separately rather than inside this bundle.",
+    "Quarterly operating cash outflow and the funding-runway scenario (c11) are both derived from a single lumpy nine-month cash-flow total; a reviewer may want to recompute using only Q3-standalone figures (-$5.238M/quarter) for a less smoothed runway estimate."
+  ]
+}

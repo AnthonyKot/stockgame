@@ -1,0 +1,214 @@
+{
+  "candidate_id": "growth-005",
+  "cutoff": "2020-08-24",
+  "coverage_end": "2025-08-24",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2020-11-25",
+      "kind": "earnings",
+      "headline": "Deere reports FY2020 net income of $2.751 billion, down 15%, and guides FY2021 net income to $3.6-$4.0 billion on improving farm demand.",
+      "detail": "Full-year FY2020 net sales and revenues were $35.540 billion, down 9%; net income fell to $2.751 billion ($8.69/share) from $3.253 billion in FY2019, in line with the ~$2.25 billion pace implied by the cutoff-quarter guidance for a worse outcome that did not materialize. Management guided FY2021 net income to $3.6-$4.0 billion, with CEO John May citing 'higher crop prices and improved fundamentals' and 'renewed optimism' for farm equipment demand; Agriculture & Turf sales were guided up 10-15% and Construction & Forestry up 5-10%.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Deere & Company Fourth Quarter and Full-Year Fiscal 2020 Earnings Release (8-K Exhibit 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837020014042/de-20201125xex99d1.htm",
+        "publisher": "SEC EDGAR / Deere & Company",
+        "published": "2020-11-25"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e2",
+      "date": "2021-10-14",
+      "kind": "other",
+      "headline": "UAW workers strike at 14 U.S. Deere facilities, the company's first plant walkout in over three decades, affecting 10,000+ employees.",
+      "detail": "The United Auto Workers began a strike against Deere affecting more than 10,000 production and maintenance employees at 14 U.S. facilities. The company's disclosure stated it remained determined to reach an agreement and would continue operating during negotiations, and flagged the strike's potential impact on operations and stock price as a forward-looking risk without quantifying it.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Deere & Company Announces UAW Strike at 14 U.S. Facilities (8-K Exhibit 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837021013151/de-20211014xex99d1.htm",
+        "publisher": "SEC EDGAR / Deere & Company",
+        "published": "2021-10-14"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e3",
+      "date": "2021-11-17",
+      "kind": "other",
+      "headline": "UAW members ratify new six-year labor agreements at Deere's 14 U.S. facilities, ending the strike that began October 14.",
+      "detail": "UAW-represented employees voted to ratify new six-year collective bargaining agreements covering more than 10,000 employees at 14 U.S. facilities, ending the five-week strike. Deere's release did not itemize wage or bonus terms in the text opened for this timeline; contemporaneous local reporting (not independently opened here) described an $8,500 ratification bonus and a 10% immediate wage increase among the terms.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Deere & Company Announces Ratification of New UAW Labor Agreements (8-K Exhibit 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837021016197/de-20211117xex99d1.htm",
+        "publisher": "SEC EDGAR / Deere & Company",
+        "published": "2021-11-17"
+      },
+      "opened": true,
+      "opened_note": "Wage/bonus specifics attributed to local media coverage that was not opened for this timeline; only the SEC release's ratification/end-of-strike facts are used as confirmed."
+    },
+    {
+      "id": "e4",
+      "date": "2021-11-24",
+      "kind": "earnings",
+      "headline": "Deere posts record FY2021 net income of $5.963 billion on 24% sales growth; guides FY2022 net income to $6.5-$7.0 billion.",
+      "detail": "Full-year FY2021 net income reached $5.963 billion ($18.99/share) on net sales and revenues of $44.024 billion, up 24% and a new company record surpassing the prior 2013 high. Management guided FY2022 net income to $6.5-$7.0 billion, citing favorable farm and construction demand alongside continuing supply-chain pressures, with segment sales growth guided at roughly 10-25%.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Deere & Company Fourth Quarter and Full-Year Fiscal 2021 Earnings Release (8-K Exhibit 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837021016306/de-20211124xex99d1.htm",
+        "publisher": "SEC EDGAR / Deere & Company",
+        "published": "2021-11-24"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e5",
+      "date": "2022-11-23",
+      "kind": "earnings",
+      "headline": "Deere reports a second consecutive record year: FY2022 net income of $7.131 billion; guides FY2023 net income to $8.0-$8.5 billion.",
+      "detail": "Full-year FY2022 net income rose to $7.131 billion ($23.28/share) on net sales and revenues of $52.577 billion, up 19%. Management guided FY2023 net income to $8.0-$8.5 billion, citing positive farm fundamentals, fleet dynamics, and infrastructure investment supporting equipment demand.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Deere & Company Fourth Quarter and Full-Year Fiscal 2022 Earnings Release (8-K Exhibit 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837022018162/de-20221123xex99d1.htm",
+        "publisher": "SEC EDGAR / Deere & Company",
+        "published": "2022-11-23"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2023-01-08",
+      "kind": "regulatory",
+      "headline": "Deere and the American Farm Bureau Federation sign a right-to-repair memorandum on farmer and independent-shop repair access.",
+      "detail": "Deere agreed to provide farmers and independent repair facilities timely electronic access to manuals, software, and diagnostic tools, and to make machine codes/data available on 'fair and reasonable terms,' while retaining the right to charge fees and withhold trade-secret or safety-critical information. In exchange, the American Farm Bureau Federation agreed to discourage state and federal right-to-repair legislation and to help educate farmers on available repair resources.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "American Farm Bureau and John Deere Sign Memorandum of Understanding Addressing Right to Repair",
+        "url": "https://www.calt.iastate.edu/article/american-farm-bureau-and-john-deere-sign-memorandum-understanding-addressing-right-repair",
+        "publisher": "Center for Agricultural Law and Taxation, Iowa State University",
+        "published": "2023-01-09"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e7",
+      "date": "2023-11-22",
+      "kind": "earnings",
+      "headline": "Deere reports record FY2023 net income of $10.166 billion but guides FY2024 net income down to $7.75-$8.25 billion.",
+      "detail": "Full-year FY2023 net income reached $10.166 billion ($34.63/share) on net sales and revenues of $61.251 billion, up 16%, a third consecutive record year. Management guided FY2024 net income down to $7.75-$8.25 billion, attributing the expected decline to equipment volumes returning to 'mid-cycle levels' after 2023's elevated activity.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Deere & Company Fourth Quarter and Full-Year Fiscal 2023 Earnings Release (8-K Exhibit 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837023019292/de-20231122xex99d1.htm",
+        "publisher": "SEC EDGAR / Deere & Company",
+        "published": "2023-11-22"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e8",
+      "date": "2024-10-17",
+      "kind": "other",
+      "headline": "Deere lays off nearly 300 workers at Illinois and Iowa plants, citing a weakening farm economy and falling orders.",
+      "detail": "Deere cut 287 jobs at Illinois facilities (200 at the Harvester Works combine plant in East Moline, 7 at Seeding and Cylinder operations in Moline) and 80 at Davenport, Iowa. A company spokesperson said the cuts reflected the weakening farm economy and reduced customer orders, and were unrelated to Deere's separate plans to shift some production to Mexico. This was one of several rounds of Midwest plant layoffs Deere made across fiscal 2024.",
+      "attribution": "company",
+      "source_quote": null,
+      "source": {
+        "title": "Deere lays off nearly 300 more workers in Iowa, Illinois",
+        "url": "https://www.manufacturingdive.com/news/deere-layoffs-illinois-iowa-tractor-demand/730177/",
+        "publisher": "Manufacturing Dive",
+        "published": "2024-10-17"
+      },
+      "opened": true,
+      "opened_note": "No SEC filing covers routine plant-level layoffs of this size; used trade-press reporting that quotes a company spokesperson directly."
+    },
+    {
+      "id": "e9",
+      "date": "2024-11-21",
+      "kind": "earnings",
+      "headline": "Deere's FY2024 net income falls 30% to $7.100 billion; guides FY2025 to $5.0-$5.5 billion citing a steep ag downturn.",
+      "detail": "Full-year FY2024 net income fell to $7.100 billion ($25.62/share) from $10.166 billion, as net sales and revenues dropped 16% to $51.716 billion. Management guided FY2025 net income to $5.0-$5.5 billion, projecting large agriculture sales in the U.S./Canada down about 30% and construction equipment demand down 10-15%; CEO John May said the company had 'proactively adjusted our business operations to better align with the current environment.'",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Deere & Company Fourth Quarter and Full-Year Fiscal 2024 Earnings Release (8-K Exhibit 99.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837024015876/de-20241121xex99d1.htm",
+        "publisher": "SEC EDGAR / Deere & Company",
+        "published": "2024-11-21"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e10",
+      "date": "2025-08-14",
+      "kind": "earnings",
+      "headline": "Deere's Q3 FY2025 net income falls 26% to $1.289 billion; tariff costs near $200 million as shares drop in premarket trading.",
+      "detail": "Q3 FY2025 net income was $1.289 billion ($4.75/share) versus $1.734 billion a year earlier, on net sales and revenues of $12.018 billion, down 9%. The company cited roughly $200 million in tariff costs for the quarter and raised its full-year FY2025 tariff-cost estimate to nearly $600 million (from $500 million); full-year net income guidance was narrowed to $4.75-$5.25 billion.",
+      "attribution": "source",
+      "source_quote": "Despite the earnings beat, Deere's stock fell by 7.95% in pre-market trading, reflecting investor concerns over broader market trends and sector-specific challenges.",
+      "source": {
+        "title": "Earnings call transcript: Deere Q3 2025 beats expectations, stock drops",
+        "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-deere-q3-2025-beats-expectations-stock-drops-93CH-4192938",
+        "publisher": "Investing.com",
+        "published": "2025-08-14"
+      },
+      "opened": true,
+      "opened_note": "Net income, sales and tariff figures cross-checked against Deere's SEC 8-K Exhibit 99.1 for Q3 FY2025 (https://www.sec.gov/Archives/edgar/data/315189/000155837025011453/de-20250814xex99d1.htm), which did not separately quantify the tariff cost or the price move; the transcript source was used for those two figures."
+      }
+  ],
+  "horizon_notes": {
+    "1": "In the year after cutoff, Deere's FY2020 results confirmed the cutoff quarter was close to a trough rather than the start of a deeper decline: full-year FY2020 net income of $2.751 billion was in line with the pace implied by August 2020 guidance, and management's FY2021 guidance called for a rebound to $3.6-$4.0 billion net income on 'renewed optimism' from higher crop prices, with Agriculture & Turf sales guided up 10-15% [e1]. By the one-year mark that rebound guidance had not yet been tested by a full fiscal year of actual results, and the UAW strike that would disrupt Q4 FY2021 production had not yet begun. Interpretation: the pre-cutoff packet's own 'help me weigh' evidence (margin expansion in a down quarter, positive free cash flow, held dividend) pointed toward the trough reading that FY2021 guidance then confirmed, but the packet could not show whether guidance would actually be met.",
+    "3": "Over the three years to August 2023, Deere moved from FY2020's trough to two consecutive record years: FY2021 net income of $5.963 billion [e4] and FY2022 net income of $7.131 billion [e5], both well above the guidance path visible at cutoff. Production was disrupted for roughly five weeks in October-November 2021 by a UAW strike at 14 U.S. facilities, resolved with a new six-year contract [e2][e3], and in January 2023 Deere signed a right-to-repair memorandum with the American Farm Bureau Federation [e6]; guidance issued alongside FY2022 results pointed to a third consecutive record year in FY2023. Interpretation: the pre-cutoff packet's 'trough or genuine decline' framing favored the trough reading in hindsight, but its single down-quarter evidence window could not have signaled either the scale of the 2021-2022 ag-commodity-driven rebound or the labor disruption, both of which lay outside the cutoff evidence.",
+    "5": "By the coverage end of August 2025, the arc had reversed: FY2023 net income peaked at a record $10.166 billion [e7], then fell to $7.100 billion in FY2024 [e9] and was guided down further to $4.75-$5.25 billion for FY2025 amid tariff costs approaching $600 million [e10]. Deere cut jobs at multiple Midwest plants through fiscal 2024, attributing the reductions to a weakening farm economy rather than to its separate production shifts abroad [e8]. Interpretation: the pre-cutoff packet's cyclical framing proved directionally right in both directions -- the 2020 trough gave way to a multi-year up-cycle, which itself gave way to a second downturn by FY2024 -- but a single quarter of evidence at cutoff could not have signaled either the magnitude of the 2021-2023 peak or the tariff-driven component of the later reversal, which postdated the cutoff by years."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "Specific wage/bonus terms of the November 2021 UAW contract were reported in local/union media but not independently opened for this timeline; only the SEC release's ratification and strike-end facts are used as confirmed.",
+    "No primary source separately quantifies the Q3 FY2025 tariff cost or links the premarket share-price move to a specific cause beyond general 'investor concerns'; those figures come from a secondary earnings-transcript article rather than the SEC filing.",
+    "Interim (non-Q4) quarterly reports between FY2021 and FY2025 were not individually covered as separate events, to keep the event count within budget and avoid clustering; only annual (Q4) results, the labor dispute, the right-to-repair MOU, and one representative layoff round are included."
+  ],
+  "search_log": [
+    {"query_or_url": "Deere & Company Q4 fiscal 2020 full year earnings results net income", "result": "opened"},
+    {"query_or_url": "Deere UAW strike October 2021 agreement ratified", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837020014042/de-20201125xex99d1.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837021013151/de-20211014xex99d1.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837021016197/de-20211117xex99d1.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837021016306/de-20211124xex99d1.htm", "result": "opened"},
+    {"query_or_url": "Deere fiscal 2021 full year net income record $5.96 billion", "result": "opened"},
+    {"query_or_url": "Deere American Farm Bureau Federation right to repair memorandum understanding January 2023", "result": "opened"},
+    {"query_or_url": "https://www.calt.iastate.edu/article/american-farm-bureau-and-john-deere-sign-memorandum-understanding-addressing-right-repair", "result": "opened"},
+    {"query_or_url": "Deere fiscal 2023 full year record net income $10.166 billion", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837023019292/de-20231122xex99d1.htm", "result": "opened"},
+    {"query_or_url": "Deere fiscal 2024 guidance cut layoffs Waterloo Iowa Illinois plant", "result": "opened"},
+    {"query_or_url": "https://www.agweb.com/news/breaking-john-deere-confirms-238-layoffs-across-3-plants", "result": "403"},
+    {"query_or_url": "https://www.manufacturingdive.com/news/deere-layoffs-illinois-iowa-tractor-demand/730177/", "result": "opened"},
+    {"query_or_url": "Deere Q3 fiscal 2025 earnings August 2025 tariffs guidance", "result": "opened"},
+    {"query_or_url": "https://www.cnbc.com/2025/08/14/john-deere-de-q3-2025-earnings.html", "result": "403"},
+    {"query_or_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-deere-q3-2025-beats-expectations-stock-drops-93CH-4192938", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000315189&type=8-K (Aug 2025)", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837025011453/0001558370-25-011453-index.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837025011453/de-20250814xex99d1.htm", "result": "opened"},
+    {"query_or_url": "Deere fiscal 2024 full year results November 2024 net income $7.1 billion 2025 guidance", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837024015876/de-20241121xex99d1.htm", "result": "opened"},
+    {"query_or_url": "Deere fiscal 2022 full year net income $7.131 billion SEC 8-K ex99", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837022018162/de-20221123xex99d1.htm", "result": "opened"}
+  ]
+}

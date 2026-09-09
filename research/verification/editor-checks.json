@@ -1,0 +1,96 @@
+{
+  "checked_by": "main session (Fable), curl to SEC EDGAR, 2026-09-09",
+  "checks": [
+    {
+      "id": "growth-008",
+      "ticker": "JPM",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/0000019617-19-000002.txt",
+      "local_copy": "research/sources/jpm-0000019617-19-000002.txt",
+      "form": "8-K with Exhibit 99.1 earnings release",
+      "edgar_acceptance_datetime": "2019-01-15T06:46:00-05:00",
+      "publication_before_cutoff": true,
+      "cutoff_check": "premarket release; proposed cutoff 2019-01-16T09:00-05:00 is correct",
+      "material_fact": {
+        "excerpt": "reported 2018 fourth quarter net income of $7.1 billion, or $1.98 per share, compared with net income of $4.2 billion, or $1.07 per share, in the fourth quarter of 2017",
+        "confirmed": true
+      },
+      "second_filing": "Exhibit 99.1 headline confirms verbatim: 'RECORD FULL-YEAR 2018 NET INCOME OF $32.5 BILLION, OR $9.00 PER SHARE ... ROTCE 17%'. The candidate's 17% figure is the full-year ROTCE; 4Q18 ROTCE was 14% (presentation 0000019617-19-000004).",
+      "resolves_repair": "both as_of sources unopened by worker"
+    },
+    {
+      "id": "growth-009",
+      "ticker": "HSY",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/47111/000004711123000003/0000047111-23-000003.txt",
+      "local_copy": "research/sources/hsy-0000047111-23-000003.txt",
+      "form": "8-K with Exhibit 99.1 earnings release",
+      "edgar_acceptance_datetime": "2023-02-02T06:50:14-05:00",
+      "publication_before_cutoff": true,
+      "cutoff_check": "premarket release; proposed cutoff 2023-02-03T09:00-05:00 is correct",
+      "material_fact": {
+        "excerpt": "Consolidated net sales of $2,652.3 million, an increase of 14.0%. [...] Adjusted earnings per share-diluted of $2.02, an increase of 19.5%. [...] The company expects net sales growth of 6% to 8% [...] adjusted earnings per share growth of 9% to 11%",
+        "confirmed": true
+      },
+      "resolves_repair": "material fact unverified (paraphrased fetch)"
+    },
+    {
+      "id": "clinical-nktr-2018",
+      "ticker": "NKTR",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/906709/0001193125-18-044320.txt",
+      "local_copy": "research/sources/nktr-0001193125-18-044320.txt",
+      "form": "8-K (Item 1.01) with press release exhibit",
+      "edgar_acceptance_datetime": "2018-02-14T08:31:59-05:00",
+      "publication_before_cutoff": true,
+      "cutoff_check": "premarket Feb 14 announcement; cutoff corrected to 2018-02-15T09:00-05:00",
+      "material_fact": {
+        "excerpt": "Bristol-Myers Squibb to pay Nektar $1.85 billion upfront, comprised of $1.0 billion in cash and the purchase of ~8.28 million shares of Nektar stock at $102.60 per share",
+        "confirmed": true
+      },
+      "resolves_repair": "both as_of sources timed out; announcement-date discrepancy"
+    },
+    {
+      "id": "clinical-acad-2021",
+      "ticker": "ACAD",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1070494/0001193125-21-105632.txt",
+      "local_copy": "research/sources/acad-0001193125-21-105632.txt",
+      "form": "8-K with Exhibit 99.1 press release",
+      "edgar_acceptance_datetime": "2021-04-05T08:08:55-04:00",
+      "publication_before_cutoff": true,
+      "cutoff_check": "premarket Apr 5 release; cutoff corrected to 2021-04-06T09:00-04:00",
+      "material_fact": {
+        "excerpt": "the Division, in the CRL, cited a lack of statistical significance in some of the subgroups of dementia, and insufficient numbers of patients with certain less common dementia subtypes as lack of substantial evidence of effect",
+        "confirmed": true
+      },
+      "resolves_repair": "cutoff misdated; CRL date anchor = FDA letter Apr 2, public release Apr 5"
+    },
+    {
+      "id": "clinical-axsm-2019",
+      "ticker": "AXSM",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1579428/0001558370-19-011521.txt",
+      "local_copy": "research/sources/axsm-0001558370-19-011521.txt",
+      "form": "8-K with press release exhibit",
+      "edgar_acceptance_datetime": "2019-12-16T08:25:19-05:00",
+      "publication_before_cutoff": true,
+      "cutoff_check": "premarket Dec 16 release; proposed cutoff 2019-12-17 already the next session, correct",
+      "material_fact": {
+        "excerpt": "With GEMINI and the previously completed ASCEND study, the efficacy of AXS-05 in major depressive disorder has now been demonstrated in two positive well-controlled trials",
+        "confirmed": true
+      },
+      "resolves_repair": "fact #2 STRIDE-1 misattribution (corrected in candidates-screened.json); release time"
+    },
+    {
+      "id": "commercial-gilead-2019",
+      "ticker": "GILD",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/882095/0000882095-19-000003.txt",
+      "local_copy": "research/sources/gild-0000882095-19-000003.txt",
+      "form": "8-K with earnings release exhibit",
+      "edgar_acceptance_datetime": "2019-02-04T16:04:53-05:00",
+      "publication_before_cutoff": true,
+      "cutoff_check": "after-close Feb 4 release; proposed cutoff 2019-02-05 correct",
+      "material_fact": {
+        "excerpt": "(worker confirmed from opened press release; EDGAR copy retained)",
+        "confirmed": true
+      },
+      "resolves_repair": "dead schedule-announcement URL replaced by EDGAR index"
+    }
+  ]
+}

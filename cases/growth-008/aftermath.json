@@ -1,0 +1,231 @@
+{
+  "candidate_id": "growth-008",
+  "cutoff": "2019-01-16T09:00:00-05:00",
+  "coverage_end": "2024-01-16",
+  "events": [
+    {
+      "id": "e1",
+      "date": "2020-01-14",
+      "kind": "earnings",
+      "headline": "JPMorgan reports record full-year 2019 net income of $36.4 billion, up from $32.5 billion in 2018",
+      "detail": "Full-year 2019 net income was $36.4 billion ($10.72 diluted EPS) on managed revenue of $118.7 billion; Q4 2019 net income was $8.5 billion ($2.57 EPS), a 21% year-over-year increase.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "JPMorgan Chase & Co. 4Q19 Earnings Release (Exhibit 99.1 to Form 8-K)",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000001961720000086/jpmc4q19exhibit99.htm",
+        "publisher": "JPMorgan Chase & Co. / SEC EDGAR",
+        "published": "2020-01-14"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e2",
+      "date": "2020-03-05",
+      "kind": "management",
+      "headline": "CEO Jamie Dimon undergoes emergency heart surgery for an acute aortic dissection; co-presidents take over",
+      "detail": "Dimon suffered an acute aortic dissection and underwent successful emergency surgery; the board designated co-presidents and COOs Daniel Pinto and Gordon Smith to jointly lead the firm during his recovery.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "JPMorgan Chase & Co. Form 8-K, Item on Jamie Dimon's health and interim leadership",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000001961720000259/danielandgordondearcolle.htm",
+        "publisher": "JPMorgan Chase & Co. / SEC EDGAR",
+        "published": "2020-03-05"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e3",
+      "date": "2020-12-18",
+      "kind": "macro",
+      "headline": "Federal Reserve extends pandemic-era caps on big-bank dividends and share buybacks into Q1 2021",
+      "detail": "The Fed said large banks, including JPMorgan, would remain subject to distribution limits tied to trailing income rather than a full lift, even though the 2020 stress-test cycle showed the industry adequately capitalized, citing continued pandemic-related economic uncertainty.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Federal Reserve Board announces it will extend, with modifications, its current restrictions on bank holding company dividends and share repurchases through Q1 2021",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20201218b.htm",
+        "publisher": "Board of Governors of the Federal Reserve System",
+        "published": "2020-12-18"
+      },
+      "opened": true,
+      "opened_note": "Macro/regulatory event; connection to JPMorgan is that it is directly subject to these Fed capital-distribution rules as a large bank holding company."
+    },
+    {
+      "id": "e4",
+      "date": "2021-01-15",
+      "kind": "earnings",
+      "headline": "JPMorgan's full-year 2020 net income falls to $29.1 billion as pandemic credit reserves dominate the year",
+      "detail": "Full-year 2020 net income was $29.1 billion ($8.88 EPS) after large early-year reserve builds for expected pandemic-related loan losses; Q4 2020 alone included a $2.9 billion reserve release as the economic outlook improved, while total credit reserves stayed above $30 billion.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "JPMorgan Chase & Co. 4Q20 Earnings Release (Exhibit 99.1 to Form 8-K)",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000001961721000071/a4q20erfexhibit991narrative.htm",
+        "publisher": "JPMorgan Chase & Co. / SEC EDGAR",
+        "published": "2021-01-15"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e5",
+      "date": "2022-01-14",
+      "kind": "earnings",
+      "headline": "JPMorgan posts record full-year 2021 net income of $48.3 billion, aided by a $1.8 billion Q4 reserve release",
+      "detail": "Full-year 2021 net income reached $48.3 billion ($15.36 EPS, 23% ROTCE); management attributed part of Q4 2021's $10.4 billion net income to a $1.8 billion net credit-reserve release reflecting a more balanced macroeconomic outlook despite Omicron, inflation and supply-chain concerns.",
+      "attribution": "company",
+      "source_quote": "a net reserve release of $1.8 billion driven by a more balanced outlook due to the continued resilience in the macroeconomic environment",
+      "source": {
+        "title": "JPMorgan Chase & Co. 4Q21 Earnings Release (Exhibit 99.1 to Form 8-K)",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000001961722000079/a4q21erfexhibit991narrative.htm",
+        "publisher": "JPMorgan Chase & Co. / SEC EDGAR",
+        "published": "2022-01-14"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e6",
+      "date": "2022-12-27",
+      "kind": "legal",
+      "headline": "JPMorgan sues Frank founder Charlie Javice, alleging she fabricated millions of fake user accounts in the 2021 acquisition",
+      "detail": "JPMorgan filed a civil fraud suit in Delaware federal court alleging Javice and a colleague paid a data scientist to generate synthetic user records to inflate Frank's claimed customer base (about 4 million reported versus fewer than 300,000 real users) ahead of the roughly $175 million 2021 acquisition; Javice denied the allegations and countersued.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "Learning from JPMorgan's $175M Due Diligence Error",
+        "url": "https://www.acfe.com/acfe-insights-blog/blog-detail?s=jpmorgan-175-million-dollar-due-diligence-error-charlie-javice",
+        "publisher": "Association of Certified Fraud Examiners",
+        "published": "2023-06-01"
+      },
+      "opened": true,
+      "opened_note": "Secondary analysis used because the primary Delaware federal court complaint (courthousenews.com) returned HTTP 403 and was not reachable; this source and NBC News reporting (opened) place the filing in December 2022, with the specific day (Dec 27) drawn from a Reuters URL slug that itself could not be fetched (blocked domain) -- flagged as approximate."
+    },
+    {
+      "id": "e7",
+      "date": "2023-01-13",
+      "kind": "earnings",
+      "headline": "JPMorgan reports full-year 2022 net income of $37.7 billion as rising rates lift income and reserve building resumes",
+      "detail": "Full-year 2022 net income was $37.7 billion ($12.09 EPS, 18% ROTCE); Q4 2022 included a $1.4 billion credit-reserve build, and management said the firm had already exceeded its 13% CET1 capital target and could resume share buybacks, while flagging inflation, geopolitical tension and quantitative tightening as risks.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "JPMorgan Chase & Co. 4Q22 Earnings Release (Exhibit 99.1 to Form 8-K)",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000001961723000063/a4q22erfexhibit991narrative.htm",
+        "publisher": "JPMorgan Chase & Co. / SEC EDGAR",
+        "published": "2023-01-13"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e8",
+      "date": "2023-05-01",
+      "kind": "deal",
+      "headline": "JPMorgan acquires substantially all of First Republic Bank's assets and deposits from the FDIC after regulators seized it",
+      "detail": "Via an FDIC-run competitive bid, JPMorgan acquired about $173 billion of loans and $30 billion of securities and assumed about $92 billion of deposits from First Republic, with FDIC loss-share agreements and a $50 billion five-year term note; the firm expected a roughly $2.6 billion one-time post-tax gain and about $2.0 billion of post-tax restructuring costs over 18 months.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "JPMorgan Chase Acquires Substantial Majority of Assets and Assumes Certain Liabilities of First Republic Bank",
+        "url": "https://www.jpmorganchase.com/ir/news/2023/jpmc-acquires-substantial-majority-of-assets-and-assumes-certain-liabilities-of-first-republic-bank",
+        "publisher": "JPMorgan Chase & Co.",
+        "published": "2023-05-01"
+      },
+      "opened": true,
+      "opened_note": null
+    },
+    {
+      "id": "e9",
+      "date": "2023-06-12",
+      "kind": "legal",
+      "headline": "JPMorgan agrees to pay $290 million to settle a class action by Jeffrey Epstein's accusers over its banking relationship with him",
+      "detail": "The bank settled a class-action lawsuit alleging it ignored internal warnings and kept Jeffrey Epstein as a client from 1998 to 2013, without admitting wrongdoing, saying any association with him \"was a mistake and we regret it\"; a federal judge granted final approval in November 2023.",
+      "attribution": "none",
+      "source_quote": "Any association with him was a mistake and we regret it.",
+      "source": {
+        "title": "JPMorgan settles with Jeffrey Epstein victim in class-action suit",
+        "url": "https://www.aljazeera.com/economy/2023/6/12/jpmorgan-settles-with-jeffrey-epstein-victim-in-class-action-suit",
+        "publisher": "Al Jazeera",
+        "published": "2023-06-12"
+      },
+      "opened": true,
+      "opened_note": "News source used because JPMorgan's own settlement disclosure (SEC 10-Q legal-proceedings note) was not separately opened for this line; court approval date (Nov 9, 2023) corroborated via a second opened source (NBC News) but not separately logged as its own event."
+    },
+    {
+      "id": "e10",
+      "date": "2024-01-12",
+      "kind": "earnings",
+      "headline": "JPMorgan reports record full-year 2023 net income of $49.6 billion, including a $2.9 billion FDIC special assessment",
+      "detail": "Full-year 2023 net income was $49.6 billion ($16.23 EPS, 21% ROTCE), up 38% from 2022; results absorbed a $2.9 billion FDIC special-assessment charge tied to 2023 bank failures, while First Republic (acquired May 2023) added $647 million to Q4 net income and over 2 million net new checking accounts during the year.",
+      "attribution": "none",
+      "source_quote": null,
+      "source": {
+        "title": "JPMorgan Chase & Co. 4Q23 Earnings Release (Exhibit 99.1 to Form 8-K)",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000001961724000049/a4q23erfexhibit991narrative.htm",
+        "publisher": "JPMorgan Chase & Co. / SEC EDGAR",
+        "published": "2024-01-12"
+      },
+      "opened": true,
+      "opened_note": null
+    }
+  ],
+  "horizon_notes": {
+    "1": "Within the first year after the cutoff, the record picked up exactly where the pre-cutoff packet left off: full-year 2019 net income rose to a record $36.4 billion, extending the profit trajectory the packet had flagged, with no sign yet of the leadership and macro shocks that would follow weeks later [e1]. Interpretation: the packet's implicit question -- whether Q4 2018 market volatility was a blip or a trend -- was answered within the window (2019 was another record year), but the packet, dated mid-January 2019, had no way to anticipate Jamie Dimon's health emergency or the pandemic that arrived just after this one-year mark.",
+    "3": "Over three years the record shows both continuity and disruption: another record year in 2019 [e1], CEO Jamie Dimon's emergency heart surgery and a temporary co-leadership arrangement in March 2020 [e2], Federal Reserve limits on large-bank capital distributions that persisted into 2021 [e3], a pandemic-driven earnings dip in 2020 followed by partial credit-reserve release [e4], and a fresh record of $48.3 billion in net income for 2021 aided by further reserve releases [e5]. Interpretation: the packet's unresolved question about whether the Q4 2018 provisioning jump signaled early credit-cycle normalization turned out to be overtaken by a much larger, unrelated shock (the pandemic), which built and then released reserves on a scale the packet could not have foreseen.",
+    "5": "Across the full five-year horizon, JPMorgan added a further record year in 2022 amid rising rates and renewed reserve building [e7], absorbed reputational and legal costs including a fraud lawsuit over its Frank acquisition [e6] and a $290 million Jeffrey Epstein-related settlement [e9], and expanded materially through the FDIC-brokered acquisition of substantially all of First Republic Bank in May 2023 [e8], closing the period with record full-year 2023 net income of $49.6 billion that included a one-time FDIC special assessment [e10]. Interpretation: the pre-cutoff packet's framing -- weighing record full-year profitability against a single volatile trading quarter -- turned out to capture only a narrow slice of what mattered; the packet contained no information on the pandemic, the CEO's health, the two legal settlements, or the First Republic acquisition, all of which shaped the five-year outcome more than the Q4 2018 trading softness it emphasized."
+  },
+  "attribution_caveat": "Price moves have many causes; the events here are what was public, not a proof of why the price moved.",
+  "gaps": [
+    "The exact calendar day JPMorgan filed its lawsuit against Charlie Javice is approximate (December 2022): the primary court complaint (courthousenews.com) returned HTTP 403, and the specific day was inferred from a blocked Reuters URL slug corroborated only loosely by secondary reporting.",
+    "The Federal Reserve's initial (March 2020) pandemic capital-restriction announcement could not be located at the expected URL (404); only the December 2020 extension was opened, so the macro narrative starts from that later announcement rather than the original restriction.",
+    "CNBC blocked WebFetch (403) on several relevant articles (Q4 2023 earnings recap, Fed Dec 2020 buyback story, Epstein settlement story), so those angles were sourced from SEC filings and other outlets instead.",
+    "No dedicated event was added for 2022's rising-rate environment as a standalone macro item (kept within the FY2022 earnings event) to stay within the brief's 3-macro-event cap alongside the Fed capital-distribution item.",
+    "Stock prices and returns are not included; the game computes those separately."
+  ],
+  "search_log": [
+    {"query_or_url": "JPMorgan Chase First Republic Bank acquisition May 2023 FDIC", "result": "opened"},
+    {"query_or_url": "JPMorgan Chase 2019 full year net income record earnings January 2020", "result": "opened"},
+    {"query_or_url": "JPMorgan Jamie Dimon emergency heart surgery March 2020", "result": "opened"},
+    {"query_or_url": "JPMorgan Chase 2020 full year net income coronavirus credit reserves earnings press release", "result": "opened"},
+    {"query_or_url": "JPMorgan Chase Frank Charlie Javice fraud lawsuit acquisition 2022", "result": "opened"},
+    {"query_or_url": "JPMorgan Chase Q4 2023 full year record net income earnings press release January 2024", "result": "opened"},
+    {"query_or_url": "JPMorgan Chase Jeffrey Epstein settlement $290 million 2023", "result": "opened"},
+    {"query_or_url": "JPMorgan Chase dividend 2020 pandemic suspended buybacks Fed stress test", "result": "opened"},
+    {"query_or_url": "JPMorgan Chase 2021 full year record net income $48.3 billion earnings press release", "result": "opened"},
+    {"query_or_url": "site:sec.gov JPMorgan Chase 8-K 4Q19 earnings press release exhibit 99.1", "result": "opened"},
+    {"query_or_url": "sec.gov JPMorgan Chase 8-K 4Q21 earnings exhibit 99.1 record net income", "result": "opened"},
+    {"query_or_url": "sec.gov JPMorgan Chase 8-K 4Q23 exhibit 99.1 narrative record", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/19617/000001961720000259/danielandgordondearcolle.htm", "result": "opened"},
+    {"query_or_url": "https://www.jpmorganchase.com/ir/news/2023/jpmc-acquires-substantial-majority-of-assets-and-assumes-certain-liabilities-of-first-republic-bank", "result": "opened"},
+    {"query_or_url": "https://www.cnbc.com/2024/01/12/jpmorgan-chase-jpm-earnings-q4-2023.html", "result": "403"},
+    {"query_or_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2019/4th-quarter/4Q19-Earnings-Press-Release.pdf", "result": "not_found"},
+    {"query_or_url": "https://www.cnbc.com/2020/12/18/fed-to-allow-big-banks-to-resume-share-buybacks-with-limitations.html", "result": "403"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/19617/000001961720000086/jpmc4q19exhibit99.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=8-K&dateb=&owner=include&count=40&search_text=&datea=20200110&dateb=20200120", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=8-K&dateb=20220118&owner=include&count=10", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=8-K&dateb=20210120&owner=include&count=10", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=8-K&datea=20210101&dateb=20210201&owner=include&count=40", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/19617/000001961722000079/0000019617-22-000079-index.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/19617/000001961721000071/0000019617-21-000071-index.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/19617/000001961722000079/a4q21erfexhibit991narrative.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/19617/000001961721000071/a4q20erfexhibit991narrative.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/19617/000001961723000063/a4q22erfexhibit991narrative.htm", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=8-K&datea=20240108&dateb=20240116&owner=include&count=40", "result": "opened"},
+    {"query_or_url": "https://www.courthousenews.com/wp-content/uploads/2022/12/jpmorgan-javice-complaint.pdf", "result": "403"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/19617/000001961724000049/0000019617-24-000049-index.htm", "result": "opened"},
+    {"query_or_url": "https://www.nbcnews.com/news/us-news/frank-founder-accused-defrauding-jpmorgan-says-governments-scheduling-rcna88483", "result": "opened"},
+    {"query_or_url": "https://www.sec.gov/Archives/edgar/data/19617/000001961724000049/a4q23erfexhibit991narrative.htm", "result": "opened"},
+    {"query_or_url": "https://www.acfe.com/acfe-insights-blog/blog-detail?s=jpmorgan-175-million-dollar-due-diligence-error-charlie-javice", "result": "opened"},
+    {"query_or_url": "https://www.reuters.com/legal/litigation/jpmorgan-sues-frank-founder-javice-saying-she-duped-it-into-175-mln-deal-2022-12-27/", "result": "not_found"},
+    {"query_or_url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20200330a.htm", "result": "not_found"},
+    {"query_or_url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20201218b.htm", "result": "opened"},
+    {"query_or_url": "https://www.cnbc.com/2023/06/12/jpmorgan-reaches-settlement-with-epstein-victim-in-lawsuit.html", "result": "403"},
+    {"query_or_url": "https://www.aljazeera.com/economy/2023/6/12/jpmorgan-settles-with-jeffrey-epstein-victim-in-class-action-suit", "result": "opened"},
+    {"query_or_url": "https://www.nbcnews.com/news/us-news/epstein-victims-ask-judge-approve-290-million-settlement-jpmorgan-rcna90916", "result": "opened"}
+  ]
+}
