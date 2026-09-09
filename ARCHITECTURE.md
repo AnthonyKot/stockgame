@@ -83,6 +83,10 @@ research (30 candidates) -> verification -> selection (10) -> writers (player.js
 - Transparent mode (checkbox in the top bar, `localStorage["stockgame.transparent"]`) fetches reveal.json before the decision and shows names.
 - Serve: `cd site && python3 -m http.server 8765`. Screenshot: the Playwright headless shell under `~/.cache/ms-playwright/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell --headless --screenshot=out.png --virtual-time-budget=5000 URL`.
 
+## Publishing
+
+`.github/workflows/pages.yml` uploads `site/` to GitHub Pages on every push to main (Pages build type: workflow). Live URL https://anthonykot.github.io/stockgame/. Rebuild bundles before committing when cases or prices change; `site/data` is committed, not generated in CI.
+
 ## Conventions
 
 - Nothing published after the cutoff may reach sheet.json or market.json. If you add a field to player.json, decide whether it is player-visible and add it to `strip_urls`/masking accordingly.

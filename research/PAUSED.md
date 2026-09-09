@@ -4,6 +4,10 @@
 
 Read README.md, then ARCHITECTURE.md (what exists and how it connects). This file is only the current state and the next step. History of how the ten were chosen: research/SELECTION.md. Codex's review and proposals: research/FABLE5_NEXT_STEP.md; Codex's restart note: research/START_HERE.md.
 
+## Published (2026-09-09, 20:10 UTC)
+
+Repository https://github.com/AnthonyKot/stockgame (public), site live at https://anthonykot.github.io/stockgame/ via the Pages workflow. Journal and progress live in each visitor's browser only. A Feedback link in the top bar opens a new GitHub issue.
+
 ## What is true right now
 
 - Ten cases are playable at http://localhost:8765/index.html (serve `site/` with `python3 -m http.server 8765`). All ten pass `scripts/verify_cases.py`; `scripts/test_returns.py` passes.
