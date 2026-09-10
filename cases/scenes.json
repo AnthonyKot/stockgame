@@ -747,7 +747,7 @@
             ],
             "narrative": "In the three months after the new law, the company announced roughly $2.3 billion of further US capacity across two more facilities, citing the incentive directly and continuing the buildout begun before the cutoff.",
             "checks": {
-              "a2": "Partly supported. The company committed to further US capacity, including a fourth facility, citing the new law, a sign management still expected demand to fill plants under construction. New commitments do not by themselves prove the order book was sufficient."
+              "a2": "Unresolved. The company committed to further US capacity, citing the new law, which shows management expected demand, not that orders exist for it. Commitments to build do not show the order book will fill the plants."
             }
           },
           {
@@ -774,9 +774,9 @@
               "e9",
               "e8"
             ],
-            "narrative": "Over the following year, both new plants named in the packet's catalysts began production: the third US facility on the guided first-half-2023 schedule, the India facility several months behind its guided second-half-2023 target.",
+            "narrative": "Over the following year both new plants named in the packet's catalysts began production, the third US facility on the guided first-half-2023 schedule, the India facility several months behind its guided target. Whether demand fills them is not shown here.",
             "checks": {
-              "a2": "Supported. Both new plants in the packet's catalysts list began production, one on schedule and one several months late. This confirms the buildout was completed as planned; it does not show whether shipments matched the new capacity."
+              "a2": "Unresolved. Both plants named in the packet began production, one on schedule and one months late; opening capacity does not show it is filled. This record has no shipment or backlog figures against the new capacity."
             }
           },
           {
@@ -785,7 +785,7 @@
             ],
             "narrative": "By mid-2025, a Senate committee proposed accelerating the phase-out of the same manufacturing credits the expansion had relied on, and shares fell sharply on the news.",
             "checks": {
-              "a3": "Unresolved. A Senate committee proposed accelerating the manufacturing credit's phase-out from 2032 to 2028, three years after the credit took effect, putting its durability in question. Whether the proposal becomes law is not yet known at this date."
+              "a3": "Supported as to enactment. The incentive became law in 2022 and remains in force; a Senate committee has proposed moving its phase-out from 2032 to 2028. Durability is a separate question from enactment, and the proposal's fate is not known at this date."
             }
           },
           {
@@ -794,7 +794,7 @@
             ],
             "narrative": "The bill that followed preserved the original phase-out schedule for solar manufacturing credits, unlike wind, while adding new foreign-sourcing rules manufacturers must meet to keep claiming them.",
             "checks": {
-              "a3": "Partly supported. The signed law kept the original phase-out timeline for solar manufacturing credits intact, unlike wind, but added foreign-sourcing thresholds rising to 85% by 2030. This record does not establish whether First Solar's supply chain will meet those thresholds."
+              "a3": "Supported as to enactment. The credit stayed law with its original phase-out schedule, unlike wind, but with foreign-sourcing thresholds rising to 85% by 2030. Whether First Solar's supply chain meets those thresholds is not established here."
             }
           }
         ]
@@ -1372,7 +1372,7 @@
             "checks": {
               "a1": "Supported for one year. FY2021 comparable sales grew a further 12.7% on top of FY2020's surge. One more year of growth does not establish whether the switched customers will stay over a longer horizon.",
               "a2": "Partly supported. Digital sales grew 20.8% in FY2021 alongside continued overall growth, but management guided Q1 FY2022 margin well below last year's rate. This does not yet show whether digital growth itself will crush margin.",
-              "a3": "Supported. The company ended its no-guidance stance and resumed forward guidance a year after cutoff. One resumption does not establish whether this new guidance will hold up.",
+              "a3": "Unresolved. The company resumed forward guidance a year after the cutoff, ending the silence. Resumption shows management felt able to forecast again; it does not show whether the earlier silence was caution or a warning.",
               "a4": "Weakened on sales. FY2021 comparable sales grew past FY2020's already-elevated base rather than reverting lower. Margin guidance pointed below last year's rate for next quarter, but that quarter had not yet been reported."
             }
           },
@@ -2035,7 +2035,7 @@
               "e7"
             ],
             "checks": {
-              "a2": "Unresolved, in progress. The FDA accepted for priority review an application to expand Trodelvy into a much larger breast-cancer population. This is a regulatory step, not yet a decision on the acquisition's return."
+              "a2": "Supported in form, return unproven. The FDA accepted for priority review an application to expand the acquired drug into a much larger breast-cancer population, a step for the engine bought in 2020. It is neither a decision nor a return on the price."
             }
           },
           {

@@ -9,7 +9,7 @@ STATUS = re.compile(r'^(Supported|Partly supported|Mixed|Weakened|Not supported|
 check_only = '--check-only' in sys.argv
 scenes_path = ROOT / 'cases' / 'scenes.json'
 scenes = json.loads(scenes_path.read_text())
-problems, merged = [], 0
+problems, warnings, merged = [], [], 0
 def last_day(d):
     return d if len(d) == 10 else d + '-31'
 for cid, sc in scenes['scenes'].items():
@@ -33,9 +33,23 @@ for cid, sc in scenes['scenes'].items():
             if len(t.split()) > 45: problems.append(f'{cid}: update {i} {aid} {len(t.split())} words')
         if u.get('narrative') and len(u['narrative'].split()) > 45: problems.append(f'{cid}: update {i} narrative {len(u["narrative"].split())} words')
     if not (4 <= len(dd['updates']) <= 8): problems.append(f'{cid}: {len(dd["updates"])} updates')
+    # drift warning (not a failure): a definite status falling back to Unresolved usually means a later event about a
+    # different question (durability, utilisation) was read against the original assumption. Review by hand.
+    def unlock(u):
+        ld = lambda d: d if len(d) == 10 else d + '-31'
+        return max(max(ld(events[e]['date']), ld(events[e]['source']['published'])) for e in u['event_ids'] if e in events) if u['event_ids'] else ''
+    seq = {}
+    for u in sorted(dd['updates'], key=unlock):
+        for aid, t in (u.get('checks') or {}).items():
+            mm = STATUS.match(t)
+            if mm: seq.setdefault(aid, []).append((mm.group(1), u['event_ids']))
+    for aid, l in seq.items():
+        for (a, ia), (b, ib) in zip(l, l[1:]):
+            if a in ('Supported', 'Not supported', 'Partly supported', 'Weakened') and b == 'Unresolved':
+                warnings.append(f'{cid}: {aid} drifts {a}{ia} -> {b}{ib}')
     if f.exists() and not check_only and not any(p.startswith(cid + ':') for p in problems):
         sc['dated_debrief'] = {'baseline': dd['baseline'], 'updates': dd['updates']}
         f.unlink(); merged += 1
 if merged: scenes_path.write_text(json.dumps(scenes, indent=2, ensure_ascii=False) + '\n')
-print(f'merged {merged}; problems: {len(problems)}'); print('\n'.join(problems))
+print(f'merged {merged}; problems: {len(problems)}; drift warnings: {len(warnings)}'); print('\n'.join(problems + ['WARN ' + w for w in warnings]))
 sys.exit(1 if problems else 0)
