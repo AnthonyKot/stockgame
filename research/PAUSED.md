@@ -8,7 +8,7 @@ Implemented the user-approved bounded patch; pause for Nektar playtesting before
 - Default order: results/chart, selected-thesis check with source links, concise exit-scoped narrative. Full friend checks, horizon notes, event archive and alternative horizons are in a closed optional later-context section. Full outcome payloads still load after commitment; this is standalone presentation scoping, not campaign time-gating or access control.
 - Removed unsupported closing/legal/cash-retention clauses from three Nektar walkthrough stops. Reused existing evidence; 2019 and April 2022 wire sources reopened during this patch, but the two SEC source URLs could not be reopened. This is not a complete source re-verification or readiness certification.
 - Verified: all ten cases (`verify_cases.py`), builder regeneration, return arithmetic, simulator agreement, and `test_story_dates.js` (publication boundaries, early exits, all three horizons, no dated feedback in the player sheet). Updated `test_story_ui.cjs` passed on desktop and 390px: horizons, buy/short/skip, stop/target, reload before/within/after walkthrough, failed commitment/progress saves, optional later context and journal. Tests use isolated storage.
-- Remaining: user playtest; broader opening/investigation wording and editorial readiness triage; other nine stories still use their existing full-record thesis feedback. No campaign integration in this patch.
+- Remaining: user playtest; broader opening/investigation wording and editorial readiness triage. No campaign integration in this patch. (Other nine stories got dated feedback later the same day, see below.)
 
 # Status: ten-case MVP running locally; tightening pass in progress (2026-09-09, ~21:45 UTC)
 
@@ -24,7 +24,7 @@ Repository https://github.com/AnthonyKot/stockgame (public), site live at https:
 
 - Ten cases are playable at http://localhost:8765/index.html (serve `site/` with `python3 -m http.server 8765`). All ten pass `scripts/verify_cases.py`; `scripts/test_returns.py` passes.
 - Data flow and conventions are in ARCHITECTURE.md. Repo and live site: see Published above.
-- 2026-09-10: Codex's review found two real defects. Fixed: the walk now ends at the simulated exit when a stop or target fired (was the anniversary). Open: thesis_check verdicts are one string per assumption written against the full record, so a 1-year call reads verdicts that mention later years; plan is dated fragments clipped at the exit (schema change in scenes.json, builder, renderer, authoring pass).
+- 2026-09-10: Codex's review found two real defects. Fixed: the walk now ends at the simulated exit when a stop or target fired (was the anniversary). Also done the same day: Codex's `dated_debrief` (built for Nektar) rolled out to the other nine cases by nine Sonnet writers under cases/DATED_DEBRIEF_BRIEF.md; merged with scripts/merge_dated_debrief.py, checked by scripts/test_dated_debrief.js. Every horizon now reads only feedback knowable by its exit.
 - Done tonight against Codex's review: SPY benchmark on a total-return basis with the stock; commit saves and reads back before any reveal, failure shows an error and reveals nothing; masked source excerpts visible before commit; sector evidence collapsed by default; fixed "Decide" button on narrow screens; session-interval readout removed; derived valuation tiles (market cap, net cash, EV, EV/revenue; banks market cap only); rules in a side panel; per-case Brier score removed; other-horizon reveal; legend toggles and relative-to-SPY chart view.
 - Kept on purpose despite the trim list: size chooser (user asked for it to be highlighted), probability question (unscored, defaulted), one shared renderer for all ten instead of a three-case pilot.
 
@@ -56,9 +56,16 @@ All ten cases/<id>/aftermath.json written (Sonnet workers, 9 to 12 dated sourced
 
 1. User plays a few cases with the aftermath timeline and says what reads well and what does not.
 2. Editorial triage of each case's `repairs_needed` (evidence.json): mark blocking vs optional; only then consider a readiness gate in the builder.
-3. Horizon-scoped thesis checks (see 2026-09-10 note above), then tick the done items in TODO.md's Nektar section.
+3. Friends' feedback on the live site; then editorial triage (Codex's finding 3).
 
 ## Open questions for the user
 
 - Keep the probability question at all, or drop it now that it is unscored per case?
 - Calibration table in the journal: keep at five decisions with "too few to read" guards, or hide until more cases exist?
+
+## Nektar financial snapshot presentation — 10 September 2026
+
+- Added an authored `financial_snapshot.presentation` block for Nektar, matched to source metric labels rather than post-builder positions. Other cases retain their existing layout.
+- Replaced crowded tiles with performance rows, a separate net-cash section and a valuation panel. Reporting periods and comparable priors stay visible. One-time revenue/cash-payment caveats are visible alongside the affected values; the non-comparable cash-only prior is explained and moved into details.
+- Definitions, source/publication metadata, valuation formulas and full history remain expandable. Existing figures and calculations are preserved; the headline revenue multiple is rounded to one decimal with its inputs available below.
+- Verified all ten case schemas and rebuilt bundles. Browser check at 1280px and 390px passed: five correctly mapped rows, no horizontal overflow or page errors, keyboard opening of the net-cash details. Existing journal data was not touched.

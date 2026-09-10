@@ -52,7 +52,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
       { years: 5, width: 1280, action: 'buy', stops: 4, verdict: 'Not supported' },
       { years: 5, width: 390, action: 'buy', stop: '20', stops: 1, verdict: 'Weakened' },
       { years: 5, width: 1280, action: 'short', tp: '50', stops: 1, verdict: 'Weakened' },
-      { years: 1, width: 390, action: 'skip', stops: 1, verdict: 'Weakened' }
+      { years: 1, width: 390, action: 'skip', stops: 1, verdict: 'Weakened' },
+      { years: 5, width: 390, action: 'buy', tp: '25', stops: 0, verdict: 'Unresolved' }
     ]) {
       const p = await browser.newPage({ viewport: { width: cfg.width, height: 844 } });
       p.on('pageerror', e => errors.push(e.message));
@@ -78,7 +79,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
         await p.evaluate(() => { Storage.prototype.setItem = window.originalSetItem; });
       }
       await p.getByRole('button', { name: 'Commit and reveal' }).click();
-      await p.getByRole('button', { name: /Walk through what happened/ }).click();
+      if (cfg.stops) await p.getByRole('button', { name: /Walk through what happened/ }).click();
       for (let i = 1; i <= cfg.stops; i++) {
         const heading = p.getByRole('heading', { name: new RegExp('^Stop ' + i + ' of ' + cfg.stops) });
         await heading.waitFor();
@@ -94,10 +95,10 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
       if (cfg.stops < 4) assert(!/March 2022|Mar 2022|Apr 2022/.test(visible));
       if (cfg.stops === 1) assert(!visible.includes('53%'));
       const saved = await p.evaluate(() => JSON.parse(localStorage.getItem('stockgame.journal.v1'))[0]);
-      assert.equal(saved.walkthrough.length, cfg.stops);
-      assert(saved.walkthrough.every(w => w.date < saved.result.exit_date));
+      assert.equal((saved.walkthrough || []).length, cfg.stops);
+      assert((saved.walkthrough || []).every(w => w.date < saved.result.exit_date));
       if (cfg.stop) assert.equal(saved.result.exit_date, '2018-06-05');
-      if (cfg.tp) assert.equal(saved.result.exit_date, '2018-10-23');
+      if (cfg.tp) assert.equal(saved.result.exit_date, cfg.tp === '25' ? '2018-03-09' : '2018-10-23');
       await p.locator('.later-context > summary').click();
       assert.match(await p.locator('.later-context').innerText(), /March 2022|Mar 2022/);
       assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);

@@ -126,7 +126,92 @@
           "event_id": "e8",
           "stage_text": "Twenty months in, after the filing was accepted with priority review, the company discloses a regulator's letter citing deficiencies in the application. What the deficiencies are is not public; the decision date is two weeks away."
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the first new development covered by this story. The starting record leaves the regulatory, trial and financing questions open.",
+          "checks": {
+            "a1": "Unresolved. The starting record shows only the company's own view that its two pivotal trials support filing; no regulatory response has yet occurred to test that.",
+            "a2": "Unresolved. Four more trial readouts were still pending at cutoff, so this record cannot say whether the first positive result will repeat.",
+            "a3": "Unresolved. A stated plan not to raise new equity before readouts does not establish how any future financing, if needed, would affect the price.",
+            "a4": "Unresolved. A share price level cannot by itself establish how much of a possible future approval is already reflected in it.",
+            "a5": "Choosing not to take a position is consistent with uncertainty. This outcome alone cannot tell us whether waiting was the better decision."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e1"
+            ],
+            "narrative": "Three days into the window, the company priced a $174 million stock offering to fund its late-stage programs.",
+            "checks": {
+              "a3": "Partly supported. The company raised $174 million in a dilutive stock offering three days after cutoff, resolving the near-term funding question it had flagged. This record does not show how the offering price compared to prior trading levels."
+            }
+          },
+          {
+            "event_ids": [
+              "e2"
+            ],
+            "narrative": "Ten days later, the first of the four pending readouts arrived: a migraine trial met both of its co-primary endpoints.",
+            "checks": {
+              "a2": "Partly supported. The first of four pending readouts, a migraine trial, met both co-primary endpoints against placebo. One result on its own cannot show whether the remaining three will follow the same pattern."
+            }
+          },
+          {
+            "event_ids": [
+              "e3"
+            ],
+            "narrative": "Three months in, a depression trial against an active comparator missed its primary endpoint, while the first migraine trial had already succeeded.",
+            "checks": {
+              "a2": "Mixed. The second readout, a depression trial against an active comparator, missed statistical significance on its primary endpoint, though the company reported secondary endpoints were met. Not every readout is repeating the first result."
+            }
+          },
+          {
+            "event_ids": [
+              "e4",
+              "e5"
+            ],
+            "narrative": "Within a month, a second migraine trial met both co-primary endpoints and a separate trial in Alzheimer's-related agitation met its primary endpoint. All four pending readouts have now reported, split three-to-one in the company's favor.",
+            "checks": {
+              "a2": "Partly supported. Three of the four pending readouts met their primary endpoints (two migraine trials, one Alzheimer's-agitation trial); one depression trial missed significance. The readout cycle did not repeat cleanly, but was not a broad failure either."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "narrative": "About sixteen months later, the regulator accepted the depression drug's application for filing and granted Priority Review.",
+            "checks": {
+              "a1": "Partly supported. The regulator accepted the application built on the two pivotal trials for review and granted Priority Review, a step beyond the company's own view that they were sufficient. Acceptance for review is not an approval decision."
+            }
+          },
+          {
+            "event_ids": [
+              "e8",
+              "e9"
+            ],
+            "narrative": "The regulator then disclosed unspecified deficiencies in the application and, two weeks later, missed its own target decision date without requesting new data.",
+            "checks": {
+              "a1": "Mixed. The regulator disclosed unspecified deficiencies and later missed its target decision date, without requesting additional data or issuing a rejection. This record does not show whether the two pivotal trials themselves were in question."
+            }
+          },
+          {
+            "event_ids": [
+              "e10"
+            ],
+            "narrative": "About two and a half years after cutoff, the regulator approved the drug for major depressive disorder.",
+            "checks": {
+              "a1": "Supported. The regulator approved the drug based on its original two pivotal trials, after the earlier deficiency letter and missed target date. The trials did ultimately support approval, though not on the original timeline."
+            }
+          },
+          {
+            "event_ids": [
+              "e11"
+            ],
+            "narrative": "Two months after approval, the drug became commercially available in the United States, converting the company from a clinical-stage developer awaiting its first approval into one with a marketed product."
+          }
+        ]
+      }
     },
     "clinical-mdgl-2018": {
       "setup": "friend_pitch",
@@ -252,7 +337,87 @@
           "event_id": "e9",
           "stage_text": "Just before the five-year mark, with the application accepted for priority review and a decision date set for March 2024, the company sells $500 million of new stock to fund the launch."
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the first new development covered by this story. The starting evidence leaves the investment question unresolved.",
+          "checks": {
+            "a1": "Unresolved. The Phase 2 signal came from a 125-patient trial. This record cannot establish whether it will replicate in a larger, longer Phase 3 trial.",
+            "a2": "Unresolved. Regulatory agreement on the pivotal trial design had not been publicly confirmed at the cutoff. This record cannot say whether or on what terms it will be reached.",
+            "a3": "Unresolved. The company's cash position is not matched here against a disclosed Phase 3 budget. This record cannot establish whether it will last to the readout without a raise.",
+            "a4": "Unresolved. Whether five years is too long for the price to reward success depends on when results and any approval land. This starting record cannot settle either the timing or the reward.",
+            "a5": "Unresolved. The starting record leaves the clinical and regulatory questions open. It does not establish a position either way."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e1",
+              "e2"
+            ],
+            "narrative": "The pivotal Phase 3 trial in the primary indication launched, and a second Phase 3 study opened enrollment in a related population. The design question open at the cutoff has been answered by the trials proceeding; results are still years away.",
+            "checks": {
+              "a2": "Supported. The pivotal Phase 3 trial launched in the primary indication, and a second Phase 3 study opened enrollment in a related population. This does not establish what the regulator required or whether either trial will succeed."
+            }
+          },
+          {
+            "event_ids": [
+              "e4"
+            ],
+            "narrative": "Enrollment of the pivotal trial's 900-patient biopsy population finished, with topline results guided for the third quarter of 2022. Nothing else in the primary program has changed since the trial launched.",
+            "checks": {
+              "a1": "Unresolved. Enrollment of the 900-patient biopsy population finished, with topline results guided for the third quarter of 2022. The Phase 2 signal has not yet been tested at Phase 3 scale."
+            }
+          },
+          {
+            "event_ids": [
+              "e5"
+            ],
+            "narrative": "The Phase 3 trial met both co-primary endpoints, NASH resolution and fibrosis improvement, at both doses tested. The Phase 2 signal has replicated at scale; a regulatory filing and any launch are still ahead.",
+            "checks": {
+              "a1": "Supported. The Phase 3 trial met both co-primary endpoints, NASH resolution and fibrosis improvement, at both doses tested. This does not establish the size of the benefit against the field's history of Phase 3 failures.",
+              "a3": "Supported to this point. The trial reached its readout in December 2022 with no financing event reported in this record before it. This does not establish whether funding needs after the readout will require a raise."
+            }
+          },
+          {
+            "event_ids": [
+              "e6"
+            ],
+            "narrative": "The FDA granted Breakthrough Therapy designation based on the Phase 3 biopsy results, and enrollment of the trial's larger outcomes portion completed. A filing was on track; approval was still ahead.",
+            "checks": {
+              "a2": "Supported. The FDA granted Breakthrough Therapy designation based on the December 2022 results, and enrollment of the outcomes portion completed with a filing on track. This is a regulatory signal, not the filing decision itself."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "narrative": "The company began submitting its New Drug Application seeking accelerated approval, using the rolling-review process the Breakthrough designation enabled. A regulatory decision on approval was still ahead.",
+            "checks": {
+              "a2": "Supported. The company began a rolling NDA submission seeking accelerated approval and priority review. This is a filing in progress, not a regulatory decision."
+            }
+          },
+          {
+            "event_ids": [
+              "e8"
+            ],
+            "narrative": "The FDA accepted the application for review, granted Priority Review, and set a target decision date of March 14, 2024, after this five-year window closes. The regulatory process has advanced, but the decision itself will land outside this record.",
+            "checks": {
+              "a2": "Supported. The FDA accepted the application for review, granted Priority Review, and set a target decision date. This is acceptance for review, not the approval decision itself.",
+              "a4": "Partly supported on timing. The FDA's target decision date, set in September 2023, falls after this five-year window closes. This record does not show whether the price had already reflected the science by then."
+            }
+          },
+          {
+            "event_ids": [
+              "e9"
+            ],
+            "narrative": "The company raised $500 million in new stock to fund preparations for a potential launch, ahead of the FDA's decision. The trial reached its readout without a financing event beforehand; this raise came after, for the next stage.",
+            "checks": {
+              "a3": "Partly supported, narrowly read. The reported raise came in September 2023, after the December 2022 readout, to fund launch preparations rather than to reach it. This does not establish whether cash was sufficient for the years beyond the readout."
+            }
+          }
+        ]
+      }
     },
     "clinical-nktr-2018": {
       "setup": "friend_pitch",
@@ -543,7 +708,97 @@
           "event_id": "e10",
           "stage_text": "Three years on, a Senate committee proposes accelerating the phase-out of the same manufacturing credits the expansion was built on. Whether it becomes law is not yet known at this date; the answer came three weeks later."
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the first new development in this record. The starting guidance cut and expansion plan are not yet enough to show why profits fell or whether the new capacity will find demand.",
+          "checks": {
+            "a1": "Unresolved. The starting guidance alone cannot establish whether the loss is a one-year buildout cost or a more lasting margin problem.",
+            "a2": "Unresolved. A reported order book at the cutoff does not establish that demand will still be there once the new plants are running.",
+            "a3": "Unresolved. The manufacturing incentive was only proposed at the cutoff; this record cannot establish whether or when it will become law.",
+            "a4": "Unresolved. No share-price outcome is available at the cutoff to establish how much of the guidance cut the price already reflected.",
+            "a5": "Unresolved. This record does not establish whether the pricing pressure behind the cut is structural or a one-year squeeze."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e1"
+            ],
+            "narrative": "The first quarter's loss tracked the range already guided, and the company left its full-year outlook unchanged rather than cutting it again.",
+            "checks": {
+              "a1": "Partly supported. The first-quarter loss matched guidance already issued, which the company reiterated rather than cut further. One quarter does not distinguish a temporary buildout cost from a lasting margin problem."
+            }
+          },
+          {
+            "event_ids": [
+              "e2"
+            ],
+            "narrative": "Five months after the cutoff, the incentive law the packet had flagged only as proposed was signed, creating a new production credit for US-made solar components.",
+            "checks": {
+              "a3": "Supported. The manufacturing incentive legislation was signed into law, creating a per-component production credit for US-made modules. This record does not establish how durable that credit will prove.",
+              "a4": "Unresolved. The incentive that reshaped the outlook was legislation passed after the cutoff, not information already available when the price was set. This record does not show how much of the guidance cut itself the entry price already reflected."
+            }
+          },
+          {
+            "event_ids": [
+              "e3",
+              "e5"
+            ],
+            "narrative": "In the three months after the new law, the company announced roughly $2.3 billion of further US capacity across two more facilities, citing the incentive directly and continuing the buildout begun before the cutoff.",
+            "checks": {
+              "a2": "Partly supported. The company committed to further US capacity, including a fourth facility, citing the new law, a sign management still expected demand to fill plants under construction. New commitments do not by themselves prove the order book was sufficient."
+            }
+          },
+          {
+            "event_ids": [
+              "e6"
+            ],
+            "narrative": "In December, regulators found that competitors were routing Chinese-made panels through other Southeast Asian countries to avoid existing duties, though a waiver meant no immediate cash impact.",
+            "checks": {
+              "a5": "Partly supported. Regulators found competitors circumventing existing China duties through other countries, evidence the module-pricing environment stayed contested. A duty waiver until mid-2024 means this record does not show any near-term effect on prices."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "narrative": "At the one-year mark, the full-year loss came in worse than even the guided low end, but the company guided 2023 to a sharp rebound to $7-8 of EPS.",
+            "checks": {
+              "a1": "Mixed. The full-year loss was worse than even the guided low end, with $73 million of start-up cost cited, but 2023 guidance points to $7-8 of EPS. This does not settle how much of the rebound reflects execution versus the new tax credit.",
+              "a5": "Not supported over the year. 2022 results were worse than guided despite real pricing pressure, but 2023 guidance rebounded sharply after the new law. This record does not show whether pricing pressure eased or was simply outweighed by policy."
+            }
+          },
+          {
+            "event_ids": [
+              "e9",
+              "e8"
+            ],
+            "narrative": "Over the following year, both new plants named in the packet's catalysts began production: the third US facility on the guided first-half-2023 schedule, the India facility several months behind its guided second-half-2023 target.",
+            "checks": {
+              "a2": "Supported. Both new plants in the packet's catalysts list began production, one on schedule and one several months late. This confirms the buildout was completed as planned; it does not show whether shipments matched the new capacity."
+            }
+          },
+          {
+            "event_ids": [
+              "e10"
+            ],
+            "narrative": "By mid-2025, a Senate committee proposed accelerating the phase-out of the same manufacturing credits the expansion had relied on, and shares fell sharply on the news.",
+            "checks": {
+              "a3": "Unresolved. A Senate committee proposed accelerating the manufacturing credit's phase-out from 2032 to 2028, three years after the credit took effect, putting its durability in question. Whether the proposal becomes law is not yet known at this date."
+            }
+          },
+          {
+            "event_ids": [
+              "e11"
+            ],
+            "narrative": "The bill that followed preserved the original phase-out schedule for solar manufacturing credits, unlike wind, while adding new foreign-sourcing rules manufacturers must meet to keep claiming them.",
+            "checks": {
+              "a3": "Partly supported. The signed law kept the original phase-out timeline for solar manufacturing credits intact, unlike wind, but added foreign-sourcing thresholds rising to 85% by 2030. This record does not establish whether First Solar's supply chain will meet those thresholds."
+            }
+          }
+        ]
+      }
     },
     "clinical-srpt-2021": {
       "setup": "bad_news_headline",
@@ -673,7 +928,93 @@
           "event_id": "e8",
           "stage_text": "Four years in, the company discloses the first patient death linked to the therapy, from acute liver failure. The indication had been widened to all ages the previous summer."
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the third exon-skipping drug's approval decision or any gene-therapy trial follow-up. The starting record leaves both the subgroup finding and the funding question unresolved.",
+          "checks": {
+            "a1": "Unresolved. The favorable subgroup result comes from one pre-specified cut of a 41-patient trial that did not reach significance in the full population; the starting record cannot establish whether it is reproducible or how the regulator will read it.",
+            "a2": "Unresolved. One controlled trial's non-significant primary endpoint, with the company citing an arm imbalance not independently confirmed, is not enough on its own to establish that the therapy does not work.",
+            "a3": "Unresolved. Revenue was growing but the third quarter alone was a $238 million cash outflow; the starting record cannot establish whether revenue and cash will cover the gene-therapy program without further financing.",
+            "a4": "Unresolved. Three of 41 treated patients had serious adverse events, including liver-enzyme elevation, in a therapy intended for children; the starting record cannot establish whether safety or efficacy will prove decisive.",
+            "a5": "Unresolved. The starting record contains a mixed clinical readout, approved sibling drugs on a surrogate endpoint, and an unresolved financing question, with no way yet to weigh them against each other."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e1",
+              "e2"
+            ],
+            "narrative": "The regulator approved the third exon-skipping drug on its guided deadline, and early data using the planned commercial manufacturing process showed no new safety signals, though one of eleven participants again had elevated liver enzymes.",
+            "checks": {
+              "a3": "Partly supported. The FDA approved the third exon-skipping drug, AMONDYS 45, on its guided deadline, adding to the revenue base independent of the gene-therapy program. This does not establish that revenue and cash will cover future financing needs.",
+              "a4": "Unresolved. Early data using the commercial manufacturing process reported no new safety signals, but one of eleven participants again had elevated liver enzymes, echoing the earlier signal. Too few patients to show whether safety will prove decisive."
+            }
+          },
+          {
+            "event_ids": [
+              "e4"
+            ],
+            "narrative": "The company financed a $1.13 billion program need through convertible notes rather than new equity, avoiding near-term dilution of existing shareholders.",
+            "checks": {
+              "a3": "Partly supported. The company raised $1.13 billion through convertible notes rather than equity, funding the program without near-term dilution. Debt financing of this scale does not establish that the underlying business can carry it without strain."
+            }
+          },
+          {
+            "event_ids": [
+              "e5"
+            ],
+            "narrative": "The FDA granted accelerated approval to the gene therapy for the ages 4-5 subgroup named in the packet, with the larger confirmatory trial still pending.",
+            "checks": {
+              "a1": "Partly supported. The FDA granted accelerated approval based on the same ages 4-5 subgroup from the packet trial. This is contingent on a confirmatory trial not yet reported; it does not settle whether the underlying effect is reproducible."
+            }
+          },
+          {
+            "event_ids": [
+              "e6"
+            ],
+            "narrative": "The larger confirmatory trial again missed its primary functional endpoint while meeting key secondary endpoints, repeating the pattern from the packet's trial in a bigger population; the approval stood.",
+            "checks": {
+              "a1": "Weakened. The confirmatory trial, run in a wider age group, again missed its primary functional endpoint, repeating the earlier pattern. Secondary endpoints favored treatment, so this does not settle whether the subgroup effect is real.",
+              "a2": "Mixed. The primary functional endpoint missed significance again, echoing the earlier trial, but key secondary endpoints favored treatment and the approval was not withdrawn. This does not establish either that the therapy works or that it does not."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "narrative": "The FDA expanded approval to all patients aged 4 and older, granting traditional, not just accelerated, approval for ambulatory patients based on the totality of the data.",
+            "checks": {
+              "a1": "Supported so far. The FDA granted traditional approval for ambulatory patients aged 4 and up, moving beyond the accelerated, subgroup-only approval. This reflects the regulator's read of the totality of data, not independent proof of the functional effect.",
+              "a2": "Weakened. The regulator granted full traditional approval for ambulatory patients despite the earlier functional misses, judging the totality of the data favorably. This does not establish that the therapy works in every patient it was later given to."
+            }
+          },
+          {
+            "event_ids": [
+              "e8",
+              "e9"
+            ],
+            "narrative": "Two patients died of acute liver failure after treatment in the months that followed, leading the company to halt trial dosing and suspend its 2025 revenue guidance.",
+            "checks": {
+              "a4": "Supported so far. Two acute liver failure deaths in treated patients, following the earlier liver-enzyme signal, led to a halted trial and an independent expert review. This does not yet settle whether safety will outweigh the approvals already granted.",
+              "a3": "Weakened. The second death led the company to suspend its 2025 revenue guidance and pause shipments to some patients. That undercuts the assumption that revenue and cash could absorb a setback without disruption to the business itself."
+            }
+          },
+          {
+            "event_ids": [
+              "e10",
+              "e11"
+            ],
+            "narrative": "Sarepta paused all U.S. shipments after an FDA request, and the FDA later added a boxed warning for fatal liver injury and narrowed the approval back to ambulatory patients only, removing the 2024 non-ambulatory expansion.",
+            "checks": {
+              "a1": "Not supported for the full approved population. The FDA narrowed the indication back to ambulatory patients after fatal liver injuries in non-ambulatory patients, reversing part of the 2024 expansion. The ages 4-5 ambulatory approval itself was not withdrawn.",
+              "a2": "Partly supported. The FDA required a boxed warning for fatal liver injury and narrowed the label, a regulatory judgment that the risk-benefit balance had shifted for some patients. Ambulatory patients retain approval, so this is not a full withdrawal.",
+              "a4": "Supported so far. A boxed warning for fatal liver injury and a narrowed indication followed two deaths, a safety consequence that reached the label itself. Whether this outweighs the efficacy case over the full history is still not fully settled."
+            }
+          }
+        ]
+      }
     },
     "growth-005": {
       "setup": "bad_news_headline",
@@ -792,7 +1133,103 @@
           "event_id": "e7",
           "stage_text": "Three years in, a third consecutive record, $10.2 billion of net income. In the same release the company guides the next year down, citing farm incomes and dealer inventories."
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the first new development covered by this story: the first fiscal-year close after your entry. The starting evidence -- one down quarter, cautious full-year guidance, and margin gains -- leaves the farm-cycle question unresolved.",
+          "checks": {
+            "a1": "Unresolved. A single quarter's results and guidance cannot establish whether the cycle has already bottomed.",
+            "a2": "Unresolved. One quarter of margin improvement does not show whether discipline will hold once volumes actually recover.",
+            "a3": "Unresolved. The starting record does not establish how much of a future recovery a 12-month-high price already reflects.",
+            "a4": "Unresolved. A single down quarter and cautious guidance cannot establish how long pandemic-era weakness will persist.",
+            "a5": "Choosing to wait is consistent with uncertainty. This outcome alone cannot tell us whether waiting was the better decision."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e1"
+            ],
+            "narrative": "The fiscal year that began with the down quarter closed with net income in line with the guidance given at cutoff, and the new year was guided higher on 'renewed optimism' about crop prices.",
+            "checks": {
+              "a1": "Partly supported. Full-year net income landed in line with the guidance visible at cutoff, and the following year was guided up on renewed optimism about crop prices. One guidance cycle does not yet confirm the cycle has turned.",
+              "a4": "Weakened. The new year's guidance pointed to improving farm demand rather than continued pandemic-era weakness. A single guidance update does not settle demand over multiple years."
+            }
+          },
+          {
+            "event_ids": [
+              "e2",
+              "e3"
+            ],
+            "narrative": "Workers at fourteen U.S. plants went on strike in October, the company's first walkout in decades; a new six-year contract ended the five-week strike in November.",
+            "checks": {
+              "a2": "Unresolved. A five-week strike halted production at fourteen plants during a strong-demand stretch; the settlement's terms were not itemized in this record, so whether margin discipline held through the disruption is not yet shown."
+            }
+          },
+          {
+            "event_ids": [
+              "e4"
+            ],
+            "narrative": "With the strike settled, the fiscal year closed at a record net income of $5.96 billion on 24% sales growth, more than double the year of the decision, and guidance pointed higher again.",
+            "checks": {
+              "a1": "Supported. Net income set a record, more than double the year of the decision, after the strike was settled. The cutoff quarter reads as close to the cycle's bottom.",
+              "a2": "Partly supported. Profit reached a record despite the strike, evidence of resilience through a demand recovery. This record does not separate cost-programme savings from pricing and mix effects.",
+              "a4": "Not supported. Demand accelerated to a record year rather than staying weak for years as this assumption expected. A single record year does not rule out weakness resuming later.",
+              "a5": "Mixed. Staying out through the record year that followed would not have been the cheaper choice on this path. That does not establish whether an even earlier or later entry would have done better."
+            }
+          },
+          {
+            "event_ids": [
+              "e5"
+            ],
+            "narrative": "A second consecutive record followed: net income of $7.13 billion, up 19%, with guidance again pointing higher for the year ahead.",
+            "checks": {
+              "a1": "Supported. A second consecutive record year followed the rebound guided a year earlier. Two record years running read as confirmation of a bottom near the cutoff quarter, though one path cannot rule out coincidence.",
+              "a2": "Partly supported. Profit continued climbing into a second record year. This record still does not separate margin discipline from the commodity-price tailwind behind the demand."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "narrative": "Three years in, a third consecutive record arrived: $10.2 billion in net income. In the same release, the next year was guided down, citing farm incomes and dealer inventories returning to 'mid-cycle levels.'",
+            "checks": {
+              "a1": "Supported. Three consecutive record years followed the cutoff quarter, consistent with a trough read at cutoff. The same release guided the next year down, a reminder this is a cycle rather than a one-way trend.",
+              "a2": "Supported. Profit roughly tripled within three years on the back of the first year's 24% sales growth. This record still cannot isolate cost-programme savings from pricing and mix.",
+              "a3": "Not supported. Over the three years since cutoff the share price roughly doubled alongside the earnings record, so the 12-month high at cutoff did not mark the top of the move. This does not establish whether the same reasoning holds at the later peak."
+            }
+          },
+          {
+            "event_ids": [
+              "e8"
+            ],
+            "narrative": "Four years on, nearly 300 jobs were cut at Midwest plants, citing a weakening farm economy and falling orders.",
+            "checks": {
+              "a4": "Not supported, though later weakness had a different cause. Layoffs four years on were attributed to a weakening farm economy rather than the pandemic-era demand this assumption named at cutoff."
+            }
+          },
+          {
+            "event_ids": [
+              "e9"
+            ],
+            "narrative": "Full-year net income fell 30% from the prior record to $7.10 billion, and the following year was guided down further to $5.0-5.5 billion amid a steep agricultural downturn.",
+            "checks": {
+              "a1": "Mixed. A downturn arrived four years after cutoff, well beyond the near-term bottom this assumption addressed. It does not overturn that the cutoff quarter itself read as close to a trough; cycles evidently turn more than once.",
+              "a2": "Weakened. Net income fell 30% from the prior record as volumes and pricing softened. This does not by itself show how much of the earlier margin gains were given back versus held."
+            }
+          },
+          {
+            "event_ids": [
+              "e10"
+            ],
+            "narrative": "By the final data point covered here, quarterly net income was down 26% year over year, with tariff costs near $200 million cited alongside the decline, and shares fell in premarket trading on the report.",
+            "checks": {
+              "a1": "Mixed. Quarterly income fell 26% with tariff costs cited, extending the downturn from the prior update. This does not overturn that the cutoff quarter was close to a bottom within its own multi-year cycle.",
+              "a2": "Weakened further. Tariff costs and falling income continued the pattern from the prior year's downturn. This record still cannot separate cost discipline from cyclical and trade pressures."
+            }
+          }
+        ]
+      }
     },
     "growth-004": {
       "setup": "analysts_disagree",
@@ -914,7 +1351,96 @@
           "event_id": "e12",
           "stage_text": "Five years on, fiscal 2025 net sales fall 1.7% and comparable sales 2.6%, a second consecutive down year, with a new CEO about to take over."
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the first new development covered by this story. The starting record showed one strong pandemic year, roughly $9 billion in claimed market-share gains, and no forward guidance, leaving the durability question unresolved.",
+          "checks": {
+            "a1": "Unresolved. One pandemic year of reported market-share gains is not enough to establish whether the customers who switched will stay once conditions normalize.",
+            "a2": "Unresolved. Digital sales are growing fast and already affecting gross margin at the starting point; this record cannot establish whether that pattern continues, worsens, or eases.",
+            "a3": "Unresolved. Declining to give guidance amid uncertainty could reflect genuine caution or an early warning; a single decision does not distinguish between them.",
+            "a4": "Unresolved. One extraordinary pandemic year of results is not enough to establish whether this margin and sales level will hold, fade gradually, or drop sharply.",
+            "a5": "Choosing not to take a position is consistent with genuine uncertainty. This record alone cannot tell us whether waiting was the better decision."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e1"
+            ],
+            "narrative": "One year in, FY2021 comparable sales rose a further 12.7% (digital up 20.8%) and adjusted EPS grew 44%. The company also resumed forward guidance, though it flagged that Q1 FY2022 margin would come in well below last year's 9.8% rate.",
+            "checks": {
+              "a1": "Supported for one year. FY2021 comparable sales grew a further 12.7% on top of FY2020's surge. One more year of growth does not establish whether the switched customers will stay over a longer horizon.",
+              "a2": "Partly supported. Digital sales grew 20.8% in FY2021 alongside continued overall growth, but management guided Q1 FY2022 margin well below last year's rate. This does not yet show whether digital growth itself will crush margin.",
+              "a3": "Supported. The company ended its no-guidance stance and resumed forward guidance a year after cutoff. One resumption does not establish whether this new guidance will hold up.",
+              "a4": "Weakened on sales. FY2021 comparable sales grew past FY2020's already-elevated base rather than reverting lower. Margin guidance pointed below last year's rate for next quarter, but that quarter had not yet been reported."
+            }
+          },
+          {
+            "event_ids": [
+              "e2"
+            ],
+            "narrative": "Two and a half months later, Q1 FY2022 operating margin fell to 5.3% from 9.8% a year earlier as inventory built up, and the company cut its full-year margin guidance to about 6%, down from the prior 8%-or-higher target.",
+            "checks": {
+              "a2": "Weakened. Q1 FY2022 operating margin fell to 5.3% from 9.8% as inventory rose, and full-year guidance was cut toward 6%. One quarter does not settle whether the margin pressure will persist.",
+              "a3": "Supported, and tested. The resumed guidance held for barely a quarter before being cut, consistent with real unpredictability rather than false caution behind the original refusal to guide."
+            }
+          },
+          {
+            "event_ids": [
+              "e3"
+            ],
+            "narrative": "Three weeks after that, Target announced further inventory markdowns, order cancellations and excess-inventory removal in discretionary categories, cutting its Q2 operating-margin guidance to about 2%, down from the roughly 5.3% level implied three weeks earlier.",
+            "checks": {
+              "a2": "Not supported for this stretch. Q2 margin guidance was cut again, to about 2%, three weeks after the first cut, as the company worked to right-size discretionary inventory. This still does not separate inventory mismanagement from a structural fulfilment cost.",
+              "a3": "Supported, further. Guidance was cut twice within three weeks of resuming, reinforcing that the earlier silence reflected genuine unpredictability rather than a bluff. It does not show how much of that unpredictability was self-inflicted."
+            }
+          },
+          {
+            "event_ids": [
+              "e4"
+            ],
+            "narrative": "Q2 FY2022 operating margin then fell to 1.2% from 9.8%, and net income fell to $183 million from $1.817 billion, which the company attributed to markdown rates, inventory impairments and elevated shrink, freight and labor costs.",
+            "checks": {
+              "a2": "Not supported. Q2 FY2022 operating margin fell to 1.2% and net income fell 90%, with the company citing markdowns and inventory impairments in discretionary categories. This ties the crush to inventory management more than to digital fulfilment itself."
+            }
+          },
+          {
+            "event_ids": [
+              "e5"
+            ],
+            "narrative": "By the two-year mark, full-year FY2022 sales rose 2.8% to $107.6 billion, but operating income fell 57% to $3.8 billion. Management guided a return to its prior 6% operating margin 'as early as' fiscal 2024.",
+            "checks": {
+              "a2": "Not supported for the full year. FY2022 operating income fell 57% despite 2.8% sales growth, confirming a full-year margin crush rather than one bad quarter. The company still ties this mainly to inventory and cost pressures.",
+              "a4": "Supported on margins. Full-year FY2022 operating income fell 57%, and the company guided a return to its prior margin only 'as early as' fiscal 2024. This does not show how much of the drop was self-inflicted versus structural."
+            }
+          },
+          {
+            "event_ids": [
+              "e6"
+            ],
+            "narrative": "At roughly two and a half years, Q2 FY2023 comparable sales fell 5.4%, the first quarterly decline in six years, and full-year EPS guidance was cut again amid softer discretionary demand and a backlash over the company's Pride-Month merchandise.",
+            "checks": {
+              "a1": "Weakened. Q2 FY2023 comparable sales fell 5.4%, the first decline in six years, amid softer demand and a merchandise-related backlash. The company said it could not isolate the backlash's dollar impact, so this does not settle how much reflects lost share."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "narrative": "A month later, Target closed nine stores across four states, citing theft and organized retail crime threatening staff and guest safety, after flagging that shrink would reduce full-year profit by more than $500 million."
+          },
+          {
+            "event_ids": [
+              "e8"
+            ],
+            "narrative": "At the three-year mark, full-year FY2023 comparable sales fell 3.7%, a second down year, while EPS rose 49% to $8.94 on more than $500 million of cost savings. Management guided FY2024 comparable sales flat to up 2%.",
+            "checks": {
+              "a1": "Mixed. FY2023 comparable sales fell 3.7%, extending the prior quarter's decline, while EPS grew mainly through cost cuts rather than sales strength. This still cannot separate a lasting loss of share from a cyclical pullback in discretionary spending."
+            }
+          }
+        ]
+      }
     },
     "growth-008": {
       "setup": "analysts_disagree",
@@ -1041,7 +1567,82 @@
           "event_id": "e8",
           "stage_text": "Four years in, the bank buys substantially all of First Republic Bank from the FDIC after a run on regional banks. The purchase adds deposits and wealth clients at a discount; the integration cost is not yet known."
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the first new development covered by this story. The starting record leaves the question the case turned on unresolved.",
+          "checks": {
+            "a1": "Unresolved. A single quarter's jump in loan-loss provisioning is not enough on its own to show whether the credit cycle is turning or the move was a one-off.",
+            "a2": "Unresolved. Full-year 2018 results already reflect the rate increases to date; the starting record cannot show whether future rate moves will keep lifting income or reverse.",
+            "a3": "Unresolved. A strong capital ratio and ongoing branch and technology investment at the cutoff do not by themselves show how the bank would perform through a future downturn.",
+            "a4": "Unresolved. A single quarter's rise in provisions and expenses is not enough to establish that the earnings cycle has peaked.",
+            "a5": "Choosing not to take a position is consistent with uncertainty. This outcome alone cannot tell us whether that was the better decision."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e1"
+            ],
+            "narrative": "One year on, full-year 2019 net income set a fresh record at $36.4 billion, up from $32.5 billion in 2018. The quarter that started the case looks, so far, like a blip.",
+            "checks": {
+              "a1": "Supported within the year. Full-year 2019 net income reached a record $36.4 billion, extending the trend the December quarter had interrupted. A single subsequent year does not rule out a later downturn.",
+              "a4": "Not supported yet. Profit rose to a record in 2019 rather than turning down, extending the cycle instead of marking its top. This does not rule out a peak arriving later."
+            }
+          },
+          {
+            "event_ids": [
+              "e4"
+            ],
+            "narrative": "Two years in, the pandemic pushed full-year 2020 net income down to $29.1 billion as credit reserves were built through the year, while loan losses stayed far smaller than the reserves taken.",
+            "checks": {
+              "a1": "Mixed. Full-year 2020 net income fell as reserves were built for an anticipated wave of pandemic losses that, so far, has been smaller than the reserves. The move traces to the pandemic, not the December 2018 quarter.",
+              "a2": "Not supported yet. Rates were cut to near zero in 2020 and full-year net income fell as reserves were built. This one year does not settle how a future rate path affects income.",
+              "a4": "Partly supported, for an unrelated reason. Provisions rose sharply and earnings fell in 2020, but the cause was pandemic reserve-building, not the pattern the December 2018 quarter had suggested."
+            }
+          },
+          {
+            "event_ids": [
+              "e5"
+            ],
+            "narrative": "Three years in, full-year 2021 net income set a new record at $48.3 billion, aided by a $1.8 billion fourth-quarter release of reserves built during the pandemic.",
+            "checks": {
+              "a1": "Supported again. 2021 net income reached a further record after the 2020 dip, consistent with the December 2018 quarter having been a blip rather than a lasting cycle turn.",
+              "a4": "Not supported. The bank released reserves rather than building them in 2021, and net income set a fresh record. The earnings cycle has not yet shown a sustained top."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "narrative": "Four years in, full-year 2022 net income was $37.7 billion as rising rates lifted income and reserve-building resumed; management said the firm had already exceeded its capital target.",
+            "checks": {
+              "a2": "Supported. Full-year 2022 net income was $37.7 billion, with rising rates cited as a driver of income even as reserve-building resumed. This one year does not show how long the rate tailwind lasts.",
+              "a4": "Partly supported. Reserve-building resumed in the fourth quarter of 2022 alongside continued profit growth. Renewed provisioning is consistent with a later-stage cycle, but income has not yet turned down."
+            }
+          },
+          {
+            "event_ids": [
+              "e8"
+            ],
+            "narrative": "Four years and a few months in, the bank acquired substantially all of First Republic Bank's assets and deposits from the FDIC after regulators seized it, adding deposits and wealth clients at a discount; integration costs were not yet known.",
+            "checks": {
+              "a3": "Supported. The bank acquired a seized regional bank's assets and deposits from the FDIC, a direct instance of scale and capital being used to take share. Integration costs are not yet known."
+            }
+          },
+          {
+            "event_ids": [
+              "e10"
+            ],
+            "narrative": "Five years in, full-year 2023 net income set a further record at $49.6 billion, absorbing a $2.9 billion FDIC special assessment tied to that year's bank failures, with First Republic contributing to results.",
+            "checks": {
+              "a1": "Supported across the window. Full-year net income set records in 2019, 2021 and 2023, with the pandemic year as the only dip. The December 2018 quarter did not mark a lasting credit-cycle turn.",
+              "a2": "Supported over the window, after a detour. Net income reached a record $49.6 billion in 2023 following the rate-driven 2022 gain, but the path went through a near-zero-rate dip first. Rates alone do not explain every year.",
+              "a4": "Not supported over the five years. Profit set records in three of five years, with provisioning rises in 2020 and 2022 each followed by renewed income growth rather than a lasting peak. A later downturn is not ruled out."
+            }
+          }
+        ]
+      }
     },
     "growth-009": {
       "setup": "familiar_product",
@@ -1158,7 +1759,97 @@
           "event_id": "e7",
           "stage_text": "Two years on, 2024 finished flat and 2025 earnings are guided down in the mid-30% range. The CEO has announced her retirement. Salty snacks, the other business, are the bright spot."
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the first new development in this story. The starting evidence leaves pricing power, cost inflation and the growth multiple unresolved.",
+          "checks": {
+            "a1": "Unresolved. Guidance for 6 to 8% sales growth does not yet show whether pricing power will hold through the year.",
+            "a2": "Unresolved. The cutoff guidance embeds margin assumptions that have not yet been tested by a full year of input costs.",
+            "a3": "Unresolved. This record does not establish whether the market will keep paying today's multiple for that growth.",
+            "a4": "Unresolved. A single guidance deceleration from 2022 to 2023 does not establish whether it is the start of a longer trend.",
+            "a5": "Choosing not to take a position is consistent with uncertainty. This outcome alone cannot tell us whether waiting was the better decision."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e1"
+            ],
+            "narrative": "First-quarter 2023 results beat plan and the company raised its full-year outlook; pricing held and volume did not collapse.",
+            "checks": {
+              "a1": "Supported. Q1 2023 net sales rose 12.1% and adjusted EPS rose 17%, with full-year guidance raised toward the high end. One strong quarter does not establish pricing power for the full year."
+            }
+          },
+          {
+            "event_ids": [
+              "e2"
+            ],
+            "narrative": "Second-quarter 2023 results extended the pattern, with sales and adjusted earnings growing again and full-year EPS guidance raised further.",
+            "checks": {
+              "a1": "Supported. Q2 2023 sales grew 5.0% and adjusted EPS grew 11.7%, and full-year adjusted EPS guidance was raised again. Two quarters of beats still do not establish pricing power beyond this year."
+            }
+          },
+          {
+            "event_ids": [
+              "e3"
+            ],
+            "narrative": "Full-year 2023 sales grew about 8%, beating the guidance given a year earlier, but the same release guided 2024 to just 2-3% sales growth and flat earnings, naming historic cocoa prices as the reason.",
+            "checks": {
+              "a1": "Supported through 2023. Full-year sales grew about 8%, above the guidance given at the cutoff. This does not show how pricing power holds against the next round of increases forced by cocoa costs.",
+              "a2": "Not supported. 2024 guidance moved to flat earnings growth, with management naming historically high cocoa prices as the specific constraint. This does not establish how long elevated cocoa costs persist.",
+              "a4": "Partly supported. 2024 guidance decelerated sharply to 2-3% sales growth and flat earnings, matching the direction flagged. The stated cause was a raw-material cost shock, not the demand-side slowdown implied at the cutoff."
+            }
+          },
+          {
+            "event_ids": [
+              "e4"
+            ],
+            "narrative": "Weeks later, cocoa futures more than doubled amid West African crop failures, the shock behind the cost pressure the prior update flagged.",
+            "checks": {
+              "a2": "Not supported. Cocoa futures more than doubled in early 2024 amid West African crop failures cutting supply from countries providing over 60% of world output. This does not establish how long the shock lasts."
+            }
+          },
+          {
+            "event_ids": [
+              "e5"
+            ],
+            "narrative": "By November 2024 results were falling short of even the reduced guidance: quarterly sales declined and full-year guidance was cut again, to flat sales and a mid-single-digit earnings decline.",
+            "checks": {
+              "a2": "Not supported. Full-year 2024 guidance was cut again, sales to flat from 2-3% growth and adjusted EPS to 'down mid-single-digits' from 'down slightly,' still citing cocoa costs. This does not establish when costs ease.",
+              "a4": "Supported. The deceleration flagged at the one-year mark continued: guidance was cut again to flat sales and declining earnings, citing cocoa costs and a challenging consumer environment. This does not separate cost effects from demand."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "narrative": "Full-year 2024 finished essentially flat, and 2025 guidance called for adjusted EPS down in the mid-30% range on a further cocoa price surge.",
+            "checks": {
+              "a2": "Not supported. 2025 guidance called for adjusted EPS down in the mid-30% range on higher commodity costs, rebased incentive pay and a higher tax rate. Cost inflation had not eased two years after the cutoff.",
+              "a4": "Supported. The deceleration continued past the one-year mark: full-year 2024 finished flat and 2025 adjusted EPS was guided down substantially. This does not separate the demand and cost components of the slowdown."
+            }
+          },
+          {
+            "event_ids": [
+              "e9"
+            ],
+            "narrative": "2025 guidance was cut again, now citing tariffs on top of sustained cocoa costs, with adjusted EPS guided down 36-38% for the year.",
+            "checks": {
+              "a2": "Not supported. Guidance was cut again to adjusted EPS down 36-38%, adding $170-180 million of tariff cost on top of cocoa prices still described as significantly elevated. Cost inflation had not eased by mid-2025."
+            }
+          },
+          {
+            "event_ids": [
+              "e10"
+            ],
+            "narrative": "By late 2025 the confectionery-side cost pressure continued, but Salty Snacks, soft through 2024, returned to double-digit growth.",
+            "checks": {
+              "a4": "Mixed. North America Salty Snacks, soft in 2024, returned to 10% growth in Q3 2025, a bright spot the cutoff record also flagged as a possible second engine. Confectionery-side deceleration itself is not reversed by this."
+            }
+          }
+        ]
+      }
     },
     "commercial-gilead-2019": {
       "setup": "friend_warning",
@@ -1281,7 +1972,95 @@
           "event_id": "e9",
           "stage_text": "Four years in, 2022 revenue is flat at $27.3 billion: the lead HIV regimen passes $10 billion, the pandemic antiviral falls 30%, and the acquired cancer drug is a day from approval in a common form of breast cancer."
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the first new development covered by this story. The starting evidence leaves the investment question unresolved.",
+          "checks": {
+            "a1": "Unresolved. FY2018 showed HIV growth partly offsetting the hepatitis C decline, but one year of that mix shift cannot establish whether the pattern continues over a longer horizon.",
+            "a2": "Unresolved. The CEO transition had not yet occurred and no acquisition or pipeline strategy had been announced as of the cutoff.",
+            "a3": "Unresolved. A cash balance and a revenue multiple cannot by themselves establish whether the starting price already reflects the risks the business faces.",
+            "a4": "Unresolved. Generic competition was disclosed as a 2019 guidance risk mainly for other products; the starting record cannot show whether it later reaches the HIV franchise.",
+            "a5": "Unresolved. Revenue had fallen for a second straight year at the cutoff; this alone cannot settle whether the decline continues or how any return compares with the market."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e1"
+            ],
+            "narrative": "Three weeks after the cutoff, the incoming chief executive took over as previously scheduled, succeeding the interim CEO. No new strategy had been announced yet."
+          },
+          {
+            "event_ids": [
+              "e2"
+            ],
+            "narrative": "One year in, full-year 2019 revenue was $22.4 billion: HIV revenue rose to $16.4 billion while hepatitis C fell to $2.9 billion, continuing the divergence described at the cutoff.",
+            "checks": {
+              "a1": "Supported. HIV revenue rose to $16.4 billion while hepatitis C fell to $2.9 billion in 2019, continuing the pattern described at the cutoff. One year does not establish a longer trend.",
+              "a5": "Weakened. Total revenue held near $22.4 billion instead of shrinking further, as HIV growth offset the hepatitis C decline. This does not address the written-off program or the multi-year return."
+            }
+          },
+          {
+            "event_ids": [
+              "e3"
+            ],
+            "narrative": "Nineteen months in, the new CEO committed the company's cash to a large deal, agreeing to buy Immunomedics for about $21 billion to add the oncology drug Trodelvy.",
+            "checks": {
+              "a2": "Supported in form. The new CEO used cash to acquire Immunomedics for about $21 billion, adding an approved oncology drug. This does not yet establish whether the deal earns a return."
+            }
+          },
+          {
+            "event_ids": [
+              "e4"
+            ],
+            "narrative": "A month later, a generic version of an older HIV drug, Truvada, launched in the US about a year earlier than the underlying patent expiry.",
+            "checks": {
+              "a4": "Partly supported. Generic competition, previously flagged mainly around hepatitis C and other products, reached an HIV drug a year earlier than expected. This does not show the effect on overall HIV revenue."
+            }
+          },
+          {
+            "event_ids": [
+              "e5",
+              "e6"
+            ],
+            "narrative": "Full-year 2020 revenue rose 10% to $24.7 billion, boosted by $2.8 billion from Veklury, newly approved for COVID-19. HIV revenue grew more slowly to $16.9 billion as hepatitis C fell to $2.1 billion, while GAAP net income fell to $123 million.",
+            "checks": {
+              "a1": "Mixed. HIV revenue grew again, to $16.9 billion, but more slowly, while hepatitis C kept falling. Most of the year's revenue growth came from a new pandemic-linked product, not the HIV/HCV mix.",
+              "a4": "Weakened. HIV revenue still grew to $16.9 billion despite the earlier Truvada generic entry, so competitive erosion has not yet visibly spread to overall HIV growth. A single year is not conclusive."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "checks": {
+              "a2": "Unresolved, in progress. The FDA accepted for priority review an application to expand Trodelvy into a much larger breast-cancer population. This is a regulatory step, not yet a decision on the acquisition's return."
+            }
+          },
+          {
+            "event_ids": [
+              "e8"
+            ],
+            "narrative": "Sunlenca, a twice-yearly injectable, was approved for patients with multidrug-resistant HIV, extending the HIV franchise into a new dosing category.",
+            "checks": {
+              "a1": "Supported. The HIV franchise was extended with approval of a new twice-yearly injectable for multidrug-resistant patients, continuing the HIV-side growth this assumption describes. Overall revenue growth is not shown by this event alone."
+            }
+          },
+          {
+            "event_ids": [
+              "e9",
+              "e10"
+            ],
+            "narrative": "Four years in, full-year 2022 revenue was flat at $27.3 billion: the lead HIV regimen passed $10 billion while the pandemic antiviral fell 30%. The next day, Trodelvy was approved in a much larger breast-cancer population.",
+            "checks": {
+              "a1": "Supported. The lead HIV regimen passed $10 billion in 2022 sales, continuing HIV-side growth, while the pandemic-linked product fell 30% as demand faded and hepatitis C continued its earlier decline.",
+              "a2": "Partly supported. The acquired oncology drug won approval in a much larger breast-cancer population, extending the second growth engine bought in 2020. Whether the roughly $21 billion price is earned back is not shown.",
+              "a5": "Weakened. Revenue held at $27.3 billion rather than shrinking further, with two acquisitions producing approved products. This record does not compare the five-year return against the market or other alternatives."
+            }
+          }
+        ]
+      }
     }
   }
 }

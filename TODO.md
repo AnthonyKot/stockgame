@@ -8,7 +8,8 @@ Implemented the user-approved bounded patch; pause for Nektar playtesting before
 - Default order: results/chart, selected-thesis check with source links, concise exit-scoped narrative. Full friend checks, horizon notes, event archive and alternative horizons are in a closed optional later-context section. Full outcome payloads still load after commitment; this is standalone presentation scoping, not campaign time-gating or access control.
 - Removed unsupported closing/legal/cash-retention clauses from three Nektar walkthrough stops. Reused existing evidence; 2019 and April 2022 wire sources reopened during this patch, but the two SEC source URLs could not be reopened. This is not a complete source re-verification or readiness certification.
 - Verified: all ten cases (`verify_cases.py`), builder regeneration, return arithmetic, simulator agreement, and `test_story_dates.js` (publication boundaries, early exits, all three horizons, no dated feedback in the player sheet). Updated `test_story_ui.cjs` passed on desktop and 390px: horizons, buy/short/skip, stop/target, reload before/within/after walkthrough, failed commitment/progress saves, optional later context and journal. Tests use isolated storage.
-- Remaining: user playtest; broader opening/investigation wording and editorial readiness triage; other nine stories still use their existing full-record thesis feedback. No campaign integration in this patch.
+- Final browser edge case passed: a 25% buy take-profit exits on 9 March 2018, before the first story event, and opens the unresolved debrief directly.
+- Remaining: user playtest; broader opening/investigation wording and editorial readiness triage. No campaign integration in this patch. Dated feedback now covers all ten cases (Claude, 2026-09-10).
 
 # Tomorrow's work — 9 September 2026 handoff
 
@@ -43,8 +44,8 @@ Latest small code patch touched `site/play.html`, `site/journal.html`, added `sc
 - [ ] Repair walkthrough chronology: June 2018 is about two months after the recorded April closing, not four; do not imply the class action had ended in 2019; do not mention April 2022 termination at a March 2022 stop.
 - [ ] Respect approximate dates and source availability. An event described retrospectively is not automatically contemporaneous evidence at the event date.
 - [ ] Rewrite overconfident thesis verdicts. “Every subsequent data point subtracted” conflicts with the packet's recovery account. “Financing was never the problem,” money received versus financing available, and price changes attributed to one cause need evidence or narrower wording. Remove hindsight scolding such as “the packet said so.”
-- [ ] Scope walkthrough stops and thesis feedback to the selected horizon/actual exit. For a February 2018 one-year call, the main story ends in February 2019; 2019/2022 developments belong in explicitly optional later context. Verify one-, three- and five-year choices, plus any retained early-exit behavior.
-- [ ] Put explanation earlier in the debrief: results/chart -> selected-thesis check and concise horizon narrative -> optional friend check, alternative horizons, full event archive and dividends. Avoid telling the same story three times.
+- [x] Scope walkthrough stops and thesis feedback to the selected horizon/actual exit. For a February 2018 one-year call, the main story ends in February 2019; 2019/2022 developments belong in explicitly optional later context. Verify one-, three- and five-year choices, plus any retained early-exit behavior.
+- [x] Put explanation earlier in the debrief: results/chart -> selected-thesis check and concise horizon narrative -> optional friend check, alternative horizons, full event archive and dividends. Avoid telling the same story three times.
 - [ ] Playtest Nektar on desktop and mobile, including reload halfway through. Pause for the user's feedback before expanding the pattern.
 
 The detailed handoff has examples and reproduction steps. Historical facts still require source checking when repaired; the previous review primarily identified contradictions within local content.
