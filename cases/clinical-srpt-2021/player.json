@@ -589,7 +589,55 @@
           }
         ]
       }
-    ]
+    ],
+    "presentation": {
+      "intro": "Read the operating results separately from the price investors are paying.",
+      "groups": [
+        {
+          "title": "Business performance",
+          "metrics": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "title": "Cash position",
+          "metrics": [
+            3
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Revenue",
+          "context": "Revenue from the two approved drugs only, not collaboration or license income. Up about 23% year over year, continuing a trend visible in prior quarters; says nothing about the investigational gene-therapy program.",
+          "metric": "Product revenue and growth"
+        },
+        {
+          "label": "Operating margin",
+          "context": "Operating loss divided by total revenue (product plus collaboration/license) for the quarter. The margin has narrowed from a year earlier but the company remains deeply loss-making at the operating level.",
+          "metric": "Operating margin"
+        },
+        {
+          "label": "Operating cash flow",
+          "context": "Derived by subtracting six-month year-to-date operating cash flow from nine-month, isolating the third quarter alone. The nine-month total is positive mainly from an earlier-quarter inflow not broken out in this packet.",
+          "metric": "Operating cash flow (most recent quarter, standalone)"
+        },
+        {
+          "label": "Cash and investments",
+          "context": "Cash and cash equivalents plus short-term investments. A separate $700.5m long-term debt balance at quarter-end is not netted against either figure, since a comparable year-earlier debt total is not established here.",
+          "metric": "Cash and investments"
+        },
+        {
+          "label": "R&D spending",
+          "context": "Quarterly R&D expense as reported in the earnings release. Revenue stays concentrated: FY2019 revenue was almost entirely from the older approved drug, since the second was approved only in mid-December 2019.",
+          "metric": "R&D spending and revenue concentration"
+        }
+      ],
+      "valuation_context": "The revenue multiple uses FY2019 revenue (year ended Dec 2019), not trailing-twelve-month or the Q3 2020 figure shown above. Share count and cash figures are as of Sep 30, 2020, predating the Jan 7, 2021 price."
+    }
   },
   "what_changed": [
     {

@@ -2,7 +2,10 @@
   "candidate_id": "growth-007",
   "schema_version": "mvp-1",
   "cutoff": "2022-03-02T09:00:00-05:00",
-  "horizon": {"unit": "calendar_years", "count": 1},
+  "horizon": {
+    "unit": "calendar_years",
+    "count": 1
+  },
   "exchange_calendar": "XNYS",
   "sector_module": "operating",
   "masked": {
@@ -36,10 +39,16 @@
         "unit": "USD_millions",
         "period": "FY2021",
         "available_at": "2022-03-01",
-        "source_ids": ["fslr-8k-q4fy21", "fslr-10k-fy2021"],
+        "source_ids": [
+          "fslr-8k-q4fy21",
+          "fslr-10k-fy2021"
+        ],
         "status": "reported",
         "definition": "GAAP net sales (product and service revenue), fiscal year ended December 31, 2021 [c2]",
-        "prior": {"value": 2711.3, "period": "FY2020"}
+        "prior": {
+          "value": 2711.3,
+          "period": "FY2020"
+        }
       },
       {
         "label": "Gross margin",
@@ -47,10 +56,15 @@
         "unit": "percent",
         "period": "FY2021",
         "available_at": "2022-03-01",
-        "source_ids": ["fslr-10k-fy2021"],
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ],
         "status": "derived",
         "definition": "gross profit ÷ net sales, FY2021: 729.954 / 2923.377",
-        "prior": {"value": 25.11, "period": "FY2020"}
+        "prior": {
+          "value": 25.11,
+          "period": "FY2020"
+        }
       },
       {
         "label": "Operating margin",
@@ -58,10 +72,15 @@
         "unit": "percent",
         "period": "FY2021",
         "available_at": "2022-03-01",
-        "source_ids": ["fslr-10k-fy2021"],
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ],
         "status": "derived",
         "definition": "operating income ÷ net sales, FY2021: 586.751 / 2923.377",
-        "prior": {"value": 11.71, "period": "FY2020"}
+        "prior": {
+          "value": 11.71,
+          "period": "FY2020"
+        }
       },
       {
         "label": "Free cash flow",
@@ -69,10 +88,15 @@
         "unit": "USD_millions",
         "period": "FY2021",
         "available_at": "2022-03-01",
-        "source_ids": ["fslr-10k-fy2021"],
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ],
         "status": "derived",
         "definition": "operating cash flow minus capital expenditures (payments to acquire property, plant and equipment), FY2021: 237.559 - 540.291",
-        "prior": {"value": -379.5, "period": "FY2020"}
+        "prior": {
+          "value": -379.5,
+          "period": "FY2020"
+        }
       },
       {
         "label": "Net cash (cash + short-term investments, less total debt)",
@@ -80,174 +104,1110 @@
         "unit": "USD_millions",
         "period": "2021-12-31",
         "available_at": "2022-03-01",
-        "source_ids": ["fslr-10k-fy2021"],
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ],
         "status": "derived",
         "definition": "cash and cash equivalents + current available-for-sale debt securities - LongTermDebt, at 2021-12-31: 1450.654 + 375.389 - 246.737",
-        "prior": {"value": 1459.9, "period": "2020-12-31"}
+        "prior": {
+          "value": 1459.9,
+          "period": "2020-12-31"
+        }
       }
     ],
     "history": [
-      {"row": "Revenue", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 3063.1, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "Q1 FY2020", "value": 532.1, "available_at": "2020-05-08", "source_ids": ["0001274494-20-000014"], "status": "reported"},
-        {"period": "Q2 FY2020", "value": 642.4, "available_at": "2020-08-07", "source_ids": ["0001274494-20-000036"], "status": "reported"},
-        {"period": "Q3 FY2020", "value": 927.6, "available_at": "2020-10-28", "source_ids": ["0001274494-20-000059"], "status": "reported"},
-        {"period": "Q4 FY2020", "value": 609.2, "available_at": "2021-02-25", "source_ids": ["fslr-8k-feb2021-guidance"], "status": "reported"},
-        {"period": "FY2020", "value": 2711.3, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "Q1 FY2021", "value": 803.4, "available_at": "2021-04-30", "source_ids": ["0001628280-21-008263"], "status": "reported"},
-        {"period": "Q2 FY2021", "value": 629.2, "available_at": "2021-07-30", "source_ids": ["0001274494-21-000024"], "status": "reported"},
-        {"period": "Q3 FY2021", "value": 583.5, "available_at": "2021-11-05", "source_ids": ["0001274494-21-000033"], "status": "reported"},
-        {"period": "Q4 FY2021", "value": 907.3, "available_at": "2022-03-01", "source_ids": ["fslr-8k-q4fy21"], "status": "reported"},
-        {"period": "FY2021", "value": 2923.4, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Gross profit", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 549.2, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "Q1 FY2020", "value": 90.3, "available_at": "2020-05-08", "source_ids": ["0001274494-20-000014"], "status": "reported"},
-        {"period": "Q2 FY2020", "value": 137.5, "available_at": "2020-08-07", "source_ids": ["0001274494-20-000036"], "status": "reported"},
-        {"period": "Q3 FY2020", "value": 293.0, "available_at": "2020-10-28", "source_ids": ["0001274494-20-000059"], "status": "reported"},
-        {"period": "Q4 FY2020", "value": 159.9, "available_at": "2021-02-25", "source_ids": ["fslr-8k-feb2021-guidance"], "status": "reported"},
-        {"period": "FY2020", "value": 680.7, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "Q1 FY2021", "value": 184.8, "available_at": "2021-04-30", "source_ids": ["0001628280-21-008263"], "status": "reported"},
-        {"period": "Q2 FY2021", "value": 174.1, "available_at": "2021-07-30", "source_ids": ["0001274494-21-000024"], "status": "reported"},
-        {"period": "Q3 FY2021", "value": 124.6, "available_at": "2021-11-05", "source_ids": ["0001274494-21-000033"], "status": "reported"},
-        {"period": "Q4 FY2021", "value": 246.5, "available_at": "2022-03-01", "source_ids": ["fslr-8k-q4fy21"], "status": "reported"},
-        {"period": "FY2021", "value": 730.0, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Operating income (loss)", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": -161.8, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "Q1 FY2020", "value": 1.7, "available_at": "2020-05-08", "source_ids": ["0001274494-20-000014"], "status": "reported"},
-        {"period": "Q2 FY2020", "value": 50.9, "available_at": "2020-08-07", "source_ids": ["0001274494-20-000036"], "status": "reported"},
-        {"period": "Q3 FY2020", "value": 207.2, "available_at": "2020-10-28", "source_ids": ["0001274494-20-000059"], "status": "reported"},
-        {"period": "Q4 FY2020", "value": 57.8, "available_at": "2021-02-25", "source_ids": ["fslr-8k-feb2021-guidance"], "status": "reported"},
-        {"period": "FY2020", "value": 317.5, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "Q1 FY2021", "value": 252.3, "available_at": "2021-04-30", "source_ids": ["0001628280-21-008263"], "status": "reported"},
-        {"period": "Q2 FY2021", "value": 110.4, "available_at": "2021-07-30", "source_ids": ["0001274494-21-000024"], "status": "reported"},
-        {"period": "Q3 FY2021", "value": 50.9, "available_at": "2021-11-05", "source_ids": ["0001274494-21-000033"], "status": "reported"},
-        {"period": "Q4 FY2021", "value": 173.2, "available_at": "2022-03-01", "source_ids": ["fslr-8k-q4fy21"], "status": "reported"},
-        {"period": "FY2021", "value": 586.8, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Net income (loss)", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": -114.9, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "Q1 FY2020", "value": 90.7, "available_at": "2020-05-08", "source_ids": ["0001274494-20-000014"], "status": "reported"},
-        {"period": "Q2 FY2020", "value": 36.9, "available_at": "2020-08-07", "source_ids": ["0001274494-20-000036"], "status": "reported"},
-        {"period": "Q3 FY2020", "value": 155.0, "available_at": "2020-10-28", "source_ids": ["0001274494-20-000059"], "status": "reported"},
-        {"period": "Q4 FY2020", "value": 115.7, "available_at": "2021-02-25", "source_ids": ["fslr-8k-feb2021-guidance"], "status": "reported"},
-        {"period": "FY2020", "value": 398.4, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "Q1 FY2021", "value": 209.7, "available_at": "2021-04-30", "source_ids": ["0001628280-21-008263"], "status": "reported"},
-        {"period": "Q2 FY2021", "value": 82.4, "available_at": "2021-07-30", "source_ids": ["0001274494-21-000024"], "status": "reported"},
-        {"period": "Q3 FY2021", "value": 45.2, "available_at": "2021-11-05", "source_ids": ["0001274494-21-000033"], "status": "reported"},
-        {"period": "Q4 FY2021", "value": 131.4, "available_at": "2022-03-01", "source_ids": ["fslr-8k-q4fy21"], "status": "reported"},
-        {"period": "FY2021", "value": 468.7, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Diluted EPS", "unit": "USD_per_share", "cells": [
-        {"period": "FY2019", "value": -1.09, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "Q1 FY2020", "value": 0.85, "available_at": "2020-05-08", "source_ids": ["0001274494-20-000014"], "status": "reported"},
-        {"period": "Q2 FY2020", "value": 0.35, "available_at": "2020-08-07", "source_ids": ["0001274494-20-000036"], "status": "reported"},
-        {"period": "Q3 FY2020", "value": 1.45, "available_at": "2020-10-28", "source_ids": ["0001274494-20-000059"], "status": "reported"},
-        {"period": "Q4 FY2020", "value": 1.08, "available_at": "2021-02-25", "source_ids": ["fslr-8k-feb2021-guidance"], "status": "reported"},
-        {"period": "FY2020", "value": 3.73, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "Q1 FY2021", "value": 1.96, "available_at": "2021-04-30", "source_ids": ["0001628280-21-008263"], "status": "reported"},
-        {"period": "Q2 FY2021", "value": 0.77, "available_at": "2021-07-30", "source_ids": ["0001274494-21-000024"], "status": "reported"},
-        {"period": "Q3 FY2021", "value": 0.42, "available_at": "2021-11-05", "source_ids": ["0001274494-21-000033"], "status": "reported"},
-        {"period": "Q4 FY2021", "value": 1.23, "available_at": "2022-03-01", "source_ids": ["fslr-8k-q4fy21"], "status": "reported"},
-        {"period": "FY2021", "value": 4.38, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Cash and cash equivalents", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 1352.7, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "FY2020", "value": 1227.0, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "FY2021", "value": 1450.7, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Short-term investments (marketable securities)", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 811.5, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "FY2020", "value": 520.1, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "FY2021", "value": 375.4, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Total long-term debt (current + noncurrent)", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 482.9, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "FY2020", "value": 287.1, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "FY2021", "value": 246.7, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Stockholders' equity", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 5096.8, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "FY2020", "value": 5520.9, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "FY2021", "value": 5959.6, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Total assets", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 7515.7, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "FY2020", "value": 7108.9, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "FY2021", "value": 7413.7, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Total liabilities", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 2418.9, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "FY2020", "value": 1588.0, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "FY2021", "value": 1454.2, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Common shares outstanding", "unit": "shares", "cells": [
-        {"period": "FY2019", "value": 105448921, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "FY2020", "value": 105980466, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "FY2021", "value": 106332315, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Operating cash flow", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 174.2, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "FY2020", "value": 37.1, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "FY2021", "value": 237.6, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Capital expenditures", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": 668.7, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "reported"},
-        {"period": "FY2020", "value": 416.6, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "reported"},
-        {"period": "FY2021", "value": 540.3, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "reported"}
-      ]},
-      {"row": "Free cash flow", "unit": "USD_millions", "cells": [
-        {"period": "FY2019", "value": -494.5, "available_at": "2020-02-21", "source_ids": ["fslr-xbrl-fy2019"], "status": "derived"},
-        {"period": "FY2020", "value": -379.5, "available_at": "2021-02-26", "source_ids": ["0001628280-21-003343"], "status": "derived"},
-        {"period": "FY2021", "value": -302.7, "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"], "status": "derived"}
-      ]}
-    ]
+      {
+        "row": "Revenue",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 3063.1,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 532.1,
+            "available_at": "2020-05-08",
+            "source_ids": [
+              "0001274494-20-000014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 642.4,
+            "available_at": "2020-08-07",
+            "source_ids": [
+              "0001274494-20-000036"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 927.6,
+            "available_at": "2020-10-28",
+            "source_ids": [
+              "0001274494-20-000059"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2020",
+            "value": 609.2,
+            "available_at": "2021-02-25",
+            "source_ids": [
+              "fslr-8k-feb2021-guidance"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 2711.3,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2021",
+            "value": 803.4,
+            "available_at": "2021-04-30",
+            "source_ids": [
+              "0001628280-21-008263"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2021",
+            "value": 629.2,
+            "available_at": "2021-07-30",
+            "source_ids": [
+              "0001274494-21-000024"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2021",
+            "value": 583.5,
+            "available_at": "2021-11-05",
+            "source_ids": [
+              "0001274494-21-000033"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2021",
+            "value": 907.3,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-8k-q4fy21"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 2923.4,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Gross profit",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 549.2,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 90.3,
+            "available_at": "2020-05-08",
+            "source_ids": [
+              "0001274494-20-000014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 137.5,
+            "available_at": "2020-08-07",
+            "source_ids": [
+              "0001274494-20-000036"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 293.0,
+            "available_at": "2020-10-28",
+            "source_ids": [
+              "0001274494-20-000059"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2020",
+            "value": 159.9,
+            "available_at": "2021-02-25",
+            "source_ids": [
+              "fslr-8k-feb2021-guidance"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 680.7,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2021",
+            "value": 184.8,
+            "available_at": "2021-04-30",
+            "source_ids": [
+              "0001628280-21-008263"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2021",
+            "value": 174.1,
+            "available_at": "2021-07-30",
+            "source_ids": [
+              "0001274494-21-000024"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2021",
+            "value": 124.6,
+            "available_at": "2021-11-05",
+            "source_ids": [
+              "0001274494-21-000033"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2021",
+            "value": 246.5,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-8k-q4fy21"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 730.0,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Operating income (loss)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": -161.8,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 1.7,
+            "available_at": "2020-05-08",
+            "source_ids": [
+              "0001274494-20-000014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 50.9,
+            "available_at": "2020-08-07",
+            "source_ids": [
+              "0001274494-20-000036"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 207.2,
+            "available_at": "2020-10-28",
+            "source_ids": [
+              "0001274494-20-000059"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2020",
+            "value": 57.8,
+            "available_at": "2021-02-25",
+            "source_ids": [
+              "fslr-8k-feb2021-guidance"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 317.5,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2021",
+            "value": 252.3,
+            "available_at": "2021-04-30",
+            "source_ids": [
+              "0001628280-21-008263"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2021",
+            "value": 110.4,
+            "available_at": "2021-07-30",
+            "source_ids": [
+              "0001274494-21-000024"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2021",
+            "value": 50.9,
+            "available_at": "2021-11-05",
+            "source_ids": [
+              "0001274494-21-000033"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2021",
+            "value": 173.2,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-8k-q4fy21"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 586.8,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net income (loss)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": -114.9,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 90.7,
+            "available_at": "2020-05-08",
+            "source_ids": [
+              "0001274494-20-000014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 36.9,
+            "available_at": "2020-08-07",
+            "source_ids": [
+              "0001274494-20-000036"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 155.0,
+            "available_at": "2020-10-28",
+            "source_ids": [
+              "0001274494-20-000059"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2020",
+            "value": 115.7,
+            "available_at": "2021-02-25",
+            "source_ids": [
+              "fslr-8k-feb2021-guidance"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 398.4,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2021",
+            "value": 209.7,
+            "available_at": "2021-04-30",
+            "source_ids": [
+              "0001628280-21-008263"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2021",
+            "value": 82.4,
+            "available_at": "2021-07-30",
+            "source_ids": [
+              "0001274494-21-000024"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2021",
+            "value": 45.2,
+            "available_at": "2021-11-05",
+            "source_ids": [
+              "0001274494-21-000033"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2021",
+            "value": 131.4,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-8k-q4fy21"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 468.7,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Diluted EPS",
+        "unit": "USD_per_share",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": -1.09,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 0.85,
+            "available_at": "2020-05-08",
+            "source_ids": [
+              "0001274494-20-000014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 0.35,
+            "available_at": "2020-08-07",
+            "source_ids": [
+              "0001274494-20-000036"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 1.45,
+            "available_at": "2020-10-28",
+            "source_ids": [
+              "0001274494-20-000059"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2020",
+            "value": 1.08,
+            "available_at": "2021-02-25",
+            "source_ids": [
+              "fslr-8k-feb2021-guidance"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 3.73,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2021",
+            "value": 1.96,
+            "available_at": "2021-04-30",
+            "source_ids": [
+              "0001628280-21-008263"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2021",
+            "value": 0.77,
+            "available_at": "2021-07-30",
+            "source_ids": [
+              "0001274494-21-000024"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2021",
+            "value": 0.42,
+            "available_at": "2021-11-05",
+            "source_ids": [
+              "0001274494-21-000033"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2021",
+            "value": 1.23,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-8k-q4fy21"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 4.38,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Cash and cash equivalents",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 1352.7,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 1227.0,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 1450.7,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Short-term investments (marketable securities)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 811.5,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 520.1,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 375.4,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total long-term debt (current + noncurrent)",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 482.9,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 287.1,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 246.7,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Stockholders' equity",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 5096.8,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 5520.9,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 5959.6,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total assets",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 7515.7,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 7108.9,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 7413.7,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total liabilities",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 2418.9,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 1588.0,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 1454.2,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Common shares outstanding",
+        "unit": "shares",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 105448921,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 105980466,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 106332315,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Operating cash flow",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 174.2,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 37.1,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 237.6,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Capital expenditures",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": 668.7,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2020",
+            "value": 416.6,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2021",
+            "value": 540.3,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Free cash flow",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2019",
+            "value": -494.5,
+            "available_at": "2020-02-21",
+            "source_ids": [
+              "fslr-xbrl-fy2019"
+            ],
+            "status": "derived"
+          },
+          {
+            "period": "FY2020",
+            "value": -379.5,
+            "available_at": "2021-02-26",
+            "source_ids": [
+              "0001628280-21-003343"
+            ],
+            "status": "derived"
+          },
+          {
+            "period": "FY2021",
+            "value": -302.7,
+            "available_at": "2022-03-01",
+            "source_ids": [
+              "fslr-10k-fy2021"
+            ],
+            "status": "derived"
+          }
+        ]
+      }
+    ],
+    "presentation": {
+      "intro": "Read the fiscal-year operating results separately from the market value implied by the price used elsewhere on this page.",
+      "groups": [
+        {
+          "title": "Business performance",
+          "metrics": [
+            0,
+            2,
+            1,
+            3
+          ]
+        },
+        {
+          "title": "Cash position",
+          "metrics": [
+            4
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Revenue",
+          "context": "GAAP net sales for fiscal 2021, up 7.8% year over year. FY2019 net sales were higher ($3,063.1M), so this growth resumes a prior peak rather than sets a new one.",
+          "metric": "Full-year net sales"
+        },
+        {
+          "label": "Gross margin",
+          "context": "Gross profit divided by net sales for fiscal 2021, essentially flat versus FY2020's 25.11%. A single annual figure; it does not show quarter-to-quarter variation within the year.",
+          "metric": "Gross margin"
+        },
+        {
+          "label": "Operating margin",
+          "context": "Operating income divided by net sales for fiscal 2021, up sharply from FY2020's 11.71%. One fiscal year only; does not by itself show whether this margin level holds.",
+          "metric": "Operating margin"
+        },
+        {
+          "label": "Free cash flow",
+          "context": "Operating cash flow minus capital expenditures; negative in both FY2021 and FY2020, as spending on manufacturing capacity has exceeded operating cash generated in each of those years.",
+          "metric": "Free cash flow"
+        },
+        {
+          "label": "Net cash",
+          "context": "Cash and short-term investments minus long-term debt, little changed from a year earlier despite the free-cash-flow outflow over the same period.",
+          "metric": "Net cash (cash + short-term investments, less total debt)"
+        }
+      ],
+      "valuation_context": "The multiple uses FY2021 net sales ($2,923.4M), the same period as the revenue tile above. Share count and net cash are as of December 31, 2021, about two months before the March 1, 2022 price used to derive market value."
+    }
   },
   "what_changed": [
     {
       "date": "2022-03-01",
       "fact": "FY2021 net sales were $2,923.4M (up 7.8% from $2,711.3M in 2020) with diluted EPS of $4.38; Q4 2021 net sales were $907.3M with diluted EPS of $1.23 [c2][c3][c4].",
       "relationship_to_business": "A year of revenue and earnings growth, accelerating into the fourth quarter.",
-      "source_ids": ["fslr-8k-q4fy21"],
+      "source_ids": [
+        "fslr-8k-q4fy21"
+      ],
       "status": "reported"
     },
     {
       "date": "2022-03-01",
       "fact": "2022 guidance calls for net sales of $2.4-$2.6B and diluted EPS of just $0.00-$0.60, both well below 2021's results and below the $4.00-$4.75 range most recently guided for 2021 [c6][c5].",
       "relationship_to_business": "A first-time 2022 guidance range implying a large profit step-down from the year just completed.",
-      "source_ids": ["fslr-8k-q4fy21", "fslr-8k-feb2021-guidance", "fslr-8k-q3-2021"],
+      "source_ids": [
+        "fslr-8k-q4fy21",
+        "fslr-8k-feb2021-guidance",
+        "fslr-8k-q3-2021"
+      ],
       "status": "reported"
     },
     {
       "date": "2022-03-01",
       "fact": "Planned 2022 capex of $850M-$1.1B, roughly double the $540.3M spent in 2021, funds a new U.S. facility and a first India facility, both targeted to start production in 2023 [c6][c10][c14].",
       "relationship_to_business": "Ties the lower profit guidance to a simultaneous step-up in capacity investment.",
-      "source_ids": ["fslr-8k-q4fy21", "fslr-10k-fy2021"],
+      "source_ids": [
+        "fslr-8k-q4fy21",
+        "fslr-10k-fy2021"
+      ],
       "status": "reported"
     }
   ],
   "sector_evidence": {
     "segment_table": [
-      {"segment": "Modules (primary reportable segment)", "metric": "Share of FY2021 net sales, third-party basis", "value": "approximately 80%", "period": "FY2021", "prior": null, "status": "reported", "source_ids": ["fslr-10k-fy2021"]},
-      {"segment": "Other (project development, O&M, primarily Japan; planned for sale H1 2022)", "metric": "Residual share of FY2021 net sales, third-party basis", "value": "approximately 20%", "period": "FY2021", "prior": null, "status": "derived", "source_ids": ["fslr-10k-fy2021"]},
-      {"segment": "Consolidated", "metric": "Discrete dollar segment revenue and operating-income table", "value": null, "period": "FY2021", "prior": null, "status": "missing", "source_ids": [], "reason": "A dollar-figure segment income statement (Modules vs Other) was not found in the accessible portions of the FY2021 10-K reviewed for this packet"}
+      {
+        "segment": "Modules (primary reportable segment)",
+        "metric": "Share of FY2021 net sales, third-party basis",
+        "value": "approximately 80%",
+        "period": "FY2021",
+        "prior": null,
+        "status": "reported",
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ]
+      },
+      {
+        "segment": "Other (project development, O&M, primarily Japan; planned for sale H1 2022)",
+        "metric": "Residual share of FY2021 net sales, third-party basis",
+        "value": "approximately 20%",
+        "period": "FY2021",
+        "prior": null,
+        "status": "derived",
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ]
+      },
+      {
+        "segment": "Consolidated",
+        "metric": "Discrete dollar segment revenue and operating-income table",
+        "value": null,
+        "period": "FY2021",
+        "prior": null,
+        "status": "missing",
+        "source_ids": [],
+        "reason": "A dollar-figure segment income statement (Modules vs Other) was not found in the accessible portions of the FY2021 10-K reviewed for this packet"
+      }
     ],
     "guidance_table": [
-      {"metric": "FY2021 diluted EPS", "prior_guidance": "$4.05-$4.75 (issued 2021-02-25)", "new_guidance": "$4.00-$4.60 (issued 2021-11-04, description 'maintained')", "date": "2021-11-04", "actual": "$4.38 (reported 2022-03-01)", "source_ids": ["fslr-8k-feb2021-guidance", "fslr-8k-q3-2021", "fslr-8k-q4fy21"]},
-      {"metric": "FY2021 net sales", "prior_guidance": "$2.85B-$3.0B (issued 2021-02-25)", "new_guidance": "$2.875B-$3.1B (issued 2021-11-04)", "date": "2021-11-04", "actual": "$2,923.4M (reported 2022-03-01)", "source_ids": ["fslr-8k-feb2021-guidance", "fslr-8k-q3-2021", "fslr-8k-q4fy21"]},
-      {"metric": "FY2021 capital expenditures", "prior_guidance": "$825M-$875M (referenced secondhand in the 2021-11-04 release as the prior figure; its original issuing document was not independently located in this evidence set)", "new_guidance": "$675M-$725M (issued 2021-11-04)", "date": "2021-11-04", "actual": "$540.3M (reported 2022-03-01)", "source_ids": ["fslr-8k-q3-2021", "fslr-10k-fy2021"]},
-      {"metric": "FY2022 net sales", "prior_guidance": "none (first guidance issued for FY2022)", "new_guidance": "$2.4B-$2.6B", "date": "2022-03-01", "actual": "not yet available", "source_ids": ["fslr-8k-q4fy21"]},
-      {"metric": "FY2022 diluted EPS", "prior_guidance": "none (first guidance issued for FY2022)", "new_guidance": "$0.00-$0.60", "date": "2022-03-01", "actual": "not yet available", "source_ids": ["fslr-8k-q4fy21"]},
-      {"metric": "FY2022 capital expenditures", "prior_guidance": "none (first guidance issued for FY2022); for reference, FY2021 capex guidance most recently stood at $675M-$725M versus $540.3M actually spent", "new_guidance": "$850M-$1.1B", "date": "2022-03-01", "actual": "not yet available", "source_ids": ["fslr-8k-q4fy21"]}
+      {
+        "metric": "FY2021 diluted EPS",
+        "prior_guidance": "$4.05-$4.75 (issued 2021-02-25)",
+        "new_guidance": "$4.00-$4.60 (issued 2021-11-04, description 'maintained')",
+        "date": "2021-11-04",
+        "actual": "$4.38 (reported 2022-03-01)",
+        "source_ids": [
+          "fslr-8k-feb2021-guidance",
+          "fslr-8k-q3-2021",
+          "fslr-8k-q4fy21"
+        ]
+      },
+      {
+        "metric": "FY2021 net sales",
+        "prior_guidance": "$2.85B-$3.0B (issued 2021-02-25)",
+        "new_guidance": "$2.875B-$3.1B (issued 2021-11-04)",
+        "date": "2021-11-04",
+        "actual": "$2,923.4M (reported 2022-03-01)",
+        "source_ids": [
+          "fslr-8k-feb2021-guidance",
+          "fslr-8k-q3-2021",
+          "fslr-8k-q4fy21"
+        ]
+      },
+      {
+        "metric": "FY2021 capital expenditures",
+        "prior_guidance": "$825M-$875M (referenced secondhand in the 2021-11-04 release as the prior figure; its original issuing document was not independently located in this evidence set)",
+        "new_guidance": "$675M-$725M (issued 2021-11-04)",
+        "date": "2021-11-04",
+        "actual": "$540.3M (reported 2022-03-01)",
+        "source_ids": [
+          "fslr-8k-q3-2021",
+          "fslr-10k-fy2021"
+        ]
+      },
+      {
+        "metric": "FY2022 net sales",
+        "prior_guidance": "none (first guidance issued for FY2022)",
+        "new_guidance": "$2.4B-$2.6B",
+        "date": "2022-03-01",
+        "actual": "not yet available",
+        "source_ids": [
+          "fslr-8k-q4fy21"
+        ]
+      },
+      {
+        "metric": "FY2022 diluted EPS",
+        "prior_guidance": "none (first guidance issued for FY2022)",
+        "new_guidance": "$0.00-$0.60",
+        "date": "2022-03-01",
+        "actual": "not yet available",
+        "source_ids": [
+          "fslr-8k-q4fy21"
+        ]
+      },
+      {
+        "metric": "FY2022 capital expenditures",
+        "prior_guidance": "none (first guidance issued for FY2022); for reference, FY2021 capex guidance most recently stood at $675M-$725M versus $540.3M actually spent",
+        "new_guidance": "$850M-$1.1B",
+        "date": "2022-03-01",
+        "actual": "not yet available",
+        "source_ids": [
+          "fslr-8k-q4fy21"
+        ]
+      }
     ],
     "capital_allocation": [
-      {"item": "Capital expenditures, actual", "value": "$540.3 million", "period": "FY2021", "status": "reported", "source_ids": ["fslr-10k-fy2021"]},
-      {"item": "Capital expenditures, guided", "value": "$850 million-$1.1 billion", "period": "FY2022", "status": "management_guidance", "source_ids": ["fslr-8k-q4fy21"]},
-      {"item": "Dividends", "value": "none paid or declared; no dividend policy stated in the FY2021 10-K's business/capital-allocation discussion", "period": "as of 2022-03-01", "status": "reported", "source_ids": ["fslr-10k-fy2021"]},
-      {"item": "Share buybacks", "value": "none disclosed in the accessible filing text reviewed", "period": "as of 2022-03-01", "status": "missing", "source_ids": [], "reason": "no buyback program was found in the sections of the FY2021 10-K reviewed for this packet"},
-      {"item": "Total long-term debt", "value": "$246.7 million ($3.9 million current, $236.0 million noncurrent)", "period": "2021-12-31", "status": "reported", "source_ids": ["fslr-10k-fy2021"]},
-      {"item": "Debt maturities within 24 months of the cutoff", "value": null, "period": "as of 2021-12-31", "status": "missing", "source_ids": [], "reason": "the exact maturity schedule was not located in the accessible filing text; only the $3.9 million current-portion figure from XBRL was available, suggesting limited near-term scheduled maturities without a confirmed full schedule"}
+      {
+        "item": "Capital expenditures, actual",
+        "value": "$540.3 million",
+        "period": "FY2021",
+        "status": "reported",
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ]
+      },
+      {
+        "item": "Capital expenditures, guided",
+        "value": "$850 million-$1.1 billion",
+        "period": "FY2022",
+        "status": "management_guidance",
+        "source_ids": [
+          "fslr-8k-q4fy21"
+        ]
+      },
+      {
+        "item": "Dividends",
+        "value": "none paid or declared; no dividend policy stated in the FY2021 10-K's business/capital-allocation discussion",
+        "period": "as of 2022-03-01",
+        "status": "reported",
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ]
+      },
+      {
+        "item": "Share buybacks",
+        "value": "none disclosed in the accessible filing text reviewed",
+        "period": "as of 2022-03-01",
+        "status": "missing",
+        "source_ids": [],
+        "reason": "no buyback program was found in the sections of the FY2021 10-K reviewed for this packet"
+      },
+      {
+        "item": "Total long-term debt",
+        "value": "$246.7 million ($3.9 million current, $236.0 million noncurrent)",
+        "period": "2021-12-31",
+        "status": "reported",
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ]
+      },
+      {
+        "item": "Debt maturities within 24 months of the cutoff",
+        "value": null,
+        "period": "as of 2021-12-31",
+        "status": "missing",
+        "source_ids": [],
+        "reason": "the exact maturity schedule was not located in the accessible filing text; only the $3.9 million current-portion figure from XBRL was available, suggesting limited near-term scheduled maturities without a confirmed full schedule"
+      }
     ],
     "competitive_position": [
       "First Solar describes itself as the world's largest thin-film photovoltaic solar module manufacturer and the largest PV module manufacturer in the Western Hemisphere, having sold more than 40 GW-DC of modules cumulatively [c9].",
@@ -260,9 +1220,30 @@
   },
   "upcoming_and_unresolved": {
     "catalysts": [
-      {"description": "Planned sale of the Japan-based project development and operations-and-maintenance business", "timing_window": "first half of 2022", "announced_on": "2022-03-01", "source_ids": ["fslr-10k-fy2021"]},
-      {"description": "Start of production at the new third U.S. manufacturing facility (3.3 GW-DC)", "timing_window": "first half of 2023", "announced_on": "2022-03-01", "source_ids": ["fslr-10k-fy2021"]},
-      {"description": "Start of production at the first India manufacturing facility (3.3 GW-DC)", "timing_window": "second half of 2023", "announced_on": "2022-03-01", "source_ids": ["fslr-10k-fy2021"]}
+      {
+        "description": "Planned sale of the Japan-based project development and operations-and-maintenance business",
+        "timing_window": "first half of 2022",
+        "announced_on": "2022-03-01",
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ]
+      },
+      {
+        "description": "Start of production at the new third U.S. manufacturing facility (3.3 GW-DC)",
+        "timing_window": "first half of 2023",
+        "announced_on": "2022-03-01",
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ]
+      },
+      {
+        "description": "Start of production at the first India manufacturing facility (3.3 GW-DC)",
+        "timing_window": "second half of 2023",
+        "announced_on": "2022-03-01",
+        "source_ids": [
+          "fslr-10k-fy2021"
+        ]
+      }
     ],
     "unresolved_questions": [
       "Does the lower 2022 guidance reflect a temporary cost and input-price squeeze, or a more structural pressure on module pricing and margins?",
@@ -271,8 +1252,22 @@
     ]
   },
   "macro_context": [
-    {"item": "India import tariffs of 40% on solar modules and 25% on solar cells, effective April 2022", "business_connection": "First Solar is building its first India manufacturing facility and sells into the Indian market, so India trade policy on solar equipment directly affects that plan", "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"]},
-    {"item": "Proposed but not-yet-enacted U.S. federal incentives for domestic solar manufacturing (tax credits, domestic content/labor requirements)", "business_connection": "Would potentially benefit a U.S.-based module manufacturer such as First Solar if enacted, but the company itself described the outcome as uncertain", "available_at": "2022-03-01", "source_ids": ["fslr-10k-fy2021"]}
+    {
+      "item": "India import tariffs of 40% on solar modules and 25% on solar cells, effective April 2022",
+      "business_connection": "First Solar is building its first India manufacturing facility and sells into the Indian market, so India trade policy on solar equipment directly affects that plan",
+      "available_at": "2022-03-01",
+      "source_ids": [
+        "fslr-10k-fy2021"
+      ]
+    },
+    {
+      "item": "Proposed but not-yet-enacted U.S. federal incentives for domestic solar manufacturing (tax credits, domestic content/labor requirements)",
+      "business_connection": "Would potentially benefit a U.S.-based module manufacturer such as First Solar if enacted, but the company itself described the outcome as uncertain",
+      "available_at": "2022-03-01",
+      "source_ids": [
+        "fslr-10k-fy2021"
+      ]
+    }
   ],
   "help_me_weigh": {
     "own": [
@@ -289,11 +1284,41 @@
     ]
   },
   "source_handles": [
-    {"id": "fslr-8k-q4fy21", "kind": "8-K", "title": "First Solar Q4 & FY2021 Earnings Release (Exhibit 99.1)", "available_at": "2022-03-01", "masked_title": "Company earnings release, 1 Mar 2022"},
-    {"id": "fslr-10k-fy2021", "kind": "10-K", "title": "First Solar FY2021 Form 10-K", "available_at": "2022-03-01", "masked_title": "Company annual report (10-K), 1 Mar 2022"},
-    {"id": "fslr-xbrl-companyfacts", "kind": "other", "title": "SEC EDGAR XBRL company facts", "available_at": "2022-03-01", "masked_title": "Structured financial data extract, filings through 1 Mar 2022"},
-    {"id": "fslr-8k-feb2021-guidance", "kind": "8-K", "title": "First Solar Q4 & FY2020 Earnings Release and initial FY2021 guidance (Exhibit 99.1)", "available_at": "2021-02-25", "masked_title": "Company earnings release, 25 Feb 2021"},
-    {"id": "fslr-8k-q3-2021", "kind": "8-K", "title": "First Solar Q3 2021 Earnings Release and updated FY2021 guidance (Exhibit 99.1)", "available_at": "2021-11-04", "masked_title": "Company earnings release, 4 Nov 2021"}
+    {
+      "id": "fslr-8k-q4fy21",
+      "kind": "8-K",
+      "title": "First Solar Q4 & FY2021 Earnings Release (Exhibit 99.1)",
+      "available_at": "2022-03-01",
+      "masked_title": "Company earnings release, 1 Mar 2022"
+    },
+    {
+      "id": "fslr-10k-fy2021",
+      "kind": "10-K",
+      "title": "First Solar FY2021 Form 10-K",
+      "available_at": "2022-03-01",
+      "masked_title": "Company annual report (10-K), 1 Mar 2022"
+    },
+    {
+      "id": "fslr-xbrl-companyfacts",
+      "kind": "other",
+      "title": "SEC EDGAR XBRL company facts",
+      "available_at": "2022-03-01",
+      "masked_title": "Structured financial data extract, filings through 1 Mar 2022"
+    },
+    {
+      "id": "fslr-8k-feb2021-guidance",
+      "kind": "8-K",
+      "title": "First Solar Q4 & FY2020 Earnings Release and initial FY2021 guidance (Exhibit 99.1)",
+      "available_at": "2021-02-25",
+      "masked_title": "Company earnings release, 25 Feb 2021"
+    },
+    {
+      "id": "fslr-8k-q3-2021",
+      "kind": "8-K",
+      "title": "First Solar Q3 2021 Earnings Release and updated FY2021 guidance (Exhibit 99.1)",
+      "available_at": "2021-11-04",
+      "masked_title": "Company earnings release, 4 Nov 2021"
+    }
   ],
   "missing_data": [
     "Discrete dollar-figure segment revenue and operating-income split between the Modules segment and the Other (project development/O&M) segment was not found in the accessible filing text reviewed.",

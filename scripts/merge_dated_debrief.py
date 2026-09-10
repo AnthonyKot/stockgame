@@ -9,7 +9,7 @@ STATUS = re.compile(r'^(Supported|Partly supported|Mixed|Weakened|Not supported|
 check_only = '--check-only' in sys.argv
 scenes_path = ROOT / 'cases' / 'scenes.json'
 scenes = json.loads(scenes_path.read_text())
-problems, warnings, merged = [], [], 0
+problems, warnings, merged, to_delete = [], [], 0, []
 def last_day(d):
     return d if len(d) == 10 else d + '-31'
 for cid, sc in scenes['scenes'].items():
@@ -49,7 +49,9 @@ for cid, sc in scenes['scenes'].items():
                 warnings.append(f'{cid}: {aid} drifts {a}{ia} -> {b}{ib}')
     if f.exists() and not check_only and not any(p.startswith(cid + ':') for p in problems):
         sc['dated_debrief'] = {'baseline': dd['baseline'], 'updates': dd['updates']}
-        f.unlink(); merged += 1
-if merged: scenes_path.write_text(json.dumps(scenes, indent=2, ensure_ascii=False) + '\n')
+        to_delete.append(f); merged += 1
+if merged:   # write scenes.json first; only then remove the writer inputs (Codex review item 5)
+    scenes_path.write_text(json.dumps(scenes, indent=2, ensure_ascii=False) + '\n')
+    for f in to_delete: f.unlink()
 print(f'merged {merged}; problems: {len(problems)}; drift warnings: {len(warnings)}'); print('\n'.join(problems + ['WARN ' + w for w in warnings]))
 sys.exit(1 if problems else 0)

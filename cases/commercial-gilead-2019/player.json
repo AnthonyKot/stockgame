@@ -28,10 +28,15 @@
         "unit": "USD_millions",
         "period": "FY2018",
         "available_at": "2019-02-04",
-        "source_ids": ["gild-8k-ex991"],
+        "source_ids": [
+          "gild-8k-ex991"
+        ],
         "status": "reported",
         "definition": "total revenues (product sales plus royalty, contract and other revenue), full year 2018; HIV franchise growth partly offset the shrinking hepatitis C franchise",
-        "prior": {"value": 26100.0, "period": "FY2017"}
+        "prior": {
+          "value": 26100.0,
+          "period": "FY2017"
+        }
       },
       {
         "label": "GAAP operating margin (FY2018)",
@@ -39,10 +44,15 @@
         "unit": "percent",
         "period": "FY2018",
         "available_at": "2019-02-04",
-        "source_ids": ["gild-8k-ex991"],
+        "source_ids": [
+          "gild-8k-ex991"
+        ],
         "status": "reported",
         "definition": "GAAP operating income as a percentage of total revenue, full year 2018; GAAP product gross margin was 77.6% for the same period (versus 83.0% in FY2017), both down from the prior year",
-        "prior": {"value": 54.1, "period": "FY2017"}
+        "prior": {
+          "value": 54.1,
+          "period": "FY2017"
+        }
       },
       {
         "label": "Operating cash flow (FY2018)",
@@ -50,10 +60,16 @@
         "unit": "USD_millions",
         "period": "FY2018",
         "available_at": "2019-02-04",
-        "source_ids": ["gild-8k-ex991", "gild-10k-fy2017"],
+        "source_ids": [
+          "gild-8k-ex991",
+          "gild-10k-fy2017"
+        ],
         "status": "reported",
         "definition": "net cash provided by operating activities, full year 2018",
-        "prior": {"value": 11898.0, "period": "FY2017"}
+        "prior": {
+          "value": 11898.0,
+          "period": "FY2017"
+        }
       },
       {
         "label": "Cash, cash equivalents and marketable debt securities (period end)",
@@ -61,10 +77,15 @@
         "unit": "USD_millions",
         "period": "Dec 31, 2018",
         "available_at": "2019-02-04",
-        "source_ids": ["gild-8k-ex991"],
+        "source_ids": [
+          "gild-8k-ex991"
+        ],
         "status": "reported",
         "definition": "combined cash, cash equivalents and marketable debt securities; the company separately disclosed repaying $6.3 billion of debt during 2018 but did not disclose a period-end total-debt balance in this release (see missing_data)",
-        "prior": {"value": 36700.0, "period": "Dec 31, 2017"}
+        "prior": {
+          "value": 36700.0,
+          "period": "Dec 31, 2017"
+        }
       },
       {
         "label": "HIV product-sales concentration (share of total revenue)",
@@ -72,11 +93,16 @@
         "unit": "percent",
         "period": "FY2018",
         "available_at": "2019-02-04",
-        "source_ids": ["gild-8k-ex991"],
+        "source_ids": [
+          "gild-8k-ex991"
+        ],
         "status": "derived",
         "definition": "HIV product sales ($14.6B) divided by total revenue ($22.1B), FY2018; the hepatitis C franchise this partly offsets fell to about 17% of total revenue ($3.7B/$22.1B) from about 35% a year earlier ($9.1B/$26.1B)",
         "formula": "hiv_product_sales / total_revenue",
-        "prior": {"value": 49.8, "period": "FY2017"}
+        "prior": {
+          "value": 49.8,
+          "period": "FY2017"
+        }
       },
       {
         "label": "Enterprise value and EV / trailing revenue",
@@ -95,130 +121,653 @@
         "row": "Total revenue",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2014", "value": 24890.0, "available_at": "2015-02-25", "source_ids": ["gild-10k-fy2014"], "status": "reported"},
-          {"period": "FY2015", "value": 32639.0, "available_at": "2016-02-24", "source_ids": ["gild-10k-fy2015"], "status": "reported"},
-          {"period": "FY2016", "value": 30390.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 26107.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": 22100.0, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991"], "status": "reported", "note": "rounded as stated in the release; a more precise sum is not separately reconciled in this packet"},
-          {"period": "Q1 2018", "value": 5088.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
-          {"period": "Q2 2018", "value": 5648.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
-          {"period": "Q3 2018", "value": 5596.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
-          {"period": "Q4 2018", "value": null, "available_at": null, "source_ids": [], "status": "missing", "note": "not separately disclosed in this packet; only the rounded full-year total ($22.1 billion) is available"}
+          {
+            "period": "FY2014",
+            "value": 24890.0,
+            "available_at": "2015-02-25",
+            "source_ids": [
+              "gild-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 32639.0,
+            "available_at": "2016-02-24",
+            "source_ids": [
+              "gild-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 30390.0,
+            "available_at": "2017-02-27",
+            "source_ids": [
+              "gild-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 26107.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "gild-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 22100.0,
+            "available_at": "2019-02-04",
+            "source_ids": [
+              "gild-8k-ex991"
+            ],
+            "status": "reported",
+            "note": "rounded as stated in the release; a more precise sum is not separately reconciled in this packet"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 5088.0,
+            "available_at": "2018-05-09",
+            "source_ids": [
+              "gild-10q-q1-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 5648.0,
+            "available_at": "2018-08-06",
+            "source_ids": [
+              "gild-10q-q2-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 5596.0,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "gild-10q-q3-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": null,
+            "available_at": null,
+            "source_ids": [],
+            "status": "missing",
+            "note": "not separately disclosed in this packet; only the rounded full-year total ($22.1 billion) is available"
+          }
         ]
       },
       {
         "row": "Net income (GAAP)",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2014", "value": 12101.0, "available_at": "2015-02-25", "source_ids": ["gild-10k-fy2014"], "status": "reported"},
-          {"period": "FY2015", "value": 18108.0, "available_at": "2016-02-24", "source_ids": ["gild-10k-fy2015"], "status": "reported"},
-          {"period": "FY2016", "value": 13501.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 4628.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": 5455.0, "available_at": "2019-02-04", "source_ids": ["gild-10q-q1-2018", "gild-10q-q2-2018", "gild-10q-q3-2018", "gild-8k-ex991"], "status": "derived", "formula": "sum of Q1-Q4 2018 quarterly net income (Q4 per the company's disclosed approximately breakeven result)"},
-          {"period": "Q1 2018", "value": 1538.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
-          {"period": "Q2 2018", "value": 1817.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
-          {"period": "Q3 2018", "value": 2097.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
-          {"period": "Q4 2018", "value": 3.0, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991"], "status": "reported"}
+          {
+            "period": "FY2014",
+            "value": 12101.0,
+            "available_at": "2015-02-25",
+            "source_ids": [
+              "gild-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 18108.0,
+            "available_at": "2016-02-24",
+            "source_ids": [
+              "gild-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 13501.0,
+            "available_at": "2017-02-27",
+            "source_ids": [
+              "gild-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 4628.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "gild-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 5455.0,
+            "available_at": "2019-02-04",
+            "source_ids": [
+              "gild-10q-q1-2018",
+              "gild-10q-q2-2018",
+              "gild-10q-q3-2018",
+              "gild-8k-ex991"
+            ],
+            "status": "derived",
+            "formula": "sum of Q1-Q4 2018 quarterly net income (Q4 per the company's disclosed approximately breakeven result)"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 1538.0,
+            "available_at": "2018-05-09",
+            "source_ids": [
+              "gild-10q-q1-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 1817.0,
+            "available_at": "2018-08-06",
+            "source_ids": [
+              "gild-10q-q2-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 2097.0,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "gild-10q-q3-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": 3.0,
+            "available_at": "2019-02-04",
+            "source_ids": [
+              "gild-8k-ex991"
+            ],
+            "status": "reported"
+          }
         ]
       },
       {
         "row": "Diluted EPS (GAAP)",
         "unit": "USD_per_share",
         "cells": [
-          {"period": "FY2014", "value": 7.35, "available_at": "2015-02-25", "source_ids": ["gild-10k-fy2014"], "status": "reported"},
-          {"period": "FY2015", "value": 11.91, "available_at": "2016-02-24", "source_ids": ["gild-10k-fy2015"], "status": "reported"},
-          {"period": "FY2016", "value": 9.94, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 3.51, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": 4.17, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991"], "status": "reported"},
-          {"period": "Q1 2018", "value": 1.17, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
-          {"period": "Q2 2018", "value": 1.39, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
-          {"period": "Q3 2018", "value": 1.60, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
-          {"period": "Q4 2018", "value": 0.01, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991", "gild-10q-q1-2018", "gild-10q-q2-2018", "gild-10q-q3-2018"], "status": "derived", "formula": "FY2018 diluted EPS minus sum of Q1-Q3 2018 diluted EPS"}
+          {
+            "period": "FY2014",
+            "value": 7.35,
+            "available_at": "2015-02-25",
+            "source_ids": [
+              "gild-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 11.91,
+            "available_at": "2016-02-24",
+            "source_ids": [
+              "gild-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 9.94,
+            "available_at": "2017-02-27",
+            "source_ids": [
+              "gild-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 3.51,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "gild-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 4.17,
+            "available_at": "2019-02-04",
+            "source_ids": [
+              "gild-8k-ex991"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 1.17,
+            "available_at": "2018-05-09",
+            "source_ids": [
+              "gild-10q-q1-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 1.39,
+            "available_at": "2018-08-06",
+            "source_ids": [
+              "gild-10q-q2-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 1.6,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "gild-10q-q3-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 2018",
+            "value": 0.01,
+            "available_at": "2019-02-04",
+            "source_ids": [
+              "gild-8k-ex991",
+              "gild-10q-q1-2018",
+              "gild-10q-q2-2018",
+              "gild-10q-q3-2018"
+            ],
+            "status": "derived",
+            "formula": "FY2018 diluted EPS minus sum of Q1-Q3 2018 diluted EPS"
+          }
         ]
       },
       {
         "row": "Operating income (GAAP)",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2014", "value": 15265.0, "available_at": "2015-02-25", "source_ids": ["gild-10k-fy2014"], "status": "reported"},
-          {"period": "FY2015", "value": 22193.0, "available_at": "2016-02-24", "source_ids": ["gild-10k-fy2015"], "status": "reported"},
-          {"period": "FY2016", "value": 17633.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 14124.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": null, "available_at": null, "source_ids": [], "status": "missing", "note": "not disclosed as a dollar figure in this release; only the operating-margin percentage (37.1%) is given"},
-          {"period": "Q1 2018", "value": 2153.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
-          {"period": "Q2 2018", "value": 2280.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
-          {"period": "Q3 2018", "value": 2623.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"}
+          {
+            "period": "FY2014",
+            "value": 15265.0,
+            "available_at": "2015-02-25",
+            "source_ids": [
+              "gild-10k-fy2014"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2015",
+            "value": 22193.0,
+            "available_at": "2016-02-24",
+            "source_ids": [
+              "gild-10k-fy2015"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2016",
+            "value": 17633.0,
+            "available_at": "2017-02-27",
+            "source_ids": [
+              "gild-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 14124.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "gild-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": null,
+            "available_at": null,
+            "source_ids": [],
+            "status": "missing",
+            "note": "not disclosed as a dollar figure in this release; only the operating-margin percentage (37.1%) is given"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 2153.0,
+            "available_at": "2018-05-09",
+            "source_ids": [
+              "gild-10q-q1-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 2280.0,
+            "available_at": "2018-08-06",
+            "source_ids": [
+              "gild-10q-q2-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 2623.0,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "gild-10q-q3-2018"
+            ],
+            "status": "reported"
+          }
         ]
       },
       {
         "row": "Cash and cash equivalents (period end)",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2016", "value": 8229.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 7588.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
-          {"period": "Q1 2018", "value": 7643.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
-          {"period": "Q2 2018", "value": 13234.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
-          {"period": "Q3 2018", "value": 14569.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
-          {"period": "FY2018", "value": null, "available_at": null, "source_ids": [], "status": "missing", "note": "only the combined cash-plus-investments total ($31.5 billion) was disclosed for year-end 2018; cash-alone was not separately broken out in this release"}
+          {
+            "period": "FY2016",
+            "value": 8229.0,
+            "available_at": "2017-02-27",
+            "source_ids": [
+              "gild-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 7588.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "gild-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 7643.0,
+            "available_at": "2018-05-09",
+            "source_ids": [
+              "gild-10q-q1-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 13234.0,
+            "available_at": "2018-08-06",
+            "source_ids": [
+              "gild-10q-q2-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 14569.0,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "gild-10q-q3-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": null,
+            "available_at": null,
+            "source_ids": [],
+            "status": "missing",
+            "note": "only the combined cash-plus-investments total ($31.5 billion) was disclosed for year-end 2018; cash-alone was not separately broken out in this release"
+          }
         ]
       },
       {
         "row": "Marketable securities, current (period end)",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2016", "value": 3666.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 17922.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
-          {"period": "Q1 2018", "value": 16355.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
-          {"period": "Q2 2018", "value": 12683.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
-          {"period": "Q3 2018", "value": 13897.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"}
+          {
+            "period": "FY2016",
+            "value": 3666.0,
+            "available_at": "2017-02-27",
+            "source_ids": [
+              "gild-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 17922.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "gild-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 16355.0,
+            "available_at": "2018-05-09",
+            "source_ids": [
+              "gild-10q-q1-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 12683.0,
+            "available_at": "2018-08-06",
+            "source_ids": [
+              "gild-10q-q2-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 13897.0,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "gild-10q-q3-2018"
+            ],
+            "status": "reported"
+          }
         ]
       },
       {
         "row": "Long-term debt, noncurrent (period end)",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2016", "value": 26346.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 30795.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
-          {"period": "Q1 2018", "value": 26557.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
-          {"period": "Q2 2018", "value": 26062.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
-          {"period": "Q3 2018", "value": 24570.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
-          {"period": "FY2018", "value": null, "available_at": null, "source_ids": [], "status": "missing", "note": "no period-end debt balance is disclosed in this release; only the narrative fact that $6.3 billion of debt was repaid during 2018 is available"}
+          {
+            "period": "FY2016",
+            "value": 26346.0,
+            "available_at": "2017-02-27",
+            "source_ids": [
+              "gild-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 30795.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "gild-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 26557.0,
+            "available_at": "2018-05-09",
+            "source_ids": [
+              "gild-10q-q1-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 26062.0,
+            "available_at": "2018-08-06",
+            "source_ids": [
+              "gild-10q-q2-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 24570.0,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "gild-10q-q3-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": null,
+            "available_at": null,
+            "source_ids": [],
+            "status": "missing",
+            "note": "no period-end debt balance is disclosed in this release; only the narrative fact that $6.3 billion of debt was repaid during 2018 is available"
+          }
         ]
       },
       {
         "row": "Common shares outstanding (period end)",
         "unit": "millions_of_shares",
         "cells": [
-          {"period": "FY2016", "value": 1310.0, "available_at": "2017-02-27", "source_ids": ["gild-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 1308.0, "available_at": "2018-02-27", "source_ids": ["gild-10k-fy2017"], "status": "reported"},
-          {"period": "Q1 2018", "value": 1300.0, "available_at": "2018-05-09", "source_ids": ["gild-10q-q1-2018"], "status": "reported"},
-          {"period": "Q2 2018", "value": 1296.0, "available_at": "2018-08-06", "source_ids": ["gild-10q-q2-2018"], "status": "reported"},
-          {"period": "Q3 2018", "value": 1294.0, "available_at": "2018-11-06", "source_ids": ["gild-10q-q3-2018"], "status": "reported"},
-          {"period": "FY2018", "value": 1282.0, "available_at": "2019-02-04", "source_ids": ["gild-8k-ex991"], "status": "reported"}
+          {
+            "period": "FY2016",
+            "value": 1310.0,
+            "available_at": "2017-02-27",
+            "source_ids": [
+              "gild-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 1308.0,
+            "available_at": "2018-02-27",
+            "source_ids": [
+              "gild-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 1300.0,
+            "available_at": "2018-05-09",
+            "source_ids": [
+              "gild-10q-q1-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 1296.0,
+            "available_at": "2018-08-06",
+            "source_ids": [
+              "gild-10q-q2-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 1294.0,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "gild-10q-q3-2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 1282.0,
+            "available_at": "2019-02-04",
+            "source_ids": [
+              "gild-8k-ex991"
+            ],
+            "status": "reported"
+          }
         ]
       }
-    ]
+    ],
+    "presentation": {
+      "intro": "Read the FY2018 operating results and cash position separately from the price the market is paying for this business.",
+      "groups": [
+        {
+          "title": "Business performance",
+          "metrics": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "title": "Cash position",
+          "metrics": [
+            3
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Revenue",
+          "context": "Total revenues (product sales plus royalty and contract income), not product sales alone ($21.7B separately reported). HIV growth partly offset the shrinking hepatitis C franchise; this line does not show cash collected.",
+          "metric": "Total revenue (FY2018) and YoY change"
+        },
+        {
+          "label": "Operating margin",
+          "context": "GAAP operating income as a share of total revenue, full year 2018. Product gross margin fell too (77.6% vs 83.0% in FY2017); both metrics declined from the prior year.",
+          "metric": "GAAP operating margin (FY2018)"
+        },
+        {
+          "label": "Operating cash flow",
+          "context": "Net cash generated by operations for the full year, down from $11.9 billion in FY2017. This figure does not net out the dividends, buybacks and debt repayment also made during the year.",
+          "metric": "Operating cash flow (FY2018)"
+        },
+        {
+          "label": "Cash and investments",
+          "context": "Combined cash, cash equivalents and marketable debt securities at year-end. The release discloses $6.3 billion of debt repaid during the year but not a period-end total-debt balance, so this is not a net-cash figure.",
+          "metric": "Cash, cash equivalents and marketable debt securities (period end)"
+        },
+        {
+          "label": "HIV sales concentration",
+          "context": "HIV product sales divided by total revenue, FY2018. The hepatitis C franchise it offsets fell to about 17% of revenue from about 35% a year earlier; concentration alone does not indicate future risk.",
+          "metric": "HIV product-sales concentration (share of total revenue)"
+        }
+      ],
+      "valuation_context": "The multiple uses FY2017 revenue ($26.1B), the prior fiscal year, not FY2018's $22.1B tile figure. Share count and debt are as of September 30, 2018; cash is as of December 31, 2018 -- all predating the February 2019 price used for the multiple."
+    }
   },
   "what_changed": [
     {
       "date": "2019-02-04",
       "fact": "Full-year 2018 product sales were $21.7 billion and GAAP diluted EPS was $4.17, while total revenue fell to $22.1 billion from $26.1 billion as HIV growth partly offset a shrinking hepatitis C franchise [g1][g2].",
       "relationship_to_business": "This is the company's full annual result covering the period through the cutoff, showing the HIV/HCV mix shift central to the business.",
-      "source_ids": ["gild-8k-ex991"],
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
       "status": "reported"
     },
     {
       "date": "2019-02-04",
       "fact": "Full-year HIV product sales rose to $14.6 billion from $13.0 billion behind the 2018 launch of a new single-tablet regimen, while hepatitis C product sales fell to $3.7 billion from $9.1 billion amid competition and fewer new patients [g3][g4].",
       "relationship_to_business": "Shows the specific franchise-level offset -- one franchise growing, the other shrinking -- driving the FY2018 revenue mix.",
-      "source_ids": ["gild-8k-ex991"],
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
       "status": "reported"
     },
     {
       "date": "2019-02-04",
       "fact": "Management issued full-year 2019 product-sales guidance of $21.3-21.8 billion, built around anticipated U.S. generic competition for two non-antiviral products and the fuller European impact of generic tenofovir products [g7].",
       "relationship_to_business": "The company's own forward view heading into the horizon period, already pricing in specific anticipated competitive losses.",
-      "source_ids": ["gild-8k-ex991"],
+      "source_ids": [
+        "gild-8k-ex991"
+      ],
       "status": "management_guidance"
     }
   ],
@@ -229,7 +778,9 @@
         "fy2018_sales": "$14.6 billion (up from $13.0 billion in FY2017)",
         "share_of_total_revenue_fy2018": "approximately 66%",
         "commentary": "growth driven by the 2018 launch of a new single-tablet HIV regimen plus continued uptake of several other combination HIV products [g3]",
-        "source_ids": ["gild-8k-ex991"],
+        "source_ids": [
+          "gild-8k-ex991"
+        ],
         "status": "reported"
       },
       {
@@ -237,7 +788,9 @@
         "fy2018_sales": "$3.7 billion (down from $9.1 billion in FY2017)",
         "share_of_total_revenue_fy2018": "approximately 17%",
         "commentary": "multi-year decline from lower average selling prices, lower volumes, increased competition and fewer new patient starts [g4]",
-        "source_ids": ["gild-8k-ex991"],
+        "source_ids": [
+          "gild-8k-ex991"
+        ],
         "status": "reported"
       },
       {
@@ -245,7 +798,9 @@
         "fy2018_sales": "$264 million (product launched October 2017)",
         "share_of_total_revenue_fy2018": "approximately 1%",
         "commentary": "single approved cell-therapy product for a type of relapsed/refractory large B-cell lymphoma [g5]",
-        "source_ids": ["gild-8k-ex991"],
+        "source_ids": [
+          "gild-8k-ex991"
+        ],
         "status": "reported"
       },
       {
@@ -253,7 +808,9 @@
         "fy2018_sales": "approximately $3.5 billion (computed residual: total revenue minus the three itemized franchises above)",
         "share_of_total_revenue_fy2018": "approximately 16% (derived residual, not directly reported)",
         "commentary": "not broken out by individual product in this release; presented here as a computed residual rather than a directly reported figure",
-        "source_ids": ["gild-8k-ex991"],
+        "source_ids": [
+          "gild-8k-ex991"
+        ],
         "status": "derived"
       }
     ],
@@ -265,7 +822,11 @@
         "ownership": "Wholly owned; developed through the company's cell-therapy subsidiary",
         "trial_id": "ZUMA-3 (company study name; ClinicalTrials.gov identifier not independently verified before cutoff, see missing_data)",
         "design": "Single-arm, uncontrolled (no randomization or comparator arm) study [g10]",
-        "sample_size": {"planned": null, "enrolled": "not stated as a specific count in this excerpt", "analyzed": "response assessed among 'evaluable patients' at a median follow-up of 15.1 months"},
+        "sample_size": {
+          "planned": null,
+          "enrolled": "not stated as a specific count in this excerpt",
+          "analyzed": "response assessed among 'evaluable patients' at a median follow-up of 15.1 months"
+        },
         "population": "Adults with relapsed or refractory acute lymphoblastic leukemia (ALL), a blood cancer",
         "primary_endpoint": "Not detailed in eligible sources beyond the complete-remission and minimal-residual-disease rates reported",
         "secondary_endpoints": "Not detailed in eligible sources",
@@ -282,7 +843,11 @@
         "ownership": "Wholly owned",
         "trial_id": "Not stated in this excerpt",
         "design": "Not detailed in eligible sources",
-        "sample_size": {"planned": null, "enrolled": null, "analyzed": null},
+        "sample_size": {
+          "planned": null,
+          "enrolled": null,
+          "analyzed": null
+        },
         "population": "Patients with primary sclerosing cholangitis, a chronic liver disease involving bile-duct inflammation and scarring",
         "primary_endpoint": "Not detailed in eligible sources",
         "secondary_endpoints": "Not detailed in eligible sources",
@@ -299,7 +864,11 @@
         "ownership": "Wholly owned; approved product generating $264 million of FY2018 sales [g5]",
         "trial_id": "ZUMA-1 (company study name)",
         "design": "Single-arm, uncontrolled pivotal trial as originally conducted; this update covers longer follow-up of the same trial [g11]",
-        "sample_size": {"planned": null, "enrolled": null, "analyzed": "not stated as a specific count in this excerpt"},
+        "sample_size": {
+          "planned": null,
+          "enrolled": null,
+          "analyzed": "not stated as a specific count in this excerpt"
+        },
         "population": "Patients with refractory large B-cell lymphoma, a type of non-Hodgkin lymphoma",
         "primary_endpoint": "Not restated in this excerpt (original pivotal-trial endpoint; this update covers longer follow-up only)",
         "secondary_endpoints": "Not detailed in eligible sources",
@@ -316,7 +885,11 @@
         "ownership": "Collaborations with three separate biotechnology partners announced in Q4 2018; specific economic/licensing terms not detailed in this excerpt",
         "trial_id": "not_applicable (preclinical)",
         "design": "not_applicable",
-        "sample_size": {"planned": null, "enrolled": null, "analyzed": null},
+        "sample_size": {
+          "planned": null,
+          "enrolled": null,
+          "analyzed": null
+        },
         "population": "not_applicable (preclinical)",
         "primary_endpoint": "not_applicable (preclinical)",
         "secondary_endpoints": "not_applicable",
@@ -334,13 +907,17 @@
         "description": "Chief-executive transition: an incoming CEO becomes Chairman and CEO effective March 1, 2019, following an interim CEO who served from January 1 to March 1, 2019 [g8].",
         "timing_window": "March 1, 2019",
         "announced_on": "2019-02-04",
-        "source_ids": ["gild-8k-ex991"]
+        "source_ids": [
+          "gild-8k-ex991"
+        ]
       },
       {
         "description": "Full-year 2019 product-sales guidance of $21.3-21.8 billion, explicitly built around anticipated new U.S. and European generic competition [g7].",
         "timing_window": "full year 2019",
         "announced_on": "2019-02-04",
-        "source_ids": ["gild-8k-ex991"]
+        "source_ids": [
+          "gild-8k-ex991"
+        ]
       }
     ],
     "unresolved_questions": [
@@ -354,13 +931,17 @@
       "item": "Management's 2019 guidance and its own forward-looking risk disclosure both flagged anticipated U.S. and European generic competition -- for two non-antiviral products, for continuing tenofovir disoproxil fumarate erosion in Europe, and for two older antiviral HIV products -- as a headwind [g7][g14].",
       "business_connection": "This is the structural generic-competition backdrop shaping the company's official 2019 product-sales guidance range.",
       "available_at": "2019-02-04",
-      "source_ids": ["gild-8k-ex991"]
+      "source_ids": [
+        "gild-8k-ex991"
+      ]
     },
     {
       "item": "The hepatitis C franchise's decline was attributed to lower average selling prices and lower sales volume amid increased competition and fewer new patients starting treatment [g4].",
       "business_connection": "This is the industry-level dynamic behind why the hepatitis C franchise, once the company's largest, continues shrinking even as the HIV franchise grows.",
       "available_at": "2019-02-04",
-      "source_ids": ["gild-8k-ex991"]
+      "source_ids": [
+        "gild-8k-ex991"
+      ]
     }
   ],
   "help_me_weigh": {

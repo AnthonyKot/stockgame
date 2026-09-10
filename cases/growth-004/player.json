@@ -679,7 +679,55 @@
           }
         ]
       }
-    ]
+    ],
+    "presentation": {
+      "intro": "Read the fiscal-year operating results on their own, separately from the price and valuation multiple shown elsewhere on this page.",
+      "groups": [
+        {
+          "title": "Business performance",
+          "metrics": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "title": "Cash position",
+          "metrics": [
+            3,
+            4
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Revenue",
+          "context": "Full fiscal-year total revenue, up 19.8% year-over-year on 19.3% comparable-sales growth split between stores and digital channels; per-channel profitability is not disclosed here.",
+          "metric": "Total revenue (FY2020) and YoY growth"
+        },
+        {
+          "label": "Operating margin",
+          "context": "Operating income as a share of total revenue, up from 6.0% the prior year; the release does not break out how much of the change came from cost leverage versus one-time items.",
+          "metric": "Reported operating margin rate (FY2020)"
+        },
+        {
+          "label": "Gross margin",
+          "context": "GAAP gross margin rate for the fiscal year, down slightly from 28.9% the prior year; the release attributes part of the change to higher digital fulfillment and supply-chain costs.",
+          "metric": "Reported gross margin rate (FY2020)"
+        },
+        {
+          "label": "Free cash flow",
+          "context": "Operating cash flow minus capital expenditures for the fiscal year; capex fell year over year while operating cash flow rose, so this does not isolate demand growth from lower capital spending.",
+          "metric": "Free cash flow (FY2020)"
+        },
+        {
+          "label": "Net debt",
+          "context": "Total debt minus cash at fiscal year-end; cash roughly tripled year over year while debt also rose, so the change reflects both sides of the balance sheet, not just less borrowing.",
+          "metric": "Net debt (total debt minus cash, fiscal year-end)"
+        }
+      ],
+      "valuation_context": "The revenue multiple uses FY2019 revenue (fiscal year ended Feb 1, 2020), not the FY2020 figure shown above or a trailing-twelve-month figure. Share count is dated October 31, 2020, predating the price; net cash is from the FY2020 fiscal year-end."
+    }
   },
   "what_changed": [
     {

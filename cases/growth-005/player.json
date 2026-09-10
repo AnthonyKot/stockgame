@@ -28,7 +28,9 @@
         "unit": "USD_millions",
         "period": "Q3 FY2020 (three months ended Aug 2, 2020)",
         "available_at": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported",
         "definition": "consolidated net sales and revenues (equipment operations net sales plus financial services and other revenue); down 11% from the prior-year quarter",
         "prior": {
@@ -42,7 +44,9 @@
         "unit": "percent",
         "period": "Q3 FY2020",
         "available_at": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "derived",
         "definition": "(Equipment Operations net sales minus cost of sales) divided by Equipment Operations net sales; excludes Financial Services revenue, which carries no cost-of-sales line",
         "formula": "(equipment_operations_net_sales - cost_of_sales) / equipment_operations_net_sales",
@@ -57,7 +61,9 @@
         "unit": "percent",
         "period": "Q3 FY2020",
         "available_at": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "derived",
         "definition": "(total net sales and revenues minus total costs and expenses) divided by total net sales and revenues; the release does not disclose a single consolidated operating-income line for this quarter, so this margin stands in as the broadest reported profitability measure",
         "formula": "(total_net_sales_and_revenues - total_costs_and_expenses) / total_net_sales_and_revenues",
@@ -72,7 +78,9 @@
         "unit": "USD_millions",
         "period": "9M FY2020 (ended Aug 2, 2020)",
         "available_at": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "derived",
         "definition": "net cash from operating activities minus purchases of property and equipment, nine months ended Aug 2, 2020",
         "formula": "operating_cash_flow_9mo - capital_expenditures_9mo",
@@ -87,7 +95,9 @@
         "unit": "USD_millions",
         "period": "Aug 2, 2020",
         "available_at": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "derived",
         "definition": "short-term borrowings ($9,075M) plus long-term borrowings ($34,037M), minus cash and cash equivalents ($8,190M) and marketable securities ($640M), as of Aug 2, 2020",
         "formula": "short_term_borrowings + long_term_borrowings - cash_and_equivalents - marketable_securities",
@@ -113,137 +123,722 @@
         "row": "Total net sales and revenues",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2016", "value": 26644.0, "available_at": "2016-12-19", "source_ids": ["de-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 29737.7, "available_at": "2017-12-18", "source_ids": ["de-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": 37357.7, "available_at": "2018-12-17", "source_ids": ["de-10k-fy2018"], "status": "reported"},
-          {"period": "FY2019", "value": 39258.0, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q1 FY2019", "value": 7983.6, "available_at": "2019-02-28", "source_ids": ["de-10q-q1-2019"], "status": "reported"},
-          {"period": "Q2 FY2019", "value": 11342.4, "available_at": "2019-05-30", "source_ids": ["de-10q-q2-2019"], "status": "reported"},
-          {"period": "Q3 FY2019", "value": 10036.0, "available_at": "2019-08-29", "source_ids": ["de-10q-q3-2019"], "status": "reported"},
-          {"period": "Q4 FY2019", "value": 9896.0, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q1 FY2020", "value": 7631.0, "available_at": "2020-02-27", "source_ids": ["de-10q-q1-2020"], "status": "reported"},
-          {"period": "Q2 FY2020", "value": 9253.0, "available_at": "2020-05-28", "source_ids": ["de-10q-q2-2020"], "status": "reported"},
-          {"period": "Q3 FY2020", "value": 8925.0, "available_at": "2020-08-21", "source_ids": ["de-8k-2020-08-21"], "status": "reported"}
+          {
+            "period": "FY2016",
+            "value": 26644.0,
+            "available_at": "2016-12-19",
+            "source_ids": [
+              "de-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 29737.7,
+            "available_at": "2017-12-18",
+            "source_ids": [
+              "de-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 37357.7,
+            "available_at": "2018-12-17",
+            "source_ids": [
+              "de-10k-fy2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 39258.0,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2019",
+            "value": 7983.6,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "de-10q-q1-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2019",
+            "value": 11342.4,
+            "available_at": "2019-05-30",
+            "source_ids": [
+              "de-10q-q2-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2019",
+            "value": 10036.0,
+            "available_at": "2019-08-29",
+            "source_ids": [
+              "de-10q-q3-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2019",
+            "value": 9896.0,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 7631.0,
+            "available_at": "2020-02-27",
+            "source_ids": [
+              "de-10q-q1-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 9253.0,
+            "available_at": "2020-05-28",
+            "source_ids": [
+              "de-10q-q2-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 8925.0,
+            "available_at": "2020-08-21",
+            "source_ids": [
+              "de-8k-2020-08-21"
+            ],
+            "status": "reported"
+          }
         ]
       },
       {
         "row": "Net income attributable to Deere & Company",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2016", "value": 1523.9, "available_at": "2016-12-19", "source_ids": ["de-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 2159.1, "available_at": "2017-12-18", "source_ids": ["de-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": 2368.4, "available_at": "2018-12-17", "source_ids": ["de-10k-fy2018"], "status": "reported"},
-          {"period": "FY2019", "value": 3253.0, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q1 FY2019", "value": 498.5, "available_at": "2019-02-28", "source_ids": ["de-10q-q1-2019"], "status": "reported"},
-          {"period": "Q2 FY2019", "value": 1134.9, "available_at": "2019-05-30", "source_ids": ["de-10q-q2-2019"], "status": "reported"},
-          {"period": "Q3 FY2019", "value": 899.0, "available_at": "2019-08-29", "source_ids": ["de-10q-q3-2019"], "status": "reported"},
-          {"period": "Q4 FY2019", "value": 721.0, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q1 FY2020", "value": 517.0, "available_at": "2020-02-27", "source_ids": ["de-10q-q1-2020"], "status": "reported"},
-          {"period": "Q2 FY2020", "value": 666.0, "available_at": "2020-05-28", "source_ids": ["de-10q-q2-2020"], "status": "reported"},
-          {"period": "Q3 FY2020", "value": 811.0, "available_at": "2020-08-21", "source_ids": ["de-8k-2020-08-21"], "status": "reported"}
+          {
+            "period": "FY2016",
+            "value": 1523.9,
+            "available_at": "2016-12-19",
+            "source_ids": [
+              "de-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 2159.1,
+            "available_at": "2017-12-18",
+            "source_ids": [
+              "de-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 2368.4,
+            "available_at": "2018-12-17",
+            "source_ids": [
+              "de-10k-fy2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 3253.0,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2019",
+            "value": 498.5,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "de-10q-q1-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2019",
+            "value": 1134.9,
+            "available_at": "2019-05-30",
+            "source_ids": [
+              "de-10q-q2-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2019",
+            "value": 899.0,
+            "available_at": "2019-08-29",
+            "source_ids": [
+              "de-10q-q3-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2019",
+            "value": 721.0,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 517.0,
+            "available_at": "2020-02-27",
+            "source_ids": [
+              "de-10q-q1-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 666.0,
+            "available_at": "2020-05-28",
+            "source_ids": [
+              "de-10q-q2-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 811.0,
+            "available_at": "2020-08-21",
+            "source_ids": [
+              "de-8k-2020-08-21"
+            ],
+            "status": "reported"
+          }
         ]
       },
       {
         "row": "Diluted EPS",
         "unit": "USD_per_share",
         "cells": [
-          {"period": "FY2016", "value": 4.81, "available_at": "2016-12-19", "source_ids": ["de-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 6.68, "available_at": "2017-12-18", "source_ids": ["de-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": 7.24, "available_at": "2018-12-17", "source_ids": ["de-10k-fy2018"], "status": "reported"},
-          {"period": "FY2019", "value": 10.15, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q1 FY2019", "value": 1.54, "available_at": "2019-02-28", "source_ids": ["de-10q-q1-2019"], "status": "reported"},
-          {"period": "Q2 FY2019", "value": 3.52, "available_at": "2019-05-30", "source_ids": ["de-10q-q2-2019"], "status": "reported"},
-          {"period": "Q3 FY2019", "value": 2.81, "available_at": "2019-08-29", "source_ids": ["de-10q-q3-2019"], "status": "reported"},
-          {"period": "Q4 FY2019", "value": 2.27, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q1 FY2020", "value": 1.63, "available_at": "2020-02-27", "source_ids": ["de-10q-q1-2020"], "status": "reported"},
-          {"period": "Q2 FY2020", "value": 2.11, "available_at": "2020-05-28", "source_ids": ["de-10q-q2-2020"], "status": "reported"},
-          {"period": "Q3 FY2020", "value": 2.57, "available_at": "2020-08-21", "source_ids": ["de-8k-2020-08-21"], "status": "reported"}
+          {
+            "period": "FY2016",
+            "value": 4.81,
+            "available_at": "2016-12-19",
+            "source_ids": [
+              "de-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 6.68,
+            "available_at": "2017-12-18",
+            "source_ids": [
+              "de-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 7.24,
+            "available_at": "2018-12-17",
+            "source_ids": [
+              "de-10k-fy2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 10.15,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2019",
+            "value": 1.54,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "de-10q-q1-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2019",
+            "value": 3.52,
+            "available_at": "2019-05-30",
+            "source_ids": [
+              "de-10q-q2-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2019",
+            "value": 2.81,
+            "available_at": "2019-08-29",
+            "source_ids": [
+              "de-10q-q3-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q4 FY2019",
+            "value": 2.27,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 1.63,
+            "available_at": "2020-02-27",
+            "source_ids": [
+              "de-10q-q1-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 2.11,
+            "available_at": "2020-05-28",
+            "source_ids": [
+              "de-10q-q2-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 2.57,
+            "available_at": "2020-08-21",
+            "source_ids": [
+              "de-8k-2020-08-21"
+            ],
+            "status": "reported"
+          }
         ]
       },
       {
         "row": "Consolidated operating income",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2016", "value": 2589.0, "available_at": "2016-12-19", "source_ids": ["de-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 3543.0, "available_at": "2017-12-18", "source_ids": ["de-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": 4476.0, "available_at": "2018-12-17", "source_ids": ["de-10k-fy2018"], "status": "reported"},
-          {"period": "FY2019", "value": 4415.0, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q1 FY2019", "value": 769.0, "available_at": "2019-02-28", "source_ids": ["de-10q-q1-2019"], "status": "reported"},
-          {"period": "Q2 FY2019", "value": 1536.0, "available_at": "2019-05-30", "source_ids": ["de-10q-q2-2019"], "status": "reported"},
-          {"period": "Q3 FY2019", "value": 1194.0, "available_at": "2019-08-29", "source_ids": ["de-10q-q3-2019"], "status": "reported"},
-          {"period": "Q1 FY2020", "value": 645.0, "available_at": "2020-02-27", "source_ids": ["de-10q-q1-2020"], "status": "reported"},
-          {"period": "Q2 FY2020", "value": 965.0, "available_at": "2020-05-28", "source_ids": ["de-10q-q2-2020"], "status": "reported"},
-          {"period": "Q3 FY2020", "value": null, "available_at": null, "source_ids": [], "status": "missing", "note": "not disclosed as a single consolidated operating-income line in the Aug 21, 2020 release; see the derived pretax-margin headline metric instead"}
+          {
+            "period": "FY2016",
+            "value": 2589.0,
+            "available_at": "2016-12-19",
+            "source_ids": [
+              "de-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 3543.0,
+            "available_at": "2017-12-18",
+            "source_ids": [
+              "de-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 4476.0,
+            "available_at": "2018-12-17",
+            "source_ids": [
+              "de-10k-fy2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 4415.0,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2019",
+            "value": 769.0,
+            "available_at": "2019-02-28",
+            "source_ids": [
+              "de-10q-q1-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2019",
+            "value": 1536.0,
+            "available_at": "2019-05-30",
+            "source_ids": [
+              "de-10q-q2-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2019",
+            "value": 1194.0,
+            "available_at": "2019-08-29",
+            "source_ids": [
+              "de-10q-q3-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 645.0,
+            "available_at": "2020-02-27",
+            "source_ids": [
+              "de-10q-q1-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 965.0,
+            "available_at": "2020-05-28",
+            "source_ids": [
+              "de-10q-q2-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": null,
+            "available_at": null,
+            "source_ids": [],
+            "status": "missing",
+            "note": "not disclosed as a single consolidated operating-income line in the Aug 21, 2020 release; see the derived pretax-margin headline metric instead"
+          }
         ]
       },
       {
         "row": "Cash and cash equivalents (period end)",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2018", "value": 3904.0, "available_at": "2018-12-17", "source_ids": ["de-10k-fy2018"], "status": "reported"},
-          {"period": "FY2019", "value": 3857.0, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q1 FY2020", "value": 3602.0, "available_at": "2020-02-27", "source_ids": ["de-10q-q1-2020"], "status": "reported"},
-          {"period": "Q2 FY2020", "value": 8900.0, "available_at": "2020-05-28", "source_ids": ["de-10q-q2-2020"], "status": "reported"},
-          {"period": "Q3 FY2020", "value": 8190.0, "available_at": "2020-08-21", "source_ids": ["de-8k-2020-08-21"], "status": "reported"}
+          {
+            "period": "FY2018",
+            "value": 3904.0,
+            "available_at": "2018-12-17",
+            "source_ids": [
+              "de-10k-fy2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 3857.0,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 3602.0,
+            "available_at": "2020-02-27",
+            "source_ids": [
+              "de-10q-q1-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 8900.0,
+            "available_at": "2020-05-28",
+            "source_ids": [
+              "de-10q-q2-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 8190.0,
+            "available_at": "2020-08-21",
+            "source_ids": [
+              "de-8k-2020-08-21"
+            ],
+            "status": "reported"
+          }
         ]
       },
       {
         "row": "Long-term borrowings / long-term debt, noncurrent (period end)",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2018", "value": 27237.4, "available_at": "2018-12-17", "source_ids": ["de-10k-fy2018"], "status": "reported"},
-          {"period": "FY2019", "value": 30229.0, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q1 FY2020", "value": 30475.0, "available_at": "2020-02-27", "source_ids": ["de-10q-q1-2020"], "status": "reported"},
-          {"period": "Q2 FY2020", "value": 34324.0, "available_at": "2020-05-28", "source_ids": ["de-10q-q2-2020"], "status": "reported"},
-          {"period": "Q3 FY2020", "value": 34037.0, "available_at": "2020-08-21", "source_ids": ["de-8k-2020-08-21"], "status": "reported"}
+          {
+            "period": "FY2018",
+            "value": 27237.4,
+            "available_at": "2018-12-17",
+            "source_ids": [
+              "de-10k-fy2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 30229.0,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 30475.0,
+            "available_at": "2020-02-27",
+            "source_ids": [
+              "de-10q-q1-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 34324.0,
+            "available_at": "2020-05-28",
+            "source_ids": [
+              "de-10q-q2-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 34037.0,
+            "available_at": "2020-08-21",
+            "source_ids": [
+              "de-8k-2020-08-21"
+            ],
+            "status": "reported"
+          }
         ]
       },
       {
         "row": "Diluted weighted-average shares outstanding",
         "unit": "millions_of_shares",
         "cells": [
-          {"period": "FY2016", "value": 316.6, "available_at": "2016-12-19", "source_ids": ["de-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 323.3, "available_at": "2017-12-18", "source_ids": ["de-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": 327.3, "available_at": "2018-12-17", "source_ids": ["de-10k-fy2018"], "status": "reported"},
-          {"period": "FY2019", "value": 320.6, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"},
-          {"period": "Q3 FY2019", "value": 319.8, "available_at": "2019-08-29", "source_ids": ["de-10q-q3-2019"], "status": "reported"},
-          {"period": "Q1 FY2020", "value": 317.2, "available_at": "2020-02-27", "source_ids": ["de-10q-q1-2020"], "status": "reported"},
-          {"period": "Q2 FY2020", "value": 316.2, "available_at": "2020-05-28", "source_ids": ["de-10q-q2-2020"], "status": "reported"},
-          {"period": "Q3 FY2020", "value": 315.6, "available_at": "2020-08-21", "source_ids": ["de-8k-2020-08-21"], "status": "derived", "formula": "net_income / diluted_eps", "note": "not separately tagged in the press release; derived from reported net income and diluted EPS"}
+          {
+            "period": "FY2016",
+            "value": 316.6,
+            "available_at": "2016-12-19",
+            "source_ids": [
+              "de-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 323.3,
+            "available_at": "2017-12-18",
+            "source_ids": [
+              "de-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 327.3,
+            "available_at": "2018-12-17",
+            "source_ids": [
+              "de-10k-fy2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 320.6,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2019",
+            "value": 319.8,
+            "available_at": "2019-08-29",
+            "source_ids": [
+              "de-10q-q3-2019"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 FY2020",
+            "value": 317.2,
+            "available_at": "2020-02-27",
+            "source_ids": [
+              "de-10q-q1-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 FY2020",
+            "value": 316.2,
+            "available_at": "2020-05-28",
+            "source_ids": [
+              "de-10q-q2-2020"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 FY2020",
+            "value": 315.6,
+            "available_at": "2020-08-21",
+            "source_ids": [
+              "de-8k-2020-08-21"
+            ],
+            "status": "derived",
+            "formula": "net_income / diluted_eps",
+            "note": "not separately tagged in the press release; derived from reported net income and diluted EPS"
+          }
         ]
       },
       {
         "row": "Dividends paid (annual, cash flow statement)",
         "unit": "USD_millions",
         "cells": [
-          {"period": "FY2016", "value": 761.3, "available_at": "2016-12-19", "source_ids": ["de-10k-fy2016"], "status": "reported"},
-          {"period": "FY2017", "value": 764.0, "available_at": "2017-12-18", "source_ids": ["de-10k-fy2017"], "status": "reported"},
-          {"period": "FY2018", "value": 805.8, "available_at": "2018-12-17", "source_ids": ["de-10k-fy2018"], "status": "reported"},
-          {"period": "FY2019", "value": 943.0, "available_at": "2019-12-19", "source_ids": ["de-10k-fy2019"], "status": "reported"}
+          {
+            "period": "FY2016",
+            "value": 761.3,
+            "available_at": "2016-12-19",
+            "source_ids": [
+              "de-10k-fy2016"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 764.0,
+            "available_at": "2017-12-18",
+            "source_ids": [
+              "de-10k-fy2017"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2018",
+            "value": 805.8,
+            "available_at": "2018-12-17",
+            "source_ids": [
+              "de-10k-fy2018"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2019",
+            "value": 943.0,
+            "available_at": "2019-12-19",
+            "source_ids": [
+              "de-10k-fy2019"
+            ],
+            "status": "reported"
+          }
         ]
       }
-    ]
+    ],
+    "presentation": {
+      "intro": "Read the quarter's operating results separately from the price investors are paying, and note that some figures cover nine months while others cover a single quarter.",
+      "groups": [
+        {
+          "title": "Business performance",
+          "metrics": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "title": "Cash position",
+          "metrics": [
+            3,
+            4
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Revenue",
+          "context": "Consolidated net sales and revenues, down 11% from the prior-year quarter. This is one fiscal quarter, not a full-year figure; full-year guidance is addressed separately.",
+          "metric": "Total net sales and revenues (Q3 FY2020) and YoY growth",
+          "display_value": null,
+          "prior_comparable": true
+        },
+        {
+          "label": "Gross margin",
+          "context": "Equipment Operations sales minus cost of sales, divided by sales; excludes Financial Services revenue, which has no cost-of-sales line. Margin improved even as sales volume fell.",
+          "metric": "Equipment Operations gross margin (Q3 FY2020)",
+          "display_value": null,
+          "prior_comparable": true
+        },
+        {
+          "label": "Pretax margin",
+          "context": "Total revenue minus total costs and expenses, divided by revenue -- the broadest profitability line reported this quarter, since no single consolidated operating-income figure was disclosed for Q3 FY2020.",
+          "metric": "Consolidated pretax income margin (Q3 FY2020)",
+          "display_value": null,
+          "prior_comparable": true
+        },
+        {
+          "label": "Free cash flow",
+          "context": "Nine-month operating cash flow minus capital expenditures, year-to-date through Q3 FY2020; not a single-quarter figure. Swung positive from a year-earlier outflow.",
+          "metric": "Nine-month free cash flow (FY2020 YTD)",
+          "display_value": null,
+          "prior_comparable": true
+        },
+        {
+          "label": "Net debt",
+          "context": "Total borrowings minus cash and marketable securities. The prior figure counts only long-term debt against cash, since short-term borrowings weren't separately reported then, so the two aren't directly comparable.",
+          "metric": "Net debt (total borrowings minus cash and marketable securities)",
+          "display_value": null,
+          "prior_comparable": false
+        }
+      ],
+      "valuation_context": "The EV/revenue multiple uses fiscal 2019 full-year revenue ($39,258m), not the Q3 FY2020 figure shown above. Share count is from May 2020 and net-debt inputs from August 2, 2020; both predate the cutoff price date, so figures are not fully synchronized."
+    }
   },
   "what_changed": [
     {
       "date": "2020-08-21",
       "fact": "Third-quarter fiscal 2020 net sales and revenues fell 11% to $8.925 billion; net income was $811 million ($2.57 diluted per share), down from $899 million ($2.81) a year earlier [c2].",
       "relationship_to_business": "This is the company's most recent quarterly result as of the cutoff and shows a broad revenue and earnings contraction across its core equipment businesses.",
-      "source_ids": ["de-8k-2020-08-21"],
+      "source_ids": [
+        "de-8k-2020-08-21"
+      ],
       "status": "reported"
     },
     {
       "date": "2020-08-21",
       "fact": "Management forecast full-year fiscal 2020 net income of about $2.25 billion, with Agriculture and Turf sales guided down about 10% and Construction and Forestry sales down about 25% [c3].",
       "relationship_to_business": "This is the company's own forward outlook for the remainder of the fiscal year, tied directly to segment-level demand expectations.",
-      "source_ids": ["de-8k-2020-08-21"],
+      "source_ids": [
+        "de-8k-2020-08-21"
+      ],
       "status": "management_guidance"
     },
     {
       "date": "2020-08-21",
       "fact": "The company announced employee-separation programs completing in fiscal Q4 2020, carrying about $175 million of pretax charges and an estimated $175 million in annual savings [c4].",
       "relationship_to_business": "A proactive cost-reduction action taken during the sales decline, intended to reset the company's cost structure going forward.",
-      "source_ids": ["de-8k-2020-08-21"],
+      "source_ids": [
+        "de-8k-2020-08-21"
+      ],
       "status": "reported"
     }
   ],
@@ -256,7 +851,9 @@
         "current_value": "$5.672 billion net sales (down 5%); $942 million operating profit (16.6% margin)",
         "prior_period": "Q3 FY2019 (three months ended Jul 28, 2019)",
         "prior_value": "$5.946 billion net sales; $612 million operating profit (10.3% margin)",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
@@ -266,7 +863,9 @@
         "current_value": "$2.187 billion net sales (down 28%); $205 million operating profit (9.4% margin)",
         "prior_period": "Q3 FY2019 (three months ended Jul 28, 2019)",
         "prior_value": "$3.023 billion net sales; $378 million operating profit (12.5% margin)",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
@@ -276,7 +875,9 @@
         "current_value": "$183 million (up 5%)",
         "prior_period": "Q3 FY2019 (three months ended Jul 28, 2019)",
         "prior_value": "$175 million",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       }
     ],
@@ -286,7 +887,9 @@
         "prior_guidance": "Not in this evidence packet (an earlier release would have carried any prior FY2020 guidance)",
         "new_guidance": "About $2.25 billion",
         "date": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "management_guidance"
       },
       {
@@ -294,7 +897,9 @@
         "prior_guidance": "Not in this evidence packet",
         "new_guidance": "Down about 10%, including about 2 points of negative currency translation",
         "date": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "management_guidance"
       },
       {
@@ -302,7 +907,9 @@
         "prior_guidance": "Not in this evidence packet",
         "new_guidance": "Down about 25%, including about 1 point of negative currency translation",
         "date": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "management_guidance"
       }
     ],
@@ -311,64 +918,85 @@
         "item": "Capital expenditures (purchases of property and equipment)",
         "value": "9M FY2020: $594 million vs 9M FY2019: $756 million",
         "period": "Nine months ended Aug 2, 2020 / Jul 28, 2019",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
         "item": "Net cash from operating activities",
         "value": "9M FY2020: $4.057 billion vs 9M FY2019: $404 million",
         "period": "Nine months ended Aug 2, 2020 / Jul 28, 2019",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
         "item": "Dividends paid / declared per share",
         "value": "9M FY2020 paid: $718 million vs 9M FY2019 paid: $703 million; Q3 FY2020 declared: $0.76/share, unchanged from Q3 FY2019",
         "period": "Nine months ended Aug 2, 2020 / Jul 28, 2019",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
         "item": "Share repurchases",
         "value": "9M FY2020: $263 million vs 9M FY2019: $880 million",
         "period": "Nine months ended Aug 2, 2020 / Jul 28, 2019",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
         "item": "Short-term borrowings",
         "value": "$9.075 billion as of Aug 2, 2020; a comparable fiscal-year-end 2019 figure is not separately tagged in this packet",
         "period": "Aug 2, 2020",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
         "item": "Long-term borrowings",
         "value": "$34.037 billion as of Aug 2, 2020, vs $30.229 billion at fiscal year-end 2019",
         "period": "Aug 2, 2020 / Nov 3, 2019",
-        "source_ids": ["de-8k-2020-08-21", "de-10k-fy2019"],
+        "source_ids": [
+          "de-8k-2020-08-21",
+          "de-10k-fy2019"
+        ],
         "status": "reported"
       }
     ],
     "competitive_position_facts": [
       {
         "fact": "Agriculture and Turf operating margin rose to 16.6% from 10.3% even as segment net sales fell 5%, indicating cost and mix improvement during the down quarter.",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
         "fact": "Construction and Forestry net sales fell 28% and operating profit fell 46% in the quarter, a sharper decline than Agriculture and Turf, with management citing efforts to reduce dealer field-inventory levels in that division's outlook commentary.",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
         "fact": "Financial Services segment net income grew to $183 million from $175 million even as the two equipment segments' combined net sales declined.",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       },
       {
         "fact": "Nine-month share repurchases fell to $263 million from $880 million a year earlier, while the per-share dividend was held at $0.76.",
-        "source_ids": ["de-8k-2020-08-21"],
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ],
         "status": "reported"
       }
     ]
@@ -379,13 +1007,17 @@
         "description": "Completion of the employee-separation programs in fiscal Q4 2020, targeted to deliver about $175 million in estimated annual savings [c4].",
         "timing_window": "fourth quarter of fiscal 2020",
         "announced_on": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"]
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ]
       },
       {
         "description": "Full fiscal-year 2020 targets: net income of about $2.25 billion, Agriculture and Turf sales down about 10%, and Construction and Forestry sales down about 25% [c3].",
         "timing_window": "remainder of fiscal year 2020 (fiscal year ends late October)",
         "announced_on": "2020-08-21",
-        "source_ids": ["de-8k-2020-08-21"]
+        "source_ids": [
+          "de-8k-2020-08-21"
+        ]
       }
     ],
     "unresolved_questions": [
@@ -399,19 +1031,25 @@
       "item": "Management cited the global pandemic and 'unsettled market conditions and related customer uncertainty' as expected to have a moderating effect on key markets in the near term [c7].",
       "business_connection": "Directly frames the company's own cautious tone behind its fiscal 2020 sales and net-income guidance.",
       "available_at": "2020-08-21",
-      "source_ids": ["de-8k-2020-08-21"]
+      "source_ids": [
+        "de-8k-2020-08-21"
+      ]
     },
     {
       "item": "Management's industry forecasts called for U.S./Canada large agricultural equipment sales down 5-10%, Europe down 5-10%, and South America down 10-15% [c6].",
       "business_connection": "This is the demand backdrop behind the Agriculture and Turf segment's guided sales decline and its Q3 results.",
       "available_at": "2020-08-21",
-      "source_ids": ["de-8k-2020-08-21"]
+      "source_ids": [
+        "de-8k-2020-08-21"
+      ]
     },
     {
       "item": "Management's industry forecasts called for North America construction equipment sales down about 20% and global forestry sales down 20-25% [c6].",
       "business_connection": "This is the demand backdrop behind the Construction and Forestry segment's sharper Q3 sales and profit decline and its full-year guidance.",
       "available_at": "2020-08-21",
-      "source_ids": ["de-8k-2020-08-21"]
+      "source_ids": [
+        "de-8k-2020-08-21"
+      ]
     }
   ],
   "help_me_weigh": {

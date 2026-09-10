@@ -164,7 +164,7 @@
     const snapshot = card('Financial snapshot', null, el('p', { class: 'note' }, presentation.intro));
     snapshot.classList.add('financial-snapshot');
     const periodLabel = value => /^\d{4}-\d{2}-\d{2}$/.test(value || '') ? 'As of ' + dateFmt(value) : String(value || '').replace(/^Q([1-4])-(\d{4})$/, 'Q$1 $2').replace(/^9M-(\d{4})$/, 'Jan–Sep $1');
-    const compactMoney = (value, unit) => money(value, unit).replace(/\$-/, '-$').replace(/ (m|bn)$/, '$1');
+    const compactMoney = (value, unit) => money(value, unit).replace(/\$-/, '-$').replace(/ (m|bn|tn)$/, '$1');
     for (const group of presentation.groups) {
       const section = el('section', { class: 'snapshot-group', 'aria-label': group.title }, el('h3', {}, group.title));
       for (const index of group.metrics) {
@@ -193,7 +193,7 @@
       const formula = tile.querySelector('.p');
       if (formula) { vdet.append(el('p', { class: 'note' }, formula.textContent)); formula.remove(); }
       const status = tile.querySelector('.badge'); if (status) status.remove();
-      const number = tile.querySelector('.v'); if (number) number.textContent = number.textContent.replace(/ (bn|m)$/, '$1').replace(/^(\d+\.\d+)x$/, (_, x) => Number(x).toFixed(1) + '×');
+      const number = tile.querySelector('.v'); if (number) number.textContent = number.textContent.replace(/ (bn|m|tn)$/, '$1').replace(/^(\d+\.\d+)x$/, (_, x) => Number(x).toFixed(1) + '×');
     }
     snapshot.append(valuationGroup, el('details', { class: 'snapshot-history' }, el('summary', {}, 'Full financial history'), histWrap));
     main.append(snapshot);

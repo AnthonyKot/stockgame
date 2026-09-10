@@ -21,6 +21,14 @@ for r in sel['selected']:
     if p.get('cutoff') != r['proposed_cutoff']: probs.append(f'cutoff mismatch {p.get("cutoff")} vs {r["proposed_cutoff"]}')
     h = p.get('financial_snapshot', {}).get('headline', [])
     if len(h) != 6: probs.append(f'headline has {len(h)} entries, need 6')
+    pres = p.get('financial_snapshot', {}).get('presentation')
+    if pres:   # the renderer skips a row silently when a label does not match, so catch it here
+        labels = [t['label'] for t in h]
+        for i, m in enumerate(pres.get('metrics', [])):
+            if m.get('metric') not in labels: probs.append(f'presentation metric {i} does not match a headline label: {m.get("metric")!r}')
+        used = [j for g in pres.get('groups', []) for j in g.get('metrics', [])]
+        if any(not (0 <= j < len(pres.get('metrics', []))) for j in used): probs.append('presentation group index out of range')
+        if sorted(used) != list(range(len(pres.get('metrics', [])))): probs.append('presentation groups do not use each metric exactly once')
     uq = p.get('upcoming_and_unresolved', {}).get('unresolved_questions', [])
     if len(uq) != 3: probs.append(f'{len(uq)} unresolved questions, need 3')
     cids = {c['id'] for c in e.get('claims', [])}; sids = {s['id'] for s in e.get('sources', [])}

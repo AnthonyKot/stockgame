@@ -35,3 +35,17 @@ Rules:
 9. Only assumptions the event actually bears on get a check in that update; leave the others out.
 
 Final reply: three lines: candidate id, number of updates, number of events cited. Nothing else.
+
+## Review amendments — 10 September 2026
+
+These are authoring/review requirements following [the rollout review](../research/DATED_DEBRIEF_REVIEW.md). Existing blocks have not yet all been corrected to meet them. The merge validator does not enforce semantic support.
+
+- Keep the original assumption's proposition, population and horizon fixed. Enactment is not durability; installed capacity is not utilization; a permitted patient group is not an efficacy endpoint.
+- Separate observed developments from interpretation. Later guidance revisions cannot establish an earlier management motive. A return cannot establish that a wait decision lacked sufficient evidence.
+- Describe financing proceeds and their uses separately; refinancing old debt is not equivalent to funding new development.
+- For clinical/regulatory events, distinguish surrogate endpoints, functional outcomes, approval pathway, safety and patient population. Do not broaden a subgroup verdict without explicitly explaining the evidence boundary.
+- Check relative chronology against actual dates. When a replacement recalls prior events, cite the needed events and verify that all dependencies are eligible; do not import later clauses from a flat full-record thesis check.
+- Choose the status only after checking the evidence against the exact assumption. If evidence bears only on part of it, say which part remains unresolved.
+- Human review must examine each replacement as a standalone statement at its unlock date. Schema checks, word limits and an applicable update do not certify factual accuracy.
+
+Proposed pipeline improvement, not current behavior: retain writer outputs until the entire batch is validated and the merged file is safely written; only then archive or delete them. See TODO before running a new merge batch.

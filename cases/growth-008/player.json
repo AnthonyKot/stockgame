@@ -1072,7 +1072,67 @@
           }
         ]
       }
-    ]
+    ],
+    "presentation": {
+      "intro": "Read these operating and balance-sheet figures separately from the market-cap panel, which for a bank does not imply an enterprise value or a revenue multiple.",
+      "groups": [
+        {
+          "title": "Business performance",
+          "metrics": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "title": "Balance sheet",
+          "metrics": [
+            4,
+            5
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Net interest income",
+          "metric": "Net interest income (FY2018)",
+          "context": "Interest earned on loans and securities minus interest paid on deposits and borrowings, full year. Rose on higher rates and loan growth; a full-year total, not a single quarter's run rate.",
+          "display_value": null
+        },
+        {
+          "label": "Noninterest revenue",
+          "metric": "Noninterest revenue (FY2018)",
+          "context": "Fee income from investment banking, trading, cards and asset management, full year. The same year's trading and asset-management revenue fell versus a year earlier in the fourth quarter, not shown in this annual total.",
+          "display_value": null
+        },
+        {
+          "label": "Noninterest expense",
+          "metric": "Noninterest expense (FY2018)",
+          "context": "Full-year operating expense, up from the prior year; includes new branch openings under a multi-year technology and real-estate investment program alongside other cost growth.",
+          "display_value": null
+        },
+        {
+          "label": "Provision for credit losses",
+          "metric": "Provision for credit losses (FY2018)",
+          "context": "Full-year net charge-offs plus the change in loan-loss reserves. The fourth quarter alone rose sharply on reserve builds including card and commercial downgrades, not visible in this annual figure.",
+          "display_value": null
+        },
+        {
+          "label": "Deposits",
+          "metric": "Total deposits (period-end)",
+          "context": "Customer deposit balances on the balance sheet at year end, a single point-in-time snapshot, not an average balance or a measure of deposit cost or stability.",
+          "display_value": null
+        },
+        {
+          "label": "Loans",
+          "metric": "Total loans, net of allowance (period-end)",
+          "context": "Gross loans less the loan-loss allowance at year end, a point-in-time balance; it does not show loan quality trends or how the allowance changed during the year.",
+          "display_value": null
+        }
+      ],
+      "valuation_context": "The panel shows only market capitalization: for a bank, enterprise value, net cash and revenue multiples are not meaningful and none are derived here. Share count is from year-end 2017, predating both the FY2018 figures above and the cutoff price."
+    }
   },
   "what_changed": [
     {

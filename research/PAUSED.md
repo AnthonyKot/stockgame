@@ -1,3 +1,16 @@
+# Session status — 10 September 2026
+
+Current work and proposed next steps are in [TODO.md](../TODO.md); restart from [START_HERE.md](START_HERE.md). The [dated debrief review](DATED_DEBRIEF_REVIEW.md) supersedes broad earlier claims of factual or spoiler completeness.
+
+- Implemented: all-ten dated debriefs; Nektar financial snapshot redesign; Market snapshot before return statistics with the last close moved into it; What changed before Financial snapshot; removal of the repeated company-summary cutoff/hold line; aligned exit controls.
+- Verified in the review: validators, arithmetic, simulator agreement, 28 available horizon exits and the browser regression passed. Deployment `ee0752c` succeeded and all ten live outcome bundles matched. Later UI deployment is not established by that check.
+- Open proposal: correct Target, First Solar and Sarepta's identified verdicts; add focused/independent checks; make merging atomic before deleting outputs; then pause for playtesting. Documentation updates do not execute this batch.
+- Campaign and RAG work remain deferred. No current worker runs or quota availability have been established.
+
+## Historical session notes
+
+Everything below is retained as a dated record. Earlier “next step,” “right now,” probability-field and Nektar-only statements may be superseded. Use the current checklist rather than treating these entries as instructions. Historical quota or worker statements are not current availability evidence.
+
 ## Nektar exit-aware debrief — 10 September 2026
 
 Implemented the user-approved bounded patch; pause for Nektar playtesting before any rollout or campaign work.
@@ -24,7 +37,7 @@ Repository https://github.com/AnthonyKot/stockgame (public), site live at https:
 
 - Ten cases are playable at http://localhost:8765/index.html (serve `site/` with `python3 -m http.server 8765`). All ten pass `scripts/verify_cases.py`; `scripts/test_returns.py` passes.
 - Data flow and conventions are in ARCHITECTURE.md. Repo and live site: see Published above.
-- 2026-09-10: Codex's review found two real defects. Fixed: the walk now ends at the simulated exit when a stop or target fired (was the anniversary). Also done the same day: Codex's `dated_debrief` (built for Nektar) rolled out to the other nine cases by nine Sonnet writers under cases/DATED_DEBRIEF_BRIEF.md; merged with scripts/merge_dated_debrief.py, checked by scripts/test_dated_debrief.js. Every horizon now reads only feedback knowable by its exit.
+- 2026-09-10: Codex's review found two real defects. Fixed: the walk now ends at the simulated exit when a stop or target fired (was the anniversary). Also done the same day: Codex's `dated_debrief` (built for Nektar) rolled out to the other nine cases by nine Sonnet writers under cases/DATED_DEBRIEF_BRIEF.md; merged with scripts/merge_dated_debrief.py, checked by scripts/test_dated_debrief.js. The selector now limits updates by cited event/publication dates; the later review found content and verdict gaps that this mechanism does not detect.
 - Done tonight against Codex's review: SPY benchmark on a total-return basis with the stock; commit saves and reads back before any reveal, failure shows an error and reveals nothing; masked source excerpts visible before commit; sector evidence collapsed by default; fixed "Decide" button on narrow screens; session-interval readout removed; derived valuation tiles (market cap, net cash, EV, EV/revenue; banks market cap only); rules in a side panel; per-case Brier score removed; other-horizon reveal; legend toggles and relative-to-SPY chart view.
 - Kept on purpose despite the trim list: size chooser (user asked for it to be highlighted), probability question (unscored, defaulted), one shared renderer for all ten instead of a three-case pilot.
 

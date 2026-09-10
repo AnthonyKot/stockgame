@@ -26,8 +26,8 @@ const SG = (() => {
     if (x === null || x === undefined || x === '') return 'not available';
     if (typeof x !== 'number') return String(x);
     const u = String(unit || '');
-    if (/USD_millions/i.test(u)) return Math.abs(x) < 0.05 ? 'about breakeven ($' + Math.round(x * 1000) + 'k)' : (Math.abs(x) >= 1000 ? '$' + (x / 1000).toFixed(2) + ' bn' : '$' + x.toFixed(1) + ' m');
-    if (/USD_billions/i.test(u)) return '$' + x.toFixed(2) + ' bn';
+    if (/USD_millions/i.test(u)) return Math.abs(x) < 0.05 ? 'about breakeven ($' + Math.round(x * 1000) + 'k)' : (Math.abs(x) >= 1e6 ? '$' + (x / 1e6).toFixed(2) + ' tn' : Math.abs(x) >= 1000 ? '$' + (x / 1000).toFixed(2) + ' bn' : '$' + x.toFixed(1) + ' m');
+    if (/USD_billions/i.test(u)) return Math.abs(x) >= 1000 ? '$' + (x / 1000).toFixed(2) + ' tn' : '$' + x.toFixed(2) + ' bn';
     if (/USD_thousands/i.test(u)) return '$' + (x / 1000).toFixed(1) + ' m';
     if (/percent|pct|%/i.test(u)) return x.toFixed(1) + '%';
     if (/shares/i.test(u)) return x.toFixed(1) + (/million/i.test(u) ? ' m shares' : ' shares');

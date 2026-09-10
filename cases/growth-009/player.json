@@ -553,7 +553,61 @@
           }
         ]
       }
-    ]
+    ],
+    "presentation": {
+      "intro": "These are the company's own reported results for the year just ended; read them separately from what the valuation panel says about the price paid for them.",
+      "groups": [
+        {
+          "title": "Business performance",
+          "metrics": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "title": "Cash position",
+          "metrics": [
+            4
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Revenue",
+          "metric": "Net sales (FY2022) and YoY growth",
+          "context": "Consolidated FY2022 net sales, up 16.1% year over year; organic growth of 12.0% split 8.0 points price realization and 4.0 points volume/mix. Price, not volume, drove most of the increase.",
+          "display_value": null
+        },
+        {
+          "label": "Gross margin",
+          "metric": "Reported gross margin (FY2022)",
+          "context": "GAAP gross profit as a percent of FY2022 net sales; down from 45.1% in FY2021. Q4 alone slipped 30 basis points as cost-of-goods inflation outpaced price increases.",
+          "display_value": null
+        },
+        {
+          "label": "Operating margin",
+          "metric": "Reported operating margin (FY2022)",
+          "context": "GAAP operating profit as a percent of FY2022 net sales, down from 22.8% in FY2021 despite higher sales, reflecting cost inflation that outpaced price gains.",
+          "display_value": null
+        },
+        {
+          "label": "Free cash flow",
+          "metric": "Free cash flow (FY2022)",
+          "context": "Not disclosed: the Feb 2023 release includes only an income statement and balance sheet, no cash-flow statement, and the FY2022 10-K had not yet been filed at cutoff.",
+          "display_value": null
+        },
+        {
+          "label": "Net debt",
+          "metric": "Net debt (total debt minus cash, Dec 31, 2022)",
+          "context": "Total debt minus cash at Dec 31, 2022, down from $4,699.6 million a year earlier as debt fell and cash rose. Does not include off-balance-sheet obligations.",
+          "display_value": null,
+          "prior_comparable": true
+        }
+      ],
+      "valuation_context": "The revenue multiple uses FY2021 net sales ($8,971.3 million), not the higher FY2022 figure the tile above shows. Share count is from Dec 31, 2021, over a year before the Feb 2023 price; net-debt inputs are dated Dec 31, 2022."
+    }
   },
   "what_changed": [
     {

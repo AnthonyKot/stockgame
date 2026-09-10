@@ -2,7 +2,10 @@
   "candidate_id": "clinical-mdgl-2018",
   "schema_version": "mvp-1",
   "cutoff": "2018-11-13T09:00:00-05:00",
-  "horizon": {"unit": "calendar_years", "count": 5},
+  "horizon": {
+    "unit": "calendar_years",
+    "count": 5
+  },
   "exchange_calendar": "XNYS",
   "sector_module": "biotech",
   "masked": {
@@ -25,10 +28,15 @@
         "unit": "USD_millions",
         "period": "2018-09-30",
         "available_at": "2018-11-06",
-        "source_ids": ["c4"],
+        "source_ids": [
+          "c4"
+        ],
         "status": "derived",
         "definition": "Cash and cash equivalents plus current available-for-sale debt securities (short-term marketable securities), both unrestricted per the balance sheet. Formula: CashAndCashEquivalentsAtCarryingValue + AvailableForSaleSecuritiesDebtSecuritiesCurrent.",
-        "prior": {"value": 191.527, "period": "2017-12-31"}
+        "prior": {
+          "value": 191.527,
+          "period": "2017-12-31"
+        }
       },
       {
         "label": "Net cash (cash and investments minus total liabilities)",
@@ -36,10 +44,15 @@
         "unit": "USD_millions",
         "period": "2018-09-30",
         "available_at": "2018-11-06",
-        "source_ids": ["c10"],
+        "source_ids": [
+          "c10"
+        ],
         "status": "derived",
         "definition": "Row above minus total liabilities ($6.642 million). A market-capitalization figure cannot be computed here because no historical share price is included in this packet.",
-        "prior": {"value": 181.473, "period": "2017-12-31"}
+        "prior": {
+          "value": 181.473,
+          "period": "2017-12-31"
+        }
       },
       {
         "label": "Market capitalization",
@@ -58,10 +71,15 @@
         "unit": "USD_millions",
         "period": "Q3 2018 (three months ended 2018-09-30)",
         "available_at": "2018-11-06",
-        "source_ids": ["c4"],
+        "source_ids": [
+          "c4"
+        ],
         "status": "derived",
         "definition": "Cash used in operating activities for Q3 2018 alone, derived as the nine-month cumulative figure minus the six-month cumulative figure from the cash-flow statement. This is a cash-flow measure, not net loss, and is not called 'cash burn'. The nine-month 2018 average was $6.41 million/quarter.",
-        "prior": {"value": -4.951, "period": "Q3 2017 (three months ended 2017-09-30)"}
+        "prior": {
+          "value": -4.951,
+          "period": "Q3 2017 (three months ended 2017-09-30)"
+        }
       },
       {
         "label": "Funding runway scenario",
@@ -69,7 +87,9 @@
         "unit": "years_at_current_avg_quarterly_outflow (scenario, not guidance)",
         "period": "as of 2018-09-30",
         "available_at": "2018-11-06",
-        "source_ids": ["c11"],
+        "source_ids": [
+          "c11"
+        ],
         "status": "derived",
         "definition": "Cash and investments (row 1) divided by the nine-month-2018 average quarterly operating cash outflow ($6.41 million). Assumes constant burn; ignores the funding needs of the Phase 3 programs the company said it planned to start in late 2018 or early 2019, so actual runway is very unlikely to resemble this scenario once that spending begins. Separately, management said only that it believed its resources were 'significant' relative to its currently planned Phase 3 programs, without giving a specific runway figure.",
         "prior": null
@@ -80,104 +100,586 @@
         "unit": "shares",
         "period": "2018-09-30",
         "available_at": "2018-11-06",
-        "source_ids": ["c9"],
+        "source_ids": [
+          "c9"
+        ],
         "status": "reported",
         "definition": "Common shares outstanding on the balance-sheet date, up about 8% from year-end 2017. The increase reflects a June 2018 underwritten public stock offering that also drove the increase in cash and investments (row 1).",
-        "prior": {"value": 14227634, "period": "2017-12-31"}
+        "prior": {
+          "value": 14227634,
+          "period": "2017-12-31"
+        }
       }
     ],
     "history": [
-      {"row": "Cash and cash equivalents", "unit": "USD_millions", "cells": [
-        {"period": "FY2016", "value": 19.145, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "FY2017", "value": 148.627, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "Q1 2018", "value": 38.125, "available_at": "2018-05-08", "source_ids": ["0001104659-18-031046"], "status": "reported"},
-        {"period": "Q2 2018", "value": 264.861, "available_at": "2018-08-07", "source_ids": ["0001104659-18-049982"], "status": "reported"},
-        {"period": "Q3 2018", "value": 38.046, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Available-for-sale securities, current", "unit": "USD_millions", "cells": [
-        {"period": "FY2017", "value": 42.900, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "Q1 2018", "value": null, "available_at": null, "source_ids": [], "status": "missing"},
-        {"period": "Q2 2018", "value": 225.444, "available_at": "2018-08-07", "source_ids": ["0001104659-18-049982"], "status": "reported"},
-        {"period": "Q3 2018", "value": 450.492, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Total assets", "unit": "USD_millions", "cells": [
-        {"period": "FY2016", "value": 41.210, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "FY2017", "value": 192.313, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "Q1 2018", "value": 183.478, "available_at": "2018-05-08", "source_ids": ["0001104659-18-031046"], "status": "reported"},
-        {"period": "Q2 2018", "value": 491.528, "available_at": "2018-08-07", "source_ids": ["0001104659-18-049982"], "status": "reported"},
-        {"period": "Q3 2018", "value": 489.549, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Total liabilities", "unit": "USD_millions", "cells": [
-        {"period": "FY2016", "value": 4.800, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "FY2017", "value": 10.054, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "Q1 2018", "value": 6.294, "available_at": "2018-05-08", "source_ids": ["0001104659-18-031046"], "status": "reported"},
-        {"period": "Q2 2018", "value": 5.436, "available_at": "2018-08-07", "source_ids": ["0001104659-18-049982"], "status": "reported"},
-        {"period": "Q3 2018", "value": 6.642, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Stockholders' equity", "unit": "USD_millions", "cells": [
-        {"period": "FY2016", "value": 36.410, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "FY2017", "value": 182.259, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "Q1 2018", "value": 177.184, "available_at": "2018-05-08", "source_ids": ["0001104659-18-031046"], "status": "reported"},
-        {"period": "Q2 2018", "value": 486.092, "available_at": "2018-08-07", "source_ids": ["0001104659-18-049982"], "status": "reported"},
-        {"period": "Q3 2018", "value": 482.907, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Common shares outstanding", "unit": "shares", "cells": [
-        {"period": "FY2016", "value": 11951866, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "FY2017", "value": 14227634, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "Q1 2018", "value": 14250726, "available_at": "2018-05-08", "source_ids": ["0001104659-18-031046"], "status": "reported"},
-        {"period": "Q2 2018", "value": 15365384, "available_at": "2018-08-07", "source_ids": ["0001104659-18-049982"], "status": "reported"},
-        {"period": "Q3 2018", "value": 15393309, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Operating loss", "unit": "USD_millions", "cells": [
-        {"period": "FY2016", "value": -25.223, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "FY2017", "value": -32.062, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "9 months 2018", "value": -26.228, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"},
-        {"period": "Q3 2018", "value": -11.333, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Net loss", "unit": "USD_millions", "cells": [
-        {"period": "9 months 2017", "value": -22.709, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"},
-        {"period": "Q3 2017", "value": -8.363, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"},
-        {"period": "9 months 2018", "value": -21.336, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"},
-        {"period": "Q3 2018", "value": -8.512, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Net cash used in operating activities", "unit": "USD_millions", "cells": [
-        {"period": "FY2016", "value": -17.608, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "FY2017", "value": -22.317, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "Q1 2018", "value": -8.644, "available_at": "2018-05-08", "source_ids": ["0001104659-18-031046"], "status": "reported"},
-        {"period": "9 months 2018", "value": -19.242, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Net cash provided by financing activities", "unit": "USD_millions", "cells": [
-        {"period": "FY2016", "value": 14.454, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "FY2017", "value": 173.805, "available_at": "2018-03-13", "source_ids": ["0001047469-18-001557"], "status": "reported"},
-        {"period": "Q1 2018", "value": 0.265, "available_at": "2018-05-08", "source_ids": ["0001104659-18-031046"], "status": "reported"},
-        {"period": "9 months 2018", "value": 313.725, "available_at": "2018-11-06", "source_ids": ["0001104659-18-066115"], "status": "reported"}
-      ]},
-      {"row": "Total revenue", "unit": "USD_millions", "cells": [
-        {"period": "9 months 2018", "value": 0.0, "available_at": "2018-11-06", "source_ids": ["c5"], "status": "reported"},
-        {"period": "Q3 2018", "value": 0.0, "available_at": "2018-11-06", "source_ids": ["c5"], "status": "reported"}
-      ]}
-    ]
+      {
+        "row": "Cash and cash equivalents",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2016",
+            "value": 19.145,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 148.627,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 38.125,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001104659-18-031046"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 264.861,
+            "available_at": "2018-08-07",
+            "source_ids": [
+              "0001104659-18-049982"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 38.046,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Available-for-sale securities, current",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2017",
+            "value": 42.9,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": null,
+            "available_at": null,
+            "source_ids": [],
+            "status": "missing"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 225.444,
+            "available_at": "2018-08-07",
+            "source_ids": [
+              "0001104659-18-049982"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 450.492,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total assets",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2016",
+            "value": 41.21,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 192.313,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 183.478,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001104659-18-031046"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 491.528,
+            "available_at": "2018-08-07",
+            "source_ids": [
+              "0001104659-18-049982"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 489.549,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total liabilities",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2016",
+            "value": 4.8,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 10.054,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 6.294,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001104659-18-031046"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 5.436,
+            "available_at": "2018-08-07",
+            "source_ids": [
+              "0001104659-18-049982"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 6.642,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Stockholders' equity",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2016",
+            "value": 36.41,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 182.259,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 177.184,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001104659-18-031046"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 486.092,
+            "available_at": "2018-08-07",
+            "source_ids": [
+              "0001104659-18-049982"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 482.907,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Common shares outstanding",
+        "unit": "shares",
+        "cells": [
+          {
+            "period": "FY2016",
+            "value": 11951866,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 14227634,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 14250726,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001104659-18-031046"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q2 2018",
+            "value": 15365384,
+            "available_at": "2018-08-07",
+            "source_ids": [
+              "0001104659-18-049982"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 15393309,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Operating loss",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2016",
+            "value": -25.223,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": -32.062,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "9 months 2018",
+            "value": -26.228,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": -11.333,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net loss",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "9 months 2017",
+            "value": -22.709,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2017",
+            "value": -8.363,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "9 months 2018",
+            "value": -21.336,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": -8.512,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net cash used in operating activities",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2016",
+            "value": -17.608,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": -22.317,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": -8.644,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001104659-18-031046"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "9 months 2018",
+            "value": -19.242,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Net cash provided by financing activities",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "FY2016",
+            "value": 14.454,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "FY2017",
+            "value": 173.805,
+            "available_at": "2018-03-13",
+            "source_ids": [
+              "0001047469-18-001557"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q1 2018",
+            "value": 0.265,
+            "available_at": "2018-05-08",
+            "source_ids": [
+              "0001104659-18-031046"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "9 months 2018",
+            "value": 313.725,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "0001104659-18-066115"
+            ],
+            "status": "reported"
+          }
+        ]
+      },
+      {
+        "row": "Total revenue",
+        "unit": "USD_millions",
+        "cells": [
+          {
+            "period": "9 months 2018",
+            "value": 0.0,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "c5"
+            ],
+            "status": "reported"
+          },
+          {
+            "period": "Q3 2018",
+            "value": 0.0,
+            "available_at": "2018-11-06",
+            "source_ids": [
+              "c5"
+            ],
+            "status": "reported"
+          }
+        ]
+      }
+    ],
+    "presentation": {
+      "intro": "This company has no product revenue, so read its position through cash reserves, spending pace and funding runway rather than sales or margins.",
+      "groups": [
+        {
+          "title": "Cash position",
+          "metrics": [
+            0,
+            1
+          ]
+        },
+        {
+          "title": "Funding runway",
+          "metrics": [
+            2,
+            3
+          ]
+        },
+        {
+          "title": "Balance sheet",
+          "metrics": [
+            4
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Cash and investments",
+          "context": "Cash equivalents plus short-term investments, up mainly from a June 2018 stock offering rather than operations. Predates any Phase 3 funding decision or trial-cost disclosure.",
+          "metric": "Cash and liquid investments"
+        },
+        {
+          "label": "Net cash",
+          "context": "Cash and investments minus total liabilities ($6.6m). Almost all of the year-over-year increase came from a stock sale, not from operating results.",
+          "metric": "Net cash (cash and investments minus total liabilities)"
+        },
+        {
+          "label": "Operating cash outflow",
+          "context": "Cash used in operations for the quarter alone, derived from nine-month minus six-month cumulative totals. A cash-flow measure, not net loss, and not termed 'cash burn'.",
+          "metric": "Quarterly operating cash outflow"
+        },
+        {
+          "label": "Funding runway",
+          "context": "A scenario: cash divided by the nine-month average quarterly outflow, assuming constant spending. It ignores the planned Phase 3 trials' funding needs, so it is illustrative, not predictive.",
+          "metric": "Funding runway scenario"
+        },
+        {
+          "label": "Shares outstanding",
+          "context": "Shares outstanding rose about 8% from year-end 2017, mainly from a June 2018 public stock offering that also raised the cash and investments shown above.",
+          "metric": "Shares outstanding and recent dilution"
+        }
+      ],
+      "valuation_context": "Pre-revenue: no revenue multiple applies here (see caveats); the panel is net cash only. Share count and cash figures predate this price date and say nothing about clinical or regulatory results."
+    }
   },
   "what_changed": [
     {
       "date": "2018-11-12",
       "fact": "The company presented 36-week Phase 2 biopsy and lipid results for its lead drug at a hepatology-conference plenary session; topline results were already public by 13 Mar 2018 (week 12) and 31 May 2018 (week 36) [c1][c2][c3].",
       "relationship_to_business": "This is the company's only late-stage clinical program; the depth of this data underpins the planned Phase 3 trial and the company's near-term value [c1].",
-      "source_ids": ["mdgl-liver-meeting"],
+      "source_ids": [
+        "mdgl-liver-meeting"
+      ],
       "status": "reported"
     },
     {
       "date": "2018-11-06",
       "fact": "Q3 results showed $488.5 million in cash and investments (up from $191.5 million a year earlier), zero product revenue, and guidance for a Phase 3 trial in the primary indication to start late 2018 or early 2019, pending regulatory agreement on design [c4][c5][c6].",
       "relationship_to_business": "Sets the financing backdrop: management called its resources significant relative to the planned Phase 3 programs, but regulatory agreement on the pivotal trial design was not yet public [c7][c12].",
-      "source_ids": ["mdgl-8k-nov6"],
+      "source_ids": [
+        "mdgl-8k-nov6"
+      ],
       "status": "reported"
     },
     {
       "date": "2018-06-06",
       "fact": "In June 2018 the company completed an underwritten public stock offering, issuing 983,607 new company shares, with net proceeds of about $282.8 million for general corporate purposes including R&D and trial costs [c8].",
       "relationship_to_business": "This financing, not the November data, is the main driver of the large cash increase and the roughly 8% share-count increase seen in the numbers above [c8][c9].",
-      "source_ids": ["mdgl-8k-jun6"],
+      "source_ids": [
+        "mdgl-8k-jun6"
+      ],
       "status": "reported"
     }
   ],
@@ -190,7 +692,12 @@
         "ownership_partner": "Wholly owned by the company; no partner disclosed in the eligible sources",
         "trial_id": "NCT02912260",
         "design": "Randomized 2:1 (drug:placebo), double-blind, placebo-controlled, multi-center, about 25 U.S. sites [c13]",
-        "sample_sizes": {"planned_enrolled": 125, "week12_analyzed": "78 drug / 38 placebo", "week36_paired_biopsy": "73 drug / 34 placebo", "note": "exact planned-vs-enrolled distinction not separately stated in the eligible sources [c13]"},
+        "sample_sizes": {
+          "planned_enrolled": 125,
+          "week12_analyzed": "78 drug / 38 placebo",
+          "week36_paired_biopsy": "73 drug / 34 placebo",
+          "note": "exact planned-vs-enrolled distinction not separately stated in the eligible sources [c13]"
+        },
         "population": "Adults with biopsy-confirmed NASH",
         "treatment_duration": "36 weeks, with an optional 36-week extension for some patients",
         "primary_endpoint": "Relative reduction in liver fat content at week 12, measured by MRI-PDFF (a non-invasive MRI method that estimates the fraction of fat in the liver)",
@@ -217,7 +724,10 @@
         "ownership_partner": "Wholly owned by the company; no partner disclosed",
         "trial_id": "missing -- not stated in the eligible sources",
         "design": "missing -- described only as a completed Phase 2 clinical trial; randomization ratio and blinding not separately confirmed in the eligible sources",
-        "sample_sizes": {"enrolled": 116, "note": "analyzed/evaluable counts not separately stated"},
+        "sample_sizes": {
+          "enrolled": 116,
+          "note": "analyzed/evaluable counts not separately stated"
+        },
         "population": "Patients with HeFH",
         "treatment_duration": "missing -- not stated in the eligible sources",
         "primary_endpoint": "missing -- not explicitly labeled in the eligible sources, though LDL-cholesterol lowering is the headline result reported",
@@ -240,13 +750,17 @@
         "description": "Planned start of a pivotal Phase 3 trial in the primary (liver-disease) indication",
         "timing_window": "late 2018 or early 2019, subject to regulatory agreement on trial design",
         "announced_on": "2018-11-06",
-        "source_ids": ["mdgl-8k-nov6"]
+        "source_ids": [
+          "mdgl-8k-nov6"
+        ]
       },
       {
         "description": "Possible Phase 3 study in the related cholesterol-disorder indication",
         "timing_window": "design and objectives still under evaluation as of the cutoff; could begin in 2019 if pursued",
         "announced_on": "2018-11-06",
-        "source_ids": ["mdgl-8k-nov6"]
+        "source_ids": [
+          "mdgl-8k-nov6"
+        ]
       }
     ],
     "unresolved_questions": [
@@ -272,15 +786,69 @@
     ]
   },
   "source_handles": [
-    {"id": "mdgl-liver-meeting", "kind": "press_release", "title": "Phase 2 Results for Madrigal's MGL-3196 in Non-Alcoholic Steatohepatitis (NASH) Presented during Presidential Plenary Clinical Session of The Liver Meeting 2018", "available_at": "2018-11-12", "masked_title": "Company press release, 12 Nov 2018 -- detailed Phase 2 liver-disease trial data presented at a major hepatology conference"},
-    {"id": "mdgl-8k-mar13", "kind": "8-K", "title": "Madrigal Pharmaceuticals Reports 2017 Fourth Quarter and Year-End Financial Results, Reviews Key Corporate Achievements and Provides Clinical Update on MGL-3196", "available_at": "2018-03-13", "masked_title": "Company FY2017 earnings release and clinical update, 13 Mar 2018"},
-    {"id": "mdgl-8k-may31", "kind": "8-K", "title": "Madrigal's MGL-3196 Achieves Liver Biopsy Endpoints in Patients with NASH at 36 Weeks in Phase 2 Clinical Trial", "available_at": "2018-05-31", "masked_title": "Company press release, 31 May 2018 -- 36-week Phase 2 biopsy results"},
-    {"id": "mdgl-8k-jun6", "kind": "8-K", "title": "Madrigal Pharmaceuticals Form 8-K, Item 1.01 -- Underwriting Agreement for Public Offering of Common Stock", "available_at": "2018-06-08", "masked_title": "Company SEC filing, 8 Jun 2018 -- public stock offering agreement"},
-    {"id": "mdgl-8k-nov6", "kind": "8-K", "title": "Madrigal Pharmaceuticals Reports Third Quarter 2018 Financial Results and Provides Business Update", "available_at": "2018-11-06", "masked_title": "Company Q3 2018 earnings release and business update, 6 Nov 2018"},
-    {"id": "0001104659-18-066115", "kind": "10-Q", "title": "Madrigal Pharmaceuticals Form 10-Q, quarter ended 2018-09-30 (SEC XBRL structured facts)", "available_at": "2018-11-06", "masked_title": "Company quarterly SEC filing, structured financial data, 6 Nov 2018"},
-    {"id": "0001047469-18-001557", "kind": "10-K", "title": "Madrigal Pharmaceuticals Form 10-K, fiscal year 2017 (SEC XBRL structured facts)", "available_at": "2018-03-13", "masked_title": "Company annual SEC filing, structured financial data, 13 Mar 2018"},
-    {"id": "0001104659-18-031046", "kind": "10-Q", "title": "Madrigal Pharmaceuticals Form 10-Q, quarter ended 2018-03-31 (SEC XBRL structured facts)", "available_at": "2018-05-08", "masked_title": "Company quarterly SEC filing, structured financial data, 8 May 2018"},
-    {"id": "0001104659-18-049982", "kind": "10-Q", "title": "Madrigal Pharmaceuticals Form 10-Q, quarter ended 2018-06-30 (SEC XBRL structured facts)", "available_at": "2018-08-07", "masked_title": "Company quarterly SEC filing, structured financial data, 7 Aug 2018"}
+    {
+      "id": "mdgl-liver-meeting",
+      "kind": "press_release",
+      "title": "Phase 2 Results for Madrigal's MGL-3196 in Non-Alcoholic Steatohepatitis (NASH) Presented during Presidential Plenary Clinical Session of The Liver Meeting 2018",
+      "available_at": "2018-11-12",
+      "masked_title": "Company press release, 12 Nov 2018 -- detailed Phase 2 liver-disease trial data presented at a major hepatology conference"
+    },
+    {
+      "id": "mdgl-8k-mar13",
+      "kind": "8-K",
+      "title": "Madrigal Pharmaceuticals Reports 2017 Fourth Quarter and Year-End Financial Results, Reviews Key Corporate Achievements and Provides Clinical Update on MGL-3196",
+      "available_at": "2018-03-13",
+      "masked_title": "Company FY2017 earnings release and clinical update, 13 Mar 2018"
+    },
+    {
+      "id": "mdgl-8k-may31",
+      "kind": "8-K",
+      "title": "Madrigal's MGL-3196 Achieves Liver Biopsy Endpoints in Patients with NASH at 36 Weeks in Phase 2 Clinical Trial",
+      "available_at": "2018-05-31",
+      "masked_title": "Company press release, 31 May 2018 -- 36-week Phase 2 biopsy results"
+    },
+    {
+      "id": "mdgl-8k-jun6",
+      "kind": "8-K",
+      "title": "Madrigal Pharmaceuticals Form 8-K, Item 1.01 -- Underwriting Agreement for Public Offering of Common Stock",
+      "available_at": "2018-06-08",
+      "masked_title": "Company SEC filing, 8 Jun 2018 -- public stock offering agreement"
+    },
+    {
+      "id": "mdgl-8k-nov6",
+      "kind": "8-K",
+      "title": "Madrigal Pharmaceuticals Reports Third Quarter 2018 Financial Results and Provides Business Update",
+      "available_at": "2018-11-06",
+      "masked_title": "Company Q3 2018 earnings release and business update, 6 Nov 2018"
+    },
+    {
+      "id": "0001104659-18-066115",
+      "kind": "10-Q",
+      "title": "Madrigal Pharmaceuticals Form 10-Q, quarter ended 2018-09-30 (SEC XBRL structured facts)",
+      "available_at": "2018-11-06",
+      "masked_title": "Company quarterly SEC filing, structured financial data, 6 Nov 2018"
+    },
+    {
+      "id": "0001047469-18-001557",
+      "kind": "10-K",
+      "title": "Madrigal Pharmaceuticals Form 10-K, fiscal year 2017 (SEC XBRL structured facts)",
+      "available_at": "2018-03-13",
+      "masked_title": "Company annual SEC filing, structured financial data, 13 Mar 2018"
+    },
+    {
+      "id": "0001104659-18-031046",
+      "kind": "10-Q",
+      "title": "Madrigal Pharmaceuticals Form 10-Q, quarter ended 2018-03-31 (SEC XBRL structured facts)",
+      "available_at": "2018-05-08",
+      "masked_title": "Company quarterly SEC filing, structured financial data, 8 May 2018"
+    },
+    {
+      "id": "0001104659-18-049982",
+      "kind": "10-Q",
+      "title": "Madrigal Pharmaceuticals Form 10-Q, quarter ended 2018-06-30 (SEC XBRL structured facts)",
+      "available_at": "2018-08-07",
+      "masked_title": "Company quarterly SEC filing, structured financial data, 7 Aug 2018"
+    }
   ],
   "missing_data": [
     "Market capitalization and enterprise value: no historical share price is in the eligible packet.",

@@ -681,7 +681,60 @@
           }
         ]
       }
-    ]
+    ],
+    "presentation": {
+      "intro": "This is a pre-revenue company: read cash, burn and financing here, not business performance, and weigh them separately from the price paid for the stock.",
+      "groups": [
+        {
+          "title": "Cash position",
+          "metrics": [
+            0
+          ]
+        },
+        {
+          "title": "Funding runway",
+          "metrics": [
+            2,
+            1
+          ]
+        },
+        {
+          "title": "Balance sheet",
+          "metrics": [
+            3,
+            4
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Cash",
+          "context": "Cash and cash equivalents only, no investments reported separately. Up from year-end 2018, but down from $53.8m three months earlier -- the prior shown here is year-end, not the prior quarter.",
+          "metric": "Cash and cash equivalents"
+        },
+        {
+          "label": "Quarterly cash burn",
+          "context": "Derived by subtracting six-month from nine-month year-to-date operating cash use, not a reported quarterly figure. Nearly double the $5.9m used in the same quarter last year.",
+          "metric": "Quarterly operating cash outflow (most recent quarter)"
+        },
+        {
+          "label": "Runway estimate",
+          "context": "A simple scenario dividing cash on hand by the recent average quarterly cash outflow, not a company forecast. Management's own guidance points to funding lasting into the second quarter of 2021.",
+          "metric": "Funding runway scenario"
+        },
+        {
+          "label": "Debt",
+          "context": "Combined current and noncurrent long-term debt on the balance sheet, up from $6.9m at year-end 2018 as new financing was added; this reflects capital raised, not operating losses.",
+          "metric": "Debt and contractual commitments"
+        },
+        {
+          "label": "Shares outstanding",
+          "context": "Common shares outstanding at quarter end. Financing activities provided $58.5m in cash over the first nine months of 2019, largely equity issuance -- the source of the cash gain, not revenue.",
+          "metric": "Shares outstanding and recent financing"
+        }
+      ],
+      "valuation_context": "This is a pre-revenue company: the filings show no annual revenue, so no revenue multiple applies. Share count and net cash are dated September 30, 2019, predating the December price; no approved product exists yet."
+    }
   },
   "what_changed": [
     {
