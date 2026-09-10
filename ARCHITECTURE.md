@@ -22,6 +22,7 @@ research (30 candidates) -> verification -> selection (10) -> writers (player.js
 | Path | What it is | Who writes it |
 | --- | --- | --- |
 | `MASTER_PLAN.md` | Product authority: the chronological portfolio campaign. Wins on conflict. Not yet implemented. | user |
+| `EPIC_1.md` | The campaign as one end-to-end scenario extracted from MASTER_PLAN.md and CAMPAIGN_ENGINE_PLAN.md: ten stops in cutoff order with covered horizons, twelve stories with acceptance criteria, the seven decisions still open, sequence with the playtest pause, data dependencies. |
 | `FRAMEWORK.md`, `CASE_FORMAT.md` | Earlier product and presentation contracts; evidence principles still apply. | humans / editor session |
 | `research/SELECTION_RULES.md` | Rules for choosing the ten. | editor |
 | `research/PAUSED.md` | Live handover: status, what is running, next steps. Read first. | every session, on pause |
