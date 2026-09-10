@@ -1,3 +1,15 @@
+## Nektar exit-aware debrief — 10 September 2026
+
+Implemented the user-approved bounded patch; pause for Nektar playtesting before any rollout or campaign work.
+
+- Nektar walkthrough and selected-thesis feedback use the actual simulated exit, including stop-loss and take-profit exits. One-/three-/five-year windows retain one/two/four authored stops respectively; earlier exits include only eligible stops.
+- New outcome-only `scene_check.dated_debrief` contains baseline interpretations and event-linked updates. `site/story.js` selects evidence using both occurrence and source publication dates. Date-only evidence must precede the opening-price exit; month-only dates use month end conservatively. Retrospective legal material is not eligible at its earlier occurrence date.
+- Results and primary stock/SPY chart for Nektar end at the actual exit; the final chart point uses the exit open, not that day's later close. Same-date benchmark tiles and drawdown reflect that boundary. Saved legacy forecast/calibration semantics remain unchanged.
+- Default order: results/chart, selected-thesis check with source links, concise exit-scoped narrative. Full friend checks, horizon notes, event archive and alternative horizons are in a closed optional later-context section. Full outcome payloads still load after commitment; this is standalone presentation scoping, not campaign time-gating or access control.
+- Removed unsupported closing/legal/cash-retention clauses from three Nektar walkthrough stops. Reused existing evidence; 2019 and April 2022 wire sources reopened during this patch, but the two SEC source URLs could not be reopened. This is not a complete source re-verification or readiness certification.
+- Verified: all ten cases (`verify_cases.py`), builder regeneration, return arithmetic, simulator agreement, and `test_story_dates.js` (publication boundaries, early exits, all three horizons, no dated feedback in the player sheet). Updated `test_story_ui.cjs` passed on desktop and 390px: horizons, buy/short/skip, stop/target, reload before/within/after walkthrough, failed commitment/progress saves, optional later context and journal. Tests use isolated storage.
+- Remaining: user playtest; broader opening/investigation wording and editorial readiness triage; other nine stories still use their existing full-record thesis feedback. No campaign integration in this patch.
+
 # Status: ten-case MVP running locally; tightening pass in progress (2026-09-09, ~21:45 UTC)
 
 > Superseded product priority (9 September 2026): [MASTER_PLAN.md](../MASTER_PLAN.md) defines the main game as one chronological portfolio campaign, with a fixed historical end date and play continuing until all timed trades close. This file retains earlier work, prompts or recommendations; conflicting standalone-quiz priorities and immediate future reveals do not govern campaign development. Check current code before repeating earlier tasks.
@@ -11,7 +23,8 @@ Repository https://github.com/AnthonyKot/stockgame (public), site live at https:
 ## What is true right now
 
 - Ten cases are playable at http://localhost:8765/index.html (serve `site/` with `python3 -m http.server 8765`). All ten pass `scripts/verify_cases.py`; `scripts/test_returns.py` passes.
-- Data flow and conventions are in ARCHITECTURE.md. Nothing is in git. Nothing is published.
+- Data flow and conventions are in ARCHITECTURE.md. Repo and live site: see Published above.
+- 2026-09-10: Codex's review found two real defects. Fixed: the walk now ends at the simulated exit when a stop or target fired (was the anniversary). Open: thesis_check verdicts are one string per assumption written against the full record, so a 1-year call reads verdicts that mention later years; plan is dated fragments clipped at the exit (schema change in scenes.json, builder, renderer, authoring pass).
 - Done tonight against Codex's review: SPY benchmark on a total-return basis with the stock; commit saves and reads back before any reveal, failure shows an error and reveals nothing; masked source excerpts visible before commit; sector evidence collapsed by default; fixed "Decide" button on narrow screens; session-interval readout removed; derived valuation tiles (market cap, net cash, EV, EV/revenue; banks market cap only); rules in a side panel; per-case Brier score removed; other-horizon reveal; legend toggles and relative-to-SPY chart view.
 - Kept on purpose despite the trim list: size chooser (user asked for it to be highlighted), probability question (unscored, defaulted), one shared renderer for all ten instead of a three-case pilot.
 
@@ -43,7 +56,7 @@ All ten cases/<id>/aftermath.json written (Sonnet workers, 9 to 12 dated sourced
 
 1. User plays a few cases with the aftermath timeline and says what reads well and what does not.
 2. Editorial triage of each case's `repairs_needed` (evidence.json): mark blocking vs optional; only then consider a readiness gate in the builder.
-3. Optional: `git init` and first commit (user has not asked yet).
+3. Horizon-scoped thesis checks (see 2026-09-10 note above), then tick the done items in TODO.md's Nektar section.
 
 ## Open questions for the user
 

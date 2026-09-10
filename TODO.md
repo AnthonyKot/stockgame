@@ -1,3 +1,15 @@
+## Nektar exit-aware debrief — 10 September 2026
+
+Implemented the user-approved bounded patch; pause for Nektar playtesting before any rollout or campaign work.
+
+- Nektar walkthrough and selected-thesis feedback use the actual simulated exit, including stop-loss and take-profit exits. One-/three-/five-year windows retain one/two/four authored stops respectively; earlier exits include only eligible stops.
+- New outcome-only `scene_check.dated_debrief` contains baseline interpretations and event-linked updates. `site/story.js` selects evidence using both occurrence and source publication dates. Date-only evidence must precede the opening-price exit; month-only dates use month end conservatively. Retrospective legal material is not eligible at its earlier occurrence date.
+- Results and primary stock/SPY chart for Nektar end at the actual exit; the final chart point uses the exit open, not that day's later close. Same-date benchmark tiles and drawdown reflect that boundary. Saved legacy forecast/calibration semantics remain unchanged.
+- Default order: results/chart, selected-thesis check with source links, concise exit-scoped narrative. Full friend checks, horizon notes, event archive and alternative horizons are in a closed optional later-context section. Full outcome payloads still load after commitment; this is standalone presentation scoping, not campaign time-gating or access control.
+- Removed unsupported closing/legal/cash-retention clauses from three Nektar walkthrough stops. Reused existing evidence; 2019 and April 2022 wire sources reopened during this patch, but the two SEC source URLs could not be reopened. This is not a complete source re-verification or readiness certification.
+- Verified: all ten cases (`verify_cases.py`), builder regeneration, return arithmetic, simulator agreement, and `test_story_dates.js` (publication boundaries, early exits, all three horizons, no dated feedback in the player sheet). Updated `test_story_ui.cjs` passed on desktop and 390px: horizons, buy/short/skip, stop/target, reload before/within/after walkthrough, failed commitment/progress saves, optional later context and journal. Tests use isolated storage.
+- Remaining: user playtest; broader opening/investigation wording and editorial readiness triage; other nine stories still use their existing full-record thesis feedback. No campaign integration in this patch.
+
 # Tomorrow's work — 9 September 2026 handoff
 
 ## Direction and immediate scope

@@ -354,11 +354,11 @@
       "walkthrough": [
         {
           "event_id": "e2",
-          "stage_text": "Two months after the deal closed, expanded data are shown at the big oncology meeting. The melanoma response rate, 85% in the first 13 patients, is 50% once the cohort reaches 28; the kidney cohort shows the same pattern. Nothing has failed and the partner is still in. But the small-sample response rates the pitch rested on have moved."
+          "stage_text": "Expanded data are shown at the oncology meeting. The melanoma response rate is lower in the larger cohort than in the initial small group; the kidney cohort shows a similar pattern. These are still early, uncontrolled results. What does the change do to your confidence in the initial signal?"
         },
         {
           "event_id": "e5",
-          "stage_text": "A year on, with twelve months of follow-up in 38 first-line melanoma patients, the response rate is 53% with 34% complete responses, better than the previous year's expanded read. In the meantime a short-seller report questioned the drug's exposure data and a securities class action was filed; both are unresolved at this point. Pivotal trials are running. The question is unchanged: will this hold in a randomised trial of hundreds?"
+          "stage_text": "Updated follow-up in the melanoma cohort shows improved response results compared with the previous expanded readout. This is encouraging evidence from an uncontrolled study. Does it restore your confidence, or does your assumption require a controlled comparison?"
         },
         {
           "event_id": "e7",
@@ -366,9 +366,65 @@
         },
         {
           "event_id": "e8",
-          "stage_text": "A month later the two companies end the entire combination programme across every indication. The partnership's clinical bet is over; the cash and equity paid in 2018 are not returned."
+          "stage_text": "The two companies end the combination development program across all indications. The clinical bet behind this partnership has ended. How does that affect the assumption you chose?"
         }
-      ]
+      ],
+      "dated_debrief": {
+        "baseline": {
+          "narrative": "Your window ends before the first new development covered by this story. The starting evidence leaves the investment question unresolved.",
+          "checks": {
+            "a1": "Unresolved. The starting clinical evidence is not enough to establish how results will hold up in larger trials.",
+            "a2": "Unresolved. An agreed financing package is not a complete account of future funding needs.",
+            "a3": "Unresolved. This record does not establish the value of the drug conditional on success.",
+            "a4": "Choosing to wait is consistent with uncertainty. This outcome alone cannot tell us whether waiting was the better decision.",
+            "a5": "Unresolved. A share-price result cannot establish how much clinical success was priced in at entry."
+          }
+        },
+        "updates": [
+          {
+            "event_ids": [
+              "e2"
+            ],
+            "narrative": "The expanded early-stage data weakened the initial clinical signal. That is a reason to revisit confidence in the small cohorts, not a definitive answer about efficacy.",
+            "checks": {
+              "a1": "Weakened. Response rates fell as the early cohorts expanded. These uncontrolled data still do not settle efficacy."
+            }
+          },
+          {
+            "event_ids": [
+              "e1"
+            ],
+            "checks": {
+              "a2": "Partly supported. The reported receipt of the agreed cash and equity proceeds reduced near-term funding uncertainty. This record does not establish that financing risk disappeared for years."
+            }
+          },
+          {
+            "event_ids": [
+              "e5"
+            ],
+            "narrative": "The updated melanoma results improved on the earlier expanded readout. Evidence has moved in both directions; the uncontrolled study still leaves the central efficacy question open.",
+            "checks": {
+              "a1": "Mixed. The updated melanoma response results improved after the earlier decline. That supports revisiting the assumption, but does not replace a controlled comparison."
+            }
+          },
+          {
+            "event_ids": [
+              "e7"
+            ],
+            "narrative": "The randomized melanoma trial missed its co-primary endpoints. This is evidence against the combination in the tested setting, rather than proof that the earlier investment decision was unreasonable.",
+            "checks": {
+              "a1": "Not supported in the tested setting. The randomized melanoma trial missed its co-primary endpoints. This does not answer every possible question about dose or patient population.",
+              "a3": "Unresolved as a valuation claim. The success condition did not materialize in this trial, so its failure cannot tell us what the upside would have been on success."
+            }
+          },
+          {
+            "event_ids": [
+              "e8"
+            ],
+            "narrative": "The companies ended the combination program after the clinical setbacks. The clinical bet has ended within your window; the return still cannot separate the effects of starting valuation, trial results and the wider market."
+          }
+        ]
+      }
     },
     "growth-007": {
       "setup": "bad_news_headline",

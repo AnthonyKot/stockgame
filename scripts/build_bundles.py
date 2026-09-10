@@ -354,6 +354,8 @@ def main():
                         wt.append({'event': masked_ev, 'stage_text': mask_names(w['stage_text'], names, '')})
                 oc['scene_check'] = {'setup': sc['setup'], 'voice': sc['voice'], 'claims': sc['claims'], 'debrief_check': sc.get('debrief_check'),
                                      'assumptions': sc.get('assumptions', []), 'thesis_check': sc.get('thesis_check'), 'walkthrough': wt}
+                if sc.get('dated_debrief'):
+                    oc['scene_check']['dated_debrief'] = sc['dated_debrief']
                 (out / 'outcome.json').write_text(json.dumps(oc))
             sheet['neutral_title'] = mask_names(r.get('neutral_title', ''), names, '')
             sheet['player_question'] = mask_names(r.get('player_question', ''), names, '')

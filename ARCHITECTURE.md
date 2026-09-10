@@ -98,6 +98,20 @@ research (30 candidates) -> verification -> selection (10) -> writers (player.js
 
 - Decision ticket keeps action, horizon, size and reasoning visible; optional exit rules, probability and extra thesis fields live in a closed “Add detail” section. Free-text reasoning is optional; authored assumption selection keeps its existing validation.
 - Walkthrough records `walkthrough_started` and `walkthrough_complete`, resumes the first unanswered event, and refuses to advance on failed persistence. Existing completed results remain accessible. Selected assumptions appear beside each event.
+- Walk stops are cut at the actual holding period: `showDebrief` runs `SIM.simulate` with the entry's action, size, horizon, stop and target; if a stop or target fired, the walk ends at that exit date (gate and last stop say so) instead of the anniversary. Skips and entries without levels use the anniversary. Later events stay in the debrief as context.
 - Journal uses the revealed name without repeating the alias; skipped positions show a dash for position return, while portfolio return remains numeric. A compact Exit column shows the exit category, with the full reason in its title.
 - Browser regression: `scripts/test_story_ui.cjs`. Serve `site/`, then run with Playwright installed or set `PLAYWRIGHT_MODULE`; optional `CHROMIUM_PATH` and `STOCKGAME_URL` configure the browser and server. Tests use fresh browser storage.
 - This patch does not alter story wording, scope walkthrough events to horizons, or implement campaign integration. Full future payload loading remains the standalone app's existing limitation.
+
+## Nektar exit-aware debrief — 10 September 2026
+
+Implemented the user-approved bounded patch; pause for Nektar playtesting before any rollout or campaign work.
+
+- Nektar walkthrough and selected-thesis feedback use the actual simulated exit, including stop-loss and take-profit exits. One-/three-/five-year windows retain one/two/four authored stops respectively; earlier exits include only eligible stops.
+- New outcome-only `scene_check.dated_debrief` contains baseline interpretations and event-linked updates. `site/story.js` selects evidence using both occurrence and source publication dates. Date-only evidence must precede the opening-price exit; month-only dates use month end conservatively. Retrospective legal material is not eligible at its earlier occurrence date.
+- Results and primary stock/SPY chart for Nektar end at the actual exit; the final chart point uses the exit open, not that day's later close. Same-date benchmark tiles and drawdown reflect that boundary. Saved legacy forecast/calibration semantics remain unchanged.
+- Default order: results/chart, selected-thesis check with source links, concise exit-scoped narrative. Full friend checks, horizon notes, event archive and alternative horizons are in a closed optional later-context section. Full outcome payloads still load after commitment; this is standalone presentation scoping, not campaign time-gating or access control.
+- Removed unsupported closing/legal/cash-retention clauses from three Nektar walkthrough stops. Reused existing evidence; 2019 and April 2022 wire sources reopened during this patch, but the two SEC source URLs could not be reopened. This is not a complete source re-verification or readiness certification.
+- Verified: all ten cases (`verify_cases.py`), builder regeneration, return arithmetic, simulator agreement, and `test_story_dates.js` (publication boundaries, early exits, all three horizons, no dated feedback in the player sheet). Updated `test_story_ui.cjs` passed on desktop and 390px: horizons, buy/short/skip, stop/target, reload before/within/after walkthrough, failed commitment/progress saves, optional later context and journal. Tests use isolated storage.
+- Remaining: user playtest; broader opening/investigation wording and editorial readiness triage; other nine stories still use their existing full-record thesis feedback. No campaign integration in this patch.
+

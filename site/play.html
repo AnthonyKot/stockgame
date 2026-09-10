@@ -20,6 +20,7 @@
 <aside id="drawer" class="drawer" hidden role="dialog" aria-modal="true" aria-label="Evidence"></aside>
 <script src="app.js"></script>
 <script src="sim.js"></script>
+<script src="story.js"></script>
 <script>
 (async () => {
   const { $, el, load, prose, money, pct, signed, dateFmt, horizonText, badge } = SG;
@@ -27,7 +28,7 @@
   const id = new URLSearchParams(location.search).get('case');
   const head = $('#head'), main = $('#main'), ticket = $('#ticket'), debrief = $('#debrief'), drawer = $('#drawer'), backdrop = $('#backdrop');
   if (!id) { head.textContent = 'No case selected.'; return; }
-  let sheet, market, reveal = null, outcome = null;
+  let sheet, market, reveal = null, outcome = null, walkExit = null;   // walkExit: simulated early exit (stop/target) that ends the walk before the anniversary
   try { [sheet, market] = await Promise.all([load(`data/${id}/sheet.json`), load(`data/${id}/market.json`)]); } catch (e) { head.textContent = 'Could not load this case: ' + e.message; return; }
   const prior = SG.findCommit(id);
   const transparent = SG.transparent();
@@ -218,8 +219,15 @@
   async function showDebrief(entry) {
     if (!outcome) { try { outcome = await load(`data/${id}/outcome.json`); } catch (e) { outcome = null; } }
     const allStops = outcome && outcome.scene_check && outcome.scene_check.walkthrough || [];
-    const exitD = outcome && outcome.sim && outcome.sim.horizons[String(entry.horizon_years || years)];
-    const wt = exitD ? allStops.filter(s => s.event.date <= exitD) : allStops;   // only stops inside the chosen holding period
+    const yrsW = entry.horizon_years || years;
+    let exitD = outcome && outcome.sim && outcome.sim.horizons[String(yrsW)];
+    walkExit = null;
+    if (outcome && outcome.sim && entry.action !== 'skip' && (entry.stop_pct || entry.tp_pct)) {   // a stop or target that fired ends the holding period early
+      const r = SIM.simulate(outcome.sim, { action: entry.action, size: entry.size, years: yrsW, stop: entry.stop_pct || 0, tp: entry.tp_pct || 0 });
+      if (r.status === 'ok' && r.stopped) { exitD = r.exit.date; walkExit = r; }
+    }
+    const dated = exitD && STORY.atExit(outcome, exitD);
+    const wt = dated ? dated.stops : exitD ? allStops.filter(s => s.event.date <= exitD) : allStops;
     if (wt.length && !entry.walkthrough_skipped && !entry.walkthrough_complete && !entry.result) {
       const reflections = Array.isArray(entry.walkthrough) ? entry.walkthrough : [];
       const next = wt.findIndex(s => !reflections.some(r => r.event_id === s.event.id && ['strengthens', 'weakens', 'unresolved'].includes(r.view)));
@@ -230,8 +238,9 @@
   function showGate(entry, wt) {
     ticket.innerHTML = ''; debrief.innerHTML = '';
     const g = el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h2', {}, 'Your decision is saved: ' + entry.action + (entry.size ? ' ' + entry.size + '%' : '')), el('p', {}, 'How do you want to find out?'),
-      el('div', { class: 'row' }, el('button', { class: 'primary', type: 'button', style: 'width:auto', onclick: () => { if (saveWalk(entry, { walkthrough_started: true }, g)) walk(entry, wt, 0); } }, `Walk through what happened (${wt.length} stops)`), el('button', { class: 'ghost', type: 'button', onclick: () => { if (saveWalk(entry, { walkthrough_skipped: true }, g)) showDebriefFull(entry); } }, 'Show the result')),
-      el('p', { class: 'note' }, 'The walk shows the record one stop at a time, with only what was known then, and asks how each stop sits with your thesis. Your trade stays locked either way.'));
+      el('div', { class: 'row' }, el('button', { class: 'primary', type: 'button', style: 'width:auto', onclick: () => { if (saveWalk(entry, { walkthrough_started: true }, g)) walk(entry, wt, 0); } }, `Walk through what happened (${wt.length} ${wt.length === 1 ? 'stop' : 'stops'})`), el('button', { class: 'ghost', type: 'button', onclick: () => { if (saveWalk(entry, { walkthrough_skipped: true }, g)) showDebriefFull(entry); } }, 'Show the result')),
+      el('p', { class: 'note' }, 'The walk shows the record one stop at a time, with only what was known then, and asks how each stop sits with your thesis. Your trade stays locked either way.'),
+      walkExit ? el('p', { class: 'note' }, `Your ${walkExit.exit_reason.startsWith('stop') ? 'stop loss' : 'take profit'} closed the position on ${dateFmt(walkExit.exit.date)}, before the anniversary, so the walk stops there.`) : null);
     debrief.append(g); g.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   function saveWalk(entry, patch, host) {
@@ -247,9 +256,10 @@
   }
   function walk(entry, wt, i) {
     debrief.innerHTML = ''; const s = wt[i]; const ev = s.event; const refl = Array.isArray(entry.walkthrough) ? [...entry.walkthrough] : [];
-    const card = el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h2', {}, `Stop ${i + 1} of ${wt.length} · ${dateFmt(ev.date)}`), el('p', { style: 'font-size:1.02rem' }, el('strong', {}, ev.headline)), el('p', {}, s.stage_text), el('p', { class: 'note' }, 'Source and company name are shown in the debrief, after the last stop.'));
+    const card = el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h2', {}, `Stop ${i + 1} of ${wt.length} · ${dateFmt(ev.date)}`), el('p', { style: 'font-size:1.02rem' }, el('strong', {}, ev.headline)), el('p', {}, s.stage_text), el('p', { class: 'note' }, 'Source and company name are shown in the debrief, after the last stop.'),
+      walkExit && i + 1 === wt.length ? el('p', { class: 'note' }, `Last stop: your ${walkExit.exit_reason.startsWith('stop') ? 'stop loss' : 'take profit'} closed the position on ${dateFmt(walkExit.exit.date)}. Later events are shown in the debrief as context only.`) : null);
     const ph = el('div'); card.append(el('h3', { style: 'font-size:.9rem;margin-top:.8rem' }, 'The path so far (identity still hidden)'), ph);
-    const upto = outcome.path.filter(b => b.d <= ev.date), sp = outcome.spy_path.filter(b => b.d <= ev.date);
+    const upto = outcome.sim.path.filter(b => b.d <= ev.date), sp = outcome.sim.spy_path.filter(b => b.d <= ev.date);
     SG.lineChart(ph, [{ name: 'This stock', cls: 's1', points: upto.map(b => ({ d: b.d, v: b.c })) }, { name: 'SPY', cls: 's2', points: sp.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, label: 'Closing prices from entry to this stop, indexed to 100', rawFmt: r => '$' + r.toFixed(2) });
     const selected = (outcome.scene_check.assumptions || []).filter(a => (entry.assumptions || []).includes(a.id));
     if (selected.length) card.append(el('div', { class: 'card' }, el('strong', {}, 'Your decision depended on'), el('ul', {}, ...selected.map(a => el('li', {}, a.text)))));
@@ -265,6 +275,13 @@
     const simr = SIM.simulate(outcome.sim, { action: entry.action, size: entry.size, years: yrs, stop: entry.stop_pct || 0, tp: entry.tp_pct || 0 });
     const hold = SIM.simulate(outcome.sim, { action: 'buy', size: 10, years: yrs });   // plain hold over the chosen horizon, for the stock and SPY tiles
     if (simr.status !== 'ok' || hold.status !== 'ok') { debrief.append(el('p', { class: 'card' }, 'Outcome not available for that horizon: ' + (simr.reason || hold.reason))); return; }
+    const dated = STORY.atExit(outcome, simr.exit.date);
+    const comparison = dated ? { ...simr } : hold;
+    if (dated) {
+      const prices = [...outcome.sim.path.filter(b => b.d < simr.exit.date).map(b => b.c), simr.exit.open];
+      let peak = prices[0]; comparison.max_drawdown = 0;
+      for (const price of prices) { peak = Math.max(peak, price); comparison.max_drawdown = Math.min(comparison.max_drawdown, price / peak - 1); }
+    }
     const key = entry.action === 'skip' ? 'skip' : `${entry.action}_${entry.size}`; const res = { position_return: simr.position_return, portfolio_return: simr.portfolio_return, end_equity: simr.end_equity };
     const beat = hold.long_return > hold.spy_return ? 1 : 0; const brier = typeof entry.p_beats_spy === 'number' ? Math.pow(entry.p_beats_spy / 100 - beat, 2) : null;
     entry.result = { position_return: res.position_return ?? 0, portfolio_return: res.portfolio_return, spy_return: hold.spy_return, brier, beat_spy: beat, exit_date: simr.exit.date, exit_reason: simr.exit_reason, horizon_years: yrs }; entry.reveal_name = `${reveal.transparent.issuer} (${reveal.transparent.ticker})`; SG.upsertCommit(entry);
@@ -272,29 +289,44 @@
     const d = el('section', { class: 'card', 'aria-live': 'polite' }, el('h2', {}, 'Debrief'), el('p', {}, 'This was ', el('strong', {}, reveal.transparent.issuer), ` (${reveal.transparent.ticker}, ${reveal.transparent.exchange}). You chose ${yrs} ${yrs === 1 ? 'year' : 'years'}. Entry ${dateFmt(simr.entry.date)} at $${simr.entry.open.toFixed(2)} open; exit ${dateFmt(simr.exit.date)} at $${simr.exit.open.toFixed(2)} open, ${simr.calendar_days} days: ${simr.exit_reason}.`));
     d.append(el('div', { class: 'kv' },
       el('div', {}, el('div', { class: 'l' }, 'Your portfolio'), el('div', { class: 'v ' + (res.portfolio_return > 0 ? 'up' : res.portfolio_return < 0 ? 'down' : '') }, signed(res.portfolio_return)), el('div', { class: 'p' }, '$' + res.end_equity.toLocaleString('en-US', { maximumFractionDigits: 0 }) + ' from $100,000')),
-      el('div', {}, el('div', { class: 'l' }, 'Position return' + (entry.action === 'skip' ? ' (not taken)' : '')), el('div', { class: 'v' }, signed(res.position_return ?? 0)), el('div', { class: 'p' }, (simr.stopped ? 'exited early: ' + simr.exit_reason.split(',')[0] + '; ' : '') + 'after slippage' + (entry.action === 'short' ? ', borrow and dividends owed' : ', dividends received') + (simr.stopped ? '. Held to the anniversary it would have been ' + signed(entry.action === 'short' ? -hold.long_return : hold.long_return) : ''))),
-      el('div', {}, el('div', { class: 'l' }, `Stock, long total return over ${yrs}y`), el('div', { class: 'v ' + (hold.long_return > 0 ? 'up' : 'down') }, signed(hold.long_return)), el('div', { class: 'p' }, 'held to the anniversary, dividends $' + hold.dividends_per_share.toFixed(2) + '/share')),
-      el('div', {}, el('div', { class: 'l' }, 'S&P 500 ETF, same dates'), el('div', { class: 'v ' + (hold.spy_return > 0 ? 'up' : 'down') }, signed(hold.spy_return)), el('div', { class: 'p' }, 'same dates, dividends included, no costs')),
-      el('div', {}, el('div', { class: 'l' }, 'Worst drawdown on the path'), el('div', { class: 'v down' }, signed(hold.max_drawdown)), el('div', { class: 'p' }, 'closing basis, over the chosen horizon')),
-      typeof entry.p_beats_spy !== 'number' ? null : el('div', {}, el('div', { class: 'l' }, 'Your forecast'), el('div', { class: 'v' }, `${entry.p_beats_spy}% that it beats SPY`), el('div', { class: 'p' }, `It ${beat ? 'did' : 'did not'} over ${yrs}y: ${signed(hold.long_return)} against SPY ${signed(hold.spy_return)}. One case proves nothing about a forecast; the journal compares your numbers with how often they came true once you have five or more.`))));
+      el('div', {}, el('div', { class: 'l' }, 'Position return' + (entry.action === 'skip' ? ' (not taken)' : '')), el('div', { class: 'v' }, signed(res.position_return ?? 0)), el('div', { class: 'p' }, (simr.stopped ? 'exited early: ' + simr.exit_reason.split(',')[0] + '; ' : '') + 'after slippage' + (entry.action === 'short' ? ', borrow and dividends owed' : ', dividends received') + (!dated && simr.stopped ? '. Held to the anniversary it would have been ' + signed(entry.action === 'short' ? hold.short_return : hold.long_return) : ''))),
+      el('div', {}, el('div', { class: 'l' }, dated ? 'Stock, long total return to your exit' : `Stock, long total return over ${yrs}y`), el('div', { class: 'v ' + (comparison.long_return > 0 ? 'up' : 'down') }, signed(comparison.long_return)), el('div', { class: 'p' }, (dated ? 'same entry and exit, dividends $' : 'held to the anniversary, dividends $') + comparison.dividends_per_share.toFixed(2) + '/share')),
+      el('div', {}, el('div', { class: 'l' }, 'S&P 500 ETF, same dates'), el('div', { class: 'v ' + (comparison.spy_return > 0 ? 'up' : 'down') }, signed(comparison.spy_return)), el('div', { class: 'p' }, 'same dates, dividends included, no costs')),
+      el('div', {}, el('div', { class: 'l' }, 'Worst drawdown on the path'), el('div', { class: 'v down' }, signed(comparison.max_drawdown)), el('div', { class: 'p' }, dated ? 'daily closes, ending at your exit open' : 'closing basis, over the chosen horizon')),
+      dated || typeof entry.p_beats_spy !== 'number' ? null : el('div', {}, el('div', { class: 'l' }, 'Your forecast'), el('div', { class: 'v' }, `${entry.p_beats_spy}% that it beats SPY`), el('div', { class: 'p' }, `It ${beat ? 'did' : 'did not'} over ${yrs}y: ${signed(hold.long_return)} against SPY ${signed(hold.spy_return)}. One case proves nothing about a forecast; the journal compares your numbers with how often they came true once you have five or more.`))));
     const ph = el('div'); d.append(el('h3', { style: 'font-size:.9rem;margin-top:1rem' }, 'What the path looked like'), ph);
     const snap = (marks, path) => (marks || []).map(m => { const hit = path.find(b => b.d >= m.d); return hit ? { ...m, d: hit.d } : null; }).filter(Boolean);
     const afMarks = (outcome.aftermath && outcome.aftermath.events) ? [...outcome.aftermath.events].sort((a, b) => a.date.localeCompare(b.date)).map((e, i) => ({ d: e.date, label: String(i + 1), scored: false })) : [];
-    const hExit = outcome.sim.horizons[String(yrs)]; const hPath = outcome.sim.path.filter(b => b.d <= hExit), hSpy = outcome.sim.spy_path.filter(b => b.d <= hExit);
+    const hExit = dated ? simr.exit.date : outcome.sim.horizons[String(yrs)];
+    const throughExit = (path, fill) => dated ? [...path.filter(b => b.d < hExit), { d: hExit, c: fill }] : path.filter(b => b.d <= hExit);
+    const hPath = throughExit(outcome.sim.path, simr.exit.open);
+    const hSpy = throughExit(outcome.sim.spy_path, outcome.sim.spy_path.find(b => b.d === hExit).o);
     const exitMark = simr.stopped ? [{ d: simr.exit.date, label: 'your exit', scored: true }] : [];
-    SG.lineChart(ph, [{ name: reveal.transparent.ticker, cls: 's1', points: hPath.map(b => ({ d: b.d, v: b.c })) }, { name: 'SPY', cls: 's2', points: hSpy.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, markers: [...snap(afMarks, hPath), ...exitMark], label: 'Closing prices from entry to exit, indexed to 100', rawFmt: r => '$' + r.toFixed(2) });
+    SG.lineChart(ph, [{ name: reveal.transparent.ticker, cls: 's1', points: hPath.map(b => ({ d: b.d, v: b.c })) }, { name: 'SPY', cls: 's2', points: hSpy.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, markers: [...snap(dated ? afMarks.filter(m => dated.events.some(e => e.date === m.d)) : afMarks, hPath), ...exitMark], label: dated ? 'Daily closes before exit, then the exit opening price, indexed to 100' : 'Closing prices from entry to exit, indexed to 100', rawFmt: r => '$' + r.toFixed(2) });
+    const appendEvidence = (host, ids) => {
+      for (const eid of ids || []) {
+        const ev = dated.events.find(e => e.id === eid);
+        if (ev) host.append(el('p', { class: 'note' }, dateFmt(ev.date) + ' · ', el('a', { href: ev.source.url, target: '_blank', rel: 'noopener' }, ev.headline), ' · source published ' + dateFmt(ev.source.published)));
+      }
+    };
     /* checking your thesis */
     const sck0 = outcome.scene_check;
     if (sck0 && ((entry.assumptions || []).length || entry.instinct || (entry.walkthrough || []).length)) {
-      const box = el('div', { style: 'margin-top:1rem' }, el('h3', { style: 'font-size:.9rem' }, 'Checking your thesis'));
+      const box = el('div', { style: 'margin-top:1rem', class: 'thesis-check' }, el('h3', { style: 'font-size:.9rem' }, 'Checking your thesis'));
       const inst = entry.instinct ? { interested: 'interested', unconvinced: 'unconvinced', against: 'against it' }[entry.instinct] : null;
       box.append(el('p', {}, (inst ? `You started ${inst} and ` : 'You ') + `chose ${entry.action}${entry.size ? ' at ' + entry.size + '%' : ''}` + ((entry.assumptions || []).length ? ', resting on:' : '.')));
-      if ((entry.assumptions || []).length) { const ul = el('ul', { class: 'plain' }); for (const aid of entry.assumptions) { const a = (sck0.assumptions || []).find(x => x.id === aid); const v = (sck0.thesis_check || {})[aid]; ul.append(el('li', {}, el('strong', {}, a ? a.text : aid), v ? el('div', { class: 'note' }, v) : el('div', { class: 'note muted' }, 'No check written for this assumption.'))); } box.append(ul); }
+      if ((entry.assumptions || []).length) { const ul = el('ul', { class: 'plain' }); for (const aid of entry.assumptions) { const a = (sck0.assumptions || []).find(x => x.id === aid); const check = dated && dated.checks[aid]; const v = dated ? check && check.text : (sck0.thesis_check || {})[aid]; const item = el('li', {}, el('strong', {}, a ? a.text : aid), v ? el('div', { class: 'note' }, v) : el('div', { class: 'note muted' }, 'No check written for this assumption.')); if (check) appendEvidence(item, check.event_ids); ul.append(item); } box.append(ul); }
       if (entry.reason) box.append(el('p', { class: 'note' }, 'Your supporting fact: ' + entry.reason));
-      if ((entry.walkthrough || []).length) box.append(el('p', { class: 'note' }, 'On the walk you said: ' + entry.walkthrough.map(w => `${dateFmt(w.date)} ${w.view}`).join(' · ') + '.'));
+      if ((entry.walkthrough || []).length) box.append(el('p', { class: 'note' }, 'On the walk you said: ' + entry.walkthrough.filter(w => !dated || dated.stops.some(s => s.event.id === w.event_id)).map(w => `${dateFmt(w.date)} ${w.view}`).join(' · ') + '.'));
       if (entry.result && entry.result.exit_date) box.append(el('p', { class: 'note' }, `Your trade closed on ${dateFmt(entry.result.exit_date)}; evidence dated after that is context, not part of your result.`));
       d.append(box);
     }
+    if (dated) {
+      const story = el('div', { class: 'horizon-story' }, el('h3', {}, 'The story by your exit'), el('p', {}, dated.narrative.text), el('p', { class: 'note' }, 'Editorial interpretation of evidence available before ' + dateFmt(simr.exit.date) + '. A profitable result alone does not validate an assumption.'));
+      appendEvidence(story, dated.narrative.event_ids); d.append(story);
+    }
+    const context = dated ? el('details', { class: 'later-context', style: 'margin-top:1rem' }, el('summary', {}, 'Explore the full story and other horizons (optional later context)'), el('p', { class: 'note' }, 'This archive includes developments after your exit and retrospective sources. They were not evidence for your result.')) : d;
+    if (dated) d.append(context);
     /* checking the pitch */
     const sck = outcome.scene_check;
     if (sck && sck.claims && sck.claims.length) {
@@ -302,7 +334,7 @@
       box.append(el('p', { class: 'note' }, el('em', {}, '“' + sck.voice + '”')));
       const ul = el('ul', { class: 'plain' });
       for (const c of sck.claims) { const chk = (sck.debrief_check || {})[c.id]; ul.append(el('li', {}, el('strong', {}, c.text), chk ? el('div', { class: 'note' }, chk) : el('div', { class: 'note muted' }, 'Check not yet written for this claim.'))); }
-      box.append(ul); d.append(box);
+      box.append(ul); context.append(box);
     }
     /* aftermath: dated, sourced events after the cutoff */
     const af = outcome.aftermath;
@@ -316,7 +348,7 @@
       for (const e of evs) tl.append(el('li', { style: 'margin:.4rem 0;padding-left:.6rem;border-left:3px solid var(--grid)' }, el('div', {}, el('strong', {}, dateFmt(e.date)), ' ', badge(kinds[e.kind] || e.kind), e.id ? el('span', { class: 'muted' }, ' ' + e.id) : null), el('div', {}, e.headline), e.detail ? el('div', { class: 'note' }, e.detail) : null, e.source_quote ? el('div', { class: 'note' }, '“' + e.source_quote + '”') : null, e.source && e.source.url ? el('div', { class: 'note' }, el('a', { href: e.source.url, target: '_blank', rel: 'noopener' }, e.source.title || e.source.url), e.source.publisher ? ' · ' + e.source.publisher : '', e.source.published ? ' · ' + dateFmt(e.source.published) : '', e.opened === false ? ' · not opened' : '') : null));
       sec.append(el('details', {}, el('summary', {}, evs.length + ' dated events, each with its source (open to read them; they are numbered on the chart)'), tl));
       if ((af.gaps || []).length) sec.append(el('details', {}, el('summary', { class: 'note' }, 'Gaps in this timeline'), el('ul', { class: 'plain' }, ...af.gaps.map(g => el('li', { class: 'note' }, g)))));
-      d.append(sec);
+      context.append(sec);
       /* event markers on the path charts: number them by order */
     }
     /* other horizons: context only */
@@ -329,7 +361,7 @@
       det.append(el('div', { class: 'scroll' }, t), el('p', { class: 'note' }, 'Same entry fill and rules, only the exit anniversary changes. You committed to one horizon; the others show how much the answer depends on when you would have stopped.'));
       if (outcome.extended_path) { const eh = el('div'); det.append(eh);
         SG.lineChart(eh, [{ name: reveal.transparent.ticker, cls: 's1', points: outcome.extended_path.map(b => ({ d: b.d, v: b.c })) }, { name: 'SPY', cls: 's2', points: outcome.extended_spy_path.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, label: 'Closing prices from entry to the longest available anniversary, indexed to 100', rawFmt: r => '$' + r.toFixed(2), markers: [...(outcome.horizon_markers || []).map(m => ({ d: m.date, label: m.years + 'y' + (m.scored ? ' (scored)' : ''), scored: m.scored })), ...snap(afMarks, outcome.extended_path)] }); }
-      d.append(det); }
+      context.append(det); }
     if (outcome.dividends_per_share.length) d.append(el('details', {}, el('summary', {}, outcome.dividends_per_share.length + ' dividends inside the window (vendor data)'), el('ul', { class: 'plain' }, ...outcome.dividends_per_share.map(x => el('li', { class: 'note' }, dateFmt(x.ex_date) + ' $' + x.amount.toFixed(4))))));
     if (outcome.split_or_spinoff_in_window.length) d.append(el('p', { class: 'note' }, 'Corporate actions in window: ' + JSON.stringify(outcome.split_or_spinoff_in_window)));
     d.append(el('details', { style: 'margin-top:1rem' }, el('summary', { class: 'note' }, 'For the curious: sources, open editorial repairs, data notes'),
