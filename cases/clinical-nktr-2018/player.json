@@ -574,7 +574,57 @@
           }
         ]
       }
-    ]
+    ],
+    "presentation": {
+      "intro": "Read the operating results separately from the price investors are paying.",
+      "groups": [
+        {
+          "title": "Business performance",
+          "metrics": [
+            0,
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "title": "Cash position",
+          "metrics": [
+            3
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Revenue",
+          "context": "Includes about $125.9m of one-time license revenue from a separate collaboration. Excluding it: about $27.0m (derived).",
+          "metric": "Royalty, collaboration and product revenue"
+        },
+        {
+          "label": "Operating margin",
+          "context": "The one-time license revenue also lifts this margin; the improvement does not establish lower underlying spending.",
+          "metric": "Operating margin (nine months, year-to-date)"
+        },
+        {
+          "label": "Operating cash flow",
+          "display_value": "≈ $0",
+          "context": "Near breakeven after a $150m upfront cash payment from the separate collaboration; this does not establish breakeven ongoing operations.",
+          "metric": "Operating cash flow (nine months, year-to-date)"
+        },
+        {
+          "label": "Net cash",
+          "context": "Cash and investments minus debt. The prior figure counts cash only, so it is not a comparable net-cash figure.",
+          "prior_comparable": false,
+          "metric": "Cash, investments and debt"
+        },
+        {
+          "label": "R&D spending",
+          "context": "Spending across the pipeline and support for partnered drugs.",
+          "metric": "R&D spending and revenue concentration"
+        }
+      ],
+      "valuation_context": "The revenue multiple uses FY2016 revenue, not the latest quarter or trailing twelve months. Share-count and cash figures predate the cutoff price."
+    }
   },
   "what_changed": [
     {
