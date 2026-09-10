@@ -22,9 +22,10 @@ research (30 candidates) -> verification -> selection (10) -> writers (player.js
 | Path | What it is | Who writes it |
 | --- | --- | --- |
 | `MASTER_PLAN.md` | Product authority: the chronological portfolio campaign. Wins on conflict. Not yet implemented. | user |
-| `EPIC_1.md` | The campaign as one end-to-end scenario extracted from MASTER_PLAN.md and CAMPAIGN_ENGINE_PLAN.md: ten stops in cutoff order with covered horizons, twelve stories with acceptance criteria, the seven decisions still open, sequence with the playtest pause, data dependencies. |
-| `EPIC_2.md` | Investigate by asking: one story, the friend's leads, a packet-only question box (local search first, grounded assistant only if needed), notes that become the decision's beliefs. Defines the shared content layer: answer units in `cases/<id>/units.json`. |
-| `EPIC_3.md` | The case as a text quest: picture, situation, choices (check the chart, ask the friend, look at the money), one screen at a time, plain-language decision screen. Quest graphs over the same answer units. Recommended first of the three. |
+| `IDEAS.md` | Three candidate directions side by side with effort, chances and kill criteria, the shared answer-unit task, the recommended branch order (idea3 → idea2 → idea1). |
+| `idea1/` | The campaign: `EPIC.md` (scenario, twelve stories, open decisions) and `README.md` (product-owner assessment). |
+| `idea2/` | Investigate by asking: `EPIC.md` (search first, grounded assistant only on evidence; defines `cases/<id>/units.json`) and `README.md`. |
+| `idea3/` | The case as a text quest: `EPIC.md` (quest graphs over the same units, plain-language decision screen) and `README.md`. Recommended first branch. |
 | `FRAMEWORK.md`, `CASE_FORMAT.md` | Earlier product and presentation contracts; evidence principles still apply. | humans / editor session |
 | `research/SELECTION_RULES.md` | Rules for choosing the ten. | editor |
 | `research/PAUSED.md` | Live handover: status, what is running, next steps. Read first. | every session, on pause |

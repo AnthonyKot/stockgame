@@ -1,6 +1,6 @@
 # Epic 2: investigate by asking, not by reading a dossier
 
-Drafted 10 September 2026 from [RAG.md](RAG.md) and the user's direction: the current case page overloads a player with numbers and terms. Replace the wall of cards with one story, the friend's leads, and a way to ask questions that are answered only from the packet. [MASTER_PLAN.md](MASTER_PLAN.md) still owns product scope; this epic changes how a player discovers evidence inside a scene, not what the game is. [EPIC_1.md](EPIC_1.md) (campaign) and [EPIC_3.md](EPIC_3.md) (quest presentation) share the content layer defined in section 3.
+Drafted 10 September 2026 from [RAG.md](../RAG.md) and the user's direction: the current case page overloads a player with numbers and terms. Replace the wall of cards with one story, the friend's leads, and a way to ask questions that are answered only from the packet. [MASTER_PLAN.md](../MASTER_PLAN.md) still owns product scope; this epic changes how a player discovers evidence inside a scene, not what the game is. [idea1/EPIC.md](../idea1/EPIC.md) (campaign) and [idea3/EPIC.md](../idea3/EPIC.md) (quest presentation) share the content layer defined in section 3.
 
 ## 1. The player's view
 

@@ -1,6 +1,6 @@
 # Epic 3: the case as a quest
 
-Drafted 10 September 2026 from the user's direction: present each case the way a text quest does (Space Rangers style). A picture, a short description of where you are, and a choice of what to do next: go to the PC and check the price history, call the friend back, read the press release, look at the cash. One thing at a time, until the player decides. This is the presentation answer to "the interface is cryptic". [MASTER_PLAN.md](MASTER_PLAN.md) owns scope; [EPIC_2.md](EPIC_2.md) shares the content layer; [EPIC_1.md](EPIC_1.md) can run on top of this presentation later.
+Drafted 10 September 2026 from the user's direction: present each case the way a text quest does (Space Rangers style). A picture, a short description of where you are, and a choice of what to do next: go to the PC and check the price history, call the friend back, read the press release, look at the cash. One thing at a time, until the player decides. This is the presentation answer to "the interface is cryptic". [MASTER_PLAN.md](../MASTER_PLAN.md) owns scope; [idea2/EPIC.md](../idea2/EPIC.md) shares the content layer; [idea1/EPIC.md](../idea1/EPIC.md) can run on top of this presentation later.
 
 ## 1. The player's experience
 

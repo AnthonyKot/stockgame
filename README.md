@@ -2,7 +2,7 @@
 
 A historical investing campaign: start with $100,000 cash and 1 BTC, travel through ten chronological stories, and manage one shared portfolio of overlapping buy/skip/short calls. Keep playing until all timed trades close, within a fixed historical data boundary.
 
-The approved product direction is [MASTER_PLAN.md](MASTER_PLAN.md); three epics break the work down: [EPIC_1.md](EPIC_1.md) the ten-decision campaign, [EPIC_2.md](EPIC_2.md) investigate by asking (search, later a grounded assistant), [EPIC_3.md](EPIC_3.md) the case as a text quest. EPIC_3 is the recommended first branch. The existing standalone quiz app is the foundation; campaign implementation is upcoming.
+The approved product direction is [MASTER_PLAN.md](MASTER_PLAN.md). Three candidate directions are laid out side by side in [IDEAS.md](IDEAS.md), each with a scenario and a product-owner assessment: [idea1](idea1/README.md) the ten-decision campaign, [idea2](idea2/README.md) investigate by asking, [idea3](idea3/README.md) the case as a text quest (recommended first).
 
 - Start a new session with `TODO.md` and `research/START_HERE.md`, then `ARCHITECTURE.md` (what exists and how it connects). `research/PAUSED.md` includes historical progress and quota notes.
 - Product authority: `MASTER_PLAN.md` takes precedence. `FRAMEWORK.md`, `CASE_FORMAT.md` and `research/SELECTION_RULES.md` retain supporting evidence and historical design material.

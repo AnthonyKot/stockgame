@@ -1,6 +1,6 @@
 # Epic 1: one portfolio through historical time
 
-Extracted 10 September 2026 from [MASTER_PLAN.md](MASTER_PLAN.md) (product authority) and [CAMPAIGN_ENGINE_PLAN.md](CAMPAIGN_ENGINE_PLAN.md) (engine design). This document turns those two into one end-to-end game scenario with stories, acceptance criteria and the decisions still open. Where it and the master plan disagree, the master plan wins. Nothing here is implemented yet; the ten standalone cases in `site/` are the foundation.
+Extracted 10 September 2026 from [MASTER_PLAN.md](../MASTER_PLAN.md) (product authority) and [CAMPAIGN_ENGINE_PLAN.md](../CAMPAIGN_ENGINE_PLAN.md) (engine design). This document turns those two into one end-to-end game scenario with stories, acceptance criteria and the decisions still open. Where it and the master plan disagree, the master plan wins. Nothing here is implemented yet; the ten standalone cases in `site/` are the foundation.
 
 ## 1. The scenario, end to end
 
