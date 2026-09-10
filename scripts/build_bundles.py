@@ -381,14 +381,18 @@ def main():
 
 def payload_checks():
     """The build is the moment outcome text could reach a pre-decision file, so run scripts/test_payloads.js here.
-    A leak fails the build (exit 1) after the files are written, so the offending sheet can be inspected."""
+    A leak, or a missing node, fails the build (exit 1) after the files are written so the offending sheet can be
+    inspected. Pass --skip-payload-checks to skip on purpose; the build then says so."""
     import shutil, subprocess
+    if '--skip-payload-checks' in sys.argv:
+        print('payload checks SKIPPED on request (--skip-payload-checks); run scripts/test_payloads.js before publishing'); return
     if not shutil.which('node'):
-        print('WARNING: node not found; payload checks (scripts/test_payloads.js) not run'); return
+        print('BUILD FAILED: node not found, so scripts/test_payloads.js could not run. Install node or pass --skip-payload-checks.'); sys.exit(1)
     r = subprocess.run(['node', str(ROOT / 'scripts' / 'test_payloads.js')], capture_output=True, text=True)
-    print((r.stdout or r.stderr).strip().splitlines()[-1] if (r.stdout or r.stderr).strip() else 'payload checks: no output')
     if r.returncode != 0:
-        print('BUILD FAILED: outcome text or fields found in a pre-decision payload; see above'); sys.exit(1)
+        print('BUILD FAILED: outcome text or fields found in a pre-decision payload. Full checker output:')
+        print(r.stdout); print(r.stderr); sys.exit(1)
+    print((r.stdout.strip().splitlines() or ['payload checks passed'])[-1])
 
 
 if __name__ == '__main__':

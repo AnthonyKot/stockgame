@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 site/dev-*.html
 .DS_Store
+node_modules/
+package.json
+package-lock.json

@@ -1,4 +1,4 @@
-name: Publish site to GitHub Pages
+name: Check and publish site to GitHub Pages
 on:
   push:
     branches: [main]
@@ -11,7 +11,24 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright (browser suites)
+        run: |
+          npm install --no-save --no-package-lock playwright@1.49.1
+          npx playwright install --with-deps chromium
+      - name: Run every check
+        run: scripts/run_checks.sh
   deploy:
+    needs: checks
     runs-on: ubuntu-latest
     environment:
       name: github-pages
