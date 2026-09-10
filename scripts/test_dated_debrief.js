@@ -28,4 +28,47 @@ for (const c of cases) {
     n++;
   }
 }
-console.log(`dated debrief: ${cases.length} cases, ${n} horizon exits checked`);
+
+/* 2. drift: a definite status for an assumption must not fall back to Unresolved (Codex review item 3) */
+const STATUS = /^(Supported|Partly supported|Mixed|Weakened|Not supported|Unresolved|Choosing)/;
+const lastDay = d => /^\d{4}-\d{2}$/.test(d) ? new Date(Date.UTC(+d.slice(0, 4), +d.slice(5, 7), 0)).toISOString().slice(0, 10) : d;
+const nextDay = d => new Date(Date.parse(d + 'T00:00:00Z') + 864e5).toISOString().slice(0, 10);
+let drift = 0, boundaries = 0;
+const byCase = {};
+for (const c of cases) {
+  const o = JSON.parse(fs.readFileSync(`site/data/${c.id}/outcome.json`)); byCase[c.id] = o;
+  const dd = o.scene_check.dated_debrief; const ev = Object.fromEntries(o.aftermath.events.map(e => [e.id, e]));
+  const unlock = u => u.event_ids.map(id => [lastDay(ev[id].date), lastDay(ev[id].source.published)].sort().pop()).sort().pop();
+  const seq = {};
+  for (const u of [...dd.updates].sort((a, b) => unlock(a).localeCompare(unlock(b)))) {
+    for (const [aid, t] of Object.entries(u.checks || {})) { const m = t.match(STATUS); assert(m, `${c.id}: check for ${aid} lacks a status word`); (seq[aid] ||= []).push(m[1]); }
+  }
+  for (const [aid, l] of Object.entries(seq)) for (let i = 1; i < l.length; i++) {
+    assert(!(['Supported', 'Not supported', 'Partly supported', 'Weakened'].includes(l[i - 1]) && l[i] === 'Unresolved'), `${c.id}: ${aid} drifts ${l[i - 1]} -> Unresolved`); drift++;
+  }
+  /* 3. publication boundary: an update is hidden at an exit on its unlock date and shown the day after (Codex review item 4) */
+  for (const u of dd.updates) {
+    const d0 = unlock(u), d1 = nextDay(d0);
+    const has = d => { const ids = new Set(STORY.atExit(o, d).events.map(e => e.id)); return u.event_ids.every(id => ids.has(id)); };
+    assert(!has(d0), `${c.id}: update ${u.event_ids} visible at its own unlock date ${d0}`);
+    assert(has(d1), `${c.id}: update ${u.event_ids} not visible the day after unlock ${d1}`);
+    boundaries++;
+  }
+}
+/* 4. pins for the corrected verdicts (Codex review items 1-3); a rewrite that reintroduces the error fails here */
+const upd = (id, ids) => byCase[id].scene_check.dated_debrief.updates.find(u => u.event_ids.join() === ids.join());
+const all = (id, aid) => byCase[id].scene_check.dated_debrief.updates.flatMap(u => u.checks && u.checks[aid] ? [u.checks[aid]] : []);
+// Target 050a03b08f: guidance verdicts stay Unresolved on motive; resumption 1 Mar 2022, cuts 18 May and 7 Jun
+for (const t of all('050a03b08f', 'a3')) { assert(/^Unresolved/.test(t), 'Target a3 must stay Unresolved: ' + t); assert(!/three weeks|bluff|genuine unpredictability/i.test(t), 'Target a3 reintroduces motive/chronology: ' + t); }
+{ const r = SIM.simulate(byCase['050a03b08f'].sim, { action: 'buy', size: 10, years: 3 }); const d = STORY.atExit(byCase['050a03b08f'], r.exit.date); assert(/May and again in June/.test(d.checks.a3.text), 'Target 3y verdict should date the May and June cuts'); }
+// First Solar 5d6cb2d76f: enactment stays Supported when durability is questioned; capacity is never read as demand
+for (const ids of [['e10'], ['e11']]) assert(/^Supported/.test(upd('5d6cb2d76f', ids).checks.a3), 'First Solar a3 must stay Supported at ' + ids);
+for (const t of all('5d6cb2d76f', 'a2')) assert(!/^Supported\b(?! in form)/.test(t) && !/^Partly supported/.test(t), 'First Solar a2 (demand) read from capacity: ' + t);
+// Sarepta 04b88176e1: refinancing is not new funding; accelerated approval rested on a surrogate
+assert(/repa(id|y)/.test(upd('04b88176e1', ['e4']).narrative) && /repay/.test(upd('04b88176e1', ['e4']).checks.a3), 'Sarepta financing must mention repayment of earlier debt');
+assert(!/program(me)? need/.test(upd('04b88176e1', ['e4']).narrative), 'Sarepta financing narrative reintroduces "programme need"');
+assert(/surrogate|micro-dystrophin/.test(upd('04b88176e1', ['e5']).checks.a1), 'Sarepta approval verdict must name the surrogate basis');
+for (const t of all('04b88176e1', 'a1')) assert(!/full approved population/.test(t), 'Sarepta a1 drifts from the subgroup: ' + t);
+// Gilead 80222fdef8: the second-engine verdict does not reset on a regulatory step
+for (const t of all('80222fdef8', 'a2')) assert(!/^Unresolved/.test(t), 'Gilead a2 resets to Unresolved: ' + t);
+console.log(`dated debrief: ${cases.length} cases, ${n} horizon exits, ${boundaries} publication boundaries, ${drift} status transitions, 6 verdict pins checked`);
