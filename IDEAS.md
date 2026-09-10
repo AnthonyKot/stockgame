@@ -8,23 +8,23 @@ Product-owner page, 10 September 2026. Each idea has a folder with a scenario (`
 |---|---|---|---|
 | Player value | Decisions with consequences, a final report | Investigate in your own words | One screen, one fact, plain choices |
 | Answers "cryptic"? | No, inherits today's page | Yes, if questions land | Yes, most directly |
-| Effort | 8 to 12 sessions, 3 to 4 weeks | Stage A 3 sessions; Stage B +2 to 3 plus infrastructure | 3.5 sessions to ten quests |
+| Effort (prototype estimates; ten reviewed cases roughly double them, review is not parallel) | 8 to 12 sessions, 3 to 4 weeks | Stage A: 1 to 2 sessions for Nektar; Stage B +2 to 3 plus infrastructure | 1.5 to 2 sessions for Nektar; 6 to 8 for ten reviewed quests |
 | Runtime dependency | None | None for Stage A; a model and a proxy for Stage B | None |
 | New data needed | Bitcoin series, dividend dates, split audit, calendar | None | None (pictures optional) |
-| Chance built correctly | 80% | 90% (A), 70% grounding (B) | 90% |
-| Chance preferred to today | 50%, 70% if presentation fixed first | 60% (A), 65% (B) | 70% newcomers, lower for experts |
+| Confidence we can build it (gate: the epic's acceptance criteria pass in `run_checks.sh`) | Medium: engine plan is thorough, data is the risk | High for search; medium for a grounded assistant | High |
+| Confidence players prefer it (hypothesis until a playtest; one friend's "cryptic" justifies testing clarity, not a preference) | Low until presentation is fixed | Untested | Untested; most direct test of clarity |
 | First playtest | Three stories with overlap | Nektar with search and notes | Nektar as a quest, with the "cryptic" friend |
 | Kill criteria | Prototype no more engaging than three standalone cases; ledger needs invented data | Under half of natural questions land; "felt like guessing the engine" | Friend still cannot say what the game asks; clicks through without opening a fact |
 
-## The shared first task
+## The shared first task, kept small
 
-Ideas 2 and 3 both need **answer units**: ten to fifteen per case, one question, one cited answer under 60 words, dated, tagged, with synonyms, authored from packet text that already exists (`cases/<id>/units.json`, schema in [idea2/EPIC.md](idea2/EPIC.md) section 3). Idea 1 gates the same units by its clock. Whichever idea starts, the units for Nektar and their validator are the first day's work, and they land on `main`.
+Ideas 2 and 3 both use **answer units**: one question, one cited answer under 60 words, dated, tagged (`cases/<id>/units.json`, schema in [idea2/EPIC.md](idea2/EPIC.md) section 3). Build only what one Nektar experiment needs, not a framework for ten cases: the validator checks publication dates and source support, nothing more. Units may legitimately recur in a debrief; the boundary is the date, not the text.
 
 ## Recommendation
 
 **Branch `idea3` first.** It is the smallest, has no runtime dependency, is the direct answer to the only feedback we have, and everything it produces (units, the plain-language decision screen, the visited-node debrief) is reused by the other two. Its playtest is one evening with one friend.
 
-**Then `idea2` Stage A** over the same units, behind the same front-page mode switch, so the friend can compare "choices" with "ask". Stage B waits for evidence from that comparison.
+**Then decide whether `idea2` earns a place.** If the quest makes investigation clear and enjoyable, a search box may add little and idea 1, the intended product, comes next. Idea 2 proceeds only if the quest playtest shows players wanting to ask things the graph does not offer. Stage B waits for evidence from Stage A.
 
 **Then `idea1`** on top of whichever presentation the playtests prefer. Its seven open decisions can be settled in the meantime, and the Bitcoin and dividend data fetched, so that the engine work starts with nothing missing.
 
@@ -35,6 +35,6 @@ Ideas 2 and 3 both need **answer units**: ten to fifteen per case, one question,
 - Each idea lives on its own branch and merges behind a front-page mode switch, never replacing the current page until a playtest says so.
 - Engine and scripts are Codex's lane; content, screens and copy are Claude's; both run `scripts/run_checks.sh` before pushing.
 
-## Decision requested
+## Next step
 
-Confirm the order idea3 → idea2 → idea1, or name a different first branch. Nothing starts until then.
+One Nektar quest, without pictures, on the existing simulator and assumption-based debrief, compared with the current page including its recent presentation improvements. Agreed by both sessions on 10 September 2026.

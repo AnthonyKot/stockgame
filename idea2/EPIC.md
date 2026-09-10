@@ -39,7 +39,7 @@ The same units are the nodes EPIC_3 shows one at a time, and the dated material 
 
 ## 4. Stories and acceptance criteria
 
-**S1 Answer units for one case (Nektar).** 10 to 15 units written from the existing packet, no new research; a validator checks citations, word limits, dates before the cutoff, and that no unit text appears in any outcome file.
+**S1 Answer units for one case (Nektar).** 10 to 15 units written from the existing packet, no new research; a validator checks citations, word limits and availability dates before the cutoff. A fact may legitimately recur in a debrief, so text overlap with outcome files is not a failure; the boundary is the date and the source.
 
 **S2 Search page for one case.** The six-part view above; lexical search with synonyms; results show title, date, source type, snippet, expandable excerpt, claim ids; empty box shows three broad suggestions (business, money, recent news) and hides case-specific hints behind "need a hint?".
 - The four example queries in RAG.md return different units.

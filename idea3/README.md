@@ -26,7 +26,7 @@ The plain-language decision screen and the three-line opener also apply to the e
 | Nine more graphs from their units, reviewed | 1 | nine Sonnet writers, one reviewer pass |
 | Pictures | 0.5, later | needs an art source decision |
 
-About three and a half sessions to ten playable quests without pictures. The smallest of the three ideas.
+One and a half to two sessions to a reviewed Nektar quest without pictures. Ten reviewed quests are more like six to eight: 100 to 150 answer units with source checks, ten graphs, mobile and keyboard behaviour, persistence and debrief integration, and review that does not parallelise. Still the smallest of the three ideas.
 
 ## 4. Pros and cons
 
@@ -45,10 +45,12 @@ Cons
 - Pictures need a source and carry masking risk; without them the first version is a menu, not a scene.
 - More authoring per case than the search idea: a graph as well as units.
 
-## 5. Chance it works
+## 5. Confidence
 
-- **Built correctly: 90%.** A JSON graph, a validator and a renderer over content that exists.
-- **Preferred to today's page: 70% among newcomers, lower among experienced investors**, who may want the dossier. The mode switch keeps both.
+Judgments, not measured probabilities.
+
+- **We can build it: high.** Gate: the quest validator and the browser suite pass for Nektar on desktop and 390px, and the journey from first screen to debrief completes with a reload in the middle.
+- **Players prefer it: untested.** One friend's "cryptic" justifies testing clarity; it does not establish a preference for quests. Experienced investors may want the dossier; the mode switch keeps both.
 
 Evidence that moves it: one session with the friend who said "cryptic". If they can say what the game asked of them after the first screen, the idea has done its job.
 

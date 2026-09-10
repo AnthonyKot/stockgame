@@ -12,7 +12,7 @@ Reused unchanged: scenes, evidence, the chart, the ticket, the walk and the date
 
 New content layer, shared with idea 3: `cases/<id>/units.json`, ten to fifteen answer units per case (one question, one cited answer under 60 words, availability date, tags, synonyms), authored from text that already exists: the three friend answers, the six tiles with their presentation context, what-changed items, catalysts, unresolved questions, the valuation panel.
 
-New code, Stage A: a validator for units in the build (citations resolve, dates before cutoff, no unit text in any outcome file), a search index per case emitted by the builder, a lexical search with synonym matching in `site/play.html` or a new `site/ask.html`, a notes panel, and journal fields for opened and pinned units. No runtime dependency; deploys on Pages as today.
+New code, Stage A: a validator for units in the build (citations resolve, availability dates before the cutoff; a fact may legitimately recur in a debrief, so text overlap is not a failure), a search index per case emitted by the builder, a lexical search with synonym matching in `site/play.html` or a new `site/ask.html`, a notes panel, and journal fields for opened and pinned units. No runtime dependency; deploys on Pages as today.
 
 New code, Stage B: a model behind a small proxy (or a local model) that retrieves units and writes a cited answer or abstains; an evaluation set built from every authored unit plus post-cutoff questions that must be refused. This breaks the pure static site: a key, a proxy, a budget.
 
@@ -44,11 +44,13 @@ Cons
 - Stage B needs a key and a server piece, and a wrong retrieval can leak or invent; grounding must be tested before it is switched on.
 - Stage B can answer questions the packet does not, from model memory, unless refusal is enforced.
 
-## 5. Chance it works
+## 5. Confidence
 
-- **Stage A built correctly: 90%.** It is a small index and a text match over content we already have.
-- **Stage A preferred to today's page: 60%.** Players who like to ask will love it; players who want to be told what matters will bounce off an empty box. The three broad suggestions and the friend's leads are the hedge.
-- **Stage B, if built: correct grounding 70%, preferred 65%.** Most of the risk is refusal quality and leakage, not fluency.
+Judgments, not measured probabilities.
+
+- **We can build Stage A: high.** Gate: the RAG.md example queries return distinct units and the leakage test passes. It is a small index over content we have.
+- **We can build Stage B well: medium.** Gate: the evaluation set passes with zero post-cutoff leakage. Refusal quality is the risk, not fluency.
+- **Players prefer it: untested.** Players who like to ask may love it; players who want to be told what matters may bounce off an empty box. The friend's leads are the hedge. Idea 2 only earns its place if the quest playtest shows players wanting to ask what the graph does not offer.
 
 Evidence that moves it: the Nektar playtest with the RAG.md questions, especially "did it feel like investigating or like guessing what the search wants?".
 

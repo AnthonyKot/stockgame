@@ -47,10 +47,12 @@ Cons
 - One run spans 2018 to 2026. That is a long game for a friend with an evening.
 - It inherits today's cryptic case page. A portfolio strip on top of it makes a newcomer's first screen worse, not better.
 
-## 5. Chance it works
+## 5. Confidence
 
-- **Built correctly: 80%.** Codex's engine plan is unusually complete, the test list is enumerable, and the arithmetic fixture already catches the classic errors. The 20% is data: Bitcoin timestamps, dividend dates and splits are where invented numbers creep in.
-- **Players prefer it to today's page: 50%.** Consequences are compelling on paper; nobody has felt them yet. This rises to 70% if idea 2 or 3 fixes the presentation first, and falls if a run is too long to finish in one sitting.
+These are judgments, not measured probabilities; the playtest is the measurement.
+
+- **We can build it: medium.** Gate: the master plan's acceptance criteria pass as automated checks in `run_checks.sh`. Codex's engine plan is thorough and the test list is enumerable; the risk is data (Bitcoin timestamps, dividend dates, splits), where invented numbers creep in.
+- **Players prefer it: low until the presentation is fixed.** Consequences are compelling on paper; nobody has felt them yet. A long run may not finish in one sitting.
 
 Evidence that would move it: the three-story playtest. If the player talks about the earlier position while deciding the third story, the mechanic works.
 
