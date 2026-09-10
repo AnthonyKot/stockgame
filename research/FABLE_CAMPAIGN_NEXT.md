@@ -1,5 +1,7 @@
 # Fable handoff: finish the Nektar story experience
 
+> Historical review. For current implementation and open work, read [START_HERE.md](START_HERE.md) and [DATED_DEBRIEF_REVIEW.md](DATED_DEBRIEF_REVIEW.md). Do not repeat completed repairs from this handoff.
+
 Review date: 9 September 2026. Read `MASTER_PLAN.md` first. This handoff provides instructions for the next implementation session; this review did not modify app code or case data. Inspect current files before editing because another session may be working on them.
 
 ## Latest user steering

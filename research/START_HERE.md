@@ -1,41 +1,37 @@
-# Restart handoff — 9 September 2026
+# Restart handoff — 10 September 2026
 
-## Latest immediate task
+Work in `/home/diablo/stockgame`. Continue the existing ten-case app; do not restart research or rebuild the stack.
 
-Read [TODO.md](../TODO.md) for the current checklist and completed fixes. The user explicitly wants to finish the standalone story experience before connecting the campaign. Polish Nektar and pause for playtesting; do not treat the earlier campaign-prototype instruction below as the immediate task.
+## Immediate scope
 
-## Latest user-approved priority
+Finish and refine the standalone story experience through user playtesting. Nektar's exit-aware debrief is implemented; dated feedback has since been authored for all ten cases. The latest review found editorial and verification gaps in that rollout. The user authorized four engineering points: payload/temporal checks, flexible verdict tests, recoverable dated merging and integration. Current results and ownership are in [SESSION_PROGRESS.md](SESSION_PROGRESS.md); inspect that log before repeating work.
 
-Read [MASTER_PLAN.md](../MASTER_PLAN.md) first. The MAIN game is a connected historical campaign with $100,000 cash plus 1 BTC, ten chronological decisions, overlapping 5/10/20% long/short positions, and automatic 1/3/5-year exits. Keep advancing until every timed trade closes. Use a fixed historical end date; never offer a holding period that cannot complete within verified data. Do not reveal future outcomes while earlier scenes remain.
+Read in this order:
 
-This overrides the older three-independent-quizzes refinement priority below. Reuse current app/content work; next prototype is three chronological scenes sharing a portfolio, with overlap, a closure and an eventual final report. Search/RAG and role-play refinements support this loop. This update records direction, not completed campaign code. Preserve user pause checkpoints.
+1. [TODO.md](../TODO.md) and [NEXT_SESSION_PLAN.md](NEXT_SESSION_PLAN.md): current checklist and the sequenced two-hour plan.
+2. [Dated debrief review](DATED_DEBRIEF_REVIEW.md): evidence, limitations and concrete repairs.
+3. [ARCHITECTURE.md](../ARCHITECTURE.md): current pipeline and UI behavior.
+4. [README.md](../README.md): running the app.
+5. [MASTER_PLAN.md](../MASTER_PLAN.md): long-term product authority.
+6. Inspect the current code and case data before editing; concurrent sessions have changed and committed files during this work.
 
+## Current state
 
-Work in `/home/diablo/stockgame`. An existing ten-quiz historical investing MVP is implemented. Continue it; do not restart research or rebuild the app.
+- Ten standalone stories have investigations, selectable assumptions, walkthroughs and dated debriefs. The selector uses the actual exit and both event/publication dates. Full future payloads still load after commitment.
+- Nektar's financial snapshot now groups business performance, cash position and valuation, with key caveats visible and detail expandable.
+- The case page places Market snapshot (including last close) before Where the stock stands, then What changed before Financial snapshot. The repeated company-summary cutoff/holding line is removed. Exit-level controls are aligned.
+- Structural, arithmetic and browser checks passed in the latest review; they do not certify every authored statement. See the review for precise coverage and the dated deployment observation.
 
-## Read in this order
+## Next checkpoint
 
-1. `README.md` for running and checking the app.
-2. `ARCHITECTURE.md` for the pipeline, source data, generated bundles and site.
-3. `research/SELECTION.md` for the selected ten cases.
-4. `research/FABLE5_NEXT_STEP.md` for the previous review and proposed simplification.
-5. Inspect the actual code and relevant case data before choosing work.
+The engineering safeguards are implemented locally. See [SESSION_PROGRESS.md](SESSION_PROGRESS.md) for verification and remaining editorial limitations. Pause for user playtesting; source review and presentation multi-file recovery remain separate follow-ups. Do not start an unattended rollout, research batch or campaign implementation from this handoff alone.
 
-`research/PAUSED.md` contains useful history but mixes earlier partial completion with later completion notes. Its quota figures are historical, not current. `research/MVP_PROMPT.md` and `CLAUDE_RESEARCH_TASK.md` are older task prompts.
+## Campaign direction — deferred
 
-## Important freshness caveat
+The main product remains one chronological portfolio beginning with $100,000 cash plus 1 BTC, ten decisions, overlapping 5/10/20% positions and automatic 1/3/5-year exits within a verified fixed historical boundary. Play continues until all timed trades close. [CAMPAIGN_ENGINE_PLAN.md](../CAMPAIGN_ENGINE_PLAN.md) is design work, not an implemented ledger. [RAG.md](../RAG.md) remains deferred.
 
-The latest architecture document describes derived valuation and aftermath timelines that were absent from the earlier review in `FABLE5_NEXT_STEP.md`. Re-check those findings against current code and data; do not duplicate completed work. That handoff is a proposed next stage, not evidence that its changes have been implemented or that the user has approved every recommendation.
+## Historical documents and working preferences
 
-## User intent and working preferences
+[SELECTION.md](SELECTION.md) records the ten selected cases. [FABLE5_NEXT_STEP.md](FABLE5_NEXT_STEP.md) and [FABLE_CAMPAIGN_NEXT.md](FABLE_CAMPAIGN_NEXT.md) are earlier reviews; their findings are not automatically still open. [PAUSED.md](PAUSED.md) preserves chronological history, including outdated quota readings and superseded tasks.
 
-- Fun buy/skip/short decisions using only evidence available at a historical cutoff; retain 1-, 3- and 5-year horizons.
-- Keep the ten selected stories and sector variety, including biotech successes, failures and mixed cases. Avoid obvious outcomes and an IT-heavy set.
-- Prioritize a usable briefing and explanatory reveal over more content or features.
-- Use Claude Code Sonnet for bounded research tasks when needed; subscription access was available previously, but availability and quota must be checked anew. Do not purchase data or enable overages.
-- Pause at agreed checkpoints and let the user review. Do not start an unattended research marathon. Never report old quota readings as current.
-- The previous review proposed correctness/recovery fixes, then simplifying First Solar (1y), Target (3y) and Madrigal (5y), then user playtesting before extending the format to the other seven. Confirm the current task from the new session's user message.
-
-## Suggested opening message for a new session
-
-> Continue stockgame. Read MASTER_PLAN.md and research/START_HERE.md, then inspect current implementation. The priority is the connected portfolio campaign within a fixed historical boundary. Reuse the existing ten cases and UX work. Give me current status and the smallest campaign prototype step before starting a long batch; preserve agreed pause checkpoints.
+Keep the selected stories and sector diversity. Prefer a readable briefing and explanatory debrief over more features. Preserve existing journal data and agreed playtest pauses. If new research becomes necessary, use bounded tasks, check availability/quota anew, and do not buy data or enable overages.

@@ -28,3 +28,42 @@ assert(STORY.availableBefore({date:'2018-10',source:{published:'2018-10'}},'2018
 assert(!STORY.availableBefore({date:'2018-10-01'},'2023-01-01'));
 for(const u of o.scene_check.dated_debrief.updates) for(const id of u.event_ids) assert(o.aftermath.events.some(e=>e.id===id));
 console.log('story dates: horizons, early exits, publication boundaries and payload separation passed');
+
+// Independent expected outputs, deliberately out of chronological order in the authored data.
+// A replication withdrawing support may legitimately restore uncertainty.
+const fixture = {
+  aftermath: {events:[
+    {id:'initial',date:'2020-01-02',source:{published:'2020-01-03'}},
+    {id:'replication',date:'2020-02',source:{published:'2020-03-02'}},
+    {id:'retrospective',date:'2020-01-05',source:{published:'2020-04-10'}},
+    {id:'month',date:'2020-05',source:{published:'2020-05'}}
+  ]},
+  scene_check: {walkthrough:[],dated_debrief:{
+    baseline:{narrative:'Starting record.',checks:{a1:'Unresolved. No result yet.'}},
+    updates:[
+      {event_ids:['retrospective'],narrative:'An older event is now documented.'},
+      {event_ids:['replication'],narrative:'Replication leaves the effect uncertain.',checks:{a1:'Unresolved. The replication removes confidence in the earlier signal.'}},
+      {event_ids:['initial'],narrative:'Initial evidence supports the effect.',checks:{a1:'Supported. Initial evidence supports the effect.'}},
+      {event_ids:['month'],narrative:'The month-end record is available.'}
+    ]
+  }}
+};
+for (const [exit, narrative, check] of [
+  ['2020-01-02','Starting record.','Unresolved. No result yet.'],
+  ['2020-01-03','Starting record.','Unresolved. No result yet.'],
+  ['2020-01-04','Initial evidence supports the effect.','Supported. Initial evidence supports the effect.'],
+  ['2020-03-01','Initial evidence supports the effect.','Supported. Initial evidence supports the effect.'],
+  ['2020-03-02','Initial evidence supports the effect.','Supported. Initial evidence supports the effect.'],
+  ['2020-03-03','Replication leaves the effect uncertain.','Unresolved. The replication removes confidence in the earlier signal.'],
+  ['2020-04-09','Replication leaves the effect uncertain.','Unresolved. The replication removes confidence in the earlier signal.'],
+  ['2020-04-10','Replication leaves the effect uncertain.','Unresolved. The replication removes confidence in the earlier signal.'],
+  ['2020-04-11','An older event is now documented.','Unresolved. The replication removes confidence in the earlier signal.'],
+  ['2020-05-30','An older event is now documented.','Unresolved. The replication removes confidence in the earlier signal.'],
+  ['2020-05-31','An older event is now documented.','Unresolved. The replication removes confidence in the earlier signal.'],
+  ['2020-06-01','The month-end record is available.','Unresolved. The replication removes confidence in the earlier signal.']
+]) {
+  const result = STORY.atExit(fixture,exit);
+  assert.equal(result.narrative.text,narrative,`narrative at ${exit}`);
+  assert.equal(result.checks.a1.text,check,`check at ${exit}`);
+}
+console.log('story dates: 12 independent selected-output fixtures, including legitimate renewed uncertainty, passed');

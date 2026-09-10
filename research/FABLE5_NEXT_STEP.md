@@ -1,5 +1,7 @@
 # Fable 5 handoff — tighten the existing ten-quiz MVP
 
+> Historical review. For current implementation and open work, read [START_HERE.md](START_HERE.md) and [DATED_DEBRIEF_REVIEW.md](DATED_DEBRIEF_REVIEW.md). Do not repeat completed repairs from this handoff.
+
 > Superseded product priority (9 September 2026): [MASTER_PLAN.md](../MASTER_PLAN.md) defines the main game as one chronological portfolio campaign, with a fixed historical end date and play continuing until all timed trades close. This file retains earlier work, prompts or recommendations; conflicting standalone-quiz priorities and immediate future reveals do not govern campaign development. Check current code before repeating earlier tasks.
 
 Work in `/home/diablo/stockgame`. You are continuing an existing application, not starting over. The user wants a fun historical investing game: read the evidence available at a date, choose buy/skip/short for a fixed 1-, 3- or 5-year horizon, then see the outcome and understand the story. Ten quizzes are already implemented. Do not collect more stories or change the technology stack in this stage.

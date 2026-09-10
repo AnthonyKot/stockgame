@@ -23,6 +23,7 @@ for r in sel['selected']:
     if len(h) != 6: probs.append(f'headline has {len(h)} entries, need 6')
     pres = p.get('financial_snapshot', {}).get('presentation')
     if pres:   # the renderer skips a row silently when a label does not match, so catch it here
+        if 'valuation_mode' in pres and pres['valuation_mode'] not in ('revenue', 'pipeline', 'bank'): probs.append('presentation valuation_mode must be revenue, pipeline or bank')
         labels = [t['label'] for t in h]
         for i, m in enumerate(pres.get('metrics', [])):
             if m.get('metric') not in labels: probs.append(f'presentation metric {i} does not match a headline label: {m.get("metric")!r}')

@@ -48,4 +48,4 @@ These are authoring/review requirements following [the rollout review](../resear
 - Choose the status only after checking the evidence against the exact assumption. If evidence bears only on part of it, say which part remains unresolved.
 - Human review must examine each replacement as a standalone statement at its unlock date. Schema checks, word limits and an applicable update do not certify factual accuracy.
 
-Proposed pipeline improvement, not current behavior: retain writer outputs until the entire batch is validated and the merged file is safely written; only then archive or delete them. See TODO before running a new merge batch.
+The merge script now validates the entire batch before mutation, atomically replaces scenes.json, then deletes writer inputs. Validation/save failures preserve all inputs; cleanup failures are reported and safely retryable. Use --check-only for validation without mutation. Fixture tests cover these paths; semantic review remains required.

@@ -1,57 +1,176 @@
 #!/usr/bin/env python3
-"""Merge cases/<id>/dated_debrief.json (writer output per cases/DATED_DEBRIEF_BRIEF.md) into cases/scenes.json
-and validate the structure: all assumption ids in baseline, cited events exist, status-word prefix, word limits,
-updates in date order. Run: python3 scripts/merge_dated_debrief.py [--check-only]. Deletes the per-case file after a clean merge."""
-import json, re, sys
+"""Validate the complete dated-debrief batch, atomically save scenes, then remove inputs.
+
+Run with --check-only to validate without writes. The renderer orders updates by
+publication/occurrence dates; this validator checks dates, references and text shape,
+not whether the evidence supports the prose. Writer inputs survive validation or
+save failure. Inputs left by a cleanup failure can safely be merged again.
+"""
+import argparse
+import calendar
+import datetime
+import json
+import os
 from pathlib import Path
+import re
+import sys
+import tempfile
+
 ROOT = Path(__file__).resolve().parent.parent
-STATUS = re.compile(r'^(Supported|Partly supported|Mixed|Weakened|Not supported|Unresolved|Choosing to wait)')
-check_only = '--check-only' in sys.argv
-scenes_path = ROOT / 'cases' / 'scenes.json'
-scenes = json.loads(scenes_path.read_text())
-problems, warnings, merged, to_delete = [], [], 0, []
-def last_day(d):
-    return d if len(d) == 10 else d + '-31'
-for cid, sc in scenes['scenes'].items():
-    f = ROOT / 'cases' / cid / 'dated_debrief.json'
-    dd = json.loads(f.read_text()) if f.exists() else sc.get('dated_debrief')
-    if not dd:
-        problems.append(f'{cid}: no dated_debrief'); continue
-    aids = [a['id'] for a in sc['assumptions']]
-    events = {e['id']: e for e in json.loads((ROOT / 'cases' / cid / 'aftermath.json').read_text())['events']}
-    for aid in aids:
-        if aid not in dd['baseline']['checks']: problems.append(f'{cid}: baseline missing {aid}')
-    for i, u in enumerate(dd['updates']):
-        ids = u.get('event_ids') or []
-        if not ids: problems.append(f'{cid}: update {i} cites no event')
-        for eid in ids:
-            if eid not in events: problems.append(f'{cid}: update {i} cites unknown {eid}')
-        # file order is cosmetic: site/story.js sorts updates by unlock date (later of event date and source publication)
-        for aid, t in (u.get('checks') or {}).items():
-            if aid not in aids: problems.append(f'{cid}: update {i} checks unknown {aid}')
-            if not STATUS.match(t): problems.append(f'{cid}: update {i} {aid} lacks status word: {t[:40]}')
-            if len(t.split()) > 45: problems.append(f'{cid}: update {i} {aid} {len(t.split())} words')
-        if u.get('narrative') and len(u['narrative'].split()) > 45: problems.append(f'{cid}: update {i} narrative {len(u["narrative"].split())} words')
-    if not (4 <= len(dd['updates']) <= 8): problems.append(f'{cid}: {len(dd["updates"])} updates')
-    # drift warning (not a failure): a definite status falling back to Unresolved usually means a later event about a
-    # different question (durability, utilisation) was read against the original assumption. Review by hand.
-    def unlock(u):
-        ld = lambda d: d if len(d) == 10 else d + '-31'
-        return max(max(ld(events[e]['date']), ld(events[e]['source']['published'])) for e in u['event_ids'] if e in events) if u['event_ids'] else ''
-    seq = {}
-    for u in sorted(dd['updates'], key=unlock):
-        for aid, t in (u.get('checks') or {}).items():
-            mm = STATUS.match(t)
-            if mm: seq.setdefault(aid, []).append((mm.group(1), u['event_ids']))
-    for aid, l in seq.items():
-        for (a, ia), (b, ib) in zip(l, l[1:]):
-            if a in ('Supported', 'Not supported', 'Partly supported', 'Weakened') and b == 'Unresolved':
-                warnings.append(f'{cid}: {aid} drifts {a}{ia} -> {b}{ib}')
-    if f.exists() and not check_only and not any(p.startswith(cid + ':') for p in problems):
-        sc['dated_debrief'] = {'baseline': dd['baseline'], 'updates': dd['updates']}
-        to_delete.append(f); merged += 1
-if merged:   # write scenes.json first; only then remove the writer inputs (Codex review item 5)
-    scenes_path.write_text(json.dumps(scenes, indent=2, ensure_ascii=False) + '\n')
-    for f in to_delete: f.unlink()
-print(f'merged {merged}; problems: {len(problems)}; drift warnings: {len(warnings)}'); print('\n'.join(problems + ['WARN ' + w for w in warnings]))
-sys.exit(1 if problems else 0)
+STATUS = re.compile(r'^(Supported|Partly supported|Mixed|Weakened|Not supported|Unresolved|Choosing(?: to wait| not to take a position))\b')
+
+
+def last_day(value):
+    if not isinstance(value, str) or not re.fullmatch(r'\d{4}-\d{2}(?:-\d{2})?', value):
+        raise ValueError(f'invalid date {value!r}; expected YYYY-MM or YYYY-MM-DD')
+    parts = list(map(int, value.split('-')))
+    if len(parts) == 2:
+        parts.append(calendar.monthrange(*parts)[1])
+    return datetime.date(*parts).isoformat()
+
+
+def read_object(path):
+    value = json.loads(path.read_text())
+    if not isinstance(value, dict):
+        raise ValueError('expected a JSON object')
+    return value
+
+
+def validate(dd, scene, events, candidate, writer=False):
+    errors = []
+    if not isinstance(dd, dict):
+        return ['no dated_debrief object']
+    if (writer or 'candidate_id' in dd) and dd.get('candidate_id') != candidate:
+        errors.append('candidate_id does not match destination')
+    aids = {a['id'] for a in scene['assumptions']}
+
+    def text(value, label, status=False):
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f'{label}: expected nonempty text')
+        elif len(value.split()) > 45:
+            errors.append(f'{label}: exceeds 45 words')
+        elif status and not STATUS.match(value):
+            errors.append(f'{label}: lacks status word')
+
+    baseline = dd.get('baseline')
+    if not isinstance(baseline, dict):
+        errors.append('baseline: expected object')
+    else:
+        text(baseline.get('narrative'), 'baseline narrative')
+        checks = baseline.get('checks')
+        if not isinstance(checks, dict):
+            errors.append('baseline checks: expected object')
+        else:
+            if set(checks) != aids:
+                errors.append('baseline checks must cover exactly the assumption ids')
+            for aid, value in checks.items():
+                text(value, f'baseline {aid}', status=True)
+    updates = dd.get('updates')
+    if not isinstance(updates, list):
+        return errors + ['updates: expected list']
+    if not 4 <= len(updates) <= 8:
+        errors.append('expected 4–8 updates')
+    for i, update in enumerate(updates):
+        label = f'update {i}'
+        if not isinstance(update, dict):
+            errors.append(f'{label}: expected object')
+            continue
+        ids = update.get('event_ids')
+        if not isinstance(ids, list) or not ids or not all(isinstance(eid, str) for eid in ids):
+            errors.append(f'{label}: expected nonempty list of event ids')
+        else:
+            if len(ids) != len(set(ids)):
+                errors.append(f'{label}: duplicate event id')
+            for eid in ids:
+                if eid not in events:
+                    errors.append(f'{label}: unknown event {eid}')
+                    continue
+                event = events[eid]
+                try:
+                    last_day(event.get('date'))
+                    last_day((event.get('source') or {}).get('published'))
+                except (ValueError, TypeError, AttributeError) as exc:
+                    errors.append(f'{label} event {eid}: {exc}')
+        checks = update.get('checks', {})
+        if not isinstance(checks, dict):
+            errors.append(f'{label}: checks must be an object')
+        else:
+            for aid, value in checks.items():
+                if aid not in aids:
+                    errors.append(f'{label}: unknown assumption {aid}')
+                text(value, f'{label} {aid}', status=True)
+        if 'narrative' in update:
+            text(update['narrative'], f'{label} narrative')
+        if not checks and not update.get('narrative'):
+            errors.append(f'{label}: no narrative or checks')
+    return errors
+
+
+def atomic_write(path, text):
+    """Replace one destination only after a complete, flushed temporary write."""
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', dir=path.parent,
+                                         prefix='.' + path.name + '.', suffix='.tmp', delete=False) as f:
+            temporary = Path(f.name)
+            os.chmod(temporary, path.stat().st_mode & 0o777)
+            f.write(text)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(temporary, path)
+    finally:
+        if temporary is not None and temporary.exists():
+            temporary.unlink()
+
+
+def merge(root=ROOT, check_only=False):
+    path = root / 'cases/scenes.json'
+    problems, pending = [], []
+    try:
+        scenes = read_object(path)
+        if not isinstance(scenes.get('scenes'), dict):
+            raise ValueError('scenes must be an object')
+    except (OSError, ValueError) as exc:
+        return [f'{path}: {exc}'], 0
+    unknown = {f.parent.name for f in (root / 'cases').glob('*/dated_debrief.json')} - set(scenes['scenes'])
+    problems.extend(f'{cid}: unknown candidate writer input' for cid in sorted(unknown))
+    for cid, scene in scenes['scenes'].items():
+        source = root / 'cases' / cid / 'dated_debrief.json'
+        try:
+            dd = read_object(source) if source.exists() else scene.get('dated_debrief')
+            aftermath = read_object(root / 'cases' / cid / 'aftermath.json')
+            events = {e['id']: e for e in aftermath['events']}
+            errors = validate(dd, scene, events, cid, writer=source.exists())
+            problems.extend(f'{cid}: {error}' for error in errors)
+            if source.exists() and not errors:
+                pending.append(source)
+                scene['dated_debrief'] = {'baseline': dd['baseline'], 'updates': dd['updates']}
+        except (OSError, ValueError, KeyError, TypeError, AttributeError) as exc:
+            problems.append(f'{cid}: invalid input: {exc}')
+    if problems or check_only or not pending:
+        return problems, 0
+    try:
+        atomic_write(path, json.dumps(scenes, indent=2, ensure_ascii=False) + '\n')
+    except OSError as exc:
+        return [f'save failed; writer inputs retained: {exc}'], 0
+    for source in pending:
+        try:
+            source.unlink()
+        except OSError as exc:
+            problems.append(f'{source}: merged successfully, cleanup failed; rerun safely: {exc}')
+    return problems, len(pending)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--check-only', action='store_true')
+    args = parser.parse_args()
+    problems, merged = merge(check_only=args.check_only)
+    print(f'merged {merged}; problems: {len(problems)}')
+    for problem in problems:
+        print(problem)
+    return 1 if problems else 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-10",
+  "integration_head": "c4de944",
+  "valuation_content_head": "0b1a673",
+  "state": "local uncommitted Codex repairs; no Codex push/deploy",
+  "checks": {
+    "verify_cases": "10 passed; repeated after c4de944",
+    "merge_dated_debrief_check_only": "0 problems; repeated after c4de944",
+    "merge_presentation_check_only": "0 pending inputs, 0 problems; stored presentations checked by verify_cases",
+    "dated_merge_fixtures": "12 passed: invalid batches/JSON/identity/references/dates/baseline, check-only, flush/replace failures, cleanup retry, success/idempotence, legitimate renewed uncertainty",
+    "presentation_merge_fixtures": "4 passed: explicit valid modes, omitted existing mode, omitted default, invalid modes",
+    "build_bundles": "passed after c4de944; generated case bundles unchanged, index build timestamp only",
+    "test_returns": "passed before c4de944; subsequent scene-text commit does not change arithmetic inputs",
+    "test_simulate": "passed before c4de944; subsequent scene-text commit does not change simulator",
+    "test_payloads": "10 sheets, 10 markets, index and contamination fixtures passed after c4de944",
+    "test_story_dates": "Nektar horizons/early exits and 12 independent selected-output fixtures passed after c4de944",
+    "test_dated_debrief": "10 cases, 28 horizons, 73 publication boundaries, 71 transitions inspected, 6 verdict pins passed after c4de944",
+    "test_presentation_ui": "8 journeys passed: Nektar/Axsome/Madrigal/Target at 1280 and 390px; framing, source units, disclosure, commit and reload",
+    "test_story_ui": "passed again after c4de944: horizon/actual-exit boundaries, desktop/mobile, reload, storage failures and journal",
+    "diff_check": "passed"
+  },
+  "integration_findings": [
+    "Presentation merge omitted valuation_mode: fixed preservation and enum checks.",
+    "Madrigal long funding-runway unit caused mobile page overflow: fixed snapshot-number wrapping.",
+    "Test incorrectly required walkthrough gate in every case: now accepts direct debrief when no gate exists."
+  ],
+  "limits": [
+    "Copied passage detection is not semantic or source certification and does not catch arbitrary paraphrases.",
+    "Dated atomic replacement protects a single destination; presentation multi-file recovery remains separate.",
+    "Madrigal raw funding-runway unit wording and residual authored evidence conclusions need editorial review.",
+    "Future outcome payloads still load after commitment; no campaign security claim.",
+    "No new live deployment verification."
+  ]
+}

@@ -32,4 +32,6 @@ Rules:
 7. `valuation_mode`: `revenue` (default) keeps the EV/revenue multiple; `pipeline` (pre-revenue or royalty biotech valued on its programmes) hides the multiple under the fold and shows net cash as a share of market cap; `bank` is market cap only. Pick by what the price actually rests on.
 8. Neutral register, no hindsight; everything shown here is pre-decision material and must not hint at the outcome.
 
+The merger and case verifier reject invalid valuation_mode values. An omitted writer mode retains the existing destination mode; when neither supplies one, the UI defaults to revenue.
+
 Final reply: three lines: candidate id, number of metrics, number of groups. Nothing else.

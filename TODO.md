@@ -1,87 +1,89 @@
-## Nektar exit-aware debrief — 10 September 2026
+# Stockgame checklist — 10 September 2026
 
-Implemented the user-approved bounded patch; pause for Nektar playtesting before any rollout or campaign work.
+## Scope and checkpoint
 
-- Nektar walkthrough and selected-thesis feedback use the actual simulated exit, including stop-loss and take-profit exits. One-/three-/five-year windows retain one/two/four authored stops respectively; earlier exits include only eligible stops.
-- New outcome-only `scene_check.dated_debrief` contains baseline interpretations and event-linked updates. `site/story.js` selects evidence using both occurrence and source publication dates. Date-only evidence must precede the opening-price exit; month-only dates use month end conservatively. Retrospective legal material is not eligible at its earlier occurrence date.
-- Results and primary stock/SPY chart for Nektar end at the actual exit; the final chart point uses the exit open, not that day's later close. Same-date benchmark tiles and drawdown reflect that boundary. Saved legacy forecast/calibration semantics remain unchanged.
-- Default order: results/chart, selected-thesis check with source links, concise exit-scoped narrative. Full friend checks, horizon notes, event archive and alternative horizons are in a closed optional later-context section. Full outcome payloads still load after commitment; this is standalone presentation scoping, not campaign time-gating or access control.
-- Removed unsupported closing/legal/cash-retention clauses from three Nektar walkthrough stops. Reused existing evidence; 2019 and April 2022 wire sources reopened during this patch, but the two SEC source URLs could not be reopened. This is not a complete source re-verification or readiness certification.
-- Verified: all ten cases (`verify_cases.py`), builder regeneration, return arithmetic, simulator agreement, and `test_story_dates.js` (publication boundaries, early exits, all three horizons, no dated feedback in the player sheet). Updated `test_story_ui.cjs` passed on desktop and 390px: horizons, buy/short/skip, stop/target, reload before/within/after walkthrough, failed commitment/progress saves, optional later context and journal. Tests use isolated storage.
-- Final browser edge case passed: a 25% buy take-profit exits on 9 March 2018, before the first story event, and opens the unresolved debrief directly.
-- Remaining: user playtest; broader opening/investigation wording and editorial readiness triage. No campaign integration in this patch. Dated feedback now covers all ten cases (Claude, 2026-09-10).
+The immediate work is standalone story refinement and user playtesting. The connected campaign remains the long-term direction in [MASTER_PLAN.md](MASTER_PLAN.md), with implementation deferred. This checklist records completed changes and planned next work. The user authorized the four engineering points; implementation and verification are recorded in the session progress log.
 
-# Tomorrow's work — 9 September 2026 handoff
+Read [the latest review](research/DATED_DEBRIEF_REVIEW.md) before implementing its repairs. Preserve existing code, journal entries and concurrent edits.
 
-## Direction and immediate scope
+## Completed — do not repeat
 
-The main product is the connected historical portfolio campaign in [MASTER_PLAN.md](MASTER_PLAN.md): $100,000 cash plus 1 BTC, ten chronological decisions, overlapping positions, and play until all timed trades close within a fixed historical boundary.
+- [x] Ten standalone stories with opening scenes, three investigation questions, selectable assumptions and aftermath material.
+- [x] Shared horizon selector, unavailable-horizon controls, allocation choice and optional stop-loss/take-profit levels.
+- [x] Optional free-text rationale; one or two selected assumptions required where authored. New decisions save no default probability (`p_beats_spy: null`); older forecasts remain in the journal.
+- [x] Save-before-reveal, failed-save feedback, walkthrough resume and persistence checks; legacy completed entries remain accessible.
+- [x] Progress count and next-undecided navigation; journal name, skip-return and exit-column fixes.
+- [x] Stock/SPY dividend-aware calculations, derived valuation and masked pre-decision excerpts.
+- [x] Nektar opening corrected to agreed $1 billion cash plus $850 million equity, pending closing; duplicated investment question removed when a scene supplies one.
+- [x] Nektar walkthrough chronology repaired; unsupported closing/legal/cash-retention clauses trimmed. Date precision preserved.
+- [x] Dated debrief mechanism uses actual exits and eligible event/publication dates. Nektar's one/three/five-year paths have one/two/four stops; early exits can have fewer or none.
+- [x] Dated feedback authored for the other nine cases using the same schema. This is implementation coverage, not complete editorial approval.
+- [x] Default debrief: result and exit-bounded chart, selected-thesis feedback, concise narrative; full story and other horizons behind optional context.
+- [x] Nektar financial snapshot reorganized into business performance, cash position and valuation. One-time-payment caveats visible; non-comparable cash prior kept out of the primary comparison; definitions and formulas expandable.
+- [x] Removed repeated cutoff/holding line from the company summary.
+- [x] Moved last-close value/date into Market snapshot and placed it before Where the stock stands.
+- [x] Moved What changed directly before Financial snapshot.
+- [x] Aligned stop-loss and take-profit labels/dropdowns.
 
-**Immediate user instruction: finish the story experience first.** Campaign integration is intentionally not done. Polish Nektar, let the user play it, then decide how to extend the pattern. Do not start campaign implementation, more story research or a RAG platform tomorrow without the appropriate next instruction.
+Interim findings, ownership and step completion: [SESSION_PROGRESS.md](research/SESSION_PROGRESS.md).
 
-Read this file, MASTER_PLAN.md, and [the Fable story handoff](research/FABLE_CAMPAIGN_NEXT.md). Despite its filename, that handoff was revised to prioritize standalone Nektar. Inspect current code before editing: the user/Fable may have made further changes. Older findings are not automatically still open.
+## Current checkpoint
 
-## Already completed — do not redo
+The four authorized engineering points are implemented locally: copied-outcome payload checks, explicit temporal selection fixtures, legitimate returns to Unresolved, whole-batch atomic dated merging and integration with valuation commit `0b1a673` and scene-text commit `c4de944`. Valuation presentation merges also preserve and validate `valuation_mode`.
 
-- [x] Ten standalone cases, opening scenes, sourced evidence and aftermath are present.
-- [x] Nektar has investigation buttons, first instinct, selectable assumptions and a walkthrough.
-- [x] Horizon-dependent calculations and unavailable-horizon controls exist. Preserve them; the remaining concern is narrative scope.
-- [x] Optional exit rules, probability, contrary fact and change-my-mind fields folded into “Add detail.”
-- [x] Free-text reasoning optional everywhere. Nektar still requires one or two selected assumptions.
-- [x] Walkthrough reload resumes the first unanswered stop instead of revealing the ending. Explicit started/completed state added; completed legacy results remain accessible.
-- [x] Walkthrough refuses to advance if saving fails; selected assumptions appear beside each event.
-- [x] Journal uses the revealed name without repeating the alias; skipped position return is a dash; compact Exit column added.
-- [x] Browser regression checks passed for walkthrough resume/completion, storage failure, optional reason and journal rendering (`scripts/test_story_ui.cjs`).
+See [SESSION_PROGRESS.md](research/SESSION_PROGRESS.md) for actual verification. The next user-facing step is playtesting. The original [NEXT_SESSION_PLAN.md](research/NEXT_SESSION_PLAN.md) remains a record of the broader proposed work; unchecked editorial/user-review items are not silently completed by automated checks.
 
-Latest small code patch touched `site/play.html`, `site/journal.html`, added `scripts/test_story_ui.cjs`, and updated ARCHITECTURE.md. It did not edit story wording, scope walkthroughs to horizons, or implement campaign integration.
+## Remaining repair verification and implementation
 
-## First: finish Nektar
+The checklist below now distinguishes landed patches from remaining review. Detailed timing, deliverables and pause points are in the session plan. No new schema or research-worker batch is needed.
 
-- [ ] Correct the opening pitch against its evidence: $1 billion cash plus $850 million equity, not $1.85 billion plus equity; agreement/expected closing versus already paid. Keep fictional framing clearly distinguished from sourced facts.
-- [ ] Merge overlapping opening questions. Retain one short scene and one neutral investment dilemma; avoid narrating the eventual lesson before the player investigates.
-- [ ] Remove fixed “you'd hold for five years” wording when the ticket offers horizon choice. Remove or correct awkward “built for a 5 years hold” text. The ticket introduction was already made horizon-neutral.
-- [ ] Check factual clauses in investigation answers and match them to claim IDs. Distinguish editorial valuation interpretation from reported facts.
-- [ ] Repair walkthrough chronology: June 2018 is about two months after the recorded April closing, not four; do not imply the class action had ended in 2019; do not mention April 2022 termination at a March 2022 stop.
-- [ ] Respect approximate dates and source availability. An event described retrospectively is not automatically contemporaneous evidence at the event date.
-- [ ] Rewrite overconfident thesis verdicts. “Every subsequent data point subtracted” conflicts with the packet's recovery account. “Financing was never the problem,” money received versus financing available, and price changes attributed to one cause need evidence or narrower wording. Remove hindsight scolding such as “the packet said so.”
-- [x] Scope walkthrough stops and thesis feedback to the selected horizon/actual exit. For a February 2018 one-year call, the main story ends in February 2019; 2019/2022 developments belong in explicitly optional later context. Verify one-, three- and five-year choices, plus any retained early-exit behavior.
-- [x] Put explanation earlier in the debrief: results/chart -> selected-thesis check and concise horizon narrative -> optional friend check, alternative horizons, full event archive and dividends. Avoid telling the same story three times.
-- [ ] Playtest Nektar on desktop and mobile, including reload halfway through. Pause for the user's feedback before expanding the pattern.
+- [ ] **Target:** verify the landed fix for the March/May/June guidance chronology and remove the inference that later guidance cuts prove management's earlier intent. Review a3's updates together.
+- [ ] **First Solar:** verify the landed corrections keep verdicts tied to the stated assumptions. Enactment and durability are different questions; factory openings do not establish demand utilization.
+- [ ] **Sarepta:** verify the landed corrections distinguish gross debt issuance from new program funding, age eligibility from the approval's surrogate-endpoint basis, and the original subgroup assumption from a broader population.
+- [x] Review the new verdict and publication-boundary tests; add independent expected-output fixtures where needed, and replace the universal status-regression ban with checks that permit evidence-backed uncertainty. Expand early-exit coverage where relevant.
+- [x] Strengthen pre-decision payload checks beyond absence of the `dated_debrief` key. Retain manual clause/source review; structural tests cannot establish factual support.
+- [x] Finish merge recovery beyond the landed save-before-delete fix: validate the whole batch, save atomically, then archive/delete inputs. Test failed writes and invalid batches; correct misleading validator documentation.
+- [ ] User playtest after local integration checks; record remaining editorial feedback.
+- [ ] Presentation merge multi-file transaction recovery (dated merging is fixed separately).
 
-The detailed handoff has examples and reproduction steps. Historical facts still require source checking when repaired; the previous review primarily identified contradictions within local content.
+Detailed evidence, replacement wording and acceptance criteria: [DATED_DEBRIEF_REVIEW.md](research/DATED_DEBRIEF_REVIEW.md).
 
-## Next, after the Nektar playtest
+## Later standalone work
 
-- [ ] Extend concise investigation questions, selectable assumptions and appropriate walkthroughs to the other nine stories. This is authoring and evidence review, not merely enabling a UI flag.
-- [ ] Add simple progress (“3 of 10 decided”) and a continue-to-next-undecided action. Keep this standalone progress distinct from the future campaign timeline.
-- [ ] Assess whether the now-collapsed probability field should default to an unanswered forecast. Currently 50% remains the existing default and can be saved without interaction; do not imply that an untouched default is an elicited belief. If changed, update journal/calibration and preserve legacy records.
-- [ ] Consider a short fictional follow-up from the same friend at each stop, grounded in stage-eligible evidence. Optional experiment, not required for completion.
+- [ ] Continue user playtesting after the recent layout changes; assess whether the snapshot and investigations make the decision easier.
+- [ ] Review remaining investigation clauses, valuation interpretations and full-record archive wording against sources. Include Madrigal’s raw funding-runway unit wording; mobile wrapping is fixed.
+- [ ] Triage `repairs_needed` into blocking versus optional work before adding a publication-readiness gate. `sheet_ready` currently does not certify factual completeness.
+- [ ] Consider friend follow-ups only if useful after playtesting; this is optional, not a completion requirement.
 
-Five reusable setups are a useful editorial vocabulary, not proof that the content scales. Keep setup, sector, decision tension and eventual outcome independent; avoid teaching players that a particular framing predicts a winner or loser.
+## Campaign — deferred
 
-## Later: campaign implementation
+Follow [CAMPAIGN_ENGINE_PLAN.md](CAMPAIGN_ENGINE_PLAN.md) and MASTER_PLAN when campaign work resumes:
 
-Detailed design prepared in [CAMPAIGN_ENGINE_PLAN.md](CAMPAIGN_ENGINE_PLAN.md): ledger, event ordering, accounting fixture, persistence, spoiler boundaries and implementation checkpoints. Proposed numerical rules remain unsettled; this does not change the immediate story-polish priority.
+- [ ] Freeze a historically covered interval and eligible horizons.
+- [ ] Implement a shared ledger, sourced BTC valuation, cash/position accounting, dividends, borrow/collateral rules and event ordering.
+- [ ] Replace immediate future payloads with campaign-clock-controlled updates.
+- [ ] Prototype three chronological scenes with overlap and an automatic closure; continue until every timed trade closes, then reconcile the final portfolio and passive comparison.
+- [ ] Pause for playtesting before extending the connected loop to ten scenes. [RAG.md](RAG.md) remains separate and deferred.
 
-- [ ] Define the fixed historical interval, eligible horizons, shared ledger and event ordering from MASTER_PLAN.md.
-- [ ] Add sourced BTC valuation, available cash, position accounting, dividends, borrow/collateral and forced-exit rules.
-- [ ] Replace immediate future reveals with campaign-clock-controlled updates; full outcome payloads currently still load in standalone mode.
-- [ ] Prototype three chronological stories with overlapping trades, an automatic closure and continuation until all trades close; then user playtest before extending to ten.
-- [ ] Reconcile ending assets and a passive comparison starting with the same cash and BTC.
+## Verification and running
 
-No future extrapolation, silently shortened horizons or forced normal exits at a data boundary. Only offer trades whose scheduled exits have complete historical coverage.
+Serve locally: `python3 -m http.server 8765 --directory site`. Port 8766 was also used during this session; check whether a server exists before starting another. Nektar: `/play.html?case=146743bdc9`. Use a private window for a fresh playtest; never clear the user's journal automatically.
 
-Search-led investigation is recorded separately in [RAG.md](RAG.md), deferred. A curated local search prototype could precede any runtime LLM integration.
+For content changes, run `python3 scripts/verify_cases.py`, `python3 scripts/merge_dated_debrief.py --check-only`, then `python3 scripts/build_bundles.py`. The merge command is read-only only with `--check-only`.
 
-## Running and checking
+Relevant regression commands:
 
-Serve the existing app: `python3 -m http.server 8765 --directory site`, then open `http://localhost:8765`.
+```bash
+python3 scripts/test_returns.py
+node scripts/test_simulate.js
+python3 scripts/test_merge_dated_debrief.py
+python3 scripts/test_merge_presentation.py
+node scripts/test_payloads.js
+node scripts/test_story_dates.js
+node scripts/test_dated_debrief.js
+```
 
-After content edits: `python3 scripts/verify_cases.py`, then `python3 scripts/build_bundles.py`. Schema checks do not certify historical truth.
-
-For arithmetic changes: `python3 scripts/test_returns.py` and `node scripts/test_simulate.js`. Both passed during the earlier review; the last UI-only patch did not change arithmetic.
-
-For the story UI regression, with a server running:
+Browser regression, with the server running:
 
 ```bash
 PLAYWRIGHT_MODULE=/home/diablo/book11/node_modules/playwright \
@@ -90,8 +92,6 @@ STOCKGAME_URL=http://127.0.0.1:8765 \
 node scripts/test_story_ui.cjs
 ```
 
-These are the locally available browser paths at handoff time. The test uses fresh browser storage; do not clear the user's real journal. Update the test if the intended flow changes. Do not assume a previous background server is still running.
+Current execution results are recorded in research/SESSION_PROGRESS.md. Run scripts/test_presentation_ui.cjs with the same browser environment for valuation integration coverage. The all-case dated test covers 28 available horizon exits. Browser coverage includes Nektar 1/3/5-year, buy/short/skip, stop/target, no-event exit, reload, failed commitment/progress saves, desktop/390px, optional context and journal behavior. It does not constitute an exhaustive all-ten content or accessibility audit.
 
-## Working agreement
-
-Keep edits bounded and visible. Use Sonnet workers for narrowly scoped authoring/source repair if needed, not a new broad research batch. Pause for the user's playtest after Nektar. Old quota readings in other documents are historical; never report them as current. Update this checklist with what actually changed and was verified.
+The review verified deployment `ee0752c` and matching live outcome bundles. Do not infer that subsequent UI changes are deployed without a new check. No current quota or worker-availability claim is made.

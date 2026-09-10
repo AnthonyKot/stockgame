@@ -1,0 +1,30 @@
+{
+  "mixed_invalid_batch": {
+    "exit_code": 1,
+    "stdout": "merged 1; problems: 1; drift warnings: 0\ngrowth-007: update 0 narrative 46 words",
+    "stderr": "",
+    "destination_changed": true,
+    "writer_inputs_remaining": {
+      "growth-004": false,
+      "growth-007": true
+    }
+  },
+  "unknown_event": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/tmp/stockgame-merge-review-mipxfmdk/scripts/merge_dated_debrief.py\", line 42, in <module>\n    for u in sorted(dd['updates'], key=unlock):\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/stockgame-merge-review-mipxfmdk/scripts/merge_dated_debrief.py\", line 40, in unlock\n    return max(max(ld(events[e]['date']), ld(events[e]['source']['published'])) for e in u['event_ids'] if e in events) if u['event_ids'] else ''\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: max() iterable argument is empty",
+    "destination_changed": false,
+    "writer_inputs_remaining": {
+      "growth-004": true,
+      "growth-007": true
+    }
+  },
+  "baseline_checks": {
+    "verify_cases": "10 passed",
+    "dated_merge_check_only": "0 problems; 0 drift warnings",
+    "presentation_merge_check_only": "0 pending inputs; 0 problems (not an all-ten audit)",
+    "story_dates": "passed",
+    "dated_debrief": "10 cases; 28 horizon exits; 73 publication boundaries; 71 transitions; 6 named verdict checks passed"
+  },
+  "head": "c89adddffc69fc5341bf25cca20947f35068a2d6"
+}

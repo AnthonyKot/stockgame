@@ -105,7 +105,7 @@ ul.plain { padding-left: 1.1rem; margin: .25rem 0; }
 .financial-snapshot .snapshot-group h3 { font-size: .95rem; margin: 0 0 .5rem; }
 .snapshot-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 1rem; padding: .9rem 0; border-top: 1px solid var(--grid); }
 .snapshot-label, .snapshot-number { display: flex; flex-direction: column; gap: .15rem; }
-.snapshot-number { text-align: right; font-variant-numeric: tabular-nums; }
+.snapshot-number { text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .snapshot-number > strong { font-size: 1.3rem; font-weight: 650; }
 .snapshot-context { grid-column: 1 / -1; margin: .45rem 0; font-size: .9rem; color: var(--ink2); }
 .snapshot-detail { grid-column: 1 / -1; font-size: .8rem; color: var(--ink2); }
