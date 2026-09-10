@@ -108,6 +108,9 @@ All ten cases now supply `financial_snapshot.presentation` in player.json; Nekta
 
 ## Verification scope and open work
 
+- `scripts/run_checks.sh` runs every suite below in order and stops at the first failure (`--no-browser` skips the two Playwright suites; `--build` rebuilds first). The browser suites need Playwright (`PLAYWRIGHT_MODULE` may point at another checkout's copy) and serve `site/` on a free port unless `STOCKGAME_URL` is set.
+- `scripts/build_bundles.py` ends by running `scripts/test_payloads.js` and exits 1 if outcome fields or copied outcome sentences are found in any pre-decision file, so a leak cannot be built silently.
+
 - `python3 scripts/merge_dated_debrief.py --check-only`: whole-batch structure, dates, references, status and word-count validation; does not establish source entailment.
 - `python3 scripts/test_merge_dated_debrief.py`: 12 temporary-fixture tests covering invalid batches, unknown IDs, malformed inputs, write/replacement failures, cleanup recovery and reruns.
 - `python3 scripts/test_merge_presentation.py`: four fixture tests for explicit/omitted/invalid valuation_mode. `verify_cases.py` validates stored modes and labels across all ten cases. Presentation multi-file atomicity remains open.

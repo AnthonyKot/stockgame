@@ -8,4 +8,4 @@ The approved product direction is [MASTER_PLAN.md](MASTER_PLAN.md). The existing
 - Product authority: `MASTER_PLAN.md` takes precedence. `FRAMEWORK.md`, `CASE_FORMAT.md` and `research/SELECTION_RULES.md` retain supporting evidence and historical design material.
 - Live: https://anthonykot.github.io/stockgame/ (GitHub Pages, deployed from `site/` by `.github/workflows/pages.yml` on every push to main). Feedback: https://github.com/AnthonyKot/stockgame/issues
 - Run locally: `cd site && python3 -m http.server 8765` and open http://localhost:8765/index.html.
-- Rebuild data after editing anything under `cases/` or `research/prices/`: `python3 scripts/build_bundles.py`. Check cases first: `python3 scripts/verify_cases.py`.
+- Rebuild data after editing anything under `cases/` or `research/prices/`: `python3 scripts/build_bundles.py`. Then run every check: `scripts/run_checks.sh` (add `--no-browser` without Playwright).

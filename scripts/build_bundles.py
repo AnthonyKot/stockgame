@@ -8,7 +8,7 @@ Outputs under site/data/<opaque_id>/:
 site/data/index.json lists the cases with opaque ids only.
 Run: python3 scripts/build_bundles.py
 """
-import hashlib, json, copy, re
+import hashlib, json, copy, re, sys
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -376,6 +376,20 @@ def main():
         index.append(entry)
         print(cid, '->', oid, entry['status'], 'entry', oc['entry'], 'exit', oc['exit'], 'long', oc['long_total_return_after_costs'], 'short', oc['short_total_return_after_costs'], 'spy', oc['spy_open_to_open_return'])
     (SITE / 'index.json').write_text(json.dumps({'built_at': datetime.now(timezone.utc).isoformat(), 'cases': index}, indent=1))
+    payload_checks()
+
+
+def payload_checks():
+    """The build is the moment outcome text could reach a pre-decision file, so run scripts/test_payloads.js here.
+    A leak fails the build (exit 1) after the files are written, so the offending sheet can be inspected."""
+    import shutil, subprocess
+    if not shutil.which('node'):
+        print('WARNING: node not found; payload checks (scripts/test_payloads.js) not run'); return
+    r = subprocess.run(['node', str(ROOT / 'scripts' / 'test_payloads.js')], capture_output=True, text=True)
+    print((r.stdout or r.stderr).strip().splitlines()[-1] if (r.stdout or r.stderr).strip() else 'payload checks: no output')
+    if r.returncode != 0:
+        print('BUILD FAILED: outcome text or fields found in a pre-decision payload; see above'); sys.exit(1)
+
 
 if __name__ == '__main__':
     main()
