@@ -49,7 +49,8 @@ if [ "$BROWSER" = 1 ]; then
   fi
   run "test_story_ui.cjs"        node scripts/test_story_ui.cjs
   run "test_presentation_ui.cjs" node scripts/test_presentation_ui.cjs
-  printf '\nall checks passed (12 suites, browser suites included)\n'
+  run "test_campaign_ui.cjs"     node scripts/test_campaign_ui.cjs
+  printf '\nall checks passed (14 suites, browser suites included)\n'
 else
-  printf '\nall non-browser checks passed (10 suites; browser suites skipped by --no-browser)\n'
+  printf '\nall non-browser checks passed (11 suites; browser suites skipped by --no-browser)\n'
 fi

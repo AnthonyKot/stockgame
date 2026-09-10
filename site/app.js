@@ -129,7 +129,7 @@ const SG = (() => {
   function topbar(current, onRules) {
     const rules = el('a', { href: 'index.html#rules', onclick: onRules ? (e => { e.preventDefault(); onRules(); }) : null }, 'Rules');
     const fb = el('a', { href: 'https://github.com/AnthonyKot/stockgame/issues/new', target: '_blank', rel: 'noopener' }, 'Feedback');
-    const t = el('header', { class: 'top' }, el('h1', {}, 'Stockgame'), el('nav', { 'aria-label': 'Main' }, el('a', { href: 'index.html', 'aria-current': current === 'play' ? 'page' : null }, 'Play'), el('a', { href: 'journal.html', 'aria-current': current === 'journal' ? 'page' : null }, 'Journal'), rules, fb));
+    const t = el('header', { class: 'top' }, el('h1', {}, 'Stockgame'), el('nav', { 'aria-label': 'Main' }, el('a', { href: 'index.html', 'aria-current': current === 'play' ? 'page' : null }, 'Play'), el('a', { href: 'journal.html', 'aria-current': current === 'journal' ? 'page' : null }, 'Journal'), el('a', { href: 'campaign.html', 'aria-current': current === 'campaign' ? 'page' : null }, 'Campaign'), rules, fb));
     const meta = el('div', { class: 'meta' }); const lab = el('label', {}, el('input', { type: 'checkbox', id: 'transparent', checked: transparent() ? '' : null, onchange: e => { setTransparent(e.target.checked); location.reload(); } }), ' Transparent mode (show names before deciding)'); meta.append(lab); t.append(meta);
     return t;
   }

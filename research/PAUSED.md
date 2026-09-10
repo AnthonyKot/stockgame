@@ -69,7 +69,7 @@ All ten cases/<id>/aftermath.json written (Sonnet workers, 9 to 12 dated sourced
 
 1. User plays a few cases with the aftermath timeline and says what reads well and what does not.
 2. Editorial triage of each case's `repairs_needed` (evidence.json): mark blocking vs optional; only then consider a readiness gate in the builder.
-3. Friends' feedback on the live site; then editorial triage (Codex's finding 3).
+3. Playtest the three-story campaign prototype at /campaign.html (idea 1 first milestone, built 2026-09-10 evening): the question is whether an earlier open position is on the player's mind when deciding the third story. Then decide idea 3 (quest) versus more campaign.
 
 ## Open questions for the user
 

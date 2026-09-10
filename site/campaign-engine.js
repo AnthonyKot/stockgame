@@ -131,7 +131,7 @@
     const trades = state.orders.map(o => { const p = state.positions.find(x => x.id === o.position_id);
       return { order: o.id, scene_index: o.scene_index, action: o.action, size_pct: o.size_pct, years: o.years, budget: o.budget, status: p ? p.status : o.status,
         entry: p ? p.entry : null, exit: p ? p.exit : null, dividends: p ? p.dividends_received : 0,
-        result: p && p.exit ? r2(p.exit.proceeds + p.dividends_received - p.cost) : null, result_pct: p && p.exit ? r2(((p.exit.proceeds + p.dividends_received) / p.cost - 1) * 1000) / 10 : null,
+        result: p && p.exit ? r2(p.exit.proceeds + p.dividends_received - p.cost) : null, result_pct: p && p.exit ? Math.round(((p.exit.proceeds + p.dividends_received) / p.cost - 1) * 1000) / 10 : null,
         slippage: p ? r2(p.entry.slippage + (p.exit ? p.exit.slippage : 0)) : 0 }; });
     const realized = r2(trades.reduce((s, t) => s + (t.result || 0), 0)); const dividends = r2(trades.reduce((s, t) => s + t.dividends, 0)); const slippage = r2(trades.reduce((s, t) => s + t.slippage, 0));
     const btc_gain = btc0 && eq.btc_mark ? r2(state.btc_qty * (eq.btc_mark.c - btc0.c)) : 0;

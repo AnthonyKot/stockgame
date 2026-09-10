@@ -24,14 +24,15 @@
 <script>
 (async () => {
   const { $, el, load, prose, money, pct, signed, dateFmt, horizonText, badge } = SG;
-  document.getElementById('top').replaceWith(SG.topbar('play', () => openRules()));
-  const id = new URLSearchParams(location.search).get('case');
+  const params = new URLSearchParams(location.search); const id = params.get('case');
+  const campaignMode = params.get('mode') === 'campaign';   // embedded in campaign.html: no topbar, no ticket, no journal, no reveal; the campaign page owns the decision
+  if (campaignMode) { document.body.classList.add('embedded'); document.getElementById('top').remove(); } else document.getElementById('top').replaceWith(SG.topbar('play', () => openRules()));
   const head = $('#head'), main = $('#main'), ticket = $('#ticket'), debrief = $('#debrief'), drawer = $('#drawer'), backdrop = $('#backdrop');
   if (!id) { head.textContent = 'No case selected.'; return; }
   let sheet, market, reveal = null, outcome = null, walkExit = null;   // walkExit: simulated early exit (stop/target) that ends the walk before the anniversary
   try { [sheet, market] = await Promise.all([load(`data/${id}/sheet.json`), load(`data/${id}/market.json`)]); } catch (e) { head.textContent = 'Could not load this case: ' + e.message; return; }
-  const prior = SG.findCommit(id);
-  const transparent = SG.transparent();
+  const prior = campaignMode ? null : SG.findCommit(id);
+  const transparent = campaignMode ? false : SG.transparent();
   if (transparent || prior) { try { reveal = await load(`data/${id}/reveal.json`); } catch (e) { reveal = null; } }
   const walkPending = prior && !prior.walkthrough_complete && !prior.walkthrough_skipped && !prior.result;   // identity stays hidden until the walk is done or skipped
   const name = reveal && (transparent || (prior && !walkPending)) ? `${reveal.transparent.issuer} (${reveal.transparent.ticker})` : sheet.masked.alias;
@@ -418,8 +419,11 @@
       el('p', { class: 'note' }, outcome.data_note + ' ' + outcome.contract.note)));
     debrief.append(d); d.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-  if (!prior) { const jump = el('button', { class: 'primary jump', type: 'button', onclick: () => { const f = ticket.querySelector('input[name=action]'); ticket.scrollIntoView({ behavior: 'smooth', block: 'start' }); if (f) setTimeout(() => f.focus(), 400); } }, 'Decide'); document.body.append(jump); }
-  if (prior) showDebrief(prior); else renderTicket();
+  if (!prior && !campaignMode) { const jump = el('button', { class: 'primary jump', type: 'button', onclick: () => { const f = ticket.querySelector('input[name=action]'); ticket.scrollIntoView({ behavior: 'smooth', block: 'start' }); if (f) setTimeout(() => f.focus(), 400); } }, 'Decide'); document.body.append(jump); }
+  if (campaignMode) {   // report our height so the parent iframe can grow; the decision ticket lives in the parent
+    ticket.remove(); const postHeight = () => { try { parent.postMessage({ type: 'stockgame-height', height: document.documentElement.scrollHeight }, '*'); } catch (e) {} };
+    new ResizeObserver(postHeight).observe(document.body); postHeight();
+  } else if (prior) showDebrief(prior); else renderTicket();
   if (location.hash === '#rules') openRules();
 })();
 </script>

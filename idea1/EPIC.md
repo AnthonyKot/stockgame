@@ -2,6 +2,10 @@
 
 Extracted 10 September 2026 from [MASTER_PLAN.md](../MASTER_PLAN.md) (product authority) and [CAMPAIGN_ENGINE_PLAN.md](../CAMPAIGN_ENGINE_PLAN.md) (engine design). This document turns those two into one end-to-end game scenario with stories, acceptance criteria and the decisions still open. Where it and the master plan disagree, the master plan wins. Nothing here is implemented yet; the ten standalone cases in `site/` are the foundation.
 
+## 0. Status
+
+2026-09-10: first milestone built in this repo (`site/campaign.html`, engine, store, builder, two test suites): three stories, long and skip, Bitcoin marked, ex-date dividends, automatic closures, a reconciled report, save and resume. Playtest pending. Shorts, dated story updates between stops, and the ten-story campaign are not started. See ARCHITECTURE.md for the file map.
+
 ## 1. The scenario, end to end
 
 The player is one person with **$100,000 cash and 1 Bitcoin** on the morning of **15 February 2018**. They meet ten investment stories in the order they happened, decide each one from what was public that morning, and live with the consequences in one shared account until the last timed trade closes. The clock only moves forward. Nothing from a story's future is shown until the clock reaches it.

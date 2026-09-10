@@ -120,3 +120,15 @@ ul.plain { padding-left: 1.1rem; margin: .25rem 0; }
   .snapshot-valuations > div { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
   .snapshot-valuations .v { margin: 0; }
 }
+
+/* campaign page and embedded case view */
+body.embedded .top { display: none; }
+body.embedded .grid { grid-template-columns: 1fr; }
+.strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .5rem .75rem; margin: .5rem 0; }
+.strip .l { font-size: .78rem; color: var(--ink2); }
+.strip .v { font-size: 1.25rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.strip .p { font-size: .78rem; color: var(--ink2); }
+.positions li { margin: .35rem 0; }
+.since li { margin: .25rem 0; }
+.scene-frame { width: 100%; border: 0; min-height: 60vh; display: block; }
+.campaign-ticket .budget { font-variant-numeric: tabular-nums; }

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stockgame · Campaign</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="top"></div>
+<div class="wrap">
+  <section id="strip" class="card" aria-live="polite"></section>
+  <section id="since"></section>
+  <div id="stage"></div>
+</div>
+<script src="app.js"></script>
+<script src="story.js"></script>
+<script src="campaign-engine.js"></script>
+<script src="campaign-store.js"></script>
+<script>
+(async () => {
+  const { $, el, load, money, signed, dateFmt } = SG;
+  document.getElementById('top').replaceWith(SG.topbar('campaign'));
+  const strip = $('#strip'), since = $('#since'), stage = $('#stage');
+  const CID = new URLSearchParams(location.search).get('campaign') || 'proto-3';
+  const base = `data/campaigns/${CID}/`;
+  let M; try { M = await load(base + 'manifest.json'); } catch (e) { strip.textContent = 'Could not load the campaign: ' + e.message; return; }
+  const usd = x => '$' + Math.round(x).toLocaleString('en-US');
+  const usd2 = x => '$' + x.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const stopLabel = s => s.kind === 'scene' ? `story ${s.index + 1} on ${dateFmt(s.date)}` : s.kind === 'closure' ? `the next closing trade on ${dateFmt(s.date)}` : 'the end of the campaign';
+
+  /* ---- data: price slices per year, loaded up to a date, never beyond the campaign end ---- */
+  const D = { prices: {}, dividends: {}, btc: [] }; const loadedYears = {};
+  async function ensureData(uptoDate) {
+    const y = Number(uptoDate.slice(0, 4));
+    const want = async (inst, years, apply) => { for (const yr of years) { if (yr > y) continue; const k = inst + ':' + yr; if (loadedYears[k]) continue; try { apply(await load(`${base}prices/${inst}/${yr}.json`)); } catch (e) {} loadedYears[k] = true; } };
+    for (const [oid, ins] of Object.entries(M.instruments)) { D.prices[oid] = D.prices[oid] || []; D.dividends[oid] = D.dividends[oid] || []; await want(oid, ins.years, f => { D.prices[oid].push(...f.bars); D.dividends[oid].push(...f.dividends); D.prices[oid].sort((a, b) => a.d < b.d ? -1 : 1); D.dividends[oid].sort((a, b) => a.d < b.d ? -1 : 1); }); }
+    await want('BTC', M.btc.years, f => { D.btc.push(...f.bars); D.btc.sort((a, b) => a.d < b.d ? -1 : 1); });
+  }
+  const sheets = {}; async function sheet(oid) { if (!sheets[oid]) sheets[oid] = await load(`data/${oid}/sheet.json`); return sheets[oid]; }
+  const reveals = {}; async function reveal(oid) { if (!reveals[oid]) { try { reveals[oid] = await load(`data/${oid}/reveal.json`); } catch (e) { reveals[oid] = null; } } return reveals[oid]; }
+  const sceneOf = idx => M.scenes[idx]; const aliasOf = async idx => { const sh = await sheet(sceneOf(idx).opaque_id); return sh.masked.alias; };
+
+  /* ---- state ---- */
+  let state; const stored = CAMPAIGN_STORE.load();
+  if (stored && stored.error) { stage.append(el('section', { class: 'card' }, el('h2', {}, 'Saved campaign unreadable'), el('p', {}, stored.error), el('button', { class: 'primary', type: 'button', onclick: () => { CAMPAIGN_STORE.clear(); location.reload(); } }, 'Start a new campaign'))); return; }
+  if (stored && stored.state.campaign_id === CID && stored.state.content_version === M.content_version) state = stored.state;
+  else if (stored && stored.state.campaign_id === CID) { stage.append(el('section', { class: 'card' }, el('h2', {}, 'This campaign has been rebuilt since you started'), el('p', {}, 'Content version ' + stored.state.content_version + ' is no longer available; the current version is ' + M.content_version + '. Your saved run cannot continue on different data.'), el('button', { class: 'primary', type: 'button', onclick: () => { CAMPAIGN_STORE.clear(); location.reload(); } }, 'Start a new campaign'))); return; }
+  else state = CAMPAIGN.createState(M);
+  await ensureData(state.clock.date);
+
+  function commit(next, what) {   // persist, verify, then adopt; a failed save leaves the previous state visible
+    const storedRev = CAMPAIGN_STORE.storedRevision();
+    if (storedRev !== null && state && storedRev !== state.revision) return 'This campaign was moved forward in another tab. Reload this page to continue from the saved point.';
+    if (!CAMPAIGN_STORE.save(next)) return `Your ${what} could not be saved in this browser (storage blocked or full). Nothing changed.`;
+    state = next; return null;
+  }
+
+  /* ---- portfolio strip ---- */
+  async function renderStrip() {
+    const eq = CAMPAIGN.equity(state, M, D); strip.innerHTML = '';
+    strip.append(el('h2', {}, `${dateFmt(state.clock.date)}${state.clock.phase === 'pre-open' ? ', before the open' : ', after the close'}`, el('small', {}, ' · ' + M.title)));
+    const cells = [['Total equity', usd(eq.total), 'cash, reserved, positions and Bitcoin'], ['Free cash', usd(eq.cash), eq.reserved ? usd(eq.reserved) + ' reserved for a pending order' : 'idle, earns nothing'],
+      ['Bitcoin', state.btc_qty + ' BTC · ' + usd(eq.btc_value), eq.btc_mark ? 'last completed UTC close, ' + dateFmt(eq.btc_mark.d) : 'no mark']];
+    strip.append(el('div', { class: 'strip' }, ...cells.map(([l, v, p]) => el('div', {}, el('div', { class: 'l' }, l), el('div', { class: 'v' }, v), el('div', { class: 'p' }, p)))));
+    const open = eq.positions;
+    if (open.length) {
+      const ul = el('ul', { class: 'plain positions' });
+      for (const p of open) { const name = await labelOf(p); ul.append(el('li', {}, el('strong', {}, name), ` · long ${p.years}y, ${usd(p.cost)} in`, ' · now ', el('strong', { class: p.gain >= 0 ? 'up' : 'down' }, usd(p.value) + ' (' + signed(p.gain / p.cost) + ')'), p.dividends_received ? ` · dividends ${usd2(p.dividends_received)}` : '', ` · closes ${dateFmt(p.exit_session)}`)); }
+      strip.append(el('h3', { style: 'font-size:.9rem;margin:.75rem 0 .25rem' }, 'Open positions'), ul);
+    }
+    const pending = state.orders.filter(o => o.status === 'pending');
+    if (pending.length) strip.append(el('p', { class: 'note' }, pending.map(o => `Order for story ${o.scene_index + 1}: ${usd(o.budget)} reserved, fills at the ${dateFmt(o.entry_session)} open.`).join(' ')));
+    if (!open.length && !pending.length) strip.append(el('p', { class: 'note' }, 'No open positions.'));
+  }
+  async function labelOf(p) { const rv = p.status === 'closed' ? await reveal(sceneOf(p.scene_index).opaque_id) : null; return rv ? `${rv.transparent.issuer} (${rv.transparent.ticker})` : `story ${p.scene_index + 1}: ${await aliasOf(p.scene_index)}`; }
+
+  /* ---- since your last stop ---- */
+  async function renderSince() {
+    since.innerHTML = ''; const a = state.arrival; if (!a || !a.notices) return;
+    const items = [];
+    for (const n of a.notices) {
+      if (n.kind === 'fill') items.push(`${dateFmt(n.date)}: bought ${n.shares.toFixed(2)} shares of ${await aliasOf(n.scene_index)} at $${n.open} open.`);
+      if (n.kind === 'closure') items.push(`${dateFmt(n.date)}: position from story ${n.scene_index + 1} closed for ${usd(n.proceeds)}, result ${n.result >= 0 ? '+' : ''}${usd(n.result)} including dividends.`);
+    }
+    const eqNow = CAMPAIGN.equity(state, M, D);
+    const btcLine = a.btc_from && eqNow.btc_mark ? `Bitcoin moved from $${a.btc_from.toLocaleString()} to $${eqNow.btc_mark.c.toLocaleString()}.` : '';
+    const divs = a.notices.filter(n => n.kind === 'dividend'); const divSum = divs.reduce((s, n) => s + n.amount, 0);
+    const shown = items.concat(divs.length ? [`${divs.length} dividend payment${divs.length > 1 ? 's' : ''} received, ${usd2(divSum)} in total.`] : []);
+    since.append(el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h2', {}, `Since your last stop (${dateFmt(a.from)} to ${dateFmt(a.to)})`), el('ul', { class: 'since' }, ...(shown.length ? shown : ['Nothing closed and nothing was paid.']).map(t => el('li', {}, t)), btcLine ? el('li', {}, btcLine) : null), el('p', { class: 'note' }, `Equity ${usd(a.equity_from)} then, ${usd(eqNow.total)} now.`)));
+  }
+
+  /* ---- stage: decide / advance / closure debriefs / report ---- */
+  async function renderStage() {
+    stage.innerHTML = '';
+    if (state.status === 'deciding') return renderScene();
+    if (state.status === 'finished') return renderReport();
+    return renderAdvance();
+  }
+  async function renderScene() {
+    const sc = sceneOf(state.scene_index); const sh = await sheet(sc.opaque_id); const eq = CAMPAIGN.equity(state, M, D);
+    const grid = el('div', { class: 'grid' });
+    const frame = el('iframe', { class: 'scene-frame', src: `play.html?case=${sc.opaque_id}&mode=campaign`, title: 'The story and the packet, as public on ' + dateFmt(sc.cutoff_date) });
+    window.addEventListener('message', ev => { if (ev.data && ev.data.type === 'stockgame-height' && ev.source === frame.contentWindow) frame.style.height = (ev.data.height + 20) + 'px'; });
+    const left = el('div', {}, el('section', { class: 'card' }, el('h2', {}, `Story ${sc.index + 1} of ${M.scenes.length}: ${sh.neutral_title || sh.masked.alias}`), el('p', { class: 'note' }, `Everything below was public before ${dateFmt(sc.cutoff_date)} 09:00 New York. Your account is above; decide on the right.`)), frame);
+    /* the campaign ticket */
+    const f = el('form', { class: 'campaign-ticket' });
+    const radios = (name, opts, checked) => el('fieldset', {}, el('legend', {}, name === 'action' ? 'Action' : name === 'years' ? 'Hold for' : 'Size, share of your equity'), ...opts.map(([v, lab, dis]) => el('label', { style: dis ? 'opacity:.5' : '' }, el('input', { type: 'radio', name, value: v, checked: v === checked ? '' : null, disabled: dis ? '' : null }), ' ' + lab)));
+    const horizonOpts = M.rules.horizons_years.map(y => [String(y), `${y} year${y > 1 ? 's' : ''}` + (String(y) === sc.default_horizon ? ' (story default)' : '') + (sc.horizons[String(y)] ? '' : ' · beyond the campaign\'s data'), !sc.horizons[String(y)]]);
+    const act = radios('action', M.actions.map(a => [a, a === 'buy' ? 'Buy' : 'Skip']), null);
+    const hz = radios('years', horizonOpts, sc.default_horizon); const sz = radios('size', M.rules.sizes_pct.map(p => [String(p), p + '%']), '10');
+    const budget = el('p', { class: 'note budget' });
+    const assumptions = (sh.scene && sh.scene.assumptions) || [];
+    const asm = el('fieldset', {}, el('legend', {}, 'My call rests on…'), el('p', { class: 'note' }, 'pick one or two'), ...assumptions.map(a => el('label', {}, el('input', { type: 'checkbox', name: 'assume', value: a.id }), ' ' + a.text)));
+    const reason = el('textarea', { name: 'reason', rows: 2, placeholder: 'Optional: a supporting fact from the packet, in your words' });
+    const err = el('p', { class: 'err', role: 'alert', style: 'color:var(--bad)' }); const btn = el('button', { class: 'primary', type: 'submit' }, 'Lock in my decision');
+    const update = () => { const fd = new FormData(f); const a = fd.get('action'); const p = Number(fd.get('size')); const b = Math.round(eq.total * p) / 100;
+      budget.textContent = a === 'buy' ? `${p}% of ${usd(eq.total)} equity is ${usd(b)}; you have ${usd(eq.cash)} free.` + (b > eq.cash ? ' Not enough free cash for this size.' : ' Fills at the next opening price.') : a === 'skip' ? 'Skip: cash stays idle and time still passes.' : 'Choose buy or skip.'; };
+    f.addEventListener('change', update); update();
+    f.append(el('h2', {}, 'Your decision'), act, hz, sz, budget, asm, reason, err, btn, el('p', { class: 'note' }, 'Saved in this browser before anything advances. Nothing about the outcome is revealed until the campaign clock reaches it.'));
+    f.addEventListener('submit', e => { e.preventDefault(); const fd = new FormData(f); const picks = fd.getAll('assume'); err.textContent = '';
+      if (!fd.get('action')) { err.textContent = 'Choose buy or skip.'; return; }
+      if (fd.get('action') === 'buy' && (picks.length < 1 || picks.length > 2)) { err.textContent = 'Pick one or two assumptions your call rests on.'; return; }
+      const r = CAMPAIGN.decide(state, M, D, { action: fd.get('action'), size_pct: Number(fd.get('size')), years: Number(fd.get('years')), assumptions: picks, reason: fd.get('reason') });
+      if (r.error) { err.textContent = r.error; return; }
+      const problem = commit(r.state, 'decision'); if (problem) { err.textContent = problem; return; }
+      renderAll(); });
+    grid.append(left, el('aside', { class: 'ticket card' }, f)); stage.append(grid);
+  }
+  async function renderAdvance() {
+    const next = CAMPAIGN.nextStop(state, M); const card = el('section', { class: 'card' });
+    const closures = (state.arrival && state.arrival.notices || []).filter(n => n.kind === 'closure');
+    for (const n of closures) card.append(await closureDebrief(n));
+    const btn = el('button', { class: 'primary', type: 'button', style: 'width:auto' }, next.kind === 'finished' ? 'See the final report' : 'Advance to ' + stopLabel(next));
+    const err = el('p', { class: 'err', role: 'alert', style: 'color:var(--bad)' });
+    btn.onclick = async () => { btn.disabled = true; await ensureData(next.date); const from = state.clock.date; const eqFrom = CAMPAIGN.equity(state, M, D);
+      const r = CAMPAIGN.advance(state, M, D, next); if (r.error) { err.textContent = r.error; btn.disabled = false; return; }
+      r.state.arrival = { from, to: next.date, notices: r.notices, equity_from: eqFrom.total, btc_from: eqFrom.btc_mark ? eqFrom.btc_mark.c : null };
+      const problem = commit(r.state, 'progress'); if (problem) { err.textContent = problem; btn.disabled = false; return; }
+      renderAll(); };
+    card.append(el('h2', {}, next.kind === 'finished' ? 'Every timed position has closed' : 'Next: ' + stopLabel(next)), el('p', { class: 'note' }, next.kind === 'scene' ? 'The clock will move to the morning of that story. Every session in between is processed: fills, dividends, closures and Bitcoin marks.' : next.kind === 'closure' ? 'The clock will move through that session\'s open, where the position is sold at the opening price.' : 'The clock stops at the last closure.'), btn, err);
+    stage.append(card);
+  }
+  async function closureDebrief(n) {
+    const sc = sceneOf(n.scene_index); const oid = sc.opaque_id; const order = state.orders.find(o => o.id === n.order); const pos = state.positions.find(p => p.id === n.position);
+    const rv = await reveal(oid); let outcome = null; try { outcome = await load(`data/${oid}/outcome.json`); } catch (e) {}
+    const box = el('div', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h3', {}, `Closed on ${dateFmt(n.date)}: story ${n.scene_index + 1} was ${rv ? rv.transparent.issuer + ' (' + rv.transparent.ticker + ')' : 'this company'}`),
+      el('p', {}, `Bought ${pos.shares.toFixed(2)} shares at $${pos.entry.open} on ${dateFmt(pos.entry.date)} for ${usd(pos.cost)}; sold at $${pos.exit.open} on ${dateFmt(pos.exit.date)} for ${usd(pos.exit.proceeds)}${pos.dividends_received ? ', plus ' + usd2(pos.dividends_received) + ' of dividends' : ''}. `, el('strong', { class: n.result >= 0 ? 'up' : 'down' }, `${n.result >= 0 ? '+' : ''}${usd(n.result)} (${signed(n.result / pos.cost)})`), ' after slippage.'));
+    if (outcome && outcome.scene_check) {
+      const dated = STORY.atExit(outcome, pos.exit.date);
+      if (dated) { box.append(el('p', {}, el('strong', {}, 'The story by your exit. '), dated.narrative.text));
+        const checks = (order.assumptions || []).map(aid => { const a = (outcome.scene_check.assumptions || []).find(x => x.id === aid); const c = dated.checks[aid]; return a && c ? el('li', {}, el('strong', {}, a.text), el('div', { class: 'note' }, c.text)) : null; }).filter(Boolean);
+        if (checks.length) box.append(el('p', {}, el('strong', {}, 'Checking your thesis')), el('ul', { class: 'plain' }, ...checks)); }
+      box.append(el('p', { class: 'note' }, 'Written from what was public by the exit date. Later developments stay hidden until the campaign clock reaches them.'));
+    }
+    return box;
+  }
+  async function renderReport() {
+    for (const n of (state.arrival && state.arrival.notices || []).filter(n => n.kind === 'closure')) stage.append(el('section', { class: 'card' }, await closureDebrief(n)));   // the closure that ended the campaign
+    const R = CAMPAIGN.report(state, M, D); const card = el('section', { class: 'card' }, el('h2', {}, 'Final report'), el('p', {}, `You started on ${dateFmt(M.start_date)} with ${usd(M.rules.starting_cash_usd)} and ${M.rules.starting_btc} BTC (${usd(R.starting_total)} in all) and finished on ${dateFmt(state.clock.date)} with `, el('strong', {}, usd(R.equity.total)), '.'));
+    const tiles = [['Your calls', (R.calls_contribution >= 0 ? '+' : '') + usd(R.calls_contribution), 'equity minus the do-nothing baseline'], ['Bitcoin, untouched', (R.btc_gain >= 0 ? '+' : '') + usd(R.btc_gain), `$${R.btc_start.c.toLocaleString()} to $${R.btc_end.c.toLocaleString()}`], ['Realized on trades', (R.realized >= 0 ? '+' : '') + usd(R.realized), `dividends ${usd2(R.dividends)}, slippage ${usd2(R.slippage)}`], ['Do-nothing baseline', usd(R.baseline), 'same cash and Bitcoin, held']];
+    card.append(el('div', { class: 'strip' }, ...tiles.map(([l, v, p]) => el('div', {}, el('div', { class: 'l' }, l), el('div', { class: 'v' }, v), el('div', { class: 'p' }, p)))));
+    const t = el('table'); t.append(el('thead', {}, el('tr', {}, ...['Story', 'Call', 'Budget', 'Entry', 'Exit', 'Dividends', 'Result'].map(h => el('th', {}, h)))));
+    const tb = el('tbody');
+    for (const tr of R.trades) { const rv = await reveal(sceneOf(tr.scene_index).opaque_id); tb.append(el('tr', {}, el('td', {}, `${tr.scene_index + 1} · ${rv ? rv.transparent.ticker : await aliasOf(tr.scene_index)}`), el('td', {}, tr.action === 'skip' ? 'skip' : `buy ${tr.size_pct}% for ${tr.years}y`), el('td', {}, tr.budget ? usd(tr.budget) : '—'), el('td', {}, tr.entry ? `${dateFmt(tr.entry.date)} $${tr.entry.open}` : '—'), el('td', {}, tr.exit ? `${dateFmt(tr.exit.date)} $${tr.exit.open}` : '—'), el('td', {}, tr.dividends ? usd2(tr.dividends) : '—'), el('td', { class: tr.result === null ? '' : tr.result >= 0 ? 'up' : 'down' }, tr.result === null ? '—' : `${tr.result >= 0 ? '+' : ''}${usd(tr.result)} (${tr.result_pct}%)`))); }
+    t.append(tb); card.append(el('div', { class: 'scroll' }, t));
+    /* equity path against the baseline, one point per session */
+    const pts = [], basePts = []; const cash0 = M.rules.starting_cash_usd;
+    for (const d of M.calendar) { if (d < M.start_date || d > state.clock.date) continue; const clk = { date: d, phase: 'closed' }; const eq = CAMPAIGN.equity({ ...state, clock: clk, positions: state.positions.map(p => ({ ...p, status: p.entry && p.entry.date <= d && !(p.exit && p.exit.date <= d) ? 'open' : 'closed' })), cash: cashAt(d) }, M, clk && D); pts.push({ d, v: eq.total }); const b = CAMPAIGN.btcMark(D, clk); basePts.push({ d, v: cash0 + M.rules.starting_btc * (b ? b.c : 0) }); }
+    function cashAt(d) { let c = M.rules.starting_cash_usd; for (const e of state.ledger) if (e.date <= d) c += e.cash_delta; return c; }
+    const ch = el('div'); SG.lineChart(ch, [{ name: 'Your account', cls: 's1', points: pts }, { name: 'Do nothing', cls: 's2', points: basePts }], { controls: true, rebase: true, label: 'Equity per session, indexed to 100 at the start', rawFmt: v => usd(v) });
+    card.append(el('h3', { style: 'font-size:.9rem;margin-top:1rem' }, 'The path'), ch);
+    card.append(el('p', { class: 'note' }, 'A profitable ending is not proof of a good decision, and most of the movement here is Bitcoin, which you never touched. The trade results are the part your calls produced.'));
+    card.append(el('p', {}, el('button', { class: 'ghost', type: 'button', onclick: () => { if (confirm('Delete this campaign from this browser and start again?')) { CAMPAIGN_STORE.clear(); location.reload(); } } }, 'Start a new campaign')));
+    stage.append(card);
+  }
+  async function renderAll() { await renderStrip(); await renderSince(); await renderStage(); }
+  await renderAll();
+})();
+</script>
+</body>
+</html>
