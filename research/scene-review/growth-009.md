@@ -1,0 +1,25 @@
+# Scene review: growth-009 (Hershey, cutoff 2023-02-03)
+
+## Confirmed defects
+
+- **voice, sentence 2**: "The company just reported 16% sales growth, mostly from price..." Field: `voice`. Evidence: c2 — "organic constant-currency growth of 12.0% made up of 8.0 points of net price realization and 4.0 points of volume/mix." Price is 8.0 of the 12.0 organic points (67%), but only 8.0 of the **16.1%** total reported growth (50%) — the extra ~4 points of reported growth come from FX/acquisition effects the packet doesn't break out, not price. "Mostly from price" is true of the organic split, not of "16% sales growth" as stated. Corrected: "reported 16.1% sales growth, with net price realization the largest single driver of the 12.0% organic portion."
+
+- **s1 citation**: `claims[s1]` "FY2022 net sales up 16.1% with 8 points from price" cites only `c8`. c8's text ("net sales and adjusted EPS grew 16.1% and 18.5%... evidence of realized pricing power") never states an 8-point breakdown, and its linked excerpt in evidence.json is actually the 2023 EPS-guidance paragraph ("...projected reported earnings per share growth of 11% to 15% and adjusted earnings per share growth of 9% to 11%"), not the 2022 price/volume split. The 8-point figure is only supported by c2's excerpt ("Organic Price 8.0%"). Fix: cite c2 (add or replace c8).
+
+- **ask_friend[2] ("Is it expensive?")**: "The last close is $234.42, up 18% over twelve months while the market fell 9%, and within 3% of the 12-month high. Market capitalisation is about $48 billion... enterprise value is about $53 billion, roughly 5.9 times 2021 revenue [c2]." None of these numbers exist in c2 (net-sales growth breakdown) or c3 (guidance ranges), the two cited claims. player.json's own `financial_snapshot.headline[5]` marks "Enterprise value and EV/trailing revenue" as `status: "missing"` with definition "requires historical share price / market capitalization, which is not in this evidence packet," and `missing_data[3]` repeats this explicitly. No share price of any kind appears anywhere in evidence.json or player.json. Every figure in this answer is fabricated relative to the case packet. It also uses FY2021 revenue as the multiple's denominator although FY2022 revenue ($10,419.3M) was already known at cutoff — a leftover artifact of player.json's `presentation.valuation_context` caveat ("The revenue multiple uses FY2021 net sales... Share count is from Dec 31, 2021"), which was written as a warning against computing this metric, not a formula to execute. Fix: remove the entire numeric answer; replace with "No share-price or market-cap data is in this evidence packet, so valuation cannot be assessed from what's here."
+
+- **assumption a3**: "A staple growing 6 to 8% deserves the current premium multiple." This presupposes Hershey trades at a "premium multiple" as settled fact, but no multiple, peer comparison, or share price exists anywhere in the packet (same gap as above). Fix: "A staple growing 6 to 8% deserves whatever multiple the market assigns it" or drop the premium-multiple framing until valuation data exists.
+
+- **assumption a2**: "Cost inflation will ease and margins will recover." Compound: two propositions (input costs ease; margins recover) that a later event could support independently — e.g., costs could stay high while pricing still restores margin, or costs could ease without margin recovery if volume/mix worsens. Split into two assumptions.
+
+## Unsupported or unverifiable
+
+- `claims[s2]` "2023 guidance of 6% to 8% sales growth and 9% to 11% adjusted EPS growth" cites `c9`, whose linked excerpt only contains the EPS range ("...adjusted earnings per share growth of 9% to 11%"); the 6%-8% sales figure's excerpt is filed under c3/c5 instead. c9's claim text does state both numbers correctly, but the excerpt trail for the sales figure needs c3 added.
+
+- voice, "...and says it can keep raising while costs stay high" is not tied to a claim id (voice has no per-clause `claim_ids`). The 2023-outlook paragraph does say sales growth is "driven primarily by net price realization," but that phrase is cut by an ellipsis in evidence.json's c3/c5 excerpt ("The company expects net sales growth of 6% to 8%... Capital expenditures of approximately..."), so as the excerpt is written it doesn't cover this clause. Needs the excerpt extended or a citation added.
+
+- ask_friend[0] "Mostly price." as the lead answer to "Is the growth price or volume?" has the same organic-vs-total ambiguity as the voice defect above, though the same answer goes on to give both the 16.1% total and 12.0% organic figures, so a careful reader can reconstruct the correct picture. Needs a one-clause disambiguation ("mostly price within the organic 12.0%").
+
+## Editorial preferences (not defects)
+
+- `question` ends "...at today's price" — once the fabricated valuation figures are removed, this phrase and the "Is it expensive?" ask_friend entry should either be cut or reworded to state plainly that no price/valuation data is available in this packet, since the question currently implies such data exists.

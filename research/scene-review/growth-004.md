@@ -1,0 +1,25 @@
+# Scene review — growth-004 (cutoff 2021-03-03T09:00:00-05:00)
+
+## Confirmed defects
+
+- **Quote:** "two-thirds of the growth was digital at 145%" — **field:** `voice`. **Evidence:** c12 — "Digital comparable sales accounted for roughly two-thirds of **Q4** comparable-sales growth, up 118% in the quarter and 145% for the **full year**." **What's wrong:** the sentence conflates two different periods — the "two-thirds" share applies only to Q4 comparable-sales growth, not to full-year growth, while 145% is the full-year digital comp-sales growth rate. As written it reads as one population/period (this year's growth was two-thirds digital, at 145%), which the source does not say. **Corrected:** "digital fulfilment already costs gross margin, and digital was two-thirds of Q4's comparable-sales growth, up 145% for the year."
+
+- **Quote:** "digital fulfilment and supply-chain costs already weighing on gross margin" — **field:** `s3` (claims[2]), cites `c13`. **Evidence:** c13 — "Current portion of long-term debt $1,144 million (Jan 30, 2021) versus $161 million (Feb 1, 2020)." **What's wrong:** c13 is about a debt-maturity step-up, not margin or digital costs; it does not support this sentence at all. The correct claim is c14 ("higher digital fulfillment and supply-chain costs already affected gross margin") — which `ask_friend[1].a` cites correctly for the same fact, confirming this is a miscitation. **Corrected:** change `claim_ids` from `["c13"]` to `["c14"]`.
+
+- **Quote:** "The last close is $173.49, up 59% over twelve months against 25% for the market, 13% below the 12-month high. Market capitalisation is about $87 billion; enterprise value about $91 billion, roughly 1.2 times revenue" — **field:** `ask_friend[2].a`, cited to `c2`. **Evidence:** c2 covers only comparable-sales and revenue growth; nothing in it or elsewhere in the evidence packet gives a share price, 12-month range, market cap, or EV. `player.json.financial_snapshot.headline` explicitly marks "Enterprise value and EV/trailing revenue" as `status: "missing"` ("requires historical share price / market capitalization, which is not in this evidence packet"), and `evidence.json.exclusions` states the same. **What's wrong:** every number in this passage is fabricated relative to the evidence packet, which explicitly says this data does not exist here. **Corrected:** "Share price and market-value data are not in this evidence packet at this cutoff; on the operating numbers alone, the business is running at a 7% operating margin on $93.6 billion of revenue."
+
+- **Quote:** "No guidance is caution, not a warning." — **field:** `a3`. **What's wrong:** the assumption embeds the rejection of its own alternative ("not a warning") inside the proposition, rather than stating one testable claim a later event can independently support or weaken — it pre-declares the answer to exactly the caution-vs-warning question the case's own debrief later treats as unresolved. **Corrected:** "The absence of FY2021 guidance reflects management caution about forecasting accuracy."
+
+- **Quote:** "Digital growth will keep running without crushing margins." — **field:** `a2`. **What's wrong:** compound assumption — two separable propositions (digital growth continues; margins are not crushed) that a single later event can support on one leg and weaken on the other, as the case's own `dated_debrief` shows for `e1` ("Partly supported... digital grew 20.8%... but margin guided below last year's rate"). **Corrected:** split into two — "Digital comparable-sales growth continues at a similar pace" and "Digital fulfilment costs do not further compress gross margin."
+
+## Unsupported or unverifiable
+
+- `s1` text includes "about $9 billion of share gained" but `s1.claim_ids` is `["c2","c4"]` — neither mentions market share; the supporting fact is `c9`. Needed: add `c9` to `s1.claim_ids`.
+- `voice`: "the pandemic changed its position for good" has no cited or citable claim behind it — no evidence claim asserts durability of the share gain past FY2020; this is precisely the bull/bear split the scene's own `question` asks the player to weigh, stated here as an analyst's settled fact rather than a hypothesis. Needed: none exists yet at this cutoff; would require multi-year retention data not available pre-cutoff.
+
+## Editorial preferences (not defects)
+
+- `voice`: "took $9 billion of share" vs. source's "gained... market share" — slightly more active/causal framing than the source, but a common finance idiom, not misleading.
+- `voice`: "lifted returns on capital to 23%" rounds 23.5% down to 23% — direction and magnitude correct, immaterial.
+- `question`: the bear option ("a one-off year the company itself won't extrapolate") is anchored to a specific fact (no guidance) while the bull option ("durable share gain") is not given an equivalent anchor — a mild framing asymmetry, not clearly leading.
+- `voice`/`s2`: "it refuses to guide" is a bit more charged than the source's neutral "not providing... guidance, citing continued uncertainty," though within normal paraphrase range.

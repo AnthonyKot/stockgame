@@ -34,7 +34,7 @@
           ]
         }
       ],
-      "question": "Is a second positive readout enough to buy at today's price, with cash for about four quarters and four more readouts due?",
+      "question": "Is a second positive readout enough to buy at today's price, with cash for about four quarters and five more readouts due?",
       "debrief_check": {
         "s1": "True as stated, and the pattern did not simply repeat: within the year AXS-05 met its endpoint in Alzheimer's agitation but missed against an active comparator in treatment-resistant depression [e3][e5].",
         "s2": "True. Designation did not shorten the road: the NDA was accepted with priority review in April 2021, then hit a deficiency letter over manufacturing and analytical methods and missed its target date, before approval as Auvelity in August 2022 [e7][e8][e9][e10].",
@@ -56,7 +56,7 @@
         },
         {
           "q": "What else is due, and can they pay for it?",
-          "a": "Four more readouts inside the next two quarters: the same drug in treatment-resistant depression and in Alzheimer's agitation, and a migraine drug in two trials [c7][c8]. Cash was $43.6 million at 30 September, down from $53.8 million three months earlier, with about $10.6 million used in the quarter; at that rate the packet's own scenario gives roughly four and a half quarters [c9][c11b][c11c]. Management says cash lasts into the second quarter of 2021. The company has also proposed a mid-trial design change in the Alzheimer's study that the regulator had not yet agreed [c12].",
+          "a": "Five more readouts inside the next two quarters: the same drug in treatment-resistant depression and in Alzheimer's agitation, a migraine drug in two trials, and a narcolepsy drug [c7][c8]. Cash was $43.6 million at 30 September, down from $53.8 million three months earlier, with about $10.6 million used in the quarter; at that rate the packet's own scenario gives roughly four and a half quarters [c9][c11b][c11c]. Management says cash lasts into the second quarter of 2021. The company has also proposed a mid-trial design change in the Alzheimer's study that the regulator had not yet agreed [c12].",
           "claim_ids": [
             "c7",
             "c8",
@@ -68,7 +68,7 @@
         },
         {
           "q": "How much is already in the price?",
-          "a": "The last close is $79.80, a 12-month high, up more than 2,500% over twelve months. Market capitalisation is about $2.75 billion with net cash of about $24 million [c11a]; there is no revenue and no approved product, so revenue multiples do not apply. The price is paying for approval and a launch that have not happened, and for a company that will need to raise money before either.",
+          "a": "The last close is $79.80, a 12-month high, up more than 2,500% over twelve months. Market capitalisation is about $2.75 billion with net cash of about $24 million [c11a] (from the market snapshot and valuation panel in this packet); there is no revenue and no approved product, so revenue multiples do not apply. The price is paying for approval and a launch that have not happened, and for a company that will need to raise money before either.",
           "claim_ids": [
             "c11a",
             "c9"
@@ -215,7 +215,7 @@
     },
     "clinical-mdgl-2018": {
       "setup": "friend_pitch",
-      "voice": "Their liver-disease drug cut liver fat in a placebo-controlled trial and the biopsies show the disease actually resolving. They just raised close to half a billion, and the plenary slot at the big liver meeting says the field is paying attention.",
+      "voice": "Their liver-disease drug cut liver fat in a placebo-controlled trial and the biopsies show the disease resolving in about a quarter of treated patients, against one in fifteen on placebo. They raised about $283 million in a June stock sale and now hold close to half a billion, and the plenary slot at the big liver meeting says the field is paying attention.",
       "claims": [
         {
           "id": "s1",
@@ -237,8 +237,8 @@
           "id": "s3",
           "text": "cash and investments of about $488 million after a June stock sale",
           "claim_ids": [
-            "c8",
-            "c5"
+            "c4",
+            "c8"
           ]
         }
       ],
@@ -265,7 +265,7 @@
         },
         {
           "q": "Can they fund a Phase 3?",
-          "a": "Cash and investments were $488.5 million at 30 September, up from $191.5 million, after a June stock sale that raised about $283 million [c4][c8]. Shares outstanding rose from 14.2 million to 15.4 million [c9]. Revenue is zero [c5]. At the recent operating outflow of about $6.4 million a quarter the runway looks very long, but that rate predates a 900-patient Phase 3, which management says it plans to start in late 2018 or early 2019 and believes it can fund [c6][c7][c11].",
+          "a": "Cash and investments were $488.5 million at 30 September, up from $191.5 million, after a June stock sale that raised about $283 million [c4][c8]. Shares outstanding rose from 14.2 million to 15.4 million [c9]. Revenue is zero [c5]. At the recent operating outflow of about $6.4 million a quarter the runway looks very long, but that rate predates the Phase 3, whose size and cost are not yet disclosed; management says it plans to start it in late 2018 or early 2019 and believes it can fund it [c6][c7][c11].",
           "claim_ids": [
             "c4",
             "c5",
@@ -278,7 +278,7 @@
         },
         {
           "q": "How much is already in the price?",
-          "a": "The last close is $186.51, up more than 300% over twelve months but 41% below the 12-month high. Market capitalisation is about $2.9 billion with about $482 million of net cash [c10]; no revenue, so no multiple. A second programme in an inherited cholesterol disorder has a completed Phase 2 and no Phase 3 plan yet [c19][c20]. The price is paying for a Phase 3 that has not started in a disease where Phase 2 signals have often failed to replicate.",
+          "a": "The last close is $186.51, up more than 300% over twelve months but 41% below the 12-month high. Market capitalisation is about $2.9 billion with about $482 million of net cash [c10] (from the market snapshot and valuation panel in this packet); no revenue, so no multiple. A second programme in an inherited cholesterol disorder has a completed Phase 2, with a possible Phase 3 under evaluation for 2019 but not yet confirmed [c19][c20]. The price is paying for a Phase 3 that has not started in a disease where Phase 2 signals have often failed to replicate.",
           "claim_ids": [
             "c10",
             "c19",
@@ -630,7 +630,7 @@
       "ask_friend": [
         {
           "q": "Why is next year's profit guided so low?",
-          "a": "Guidance for 2022 is net sales of $2.4 to 2.6 billion, gross profit of $155 to 215 million and diluted EPS of $0.00 to 0.60, after $4.38 earned in 2021 [c6][c4]. The company's own explanation inside the release: $10 to 15 million of underutilisation losses tied to the capacity transition, freight and input costs, and a smaller sales volume while new plants are built [c6]. What the release does not contain is any guidance beyond 2022.",
+          "a": "Guidance for 2022 is net sales of $2.4 to 2.6 billion, gross profit of $155 to 215 million and diluted EPS of $0.00 to 0.60, after $4.38 earned in 2021 [c6][c4]. The company's own explanation inside the release: $10 to 15 million of underutilisation losses inside the guided gross profit while new plants are built [c6]. What the release does not contain is any guidance beyond 2022.",
           "claim_ids": [
             "c4",
             "c6"
@@ -638,7 +638,7 @@
         },
         {
           "q": "Is demand the problem?",
-          "a": "Not on the order book. 2021 net bookings were 17.5 GW-DC, 11.8 GW-DC of them since the third-quarter call, which is more than two years of the guided 2022 shipments [c7]. The plan is to double capacity: a third US plant for the first half of 2023 and a first Indian plant for the second half, with 2022 capex of $850 million to 1.1 billion, roughly double 2021 [c10][c6]. The United States was 84% of 2021 sales [c11]; India has just imposed 40% module tariffs [c12].",
+          "a": "Not on the order book. 2021 net bookings were 17.5 GW-DC, 11.8 GW-DC of them since the third-quarter call, which is close to two years of the guided 2022 shipments of 8.9 to 9.4 GW-DC [c7][c6]. The plan is to double capacity: a third US plant for the first half of 2023 and a first Indian plant for the second half, with 2022 capex of $850 million to 1.1 billion, roughly double 2021 [c10][c6]. The United States was 84% of 2021 sales [c11]; India has announced 40% module tariffs taking effect in April 2022 [c12].",
           "claim_ids": [
             "c7",
             "c10",
@@ -648,7 +648,7 @@
         },
         {
           "q": "What is the stock already pricing?",
-          "a": "The last close is $75.62, down 38% from the 12-month high and down 27% over three months. Market capitalisation is about $8.0 billion, or $6.5 billion after $1.6 billion of net cash, which is roughly 2.2 times 2021 revenue [c2]. The company guides to $1.1 to 1.35 billion of net cash at the end of 2022 even with the capex step-up [c6]. Note the company was loss-making as recently as 2019 [c15], and a US domestic-manufacturing incentive exists only as proposed legislation [c16].",
+          "a": "The last close is $75.62, down 38% from the 12-month high and down 27% over three months. Market capitalisation is about $8.0 billion, or $6.5 billion after $1.6 billion of net cash, which is roughly 2.2 times 2021 revenue (from the market snapshot and valuation panel in this packet) [c2]. The company guides to $1.1 to 1.35 billion of net cash at the end of 2022 even with the capex step-up [c6]. Note the company was loss-making as recently as 2019 [c15], and a US domestic-manufacturing incentive exists only as proposed legislation [c16].",
           "claim_ids": [
             "c2",
             "c6",
@@ -808,15 +808,14 @@
           "id": "s1",
           "text": "primary functional endpoint not significant (p=0.37)",
           "claim_ids": [
-            "c1",
-            "c2"
+            "c3"
           ]
         },
         {
           "id": "s2",
           "text": "primary biological endpoint met (p<0.0001) and the 4-5 year subgroup significant",
           "claim_ids": [
-            "c3",
+            "c2",
             "c4"
           ]
         },
@@ -824,8 +823,8 @@
           "id": "s3",
           "text": "two approved drugs generate $121 million a quarter and cash is about $1.8 billion",
           "claim_ids": [
-            "c9",
-            "c11"
+            "c11",
+            "c12"
           ]
         }
       ],
@@ -866,7 +865,7 @@
         },
         {
           "q": "Is it expensive?",
-          "a": "The last close is $168.95, up 30% over twelve months and 5% below the 12-month high, before the market has traded on this readout. Market capitalisation is about $13.3 billion; net cash about $1.4 billion; enterprise value roughly 31 times 2019 revenue [c16]. That multiple only makes sense if the gene therapy reaches the market; the two approved drugs alone do not carry it.",
+          "a": "The last close is $168.95, up 30% over twelve months and 5% below the 12-month high, before the market has traded on this readout. Market capitalisation is about $13.3 billion; net cash about $1.4 billion; enterprise value roughly 31 times 2019 revenue (from the market snapshot and valuation panel in this packet) [c16]. That multiple only makes sense if the gene therapy reaches the market; the two approved drugs alone do not carry it.",
           "claim_ids": [
             "c16",
             "c12"
@@ -1025,21 +1024,21 @@
           "text": "Q3 sales down 11%, full-year guidance down about 10% in agriculture and 25% in construction",
           "claim_ids": [
             "c2",
-            "c7"
+            "c3"
           ]
         },
         {
           "id": "s2",
           "text": "separation programs with about $175 million of charges and $175 million of annual savings",
           "claim_ids": [
-            "c7"
+            "c4"
           ]
         },
         {
           "id": "s3",
           "text": "agriculture margin expanded to 16.6% and nine-month free cash flow swung to about $3.5 billion",
           "claim_ids": [
-            "c8",
+            "c5",
             "c12"
           ]
         }
@@ -1054,13 +1053,14 @@
       "ask_friend": [
         {
           "q": "Is this a bad quarter or a bad cycle?",
-          "a": "Sales fell 11% to $8.9 billion and net income to $811 million, and the full year is guided to about $2.25 billion with agriculture down about 10% and construction down about 25% [c2][c3]. Yet agriculture's operating margin rose to 16.6% from 10.3% on 5% lower sales, and equipment gross margin improved to about 25.8% [c5][c10]. Management's own industry forecasts have US and Canadian large-farm equipment down 5 to 10% and it attaches 'many uncertainties' about the pandemic to its outlook [c6].",
+          "a": "Sales fell 11% to $8.9 billion and net income to $811 million, and the full year is guided to about $2.25 billion with agriculture down about 10% and construction down about 25% [c2][c3]. Yet agriculture's operating margin rose to 16.6% from 10.3% on 5% lower sales, and equipment gross margin improved to about 25.8% [c5][c10]. Management's own industry forecasts have US and Canadian large-farm equipment down 5 to 10% and it cautions that unsettled market conditions and customer uncertainty are expected to moderate key markets in the near term [c6][c7].",
           "claim_ids": [
+            "c10",
             "c2",
             "c3",
             "c5",
             "c6",
-            "c10"
+            "c7"
           ]
         },
         {
@@ -1075,7 +1075,7 @@
         },
         {
           "q": "Is it expensive?",
-          "a": "The last close is $199.50, a 12-month high, up 28% over twelve months against 16% for the market. Market capitalisation is about $63 billion, roughly 1.6 times last year's revenue of $39 billion. The company carries about $34 billion of net debt, most of it funding the captive financing arm that lends to farmers and dealers, so enterprise value overstates the industrial business [c1]. The packet has no peer multiples.",
+          "a": "The last close is $199.50, a 12-month high, up 28% over twelve months against 16% for the market. Market capitalisation is about $63 billion, roughly 1.6 times last year's revenue of $39 billion (from the market snapshot and valuation panel in this packet). The company carries about $34 billion of net debt, most of it funding the captive financing arm that lends to farmers and dealers, so enterprise value overstates the industrial business [c9][c1]. The packet has no peer multiples.",
           "claim_ids": [
             "c1",
             "c9"
@@ -1233,7 +1233,7 @@
     },
     "growth-004": {
       "setup": "analysts_disagree",
-      "voice": "One analyst: the retailer just added $15 billion of sales in a year, took $9 billion of share, and lifted returns on capital to 23%; the pandemic changed its position for good. The other: it refuses to guide, two-thirds of the growth was digital at 145%, and digital fulfilment already costs gross margin.",
+      "voice": "One analyst: the retailer just added $15 billion of sales in a year, took $9 billion of share, and lifted returns on capital to 23%; the pandemic changed its position for good. The other: it refuses to guide, digital was two-thirds of the fourth quarter's growth and up 145% for the year, and digital fulfilment already costs gross margin.",
       "claims": [
         {
           "id": "s1",
@@ -1255,7 +1255,7 @@
           "id": "s3",
           "text": "digital fulfilment and supply-chain costs already weighing on gross margin",
           "claim_ids": [
-            "c13"
+            "c14"
           ]
         }
       ],
@@ -1293,7 +1293,7 @@
         },
         {
           "q": "Is it expensive?",
-          "a": "The last close is $173.49, up 59% over twelve months against 25% for the market, 13% below the 12-month high. Market capitalisation is about $87 billion; enterprise value about $91 billion, roughly 1.2 times revenue [c2]. For a retailer earning a 7% operating margin, the question is whether that margin and this year's sales are the new base or the peak.",
+          "a": "The last close is $173.49, up 59% over twelve months against 25% for the market, 13% below the 12-month high. Market capitalisation is about $87 billion; enterprise value about $91 billion, roughly 1.2 times revenue (from the market snapshot and valuation panel in this packet). For a retailer earning a 7% operating margin, the question is whether that margin and this year's sales are the new base or the peak.",
           "claim_ids": [
             "c2",
             "c4"
@@ -1444,28 +1444,30 @@
     },
     "growth-008": {
       "setup": "analysts_disagree",
-      "voice": "One analyst: record profit, 17% return on tangible equity, deposits and loans both growing, the top investment bank in the world. The other: trading revenue fell 11% in a bad quarter, expenses rose 7%, and credit provisions jumped 63% quarter on quarter.",
+      "voice": "One analyst: record profit, 17% return on tangible equity, deposits and loans both growing, first in the world in investment-banking fees. The other: markets revenue fell 11% in a bad quarter, expenses rose 7%, and credit provisions jumped 63% quarter on quarter.",
       "claims": [
         {
           "id": "s1",
           "text": "record full-year net income of $32.5 billion and 17% ROTCE",
           "claim_ids": [
             "c1",
-            "c12"
+            "c2"
           ]
         },
         {
           "id": "s2",
           "text": "Q4 Markets revenue down 11% and full-year expense up 7%",
           "claim_ids": [
-            "c2"
+            "c6",
+            "c23"
           ]
         },
         {
           "id": "s3",
           "text": "provision for credit losses up 63% quarter on quarter on reserve builds",
           "claim_ids": [
-            "c9"
+            "c8",
+            "c18"
           ]
         }
       ],
@@ -1479,7 +1481,7 @@
       "ask_friend": [
         {
           "q": "How bad was the quarter, really?",
-          "a": "Fourth-quarter net income was a record $7.1 billion, but that comparison is flattered by a one-time $2.4 billion tax charge in the prior year's quarter [c1][c7]. Against the third quarter, net income fell 16% as Markets revenue dropped 11% to $4.0 billion in the December sell-off and the provision for credit losses rose 63% on reserve builds in cards and commercial loans [c22][c6][c18][c8]. Asset-management assets fell 2% on lower markets and home lending revenue fell 8% on thinner margins [c9][c10].",
+          "a": "Fourth-quarter net income was a record $7.1 billion, but that comparison is flattered by a one-time $2.4 billion tax charge in the prior year's quarter [c1][c7]. Against the third quarter, net income fell 16% as the provision for credit losses rose 63% on reserve builds in cards and commercial loans [c22][c18][c8]; Markets revenue was $4.0 billion, down 11% from a year earlier, in the December sell-off [c6]. Asset-management assets fell 2% on lower markets and home lending revenue fell 8% on thinner margins [c9][c10].",
           "claim_ids": [
             "c1",
             "c6",
@@ -1646,12 +1648,13 @@
     },
     "growth-009": {
       "setup": "familiar_product",
-      "voice": "You noticed the chocolate bars got pricier again and the shelf is still full of them. The company just reported 16% sales growth, mostly from price, and says it can keep raising while costs stay high.",
+      "voice": "You noticed the chocolate bars got pricier again and the shelf is still full of them. The company just reported 16% sales growth, with price the biggest driver, and says it can keep raising while costs stay high.",
       "claims": [
         {
           "id": "s1",
           "text": "FY2022 net sales up 16.1% with 8 points from price",
           "claim_ids": [
+            "c2",
             "c8"
           ]
         },
@@ -1701,7 +1704,7 @@
         },
         {
           "q": "Is it expensive?",
-          "a": "The last close is $234.42, up 18% over twelve months while the market fell 9%, and within 3% of the 12-month high. Market capitalisation is about $48 billion; with $4.3 billion of net debt the enterprise value is about $53 billion, roughly 5.9 times 2021 revenue [c2]. Whether that is expensive for a staple growing 6 to 8% is the question; the packet contains no peer multiples.",
+          "a": "The last close is $234.42, up 18% over twelve months while the market fell 9%, and within 3% of the 12-month high. Market capitalisation is about $48 billion; with $4.3 billion of net debt the enterprise value is about $53 billion, roughly 5.9 times 2021 revenue (from the market snapshot and valuation panel in this packet). Whether that is expensive for a staple growing 6 to 8% is the question; the packet contains no peer multiples.",
           "claim_ids": [
             "c2",
             "c3"
@@ -1889,7 +1892,7 @@
       "ask_friend": [
         {
           "q": "How fast is the old business shrinking?",
-          "a": "Hepatitis C product sales fell to $3.7 billion from $9.1 billion in one year, a decline management attributes to fewer patients starting treatment and lower prices [g4]. Total revenue fell to $22.1 billion from $26.1 billion and GAAP operating margin to 37.1% from 54.1% [g2][g16]. Guidance for 2019 product sales is $21.3 to 21.8 billion, roughly flat, and it explicitly assumes US generic competition for two older products [g7][g14].",
+          "a": "Hepatitis C product sales fell to $3.7 billion from $9.1 billion in one year, a decline management attributes to fewer patients starting treatment and lower prices [g4]. Total revenue fell to $22.1 billion from $26.1 billion and GAAP operating margin to 37.1% from 54.1% [g2][g16]. Guidance for 2019 product sales is $21.3 to 21.8 billion, roughly flat, and it explicitly assumes US generic competition for two of its non-antiviral products [g7]; separately, the company flags future generic erosion for two older antivirals [g14].",
           "claim_ids": [
             "g2",
             "g4",
@@ -1900,7 +1903,7 @@
         },
         {
           "q": "What is growing?",
-          "a": "HIV product sales rose to $14.6 billion from $13.0 billion on the 2018 launch of a new single-tablet regimen, now about 66% of revenue [g3][g20]. A 96-week Phase 3 study reported that regimen non-inferior to a competitor [g13]. The cell-therapy business bought in 2017 generated $264 million [g5], with two-year follow-up data and an early study in a second leukaemia population [g10][g11]. A new chief executive starts on 1 March [g8]. Three early immuno-oncology collaborations were signed in the quarter [g9].",
+          "a": "HIV product sales rose to $14.6 billion from $13.0 billion on the 2018 launch of a new single-tablet regimen, now about 66% of revenue [g3][g20]. A 96-week Phase 3 study reported that regimen non-inferior to a competitor [g13]. The cell-therapy business bought in 2017 generated $264 million [g5], with two-year follow-up data in its approved lymphoma indication and an early study in a leukaemia population [g11][g10]. A new chief executive starts on 1 March [g8]. Three early research collaborations were signed in the quarter, in immuno-oncology and fibrotic disease [g9].",
           "claim_ids": [
             "g3",
             "g5",
@@ -1914,7 +1917,7 @@
         },
         {
           "q": "Is it cheap enough to be a trap?",
-          "a": "The last close is $70.05, down 14% over twelve months and 15% below the 12-month high. Market capitalisation is about $91 billion; with $31.5 billion of cash and investments against debt, net cash is about $4 billion and enterprise value about $86 billion, roughly 3.3 times 2017 revenue [g6]. Operating cash flow was $8.4 billion after $3.0 billion of dividends and $2.9 billion of buybacks. The year also absorbed an $820 million write-off of an early oncology programme [g19].",
+          "a": "The last close is $70.05, down 14% over twelve months and 15% below the 12-month high. Market capitalisation is about $91 billion; with $31.5 billion of cash and investments against debt, net cash is about $4 billion and enterprise value about $86 billion, roughly 3.3 times 2017 revenue (from the market snapshot and valuation panel in this packet). During 2018 the company generated $8.4 billion of operating cash flow, repaid $6.3 billion of debt, paid $3.0 billion of dividends and spent $2.9 billion on buybacks [g6]. The year also absorbed an $820 million write-off of an early oncology programme [g19].",
           "claim_ids": [
             "g6",
             "g19"
