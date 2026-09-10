@@ -108,7 +108,8 @@ Nektar alone currently supplies `financial_snapshot.presentation` in player.json
 
 ## Verification scope and open work
 
-- `python3 scripts/merge_dated_debrief.py --check-only`: structure/status/word-count checks; does not establish source entailment or safe transactional merging.
+- `python3 scripts/merge_dated_debrief.py --check-only`: structure/status/word-count checks plus drift warnings; does not establish source entailment. Since 2026-09-10 it writes scenes.json before deleting writer inputs.
+- `python3 scripts/merge_presentation.py --check-only`: presentation label/index/word-limit checks for `financial_snapshot.presentation`; `verify_cases.py` repeats the label match on every run so a mislabelled row cannot vanish silently. All ten cases carry a presentation block (rolled out 2026-09-10 by Sonnet writers under `cases/SNAPSHOT_PRESENTATION_BRIEF.md`).
 - `node scripts/test_story_dates.js`: targeted Nektar horizons, early exits, publication boundaries and field separation.
 - `node scripts/test_dated_debrief.js`: all ten cases and 28 available horizon exits. Requires an applicable changed assumption when eligible events exist. The sheet check searches for the field name; it is not a comprehensive future-text audit.
 - `scripts/test_story_ui.cjs`: isolated browser storage; desktop and 390px Nektar journeys, reload/completion, blocked saves, optional later context, skip and journal behavior. Configure `PLAYWRIGHT_MODULE`, `CHROMIUM_PATH` and `STOCKGAME_URL` as described in TODO.
