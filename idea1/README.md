@@ -60,7 +60,7 @@ Evidence that would move it: the three-story playtest. If the player talks about
 
 - Short policy and default handling: unresolved; block short-enabled play until decided and tested.
 - Bitcoin series: none in repo; pick a documented source and convention before any fixture uses it.
-- Cached price levels are un-adjusted for later splits (Nektar's 2025 reverse split): audit every window that crosses a split.
+- The raw Yahoo caches are back-adjusted for later splits (Nektar's 2025 one-for-fifteen shows 2018 opens near 1,292 instead of 86); the builder reverses this for display, so `market.json` levels are real. The campaign must use one convention everywhere and never show a per-share level from the raw cache. Audit every window that crosses a split.
 - Session length: consider a two-story or five-story short campaign as a mode if the ten-story run proves long.
 - Concurrent work: engine files are Codex's lane, screen and content Claude's; the CI gate runs on every push.
 

@@ -114,7 +114,7 @@ All ten cases now supply `financial_snapshot.presentation` in player.json; Nekta
 
 - `scripts/run_checks.sh` runs every suite below in order, stops at the first failure and prints that check's full output. A missing node or Playwright is a failure unless `--no-browser` was passed on purpose (the summary then says the browser suites were skipped); `--build` rebuilds first. Browser suites serve `site/` on a free port unless `STOCKGAME_URL` is set; `PLAYWRIGHT_MODULE` may point at another checkout's Playwright.
 - `scripts/build_bundles.py` ends by running `scripts/test_payloads.js`; a leak or a missing node fails the build with the checker's full output. `--skip-payload-checks` skips on purpose and says so.
-- `.github/workflows/pages.yml` runs `scripts/run_checks.sh` (with Playwright installed) in a `checks` job; the deploy job only runs when it passes, so a push that fails a check does not publish.
+- `.github/workflows/pages.yml` runs `scripts/run_checks.sh` (with Playwright installed) in a `checks` job on every branch push; the deploy job runs only on `main` and only when the checks pass, so idea branches get the same gate without publishing.
 
 - `python3 scripts/merge_dated_debrief.py --check-only`: whole-batch structure, dates, references, status and word-count validation; does not establish source entailment.
 - `python3 scripts/test_merge_dated_debrief.py`: 12 temporary-fixture tests covering invalid batches, unknown IDs, malformed inputs, write/replacement failures, cleanup recovery and reruns.
