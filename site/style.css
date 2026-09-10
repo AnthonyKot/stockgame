@@ -132,3 +132,5 @@ body.embedded .grid { grid-template-columns: 1fr; }
 .since li { margin: .25rem 0; }
 .scene-frame { width: 100%; border: 0; min-height: 60vh; display: block; }
 .campaign-ticket .budget { font-variant-numeric: tabular-nums; }
+.wide-only { display: inline; } .narrow-only { display: none; }
+@media (max-width: 860px) { .wide-only { display: none; } .narrow-only { display: inline; } }

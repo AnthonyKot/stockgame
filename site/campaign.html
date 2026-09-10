@@ -30,15 +30,19 @@
   const stopLabel = s => s.kind === 'scene' ? `story ${s.index + 1} on ${dateFmt(s.date)}` : s.kind === 'closure' ? `the next closing trade on ${dateFmt(s.date)}` : 'the end of the campaign';
 
   /* ---- data: price slices per year, loaded up to a date, never beyond the campaign end ---- */
-  const D = { prices: {}, dividends: {}, btc: [] }; const loadedYears = {};
-  async function ensureData(uptoDate) {
-    const y = Number(uptoDate.slice(0, 4));
-    const want = async (inst, years, apply) => { for (const yr of years) { if (yr > y) continue; const k = inst + ':' + yr; if (loadedYears[k]) continue; try { apply(await load(`${base}prices/${inst}/${yr}.json`)); } catch (e) {} loadedYears[k] = true; } };
-    for (const [oid, ins] of Object.entries(M.instruments)) { D.prices[oid] = D.prices[oid] || []; D.dividends[oid] = D.dividends[oid] || []; await want(oid, ins.years, f => { D.prices[oid].push(...f.bars); D.dividends[oid].push(...f.dividends); D.prices[oid].sort((a, b) => a.d < b.d ? -1 : 1); D.dividends[oid].sort((a, b) => a.d < b.d ? -1 : 1); }); }
-    await want('BTC', M.btc.years, f => { D.btc.push(...f.bars); D.btc.sort((a, b) => a.d < b.d ? -1 : 1); });
+  /* slices are cut at every possible stop; a stop at (date, phase) needs stock slices up to the last session before
+     the date (pre-open) or the date itself (closed), and Bitcoin slices up to the day before the date (pre-open) or the date */
+  const D = { prices: {}, dividends: {}, btc: [] }; const loadedSlices = {};
+  const dayBefore = d => new Date(Date.parse(d + 'T00:00:00Z') - 864e5).toISOString().slice(0, 10);
+  const sessionBefore = d => { let out = null; for (const s of M.calendar) { if (s < d) out = s; else break; } return out; };
+  async function ensureData(stop) {
+    const stockUpto = stop.phase === 'pre-open' ? sessionBefore(stop.date) : stop.date; const btcUpto = stop.phase === 'pre-open' ? dayBefore(stop.date) : stop.date;
+    const want = async (inst, slices, upto, apply) => { for (const b of slices) { if (b > upto) break; const k = inst + ':' + b; if (loadedSlices[k]) continue; loadedSlices[k] = true; try { apply(await load(`${base}prices/${inst}/upto-${b}.json`)); } catch (e) {} } };
+    for (const [oid, ins] of Object.entries(M.instruments)) { D.prices[oid] = D.prices[oid] || []; D.dividends[oid] = D.dividends[oid] || []; await want(oid, ins.slices, stockUpto, f => { D.prices[oid].push(...f.bars); D.dividends[oid].push(...f.dividends); D.prices[oid].sort((a, b) => a.d < b.d ? -1 : 1); D.dividends[oid].sort((a, b) => a.d < b.d ? -1 : 1); }); }
+    await want('BTC', M.btc.slices, btcUpto, f => { D.btc.push(...f.bars); D.btc.sort((a, b) => a.d < b.d ? -1 : 1); });
   }
+  const debriefs = {}; async function debrief(oid, exit) { const k = oid + ':' + exit; if (!debriefs[k]) { try { debriefs[k] = await load(`${base}debrief/${oid}/${exit}.json`); } catch (e) { debriefs[k] = null; } } return debriefs[k]; }
   const sheets = {}; async function sheet(oid) { if (!sheets[oid]) sheets[oid] = await load(`data/${oid}/sheet.json`); return sheets[oid]; }
-  const reveals = {}; async function reveal(oid) { if (!reveals[oid]) { try { reveals[oid] = await load(`data/${oid}/reveal.json`); } catch (e) { reveals[oid] = null; } } return reveals[oid]; }
   const sceneOf = idx => M.scenes[idx]; const aliasOf = async idx => { const sh = await sheet(sceneOf(idx).opaque_id); return sh.masked.alias; };
 
   /* ---- state ---- */
@@ -47,7 +51,7 @@
   if (stored && stored.state.campaign_id === CID && stored.state.content_version === M.content_version) state = stored.state;
   else if (stored && stored.state.campaign_id === CID) { stage.append(el('section', { class: 'card' }, el('h2', {}, 'This campaign has been rebuilt since you started'), el('p', {}, 'Content version ' + stored.state.content_version + ' is no longer available; the current version is ' + M.content_version + '. Your saved run cannot continue on different data.'), el('button', { class: 'primary', type: 'button', onclick: () => { CAMPAIGN_STORE.clear(); location.reload(); } }, 'Start a new campaign'))); return; }
   else state = CAMPAIGN.createState(M);
-  await ensureData(state.clock.date);
+  await ensureData(state.clock);
 
   function commit(next, what) {   // persist, verify, then adopt; a failed save leaves the previous state visible
     const storedRev = CAMPAIGN_STORE.storedRevision();
@@ -73,7 +77,7 @@
     if (pending.length) strip.append(el('p', { class: 'note' }, pending.map(o => `Order for story ${o.scene_index + 1}: ${usd(o.budget)} reserved, fills at the ${dateFmt(o.entry_session)} open.`).join(' ')));
     if (!open.length && !pending.length) strip.append(el('p', { class: 'note' }, 'No open positions.'));
   }
-  async function labelOf(p) { const rv = p.status === 'closed' ? await reveal(sceneOf(p.scene_index).opaque_id) : null; return rv ? `${rv.transparent.issuer} (${rv.transparent.ticker})` : `story ${p.scene_index + 1}: ${await aliasOf(p.scene_index)}`; }
+  async function labelOf(p) { const db = p.status === 'closed' && p.exit ? await debrief(sceneOf(p.scene_index).opaque_id, p.exit.date) : null; return db ? `${db.reveal.issuer} (${db.reveal.ticker})` : `story ${p.scene_index + 1}: ${await aliasOf(p.scene_index)}`; }
 
   /* ---- since your last stop ---- */
   async function renderSince() {
@@ -102,7 +106,7 @@
     const grid = el('div', { class: 'grid' });
     const frame = el('iframe', { class: 'scene-frame', src: `play.html?case=${sc.opaque_id}&mode=campaign`, title: 'The story and the packet, as public on ' + dateFmt(sc.cutoff_date) });
     window.addEventListener('message', ev => { if (ev.data && ev.data.type === 'stockgame-height' && ev.source === frame.contentWindow) frame.style.height = (ev.data.height + 20) + 'px'; });
-    const left = el('div', {}, el('section', { class: 'card' }, el('h2', {}, `Story ${sc.index + 1} of ${M.scenes.length}: ${sh.neutral_title || sh.masked.alias}`), el('p', { class: 'note' }, `Everything below was public before ${dateFmt(sc.cutoff_date)} 09:00 New York. Your account is above; decide on the right.`)), frame);
+    const left = el('div', {}, el('section', { class: 'card' }, el('h2', {}, `Story ${sc.index + 1} of ${M.scenes.length}: ${sh.neutral_title || sh.masked.alias}`), el('p', { class: 'note' }, `Everything below was public before ${dateFmt(sc.cutoff_date)} 09:00 New York. Your account is above; `, el('span', { class: 'wide-only' }, 'decide on the right.'), el('span', { class: 'narrow-only' }, 'the decision panel is below the story, or press Decide.'))), frame);
     /* the campaign ticket */
     const f = el('form', { class: 'campaign-ticket' });
     const radios = (name, opts, checked) => el('fieldset', {}, el('legend', {}, name === 'action' ? 'Action' : name === 'years' ? 'Hold for' : 'Size, share of your equity'), ...opts.map(([v, lab, dis]) => el('label', { style: dis ? 'opacity:.5' : '' }, el('input', { type: 'radio', name, value: v, checked: v === checked ? '' : null, disabled: dis ? '' : null }), ' ' + lab)));
@@ -125,7 +129,8 @@
       if (r.error) { err.textContent = r.error; return; }
       const problem = commit(r.state, 'decision'); if (problem) { err.textContent = problem; return; }
       renderAll(); });
-    grid.append(left, el('aside', { class: 'ticket card' }, f)); stage.append(grid);
+    const aside = el('aside', { class: 'ticket card' }, f); grid.append(left, aside); stage.append(grid);
+    stage.append(el('button', { class: 'primary jump', type: 'button', onclick: () => { aside.scrollIntoView({ behavior: 'smooth', block: 'start' }); const first = aside.querySelector('input[name=action]'); if (first) setTimeout(() => first.focus(), 400); } }, 'Decide'));
   }
   async function renderAdvance() {
     const next = CAMPAIGN.nextStop(state, M); const card = el('section', { class: 'card' });
@@ -133,7 +138,7 @@
     for (const n of closures) card.append(await closureDebrief(n));
     const btn = el('button', { class: 'primary', type: 'button', style: 'width:auto' }, next.kind === 'finished' ? 'See the final report' : 'Advance to ' + stopLabel(next));
     const err = el('p', { class: 'err', role: 'alert', style: 'color:var(--bad)' });
-    btn.onclick = async () => { btn.disabled = true; await ensureData(next.date); const from = state.clock.date; const eqFrom = CAMPAIGN.equity(state, M, D);
+    btn.onclick = async () => { btn.disabled = true; await ensureData(next); const from = state.clock.date; const eqFrom = CAMPAIGN.equity(state, M, D);
       const r = CAMPAIGN.advance(state, M, D, next); if (r.error) { err.textContent = r.error; btn.disabled = false; return; }
       r.state.arrival = { from, to: next.date, notices: r.notices, equity_from: eqFrom.total, btc_from: eqFrom.btc_mark ? eqFrom.btc_mark.c : null };
       const problem = commit(r.state, 'progress'); if (problem) { err.textContent = problem; btn.disabled = false; return; }
@@ -143,15 +148,15 @@
   }
   async function closureDebrief(n) {
     const sc = sceneOf(n.scene_index); const oid = sc.opaque_id; const order = state.orders.find(o => o.id === n.order); const pos = state.positions.find(p => p.id === n.position);
-    const rv = await reveal(oid); let outcome = null; try { outcome = await load(`data/${oid}/outcome.json`); } catch (e) {}
-    const box = el('div', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h3', {}, `Closed on ${dateFmt(n.date)}: story ${n.scene_index + 1} was ${rv ? rv.transparent.issuer + ' (' + rv.transparent.ticker + ')' : 'this company'}`),
+    const db = await debrief(oid, pos.exit.date);
+    const box = el('div', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h3', {}, `Closed on ${dateFmt(n.date)}: story ${n.scene_index + 1} was ${db ? db.reveal.issuer + ' (' + db.reveal.ticker + ')' : 'this company'}`),
       el('p', {}, `Bought ${pos.shares.toFixed(2)} shares at $${pos.entry.open} on ${dateFmt(pos.entry.date)} for ${usd(pos.cost)}; sold at $${pos.exit.open} on ${dateFmt(pos.exit.date)} for ${usd(pos.exit.proceeds)}${pos.dividends_received ? ', plus ' + usd2(pos.dividends_received) + ' of dividends' : ''}. `, el('strong', { class: n.result >= 0 ? 'up' : 'down' }, `${n.result >= 0 ? '+' : ''}${usd(n.result)} (${signed(n.result / pos.cost)})`), ' after slippage.'));
-    if (outcome && outcome.scene_check) {
-      const dated = STORY.atExit(outcome, pos.exit.date);
-      if (dated) { box.append(el('p', {}, el('strong', {}, 'The story by your exit. '), dated.narrative.text));
-        const checks = (order.assumptions || []).map(aid => { const a = (outcome.scene_check.assumptions || []).find(x => x.id === aid); const c = dated.checks[aid]; return a && c ? el('li', {}, el('strong', {}, a.text), el('div', { class: 'note' }, c.text)) : null; }).filter(Boolean);
-        if (checks.length) box.append(el('p', {}, el('strong', {}, 'Checking your thesis')), el('ul', { class: 'plain' }, ...checks)); }
-      box.append(el('p', { class: 'note' }, 'Written from what was public by the exit date. Later developments stay hidden until the campaign clock reaches them.'));
+    if (db) {
+      if (db.narrative) box.append(el('p', {}, el('strong', {}, 'The story by your exit. '), db.narrative));
+      const checks = (order.assumptions || []).map(aid => { const a = db.assumptions.find(x => x.id === aid); const c = db.checks[aid]; return a && c ? el('li', {}, el('strong', {}, a.text), el('div', { class: 'note' }, c)) : null; }).filter(Boolean);
+      if (checks.length) box.append(el('p', {}, el('strong', {}, 'Checking your thesis')), el('ul', { class: 'plain' }, ...checks));
+      if (db.events.length) box.append(el('details', {}, el('summary', { class: 'note' }, `What was public by then (${db.events.length} dated events)`), el('ul', { class: 'plain' }, ...db.events.map(e => el('li', { class: 'note' }, dateFmt(e.date) + ' · ', e.source && e.source.url ? el('a', { href: e.source.url, target: '_blank', rel: 'noopener' }, e.headline) : e.headline)))));
+      box.append(el('p', { class: 'note' }, db.note));
     }
     return box;
   }
@@ -162,7 +167,7 @@
     card.append(el('div', { class: 'strip' }, ...tiles.map(([l, v, p]) => el('div', {}, el('div', { class: 'l' }, l), el('div', { class: 'v' }, v), el('div', { class: 'p' }, p)))));
     const t = el('table'); t.append(el('thead', {}, el('tr', {}, ...['Story', 'Call', 'Budget', 'Entry', 'Exit', 'Dividends', 'Result'].map(h => el('th', {}, h)))));
     const tb = el('tbody');
-    for (const tr of R.trades) { const rv = await reveal(sceneOf(tr.scene_index).opaque_id); tb.append(el('tr', {}, el('td', {}, `${tr.scene_index + 1} · ${rv ? rv.transparent.ticker : await aliasOf(tr.scene_index)}`), el('td', {}, tr.action === 'skip' ? 'skip' : `buy ${tr.size_pct}% for ${tr.years}y`), el('td', {}, tr.budget ? usd(tr.budget) : '—'), el('td', {}, tr.entry ? `${dateFmt(tr.entry.date)} $${tr.entry.open}` : '—'), el('td', {}, tr.exit ? `${dateFmt(tr.exit.date)} $${tr.exit.open}` : '—'), el('td', {}, tr.dividends ? usd2(tr.dividends) : '—'), el('td', { class: tr.result === null ? '' : tr.result >= 0 ? 'up' : 'down' }, tr.result === null ? '—' : `${tr.result >= 0 ? '+' : ''}${usd(tr.result)} (${tr.result_pct}%)`))); }
+    for (const tr of R.trades) { const db = tr.exit ? await debrief(sceneOf(tr.scene_index).opaque_id, tr.exit.date) : null; tb.append(el('tr', {}, el('td', {}, `${tr.scene_index + 1} · ${db ? db.reveal.ticker : await aliasOf(tr.scene_index)}`), el('td', {}, tr.action === 'skip' ? 'skip' : `buy ${tr.size_pct}% for ${tr.years}y`), el('td', {}, tr.budget ? usd(tr.budget) : '—'), el('td', {}, tr.entry ? `${dateFmt(tr.entry.date)} $${tr.entry.open}` : '—'), el('td', {}, tr.exit ? `${dateFmt(tr.exit.date)} $${tr.exit.open}` : '—'), el('td', {}, tr.dividends ? usd2(tr.dividends) : '—'), el('td', { class: tr.result === null ? '' : tr.result >= 0 ? 'up' : 'down' }, tr.result === null ? '—' : `${tr.result >= 0 ? '+' : ''}${usd(tr.result)} (${tr.result_pct}%)`))); }
     t.append(tb); card.append(el('div', { class: 'scroll' }, t));
     /* equity path against the baseline, one point per session */
     const pts = [], basePts = []; const cash0 = M.rules.starting_cash_usd;
@@ -170,7 +175,8 @@
     function cashAt(d) { let c = M.rules.starting_cash_usd; for (const e of state.ledger) if (e.date <= d) c += e.cash_delta; return c; }
     const ch = el('div'); SG.lineChart(ch, [{ name: 'Your account', cls: 's1', points: pts }, { name: 'Do nothing', cls: 's2', points: basePts }], { controls: true, rebase: true, label: 'Equity per session, indexed to 100 at the start', rawFmt: v => usd(v) });
     card.append(el('h3', { style: 'font-size:.9rem;margin-top:1rem' }, 'The path'), ch);
-    card.append(el('p', { class: 'note' }, 'A profitable ending is not proof of a good decision, and most of the movement here is Bitcoin, which you never touched. The trade results are the part your calls produced.'));
+    const btcBigger = Math.abs(R.btc_gain) > Math.abs(R.realized);
+    card.append(el('p', { class: 'note' }, (btcBigger ? `Most of the movement here was Bitcoin, which you never touched (${(R.btc_gain >= 0 ? '+' : '')}${usd(R.btc_gain)} against ${(R.realized >= 0 ? '+' : '')}${usd(R.realized)} from trades). ` : `Your trades moved the account more than Bitcoin did (${(R.realized >= 0 ? '+' : '')}${usd(R.realized)} from trades against ${(R.btc_gain >= 0 ? '+' : '')}${usd(R.btc_gain)} from Bitcoin). `) + 'A profitable ending is not proof of a good decision, and a loss is not proof of a bad one.'));
     card.append(el('p', {}, el('button', { class: 'ghost', type: 'button', onclick: () => { if (confirm('Delete this campaign from this browser and start again?')) { CAMPAIGN_STORE.clear(); location.reload(); } } }, 'Start a new campaign')));
     stage.append(card);
   }

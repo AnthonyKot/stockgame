@@ -1,8 +1,8 @@
 {
  "campaign_id": "proto-3",
  "title": "Three stories, one account",
- "content_version": "eb7e7d63a1",
- "built_at": "2026-09-10T18:17:24.202765+00:00",
+ "content_version": "530b0138eb",
+ "built_at": "2026-09-10T18:37:37.616217+00:00",
  "start_at": "2018-02-15T09:00:00-05:00",
  "start_date": "2018-02-15",
  "end_session": "2024-01-16",
@@ -1820,15 +1820,19 @@
  "btc": {
   "instrument": "BTC",
   "source": "research/prices/BTC-USD.json, Yahoo BTC-USD, UTC daily bars",
-  "years": [
-   2017,
-   2018,
-   2019,
-   2020,
-   2021,
-   2022,
-   2023,
-   2024
+  "slices": [
+   "2018-02-14",
+   "2018-11-12",
+   "2019-01-15",
+   "2019-02-15",
+   "2019-11-13",
+   "2020-01-16",
+   "2021-02-16",
+   "2021-11-15",
+   "2022-01-18",
+   "2023-02-15",
+   "2023-11-13",
+   "2024-01-16"
   ],
   "first_bar": "2015-01-01",
   "last_bar": "2026-09-10"
@@ -1845,15 +1849,19 @@
    ],
    "first_bar": "2015-01-02",
    "last_bar": "2026-09-08",
-   "years": [
-    2017,
-    2018,
-    2019,
-    2020,
-    2021,
-    2022,
-    2023,
-    2024
+   "slices": [
+    "2018-02-14",
+    "2018-11-12",
+    "2019-01-15",
+    "2019-02-15",
+    "2019-11-13",
+    "2020-01-16",
+    "2021-02-16",
+    "2021-11-15",
+    "2022-01-18",
+    "2023-02-15",
+    "2023-11-13",
+    "2024-01-16"
    ]
   },
   "b126872cae": {
@@ -1862,15 +1870,19 @@
    "splits_in_coverage": [],
    "first_bar": "2015-01-02",
    "last_bar": "2026-09-08",
-   "years": [
-    2017,
-    2018,
-    2019,
-    2020,
-    2021,
-    2022,
-    2023,
-    2024
+   "slices": [
+    "2018-02-14",
+    "2018-11-12",
+    "2019-01-15",
+    "2019-02-15",
+    "2019-11-13",
+    "2020-01-16",
+    "2021-02-16",
+    "2021-11-15",
+    "2022-01-18",
+    "2023-02-15",
+    "2023-11-13",
+    "2024-01-16"
    ]
   },
   "5e3e9193b7": {
@@ -1879,15 +1891,19 @@
    "splits_in_coverage": [],
    "first_bar": "2015-01-02",
    "last_bar": "2026-09-08",
-   "years": [
-    2017,
-    2018,
-    2019,
-    2020,
-    2021,
-    2022,
-    2023,
-    2024
+   "slices": [
+    "2018-02-14",
+    "2018-11-12",
+    "2019-01-15",
+    "2019-02-15",
+    "2019-11-13",
+    "2020-01-16",
+    "2021-02-16",
+    "2021-11-15",
+    "2022-01-18",
+    "2023-02-15",
+    "2023-11-13",
+    "2024-01-16"
    ]
   }
  },
@@ -1904,7 +1920,12 @@
     "5": "2023-02-15"
    },
    "default_horizon": "5",
-   "data": "../146743bdc9/"
+   "data": "../146743bdc9/",
+   "debrief": [
+    "2019-02-15",
+    "2021-02-16",
+    "2023-02-15"
+   ]
   },
   {
    "index": 1,
@@ -1918,7 +1939,12 @@
     "5": "2023-11-13"
    },
    "default_horizon": "5",
-   "data": "../b126872cae/"
+   "data": "../b126872cae/",
+   "debrief": [
+    "2019-11-13",
+    "2021-11-15",
+    "2023-11-13"
+   ]
   },
   {
    "index": 2,
@@ -1932,11 +1958,17 @@
     "5": "2024-01-16"
    },
    "default_horizon": "5",
-   "data": "../5e3e9193b7/"
+   "data": "../5e3e9193b7/",
+   "debrief": [
+    "2020-01-16",
+    "2022-01-18",
+    "2024-01-16"
+   ]
   }
  ],
+ "slicing": "prices/<instrument>/upto-<date>.json holds bars in (previous boundary, date]; boundaries are the last session before each cutoff and every offered exit (Bitcoin: the day before each cutoff and every exit). debrief/<scene>/<exit>.json is the exit-scoped debrief. The page loads only slices at or before its clock.",
  "limits": [
-  "Static files: price slices are per calendar year, so the current year is readable ahead of the clock. Outcome and reveal files for a scene are fetched only when its position closes; they are not access-controlled.",
+  "Static files are not access-controlled: a curious player can open a later slice by URL. Normal play never requests one.",
   "Vendor daily bars; dividends from vendor events on ex-dates; not a verified corporate-action ledger."
  ]
 }

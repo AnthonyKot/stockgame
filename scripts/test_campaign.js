@@ -45,14 +45,20 @@ const again = C.advance(s, man, data, stop).state; assert.deepEqual(again.ledger
 r = C.advance(s, man, data, C.nextStop(s, man)); s = r.state; assert.equal(s.status, 'finished');
 const rep = C.report(s, man, data); assert(rep.identity_ok, 'ledger identity'); assert.equal(rep.trades[0].result, 110 * 130 + 110 - 11000);
 assert.equal(C.replay(man, data, s.log).cash, s.cash); assert.deepEqual(C.replay(man, data, s.log).ledger, s.ledger);
-console.log('fixture: reservations, fills, ex-date rule, BTC marks, eligibility, ordering, idempotency, replay and identity passed');
+{ let a = C.createState(man); a = C.decide(a, man, data, { action: 'skip' }).state; a = C.advance(a, man, data, C.nextStop(a, man)).state; a = C.decide(a, man, data, { action: 'skip' }).state;
+  assert.equal(a.status, 'finished'); assert.deepEqual(a.clock, { date: '2020-01-07', phase: 'pre-open' }); assert.equal(C.nextStop(a, man).kind, 'finished'); assert.equal(C.report(a, man, data).equity.total, 100000 + 8000); }   // all-skip ends at the last decision
+console.log('fixture: reservations, fills, ex-date rule, BTC marks, eligibility, ordering, idempotency, replay, identity and all-skip ending passed');
 
 /* ---------- 2. the built campaign, played end to end ---------- */
 const dir = path.join('site', 'data', 'campaigns', 'proto-3');
 const M = JSON.parse(fs.readFileSync(path.join(dir, 'manifest.json')));
 const D = { prices: {}, dividends: {}, btc: [] };
-for (const [oid, ins] of Object.entries(M.instruments)) { D.prices[oid] = []; D.dividends[oid] = []; for (const y of ins.years) { const f = JSON.parse(fs.readFileSync(path.join(dir, 'prices', oid, y + '.json'))); D.prices[oid].push(...f.bars); D.dividends[oid].push(...f.dividends); } }
-for (const y of M.btc.years) D.btc.push(...JSON.parse(fs.readFileSync(path.join(dir, 'prices', 'BTC', y + '.json'))).bars);
+for (const [oid, ins] of Object.entries(M.instruments)) { D.prices[oid] = []; D.dividends[oid] = []; let prev = ''; for (const b of ins.slices) { const f = JSON.parse(fs.readFileSync(path.join(dir, 'prices', oid, 'upto-' + b + '.json'))); assert(f.bars.every(x => x.d <= b && x.d > prev), `${oid} slice ${b} holds a bar outside (${prev}, ${b}]`); D.prices[oid].push(...f.bars); D.dividends[oid].push(...f.dividends); prev = b; } }
+{ let prev = ''; for (const b of M.btc.slices) { const f = JSON.parse(fs.readFileSync(path.join(dir, 'prices', 'BTC', 'upto-' + b + '.json'))); assert(f.bars.every(x => x.d <= b && x.d > prev), `BTC slice ${b} out of range`); D.btc.push(...f.bars); prev = b; } }
+// boundaries are exactly the possible stops: the session before each cutoff and every offered exit
+const sessionBefore = d => M.calendar.filter(s => s < d).pop();
+assert.deepEqual(M.instruments[M.scenes[0].opaque_id].slices, [...new Set([...M.scenes.map(s => sessionBefore(s.cutoff_date)), ...M.scenes.flatMap(s => Object.values(s.horizons))])].sort());
+for (const s of M.scenes) for (const exit of Object.values(s.horizons)) { const db = JSON.parse(fs.readFileSync(path.join(dir, 'debrief', s.opaque_id, exit + '.json'))); assert.equal(db.exit, exit); assert(db.events.every(e => e.date < exit && (!e.source || !e.source.published || e.source.published < exit)), `${s.opaque_id} debrief ${exit} carries a later event`); assert(db.reveal.ticker); }
 assert.equal(M.scenes.length, 3); assert.equal(M.scenes[2].horizons['3'], '2022-01-18');   // Sunday anniversary then MLK holiday
 assert.equal(M.scenes[1].horizons['3'], '2021-11-15');                                        // Saturday anniversary
 const plays = [{ action: 'buy', size_pct: 10, years: 5 }, { action: 'skip' }, { action: 'buy', size_pct: 20, years: 3 }];
@@ -77,4 +83,5 @@ for (const t of R.trades.filter(t => t.exit)) {
 const p0 = st.positions[0]; assert(p0.entry.open > 80 && p0.entry.open < 90, 'Nektar entry level is un-adjusted for the 2025 reverse split: ' + p0.entry.open);
 assert(R.btc_start.c > 8000 && R.btc_start.c < 9500 && R.btc_start.d === '2018-02-14', 'BTC start mark is the completed 14 Feb UTC close');
 assert(R.baseline !== null && R.calls_contribution !== null);
+console.log(`slices: every stock and BTC slice stays inside its boundary; boundaries match the possible stops; ${M.scenes.length * 3} debrief slices hold nothing after their exit`);
 console.log(`proto-3: 3 decisions, ${R.trades.filter(t => t.exit).length} closures, finished ${st.clock.date}; equity $${R.equity.total.toLocaleString()} vs baseline $${R.baseline.toLocaleString()} (BTC ${R.btc_start.c} -> ${R.btc_end.c}); calls ${R.calls_contribution >= 0 ? '+' : ''}$${R.calls_contribution.toLocaleString()}; simulator agreement and ledger identity passed`);

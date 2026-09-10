@@ -3,7 +3,7 @@
 
 Reads research/selected.json, research/prices/<ticker>.json (raw Yahoo caches), research/prices/SPY.json (the session
 calendar: SPY trades every New York session) and research/prices/BTC-USD.json (UTC daily bars).
-Writes site/data/campaigns/<campaign_id>/manifest.json and prices/<instrument>/<year>.json.
+Writes site/data/campaigns/<campaign_id>/manifest.json, prices/<instrument>/upto-<boundary>.json and debrief/<scene>/<exit>.json.
 
 Conventions written into the manifest (the five long/skip decisions, settled by default on 2026-09-10):
   start 2018-02-15 09:00 New York; end = first session on or after the last offered exit; Bitcoin marked at the last
@@ -126,28 +126,46 @@ def main():
         print('\n'.join('AUDIT: ' + p for p in problems)); sys.exit(1)
 
     out = ROOT / 'site' / 'data' / 'campaigns' / args.campaign
+    import shutil, subprocess
+    if out.exists():
+        shutil.rmtree(out)
     (out / 'prices').mkdir(parents=True, exist_ok=True)
-    # dated slices: one file per instrument per calendar year (a coarse slice; the page loads only years up to its clock)
+    # Dated slices cut at every possible stop, so the page never holds a bar beyond its clock. Stock boundaries: the
+    # last session before each cutoff (a pre-open stop) and every offered exit session (a closed stop). Bitcoin
+    # boundaries: the day before each cutoff and every exit date, because its marks are the last completed UTC close.
     window_start = start.date() - timedelta(days=400)     # a year of pre-cutoff history for the first scene's chart context
+    def before(d):
+        prev = [x for x in sessions if x < d]
+        return prev[-1]
+    stock_bounds = sorted({before(date.fromisoformat(sc['cutoff_date'])) for sc in scenes} | {date.fromisoformat(x) for sc in scenes for x in sc['horizons'].values()})
+    btc_bounds = sorted({date.fromisoformat(sc['cutoff_date']) - timedelta(days=1) for sc in scenes} | {date.fromisoformat(x) for sc in scenes for x in sc['horizons'].values()})
+    def write_slices(folder, items, bounds, key, pack):
+        prev = window_start - timedelta(days=1); names = []
+        for b in bounds:
+            chunk = [x for x in items if prev < x[key] <= b]
+            (folder / f'upto-{b}.json').write_text(json.dumps(pack(chunk), separators=(',', ':')))
+            names.append(str(b)); prev = b
+        return names
     for oid, ins in instruments.items():
-        years = {}
-        for b in ins['bars']:
-            if window_start <= b['d'] <= end:
-                years.setdefault(b['d'].year, {'bars': [], 'dividends': []})['bars'].append({'d': str(b['d']), 'o': b['o'], 'c': b['c']})
-        for d, a in ins['divs']:
-            if window_start <= d <= end and d.year in years:
-                years[d.year]['dividends'].append({'d': str(d), 'a': a})
         (out / 'prices' / oid).mkdir(exist_ok=True)
-        for y, payload in years.items():
-            (out / 'prices' / oid / f'{y}.json').write_text(json.dumps(payload, separators=(',', ':')))
-        ins['years'] = sorted(years)
-    years = {}
-    for b in btc_bars:
-        if window_start <= b['d'] <= end + timedelta(days=1):
-            years.setdefault(b['d'].year, []).append({'d': str(b['d']), 'c': b['c']})
+        rows = [{'d': b['d'], 'o': b['o'], 'c': b['c']} for b in ins['bars'] if window_start <= b['d'] <= end]
+        divs = [{'d': d, 'a': a} for d, a in ins['divs'] if window_start <= d <= end]
+        def pack(chunk, divs=divs):
+            lo = min([c['d'] for c in chunk], default=None); hi = max([c['d'] for c in chunk], default=None)
+            return {'bars': [{'d': str(c['d']), 'o': c['o'], 'c': c['c']} for c in chunk], 'dividends': [{'d': str(x['d']), 'a': x['a']} for x in divs if lo and lo <= x['d'] <= hi]}
+        ins['slices'] = write_slices(out / 'prices' / oid, rows, stock_bounds, 'd', pack)
     (out / 'prices' / 'BTC').mkdir(exist_ok=True)
-    for y, payload in years.items():
-        (out / 'prices' / 'BTC' / f'{y}.json').write_text(json.dumps({'bars': payload}, separators=(',', ':')))
+    btc_slices = write_slices(out / 'prices' / 'BTC', [b for b in btc_bars if window_start <= b['d'] <= end + timedelta(days=1)], btc_bounds, 'd', lambda chunk: {'bars': [{'d': str(c['d']), 'c': c['c']} for c in chunk]})
+    # Precomputed closure debriefs per offered exit, via site/story.js, so the page never fetches outcome.json
+    for sc in scenes:
+        exits = sorted(set(sc['horizons'].values()))
+        r = subprocess.run(['node', str(ROOT / 'scripts' / 'slice_debrief.js'), sc['opaque_id'], *exits], capture_output=True, text=True)
+        if r.returncode != 0:
+            print('AUDIT: debrief slicing failed for', sc['opaque_id'], r.stderr.strip()[:300]); sys.exit(1)
+        (out / 'debrief' / sc['opaque_id']).mkdir(parents=True, exist_ok=True)
+        for exit, payload in json.loads(r.stdout).items():
+            (out / 'debrief' / sc['opaque_id'] / f'{exit}.json').write_text(json.dumps(payload, separators=(',', ':')))
+        sc['debrief'] = exits
 
     content_hash = hashlib.sha1(json.dumps({'scenes': scenes, 'rules': RULES}, sort_keys=True).encode()).hexdigest()[:10]
     manifest = {
@@ -156,17 +174,18 @@ def main():
         'actions': spec['actions'], 'rules': RULES,
         'calendar': [str(s) for s in sessions if window_start <= s <= end],
         'calendar_source': 'SPY session dates from research/prices/SPY.json (SPY trades every New York session)',
-        'btc': {'instrument': 'BTC', 'source': 'research/prices/BTC-USD.json, Yahoo BTC-USD, UTC daily bars', 'years': sorted(years), 'first_bar': str(btc_bars[0]['d']), 'last_bar': str(btc_bars[-1]['d'])},
+        'btc': {'instrument': 'BTC', 'source': 'research/prices/BTC-USD.json, Yahoo BTC-USD, UTC daily bars', 'slices': btc_slices, 'first_bar': str(btc_bars[0]['d']), 'last_bar': str(btc_bars[-1]['d'])},
         'instruments': {oid: {k: v for k, v in ins.items() if k not in ('bars', 'divs')} for oid, ins in instruments.items()},
         'scenes': scenes,
-        'limits': ['Static files: price slices are per calendar year, so the current year is readable ahead of the clock. Outcome and reveal files for a scene are fetched only when its position closes; they are not access-controlled.',
+        'slicing': 'prices/<instrument>/upto-<date>.json holds bars in (previous boundary, date]; boundaries are the last session before each cutoff and every offered exit (Bitcoin: the day before each cutoff and every exit). debrief/<scene>/<exit>.json is the exit-scoped debrief. The page loads only slices at or before its clock.',
+        'limits': ['Static files are not access-controlled: a curious player can open a later slice by URL. Normal play never requests one.',
                    'Vendor daily bars; dividends from vendor events on ex-dates; not a verified corporate-action ledger.'],
     }
     (out / 'manifest.json').write_text(json.dumps(manifest, indent=1))
     print(f"{args.campaign}: start {manifest['start_date']} end {manifest['end_session']} coverage {coverage_end}; scenes:")
     for s in scenes:
         print(f"  {s['index']} {s['opaque_id']} cutoff {s['cutoff_date']} entry {s['entry_session']} horizons {s['horizons']} default {s['default_horizon']}y")
-    print(f"  BTC bars {len(btc_bars)} ({manifest['btc']['first_bar']} to {manifest['btc']['last_bar']}); calendar sessions in window {len(manifest['calendar'])}")
+    print(f"  BTC bars {len(btc_bars)} ({manifest['btc']['first_bar']} to {manifest['btc']['last_bar']}); calendar sessions in window {len(manifest['calendar'])}; stock slices {len(stock_bounds)}, BTC slices {len(btc_slices)}")
 
 
 if __name__ == '__main__':

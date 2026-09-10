@@ -54,7 +54,9 @@
       decided_at: clone(state.clock), assumptions: cmd.assumptions || [], reason: cmd.reason || '', status: cmd.action === 'skip' ? 'skipped' : 'pending' };
     if (cmd.action === 'buy') { state.cash = r2(state.cash - budget); state.reserved = r2(state.reserved + budget); }
     state.orders.push(order); state.ledger.push({ id: 'decide:' + order.id, date: state.clock.date, kind: 'decision', order: order.id, cash_delta: cmd.action === 'buy' ? -budget : 0, note: `${cmd.action}${pct ? ' ' + pct + '%' : ''}${order.years ? ' for ' + order.years + 'y' : ''}, budget $${budget}` });
-    state.scene_index += 1; state.revision += 1; state.status = 'advancing';
+    state.scene_index += 1; state.revision += 1;
+    const nothingOpen = !state.positions.some(p => p.status === 'open') && !state.orders.some(o => o.status === 'pending');
+    state.status = (state.scene_index >= manifest.scenes.length && nothingOpen) ? 'finished' : 'advancing';   // an all-skip run ends at the last decision, not at the data boundary
     state.log.push({ type: 'decide', cmd: { action: cmd.action, size_pct: pct, years: order.years, assumptions: order.assumptions, reason: order.reason } });
     return { state, order };
   }
@@ -64,7 +66,7 @@
     if (state.scene_index < manifest.scenes.length) { const s = manifest.scenes[state.scene_index]; cands.push({ kind: 'scene', index: s.index, date: s.cutoff_date, phase: 'pre-open' }); }
     const exits = [...state.positions.filter(p => p.status === 'open').map(p => p.exit_session), ...state.orders.filter(o => o.status === 'pending').map(o => o.exit_session)].filter(Boolean).sort();
     if (exits.length) cands.push({ kind: 'closure', date: exits[0], phase: 'closed' });
-    if (!cands.length) return { kind: 'finished', date: manifest.end_session, phase: 'closed' };
+    if (!cands.length) return { kind: 'finished', date: state.clock.date, phase: state.clock.phase };
     cands.sort(cmpClock); return cands[0];
   }
 
@@ -109,10 +111,10 @@
       if (s > target.date || (s === target.date && target.phase === 'pre-open')) break;
       processSession(state, manifest, data, s, notices);
     }
-    state.clock = clone(target); state.revision += 1;
+    state.clock = { date: target.date, phase: target.phase }; state.revision += 1;
     const open = state.positions.some(p => p.status === 'open') || state.orders.some(o => o.status === 'pending');
     state.status = (pendingScene && target.date === pendingScene.cutoff_date && target.phase === 'pre-open') ? 'deciding' : (!pendingScene && !open) ? 'finished' : 'advancing';
-    state.log.push({ type: 'advance', target: clone(target) });
+    state.log.push({ type: 'advance', target: { date: target.date, phase: target.phase } });
     return { state, notices };
   }
 
