@@ -36,6 +36,7 @@ run "test_simulate.js"                   node scripts/test_simulate.js
 run "test_dated_debrief.js"              node scripts/test_dated_debrief.js
 run "test_story_dates.js"                node scripts/test_story_dates.js
 run "test_payloads.js"                   node scripts/test_payloads.js
+run "test_campaign.js"                   node scripts/test_campaign.js
 
 if [ "$BROWSER" = 1 ]; then
   if ! node -e "require(process.env.PLAYWRIGHT_MODULE || 'playwright')" >/dev/null 2>&1; then

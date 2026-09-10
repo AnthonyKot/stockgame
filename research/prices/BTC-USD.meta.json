@@ -1,0 +1,8 @@
+{
+  "ticker": "BTC-USD",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1420070400&period2=1788998400&interval=1d&events=div%2Csplits",
+  "retrieved_at": "2026-09-10T18:15:28.363221+00:00",
+  "sha256": "9c227811a404e33559e0ecc224706585d9a715282e3c6ac3d0295b73d59e6762",
+  "bars": 4271,
+  "purpose": "Outcome screening; adjusted-close return is a vendor proxy, not a verified holdings ledger."
+}
