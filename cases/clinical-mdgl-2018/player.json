@@ -651,7 +651,8 @@
           "metric": "Shares outstanding and recent dilution"
         }
       ],
-      "valuation_context": "Pre-revenue: no revenue multiple applies here (see caveats); the panel is net cash only. Share count and cash figures predate this price date and say nothing about clinical or regulatory results."
+      "valuation_context": "Pre-revenue: no revenue multiple applies here (see caveats); the panel shows market capitalization, enterprise value and net cash as a share of the price. Share count and cash figures predate this price date and say nothing about clinical or regulatory results.",
+      "valuation_mode": "pipeline"
     }
   },
   "what_changed": [

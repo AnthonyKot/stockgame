@@ -17,7 +17,8 @@ Output: write ONLY `cases/<candidate_id>/presentation.json`:
   "metrics": [
     {"label": "Revenue", "metric": "<exact headline label>", "context": "...", "display_value": null, "prior_comparable": true}
   ],
-  "valuation_context": "..."
+  "valuation_context": "...",
+  "valuation_mode": "revenue | pipeline | bank"
 }
 ```
 
@@ -28,6 +29,7 @@ Rules:
 4. `display_value` is null unless the raw number would mislead (near-zero, or a percentage stored as a fraction); then give the display string exactly as the reader should see it. `prior_comparable` is false only when the prior is a different measure; explain why in `context`.
 5. Groups: 2 or 3, titled for this business (Business performance / Cash position / Balance sheet / Funding runway / Concentration). Order metrics inside a group from most to least important for the decision.
 6. `valuation_context`: at most 45 words. State which revenue the multiple uses (read `valuation.annual_revenue_musd` and its `period` in `inputs`; it is often the prior fiscal year, not the tile's), that share count and cash dates predate the price, and any caveat in `valuation.caveats`. For a bank or a pre-revenue biotech say what the panel does not mean.
-7. Neutral register, no hindsight; everything shown here is pre-decision material and must not hint at the outcome.
+7. `valuation_mode`: `revenue` (default) keeps the EV/revenue multiple; `pipeline` (pre-revenue or royalty biotech valued on its programmes) hides the multiple under the fold and shows net cash as a share of market cap; `bank` is market cap only. Pick by what the price actually rests on.
+8. Neutral register, no hindsight; everything shown here is pre-decision material and must not hint at the outcome.
 
 Final reply: three lines: candidate id, number of metrics, number of groups. Nothing else.

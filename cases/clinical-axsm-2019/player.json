@@ -733,7 +733,8 @@
           "metric": "Shares outstanding and recent financing"
         }
       ],
-      "valuation_context": "This is a pre-revenue company: the filings show no annual revenue, so no revenue multiple applies. Share count and net cash are dated September 30, 2019, predating the December price; no approved product exists yet."
+      "valuation_context": "This is a pre-revenue company: the filings show no annual revenue, so no revenue multiple applies. Share count and net cash are dated September 30, 2019, predating the December price; no approved product exists yet.",
+      "valuation_mode": "pipeline"
     }
   },
   "what_changed": [

@@ -158,7 +158,7 @@
     if (V.enterprise_value_musd !== undefined) vkv.append(el('div', {}, el('div', { class: 'l' }, 'Enterprise value ', badge('derived')), el('div', { class: 'v' }, m(V.enterprise_value_musd)), el('div', { class: 'p' }, 'market cap ' + (V.net_cash_musd >= 0 ? 'minus net cash of ' : 'plus net debt of ') + m(Math.abs(V.net_cash_musd)))));
     if (V.annual_revenue_musd) vkv.append(el('div', {}, el('div', { class: 'l' }, (V.ev_to_revenue !== undefined ? 'EV / annual revenue ' : 'Market cap / annual revenue '), badge('derived')), el('div', { class: 'v' }, (V.ev_to_revenue !== undefined ? V.ev_to_revenue : V.market_cap_to_revenue) + 'x'), el('div', { class: 'p' }, 'revenue ' + m(V.annual_revenue_musd) + ', last full year filed before the cutoff')));
   }
-  const vdet = el('details', {}, el('summary', { class: 'note' }, 'Valuation inputs and caveats'), el('ul', { class: 'plain' }, ...(V.inputs || []).map(i => el('li', { class: 'note' }, `${i.name}: ${i.value_millions !== undefined ? m(i.value_millions) : ''} as of ${i.as_of || i.period || ''}${i.filed ? ', filed ' + i.filed : ''}${i.source ? ' [' + (Array.isArray(i.source) ? i.source.join(', ') : i.source) + ']' : ''}`)), ...(V.caveats || []).map(c => el('li', { class: 'note' }, 'Caveat: ' + c)), el('li', { class: 'note' }, V.note || V.reason || '')));
+  const vdet = el('details', {}, el('summary', { class: 'note' }, 'Valuation inputs and caveats'), el('ul', { class: 'plain' }, ...(V.inputs || []).map(i => el('li', { class: 'note' }, `${i.name}: ${i.value_millions !== undefined ? (i.name === 'shares' ? i.value_millions.toFixed(1) + ' m shares' : m(i.value_millions)) : ''} as of ${i.as_of || i.period || ''}${i.filed ? ', filed ' + i.filed : ''}${i.source ? ' [' + (Array.isArray(i.source) ? i.source.join(', ') : i.source) + ']' : ''}`)), ...(V.caveats || []).map(c => el('li', { class: 'note' }, 'Caveat: ' + c)), el('li', { class: 'note' }, V.note || V.reason || '')));
   if (fs.presentation) {
     const presentation = fs.presentation;
     const snapshot = card('Financial snapshot', null, el('p', { class: 'note' }, presentation.intro));
@@ -187,7 +187,14 @@
       snapshot.append(section);
     }
     vkv.className = 'snapshot-valuations';
-    const valuationGroup = el('section', { class: 'snapshot-group snapshot-price' }, el('h3', {}, 'What the market is pricing'), el('p', { class: 'note' }, 'At the ' + dateFmt(V.as_of_price_date) + ' close · estimates derived from the available filings'), vkv, el('p', { class: 'note' }, presentation.valuation_context), vdet);
+    // valuation_mode (authored): 'pipeline' hides the revenue multiple (kept under the fold) and shows net cash as a share of market cap; 'revenue' keeps the multiple; 'bank' is market cap only
+    const vmode = presentation.valuation_mode || 'revenue';
+    if (vmode === 'pipeline' && V.status === 'derived') {
+      const rev = [...vkv.children].find(t => /revenue/i.test(t.querySelector('.l').textContent));
+      if (rev) { vdet.querySelector('ul').append(el('li', { class: 'note' }, 'Revenue multiple set aside: ' + rev.querySelector('.l').textContent.replace(/derived/, '').trim() + ' ' + Number(V.ev_to_revenue !== undefined ? V.ev_to_revenue : V.market_cap_to_revenue).toFixed(1) + '× on ' + m(V.annual_revenue_musd) + ' of last-full-year revenue; not a useful gauge for a company valued on its pipeline.')); rev.remove(); }
+      if (V.market_cap_musd && typeof V.net_cash_musd === 'number') vkv.append(el('div', {}, el('div', { class: 'l' }, 'Net cash / market cap'), el('div', { class: 'v' }, (100 * V.net_cash_musd / V.market_cap_musd).toFixed(1) + '%')));
+    }
+    const valuationGroup = el('section', { class: 'snapshot-group snapshot-price' }, el('h3', {}, vmode === 'pipeline' ? 'What the market pays for the pipeline' : 'What the market is pricing'), el('p', { class: 'note' }, 'At the ' + dateFmt(V.as_of_price_date) + ' close · estimates derived from the available filings'), vkv, el('p', { class: 'note' }, presentation.valuation_context), vdet);
     // Keep the valuation inputs auditable without making formulas the main reading path.
     for (const tile of vkv.children) {
       const formula = tile.querySelector('.p');

@@ -613,7 +613,7 @@
         },
         {
           "label": "Net cash",
-          "context": "Cash and investments minus debt. The prior figure counts cash only, so it is not a comparable net-cash figure.",
+          "context": "Cash and investments minus debt at 30 September 2017, before the announced partnership proceeds ($1.0 billion cash plus an $850 million equity purchase) expected to close in the second quarter of 2018. The prior counts cash only.",
           "prior_comparable": false,
           "metric": "Cash, investments and debt"
         },
@@ -623,7 +623,8 @@
           "metric": "R&D spending and revenue concentration"
         }
       ],
-      "valuation_context": "The revenue multiple uses FY2016 revenue, not the latest quarter or trailing twelve months. Share-count and cash figures predate the cutoff price."
+      "valuation_context": "Net cash predates the announced partnership proceeds ($1.0 billion cash plus $850 million equity, closing expected in the second quarter of 2018). Share count and cash figures predate the cutoff price. The FY2016 revenue multiple is set aside under the fold.",
+      "valuation_mode": "pipeline"
     }
   },
   "what_changed": [
