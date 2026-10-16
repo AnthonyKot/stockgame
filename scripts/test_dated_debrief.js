@@ -60,14 +60,18 @@ const upd = (id, ids) => byCase[id].scene_check.dated_debrief.updates.find(u => 
 const all = (id, aid) => byCase[id].scene_check.dated_debrief.updates.flatMap(u => u.checks && u.checks[aid] ? [u.checks[aid]] : []);
 // Target 050a03b08f: guidance verdicts stay Unresolved on motive; resumption 1 Mar 2022, cuts 18 May and 7 Jun
 for (const t of all('050a03b08f', 'a3')) { assert(/^Unresolved/.test(t), 'Target a3 must stay Unresolved: ' + t); assert(!/three weeks|bluff|genuine unpredictability/i.test(t), 'Target a3 reintroduces motive/chronology: ' + t); }
+assert(!/honest signal|bluff/i.test(byCase['050a03b08f'].scene_check.debrief_check.s2 + ' ' + byCase['050a03b08f'].scene_check.thesis_check.a3), 'Target debrief/thesis check reintroduces motive inference');
 { const r = SIM.simulate(byCase['050a03b08f'].sim, { action: 'buy', size: 10, years: 3 }); const d = STORY.atExit(byCase['050a03b08f'], r.exit.date); assert(/May and again in June/.test(d.checks.a3.text), 'Target 3y verdict should date the May and June cuts'); }
 // First Solar 5d6cb2d76f: enactment stays Supported when durability is questioned; capacity is never read as demand
 for (const ids of [['e10'], ['e11']]) assert(/^Supported/.test(upd('5d6cb2d76f', ids).checks.a3), 'First Solar a3 must stay Supported at ' + ids);
 for (const t of all('5d6cb2d76f', 'a2')) assert(!/^Supported\b(?! in form)/.test(t) && !/^Partly supported/.test(t), 'First Solar a2 (demand) read from capacity: ' + t);
-// Sarepta 04b88176e1: refinancing is not new funding; accelerated approval rested on a surrogate
+assert(!/demand was never the constraint/i.test(byCase['5d6cb2d76f'].scene_check.thesis_check.a2), 'First Solar thesis_check.a2 reads capacity as demand');
+// Sarepta 04b88176e1: refinancing is not new funding; accelerated approval rested on a surrogate; compound a1 stays Partly supported at e7 and record-scoped at e10/e11
 assert(/repa(id|y)/.test(upd('04b88176e1', ['e4']).narrative) && /repay/.test(upd('04b88176e1', ['e4']).checks.a3), 'Sarepta financing must mention repayment of earlier debt');
 assert(!/program(me)? need/.test(upd('04b88176e1', ['e4']).narrative), 'Sarepta financing narrative reintroduces "programme need"');
 assert(/surrogate|micro-dystrophin/.test(upd('04b88176e1', ['e5']).checks.a1), 'Sarepta approval verdict must name the surrogate basis');
+assert(/^Partly supported/.test(upd('04b88176e1', ['e7']).checks.a1), 'Sarepta a1 at e7 must be Partly supported');
+assert(/in this record/.test(upd('04b88176e1', ['e10', 'e11']).checks.a1) && !/never confirmed/i.test(upd('04b88176e1', ['e10', 'e11']).checks.a1), 'Sarepta a1 at e10/e11 must stay scoped to the record');
 for (const t of all('04b88176e1', 'a1')) assert(!/full approved population/.test(t), 'Sarepta a1 drifts from the subgroup: ' + t);
 // Gilead 80222fdef8: the second-engine verdict does not reset on a regulatory step
 for (const t of all('80222fdef8', 'a2')) assert(!/^Unresolved/.test(t), 'Gilead a2 resets to Unresolved: ' + t);

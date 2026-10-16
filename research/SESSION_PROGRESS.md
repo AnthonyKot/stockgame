@@ -60,12 +60,19 @@ Case verifier: all ten passed. Both merge check-only commands: zero problems (pr
 
 Existing desktop/mobile story regression passed again after c4de944, including actual exits, stop/target, no-event exit, reload, save failures and journal behavior. The new four-case valuation integration browser test caught Madrigal mobile overflow from the long funding-runway unit. A scoped snapshot-number wrapping rule fixes it; all eight desktop/mobile case journeys now pass, including keyboard disclosure and corrected share units. The fixture was also corrected to accept cases that go straight to the debrief without a walkthrough gate. Rebuild changed only index.json's build timestamp; case bundles match the integrated content.
 
+### Follow-up checkpoint — presentation merge transaction recovery & residual editorial fixes
+
+- **Presentation merge transaction recovery (`scripts/merge_presentation.py`, `scripts/test_merge_presentation.py`):** validates the complete batch (including unknown candidate inputs, `candidate_id` mismatches, malformed JSON, and stored `financial_snapshot.presentation` blocks when `--check-only` runs with no pending inputs), stages all modified `player.json` files to flushed/fsynced sibling `.tmp` files, and commits via `os.replace` with automatic multi-file rollback to original bytes if any replacement fails mid-batch before unlinking any `presentation.json` inputs.
+- **Residual editorial/source items (`cases/scenes.json`, `cases/clinical-mdgl-2018/player.json`, `site/data/`):**
+  - **Target (`growth-004` / `050a03b08f`):** removed the remaining motive inference ("honest signal of unpredictability, not a bluff") and aligned the March/May/June 2022 chronology in `debrief_check.s2` and `thesis_check.a3`.
+  - **First Solar (`growth-007` / `5d6cb2d76f`):** updated `thesis_check.a2` so plant openings and capacity additions are not treated as proof of post-opening demand utilization, matching `dated_debrief`.
+  - **Sarepta (`clinical-srpt-2021` / `04b88176e1`, `C1`):** changed `a1` at `e7` from `Supported so far.` to `Partly supported.` so the status word matches its caveat on the subgroup's functional effect, and scoped `a1` at `e10, e11` to `"not confirmed on a primary endpoint in this record."`
+  - **Madrigal (`clinical-mdgl-2018` / `b126872cae`):** replaced the raw underscore unit `"years_at_current_avg_quarterly_outflow (scenario, not guidance)"` with `"years at current outflow (scenario, not guidance)"` in both `player.json` and `site/data/b126872cae/sheet.json`.
+
 ### Remaining limits and checkpoint
 
-Text copying checks cannot certify historical truth or catch arbitrary paraphrases. Full outcome files still load after commitment. C1 and broader editorial/source review remain separate from these engineering safeguards. The original plan's manual Target/First Solar/Sarepta reading journeys are not all replaced by the narrower automated integration coverage.
+Text copying checks cannot certify historical truth or catch arbitrary paraphrases. Full outcome files still load after commitment. Broader manual editorial/source review remains separate from automated safeguards.
 
-Madrigal still renders a raw underscore-separated funding-runway unit; its reader-facing wording is an editorial follow-up.
-
-Next user-facing action: playtest the integrated local build. No commit, push or deployment was performed by Codex for this repair batch; the content session's reported deployment has not been independently reverified here.
+Next user-facing action: playtest the integrated local build and review overall UX.
 
 Durable results: [step-02-04-evidence.json](session-results/step-02-04-evidence.json).

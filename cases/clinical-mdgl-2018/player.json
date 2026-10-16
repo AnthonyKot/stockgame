@@ -84,7 +84,7 @@
       {
         "label": "Funding runway scenario",
         "value": 19,
-        "unit": "years_at_current_avg_quarterly_outflow (scenario, not guidance)",
+        "unit": "years at current outflow (scenario, not guidance)",
         "period": "as of 2018-09-30",
         "available_at": "2018-11-06",
         "source_ids": [

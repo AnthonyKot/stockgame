@@ -686,7 +686,7 @@
       ],
       "thesis_check": {
         "a1": "Evidence: 2022 ended in a $0.41 loss per share, below even the guided low end, with $73 million of plant start-up cost; 2023 guidance then called for $7 to 8 of EPS [e1][e7]. For this assumption: supported in direction, though the one bad year was worse than guided. Unknown: how much of the 2023 rebound came from the company's own execution versus the new tax credit.",
-        "a2": "Evidence: both plants started on or near schedule and the company announced roughly $2.3 billion more US capacity within the year [e3][e5][e8][e9]. For this assumption: supported; demand was never the constraint in the record. Unknown: how much of the later order book depended on the 2022 law rather than the 2021 bookings.",
+        "a2": "Evidence: both plants started on or near schedule and the company announced roughly $2.3 billion more US capacity within the year [e3][e5][e8][e9]. For this assumption: unresolved in this record; opening plants and committing capacity show buildout, not post-opening utilization or shipment volume against the new capacity. Unknown: how much of the later order book depended on the 2022 law rather than the 2021 bookings.",
         "a3": "Evidence: the Inflation Reduction Act was signed in August 2022, five months after the cutoff, with a production credit for US-made modules [e2]. For this assumption: it happened. Three years on, the same credits became the main risk when a phase-out was proposed and then partly preserved [e10][e11]. Unknown at the cutoff: timing, which no packet could give.",
         "a4": "Evidence: within the year the shares roughly tripled; see the result tiles [e1][e2][e3]. For this assumption: the price at the cutoff did not reflect the guidance cut so much as ignore what came next; whether it was cheap depended on a law, not on the cut. Unknown: what the stock would have done without the Act.",
         "a5": "Evidence: 2022 was indeed worse than guided [e7], but 2023 guidance rebounded sharply and the US tariff circumvention finding and the tax credit changed the pricing environment [e6][e2]. For this assumption: not supported over the year; the pressure was real but was overtaken by policy. Unknown: the counterfactual without those policy changes."
@@ -985,7 +985,7 @@
             ],
             "narrative": "The FDA expanded approval to all patients aged 4 and older, granting traditional, not just accelerated, approval for ambulatory patients based on the totality of the data.",
             "checks": {
-              "a1": "Supported so far. The FDA granted traditional approval for ambulatory patients aged 4 and up, moving beyond the accelerated, subgroup-only approval. This reflects the regulator's read of the totality of data, not independent proof of the functional effect.",
+              "a1": "Partly supported. The FDA granted traditional approval for ambulatory patients aged 4 and up, moving beyond the accelerated, subgroup-only approval. This reflects the regulator's read of the totality of data, not independent proof of the subgroup's functional effect.",
               "a2": "Weakened. The regulator granted full traditional approval for ambulatory patients despite the earlier functional misses, judging the totality of the data favorably. This does not establish that the therapy works in every patient it was later given to."
             }
           },
@@ -1007,7 +1007,7 @@
             ],
             "narrative": "Sarepta paused all U.S. shipments after an FDA request, and the FDA later added a boxed warning for fatal liver injury and narrowed the approval back to ambulatory patients only, removing the 2024 non-ambulatory expansion.",
             "checks": {
-              "a1": "Partly supported. Approval stands for ambulatory patients, which includes the younger subgroup, while the non-ambulatory indication was removed after fatal liver injuries in those patients. The subgroup's functional effect was never confirmed on a primary endpoint.",
+              "a1": "Partly supported. Approval stands for ambulatory patients, which includes the younger subgroup, while the non-ambulatory indication was removed after fatal liver injuries in those patients. The subgroup's functional effect was not confirmed on a primary endpoint in this record.",
               "a2": "Partly supported. The FDA required a boxed warning for fatal liver injury and narrowed the label, a regulatory judgment that the risk-benefit balance had shifted for some patients. Ambulatory patients retain approval, so this is not a full withdrawal.",
               "a4": "Supported so far. A boxed warning for fatal liver injury and a narrowed indication followed two deaths, a safety consequence that reached the label itself. Whether this outweighs the efficacy case over the full history is still not fully settled."
             }
@@ -1262,7 +1262,7 @@
       "question": "Which assumption explains the split: durable share gain, or a one-off year the company itself won't extrapolate?",
       "debrief_check": {
         "s1": "Held for exactly one more year: fiscal 2021 comparable sales rose a further 12.7% and adjusted EPS 44% [e1]. Then fiscal 2022 operating income fell 57% as the company worked through inventory, and comparable sales turned negative in 2023 [e2][e4][e5][e6].",
-        "s2": "Guidance resumed a year later, and that guidance was cut twice within months [e1][e2][e3]. The refusal to guide was an honest signal of unpredictability, not a bluff.",
+        "s2": "Guidance resumed in March 2022 and was cut in May and again in June [e1][e2][e3]. Those revisions show forecast instability in 2022, not what management's motive for withholding guidance in March 2021 had been.",
         "s3": "Costs did crush margin in 2022, though the trigger was excess inventory in discretionary categories rather than digital fulfilment itself [e2][e4]. The second analyst's assumption, that the year was not repeatable, was the one that explained the split."
       },
       "ask_label": "What would you ask the two analysts?",
@@ -1330,7 +1330,7 @@
       "thesis_check": {
         "a1": "Evidence: fiscal 2021 comparable sales rose a further 12.7% [e1]; then comparable sales fell in mid-2023 for the first time in six years and again in fiscal 2023 and 2025 [e6][e8][e12]. For this assumption: supported for one year, then not. Unknown: how much of the later decline was lost customers versus a category shift back to services and discretionary weakness.",
         "a2": "Evidence: digital grew 20.8% in fiscal 2021, then operating margin collapsed in 2022 to 1.2% in the second quarter as inventory in discretionary categories was marked down [e1][e2][e3][e4]. For this assumption: the margin did get crushed, though by inventory rather than by digital fulfilment itself. Unknown: whether fulfilment cost would have bitten anyway without the inventory mistake.",
-        "a3": "Evidence: guidance returned a year later, and that guidance was cut twice within months [e1][e2][e3]. For this assumption: the silence was an honest signal of unpredictability. Unknown: whether any guidance given in March 2021 would have been believed.",
+        "a3": "Evidence: guidance resumed in March 2022 and was cut in May and again in June [e1][e2][e3]. For this assumption: unresolved on motive; later forecast cuts show 2022 was hard to predict, not whether the March 2021 silence was caution or a warning. Unknown: what internal forecast management held at the cutoff.",
         "a4": "Evidence: fiscal 2021 beat the peak [e1], then fiscal 2022 operating income fell 57% [e5]. For this assumption: right on margins, a year early on sales. Unknown: how much was self-inflicted.",
         "a5": "Evidence: the first year extended the boom and the second reversed it [e1][e4][e5]. For this assumption: a defensible reading of a packet with no forward anchor. Unknown: whether waiting one year would have given a clearer picture; the record says it would have given a more expensive one, then a cheaper one."
       },

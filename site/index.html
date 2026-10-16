@@ -18,7 +18,15 @@
 <script>
 (async () => {
   document.getElementById('top').replaceWith(SG.topbar('play'));
-  const rs = SG.rulesSection(); rs.style.marginTop = '0'; document.getElementById('rules').replaceWith(rs);
+  const rs = SG.rulesSection();
+  const rulesDet = SG.el('details', { class: 'card', id: 'rules', style: 'margin:.5rem 0 .75rem' },
+    SG.el('summary', { style: 'cursor:pointer;font-size:.95rem' },
+      SG.el('strong', {}, 'How a case works '),
+      SG.el('span', { class: 'note' }, '· 3-step loop & simulation fill rules (click to expand)')));
+  rs.classList.remove('card'); rs.removeAttribute('id'); rs.style.margin = '.5rem 0 0'; rs.style.padding = '0'; rs.style.border = '0';
+  const rHeading = rs.querySelector('h3'); if (rHeading) rHeading.remove();
+  rulesDet.append(rs);
+  document.getElementById('rules').replaceWith(rulesDet);
   const list = document.getElementById('list');
   try {
     const idx = await SG.load('data/index.json');
@@ -29,16 +37,32 @@
     const next = ready.find(c => !j.find(x => x.case_id === c.id));
 
     /* Side-by-side mode comparison: Standalone Cases vs. 3-Story Campaign */
+    const starterPicks = [
+      { id: '050a03b08f', tag: '🟢 Everyday retail · 3y', title: 'Big-box retailer after a surge', hook: 'Sales jumped 11% in lockdown, but costs soared and management suspended guidance.' },
+      { id: '4219766e75', tag: '🟢 Consumer snacks · 1y', title: 'Chocolate & snacks pricing test', hook: 'Prices went up 8% and shoppers kept buying. Can margins hold as cocoa costs rise?' },
+      { id: '5e3e9193b7', tag: '🏦 Major US bank · 5y', title: 'Record profit at peak rates', hook: 'The largest US bank just earned $15B in a quarter—right as rate cuts loom.' }
+    ];
+    const starterBox = SG.el('div', { style: 'margin-top:.55rem;padding-top:.55rem;border-top:1px solid var(--border)' },
+      SG.el('div', { class: 'note', style: 'font-weight:600;color:var(--ink)' }, '👋 New here? Start with a familiar everyday business (no deep finance required):'),
+      SG.el('div', { class: 'starter-strip' }, ...starterPicks.map(p => {
+        const isDone = j.find(x => x.case_id === p.id);
+        return SG.el('a', { href: `play.html?case=${p.id}#sec-scene` },
+          SG.el('div', { class: 'st-tag' }, p.tag + (isDone ? ' · ✓ decided' : '')),
+          SG.el('div', { class: 'st-title' }, p.title),
+          SG.el('div', { class: 'st-sub' }, p.hook));
+      })));
+
     const standaloneCard = SG.el('div', { class: 'card mode-card', style: 'border-left:4px solid var(--s1)' },
       SG.el('div', {},
         SG.el('div', { class: 'row', style: 'justify-content:space-between;margin-bottom:.2rem' },
           SG.el('h3', { style: 'margin:0' }, 'Standalone Cases'),
           SG.badge(`${decided.length} of ${ready.length} decided`)),
         SG.el('div', { class: 'note' }, decided.length
-          ? `${ready.length - decided.length} undecided remaining. Each case is an independent $100,000 call with an optional checkpoint walkthrough and dated debrief. Your calls and results are in the journal.`
-          : '10 independent historical briefings. Pick any case below, choose Buy, Skip, or Short, and step through the dated outcome immediately.')),
+          ? `${ready.length - decided.length} undecided remaining. Each case is an independent $100,000 call with a 1-screen story brief, 2-click decision ticket, and dated debrief.`
+          : '10 real historical moments. Read the 1-minute story brief, pick Buy, Pass, or Short, and see which real company it was.'),
+        starterBox),
       SG.el('div', { class: 'mode-actions' },
-        next ? SG.el('a', { href: 'play.html?case=' + next.id, class: 'btn-link' }, decided.length ? 'Continue: next undecided case' : 'Start the first case')
+        next ? SG.el('a', { href: 'play.html?case=' + next.id + '#sec-scene', class: 'btn-link' }, decided.length ? 'Continue: next undecided case' : 'Start with a familiar retailer →')
              : SG.el('a', { href: 'journal.html', class: 'btn-link' }, 'All decided: open the journal'),
         decided.length && next ? SG.el('a', { href: 'journal.html', class: 'btn-link ghost' }, 'Open journal') : null));
 
@@ -55,10 +79,12 @@
     document.getElementById('rules').before(modeGrid);
 
     /* Filter controls for the 10 standalone cases */
-    const state = { status: 'all', setup: 'all', horizon: 'all' };
+    const state = { status: 'all', cat: 'all', setup: 'all', horizon: 'all' };
     const setups = [...new Set(idx.cases.map(c => c.setup).filter(Boolean))];
     const horizons = [...new Set(idx.cases.map(c => c.horizon && String(c.horizon.count)).filter(Boolean))].sort((a, b) => Number(a) - Number(b));
     const setupShort = s => /headline/i.test(s) ? 'Bad-news headline' : /disagree/i.test(s) ? 'Analysts disagree' : /stay away/i.test(s) ? 'Stay-away warning' : /tip/i.test(s) ? 'Friend’s stock tip' : /familiar/i.test(s) ? 'Familiar product' : s.replace(/\.$/, '');
+    const catOf = c => /biotech|pharma/i.test(c.sector_hint || '') ? 'biotech' : /retail|consumer/i.test(c.sector_hint || '') ? 'everyday' : 'finance_ind';
+    const catBadgeText = cat => cat === 'everyday' ? '🟢 Everyday business' : cat === 'biotech' ? '🔬 Biotech trial' : '🏦 Finance & Industrials';
 
     const filterBar = SG.el('div', { class: 'filter-bar', role: 'region', 'aria-label': 'Filter cases' });
     const countNote = SG.el('span', { class: 'note', style: 'margin-left:auto' });
@@ -68,9 +94,10 @@
       let shown = 0;
       for (const item of rows) {
         const matchStatus = state.status === 'all' || (state.status === 'decided' ? item.done : !item.done);
+        const matchCat = state.cat === 'all' || item.cat === state.cat;
         const matchSetup = state.setup === 'all' || item.setup === state.setup;
         const matchHz = state.horizon === 'all' || item.hz === state.horizon;
-        const vis = matchStatus && matchSetup && matchHz;
+        const vis = matchStatus && matchCat && matchSetup && matchHz;
         item.node.hidden = !vis;
         if (vis) shown++;
       }
@@ -92,6 +119,7 @@
 
     filterBar.append(
       makeGroup('Status', 'status', [['all', `All (${ready.length})`], ['undecided', `Undecided (${ready.length - decided.length})`], ['decided', `Decided (${decided.length})`]]),
+      makeGroup('Business type', 'cat', [['all', 'All types'], ['everyday', '🟢 Everyday business'], ['finance_ind', '🏦 Finance & Industrials'], ['biotech', '🔬 Biotech trial']]),
       makeGroup('Setup', 'setup', [['all', 'All setups'], ...setups.map(s => [s, setupShort(s)])]),
       makeGroup('Default horizon', 'horizon', [['all', 'Any'], ...horizons.map(h => [h, h + 'y'])]),
       countNote
@@ -102,18 +130,19 @@
       const done = j.find(x => x.case_id === c.id);
       const isReady = c.status === 'sheet_ready';
       const hzCount = c.horizon ? String(c.horizon.count) : '';
+      const cat = catOf(c);
       const resText = done && done.result && typeof done.result.portfolio_return === 'number' ? ` · portfolio ${SG.signed(done.result.portfolio_return)}` : '';
       const a = SG.el('a', { href: isReady ? 'play.html?case=' + c.id : null, 'aria-disabled': isReady ? null : 'true', tabindex: isReady ? null : '-1', style: isReady ? '' : 'opacity:.55' },
         SG.el('div', { class: 't' },
           isReady ? (c.title || c.alias || 'Unnamed case') : 'Case not ready (sheet missing)',
           SG.el('span', { class: 'case-meta-pills' },
+            SG.badge(catBadgeText(cat)),
             c.setup ? SG.badge(setupShort(c.setup)) : null,
-            c.sector_hint ? SG.badge(c.sector_hint) : null,
             done ? SG.badge('decided') : null)),
         SG.el('div', { class: 's' },
           (c.setup ? c.setup + ' · ' : '') + SG.dateFmt(c.cutoff) + ' · ' + SG.horizonText(c.horizon).replace(' calendar', '') + ' · ' + ((done && done.reveal_name) ? done.reveal_name : (c.alias || '')) + (done ? ' · your call: ' + done.action + (done.size ? ' ' + done.size + '%' : '') + resText : '')));
       list.append(a);
-      rows.push({ node: a, done: !!done, setup: c.setup || '', hz: hzCount });
+      rows.push({ node: a, done: !!done, cat, setup: c.setup || '', hz: hzCount });
     }
     applyFilters();
     if (!idx.cases.length) list.textContent = 'No cases built yet. Run scripts/build_bundles.py.';

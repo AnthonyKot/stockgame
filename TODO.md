@@ -37,21 +37,21 @@ See [SESSION_PROGRESS.md](research/SESSION_PROGRESS.md) for actual verification.
 
 The checklist below now distinguishes landed patches from remaining review. Detailed timing, deliverables and pause points are in the session plan. No new schema or research-worker batch is needed.
 
-- [ ] **Target:** verify the landed fix for the March/May/June guidance chronology and remove the inference that later guidance cuts prove management's earlier intent. Review a3's updates together.
-- [ ] **First Solar:** verify the landed corrections keep verdicts tied to the stated assumptions. Enactment and durability are different questions; factory openings do not establish demand utilization.
-- [ ] **Sarepta:** verify the landed corrections distinguish gross debt issuance from new program funding, age eligibility from the approval's surrogate-endpoint basis, and the original subgroup assumption from a broader population.
+- [x] **Target:** verify the landed fix for the March/May/June guidance chronology and remove the inference that later guidance cuts prove management's earlier intent (including `debrief_check.s2` and `thesis_check.a3`). Review a3's updates together.
+- [x] **First Solar:** verify the landed corrections keep verdicts tied to the stated assumptions. Enactment and durability are different questions; factory openings do not establish demand utilization (aligned across `dated_debrief` and `thesis_check.a2`).
+- [x] **Sarepta:** verify the landed corrections distinguish gross debt issuance from new program funding, age eligibility from the approval's surrogate-endpoint basis, and the original subgroup assumption from a broader population (including `Partly supported` at `e7` and record-scoped wording at `e10/e11`).
 - [x] Review the new verdict and publication-boundary tests; add independent expected-output fixtures where needed, and replace the universal status-regression ban with checks that permit evidence-backed uncertainty. Expand early-exit coverage where relevant.
 - [x] Strengthen pre-decision payload checks beyond absence of the `dated_debrief` key. Retain manual clause/source review; structural tests cannot establish factual support.
 - [x] Finish merge recovery beyond the landed save-before-delete fix: validate the whole batch, save atomically, then archive/delete inputs. Test failed writes and invalid batches; correct misleading validator documentation.
 - [ ] User playtest after local integration checks; record remaining editorial feedback.
-- [ ] Presentation merge multi-file transaction recovery (dated merging is fixed separately).
+- [x] Presentation merge multi-file transaction recovery (two-phase sibling temp staging, atomic replacement with multi-file rollback, and stored-presentation validation).
 
 Detailed evidence, replacement wording and acceptance criteria: [DATED_DEBRIEF_REVIEW.md](research/DATED_DEBRIEF_REVIEW.md).
 
 ## Later standalone work
 
 - [ ] Continue user playtesting after the recent layout changes; assess whether the snapshot and investigations make the decision easier.
-- [ ] Review remaining investigation clauses, valuation interpretations and full-record archive wording against sources. Include Madrigal’s raw funding-runway unit wording; mobile wrapping is fixed.
+- [ ] Review remaining investigation clauses, valuation interpretations and full-record archive wording against sources (Madrigal’s raw funding-runway unit wording and mobile wrapping are fixed).
 - [ ] Triage `repairs_needed` into blocking versus optional work before adding a publication-readiness gate. `sheet_ready` currently does not certify factual completeness.
 - [ ] Consider friend follow-ups only if useful after playtesting; this is optional, not a completion requirement.
 

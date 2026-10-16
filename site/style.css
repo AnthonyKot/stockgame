@@ -166,3 +166,45 @@ body.embedded section[id^="sec-"] { scroll-margin-top: 3.5rem; }
 .filter-bar button.ghost { padding: .25rem .6rem; font-size: .82rem; border-radius: 999px; }
 .case-meta-pills { display: inline-flex; gap: .35rem; flex-wrap: wrap; margin-left: .4rem; vertical-align: middle; }
 
+/* Strategic UX: subtle source pills, story-first briefing, 2-click decision ticket, reveal banner, starter trio */
+.cite-dot { display: inline-block; font-size: .7rem; color: var(--muted); background: var(--surface); border: 1px solid var(--grid); border-radius: 999px; padding: .05rem .4rem; cursor: pointer; vertical-align: baseline; line-height: 1.3; font-family: inherit; }
+.cite-dot:hover, .cite-dot:focus-visible { color: var(--ink); border-color: var(--axis); }
+
+.story-brief { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .5rem .75rem; margin: .8rem 0; }
+.story-brief .sb-tile { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .55rem .7rem; }
+.story-brief .sb-label { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+.story-brief .sb-val { font-size: 1.05rem; font-weight: 650; font-variant-numeric: tabular-nums; margin: .15rem 0; }
+.story-brief .sb-note { font-size: .78rem; color: var(--ink2); }
+
+.dossier-toggle { margin-bottom: 1rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: .75rem 1rem; }
+.dossier-toggle > summary { font-weight: 600; color: var(--ink); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: .5rem; flex-wrap: wrap; }
+.dossier-toggle > summary::marker, .dossier-toggle > summary::-webkit-details-marker { display: none; }
+.dossier-toggle > summary::after { content: "Expand full packet ↓"; font-size: .8rem; font-weight: 500; color: var(--s1); background: var(--chip); padding: .2rem .6rem; border-radius: 999px; }
+.dossier-toggle[open] > summary { margin-bottom: 1rem; padding-bottom: .65rem; border-bottom: 1px solid var(--grid); }
+.dossier-toggle[open] > summary::after { content: "Hide full packet ↑"; color: var(--ink2); }
+
+.action-pills, .hz-pills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .45rem; }
+.action-pills label, .hz-pills label { display: flex; flex-direction: column; align-items: center; text-align: center; padding: .55rem .35rem; border: 1.5px solid var(--grid); border-radius: 8px; background: var(--bg); cursor: pointer; font-weight: 600; font-size: .92rem; margin: 0; transition: border-color .12s, background .12s; }
+.action-pills label small, .hz-pills label small { font-weight: 400; font-size: .74rem; color: var(--muted); margin-top: .1rem; }
+.action-pills input[type="radio"], .hz-pills input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+.action-pills label:has(input:checked), .hz-pills label:has(input:checked) { border-color: var(--s1); background: var(--chip); }
+.action-pills label:has(input:focus-visible), .hz-pills label:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+.assume-list label { display: flex; align-items: flex-start; gap: .5rem; padding: .5rem .6rem; border: 1px solid var(--grid); border-radius: 6px; background: var(--bg); margin: .35rem 0; cursor: pointer; font-size: .88rem; line-height: 1.35; }
+.assume-list label:has(input:checked) { border-color: var(--s1); background: var(--chip); font-weight: 500; }
+.assume-list input[type="checkbox"] { margin-top: .2rem; flex-shrink: 0; }
+.ticket-advanced { margin: 0 0 .75rem; font-size: .85rem; }
+.ticket-advanced > summary { font-weight: 500; color: var(--ink2); padding: .25rem 0; }
+
+.reveal-hero { background: var(--chip); border-left: 4px solid var(--s1); border-radius: 8px; padding: .9rem 1rem; margin-bottom: 1rem; }
+.reveal-hero .rh-eyebrow { font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
+.reveal-hero .rh-company { font-size: 1.35rem; font-weight: 700; margin: .15rem 0 .35rem; }
+.reveal-hero .rh-verdict { display: inline-block; font-size: .88rem; font-weight: 600; padding: .2rem .6rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); }
+
+.starter-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .65rem; margin-top: .5rem; }
+.starter-card { display: block; padding: .65rem .8rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); text-decoration: none; }
+.starter-card:hover { border-color: var(--s1); }
+.starter-card strong { display: block; font-size: .92rem; margin-bottom: .15rem; }
+.badge.easy { color: var(--good); }
+.badge.biotech { color: var(--s2); }
+
+

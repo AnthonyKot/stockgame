@@ -40,12 +40,17 @@ const SG = (() => {
   const horizonText = h => { const n = Number(h.count); return n + ' calendar ' + (n === 1 ? 'year' : 'years'); };
   const badge = s => el('span', { class: 'badge ' + (s || '') }, (s || '').replace('_', ' '));
   /* Cite buttons: [c3] in prose -> button opening the evidence drawer */
-  function prose(text, onCite) {
+  function prose(text, onCite, subtle = false) {
     const frag = document.createDocumentFragment(); const re = /\[([a-z]\d+(?:\s*,\s*[a-z]\d+)*)\]/g; let last = 0, m;
     const t = String(text ?? '');
     while ((m = re.exec(t))) {
       frag.append(t.slice(last, m.index));
-      for (const id of m[1].split(/\s*,\s*/)) frag.append(el('button', { class: 'cite', type: 'button', 'aria-label': 'Show evidence ' + id, onclick: () => onCite(id) }, '[' + id + ']'), ' ');
+      const ids = m[1].split(/\s*,\s*/);
+      if (subtle) {
+        frag.append(' ', el('button', { class: 'cite-dot', type: 'button', title: 'Verified source (' + ids.join(', ') + ')', 'aria-label': 'Show evidence ' + ids.join(', '), onclick: () => onCite(ids[0]) }, 'source'), ' ');
+      } else {
+        for (const id of ids) frag.append(el('button', { class: 'cite', type: 'button', 'aria-label': 'Show evidence ' + id, onclick: () => onCite(id) }, '[' + id + ']'), ' ');
+      }
       last = re.lastIndex;
     }
     frag.append(t.slice(last)); return frag;
