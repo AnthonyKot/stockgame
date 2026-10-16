@@ -132,7 +132,7 @@
     }
     if (hw) {
       const weighQuick = el('details', { style: 'margin-top:.6rem' }, el('summary', { class: 'note' }, el('strong', {}, '⚖️ Compare Bull vs. Bear arguments (plain-English summary)')));
-      const wGrid = el('div', { class: 'story-brief', style: 'margin-top:.5rem' });
+      const wGrid = el('div', { class: 'weigh-grid', style: 'margin-top:.5rem' });
       for (const [k, lab] of [['own', '🟢 Case for buying'], ['flat', '⚪ Reason to wait'], ['short', '🔴 Case against']]) {
         if ((hw[k] || []).length) wGrid.append(el('div', { class: 'sb-tile' }, el('strong', { style: 'font-size:.85rem;display:block;margin-bottom:.3rem' }, lab), el('ul', { class: 'plain', style: 'font-size:.83rem;margin:0' }, ...hw[k].map(x => el('li', { style: 'margin:.25rem 0' }, Psubtle(x))))));
       }
@@ -155,7 +155,7 @@
 
   /* Collapsible Analyst Dossier toggle so the page is clean by default while keeping #main > section > h2 intact for tests and deep-dive readers */
   let dossierOpen = true;
-  const dossierBtn = el('button', { type: 'button', class: 'ghost', style: 'width:100%;display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem;padding:.6rem .9rem;background:var(--surface)', 'aria-expanded': 'true' });
+  const dossierBtn = el('button', { type: 'button', class: 'ghost', style: 'width:100%;display:flex;flex-wrap:wrap;gap:.4rem;text-align:left;justify-content:space-between;align-items:center;margin-bottom:.75rem;padding:.6rem .9rem;background:var(--surface)', 'aria-expanded': 'true' });
   const setDossierVis = open => {
     dossierOpen = open;
     dossierBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
