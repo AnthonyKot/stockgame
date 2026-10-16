@@ -62,18 +62,18 @@
   function openRules() { drawer.innerHTML = ''; drawer.append(el('div', { class: 'row' }, el('span', { style: 'flex:1' }), el('button', { class: 'ghost', type: 'button', onclick: closeDrawer }, 'Close'))); const s = SG.rulesSection(); s.style.marginTop = '0'; s.classList.remove('card'); drawer.append(s); drawer.hidden = false; backdrop.hidden = false; drawer.querySelector('button').focus(); }
   function closeDrawer() { drawer.hidden = true; backdrop.hidden = true; }
   backdrop.onclick = closeDrawer; document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
-  const P = t => prose(t, openDrawer);
-  const Psubtle = t => prose(t, openDrawer, true);
+  const P = t => prose(t, openDrawer, true);
+  const Psubtle = P;
 
   /* ---------- header: identity line + stats, rendered lower on the page (see 'Where the stock stands') ---------- */
   head.remove();
-  const statsCard = el('section', { class: 'card' }, el('h2', {}, 'Where the stock stands', el('small', {}, 'at the last close before the cutoff')));
-  statsCard.append(el('div', { style: 'margin-bottom:.4rem' }, headName, ' · ', sheet.masked.sector));
+  const statsCard = el('section', { class: 'card' }, el('h2', {}, 'Where the stock stands', el('small', {}, 'trailing returns to cutoff')));
+  statsCard.append(el('div', { class: 'note', style: 'margin-bottom:.45rem' }, headName, ' · ', sheet.masked.sector));
   statsCard.append(el('div', { class: 'kv' },
-    el('div', {}, el('div', { class: 'l' }, '1 month'), el('div', { class: 'v ' + (market.returns['1m'] >= 0 ? 'up' : 'down') }, signed(market.returns['1m'])), el('div', { class: 'p' }, 'SPY ' + signed(market.spy_returns['1m']))),
-    el('div', {}, el('div', { class: 'l' }, '3 months'), el('div', { class: 'v ' + (market.returns['3m'] >= 0 ? 'up' : 'down') }, signed(market.returns['3m'])), el('div', { class: 'p' }, 'SPY ' + signed(market.spy_returns['3m']))),
-    el('div', {}, el('div', { class: 'l' }, '12 months'), el('div', { class: 'v ' + (market.returns['12m'] >= 0 ? 'up' : 'down') }, signed(market.returns['12m'])), el('div', { class: 'p' }, 'SPY ' + signed(market.spy_returns['12m']))),
-    el('div', {}, el('div', { class: 'l' }, 'From 12-month high'), el('div', { class: 'v' }, signed(market.distance_from_trailing_252_high)), el('div', { class: 'p' }, 'closing basis'))));
+    el('div', {}, el('div', { class: 'l' }, '1 month'), el('div', { class: 'v ' + (market.returns['1m'] >= 0 ? 'up' : 'down') }, signed(market.returns['1m'])), el('div', { class: 'p' }, 'S&P 500 ' + signed(market.spy_returns['1m']))),
+    el('div', {}, el('div', { class: 'l' }, '3 months'), el('div', { class: 'v ' + (market.returns['3m'] >= 0 ? 'up' : 'down') }, signed(market.returns['3m'])), el('div', { class: 'p' }, 'S&P 500 ' + signed(market.spy_returns['3m']))),
+    el('div', {}, el('div', { class: 'l' }, '12 months'), el('div', { class: 'v ' + (market.returns['12m'] >= 0 ? 'up' : 'down') }, signed(market.returns['12m'])), el('div', { class: 'p' }, 'S&P 500 ' + signed(market.spy_returns['12m']))),
+    el('div', {}, el('div', { class: 'l' }, 'Vs. 12-month high'), el('div', { class: 'v' }, signed(market.distance_from_trailing_252_high)), el('div', { class: 'p' }, 'from 52-week peak'))));
 
   /* ---------- blocks ---------- */
   const card = (title, sub, ...kids) => el('section', { class: 'card' }, el('h2', {}, title, sub ? el('small', {}, sub) : null), ...kids);
@@ -90,7 +90,7 @@
   const sc = sheet.scene; let sceneRead = !!sc;
   const hw = sheet.help_me_weigh;
   if (sc) {
-    const scene = el('section', { class: 'card scene', id: 'sec-scene' }, el('h2', {}, 'Morning of ' + dateFmt(sheet.cutoff) + ' · ' + sc.setup_label, el('small', {}, `built for a ${years}-year hold; you choose the horizon when you decide`)));
+    const scene = el('section', { class: 'card scene', id: 'sec-scene' }, el('h2', {}, 'Morning of ' + dateFmt(sheet.cutoff) + ' · ' + sc.setup_label));
     const q = el('p', { style: 'font-size:1.05rem;font-weight:500;margin:.6rem 0' }, sc.question);
     if (sc.setup === 'bad_news_headline') scene.append(el('blockquote', { style: 'margin:.4rem 0;padding:.5rem .8rem;border-left:3px solid var(--s2);font-weight:600' }, sc.voice));
     else if (sc.setup === 'analysts_disagree') { const parts = sc.voice.split(/\s(?=The other:)/); scene.append(el('p', {}, el('em', {}, parts[0])), parts[1] ? el('p', {}, el('em', {}, parts[1])) : null); }
@@ -140,9 +140,14 @@
       weighQuick.addEventListener('toggle', () => { if (weighQuick.open) hintUsed = true; });
       scene.append(weighQuick);
     }
-    if (heads.length) scene.append(el('details', { style: 'margin-top:.4rem' }, el('summary', { class: 'note' }, 'Headlines on your phone from the past weeks'), el('ul', { class: 'plain' }, ...heads.map(h => el('li', { class: 'note' }, el('span', { class: 'muted' }, dateFmt(h.available_at) + ' · '), h.masked_headline.replace(/\s*\(.*?(exhibit|accession).*?\)/i, ''))))));
+    const bizText = (transparent || (prior && !walkPending)) && reveal ? reveal.transparent.business_two_sentences : sheet.masked.business_two_sentences;
+    if (bizText) {
+      scene.append(el('details', { style: 'margin-top:.4rem' },
+        el('summary', { class: 'note' }, el('strong', {}, '🏢 What this company actually does (2-sentence summary)')),
+        el('p', { class: 'note', style: 'margin:.35rem 0 0;color:var(--ink)' }, Psubtle(bizText))));
+    }
     const hasAssumptions = !campaignMode && (sc.assumptions || []).length > 0;
-    scene.append(el('p', { class: 'note', style: 'margin:.6rem 0 0' }, 'You have enough above to make a call on the right, or open the full analyst packet below for charts and filings.',
+    scene.append(el('p', { class: 'note', style: 'margin:.6rem 0 0' }, 'You have enough above to make a call on the right, or browse the supporting data below.',
       hasAssumptions ? ' ' : null,
       hasAssumptions ? el('a', { href: '#ticket-assumptions', onclick: e => { e.preventDefault(); const t = document.getElementById('ticket-assumptions') || ticket; t.scrollIntoView({ behavior: 'smooth', block: 'center' }); const first = t.querySelector('input'); if (first) setTimeout(() => first.focus(), 350); } }, `Preview the ${sc.assumptions.length} assumptions in the decision ticket ↓`) : null));
     main.append(scene);
@@ -164,58 +169,68 @@
   dossierBtn.onclick = () => setDossierVis(!dossierOpen);
   main.append(dossierBtn);
 
-  /* the question first */
-  const wc0 = (sheet.what_changed || [])[0];
-  main.append(el('section', { class: 'card', id: 'sec-question', style: 'border-left:4px solid var(--s1)' },
-    el('h2', { style: 'font-size:1.15rem' }, sheet.neutral_title || 'The decision'),
-    sc ? null : el('p', { style: 'font-size:1.02rem' }, P(sheet.player_question || '')),
-    wc0 ? el('p', { class: 'note' }, el('strong', {}, 'Why now: '), P(wc0.fact)) : null,
-    el('p', { class: 'note' }, 'Everything below was public before ', dateFmt(sheet.cutoff), ' 09:00 New York. Horizon ', horizonText(sheet.horizon), '. Read as much or as little as you need, then decide on the right.')));
-  const bizCard = card('Business', null, el('p', {}, P((transparent || (prior && !walkPending)) && reveal ? reveal.transparent.business_two_sentences : sheet.masked.business_two_sentences)));
-  bizCard.id = 'sec-business';
-  main.append(bizCard);
+  /* Fallback header card only if a case has no opening scene */
+  if (!sc) {
+    const wc0 = (sheet.what_changed || [])[0];
+    main.append(el('section', { class: 'card', id: 'sec-question', style: 'border-left:4px solid var(--s1)' },
+      el('h2', { style: 'font-size:1.15rem' }, sheet.neutral_title || 'The decision'),
+      el('p', { style: 'font-size:1.02rem' }, P(sheet.player_question || '')),
+      wc0 ? el('p', { class: 'note' }, el('strong', {}, 'Why now: '), P(wc0.fact)) : null));
+    const bizCard = card('Business', null, el('p', {}, P((transparent || (prior && !walkPending)) && reveal ? reveal.transparent.business_two_sentences : sheet.masked.business_two_sentences)));
+    bizCard.id = 'sec-business';
+    main.append(bizCard);
+  }
 
   /* market chart */
   const chartHost = el('div'); let span = years >= 3 ? 36 : 12;
   const spanBtns = el('div', { class: 'row', role: 'group', 'aria-label': 'Chart span' });
   const drawMarket = () => { const cut = new Date(market.last_eligible_session + 'T00:00:00Z'); cut.setUTCMonth(cut.getUTCMonth() - span); const from = cut.toISOString().slice(0, 10);
     const bars = market.bars.filter(b => b.d >= from), spy = market.spy.filter(b => b.d >= from);
-    SG.lineChart(chartHost, [{ name: 'This stock', cls: 's1', points: bars.map(b => ({ d: b.d, v: b.c })) }, { name: 'SPY', cls: 's2', points: spy.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, volume: bars.map(b => ({ d: b.d, v: b.v })), label: 'Price indexed to 100 at the start of the window, with SPY, ending at the cutoff', rawFmt: r => '$' + r.toFixed(2) }); };
-  for (const m of [12, 36]) spanBtns.append(el('button', { class: 'ghost', type: 'button', 'aria-pressed': span === m ? 'true' : 'false', onclick: e => { span = m; [...spanBtns.children].forEach(b => b.setAttribute('aria-pressed', 'false')); e.target.setAttribute('aria-pressed', 'true'); drawMarket(); } }, m === 12 ? '12 months' : '3 years'));
-  const lastClose = el('div', { class: 'row', style: 'gap:.75rem;margin:.75rem 0;align-items:baseline' },
-    el('span', { class: 'note' }, 'Last eligible close'),
-    el('strong', { style: 'font-size:1.4rem;font-variant-numeric:tabular-nums' }, '$' + market.last_close.toFixed(2)),
-    el('span', { class: 'note' }, dateFmt(market.last_eligible_session)));
-  const mktCard = card('Market snapshot', 'ends at the cutoff', lastClose, spanBtns, chartHost, el('p', { class: 'note' }, market.level_note + ' ' + market.coverage_note));
+    SG.lineChart(chartHost, [{ name: 'This stock', cls: 's1', points: bars.map(b => ({ d: b.d, v: b.c })) }, { name: 'S&P 500 (SPY)', cls: 's2', points: spy.map(b => ({ d: b.d, v: b.c })) }], { controls: true, rebase: true, volume: bars.map(b => ({ d: b.d, v: b.v })), label: 'Indexed to 100 at start of window (vs. S&P 500)', rawFmt: r => '$' + r.toFixed(2) }); };
+  for (const m of [12, 36]) spanBtns.append(el('button', { class: 'ghost', type: 'button', 'aria-pressed': span === m ? 'true' : 'false', onclick: e => { span = m; [...spanBtns.children].forEach(b => b.setAttribute('aria-pressed', 'false')); e.target.setAttribute('aria-pressed', 'true'); drawMarket(); } }, m === 12 ? 'Past 12 months' : 'Past 3 years'));
+  const lastClose = el('div', { class: 'row', style: 'gap:.75rem;margin:.5rem 0;align-items:baseline' },
+    el('span', { class: 'note' }, 'Last close before cutoff:'),
+    el('strong', { style: 'font-size:1.35rem;font-variant-numeric:tabular-nums' }, '$' + market.last_close.toFixed(2)),
+    el('span', { class: 'note' }, 'on ' + dateFmt(market.last_eligible_session)));
+  const mktCard = card('Market snapshot', 'price history to cutoff', lastClose, spanBtns, chartHost);
   mktCard.id = 'sec-market';
   main.append(mktCard);
   main.append(statsCard);
   drawMarket();
 
   /* what changed */
-  const wcCard = card('What changed', 'material items public before the cutoff', el('ul', { class: 'plain' }, ...(sheet.what_changed || []).map(w => el('li', {}, el('strong', {}, dateFmt(w.date)), ' ', badge(w.status), el('div', {}, P(w.fact)), el('div', { class: 'note' }, P(w.relationship_to_business))))));
+  const wcCard = card('What changed', 'key news before the cutoff', el('ul', { class: 'plain' }, ...(sheet.what_changed || []).map(w => el('li', { style: 'padding:.4rem 0' },
+    el('div', {}, el('strong', {}, dateFmt(w.date) + ': '), P(w.fact)),
+    w.relationship_to_business ? el('div', { class: 'note', style: 'margin-top:.15rem' }, '→ ', P(w.relationship_to_business)) : null))));
   wcCard.id = 'sec-changed';
   main.append(wcCard);
 
   /* financial snapshot */
+  const humanUnit = u => u === 'USD_millions' ? '$M' : u === 'USD_billions' ? '$B' : u === 'USD_per_share' ? '$/share' : u === 'percent' ? '%' : (u === 'shares_millions' || u === 'millions_of_shares') ? 'M shares' : u === 'shares' ? 'shares' : (u || '');
   const kv = el('div', { class: 'kv' });
-  for (const h of fs.headline || []) kv.append(el('div', {}, el('div', { class: 'l' }, h.label, ' ', badge(h.status)), el('div', { class: 'v' }, h.value === null || h.value === undefined ? 'not available' : money(h.value, h.unit)), el('div', { class: 'p' }, (h.period ? 'period ' + h.period : '') + (h.prior && h.prior.value !== null && h.prior.value !== undefined ? ' · prior ' + money(h.prior.value, h.unit) + ' (' + h.prior.period + ')' : '') + (h.available_at ? ' · public ' + dateFmt(h.available_at) : '')), h.definition ? el('details', {}, el('summary', { class: 'note' }, 'definition'), el('div', { class: 'note' }, h.definition)) : null));
+  for (const h of fs.headline || []) kv.append(el('div', {}, el('div', { class: 'l' }, h.label), el('div', { class: 'v' }, h.value === null || h.value === undefined ? 'not available' : money(h.value, h.unit)), el('div', { class: 'p' }, (h.period ? h.period : '') + (h.prior && h.prior.value !== null && h.prior.value !== undefined ? ' · vs ' + money(h.prior.value, h.unit) + ' (' + h.prior.period + ')' : '')), h.definition ? el('details', {}, el('summary', { class: 'note' }, 'definition'), el('div', { class: 'note' }, h.definition)) : null));
   const hist = el('table'); const histWrap = el('div');
   if ((fs.history || []).length) {
     const periods = [...new Set(fs.history.flatMap(r => r.cells.map(c => c.period)))];
     const isAnnual = per => /^FY\s?\d{4}|^\d{4}$|full[- ]year|^TTM|^LTM/i.test(String(per)); const isQuarter = per => /^Q[1-4]|quarter|^\dQ|9M|nine|6M|H[12]/i.test(String(per));
     const mixed = periods.some(isAnnual) && periods.some(isQuarter);
     const isStockRow = r => /cash|debt|share|assets|equity|investment|liabilit|deposit|loan|receivable|inventory|backlog|book value|balance/i.test(r.row);
-    let perQuarter = mixed;
+    let perQuarter = false;
+    const fmtCell = (v, unit, conv) => {
+      if (v === null || v === undefined) return '—';
+      if (typeof v !== 'number') return v;
+      if (unit === 'shares' && Math.abs(v) >= 1e6) return (v / 1e6).toLocaleString('en-US', { maximumFractionDigits: 1 }) + 'M';
+      return v.toLocaleString('en-US', { maximumFractionDigits: 2 });
+    };
     const drawHist = () => { hist.innerHTML = '';
-      hist.append(el('tr', {}, el('th', {}, 'Row'), ...periods.map(p => el('th', { class: 'n' }, p + (perQuarter && isAnnual(p) ? ' ÷4' : '')))));
-      for (const r of fs.history) { const stock = isStockRow(r);
-        hist.append(el('tr', {}, el('td', {}, r.row, ' ', el('span', { class: 'muted' }, (r.unit || '') + (perQuarter && !stock ? '' : (perQuarter && stock ? ' · point in time' : '')))), ...periods.map(p => { const c = r.cells.find(x => x.period === p); if (!c) return el('td', { class: 'n' }, '');
+      hist.append(el('tr', {}, el('th', {}, 'Metric'), ...periods.map(p => el('th', { class: 'n' }, p + (perQuarter && isAnnual(p) ? ' (÷4)' : '')))));
+      for (const r of fs.history) { const stock = isStockRow(r); const uLabel = humanUnit(r.unit);
+        hist.append(el('tr', {}, el('td', {}, r.row, uLabel ? el('span', { class: 'muted' }, ' (' + uLabel + ')') : null), ...periods.map(p => { const c = r.cells.find(x => x.period === p); if (!c) return el('td', { class: 'n' }, '—');
           let v = c.value; const conv = perQuarter && isAnnual(p) && !stock && typeof v === 'number'; if (conv) v = v / 4;
-          return el('td', { class: 'n', title: 'public ' + (c.available_at || '?') + ' · ' + (c.status || '') + ' · ' + (c.source_ids || []).join(', ') + (conv ? ' · annual figure divided by 4' : '') }, v === null || v === undefined ? '—' : (typeof v === 'number' ? v.toLocaleString('en-US', { maximumFractionDigits: 2 }) : v)); }))); } };
+          return el('td', { class: 'n', title: 'Filed ' + (c.available_at || '?') + (conv ? ' · annual divided by 4' : '') }, fmtCell(v, r.unit, conv)); }))); } };
     drawHist();
     if (location.hash === '#hist') setTimeout(() => { const d = histWrap.closest('details'); if (d) { d.open = true; d.scrollIntoView(); } }, 300);
-    if (mixed) histWrap.append(el('label', { class: 'note', style: 'display:block;margin:.3rem 0' }, el('input', { type: 'checkbox', checked: '', onchange: e => { perQuarter = e.target.checked; drawHist(); } }), ' Show annual columns as a per-quarter average (÷4) so they compare with the quarters; balance-sheet rows are left as reported'));
+    if (mixed) histWrap.append(el('label', { class: 'note', style: 'display:block;margin:.3rem 0' }, el('input', { type: 'checkbox', onchange: e => { perQuarter = e.target.checked; drawHist(); } }), ' Divide full-year (FY) income/cash-flow columns by 4 to compare against single quarters'));
     histWrap.append(el('div', { class: 'scroll' }, hist));
   }
   const vkv = el('div', { class: 'kv', style: 'margin-top:.75rem' });
@@ -227,7 +242,7 @@
   const vdet = el('details', {}, el('summary', { class: 'note' }, 'Valuation inputs and caveats'), el('ul', { class: 'plain' }, ...(V.inputs || []).map(i => el('li', { class: 'note' }, `${i.name}: ${i.value_millions !== undefined ? (i.name === 'shares' ? i.value_millions.toFixed(1) + ' m shares' : m(i.value_millions)) : ''} as of ${i.as_of || i.period || ''}${i.filed ? ', filed ' + i.filed : ''}${i.source ? ' [' + (Array.isArray(i.source) ? i.source.join(', ') : i.source) + ']' : ''}`)), ...(V.caveats || []).map(c => el('li', { class: 'note' }, 'Caveat: ' + c)), el('li', { class: 'note' }, V.note || V.reason || '')));
   if (fs.presentation) {
     const presentation = fs.presentation;
-    const snapshot = card('Financial snapshot', null, el('p', { class: 'note' }, presentation.intro));
+    const snapshot = card('Financial snapshot', 'key figures from filings');
     snapshot.classList.add('financial-snapshot');
     snapshot.id = 'sec-financials';
     const periodLabel = value => /^\d{4}-\d{2}-\d{2}$/.test(value || '') ? 'As of ' + dateFmt(value) : String(value || '').replace(/^Q([1-4])-(\d{4})$/, 'Q$1 $2').replace(/^9M-(\d{4})$/, 'Jan–Sep $1');
@@ -239,17 +254,18 @@
         const h = view && fs.headline.find(metric => metric.label === view.metric);
         if (!h || !view) continue;
         const prior = h.prior && h.prior.value !== null && h.prior.value !== undefined;
-        const row = el('div', { class: 'snapshot-row' },
-          el('div', { class: 'snapshot-label' }, el('strong', {}, view.label), el('span', { class: 'note' }, periodLabel(h.period))),
-          el('div', { class: 'snapshot-number' }, el('strong', {}, view.display_value || compactMoney(h.value, h.unit)),
-            prior && view.prior_comparable !== false ? el('span', { class: 'note' }, 'vs ' + compactMoney(h.prior.value, h.unit) + ' · ' + periodLabel(h.prior.period)) : null),
-          el('p', { class: 'snapshot-context' }, view.context));
-        const detail = el('details', { class: 'snapshot-detail' }, el('summary', {}, view.label + ': definition & source'),
+        const detail = el('details', { class: 'snapshot-detail' }, el('summary', {}, 'Formula & filing source'),
           el('p', { class: 'note' }, h.status + ' · published ' + dateFmt(h.available_at) + ' · ' + h.label),
           el('p', { class: 'note' }, 'Exact displayed amount: ' + money(h.value, h.unit)), el('p', { class: 'note' }, P(h.definition || '')));
         if (prior && view.prior_comparable === false) detail.append(el('p', { class: 'note' }, 'Non-comparable prior: ' + compactMoney(h.prior.value, h.unit) + ' (' + periodLabel(h.prior.period) + ').'));
         for (const sid of h.source_ids || []) { const source = handles.get(sid); if (source) detail.append(el('p', { class: 'note' }, source.masked_title || source.title || sid, ' · public ' + dateFmt(source.available_at))); }
-        row.append(detail); section.append(row);
+        const row = el('div', { class: 'snapshot-row' },
+          el('div', { class: 'snapshot-label' }, el('strong', {}, view.label), el('span', { class: 'note' }, periodLabel(h.period))),
+          el('div', { class: 'snapshot-number' }, el('strong', {}, view.display_value || compactMoney(h.value, h.unit)),
+            prior && view.prior_comparable !== false ? el('span', { class: 'note' }, 'vs ' + compactMoney(h.prior.value, h.unit) + ' · ' + periodLabel(h.prior.period)) : null),
+          el('p', { class: 'snapshot-context' }, view.context),
+          detail);
+        section.append(row);
       }
       snapshot.append(section);
     }
@@ -261,7 +277,7 @@
       if (rev) { vdet.querySelector('ul').append(el('li', { class: 'note' }, 'Revenue multiple set aside: ' + rev.querySelector('.l').textContent.replace(/derived/, '').trim() + ' ' + Number(V.ev_to_revenue !== undefined ? V.ev_to_revenue : V.market_cap_to_revenue).toFixed(1) + '× on ' + m(V.annual_revenue_musd) + ' of last-full-year revenue; not a useful gauge for a company valued on its pipeline.')); rev.remove(); }
       if (V.market_cap_musd && typeof V.net_cash_musd === 'number') vkv.append(el('div', {}, el('div', { class: 'l' }, 'Net cash / market cap'), el('div', { class: 'v' }, (100 * V.net_cash_musd / V.market_cap_musd).toFixed(1) + '%')));
     }
-    const valuationGroup = el('section', { class: 'snapshot-group snapshot-price' }, el('h3', {}, vmode === 'pipeline' ? 'What the market pays for the pipeline' : 'What the market is pricing'), el('p', { class: 'note' }, 'At the ' + dateFmt(V.as_of_price_date) + ' close · estimates derived from the available filings'), vkv, el('p', { class: 'note' }, presentation.valuation_context), vdet);
+    const valuationGroup = el('section', { class: 'snapshot-group snapshot-price' }, el('h3', {}, vmode === 'pipeline' ? 'What the market pays for the pipeline' : 'What the market is pricing'), el('p', { class: 'note' }, 'At the ' + dateFmt(V.as_of_price_date) + ' close · derived from reported filings'), vkv, el('p', { class: 'note' }, presentation.valuation_context), vdet);
     // Keep the valuation inputs auditable without making formulas the main reading path.
     for (const tile of vkv.children) {
       const formula = tile.querySelector('.p');
@@ -269,37 +285,93 @@
       const status = tile.querySelector('.badge'); if (status) status.remove();
       const number = tile.querySelector('.v'); if (number) number.textContent = number.textContent.replace(/ (bn|m|tn)$/, '$1').replace(/^(\d+\.\d+)x$/, (_, x) => Number(x).toFixed(1) + '×');
     }
-    snapshot.append(valuationGroup, el('details', { class: 'snapshot-history' }, el('summary', {}, 'Full financial history'), histWrap));
+    snapshot.append(valuationGroup, el('details', { class: 'snapshot-history' }, el('summary', {}, 'Full multi-year financial table (click to expand)'), histWrap));
     main.append(snapshot);
   } else {
-    const snapshot = card('Financial snapshot', (fs.adapter || '').replace('_', ' '), kv, el('h3', { style: 'font-size:.9rem;margin:.75rem 0 0' }, 'Valuation at the cutoff'), vkv, vdet, el('details', { style: 'margin-top:.5rem' }, el('summary', {}, 'Supporting history (hover a cell for its publication date and source)'), histWrap));
+    const snapshot = card('Financial snapshot', 'key figures from filings', kv, el('h3', { style: 'font-size:.9rem;margin:.75rem 0 0' }, 'Valuation at the cutoff'), vkv, vdet, el('details', { style: 'margin-top:.5rem' }, el('summary', {}, 'Full multi-year financial table'), histWrap));
     snapshot.id = 'sec-financials';
     main.append(snapshot);
   }
 
-  /* sector evidence: generic renderer */
-  const se = sheet.sector_evidence || {}; const secCard = card('Sector evidence', sheet.sector_module);
-  const renderVal = v => typeof v === 'object' && v !== null ? el('span', { class: 'note' }, JSON.stringify(v).replace(/[{}"]/g, '').replace(/,/g, ', ')) : P(String(v ?? ''));
+  /* sector evidence: clean human-friendly renderer (filters out missing-data rows and empty/internal columns) */
+  const se = sheet.sector_evidence || {}; const secCard = card('Sector evidence', null);
+  const secTitleMap = {
+    segment_table: 'Business segments',
+    segments: 'Business segments',
+    guidance_table: 'Management guidance vs. actuals',
+    guidance: 'Management guidance',
+    capital_allocation: 'Capital allocation & balance sheet',
+    competitive_position: 'Competitive position & market share',
+    competitive_position_facts: 'Competitive position & market share',
+    existing_products: 'Approved & partnered products',
+    concentration_note: 'Revenue concentration note',
+    programs: 'Clinical pipeline programs',
+    pipeline_table: 'Clinical pipeline programs',
+    trial_summary: 'Key clinical trial results',
+    commercial_context: 'Commercial & partnering context'
+  };
+  const renderVal = v => {
+    if (typeof v === 'object' && v !== null) {
+      const parts = Object.entries(v).filter(([, val]) => val !== null && val !== undefined && val !== '').map(([key, val]) => `${key.replace(/_/g, ' ')}: ${val}`);
+      return el('span', { class: 'note' }, parts.join(' · ') || '—');
+    }
+    return P(String(v ?? ''));
+  };
+  const cleanColName = kk => kk.replace(/_usd_millions/gi, ' ($M)').replace(/_pct/gi, ' (%)').replace(/_/g, ' ').replace(/^\w/, c => c.toUpperCase());
   for (const [k, v] of Object.entries(se)) {
-    const title = k.replace(/_/g, ' ');
-    if (Array.isArray(v) && v.length && typeof v[0] === 'object') { const keys = [...new Set(v.flatMap(o => Object.keys(o)))].filter(x => x !== 'source_ids');
-      if (keys.length > 8) { secCard.append(el('h3', { style: 'font-size:.9rem' }, title)); for (const o of v) { const dl = el('dl', { class: 'note' }); for (const kk of keys) if (o[kk] !== undefined && o[kk] !== null && o[kk] !== '') dl.append(el('dt', { style: 'font-weight:600;margin-top:.3rem' }, kk.replace(/_/g, ' ')), el('dd', { style: 'margin:0' }, renderVal(o[kk]))); secCard.append(el('details', { open: '' }, el('summary', {}, o.program || o.product || o.segment || o.metric || o.item || 'item'), dl)); } }
-      else { const t = el('table'); t.append(el('tr', {}, ...keys.map(kk => el('th', {}, kk.replace(/_/g, ' '))))); for (const o of v) t.append(el('tr', {}, ...keys.map(kk => el('td', {}, renderVal(o[kk]))))); secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('div', { class: 'scroll' }, t)); } }
-    else if (Array.isArray(v)) secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('ul', { class: 'plain' }, ...v.map(x => el('li', {}, renderVal(x)))));
-    else secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('p', {}, renderVal(v)));
+    const title = secTitleMap[k] || k.replace(/_/g, ' ').replace(/^\w/, c => c.toUpperCase());
+    if (Array.isArray(v) && v.length && typeof v[0] === 'object') {
+      const validRows = v.filter(o => o.status !== 'missing');
+      if (!validRows.length) continue;
+      const keys = [...new Set(validRows.flatMap(o => Object.keys(o)))].filter(x => !['source_ids', 'status', 'reason'].includes(x) && validRows.some(o => o[x] !== undefined && o[x] !== null && o[x] !== ''));
+      if (keys.length === 1) {
+        secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('ul', { class: 'plain' }, ...validRows.map(o => el('li', {}, renderVal(o[keys[0]])))));
+      } else if (keys.length > 8) {
+        secCard.append(el('h3', { style: 'font-size:.9rem' }, title));
+        for (const o of validRows) {
+          const dl = el('dl', { class: 'note' });
+          for (const kk of keys) if (o[kk] !== undefined && o[kk] !== null && o[kk] !== '') dl.append(el('dt', { style: 'font-weight:600;margin-top:.3rem' }, cleanColName(kk)), el('dd', { style: 'margin:0' }, renderVal(o[kk])));
+          secCard.append(el('details', { open: '' }, el('summary', {}, o.program || o.product || o.segment || o.metric || o.item || 'item'), dl));
+        }
+      } else {
+        const t = el('table');
+        t.append(el('tr', {}, ...keys.map(kk => el('th', {}, cleanColName(kk)))));
+        for (const o of validRows) t.append(el('tr', {}, ...keys.map(kk => el('td', {}, renderVal(o[kk])))));
+        secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('div', { class: 'scroll' }, t));
+      }
+    } else if (Array.isArray(v) && v.length) {
+      secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('ul', { class: 'plain' }, ...v.map(x => el('li', {}, renderVal(x)))));
+    } else if (v) {
+      secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('p', {}, renderVal(v)));
+    }
   }
-  const secWrap = el('section', { class: 'card', id: 'sec-sector' }, el('details', {}, el('summary', {}, el('strong', {}, 'Sector evidence'), el('small', { class: 'muted' }, ' ' + sheet.sector_module + ' · open for the program, segment or guidance tables')), secCard)); secCard.classList.remove('card'); secCard.querySelector('h2').remove();
+  const secSubLabel = /clinical|biotech|pharma/i.test(sheet.sector_module || '') ? 'Pipeline, trial results & commercial context' : /bank/i.test(sheet.sector_module || '') ? 'Segments, credit quality & capital ratios' : 'Segments, guidance, capital allocation & competitive position';
+  const secWrap = el('section', { class: 'card', id: 'sec-sector' }, el('details', {}, el('summary', { style: 'cursor:pointer' }, el('strong', {}, 'Sector & guidance breakdown'), el('small', { class: 'muted' }, ' · ' + secSubLabel + ' (click to expand)')), secCard)); secCard.classList.remove('card'); secCard.querySelector('h2').remove();
   main.append(secWrap);
 
-  /* upcoming and unresolved */
+  /* upcoming, unresolved, and macro context combined into one clean forward-looking card */
   const uu = sheet.upcoming_and_unresolved || {};
-  const catCard = card('Upcoming and unresolved', null, el('h3', { style: 'font-size:.9rem' }, 'Publicly expected catalysts'), el('ul', { class: 'plain' }, ...(uu.catalysts || []).map(c => el('li', {}, P(c.description), ' ', el('span', { class: 'muted' }, '— ' + (c.timing_window || '') + (c.announced_on ? ', announced ' + dateFmt(c.announced_on) : ''))))),
-    el('h3', { style: 'font-size:.9rem' }, 'Unresolved questions'), el('ol', {}, ...(uu.unresolved_questions || []).map(q => el('li', {}, P(q)))));
+  const catCard = card('Upcoming catalysts & open questions', 'what was still ahead at the cutoff',
+    (uu.catalysts || []).length ? el('h3', { style: 'font-size:.9rem' }, 'Expected upcoming milestones') : null,
+    (uu.catalysts || []).length ? el('ul', { class: 'plain' }, ...(uu.catalysts || []).map(c => el('li', {}, P(c.description), ' ', el('span', { class: 'muted' }, '— ' + (c.timing_window || ''))))) : null,
+    (uu.unresolved_questions || []).length ? el('h3', { style: 'font-size:.9rem' }, 'Key unresolved questions') : null,
+    (uu.unresolved_questions || []).length ? el('ol', {}, ...(uu.unresolved_questions || []).map(q => el('li', {}, P(q)))) : null,
+    (sheet.macro_context || []).length ? el('h3', { style: 'font-size:.9rem' }, 'Industry & policy backdrop') : null,
+    (sheet.macro_context || []).length ? el('ul', { class: 'plain' }, ...sheet.macro_context.map(m => el('li', {}, el('strong', {}, P(m.item)), el('div', { class: 'note' }, P(m.business_connection))))) : null);
   catCard.id = 'sec-catalysts';
   main.append(catCard);
-  if ((sheet.macro_context || []).length) main.append(card('Macro context', 'at most three items', el('ul', { class: 'plain' }, ...sheet.macro_context.map(m => el('li', {}, P(m.item), el('div', { class: 'note' }, P(m.business_connection)))))));
-  if (hw) { const d = el('details', {}, el('summary', {}, 'Help me weigh this (evidence-based arguments, no outcome knowledge)')); for (const [k, lab] of [['own', 'For owning'], ['flat', 'For staying flat'], ['short', 'For being short']]) if ((hw[k] || []).length) d.append(el('h3', { style: 'font-size:.9rem' }, lab), el('ul', { class: 'plain' }, ...hw[k].map(x => el('li', {}, P(x))))); d.addEventListener('toggle', () => { if (d.open) hintUsed = true; }); const hwCard = card('Optional', null, d); hwCard.id = 'sec-weigh'; main.append(hwCard); }
-  if ((sheet.missing_data || []).length || sheet.editorial_notes) main.append(el('section', { class: 'card' }, el('details', {}, el('summary', { class: 'note' }, 'Known gaps in this packet (' + (sheet.missing_data || []).length + ')'), el('ul', { class: 'plain' }, ...(sheet.missing_data || []).map(x => el('li', { class: 'note' }, x))), sheet.editorial_notes ? el('p', { class: 'note' }, sheet.editorial_notes) : null)));
+
+  /* Only show bottom Help Me Weigh if there was no opening scene card */
+  if (hw && !sc) { const d = el('details', {}, el('summary', {}, 'Help me weigh this (evidence-based arguments, no outcome knowledge)')); for (const [k, lab] of [['own', 'For owning'], ['flat', 'For staying flat'], ['short', 'For being short']]) if ((hw[k] || []).length) d.append(el('h3', { style: 'font-size:.9rem' }, lab), el('ul', { class: 'plain' }, ...hw[k].map(x => el('li', {}, P(x))))); d.addEventListener('toggle', () => { if (d.open) hintUsed = true; }); const hwCard = card('Optional', null, d); hwCard.id = 'sec-weigh'; main.append(hwCard); }
+
+  /* Filter out outdated 'market cap not available' writer note when valuation is derived, and keep filing limitations tucked neatly at the bottom */
+  const cleanGaps = (sheet.missing_data || []).filter(g => !(V.status === 'derived' && /market cap|share price/i.test(g)));
+  if (cleanGaps.length) {
+    main.append(el('section', { class: 'card', style: 'padding:.65rem 1rem' },
+      el('details', {},
+        el('summary', { class: 'note', style: 'cursor:pointer' }, 'Data limitations in public filings (' + cleanGaps.length + ')'),
+        el('ul', { class: 'plain' }, ...cleanGaps.map(x => el('li', { class: 'note' }, x))))));
+  }
   setDossierVis(true);
 
   /* populate quick-jump section bar */
@@ -342,7 +414,7 @@
         el('label', { style: avail.includes(h) ? '' : 'opacity:.45;cursor:not-allowed' },
           el('input', { type: 'radio', name: 'years', value: h, checked: Number(h) === years ? '' : null, disabled: avail.includes(h) ? null : '' }),
           h + (h === '1' ? ' year' : ' years'),
-          el('small', {}, Number(h) === years ? 'default' : avail.includes(h) ? 'available' : 'no data')))));
+          el('small', {}, Number(h) === years ? 'case default' : avail.includes(h) ? 'available' : 'no data')))));
     const size = el('fieldset', {}, el('legend', {}, el('strong', {}, 'Position size'), ', share of $100,000'), ...[5, 10, 20].map(s => el('label', {}, el('input', { type: 'radio', name: 'size', value: s, checked: s === 10 ? '' : null }), ` ${s}% ($${(s * 1000).toLocaleString('en-US')})`)));
     const mkSel = (name, opts) => { const s = el('select', { name, style: 'font:inherit;padding:.3rem;background:var(--bg);color:var(--ink);border:1px solid var(--axis);border-radius:4px' }); for (const [v, l] of opts) s.append(el('option', { value: v }, l)); return s; };
     const exits = el('fieldset', { class: 'exit-levels' }, el('legend', {}, 'Exit levels'),
