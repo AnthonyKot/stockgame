@@ -76,12 +76,14 @@
 
   /* ---------- blocks ---------- */
   const card = (title, sub, ...kids) => el('section', { class: 'card' }, el('h2', {}, title, sub ? el('small', {}, sub) : null), ...kids);
+  const packetNav = el('nav', { class: 'packet-nav', 'aria-label': 'Packet sections' }, el('span', { class: 'nav-label' }, 'Jump to:'));
+  main.append(packetNav);
   /* opening scene: a setup written from the packet (cases/scenes.json), plus real dated headlines */
   let instinct = null; const askedQ = new Set();
   const heads = (sheet.source_handles || []).filter(h => h.masked_headline && h.available_at && h.available_at <= sheet.cutoff.slice(0, 10) && !/xbrl|company facts/i.test(h.masked_headline)).sort((a, b) => b.available_at.localeCompare(a.available_at)).slice(0, 3);
   const sc = sheet.scene; let sceneRead = !!sc;
   if (sc) {
-    const scene = el('section', { class: 'card scene' }, el('h2', {}, 'Morning of ' + dateFmt(sheet.cutoff) + ' · ' + sc.setup_label, el('small', {}, `built for a ${years}-year hold; you choose the horizon when you decide`)));
+    const scene = el('section', { class: 'card scene', id: 'sec-scene' }, el('h2', {}, 'Morning of ' + dateFmt(sheet.cutoff) + ' · ' + sc.setup_label, el('small', {}, `built for a ${years}-year hold; you choose the horizon when you decide`)));
     const q = el('p', { style: 'font-size:1.02rem;margin:.6rem 0 0' }, sc.question);
     if (sc.setup === 'bad_news_headline') scene.append(el('blockquote', { style: 'margin:.4rem 0;padding:.5rem .8rem;border-left:3px solid var(--s2);font-weight:600' }, sc.voice));
     else if (sc.setup === 'analysts_disagree') { const parts = sc.voice.split(/\s(?=The other:)/); scene.append(el('p', {}, el('em', {}, parts[0])), parts[1] ? el('p', {}, el('em', {}, parts[1])) : null); }
@@ -98,20 +100,25 @@
     const irow = el('div', { class: 'row', role: 'group', 'aria-label': 'First reaction' });
     const preset = { interested: ['buy', '5'], unconvinced: ['skip', null], against: ['short', '5'] };   // pre-fills the ticket; the player can change it
     for (const [k, lab] of [['interested', 'Interested'], ['unconvinced', 'Unconvinced'], ['against', 'Against it']]) irow.append(el('button', { type: 'button', class: 'ghost', 'aria-pressed': 'false', onclick: e => { instinct = k; [...irow.children].forEach(b => b.setAttribute('aria-pressed', 'false')); e.currentTarget.setAttribute('aria-pressed', 'true');
-      const [act, sz] = preset[k]; const a = ticket.querySelector(`input[name=action][value=${act}]`); if (a) { a.checked = true; a.dispatchEvent(new Event('change')); } if (sz) { const s = ticket.querySelector(`input[name=size][value="${sz}"]`); if (s) s.checked = true; } } }, lab));
+      const [act, sz] = preset[k]; const a = ticket.querySelector(`input[name=action][value=${act}]`); if (a) { a.checked = true; a.dispatchEvent(new Event('change', { bubbles: true })); } if (sz) { const s = ticket.querySelector(`input[name=size][value="${sz}"]`); if (s) { s.checked = true; s.dispatchEvent(new Event('change', { bubbles: true })); } } } }, lab));
     inst.append(irow); scene.append(inst);
-    scene.append(el('p', { class: 'note' }, 'The friend and the scene are fiction; every factual clause comes from this packet. Check it below before you decide; the debrief will tell you which of its claims held.'));
+    const hasAssumptions = !campaignMode && (sc.assumptions || []).length > 0;
+    scene.append(el('p', { class: 'note' }, 'The friend and the scene are fiction; every factual clause comes from this packet. Check it below before you decide; the debrief will tell you which of its claims held.',
+      hasAssumptions ? ' ' : null,
+      hasAssumptions ? el('a', { href: '#ticket-assumptions', onclick: e => { e.preventDefault(); const t = document.getElementById('ticket-assumptions') || ticket; t.scrollIntoView({ behavior: 'smooth', block: 'center' }); const first = t.querySelector('input'); if (first) setTimeout(() => first.focus(), 350); } }, `Preview the ${sc.assumptions.length} assumptions in the decision ticket ↓`) : null));
     main.append(scene);
   }
 
   /* the question first */
   const wc0 = (sheet.what_changed || [])[0];
-  main.append(el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' },
+  main.append(el('section', { class: 'card', id: 'sec-question', style: 'border-left:4px solid var(--s1)' },
     el('h2', { style: 'font-size:1.15rem' }, sheet.neutral_title || 'The decision'),
     sc ? null : el('p', { style: 'font-size:1.02rem' }, P(sheet.player_question || '')),
     wc0 ? el('p', { class: 'note' }, el('strong', {}, 'Why now: '), P(wc0.fact)) : null,
     el('p', { class: 'note' }, 'Everything below was public before ', dateFmt(sheet.cutoff), ' 09:00 New York. Horizon ', horizonText(sheet.horizon), '. Read as much or as little as you need, then decide on the right.')));
-  main.append(card('Business', null, el('p', {}, P((transparent || (prior && !walkPending)) && reveal ? reveal.transparent.business_two_sentences : sheet.masked.business_two_sentences))));
+  const bizCard = card('Business', null, el('p', {}, P((transparent || (prior && !walkPending)) && reveal ? reveal.transparent.business_two_sentences : sheet.masked.business_two_sentences)));
+  bizCard.id = 'sec-business';
+  main.append(bizCard);
 
   /* market chart */
   const chartHost = el('div'); let span = years >= 3 ? 36 : 12;
@@ -124,12 +131,16 @@
     el('span', { class: 'note' }, 'Last eligible close'),
     el('strong', { style: 'font-size:1.4rem;font-variant-numeric:tabular-nums' }, '$' + market.last_close.toFixed(2)),
     el('span', { class: 'note' }, dateFmt(market.last_eligible_session)));
-  main.append(card('Market snapshot', 'ends at the cutoff', lastClose, spanBtns, chartHost, el('p', { class: 'note' }, market.level_note + ' ' + market.coverage_note)));
+  const mktCard = card('Market snapshot', 'ends at the cutoff', lastClose, spanBtns, chartHost, el('p', { class: 'note' }, market.level_note + ' ' + market.coverage_note));
+  mktCard.id = 'sec-market';
+  main.append(mktCard);
   main.append(statsCard);
   drawMarket();
 
   /* what changed */
-  main.append(card('What changed', 'material items public before the cutoff', el('ul', { class: 'plain' }, ...(sheet.what_changed || []).map(w => el('li', {}, el('strong', {}, dateFmt(w.date)), ' ', badge(w.status), el('div', {}, P(w.fact)), el('div', { class: 'note' }, P(w.relationship_to_business)))))));
+  const wcCard = card('What changed', 'material items public before the cutoff', el('ul', { class: 'plain' }, ...(sheet.what_changed || []).map(w => el('li', {}, el('strong', {}, dateFmt(w.date)), ' ', badge(w.status), el('div', {}, P(w.fact)), el('div', { class: 'note' }, P(w.relationship_to_business))))));
+  wcCard.id = 'sec-changed';
+  main.append(wcCard);
 
   /* financial snapshot */
   const fs = sheet.financial_snapshot || {}; const kv = el('div', { class: 'kv' });
@@ -164,6 +175,7 @@
     const presentation = fs.presentation;
     const snapshot = card('Financial snapshot', null, el('p', { class: 'note' }, presentation.intro));
     snapshot.classList.add('financial-snapshot');
+    snapshot.id = 'sec-financials';
     const periodLabel = value => /^\d{4}-\d{2}-\d{2}$/.test(value || '') ? 'As of ' + dateFmt(value) : String(value || '').replace(/^Q([1-4])-(\d{4})$/, 'Q$1 $2').replace(/^9M-(\d{4})$/, 'Jan–Sep $1');
     const compactMoney = (value, unit) => money(value, unit).replace(/\$-/, '-$').replace(/ (m|bn|tn)$/, '$1');
     for (const group of presentation.groups) {
@@ -206,7 +218,9 @@
     snapshot.append(valuationGroup, el('details', { class: 'snapshot-history' }, el('summary', {}, 'Full financial history'), histWrap));
     main.append(snapshot);
   } else {
-    main.append(card('Financial snapshot', (fs.adapter || '').replace('_', ' '), kv, el('h3', { style: 'font-size:.9rem;margin:.75rem 0 0' }, 'Valuation at the cutoff'), vkv, vdet, el('details', { style: 'margin-top:.5rem' }, el('summary', {}, 'Supporting history (hover a cell for its publication date and source)'), histWrap)));
+    const snapshot = card('Financial snapshot', (fs.adapter || '').replace('_', ' '), kv, el('h3', { style: 'font-size:.9rem;margin:.75rem 0 0' }, 'Valuation at the cutoff'), vkv, vdet, el('details', { style: 'margin-top:.5rem' }, el('summary', {}, 'Supporting history (hover a cell for its publication date and source)'), histWrap));
+    snapshot.id = 'sec-financials';
+    main.append(snapshot);
   }
 
   /* sector evidence: generic renderer */
@@ -220,17 +234,38 @@
     else if (Array.isArray(v)) secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('ul', { class: 'plain' }, ...v.map(x => el('li', {}, renderVal(x)))));
     else secCard.append(el('h3', { style: 'font-size:.9rem' }, title), el('p', {}, renderVal(v)));
   }
-  const secWrap = el('section', { class: 'card' }, el('details', {}, el('summary', {}, el('strong', {}, 'Sector evidence'), el('small', { class: 'muted' }, ' ' + sheet.sector_module + ' · open for the program, segment or guidance tables')), secCard)); secCard.classList.remove('card'); secCard.querySelector('h2').remove();
+  const secWrap = el('section', { class: 'card', id: 'sec-sector' }, el('details', {}, el('summary', {}, el('strong', {}, 'Sector evidence'), el('small', { class: 'muted' }, ' ' + sheet.sector_module + ' · open for the program, segment or guidance tables')), secCard)); secCard.classList.remove('card'); secCard.querySelector('h2').remove();
   main.append(secWrap);
 
   /* upcoming and unresolved */
   const uu = sheet.upcoming_and_unresolved || {};
-  main.append(card('Upcoming and unresolved', null, el('h3', { style: 'font-size:.9rem' }, 'Publicly expected catalysts'), el('ul', { class: 'plain' }, ...(uu.catalysts || []).map(c => el('li', {}, P(c.description), ' ', el('span', { class: 'muted' }, '— ' + (c.timing_window || '') + (c.announced_on ? ', announced ' + dateFmt(c.announced_on) : ''))))),
-    el('h3', { style: 'font-size:.9rem' }, 'Unresolved questions'), el('ol', {}, ...(uu.unresolved_questions || []).map(q => el('li', {}, P(q))))));
+  const catCard = card('Upcoming and unresolved', null, el('h3', { style: 'font-size:.9rem' }, 'Publicly expected catalysts'), el('ul', { class: 'plain' }, ...(uu.catalysts || []).map(c => el('li', {}, P(c.description), ' ', el('span', { class: 'muted' }, '— ' + (c.timing_window || '') + (c.announced_on ? ', announced ' + dateFmt(c.announced_on) : ''))))),
+    el('h3', { style: 'font-size:.9rem' }, 'Unresolved questions'), el('ol', {}, ...(uu.unresolved_questions || []).map(q => el('li', {}, P(q)))));
+  catCard.id = 'sec-catalysts';
+  main.append(catCard);
   if ((sheet.macro_context || []).length) main.append(card('Macro context', 'at most three items', el('ul', { class: 'plain' }, ...sheet.macro_context.map(m => el('li', {}, P(m.item), el('div', { class: 'note' }, P(m.business_connection)))))));
-  const hw = sheet.help_me_weigh; if (hw) { const d = el('details', {}, el('summary', {}, 'Help me weigh this (evidence-based arguments, no outcome knowledge)')); for (const [k, lab] of [['own', 'For owning'], ['flat', 'For staying flat'], ['short', 'For being short']]) if ((hw[k] || []).length) d.append(el('h3', { style: 'font-size:.9rem' }, lab), el('ul', { class: 'plain' }, ...hw[k].map(x => el('li', {}, P(x))))); d.addEventListener('toggle', () => { if (d.open) hintUsed = true; }); main.append(card('Optional', null, d)); }
+  const hw = sheet.help_me_weigh; if (hw) { const d = el('details', {}, el('summary', {}, 'Help me weigh this (evidence-based arguments, no outcome knowledge)')); for (const [k, lab] of [['own', 'For owning'], ['flat', 'For staying flat'], ['short', 'For being short']]) if ((hw[k] || []).length) d.append(el('h3', { style: 'font-size:.9rem' }, lab), el('ul', { class: 'plain' }, ...hw[k].map(x => el('li', {}, P(x))))); d.addEventListener('toggle', () => { if (d.open) hintUsed = true; }); const hwCard = card('Optional', null, d); hwCard.id = 'sec-weigh'; main.append(hwCard); }
   let hintUsed = false;
   if ((sheet.missing_data || []).length || sheet.editorial_notes) main.append(el('section', { class: 'card' }, el('details', {}, el('summary', { class: 'note' }, 'Known gaps in this packet (' + (sheet.missing_data || []).length + ')'), el('ul', { class: 'plain' }, ...(sheet.missing_data || []).map(x => el('li', { class: 'note' }, x))), sheet.editorial_notes ? el('p', { class: 'note' }, sheet.editorial_notes) : null)));
+
+  /* populate quick-jump section bar */
+  for (const [secId, label] of [['sec-scene', 'Scene'], ['sec-market', 'Market'], ['sec-changed', 'What changed'], ['sec-financials', 'Financials'], ['sec-sector', 'Sector'], ['sec-catalysts', 'Catalysts'], ['sec-weigh', 'Weigh it']]) {
+    const target = document.getElementById(secId);
+    if (target) packetNav.append(el('a', { href: '#' + secId, onclick: e => { e.preventDefault(); const det = target.querySelector(':scope > details'); if (det) det.open = true; target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }, label));
+  }
+  if (!campaignMode) packetNav.append(el('a', { href: '#ticket', class: 'nav-ticket', onclick: e => { e.preventDefault(); ticket.scrollIntoView({ behavior: 'smooth', block: 'start' }); const first = ticket.querySelector('input[name=action]'); if (first) setTimeout(() => first.focus(), 350); } }, 'Decision ticket ↓'));
+
+  /* collapse pre-decision packet into a summary toggle once committed */
+  const grid = main.parentElement;
+  let packetWrap = null;
+  function collapsePacket() {
+    if (campaignMode || packetWrap) return;
+    const jumpBtn = document.querySelector('button.primary.jump'); if (jumpBtn) jumpBtn.remove();
+    packetWrap = el('details', { class: 'packet-disclosure' },
+      el('summary', {}, `Review pre-decision briefing packet (${sheet.masked.alias} · cutoff ${dateFmt(sheet.cutoff)})`),
+      grid);
+    debrief.after(packetWrap);
+  }
 
   /* ---------- ticket ---------- */
   function renderTicket() {
@@ -250,16 +285,46 @@
       el('div', { class: 'note' }, 'Checked on daily closes, filled at the next open, so a gap can fill far past your level.'));
     const hasA = !!(sc && (sc.assumptions || []).length);
     const reason = hasA
-      ? el('fieldset', {}, el('legend', {}, 'My call rests on…'), el('div', { class: 'note' }, 'pick one or two; these are beliefs about the company, whichever way you trade'), el('div', { class: 'assume-list' }, ...sc.assumptions.map(a => el('label', { 'data-side': a.side || 'neutral' }, el('input', { type: 'checkbox', name: 'assume', value: a.id }), ' ' + a.text, a.side && a.side !== 'neutral' ? el('span', { class: 'muted' }, a.side === 'bull' ? ' ↑' : ' ↓') : null))), el('textarea', { name: 'reason', placeholder: 'Optional: a supporting fact from the packet, in your words' }))
-      : el('fieldset', {}, el('legend', {}, 'Main reason'), el('textarea', { name: 'reason', placeholder: 'Optional: one or two sentences' }));
+      ? el('fieldset', { id: 'ticket-assumptions' }, el('legend', {}, 'My call rests on…'), el('div', { class: 'note' }, 'pick one or two; these are beliefs about the company, whichever way you trade'), el('div', { class: 'assume-list' }, ...sc.assumptions.map(a => el('label', { 'data-side': a.side || 'neutral' }, el('input', { type: 'checkbox', name: 'assume', value: a.id }), ' ' + a.text, a.side && a.side !== 'neutral' ? el('span', { class: 'muted' }, a.side === 'bull' ? ' ↑' : ' ↓') : null))), el('textarea', { name: 'reason', placeholder: 'Optional: a supporting fact from the packet, in your words' }))
+      : el('fieldset', { id: 'ticket-assumptions' }, el('legend', {}, 'Main reason'), el('textarea', { name: 'reason', placeholder: 'Optional: one or two sentences' }));
+    const preview = el('div', { class: 'ticket-preview', 'aria-live': 'polite' });
     const btn = el('button', { class: 'primary', type: 'submit' }, 'Commit and reveal');
     const detail = el('details', {}, el('summary', {}, 'Exit levels (optional): stop loss, take profit'), exits);
-    f.append(act, hz, size, reason, detail, btn, el('p', { class: 'note' }, 'Skip is a real decision: cash stays idle and time still passes. Your commitment is saved in this browser before anything is revealed.'));
+    const syncTicket = () => {
+      const fd = new FormData(f);
+      const a = fd.get('action');
+      const yrsSel = Number(fd.get('years') || years);
+      const szSel = Number(fd.get('size') || 10);
+      const isSkip = a === 'skip';
+      size.hidden = isSkip;
+      detail.hidden = isSkip;
+      if (isSkip) {
+        detail.open = false;
+        const stopSel = f.querySelector('[name=stop]'), tpSel = f.querySelector('[name=tp]');
+        if (stopSel) stopSel.value = '';
+        if (tpSel) tpSel.value = '';
+      }
+      const hzLabel = `${yrsSel} calendar ${yrsSel === 1 ? 'year' : 'years'}`;
+      preview.innerHTML = '';
+      if (!a) {
+        preview.append(el('strong', {}, 'Next step: '), `Pick Buy, Skip, or Short above. Your call will be evaluated over ${hzLabel} against SPY and dated public evidence.`);
+      } else if (isSkip) {
+        preview.append(el('strong', {}, `Skip over ${hzLabel}: `), 'Your $100,000 stays in cash (0% return, no position size or stop/target needed). After committing, you can still walk through the dated record or jump straight to the debrief to see how your selected assumptions held up.');
+      } else {
+        const stopVal = fd.get('stop'), tpVal = fd.get('tp');
+        const exitNote = (stopVal || tpVal) ? ` (or earlier if your ${[stopVal ? `-${stopVal}% stop` : '', tpVal ? `+${tpVal}% target` : ''].filter(Boolean).join(' / ')} triggers)` : '';
+        const dollarAmt = (1000 * szSel).toLocaleString('en-US');
+        preview.append(el('strong', {}, `${a === 'buy' ? 'Buy' : 'Short'} ${szSel}% ($${dollarAmt}) for ${hzLabel}${exitNote}: `), 'Fills at the next regular session open. After committing, you can step through dated checkpoints before the exit or go straight to the debrief.');
+      }
+    };
+    f.addEventListener('change', syncTicket);
+    syncTicket();
+    f.append(act, hz, size, reason, detail, preview, btn, el('p', { class: 'note' }, 'Skip is a real decision: cash stays idle and time still passes. Your commitment is saved in this browser before anything is revealed.'));
     f.onsubmit = async e => { e.preventDefault(); const fd = new FormData(f); const action = fd.get('action'); if (!action) return;
       const assume = fd.getAll('assume');
       if (hasA && (assume.length < 1 || assume.length > 2)) { let err = f.querySelector('.err'); if (!err) { err = el('p', { class: 'err', role: 'alert', style: 'color:var(--bad)' }); btn.before(err); } err.textContent = 'Pick one or two assumptions your decision depends on.'; return; }
       const yrs = Number(fd.get('years') || years);
-      const entry = { case_id: id, alias: sheet.masked.alias, cutoff: sheet.cutoff, horizon: yrs + ' calendar ' + (yrs === 1 ? 'year' : 'years'), horizon_years: yrs, stop_pct: fd.get('stop') ? Number(fd.get('stop')) : null, tp_pct: fd.get('tp') ? Number(fd.get('tp')) : null, action, size: action === 'skip' ? 0 : Number(fd.get('size')), p_beats_spy: null, reason: fd.get('reason'), hint_used: hintUsed, scene_setup: sc ? sc.setup : null, instinct, asked_friend: [...askedQ], assumptions: assume, transparent_mode: transparent, decided_at: new Date().toISOString() };
+      const entry = { case_id: id, alias: sheet.masked.alias, cutoff: sheet.cutoff, horizon: yrs + ' calendar ' + (yrs === 1 ? 'year' : 'years'), horizon_years: yrs, stop_pct: action !== 'skip' && fd.get('stop') ? Number(fd.get('stop')) : null, tp_pct: action !== 'skip' && fd.get('tp') ? Number(fd.get('tp')) : null, action, size: action === 'skip' ? 0 : Number(fd.get('size')), p_beats_spy: null, reason: fd.get('reason'), hint_used: hintUsed, scene_setup: sc ? sc.setup : null, instinct, asked_friend: [...askedQ], assumptions: assume, transparent_mode: transparent, decided_at: new Date().toISOString() };
       const ok = SG.upsertCommit(entry) && SG.findCommit(id);
       if (!ok) { let err = f.querySelector('.err'); if (!err) { err = el('p', { class: 'err', role: 'alert', style: 'color:var(--bad)' }); btn.before(err); } err.textContent = 'Your decision could not be saved in this browser (storage blocked or full). Nothing was revealed. Free some space or allow site data, then press Commit again.'; btn.focus(); return; }
       await showDebrief(entry); };
@@ -285,6 +350,7 @@
     return showDebriefFull(entry);
   }
   function showGate(entry, wt) {
+    collapsePacket();
     ticket.innerHTML = ''; debrief.innerHTML = '';
     const g = el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h2', {}, 'Your decision is saved: ' + entry.action + (entry.size ? ' ' + entry.size + '%' : '')), el('p', {}, 'How do you want to find out?'),
       el('div', { class: 'row' }, el('button', { class: 'primary', type: 'button', style: 'width:auto', onclick: () => { if (saveWalk(entry, { walkthrough_started: true }, g)) walk(entry, wt, 0); } }, `Walk through what happened (${wt.length} ${wt.length === 1 ? 'stop' : 'stops'})`), el('button', { class: 'ghost', type: 'button', onclick: () => { if (saveWalk(entry, { walkthrough_skipped: true }, g)) showDebriefFull(entry); } }, 'Show the result')),
@@ -304,6 +370,7 @@
     return true;
   }
   function walk(entry, wt, i) {
+    collapsePacket();
     debrief.innerHTML = ''; const s = wt[i]; const ev = s.event; const refl = Array.isArray(entry.walkthrough) ? [...entry.walkthrough] : [];
     const card = el('section', { class: 'card', style: 'border-left:4px solid var(--s1)' }, el('h2', {}, `Stop ${i + 1} of ${wt.length} · ${dateFmt(ev.date)}`), el('p', { style: 'font-size:1.02rem' }, el('strong', {}, ev.headline)), el('p', {}, s.stage_text), el('p', { class: 'note' }, 'Source and company name are shown in the debrief, after the last stop.'),
       walkExit && i + 1 === wt.length ? el('p', { class: 'note' }, `Last stop: your ${walkExit.exit_reason.startsWith('stop') ? 'stop loss' : 'take profit'} closed the position on ${dateFmt(walkExit.exit.date)}. Later events are shown in the debrief as context only.`) : null);
@@ -318,6 +385,7 @@
     card.append(row); debrief.append(card); card.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   async function showDebriefFull(entry) {
+    collapsePacket();
     ticket.innerHTML = ''; revealHeader(); ticket.append(el('div', { class: 'card' }, el('h2', {}, 'Your decision'), el('p', {}, el('strong', {}, entry.action + (entry.size ? ' ' + entry.size + '%' : '') + ' · ' + (entry.horizon || horizonText(sheet.horizon))), (entry.stop_pct ? ' · stop ' + entry.stop_pct + '%' : '') + (entry.tp_pct ? ' · target +' + entry.tp_pct + '%' : ''), (typeof entry.p_beats_spy === 'number' ? ' · you gave it ' + entry.p_beats_spy + '% to beat SPY' : '')), el('p', { class: 'note' }, entry.reason), entry.contrary ? el('p', { class: 'note' }, 'Contrary: ' + entry.contrary) : null, entry.change ? el('p', { class: 'note' }, 'Would change my mind: ' + entry.change) : null, el('p', { class: 'muted' }, 'Decided ' + entry.decided_at.slice(0, 16).replace('T', ' ')), el('a', { href: 'index.html' }, 'Next case')));
     try { [outcome, reveal] = await Promise.all([load(`data/${id}/outcome.json`), reveal ? Promise.resolve(reveal) : load(`data/${id}/reveal.json`)]); } catch (e) { debrief.append(el('p', { class: 'card' }, 'Outcome not available: ' + e.message)); return; }
     const yrs = entry.horizon_years || years;

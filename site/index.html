@@ -24,18 +24,98 @@
     const idx = await SG.load('data/index.json');
     list.innerHTML = '';
     const j = SG.journal();
-    const ready = idx.cases.filter(c => c.status === 'sheet_ready'); const decided = ready.filter(c => j.find(x => x.case_id === c.id)); const next = ready.find(c => !j.find(x => x.case_id === c.id));
-    const prog = SG.el('div', { class: 'card', style: 'display:flex;gap:1rem;align-items:center;flex-wrap:wrap' }, SG.el('div', {}, SG.el('strong', {}, `${decided.length} of ${ready.length} decided`), SG.el('div', { class: 'note' }, decided.length ? 'Your calls and results are in the journal.' : 'Cases are in no particular order; start anywhere.')), next ? SG.el('a', { href: 'play.html?case=' + next.id, style: 'margin-left:auto;text-decoration:none;padding:.6rem 1rem;border-radius:6px;background:var(--btn);color:var(--btn-ink);font-weight:600' }, decided.length ? 'Continue: next undecided case' : 'Start the first case') : SG.el('a', { href: 'journal.html', style: 'margin-left:auto' }, 'All decided: open the journal'));
-    document.getElementById('rules').before(prog);
-    document.getElementById('rules').before(SG.el('div', { class: 'card', style: 'display:flex;gap:1rem;align-items:center;flex-wrap:wrap' }, SG.el('div', {}, SG.el('strong', {}, 'Prototype: three stories, one account'), SG.el('div', { class: 'note' }, 'Start in February 2018 with $100,000 and 1 Bitcoin, meet three of these stories in order, and keep going until your last trade closes. Separate from the cases below.')), SG.el('a', { href: 'campaign.html', class: 'primary', style: 'display:inline-block;width:auto;padding:.6rem 1rem;border-radius:8px;text-decoration:none;background:var(--ink);color:#fff' }, 'Play the campaign')));
+    const ready = idx.cases.filter(c => c.status === 'sheet_ready');
+    const decided = ready.filter(c => j.find(x => x.case_id === c.id));
+    const next = ready.find(c => !j.find(x => x.case_id === c.id));
+
+    /* Side-by-side mode comparison: Standalone Cases vs. 3-Story Campaign */
+    const standaloneCard = SG.el('div', { class: 'card mode-card', style: 'border-left:4px solid var(--s1)' },
+      SG.el('div', {},
+        SG.el('div', { class: 'row', style: 'justify-content:space-between;margin-bottom:.2rem' },
+          SG.el('h3', { style: 'margin:0' }, 'Standalone Cases'),
+          SG.badge(`${decided.length} of ${ready.length} decided`)),
+        SG.el('div', { class: 'note' }, decided.length
+          ? `${ready.length - decided.length} undecided remaining. Each case is an independent $100,000 call with an optional checkpoint walkthrough and dated debrief. Your calls and results are in the journal.`
+          : '10 independent historical briefings. Pick any case below, choose Buy, Skip, or Short, and step through the dated outcome immediately.')),
+      SG.el('div', { class: 'mode-actions' },
+        next ? SG.el('a', { href: 'play.html?case=' + next.id, class: 'btn-link' }, decided.length ? 'Continue: next undecided case' : 'Start the first case')
+             : SG.el('a', { href: 'journal.html', class: 'btn-link' }, 'All decided: open the journal'),
+        decided.length && next ? SG.el('a', { href: 'journal.html', class: 'btn-link ghost' }, 'Open journal') : null));
+
+    const campaignCard = SG.el('div', { class: 'card mode-card' },
+      SG.el('div', {},
+        SG.el('div', { class: 'row', style: 'justify-content:space-between;margin-bottom:.2rem' },
+          SG.el('h3', { style: 'margin:0' }, 'Connected Campaign'),
+          SG.badge('prototype · 3 stories')),
+        SG.el('div', { class: 'note' }, 'Start in February 2018 with $100,000 cash and 1 Bitcoin, meet three chronological stories in one shared account, and advance the clock until your last timed trade closes. Separate from your standalone journal.')),
+      SG.el('div', { class: 'mode-actions' },
+        SG.el('a', { href: 'campaign.html', class: 'btn-link ghost' }, 'Play the campaign')));
+
+    const modeGrid = SG.el('div', { class: 'mode-grid', role: 'region', 'aria-label': 'Game modes' }, standaloneCard, campaignCard);
+    document.getElementById('rules').before(modeGrid);
+
+    /* Filter controls for the 10 standalone cases */
+    const state = { status: 'all', setup: 'all', horizon: 'all' };
+    const setups = [...new Set(idx.cases.map(c => c.setup).filter(Boolean))];
+    const horizons = [...new Set(idx.cases.map(c => c.horizon && String(c.horizon.count)).filter(Boolean))].sort((a, b) => Number(a) - Number(b));
+    const setupShort = s => /headline/i.test(s) ? 'Bad-news headline' : /disagree/i.test(s) ? 'Analysts disagree' : /stay away/i.test(s) ? 'Stay-away warning' : /tip/i.test(s) ? 'Friend’s stock tip' : /familiar/i.test(s) ? 'Familiar product' : s.replace(/\.$/, '');
+
+    const filterBar = SG.el('div', { class: 'filter-bar', role: 'region', 'aria-label': 'Filter cases' });
+    const countNote = SG.el('span', { class: 'note', style: 'margin-left:auto' });
+    const rows = [];
+
+    const applyFilters = () => {
+      let shown = 0;
+      for (const item of rows) {
+        const matchStatus = state.status === 'all' || (state.status === 'decided' ? item.done : !item.done);
+        const matchSetup = state.setup === 'all' || item.setup === state.setup;
+        const matchHz = state.horizon === 'all' || item.hz === state.horizon;
+        const vis = matchStatus && matchSetup && matchHz;
+        item.node.hidden = !vis;
+        if (vis) shown++;
+      }
+      countNote.textContent = shown === rows.length ? `Showing all ${rows.length} cases` : `Showing ${shown} of ${rows.length} cases`;
+    };
+
+    const makeGroup = (label, key, opts) => {
+      const g = SG.el('div', { class: 'filter-group', role: 'group', 'aria-label': label }, SG.el('span', { class: 'filter-label' }, label + ':'));
+      for (const [val, text] of opts) {
+        g.append(SG.el('button', { type: 'button', class: 'ghost', 'aria-pressed': state[key] === val ? 'true' : 'false', onclick: e => {
+          state[key] = val;
+          [...g.querySelectorAll('button')].forEach(b => b.setAttribute('aria-pressed', 'false'));
+          e.currentTarget.setAttribute('aria-pressed', 'true');
+          applyFilters();
+        } }, text));
+      }
+      return g;
+    };
+
+    filterBar.append(
+      makeGroup('Status', 'status', [['all', `All (${ready.length})`], ['undecided', `Undecided (${ready.length - decided.length})`], ['decided', `Decided (${decided.length})`]]),
+      makeGroup('Setup', 'setup', [['all', 'All setups'], ...setups.map(s => [s, setupShort(s)])]),
+      makeGroup('Default horizon', 'horizon', [['all', 'Any'], ...horizons.map(h => [h, h + 'y'])]),
+      countNote
+    );
+    list.before(filterBar);
+
     for (const c of idx.cases) {
       const done = j.find(x => x.case_id === c.id);
-      const ready = c.status === 'sheet_ready';
-      const a = SG.el('a', { href: ready ? 'play.html?case=' + c.id : null, 'aria-disabled': ready ? null : 'true', tabindex: ready ? null : '-1', style: ready ? '' : 'opacity:.55' },
-        SG.el('div', { class: 't' }, ready ? (c.title || c.alias || 'Unnamed case') : 'Case not ready (sheet missing)', done ? ' ' : null, done ? SG.badge('decided') : null),
-        SG.el('div', { class: 's' }, (c.setup ? c.setup + ' · ' : '') + SG.dateFmt(c.cutoff) + ' · ' + SG.horizonText(c.horizon).replace(' calendar', '') + ' · ' + ((done && done.reveal_name) ? done.reveal_name : (c.alias || '')) + (done ? ' · your call: ' + done.action + (done.size ? ' ' + done.size + '%' : '') : '')));
+      const isReady = c.status === 'sheet_ready';
+      const hzCount = c.horizon ? String(c.horizon.count) : '';
+      const resText = done && done.result && typeof done.result.portfolio_return === 'number' ? ` · portfolio ${SG.signed(done.result.portfolio_return)}` : '';
+      const a = SG.el('a', { href: isReady ? 'play.html?case=' + c.id : null, 'aria-disabled': isReady ? null : 'true', tabindex: isReady ? null : '-1', style: isReady ? '' : 'opacity:.55' },
+        SG.el('div', { class: 't' },
+          isReady ? (c.title || c.alias || 'Unnamed case') : 'Case not ready (sheet missing)',
+          SG.el('span', { class: 'case-meta-pills' },
+            c.setup ? SG.badge(setupShort(c.setup)) : null,
+            c.sector_hint ? SG.badge(c.sector_hint) : null,
+            done ? SG.badge('decided') : null)),
+        SG.el('div', { class: 's' },
+          (c.setup ? c.setup + ' · ' : '') + SG.dateFmt(c.cutoff) + ' · ' + SG.horizonText(c.horizon).replace(' calendar', '') + ' · ' + ((done && done.reveal_name) ? done.reveal_name : (c.alias || '')) + (done ? ' · your call: ' + done.action + (done.size ? ' ' + done.size + '%' : '') + resText : '')));
       list.append(a);
+      rows.push({ node: a, done: !!done, setup: c.setup || '', hz: hzCount });
     }
+    applyFilters();
     if (!idx.cases.length) list.textContent = 'No cases built yet. Run scripts/build_bundles.py.';
   } catch (e) { list.textContent = 'Could not load data/index.json (' + e.message + '). Serve the site folder over HTTP.'; }
 })();
