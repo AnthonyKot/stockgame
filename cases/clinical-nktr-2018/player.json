@@ -613,7 +613,7 @@
         },
         {
           "label": "Net cash",
-          "context": "Cash and investments minus debt at 30 September 2017, before the announced partnership proceeds ($1.0 billion cash plus an $850 million equity purchase) expected to close in the second quarter of 2018. The prior counts cash only.",
+          "context": "Cash and investments minus debt at 30 September 2017, before the announced partnership proceeds ($1.0 billion cash plus $850 million equity, closing expected in the second quarter of 2018). The prior counts cash only.",
           "prior_comparable": false,
           "metric": "Cash, investments and debt"
         },
